@@ -1,7 +1,5 @@
 import styles from '@components/SectionHomepage.module.scss';
 
-import BlockBuilder from './BlockBuilder';
-import GutterContainer from './GutterContainer';
 import Hero from './Hero';
 import MediaBlock from './MediaBlock';
 import { VideoPlayer } from './VideoPlayer';
@@ -43,9 +41,197 @@ export default function SectionHomepage({ hero }) {
           amet tincidunt risus dignissim. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut ultrices dui. Aenean dapibus{' '}
         </h4>
       </section>
+
+      <h1>Schedule</h1>
+      <section className={styles.calander}>
+        <section className={styles.calander}>
+          <div className={styles.eventHeading}>
+            <p>Fri</p>
+            <p>April 14</p>
+          </div>
+          <div className={styles.eventHeading}>
+            <p> Sat</p>
+            <p>April 15</p>
+          </div>
+          <div className={styles.eventHeading}>
+            <p> Sun</p>
+            <p>April 16</p>
+          </div>
+          <div className={styles.eventHeading}>
+            <p> Mon</p>
+            <p>April 17</p>
+          </div>
+          <div className={styles.eventHeading}>
+            <p> Tue</p>
+            <p>April 18</p>
+          </div>
+          <div className={styles.eventHeading}>
+            <p> Wed</p>
+            <p>April 19</p>
+          </div>
+          <div className={styles.eventHeading}>
+            <p>Thur</p>
+            <p>April 20</p>
+          </div>
+        </section>
+      </section>
+
+      <section className={styles.calander}>
+        <div className={styles.eventStyle}>
+          <div className={styles.eventBox}>
+            <p>Event</p>
+            <p>Time</p>
+            <p>Name</p>
+          </div>
+        </div>
+        <div className={styles.eventStyle}>
+          <div className={styles.eventBox}>
+            <p>Event</p>
+            <p>Time</p>
+            <p>Name</p>
+          </div>
+        </div>
+        <div className={styles.eventStyle}>
+          <div className={styles.eventBox}>
+            <p>Event</p>
+            <p>Time</p>
+            <p>Name</p>
+          </div>
+        </div>
+        <div className={styles.eventStyle}>
+          <div className={styles.eventBox}>
+            <p>Event</p>
+            <p>Time</p>
+            <p>Name</p>
+          </div>
+        </div>
+        <div className={styles.eventStyle}>
+          <div className={styles.eventBox}>
+            <p>Event</p>
+            <p>Time</p>
+            <p>Name</p>
+          </div>
+        </div>
+        <div className={styles.eventStyle}>
+          <div className={styles.eventBox}>
+            <p>Event</p>
+            <p>Time</p>
+            <p>Name</p>
+          </div>
+        </div>
+        <div className={styles.eventStyle}>
+          <div className={styles.eventBox}>
+            <p>Event</p>
+            <p>Time</p>
+            <p>Name</p>
+          </div>
+        </div>
+      </section>
+      <section className={styles.calander}>
+        <div className={styles.eventStyle}>
+          <div className={styles.eventBox}>
+            <p>Event</p>
+            <p>Time</p>
+            <p>Name</p>
+          </div>
+        </div>
+        <div className={styles.eventStyle}>
+          <div className={styles.eventBox}>
+            <p>Event</p>
+            <p>Time</p>
+            <p>Name</p>
+          </div>
+        </div>
+        <div className={styles.eventStyle}>
+          <div className={styles.eventBox}>
+            <p>Event</p>
+            <p>Time</p>
+            <p>Name</p>
+          </div>
+        </div>
+        <div className={styles.eventStyle}>
+          <div className={styles.eventBox}>
+            <p>Event</p>
+            <p>Time</p>
+            <p>Name</p>
+          </div>
+        </div>
+        <div className={styles.eventStyle}>
+          <div className={styles.eventBox}>
+            <p>Event</p>
+            <p>Time</p>
+            <p>Name</p>
+          </div>
+        </div>
+        <div className={styles.eventStyle}>
+          <div className={styles.eventBox}>
+            <p>Event</p>
+            <p>Time</p>
+            <p>Name</p>
+          </div>
+        </div>
+        <div className={styles.eventStyle}>
+          <div className={styles.eventBox}>
+            <p>Event</p>
+            <p>Time</p>
+            <p>Name</p>
+          </div>
+        </div>
+      </section>
+      <section className={styles.calander}>
+        <div className={styles.eventStyle}>
+          <div className={styles.eventBox}>
+            <p>Event</p>
+            <p>Time</p>
+            <p>Name</p>
+          </div>
+        </div>
+        <div className={styles.eventStyle}>
+          <div className={styles.eventBox}>
+            <p>Event</p>
+            <p>Time</p>
+            <p>Name</p>
+          </div>
+        </div>
+        <div className={styles.eventStyle}>
+          <div className={styles.eventBox}>
+            <p>Event</p>
+            <p>Time</p>
+            <p>Name</p>
+          </div>
+        </div>
+        <div className={styles.eventStyle}>
+          <div className={styles.eventBox}>
+            <p>Event</p>
+            <p>Time</p>
+            <p>Name</p>
+          </div>
+        </div>
+        <div className={styles.eventStyle}>
+          <div className={styles.eventBox}>
+            <p>Event</p>
+            <p>Time</p>
+            <p>Name</p>
+          </div>
+        </div>
+        <div className={styles.eventStyle}>
+          <div className={styles.eventBox}>
+            <p>Event</p>
+            <p>Time</p>
+            <p>Name</p>
+          </div>
+        </div>
+        <div className={styles.eventStyle}>
+          <div className={styles.eventBox}>
+            <p>Event</p>
+            <p>Time</p>
+            <p>Name</p>
+          </div>
+        </div>
+      </section>
       <h1>Sponsors</h1>
       <h1>Participating Teams</h1>
-      <h1>Schedule</h1>
+
       <h1>Ticketing</h1>
     </div>
   );
