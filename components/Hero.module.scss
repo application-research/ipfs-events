@@ -1,0 +1,12 @@
+.container {
+  height: 50vh;
+}
+
+.title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50vh;
+  font-size: var(--font-size-large);
+  max-width: 50ch;
+}

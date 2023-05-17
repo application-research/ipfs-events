@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700;800&family=Poppins&display=swap');
+
 html,
 body,
 div,
@@ -103,7 +105,17 @@ section {
 html,
 body {
   --color-background: #ffffff;
+  --color-white200: #f3fbff;
   --color-text: #000000;
+
+  --font-size-small: 12px;
+  --font-size-regular: 16px;
+  --font-size-medium: 24px;
+  --font-size-large: 32px;
+  --font-size-extra-large: 42px;
+
+  --font-weight-semi-bold: 700;
+  --font-weight-bold: 800;
 
   font-size: 16px;
   background: var(--color-background);
@@ -111,6 +123,15 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, helvetica neue, helvetica, sans-serif;
   scrollbar-width: none;
   -ms-overflow-style: -ms-autohiding-scrollbar;
+  --page-gutters-desktop: 3rem;
+
+  // ---------------------------------------------------------------------- Other
+  --page-gutters-default: 0 16px 0 16px;
+  --page-gutters-desktop-default: 16px;
+  --page-gutters-desktop: 0 88px 0 88px;
+  --page-gutters-desktop-one-side: 88px;
+
+  --page-width: 1440px;
 
   ::-webkit-scrollbar {
     display: none;

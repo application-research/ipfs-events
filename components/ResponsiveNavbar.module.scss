@@ -1,0 +1,23 @@
+.navbar {
+  background: var(--color-white200);
+}
+
+.container {
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .list {
+    display: flex;
+    gap: 16px;
+    list-style: none;
+  }
+
+  .listItem {
+    cursor: pointer;
+  }
+}
+.logo {
+  height: 48px;
+}

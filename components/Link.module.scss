@@ -1,0 +1,36 @@
+.animated {
+  text-decoration: none;
+  position: relative;
+
+  span {
+    display: inline-block;
+  }
+
+  span::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    display: block;
+    margin-top: 2px;
+    right: 0;
+    transition: width 0.2s ease;
+    -webkit-transition: width 0.2s ease;
+  }
+}
+
+.animated.black {
+  &:hover span::after {
+    width: 100%;
+    left: 0;
+    background: var(--textBlack);
+  }
+}
+
+.animated.white {
+  &:hover span::after {
+    width: 100%;
+    left: 0;
+    background: var(--text-white);
+  }
+}
