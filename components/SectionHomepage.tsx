@@ -1,8 +1,6 @@
 import styles from '@components/SectionHomepage.module.scss';
 
 import Hero from './Hero';
-import MediaBlock from './MediaBlock';
-import { VideoPlayer } from './VideoPlayer';
 
 export default function SectionHomepage({ hero }) {
   console.log('hero', hero.title);
@@ -79,102 +77,116 @@ export default function SectionHomepage({ hero }) {
       <section className={styles.calander}>
         <div className={styles.eventStyle}>
           <div className={styles.eventBox}>
-            <p>Event</p>
+            <p>Event Name</p>
             <p>Time</p>
-            <p>Name</p>
+            <p>Location</p>
+            <p># of people</p>
           </div>
         </div>
         <div className={styles.eventStyle}>
           <div className={styles.eventBox}>
-            <p>Event</p>
+            <p>Event Name</p>
             <p>Time</p>
-            <p>Name</p>
+            <p>Location</p>
+            <p># of people</p>
           </div>
         </div>
         <div className={styles.eventStyle}>
           <div className={styles.eventBox}>
-            <p>Event</p>
+            <p>Event Name</p>
             <p>Time</p>
-            <p>Name</p>
+            <p>Location</p>
+            <p># of people</p>
           </div>
         </div>
         <div className={styles.eventStyle}>
           <div className={styles.eventBox}>
-            <p>Event</p>
+            <p>Event Name</p>
             <p>Time</p>
-            <p>Name</p>
+            <p>Location</p>
+            <p># of people</p>
           </div>
         </div>
         <div className={styles.eventStyle}>
           <div className={styles.eventBox}>
-            <p>Event</p>
+            <p>Event Name</p>
             <p>Time</p>
-            <p>Name</p>
+            <p>Location</p>
+            <p># of people</p>
           </div>
         </div>
         <div className={styles.eventStyle}>
           <div className={styles.eventBox}>
-            <p>Event</p>
+            <p>Event Name</p>
             <p>Time</p>
-            <p>Name</p>
+            <p>Location</p>
+            <p># of people</p>
           </div>
         </div>
         <div className={styles.eventStyle}>
           <div className={styles.eventBox}>
-            <p>Event</p>
+            <p>Event Name</p>
             <p>Time</p>
-            <p>Name</p>
+            <p>Location</p>
+            <p># of people</p>
           </div>
         </div>
       </section>
       <section className={styles.calander}>
         <div className={styles.eventStyle}>
           <div className={styles.eventBox}>
-            <p>Event</p>
+            <p>Event Name</p>
             <p>Time</p>
-            <p>Name</p>
+            <p>Location</p>
+            <p># of people</p>
           </div>
         </div>
         <div className={styles.eventStyle}>
           <div className={styles.eventBox}>
-            <p>Event</p>
+            <p>Event Name</p>
             <p>Time</p>
-            <p>Name</p>
+            <p>Location</p>
+            <p># of people</p>
           </div>
         </div>
         <div className={styles.eventStyle}>
           <div className={styles.eventBox}>
-            <p>Event</p>
+            <p>Event Name</p>
             <p>Time</p>
-            <p>Name</p>
+            <p>Location</p>
+            <p># of people</p>
           </div>
         </div>
         <div className={styles.eventStyle}>
           <div className={styles.eventBox}>
-            <p>Event</p>
+            <p>Event Name</p>
             <p>Time</p>
-            <p>Name</p>
+            <p>Location</p>
+            <p># of people</p>
           </div>
         </div>
         <div className={styles.eventStyle}>
           <div className={styles.eventBox}>
-            <p>Event</p>
+            <p>Event Name</p>
             <p>Time</p>
-            <p>Name</p>
+            <p>Location</p>
+            <p># of people</p>
           </div>
         </div>
         <div className={styles.eventStyle}>
           <div className={styles.eventBox}>
-            <p>Event</p>
+            <p>Event Name</p>
             <p>Time</p>
-            <p>Name</p>
+            <p>Location</p>
+            <p># of people</p>
           </div>
         </div>
         <div className={styles.eventStyle}>
           <div className={styles.eventBox}>
-            <p>Event</p>
+            <p>Event Name</p>
             <p>Time</p>
-            <p>Name</p>
+            <p>Location</p>
+            <p># of people</p>
           </div>
         </div>
       </section>
