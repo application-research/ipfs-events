@@ -7,7 +7,7 @@ export default function SectionHomepage({ hero }) {
 
   return (
     <div style={{ background: 'var(--color-white200)', display: 'grid', rowGap: '3rem' }}>
-      <section>
+      <section style={{ paddingBottom: '5rem' }}>
         <Hero {...hero} />
 
         <div className={styles.mediaContainer} style={{ paddingBottom: '1rem' }}>
@@ -28,9 +28,9 @@ export default function SectionHomepage({ hero }) {
         </div>
       </section>
 
-      <h1>About</h1>
+      <h1 className={styles.mainTitle}>About</h1>
 
-      <section className={styles.flexContainer}>
+      <section className={styles.flexContainer} style={{ paddingTop: '4rem', paddingBottom: '4rem' }}>
         <p className={`${styles.p} ${styles.sixty}`}>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut purus felis, luctus sit amet suscipit nec, vehicula hendrerit urna. Integer vel.
         </p>
@@ -40,7 +40,7 @@ export default function SectionHomepage({ hero }) {
         </h4>
       </section>
 
-      <h1>Schedule</h1>
+      <h1 className={styles.mainTitle}>Schedule</h1>
       <section className={styles.calander}>
         <section className={styles.calander}>
           <div className={styles.eventHeading}>
@@ -190,61 +190,68 @@ export default function SectionHomepage({ hero }) {
           </div>
         </div>
       </section>
-      <section className={styles.calander}>
+      <section className={styles.calander} style={{ paddingBottom: '4rem' }}>
         <div className={styles.eventStyle}>
           <div className={styles.eventBox}>
-            <p>Event</p>
+            <p>Event Name</p>
             <p>Time</p>
-            <p>Name</p>
+            <p>Location</p>
+            <p># of people</p>
           </div>
         </div>
         <div className={styles.eventStyle}>
           <div className={styles.eventBox}>
-            <p>Event</p>
+            <p>Event Name</p>
             <p>Time</p>
-            <p>Name</p>
+            <p>Location</p>
+            <p># of people</p>
           </div>
         </div>
         <div className={styles.eventStyle}>
           <div className={styles.eventBox}>
-            <p>Event</p>
+            <p>Event Name</p>
             <p>Time</p>
-            <p>Name</p>
+            <p>Location</p>
+            <p># of people</p>
           </div>
         </div>
         <div className={styles.eventStyle}>
           <div className={styles.eventBox}>
-            <p>Event</p>
+            <p>Event Name</p>
             <p>Time</p>
-            <p>Name</p>
+            <p>Location</p>
+            <p># of people</p>
           </div>
         </div>
         <div className={styles.eventStyle}>
           <div className={styles.eventBox}>
-            <p>Event</p>
+            <p>Event Name</p>
             <p>Time</p>
-            <p>Name</p>
+            <p>Location</p>
+            <p># of people</p>
           </div>
         </div>
         <div className={styles.eventStyle}>
           <div className={styles.eventBox}>
-            <p>Event</p>
+            <p>Event Name</p>
             <p>Time</p>
-            <p>Name</p>
+            <p>Location</p>
+            <p># of people</p>
           </div>
         </div>
         <div className={styles.eventStyle}>
           <div className={styles.eventBox}>
-            <p>Event</p>
+            <p>Event Name</p>
             <p>Time</p>
-            <p>Name</p>
+            <p>Location</p>
+            <p># of people</p>
           </div>
         </div>
       </section>
-      <h1>Sponsors</h1>
-      <h1>Participating Teams</h1>
+      <h1 className={styles.mainTitle}>Sponsors</h1>
+      <h1 className={styles.mainTitle}>Participating Teams</h1>
 
-      <h1>Ticketing</h1>
+      <h1 className={styles.mainTitle}>Ticketing</h1>
     </div>
   );
 }
