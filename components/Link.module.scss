@@ -1,6 +1,7 @@
 .animated {
   text-decoration: none;
   position: relative;
+  color: inherit;
 
   span {
     display: inline-block;
@@ -23,7 +24,7 @@
   &:hover span::after {
     width: 100%;
     left: 0;
-    background: var(--textBlack);
+    background: var(--text-black);
   }
 }
 
