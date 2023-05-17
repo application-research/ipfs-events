@@ -1,9 +1,10 @@
 import DefaultMetaTags from '@components/DefaultMetaTags';
 
 export default async function Head({ params }) {
-  const title = 'example';
-  const description = 'CHANGEME: description for your application using next-sass';
-  const url = 'CHANGEME: your-production-url.tld';
+  const title = 'IPFS.Events';
+  const description =
+    'IPFS þing is a week-long gathering for the IPFS implementors community. Everything from talks, workshops, discussion circles, hacking time, and more — all focused on advancing IPFS implementations. ';
+  const url = 'https://ipfs.events';
 
   // SUMMARY_LARGE_IMAGE: 1500x785
   return (
