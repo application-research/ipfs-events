@@ -107,6 +107,8 @@ body {
   --color-background: #ffffff;
   --color-white200: #f3fbff;
   --color-text: #000000;
+  --text-black: #000000;
+  --text-white: #ffffff;
 
   --font-size-small: 12px;
   --font-size-regular: 16px;
@@ -116,6 +118,8 @@ body {
 
   --font-weight-semi-bold: 700;
   --font-weight-bold: 800;
+
+  --border-radius-small: 2rem;
 
   font-size: 16px;
   background: var(--color-background);

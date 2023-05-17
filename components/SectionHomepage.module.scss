@@ -1,0 +1,33 @@
+.mediaContainer {
+  display: flex;
+  flex-direction: row wrap;
+  width: 100%;
+  gap: 1rem;
+
+  .sixty {
+    width: 60%;
+  }
+
+  .fourty {
+    width: 40%;
+  }
+
+  .image {
+    border-radius: var(--border-radius-small);
+  }
+}
+
+.flexContainer {
+  display: flex;
+  gap: 2rem;
+}
+
+.h4 {
+  font-size: var(--font-size-medium);
+  font-weight: 400;
+  max-width: 50ch;
+}
+
+.p {
+  font-size: var(--font-size-regular);
+}

@@ -20,6 +20,7 @@ export default async function Page(props) {
       <GutterContainer>
         <SectionHomepage hero={hero} />
       </GutterContainer>
+
       <Footer {...footerContent} />
     </DefaultLayout>
   );

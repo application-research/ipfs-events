@@ -1,10 +1,10 @@
 export const NAVIGATION_ITEMS_CONTENT = [
   {
-    name: 'IPFS Camp',
+    name: 'IPFS Thing 2024',
     href: '',
   },
   {
-    name: 'IPFS Thing 2024',
+    name: 'IPFS Camp',
     href: '',
   },
   {

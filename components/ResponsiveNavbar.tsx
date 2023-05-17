@@ -1,6 +1,7 @@
 import styles from '@components/ResponsiveNavbar.module.scss';
 import Image from './Image';
 import GutterContainer from './GutterContainer';
+import Link from './Link';
 
 export default function ResponsiveNabar({ navContent }) {
   let { logo, navItems } = navContent;
@@ -17,7 +18,9 @@ export default function ResponsiveNabar({ navContent }) {
               {navItems.map((navItem, index) => {
                 return (
                   <li className={styles.listItem} key={index}>
-                    {navItem.name}
+                    <Link style="animated" href={navItem.href}>
+                      {navItem.name}
+                    </Link>
                   </li>
                 );
               })}
