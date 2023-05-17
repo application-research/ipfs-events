@@ -14,6 +14,7 @@
 
   .image {
     border-radius: var(--border-radius-small);
+    cursor: pointer;
   }
 }
 
@@ -30,4 +31,39 @@
 
 .p {
   font-size: var(--font-size-regular);
+}
+
+.calander {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  width: 100%;
+}
+
+.eventHeading {
+  width: 14.2%;
+  background: var(--color-text);
+  color: var(--color-white);
+  display: flex;
+  border-radius: 0.2rem;
+  gap: 3rem;
+  padding: 0.5rem 1rem;
+  justify-content: space-between;
+
+  font-size: var(--font-size-small);
+}
+
+.eventStyle {
+  background: var(--color-white200);
+  border-radius: 0.2rem;
+  border: 0.5px solid var(--color-text);
+  width: 14.2%;
+  padding: 0.5rem 1rem;
+}
+
+.eventBox {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  font-size: var(--font-size-small);
 }

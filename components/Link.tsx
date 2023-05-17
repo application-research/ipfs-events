@@ -13,7 +13,7 @@ function SwitchLinkStyle(style) {
       return (defaultStyle = `${styles.animated} ${styles.white}`);
     case 'text':
     default:
-      return (defaultStyle = `${styles.animated}  ${styles.black}`);
+      return (defaultStyle = `${styles.black}`);
   }
 }
 
