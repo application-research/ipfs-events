@@ -3,8 +3,6 @@ import styles from '@components/SectionHomepage.module.scss';
 import Hero from './Hero';
 
 export default function SectionHomepage({ hero }) {
-  console.log('hero', hero.title);
-
   return (
     <div style={{ background: 'var(--color-white200)', display: 'grid', rowGap: '3rem' }}>
       <section style={{ paddingBottom: '5rem' }}>
@@ -30,7 +28,7 @@ export default function SectionHomepage({ hero }) {
 
       <h1 className={styles.mainTitle}>About</h1>
 
-      <section className={styles.flexContainer} style={{ paddingTop: '4rem', paddingBottom: '4rem' }}>
+      <section className={styles.flexContainer} style={{ paddingTop: '5rem', paddingBottom: '5rem' }}>
         <p className={`${styles.p} ${styles.sixty}`}>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut purus felis, luctus sit amet suscipit nec, vehicula hendrerit urna. Integer vel.
         </p>
@@ -190,7 +188,7 @@ export default function SectionHomepage({ hero }) {
           </div>
         </div>
       </section>
-      <section className={styles.calander} style={{ paddingBottom: '4rem' }}>
+      <section className={styles.calander} style={{ paddingBottom: '5rem' }}>
         <div className={styles.eventStyle}>
           <div className={styles.eventBox}>
             <p>Event Name</p>
