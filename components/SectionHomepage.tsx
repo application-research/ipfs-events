@@ -40,7 +40,7 @@ export default function SectionHomepage({ hero }) {
 
       <h1 className={styles.mainTitle}>Schedule</h1>
       <iframe
-        src="https://calendar.google.com/calendar/embed?height=600&wkst=1&bgcolor=%23f2fbff&ctz=America%2FNew_York&mode=WEEK&title=IPFS%20Thing%202024&showTabs=1&showCalendars=1&showNav=0&showPrint=1&src=Y181MWM1NTBkNjYyYmZiODI4MTdlYjNjMTQ0YjQxNDVhMzc2YzFhOGUyNzRjY2RmYTA0YTU4MDIyMTk2NWRlZTBjQGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20&src=ZW4udXNhI2hvbGlkYXlAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&color=%23009688&color=%230B8043"
+        src="https://calendar.google.com/calendar/embed?height=600&wkst=1&bgcolor=%23f2fbff&ctz=America%2FNew_York&title=IPFS%20Thing&mode=WEEK&src=Y181MWM1NTBkNjYyYmZiODI4MTdlYjNjMTQ0YjQxNDVhMzc2YzFhOGUyNzRjY2RmYTA0YTU4MDIyMTk2NWRlZTBjQGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20&color=%23039BE5"
         width="100%"
         height="600"
         frameBorder="0"
