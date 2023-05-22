@@ -1,8 +1,10 @@
-import styles from '@components/SectionEventPage.module.scss';
+import styles from '@components/SectionEvent.module.scss';
 
 import Hero from './Hero';
 
 export default function SectionEventPage({ hero }) {
+  console.log('hero', hero.title);
+
   return (
     <div style={{ background: 'var(--color-white200)', display: 'grid', rowGap: '3rem' }}>
       <section style={{ paddingBottom: '5rem' }}>
