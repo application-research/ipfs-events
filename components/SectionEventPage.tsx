@@ -1,8 +1,8 @@
-import styles from '@components/SectionHomepage.module.scss';
+import styles from '@components/SectionEventPage.module.scss';
 
 import Hero from './Hero';
 
-export default function SectionHomepage({ hero }) {
+export default function SectionEventPage({ hero }) {
   return (
     <div style={{ background: 'var(--color-white200)', display: 'grid', rowGap: '3rem' }}>
       <section style={{ paddingBottom: '5rem' }}>
@@ -39,14 +39,7 @@ export default function SectionHomepage({ hero }) {
       </section>
 
       <h1 className={styles.mainTitle}>Schedule</h1>
-      <iframe
-        src="https://calendar.google.com/calendar/embed?height=600&wkst=1&bgcolor=%23f2fbff&ctz=America%2FNew_York&mode=WEEK&title=IPFS%20Thing%202024&showTabs=1&showCalendars=1&showNav=0&showPrint=1&src=Y181MWM1NTBkNjYyYmZiODI4MTdlYjNjMTQ0YjQxNDVhMzc2YzFhOGUyNzRjY2RmYTA0YTU4MDIyMTk2NWRlZTBjQGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20&src=ZW4udXNhI2hvbGlkYXlAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&color=%23009688&color=%230B8043"
-        width="100%"
-        height="600"
-        frameBorder="0"
-        scrolling="no"
-      />
-      {/* <section className={styles.calander}>
+      <section className={styles.calander}>
         <section className={styles.calander}>
           <div className={styles.eventHeading}>
             <p>Fri</p>
@@ -252,7 +245,7 @@ export default function SectionHomepage({ hero }) {
             <p># of people</p>
           </div>
         </div>
-      </section> */}
+      </section>
       <h1 className={styles.mainTitle}>Sponsors</h1>
       <h1 className={styles.mainTitle}>Participating Teams</h1>
 
