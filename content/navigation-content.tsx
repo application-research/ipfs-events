@@ -1,15 +1,15 @@
 export const NAVIGATION_ITEMS_CONTENT = [
   {
-    name: 'IPFS Thing 2024',
-    href: '',
+    schedule: 'About',
+    href: '#about',
   },
   {
-    name: 'IPFS Camp',
-    href: '',
+    schedule: 'Schedule',
+    href: '#schedule',
   },
   {
-    name: 'Past Events',
-    href: '',
+    schedule: 'Tickets',
+    href: '#schedule',
   },
   {
     name: 'Contact',
@@ -23,5 +23,26 @@ export const NAVIGATION_CONTENT = {
     altText: 'ipfs-logo',
     link: '/',
   },
-  navItems: NAVIGATION_ITEMS_CONTENT,
+  navItems: [
+    {
+      name: 'About',
+      href: 'http://localhost:3008/ipfs-thing#about',
+      target: '_self',
+    },
+    {
+      name: 'Schedule',
+      href: 'http://localhost:3008/ipfs-thing#schedule',
+      target: '_self',
+    },
+    {
+      name: 'Tickets',
+      href: 'http://localhost:3008/ipfs-thing#tickets',
+      target: '_self',
+    },
+    {
+      name: 'Contact',
+      href: 'http://localhost:3008/ipfs-thing#contact',
+      target: '_self',
+    },
+  ],
 };

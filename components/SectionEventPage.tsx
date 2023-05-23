@@ -1,34 +1,34 @@
-import styles from '@components/SectionEvent.module.scss';
-
+import styles from '@components/SectionEventPage.module.scss';
+import Link from './Link';
 import Hero from './Hero';
 
 export default function SectionEventPage({ hero }) {
-  console.log('hero', hero.title);
-
   return (
     <div style={{ background: 'var(--color-white200)', display: 'grid', rowGap: '3rem' }}>
       <section style={{ paddingBottom: '5rem' }}>
         <Hero {...hero} />
 
-        <div className={styles.mediaContainer} style={{ paddingBottom: '1rem' }}>
-          <img className={`${styles.sixty} ${styles.image}`} src="/media/ipfscamp-2023.png" />
-          <img className={`${styles.fourty} ${styles.image}`} src="/media/ipfs-thing-2024.png" />
-        </div>
         <div className={styles.mediaContainer}>
           <iframe
             style={{ borderRadius: 'var(--border-radius-small)' }}
             width="100%"
             height="450"
-            src="https://www.youtube.com/embed/_puqZ6JYbZI"
+            src="https://www.youtube.com/embed/_puqZ6JYbZI?autoplay=1"
             title="YouTube video player"
             frameBorder="0"
             allow="autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             allowFullScreen
           />
         </div>
+        {/* <div className={styles.mediaContainer} style={{ paddingBottom: '1rem' }}>
+          <img className={`${styles.sixty} ${styles.image}`} src="/media/ipfscamp-2023.png" />
+          <img className={`${styles.fourty} ${styles.image}`} src="/media/ipfs-thing-2024.png" />
+        </div> */}
       </section>
 
-      <h1 className={styles.mainTitle}>About</h1>
+      <h1 id="about" className={styles.mainTitle}>
+        About
+      </h1>
 
       <section className={styles.flexContainer} style={{ paddingTop: '4rem', paddingBottom: '4rem' }}>
         <p className={`${styles.p} ${styles.sixty}`}>
@@ -40,8 +40,17 @@ export default function SectionEventPage({ hero }) {
         </h4>
       </section>
 
-      <h1 className={styles.mainTitle}>Schedule</h1>
-      <section className={styles.calander}>
+      <h1 id="shedule" className={styles.mainTitle}>
+        Schedule
+      </h1>
+      <iframe
+        src="https://calendar.google.com/calendar/embed?height=600&wkst=1&bgcolor=%23f2fbff&ctz=America%2FNew_York&title=IPFS%20Thing&mode=WEEK&src=Y181MWM1NTBkNjYyYmZiODI4MTdlYjNjMTQ0YjQxNDVhMzc2YzFhOGUyNzRjY2RmYTA0YTU4MDIyMTk2NWRlZTBjQGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20&color=%23039BE5"
+        width="100%"
+        height="600"
+        frameBorder="0"
+        scrolling="no"
+      />
+      {/* <section className={styles.calander}>
         <section className={styles.calander}>
           <div className={styles.eventHeading}>
             <p>Fri</p>
@@ -247,11 +256,17 @@ export default function SectionEventPage({ hero }) {
             <p># of people</p>
           </div>
         </div>
-      </section>
-      <h1 className={styles.mainTitle}>Sponsors</h1>
-      <h1 className={styles.mainTitle}>Participating Teams</h1>
+      </section> */}
+      <h1 id="sponsors" className={styles.mainTitle}>
+        Sponsors
+      </h1>
+      <h1 id="teams" className={styles.mainTitle}>
+        Participating Teams
+      </h1>
 
-      <h1 className={styles.mainTitle}>Ticketing</h1>
+      <h1 id="tickets" className={styles.mainTitle}>
+        Ticketing
+      </h1>
     </div>
   );
 }

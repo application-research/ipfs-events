@@ -6,8 +6,8 @@ import { NAVIGATION_CONTENT } from '@root/content/navigation-content';
 import DefaultLayout from '@components/DefaultLayout';
 import Footer from '@root/components/Footer';
 import GutterContainer from '@root/components/GutterContainer';
-import ResponsiveNabar from '@root/components/ResponsiveNavbar';
-import SectionEventPage from '@root/components/SectionHomepage';
+import ResponsiveNavbar from '@root/components/ResponsiveNavbar';
+import SectionEventPage from '@root/components/SectionEventPage';
 
 export default async function Page(props) {
   const hero = HOMEPAGE_HERO_CONTENT;
@@ -16,7 +16,7 @@ export default async function Page(props) {
 
   return (
     <DefaultLayout>
-      <ResponsiveNabar navContent={navContent} />
+      <ResponsiveNavbar navContent={navContent} />
       <GutterContainer>
         <SectionEventPage hero={hero} />
       </GutterContainer>

@@ -1,0 +1,15 @@
+.footer {
+  height: 120px;
+  bottom: 0;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  align-items: center;
+}
+
+.socialIconImage {
+  width: 1.5rem;
+}
