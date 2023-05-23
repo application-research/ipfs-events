@@ -3,7 +3,7 @@ import Image from './Image';
 import GutterContainer from './GutterContainer';
 import Link from './Link';
 
-export default function ResponsiveNabar({ navContent }) {
+export default function ResponsiveNavbar({ navContent }) {
   let { logo, navItems } = navContent;
   return (
     <nav className={styles.navbar}>
@@ -13,19 +13,22 @@ export default function ResponsiveNabar({ navContent }) {
             {/* <Image image={logo} layout="fill" /> */}
             <img src={logo.src} className={styles.logo} />
           </div>
-          {navItems && (
-            <ul className={styles.list}>
-              {navItems.map((navItem, index) => {
-                return (
-                  <li className={styles.listItem} key={index}>
-                    <Link style="animated" href={navItem.href}>
-                      {navItem.name}
-                    </Link>
-                  </li>
-                );
-              })}
-            </ul>
-          )}{' '}
+          <div className={styles.container}>
+            {navItems && (
+              <ul className={styles.list} style={{ paddingRight: '2rem' }}>
+                {navItems.map((navItem, index) => {
+                  return (
+                    <li className={styles.listItem} key={index}>
+                      <Link style="animated" href={navItem.href}>
+                        {navItem.name}
+                      </Link>
+                    </li>
+                  );
+                })}
+              </ul>
+            )}{' '}
+            <button className={styles.button}>Get Tickets</button>
+          </div>
         </div>
       </GutterContainer>
     </nav>

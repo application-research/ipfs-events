@@ -1,0 +1,14 @@
+.navbar {
+  height: 80px;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+}
+
+.logo {
+  width: 3.5rem;
+}

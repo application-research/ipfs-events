@@ -31,7 +31,7 @@ export default function Link({ children, className, color, href, props, style, t
   const defaultStyle = SwitchLinkStyle(style);
 
   return (
-    <NextLink href={href} className={`${defaultStyle} ${className}`} {...props} target={target ?? '_blank'}>
+    <NextLink href={href} className={`${defaultStyle} ${className}`} {...props} target={target ?? '_self'}>
       <span>{children}</span>
     </NextLink>
   );
