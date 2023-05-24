@@ -1,7 +1,6 @@
 import styles from '@components/SectionHomepage.module.scss';
 
 import Link from './Link';
-import Image from './Image';
 
 export default function SectionHomepage({ upcomingEvents }) {
   return (
@@ -23,7 +22,7 @@ export default function SectionHomepage({ upcomingEvents }) {
           style={{ borderRadius: 'var(--border-radius-small)' }}
           width="100%"
           height="450"
-          src="https://youtu.be/_puqZ6JYbZI?autoplay=1"
+          src="https://www.youtube.com/embed/_puqZ6JYbZI?autoplay=1"
           title="IPFS Thing"
           frameBorder="0"
           allow="autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
