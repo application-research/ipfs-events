@@ -1,8 +1,9 @@
 import styles from '@components/SectionHomepage.module.scss';
 
 import Link from './Link';
+import Image from './Image';
 
-export default function SectionHomepage() {
+export default function SectionHomepage({ upcomingEvents }) {
   return (
     <div style={{ display: 'grid', rowGap: '4rem', marginTop: '2.5rem', background: 'var(--color-white200)' }}>
       <header className={styles.header}>
@@ -11,7 +12,7 @@ export default function SectionHomepage() {
           advancing IPFS implementations.
         </h3>
         <div className={` ${styles.col40} ${styles.buttonContainer}`}>
-          <Link style="text" href="">
+          <Link style="text" href="https://lu.ma/compute-camp">
             <button className={`${styles.button}`}>Get Tickets Now</button>
           </Link>
         </div>
@@ -22,7 +23,7 @@ export default function SectionHomepage() {
           style={{ borderRadius: 'var(--border-radius-small)' }}
           width="100%"
           height="450"
-          src="https://www.youtube.com/embed/6dojCBJQmqg?autoplay=1"
+          src="https://youtu.be/_puqZ6JYbZI?autoplay=1"
           title="IPFS Thing"
           frameBorder="0"
           allow="autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -32,40 +33,25 @@ export default function SectionHomepage() {
       <section>
         <h3 style={{ paddingBottom: '2rem' }}>Other Upcoming Events</h3>
 
-        <section className={styles.mediaContainer} style={{ paddingBottom: '1rem' }}>
-          <div>
-            <img
-              className={`${styles.col50} ${styles.image}`}
-              src="https://media.cntraveler.com/photos/5d8cf7d5db6acf000833e6cc/4:3/w_3556,h_2667,c_limit/Eiffel-Tower_GettyImages-1060266626.jpg"
-            />
+        <section className={styles.grid4cols} style={{ paddingBottom: '1rem' }}>
+          {upcomingEvents.map((event, index) => {
+            return (
+              <div key={index}>
+                <Link href={event.link} style="text" target="_blank">
+                  <img className={`${styles.col50} ${styles.image}`} src={event.image} />
+                  <div className={styles.containerOverImage}>
+                    <p className={`${styles.smallText}`} style={{ fontWeight: 'bold' }}>
+                      {event.name}
+                    </p>
 
-            <div className={styles.containerOverImage}>
-              <p className={`${styles.tinyText}`}>IPFS Camp 2023</p>
-
-              <p className={`${styles.tinyText}`}>Paris, France | October 10, 2024</p>
-            </div>
-          </div>
-          <div>
-            <img
-              className={`${styles.col50} ${styles.image}`}
-              src="https://media-assets.vanityfair.it/photos/644c24f7cd60f0ca3be60db8/4:3/w_5332,h_3999,c_limit/AdobeStock_251121174.jpeg"
-            />
-
-            <div className={styles.containerOverImage}>
-              <p className={`${styles.tinyText}`}>IPFS Camp 2023</p>
-
-              <p className={`${styles.tinyText}`}>Tokyo, Japan | October 10, 2024</p>
-            </div>
-          </div>
-          <div>
-            <img className={`${styles.col50} ${styles.image}`} src="https://static.theprint.in/wp-content/uploads/2020/07/city-3323160_1280-e1594792391409.jpg" />
-
-            <div className={styles.containerOverImage}>
-              <p className={`${styles.tinyText}`}>IPFS Camp 2023</p>
-
-              <p className={`${styles.tinyText}`}>Hong Kong | October 10, 2024</p>
-            </div>
-          </div>
+                    <p className={`${styles.tinyText}`}>
+                      {event.location} | {event.date}
+                    </p>
+                  </div>
+                </Link>
+              </div>
+            );
+          })}
         </section>
       </section>
     </div>

@@ -13,7 +13,10 @@ export default function NavbarLogoMiddle({ navContent }) {
           <Link href="https://2022.ipfs.camp/" style="animated">
             <p>IPFS Camp</p>
           </Link>
-          <Link href="https://www.youtube.com/watch?v=FII_9VTgDy8" style="animated">
+          <Link
+            href="https://www.canva.com/design/DAFjLxim8uQ/zwv7ZGCGbCHsJPy9g0V6qA/view?utm_content=DAFjLxim8uQ&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink#1"
+            style="animated"
+          >
             <p>IPFS Friends + Cafe</p>
           </Link>
         </div>
