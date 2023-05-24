@@ -1,6 +1,7 @@
 import styles from '@components/FooterTiny.module.scss';
-import Link from './Link';
+
 import GutterContainer from './GutterContainer';
+import Link from './Link';
 
 export default function FooterTiny(footerContent) {
   const { socialIcons } = footerContent;
@@ -8,7 +9,7 @@ export default function FooterTiny(footerContent) {
   return (
     <GutterContainer>
       <div className={`${styles.container} ${styles.footer}`}>
-        <Link style="animated" href="https://protocol.ai/">
+        <Link style="animated" href="https://protocol.ai/" target="_blank">
           <h4>Protocol Labs</h4>
         </Link>
 
