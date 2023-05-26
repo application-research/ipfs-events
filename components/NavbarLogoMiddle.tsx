@@ -1,39 +1,97 @@
+'use client';
 import styles from '@components/NavbarLogoMiddle.module.scss';
+
+import ArrowSVG from './svgs/ArrowSVG';
 import GutterContainer from './GutterContainer';
 import Link from './Link';
 
 export default function NavbarLogoMiddle({ navContent }) {
+  const { navItems } = navContent;
+  const middleIndex = Math.floor(navItems.length / 2);
+  const leftSide = navItems.slice(0, middleIndex);
+  const rightSide = navItems.slice(middleIndex);
+
   return (
     <GutterContainer>
       <div className={`${styles.container} ${styles.navbar}`}>
-        <div className={styles.container}>
-          <Link style="animated" href="/ipfs-thing">
-            <p>IPFS Thing</p>
-          </Link>
-          <Link href="https://2022.ipfs.camp/" style="animated">
-            <p>IPFS Camp</p>
-          </Link>
-          <Link
-            href="https://www.canva.com/design/DAFjLxim8uQ/zwv7ZGCGbCHsJPy9g0V6qA/view?utm_content=DAFjLxim8uQ&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink#1"
-            style="animated"
-          >
-            <p>IPFS Friends + Cafe</p>
-          </Link>
-        </div>
-        <img src="/media/colored-logo.png" className={styles.logo} />
+        <div className={styles.container} style={{ gap: '2rem' }}>
+          {leftSide.map((item, index) => {
+            return (
+              <div key={index}>
+                {!item.dropdown && (
+                  <Link style="animated" href={item.link}>
+                    <p>{item.title}</p>
+                  </Link>
+                )}
+                {item?.dropdown && (
+                  <section className={styles.dropdownContainer}>
+                    <div className={`${styles.container}`} style={{ gap: '1rem' }}>
+                      <Link style="animated" href={item.link}>
+                        <p>{item.title}</p>
+                      </Link>
 
-        <div className={styles.container}>
-          <Link href="https://twitter.com/IPFS?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor" style="animated">
-            <p>Scholars</p>
-          </Link>
-          <Link href="https://docs.ipfs.tech/community/contribute/ways-to-contribute/" style="animated">
-            <p>Get Involved</p>
-          </Link>
-          <Link href="https://blog.ipfs.tech/2023-01-ipfs-community-calendar/" style="animated">
-            <p>Calendar</p>
-          </Link>
+                      <ArrowSVG className={styles.arrow} />
+                    </div>
+                    <Dropdown dropdown={item?.dropdown} />
+                  </section>
+                )}
+              </div>
+            );
+          })}
+        </div>
+
+        <img src={navContent.logo.src} className={styles.logo} alt="IPFS Logo" />
+
+        <div className={styles.container} style={{ gap: '2rem' }}>
+          {rightSide.map((item, index) => {
+            return (
+              <div key={index}>
+                {!item.dropdown && (
+                  <Link style="animated" href={item.link} target={item?.target ?? '_self'}>
+                    <p>{item.title}</p>
+                  </Link>
+                )}
+                {item?.dropdown && (
+                  <>
+                    <p>{item.title}</p>
+
+                    <div className={`${styles.dropdownRow}`}>
+                      <Dropdown dropdown={item?.dropdown} />
+                    </div>
+                  </>
+                )}
+              </div>
+            );
+          })}
         </div>
       </div>
     </GutterContainer>
+  );
+}
+
+function Dropdown({ dropdown }) {
+  return (
+    <section className={`${styles.dropdownContent}`}>
+      <GutterContainer>
+        <div className={styles.dropdownRow}>
+          {dropdown.map((dropdownItem, index) => {
+            return (
+              <div key={index}>
+                <div style={{ display: 'grid', rowGap: '0.5rem' }}>
+                  <Link style="text" href={dropdownItem?.link ?? ''} target={dropdownItem?.target ?? '_self'}>
+                    <img src={dropdownItem.image} className={styles.dropdownImage} />
+                  </Link>
+                  <span>
+                    <Link style="animated" href={dropdownItem?.link ?? ''} target={dropdownItem?.target ?? '_self'}>
+                      <p>{dropdownItem.title}</p>
+                    </Link>
+                  </span>
+                </div>
+              </div>
+            );
+          })}
+        </div>
+      </GutterContainer>
+    </section>
   );
 }

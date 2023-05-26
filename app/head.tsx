@@ -3,7 +3,7 @@ import DefaultMetaTags from '@components/DefaultMetaTags';
 export default async function Head({ params }) {
   const title = 'IPFS.Events';
   const description =
-    'IPFS þing is a week-long gathering for the IPFS implementors community. Everything from talks, workshops, discussion circles, hacking time, and more — all focused on advancing IPFS implementations. ';
+    "Welcome to IPFS Events: IPFS powers the Distributed Web & we’re powering their events! IPFS is a peer-to-peer hypermedia protocol designed to preserve and grow humanity's knowledge by making the web upgradeable, resilient, and more open.";
   const url = 'https://ipfs.events';
 
   // SUMMARY_LARGE_IMAGE: 1500x785

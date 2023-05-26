@@ -106,6 +106,7 @@ html,
 body {
   --color-white: #ffffff;
   --color-white200: #f3fbff;
+  --color-white300: #dfeaef;
   --color-black: #000000;
   --color-black200: #202020;
   --color-text: #000000;
@@ -123,6 +124,9 @@ body {
 
   --border-radius-tiny: 0.5rem;
   --border-radius-small: 1rem;
+
+  --z-index-small: 1;
+  --z-index-medium: 2;
 
   font-size: 16px;
   background: var(--color-background);
