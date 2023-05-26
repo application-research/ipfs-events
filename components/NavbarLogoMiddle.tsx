@@ -75,6 +75,8 @@ function Dropdown({ dropdown }) {
   return (
     <section className={`${styles.dropdownContent}`}>
       <GutterContainer>
+        <h4>{dropdown?.header}</h4>
+
         <div className={styles.dropdownRow}>
           {dropdown.map((dropdownItem, index) => {
             return (
@@ -87,6 +89,10 @@ function Dropdown({ dropdown }) {
                     <Link style="animated" href={dropdownItem?.link ?? ''} target={dropdownItem?.target ?? '_self'}>
                       <p>{dropdownItem.title}</p>
                     </Link>
+                  </span>
+                  <span>
+                    <p>{dropdown?.date}</p>
+                    <p>{dropdown?.location}</p>
                   </span>
                 </div>
               </div>

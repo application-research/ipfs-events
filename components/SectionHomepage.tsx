@@ -7,10 +7,8 @@ export default function SectionHomepage({ upcomingEvents }) {
     <div style={{ display: 'grid', rowGap: '4rem', marginTop: '2.5rem', background: 'var(--color-white200)' }}>
       <header className={styles.header}>
         <div style={{ display: 'grid', rowGap: '1rem', width: '70%' }}>
-          {/* <h1 style={{ fontFamily: 'Parabole', fontSize: '5rem' }}>IPFS EVENTS</h1> */}
-
           <h3>IPFS powers the Distributed Web & we’re powering their events!</h3>
-          <p>IPFS is a peer-to-peer hypermedia protocol designed to preserve and grow humanity's knowledge by making the web upgradeable, resilient, and more open.</p>
+          <p>IsPFS is a peer-to-peer hypermedia protocol designed to preserve and grow humanity's knowledge by making the web upgradeable, resilient, and more open.</p>
           <p>
             IPFS Events play a crucial role in preserving the spirit and momentum of IPFS, fostering connections, facilitating learning, and encouraging contributions in our
             rapidly changing world. These events not only drive the adoption of IPFS technology but also unlock its limitless potential, revolutionizing the global landscape of
@@ -37,7 +35,6 @@ export default function SectionHomepage({ upcomingEvents }) {
           allowFullScreen
         />
       </div>
-   
       <section>
         <h3 style={{ paddingBottom: '2rem' }}>Other Upcoming Events</h3>
 
