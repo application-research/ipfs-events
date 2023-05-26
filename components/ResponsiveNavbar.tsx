@@ -1,5 +1,5 @@
 import styles from '@components/ResponsiveNavbar.module.scss';
-import Image from './Image';
+
 import GutterContainer from './GutterContainer';
 import Link from './Link';
 
@@ -10,7 +10,6 @@ export default function ResponsiveNavbar({ navContent }) {
       <GutterContainer>
         <div className={styles.container}>
           <div className={styles.logo}>
-            {/* <Image image={logo} layout="fill" /> */}
             <img src={logo.src} className={styles.logo} />
           </div>
           <div className={styles.container}>

@@ -1,14 +1,64 @@
 .navbar {
-  height: 80px;
+  height: 90px;
 }
 
 .container {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 2rem;
+  height: 80px;
 }
 
 .logo {
   width: 3.5rem;
+}
+
+.arrow {
+  height: 0.5rem;
+  transition: transform 0.3s ease-in-out;
+
+  &:hover {
+    transform: rotate(180deg);
+  }
+}
+
+.dropdownContainer {
+  &:hover {
+    .arrow {
+      transform: rotate(180deg);
+    }
+  }
+}
+
+.dropdownContent {
+  display: none;
+  position: absolute;
+  width: 100%;
+  left: 0;
+  z-index: var(--z-index-small);
+  height: 300px;
+  background: var(--color-white300);
+  top: 80px;
+  padding-top: 2rem;
+}
+
+.dropdownRow {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+
+  .dropdownImage {
+    height: 10rem;
+    max-width: 16rem;
+    object-fit: cover;
+    border-radius: var(--border-radius-tiny);
+  }
+}
+
+.dropdownContainer {
+  &:hover {
+    .dropdownContent {
+      display: block;
+    }
+  }
 }
