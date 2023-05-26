@@ -27,7 +27,7 @@ export default function NavbarLogoMiddle({ navContent }) {
                   {item?.dropdown && (
                     <section className={styles.dropdownContainer}>
                       <div className={`${styles.container}`} style={{ gap: '1rem' }}>
-                        <Link style="animated" href={item.link}>
+                        <Link style="animated" href={item?.link ?? ''}>
                           <p>{item.title}</p>
                         </Link>
 
