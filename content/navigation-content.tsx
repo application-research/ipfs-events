@@ -66,10 +66,10 @@ export const NAVIGATION_HOMEPAGE_CONTENT = {
     //   link: '',
     //   target: '_blank',
     // },
-    {
-      title: 'Get Involved',
-      link: '',
-    },
+    // {
+    //   title: 'Get Involved',
+    //   link: '',
+    // },
   ],
 };
 
