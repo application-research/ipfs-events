@@ -62,3 +62,21 @@
     }
   }
 }
+
+.columns {
+  display: flex;
+  flex-grow: 1;
+  justify-content: space-between;
+}
+
+.column {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+.logoWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
