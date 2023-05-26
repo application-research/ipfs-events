@@ -37,11 +37,7 @@ export default function SectionHomepage({ upcomingEvents }) {
           allowFullScreen
         />
       </div>
-      <p>
-        IPFS Events play a crucial role in preserving the spirit and momentum of IPFS, fostering connections, facilitating learning, and encouraging contributions in our rapidly
-        changing world. These events not only drive the adoption of IPFS technology but also unlock its limitless potential, revolutionizing the global landscape of information
-        storage, sharing, and access.
-      </p>
+   
       <section>
         <h3 style={{ paddingBottom: '2rem' }}>Other Upcoming Events</h3>
 
