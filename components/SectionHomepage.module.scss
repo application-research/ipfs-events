@@ -1,7 +1,13 @@
 .header {
   display: flex;
   justify-content: space-between;
+  flex-direction: row;
   width: 100%;
+  gap: 2rem;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
 }
 
 .button {
