@@ -1,4 +1,5 @@
 import DefaultMetaTags from '@components/DefaultMetaTags';
+import PlausibleScript from '@root/components/PlausibleScript';
 
 export default async function Head({ params }) {
   const title = 'IPFS.Events';
@@ -25,6 +26,7 @@ export default async function Head({ params }) {
       <meta property="twitter:title" content={title} />
       <meta property="twitter:description" content={description} />
       <meta property="twitter:image" content="" />
+      <PlausibleScript />
     </>
   );
 }
