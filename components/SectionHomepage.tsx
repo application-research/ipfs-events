@@ -1,6 +1,10 @@
 import styles from '@components/SectionHomepage.module.scss';
 
 import Link from './Link';
+// import { VideoPlayer } from './VideoPlayer';
+
+import React from 'react';
+import { VideoPlayer } from './VideoPlayer';
 
 export default function SectionHomepage({ upcomingEvents }) {
   return (
@@ -24,18 +28,8 @@ export default function SectionHomepage({ upcomingEvents }) {
           </Link>
         </div>
       </header>
-
       <div className={styles.mediaContainer}>
-        <iframe
-          style={{ borderRadius: 'var(--border-radius-small)' }}
-          width="100%"
-          height="450"
-          src="https://www.youtube.com/embed/_puqZ6JYbZI?autoplay=1"
-          title="IPFS Thing"
-          frameBorder="0"
-          allow="autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          allowFullScreen
-        />
+        <VideoPlayer src={'/media/ipfs-thing-2023.mp4'} autoPlay muted ariaLabel="video" />
       </div>
       <section>
         <h3 style={{ paddingBottom: '2rem' }}>Other Upcoming Events</h3>
@@ -63,4 +57,17 @@ export default function SectionHomepage({ upcomingEvents }) {
       </section>
     </div>
   );
+}
+
+{
+  /* <iframe
+          style={{ borderRadius: 'var(--border-radius-small)' }}
+          width="100%"
+          height="450"
+          src="https://www.youtube.com/embed/_puqZ6JYbZI?autoplay=1"
+          title="IPFS Thing"
+          frameBorder="0"
+          allow="autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowFullScreen
+        /> */
 }
