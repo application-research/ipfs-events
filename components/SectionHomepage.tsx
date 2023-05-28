@@ -6,7 +6,9 @@ export default function SectionHomepage({ upcomingEvents }) {
   return (
     <div style={{ display: 'grid', rowGap: '4rem', marginTop: '2.5rem', background: 'var(--color-white200)' }}>
       <header className={styles.header}>
-        <div style={{ display: 'grid', rowGap: '1rem', width: '70%' }}>
+        <div className={styles.headerText}>
+          {/* <h1 style={{ fontFamily: 'Parabole', fontSize: '5rem' }}>IPFS EVENTS</h1> */}
+
           <h3>IPFS powers the Distributed Web & we’re powering their events!</h3>
           <p>IsPFS is a peer-to-peer hypermedia protocol designed to preserve and grow humanity's knowledge by making the web upgradeable, resilient, and more open.</p>
           <p>
@@ -16,7 +18,7 @@ export default function SectionHomepage({ upcomingEvents }) {
           </p>
         </div>
 
-        <div className={` ${styles.col40} ${styles.buttonContainer}`} style={{ width: '30%', display: 'flex', alignItems: 'center' }}>
+        <div className={` ${styles.col40} ${styles.buttonContainer}`}>
           <Link style="text" href="https://lu.ma/compute-camp">
             <button className={`${styles.button}`}>Get Tickets for IPFS Camp 2023</button>
           </Link>

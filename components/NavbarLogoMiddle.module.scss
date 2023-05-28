@@ -2,6 +2,21 @@
   height: 90px;
 }
 
+.header {
+  padding-bottom: 1rem;
+}
+
+.date {
+  font-size: var(--font-size-small);
+  color: var(--color-black);
+  text-transform: uppercase;
+}
+
+.location {
+  font-size: var(--font-size-small);
+  color: var(--color-gray);
+}
+
 .container {
   display: flex;
   justify-content: space-between;
@@ -36,7 +51,7 @@
   width: 100%;
   left: 0;
   z-index: var(--z-index-small);
-  height: 300px;
+  height: 400px;
   background: var(--color-white300);
   top: 80px;
   padding-top: 2rem;

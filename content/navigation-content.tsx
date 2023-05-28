@@ -22,8 +22,16 @@ export const NAVIGATION_HOMEPAGE_CONTENT = {
   navItems: [
     {
       title: 'IPFS Thing',
-      // link: '/ipfs-thing/2024',
+      link: null,
       dropdown: [
+        {
+          header: 'Upcoming Event',
+          date: 'TBD, 2024',
+          location: 'TBD',
+          title: 'IPFS Thing 2024',
+          link: null,
+          image: 'https://blog.ipfs.tech/assets/img/181806539-3c71476c-b247-4400-9778-5ccfce635f17.fac0cf11.png',
+        },
         {
           header: 'Past Events',
           date: 'April 15th - 19th, 2023',
@@ -45,12 +53,12 @@ export const NAVIGATION_HOMEPAGE_CONTENT = {
     },
     {
       title: 'IPFS Camp',
-      link: '/ipfs-camp/2023',
+      link: null,
       dropdown: [
         {
           header: 'Upcoming Event',
           title: 'IPFS Camp 2023',
-          date: 'October 28, 2023',
+          date: 'October 28 - November 5, 2023',
           location: 'Location TBD',
           link: 'https://lu.ma/ipfscamp23-prereg',
           image: 'https://blog.ipfs.tech/assets/img/chooseyouradventure.bf5cb5ad.jpeg',
@@ -58,7 +66,6 @@ export const NAVIGATION_HOMEPAGE_CONTENT = {
         {
           header: 'Past Event',
           title: 'IPFS Camp 2022',
-          date: 'October 28, 2022',
           location: 'Lisbon, Portugal',
           link: 'https://2022.ipfs.camp/',
           image: 'https://blog.ipfs.tech/assets/img/ipfsfunding.b99f5959.jpeg',
