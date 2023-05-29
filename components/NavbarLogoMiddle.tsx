@@ -79,7 +79,9 @@ function Dropdown({ dropdown }) {
           {dropdown.map((dropdownItem, index) => {
             return (
               <div key={index}>
-                <div style={{ display: 'grid', rowGap: '0.5rem' }}>
+                {dropdownItem?.header && <h4 className={styles.header}>{dropdownItem.header}</h4>}
+
+                <div style={{ display: 'grid', rowGap: '0.5rem', marginTop: dropdownItem?.header ? '0' : '2.5rem' }}>
                   <Link style="text" href={dropdownItem?.link ?? ''} target={dropdownItem?.target ?? '_self'}>
                     <img src={dropdownItem.image} className={styles.dropdownImage} />
                   </Link>
@@ -88,6 +90,14 @@ function Dropdown({ dropdown }) {
                       <p>{dropdownItem.title}</p>
                     </Link>
                   </span>
+                  <Link style="text" href={dropdownItem?.link ?? ''} target={dropdownItem?.target ?? '_self'}>
+                    <span style={{ display: 'grid', rowGap: '0.2rem' }}>
+                      <p className={styles.date}>{dropdownItem?.date}</p>
+                      <p className={styles.location}>
+                        <i>{dropdownItem?.location}</i>
+                      </p>
+                    </span>
+                  </Link>
                 </div>
               </div>
             );

@@ -10,6 +10,16 @@
   }
 }
 
+.headerText {
+  display: grid;
+  row-gap: 1rem;
+  width: 70%;
+
+  @media (max-width: 768px) {
+    width: 100%;
+  }
+}
+
 .button {
   background: var(--color-text);
   border-bottom: none;
@@ -36,8 +46,15 @@
 
 .buttonContainer {
   display: flex;
-  align-items: flex-start;
-  justify-content: flex-end;
+  align-items: center;
+  justify-content: center;
+  width: 30%;
+
+  @media (max-width: 768px) {
+    width: 100%;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
 }
 
 .mediaContainer {
@@ -63,6 +80,10 @@
 
   @media (max-width: 1050px) {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (max-width: 768px) {
+    grid-template-columns: repeat(1, 1fr);
   }
 }
 

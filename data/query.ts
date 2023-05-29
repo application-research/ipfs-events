@@ -20,9 +20,7 @@ export const example = async (options) => {
   return await runQuery({
     label: 'EXAMPLE',
     queryFn: async () => {
-      const query: any = await DB.insert(options)
-        .into('EXAMPLE_CHANGE_ME')
-        .returning('*');
+      const query: any = await DB.insert(options).into('EXAMPLE_CHANGE_ME').returning('*');
 
       const index = query ? query.pop() : null;
       return index;

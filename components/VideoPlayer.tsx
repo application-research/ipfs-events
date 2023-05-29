@@ -1,16 +1,20 @@
-import { Ratio, Video as VideoType } from '@root/common/types';
-import dynamic from 'next/dynamic';
+'use client';
 
-export interface VideoPlayer extends VideoType {
-  ratio: Ratio;
-}
+import AspectRatio from './AspectRatio';
 
-export function VideoPlayer({ autoplay, controls, loop, muted, ratio, src }: VideoPlayer) {
-  const ReactPlayer = dynamic(() => import('react-player'), { ssr: false });
+export function VideoPlayer({ props, ariaLabel, autoplay, controls, loop, muted, ratio, src }: any) {
+  const videoProps = {
+    ...props,
+    autoPlay: autoplay,
+    muted: muted,
+  };
 
   return (
-    <>
-      <ReactPlayer controls={controls} data-testid="video-player" height="100%" loop={loop} muted={muted} playing={autoplay} url={src} width="100%" />
-    </>
+    <AspectRatio ratio={ratio} props={{ background: 'var(--color-black)', borderRadius: 'var(--border-radius-small)' }}>
+      <video style={{ borderRadius: 'var(--border-radius-small)', overflow: 'hidden' }} {...videoProps} playsInline controls height="100%" width="100%" aria-label={ariaLabel}>
+        <source src={src} type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+    </AspectRatio>
   );
 }
