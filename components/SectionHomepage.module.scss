@@ -46,12 +46,13 @@
 
 .buttonContainer {
   display: flex;
-  align-items: flex-start;
-  justify-content: flex-end;
+  align-items: center;
+  justify-content: center;
   width: 30%;
 
   @media (max-width: 768px) {
     width: 100%;
+    align-items: flex-start;
     justify-content: flex-start;
   }
 }

@@ -1,18 +1,16 @@
 import styles from '@components/SectionHomepage.module.scss';
 
 import Link from './Link';
-// import { VideoPlayer } from './VideoPlayer';
 
 import React from 'react';
 import { VideoPlayer } from './VideoPlayer';
+import { Ratio } from '@root/common/types';
 
 export default function SectionHomepage({ upcomingEvents }) {
   return (
     <div style={{ display: 'grid', rowGap: '4rem', marginTop: '2.5rem', background: 'var(--color-white200)' }}>
       <header className={styles.header}>
         <div className={styles.headerText}>
-          {/* <h1 style={{ fontFamily: 'Parabole', fontSize: '5rem' }}>IPFS EVENTS</h1> */}
-
           <h3>IPFS powers the Distributed Web & we’re powering their events!</h3>
           <p>IsPFS is a peer-to-peer hypermedia protocol designed to preserve and grow humanity's knowledge by making the web upgradeable, resilient, and more open.</p>
           <p>
@@ -29,7 +27,7 @@ export default function SectionHomepage({ upcomingEvents }) {
         </div>
       </header>
       <div className={styles.mediaContainer}>
-        <VideoPlayer src={'/media/ipfs-thing-2023.mp4'} autoPlay muted ariaLabel="video" />
+        <VideoPlayer src={'/media/ipfs-thing-2023.mp4'} autoPlay muted ariaLabel="video" ratio={Ratio.TWENTY_ONE_BY_NINE} />
       </div>
       <section>
         <h3 style={{ paddingBottom: '2rem' }}>Other Upcoming Events</h3>
@@ -57,17 +55,4 @@ export default function SectionHomepage({ upcomingEvents }) {
       </section>
     </div>
   );
-}
-
-{
-  /* <iframe
-          style={{ borderRadius: 'var(--border-radius-small)' }}
-          width="100%"
-          height="450"
-          src="https://www.youtube.com/embed/_puqZ6JYbZI?autoplay=1"
-          title="IPFS Thing"
-          frameBorder="0"
-          allow="autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          allowFullScreen
-        /> */
 }
