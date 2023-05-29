@@ -1,10 +1,9 @@
 import styles from '@components/SectionHomepage.module.scss';
 
-import Link from './Link';
-
-import React from 'react';
-import { VideoPlayer } from './VideoPlayer';
 import { Ratio } from '@root/common/types';
+import { VideoPlayer } from './VideoPlayer';
+import Link from './Link';
+import React from 'react';
 
 export default function SectionHomepage({ upcomingEvents }) {
   return (
@@ -12,12 +11,7 @@ export default function SectionHomepage({ upcomingEvents }) {
       <header className={styles.header}>
         <div className={styles.headerText}>
           <h3>IPFS powers the Distributed Web & we’re powering their events!</h3>
-          <p>IsPFS is a peer-to-peer hypermedia protocol designed to preserve and grow humanity's knowledge by making the web upgradeable, resilient, and more open.</p>
-          <p>
-            IPFS Events play a crucial role in preserving the spirit and momentum of IPFS, fostering connections, facilitating learning, and encouraging contributions in our
-            rapidly changing world. These events not only drive the adoption of IPFS technology but also unlock its limitless potential, revolutionizing the global landscape of
-            information storage, sharing, and access.
-          </p>
+          <p>IPFS is a peer-to-peer hypermedia protocol designed to preserve and grow humanity's knowledge by making the web upgradeable, resilient, and more open.</p>
         </div>
 
         <div className={` ${styles.col40} ${styles.buttonContainer}`}>
@@ -29,6 +23,11 @@ export default function SectionHomepage({ upcomingEvents }) {
       <div className={styles.mediaContainer}>
         <VideoPlayer src={'/media/ipfs-thing-2023.mp4'} autoPlay muted ariaLabel="video" ratio={Ratio.TWENTY_ONE_BY_NINE} />
       </div>
+      <p>
+        IPFS Events play a crucial role in preserving the spirit and momentum of IPFS, fostering connections, facilitating learning, and encouraging contributions in our rapidly
+        changing world. These events not only drive the adoption of IPFS technology but also unlock its limitless potential, revolutionizing the global landscape of information
+        storage, sharing, and access.
+      </p>
       <section>
         <h3 style={{ paddingBottom: '2rem' }}>Other Upcoming Events</h3>
 

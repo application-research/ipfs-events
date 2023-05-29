@@ -55,6 +55,7 @@
   background: var(--color-white300);
   top: 80px;
   padding-top: 2rem;
+  overflow: hidden;
 }
 
 .dropdownRow {
@@ -71,10 +72,20 @@
 }
 
 .dropdownContainer {
-  &:hover {
-    .dropdownContent {
-      display: block;
-    }
+  &:hover .dropdownContent {
+    display: block;
+    animation-name: revealAnimation;
+    animation-duration: 0.3s;
+    animation-timing-function: cubic-bezier(0.42, 0, 0.58, 1);
+  }
+}
+
+@keyframes revealAnimation {
+  0% {
+    height: 0;
+  }
+  100% {
+    height: 400px;
   }
 }
 

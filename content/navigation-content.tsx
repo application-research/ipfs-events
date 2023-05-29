@@ -62,6 +62,7 @@ export const NAVIGATION_HOMEPAGE_CONTENT = {
           location: 'Location TBD',
           link: 'https://lu.ma/ipfscamp23-prereg',
           image: 'https://blog.ipfs.tech/assets/img/chooseyouradventure.bf5cb5ad.jpeg',
+          target: '_blank',
         },
         {
           header: 'Past Event',
@@ -69,6 +70,7 @@ export const NAVIGATION_HOMEPAGE_CONTENT = {
           location: 'Lisbon, Portugal',
           link: 'https://2022.ipfs.camp/',
           image: 'https://blog.ipfs.tech/assets/img/ipfsfunding.b99f5959.jpeg',
+          target: '_blank',
         },
       ],
     },
