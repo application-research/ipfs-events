@@ -100,12 +100,12 @@ export const FOOTER_TINY_CONTENT = {
     {
       text: 'IPFS Twitter',
       image: '/media/twitter-icon.png',
-      link: 'https://twitter.com/filecointldr?lang=en',
+      link: 'https://twitter.com/IPFS?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor',
     },
     {
       text: 'IPFS Events Github',
       image: '/media/github-icon.png',
-      link: 'https://github.com/filecoin-project/community#forums',
+      link: 'https://github.com/ipfs',
     },
     {
       text: 'IPFS Discord',
@@ -115,7 +115,7 @@ export const FOOTER_TINY_CONTENT = {
     {
       text: 'Youtube',
       image: '/media/youtube-icon.png',
-      link: 'https://www.youtube.com/channel/UCPyYmtJYQwxM-EUyRUTp5DA',
+      link: 'https://www.youtube.com/@IPFSbot',
     },
   ],
   copyright: [
