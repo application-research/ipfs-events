@@ -7,29 +7,39 @@ import React from 'react';
 
 export default function SectionHomepage({ upcomingEvents }) {
   return (
-    <div style={{ display: 'grid', rowGap: '4rem', marginTop: '2.5rem', background: 'var(--color-white200)' }}>
-      <header className={styles.header}>
-        <div className={styles.headerText}>
-          <h3>IPFS powers the Distributed Web & we’re powering their events!</h3>
-          <p>IPFS is a peer-to-peer hypermedia protocol designed to preserve and grow humanity's knowledge by making the web upgradeable, resilient, and more open.</p>
-        </div>
-
-        <div className={` ${styles.col40} ${styles.buttonContainer}`}>
-          <Link style="text" href="https://lu.ma/compute-camp">
-            <button className={`${styles.button}`}>Get Tickets for IPFS Camp 2023</button>
-          </Link>
-        </div>
-      </header>
-      <div className={styles.mediaContainer}>
-        <VideoPlayer src={'/media/ipfs-thing-2023.mp4'} autoPlay muted ariaLabel="video" ratio={Ratio.TWENTY_ONE_BY_NINE} />
-      </div>
-      <p>
-        IPFS Events play a crucial role in preserving the spirit and momentum of IPFS, fostering connections, facilitating learning, and encouraging contributions in our rapidly
-        changing world. These events not only drive the adoption of IPFS technology but also unlock its limitless potential, revolutionizing the global landscape of information
-        storage, sharing, and access.
-      </p>
+    <div style={{ display: 'grid', rowGap: '8rem', marginTop: '2.5rem', background: 'var(--color-white200)' }}>
       <section>
-        <h3 style={{ paddingBottom: '2rem' }}>Other Upcoming Events</h3>
+        <header className={styles.header} style={{ paddingBottom: '4rem' }}>
+          <div className={styles.headerText}>
+            <h3 className={styles.h3}>IPFS powers the Distributed Web & we’re powering their events!</h3>
+            <p>IPFS is a peer-to-peer hypermedia protocol designed to preserve and grow humanity's knowledge by making the web upgradeable, resilient, and more open.</p>
+          </div>
+
+          <div className={` ${styles.col40} ${styles.buttonContainer}`}>
+            <Link style="text" href="https://lu.ma/compute-camp">
+              <button className={`${styles.button}`}>Get Tickets for IPFS Camp 2023</button>
+            </Link>
+          </div>
+        </header>
+        <div className={styles.mediaContainer}>
+          <VideoPlayer src={'/media/ipfs-thing-2023.mp4'} autoPlay muted ariaLabel="video" ratio={Ratio.TWENTY_ONE_BY_NINE} />
+        </div>
+      </section>
+
+      <div className={styles.twoColumns}>
+        <h1 className={styles.h1}>
+          IPFS Events play a crucial role in preserving the spirit and momentum of IPFS, fostering connections, facilitating learning, and encouraging contributions in our rapidly
+          changing world.
+        </h1>
+        <p>
+          These events not only drive the adoption of IPFS technology but also unlock its limitless potential, revolutionizing the global landscape of information storage, sharing,
+          and access.
+        </p>
+      </div>
+      <section>
+        <h3 className={styles.h3} style={{ paddingBottom: '2rem' }}>
+          Other Upcoming Events
+        </h3>
 
         <section className={styles.grid4cols} style={{ paddingBottom: '1rem' }}>
           {upcomingEvents.map((event, index) => {
