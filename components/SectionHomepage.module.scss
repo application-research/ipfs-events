@@ -162,3 +162,23 @@
 .smallText {
   font-size: var(--font-size-small);
 }
+
+.twoColumns {
+  display: flex;
+  flex-direction: row;
+  gap: 3rem;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    gap: 2rem;
+  }
+}
+
+.h3,
+.h1 {
+  font-family: Inter;
+}
+
+.h3 {
+  font-weight: var(--font-weight-regular);
+}
