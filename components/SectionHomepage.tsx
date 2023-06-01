@@ -47,7 +47,7 @@ export default function SectionHomepage({ upcomingEvents }) {
             {upcomingEvents.map((event, index) => {
               return (
                 <div key={index}>
-                  <Link href={event.link} style="text" target="_blank">
+                  <Link href={event?.link ?? ''} style="text" target={event?.target ?? '_blank'}>
                     <img className={`${styles.col50} ${styles.image}`} src={event.image} />
                     <div className={styles.containerOverImage}>
                       <p className={`${styles.smallText}`} style={{ fontWeight: 'bold' }}>

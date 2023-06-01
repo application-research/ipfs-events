@@ -30,8 +30,9 @@ export const HOMEPAGE_CONTENT = {
     {
       date: 'TBD',
       image: 'https://blog.ipfs.tech/assets/img/181806539-3c71476c-b247-4400-9778-5ccfce635f17.fac0cf11.png',
-      link: 'TBD',
+      link: null,
       location: 'TBD',
+      target: '_self',
       name: 'IPFS Thing 2024',
     },
   ],
