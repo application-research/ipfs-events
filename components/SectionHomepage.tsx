@@ -18,8 +18,8 @@ export default function SectionHomepage({ upcomingEvents }) {
             </div>
 
             <div className={` ${styles.col40} ${styles.buttonContainer}`}>
-              <Link style="text" href="https://lu.ma/compute-camp">
-                <button className={`${styles.button}`}>Get Tickets for Compute Camp 2023</button>
+              <Link style="text" href="https://lu.ma/ipfscamp23-prereg" target="_blank">
+                <button className={`${styles.button}`}>Get Tickets for IPFS Camp 2023</button>
               </Link>
             </div>
           </header>
