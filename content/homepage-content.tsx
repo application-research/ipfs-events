@@ -23,7 +23,7 @@ export const HOMEPAGE_CONTENT = {
     {
       date: 'October 28',
       image: '/media/ipfs-camp.png',
-      link: 'https://lu.ma/compute-camp',
+      link: 'https://lu.ma/ipfscamp23-prereg',
       location: 'TBD',
       name: 'IPFS Camp 2023',
     },
