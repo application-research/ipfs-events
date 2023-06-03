@@ -1,10 +1,12 @@
 export enum BlockTypeEnum {
+  COLLAPSABLE = 'collapsable',
+  HERO = 'hero',
   MEDIA = 'media',
-  BANNER = 'banner',
 }
 
 export interface Image {
   altText: string;
+  ariaLabel?: string | null;
   caption?: string | null;
   height: number;
   mime: MediaType;
@@ -48,4 +50,12 @@ export interface Video {
   poster?: string;
   src: string;
   width?: number;
+}
+
+export enum CallToActionVariantEnum {
+  BLACK = 'dark-blue',
+  LINK = 'link',
+  LINK_ICON = 'link-icon',
+  TEXT = 'text',
+  WHITE = 'white',
 }

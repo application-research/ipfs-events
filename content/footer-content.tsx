@@ -22,7 +22,6 @@ export const FOOTER_CONTENT = {
     ],
   },
   contactUsCard: {
-    icon: '/media/paper-plane.png',
     heading: 'Contact Us',
     text: 'Lorem Ipsum  email @ name',
   },
@@ -92,7 +91,6 @@ export const FOOTER_TINY_CONTENT = {
     ],
   },
   contactUsCard: {
-    icon: '/media/paper-plane.png',
     heading: 'Contact Us',
     text: 'Lorem Ipsum  email @ name',
   },

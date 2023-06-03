@@ -2,6 +2,8 @@ import styles from '@components/ResponsiveNavbar.module.scss';
 
 import GutterContainer from './GutterContainer';
 import Link from './Link';
+import { CallToActionVariant } from './CallToActionVariant';
+import { CallToActionVariantEnum } from '@root/common/types';
 
 export default function ResponsiveNavbar({ navContent }) {
   let { logo, navItems } = navContent;
@@ -25,8 +27,8 @@ export default function ResponsiveNavbar({ navContent }) {
                   );
                 })}
               </ul>
-            )}{' '}
-            <button className={styles.button}>Get Tickets</button>
+            )}
+            <CallToActionVariant type={CallToActionVariantEnum.BLACK} cta={cta} />
           </div>
         </div>
       </GutterContainer>

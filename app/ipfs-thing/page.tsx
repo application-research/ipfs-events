@@ -1,5 +1,6 @@
 import '@root/global.scss';
 
+import { EVENT_PAGE_CONTENT } from '@root/content/event-page-content';
 import { FOOTER_CONTENT } from '@root/content/footer-content';
 import { HOMEPAGE_HERO_CONTENT } from '@root/content/homepage-content';
 import { NAVIGATION_CONTENT } from '@root/content/navigation-content';
@@ -10,16 +11,15 @@ import ResponsiveNavbar from '@root/components/ResponsiveNavbar';
 import SectionEventPage from '@root/components/SectionEventPage';
 
 export default async function Page(props) {
-  const hero = HOMEPAGE_HERO_CONTENT;
-  const navContent = NAVIGATION_CONTENT;
+  const blocks = EVENT_PAGE_CONTENT;
   const footerContent = FOOTER_CONTENT;
+  const navContent = NAVIGATION_CONTENT;
 
   return (
     <DefaultLayout>
       <ResponsiveNavbar navContent={navContent} />
-      <GutterContainer>
-        <SectionEventPage hero={hero} />
-      </GutterContainer>
+
+      <SectionEventPage blocks={blocks} />
 
       <Footer {...footerContent} />
     </DefaultLayout>

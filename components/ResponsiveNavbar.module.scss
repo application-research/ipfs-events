@@ -22,19 +22,3 @@
 .logo {
   height: 48px;
 }
-
-.button {
-  background: var(--color-text);
-  border-bottom: none;
-  border-radius: var(--border-radius-tiny);
-  font-size: 1rem;
-  color: var(--color-white);
-  padding: 1rem;
-  text-decoration: none;
-  cursor: pointer;
-  border: none;
-
-  &:hover {
-    background: var(--color-black200);
-  }
-}

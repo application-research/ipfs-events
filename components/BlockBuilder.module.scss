@@ -1,70 +1,9 @@
-.body {
-  padding: var(--page-gutters-desktop);
-  max-width: var(--page-width);
-  margin: 0 auto 0 auto;
-  width: 100%;
-  position: relative;
-  z-index: var(--z-index-small);
-  @media (max-width: 1050px) {
-    padding: var(--page-gutters-default);
-  }
+.mainTitle {
+  font-family: 'Inter';
+  font-size: var(--font-size-extra-large);
 }
 
-.directionRow {
-  background: var(--sky);
-}
-
-.coverStart {
-  left: 0rem;
-  top: 1rem;
-  position: absolute;
-  width: 100%;
-}
-
-.coverStartBackground {
-  background: var(--color-white);
-  width: 100%;
-}
-
-.coverMiddle {
-  left: 0rem;
-  top: 2rem;
-  position: absolute;
-  width: 100%;
-
-  @media (max-width: 1325px) {
-    top: 4.5rem;
-  }
-  @media (max-width: 768px) {
-    top: 6rem;
-  }
-}
-
-.coverMiddleBackground {
-  background: var(--color-white);
-  width: 100%;
-}
-.coverEnd {
-  left: 0rem;
-  right: 0rem;
-  margin-top: -1rem;
-  position: absolute;
+.borderBottom {
   padding-bottom: 3rem;
-
-  @media (max-width: 768px) {
-    padding-bottom: 6rem;
-  }
-}
-
-.coverEndBackground {
-  background: var(--color-white);
-}
-
-.coverWhite {
-  background: var(--color-white);
-}
-
-.borderTop {
-  border-top: 1px solid var(--textBlack);
-  padding-bottom: 2rem;
+  border-bottom: 1px solid var(--color-text);
 }
