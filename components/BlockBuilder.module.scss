@@ -7,3 +7,20 @@
   padding-bottom: 3rem;
   border-bottom: 1px solid var(--color-text);
 }
+
+.directionRow {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+
+  @media (max-width: 765px) {
+    flex-direction: column;
+    gap: 1rem;
+  }
+}
+
+.directionColumn {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}

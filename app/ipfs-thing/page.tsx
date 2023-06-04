@@ -2,11 +2,9 @@ import '@root/global.scss';
 
 import { EVENT_PAGE_CONTENT } from '@root/content/event-page-content';
 import { FOOTER_CONTENT } from '@root/content/footer-content';
-import { HOMEPAGE_HERO_CONTENT } from '@root/content/homepage-content';
 import { NAVIGATION_CONTENT } from '@root/content/navigation-content';
 import DefaultLayout from '@components/DefaultLayout';
 import Footer from '@root/components/Footer';
-import GutterContainer from '@root/components/GutterContainer';
 import ResponsiveNavbar from '@root/components/ResponsiveNavbar';
 import SectionEventPage from '@root/components/SectionEventPage';
 

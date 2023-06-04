@@ -2,6 +2,12 @@ export enum BlockTypeEnum {
   COLLAPSABLE = 'collapsable',
   HERO = 'hero',
   MEDIA = 'media',
+  TICKET_CARD = 'ticket-card',
+}
+
+export enum BlockDirectionEnum {
+  COLUMN = 'column',
+  ROW = 'row',
 }
 
 export interface Image {

@@ -13,3 +13,13 @@
     background: var(--color-black200);
   }
 }
+
+.button {
+  padding: 1rem;
+  text-decoration: none;
+  cursor: pointer;
+  border: none;
+  border-bottom: none;
+  border-radius: var(--border-radius-tiny);
+  font-size: 1rem;
+}

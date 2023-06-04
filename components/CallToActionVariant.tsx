@@ -12,12 +12,24 @@ export function CallToActionVariant({ type, cta }) {
           </button>
         </Link>
       );
+
     case CallToActionVariantEnum.TEXT:
       return <ButtonText cta={cta} />;
-
+    case CallToActionVariantEnum.WHITE:
+      return <Button cta={cta} buttonColor={'var(--color-white)'} />;
     default:
       return <></>;
   }
+}
+
+export function Button(cta, buttonColor) {
+  return (
+    <Link className={styles.blackLink} href={cta.link ?? ''} target={cta?.taget ? cta.taget : '_blank'}>
+      <button aria-label={cta.text} className={styles.button}>
+        {cta.text}
+      </button>
+    </Link>
+  );
 }
 
 export function ButtonText({ cta }) {
