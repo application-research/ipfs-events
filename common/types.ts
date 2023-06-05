@@ -3,6 +3,7 @@ export enum BlockTypeEnum {
   HERO = 'hero',
   MEDIA = 'media',
   TICKET_CARD = 'ticket-card',
+  LOGO_GRID = 'logo-grid',
 }
 
 export enum BlockDirectionEnum {
@@ -14,10 +15,7 @@ export interface Image {
   altText: string;
   ariaLabel?: string | null;
   caption?: string | null;
-  height: number;
-  mime: MediaType;
   src: string;
-  width: number;
 }
 
 export enum MediaType {

@@ -4,7 +4,6 @@ import { Ratio } from '@root/common/types';
 import { VideoPlayer } from './VideoPlayer';
 import Link from './Link';
 import React from 'react';
-import GridBackgroundSVG from './svgs/GridBackgroundSVG';
 
 export default function SectionHomepage({ upcomingEvents }) {
   return (

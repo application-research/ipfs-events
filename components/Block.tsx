@@ -4,6 +4,7 @@ import GutterContainer from './GutterContainer';
 import Hero from './Hero';
 import MediaBlock from './MediaBlock';
 import TicketCard from './TicketCard';
+import LogoGrid from './LogoGrid';
 
 export function Block({ block }) {
   switch (block.type) {
@@ -15,6 +16,8 @@ export function Block({ block }) {
           <Hero {...block} />
         </div>
       );
+    case (block.type = BlockTypeEnum.LOGO_GRID):
+      return <LogoGrid {...block} />;
     case (block.type = BlockTypeEnum.MEDIA):
       return <MediaBlock {...block} />;
     case (block.type = BlockTypeEnum.TICKET_CARD):

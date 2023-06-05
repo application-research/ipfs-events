@@ -51,7 +51,237 @@ export const EVENT_PAGE_CONTENT = [
   },
   {
     id: '2',
-    title: 'About',
+    title: 'Participating Teams',
+    direction: 'row',
+    block: [
+      {
+        id: 'participating-teams',
+        type: BlockTypeEnum.LOGO_GRID,
+        text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut ultrices dui. Aenean dapibus elit ac turpis laoreet posuere. Phasellus iaculis nibh eu quam accumsan, sit amet tincidunt risus dignissim.',
+        logos: [
+          {
+            src: '/media/evp.png',
+            href: null,
+          },
+          {
+            src: '/media/protocollabs.png',
+            href: null,
+          },
+          {
+            src: '/media/e.png',
+            href: null,
+          },
+          {
+            src: '/media/protocollabs.png',
+            href: null,
+          },
+          {
+            src: '/media/e.png',
+            href: null,
+          },
+          {
+            src: '/media/protocollabs.png',
+            href: null,
+          },
+          {
+            src: '/media/e.png',
+            href: null,
+          },
+          {
+            src: '/media/protocollabs.png',
+            href: null,
+          },
+          {
+            src: '/media/evp.png',
+            href: null,
+          },
+          {
+            src: '/media/protocollabs.png',
+            href: null,
+          },
+          {
+            src: '/media/evp.png',
+            href: null,
+          },
+          {
+            src: '/media/protocollabs.png',
+            href: null,
+          },
+          {
+            src: '/media/evp.png',
+            href: null,
+          },
+          {
+            src: '/media/protocollabs.png',
+            href: null,
+          },
+          {
+            src: '/media/evp.png',
+            href: null,
+          },
+          {
+            src: '/media/protocollabs.png',
+            href: null,
+          },
+          {
+            src: '/media/evp.png',
+            href: null,
+          },
+          {
+            src: '/media/protocollabs.png',
+            href: null,
+          },
+          {
+            src: '/media/evp.png',
+            href: null,
+          },
+          {
+            src: '/media/protocollabs.png',
+            href: null,
+          },
+          {
+            src: '/media/evp.png',
+            href: null,
+          },
+          {
+            src: '/media/protocollabs.png',
+            href: null,
+          },
+          {
+            src: '/media/evp.png',
+            href: null,
+          },
+          {
+            src: '/media/protocollabs.png',
+            href: null,
+          },
+          {
+            src: '/media/evp.png',
+            href: null,
+          },
+          {
+            src: '/media/protocollabs.png',
+            href: null,
+          },
+          {
+            src: '/media/evp.png',
+            href: null,
+          },
+          {
+            src: '/media/protocollabs.png',
+            href: null,
+          },
+          {
+            src: '/media/evp.png',
+            href: null,
+          },
+          {
+            src: '/media/protocollabs.png',
+            href: null,
+          },
+          {
+            src: '/media/evp.png',
+            href: null,
+          },
+          {
+            src: '/media/protocollabs.png',
+            href: null,
+          },
+          {
+            src: '/media/evp.png',
+            href: null,
+          },
+          {
+            src: '/media/protocollabs.png',
+            href: null,
+          },
+          {
+            src: '/media/evp.png',
+            href: null,
+          },
+          {
+            src: '/media/protocollabs.png',
+            href: null,
+          },
+          {
+            src: '/media/evp.png',
+            href: null,
+          },
+          {
+            src: '/media/protocollabs.png',
+            href: null,
+          },
+          {
+            src: '/media/evp.png',
+            href: null,
+          },
+          {
+            src: '/media/protocollabs.png',
+            href: null,
+          },
+          {
+            src: '/media/evp.png',
+            href: null,
+          },
+          {
+            src: '/media/protocollabs.png',
+            href: null,
+          },
+          {
+            src: '/media/evp.png',
+            href: null,
+          },
+          {
+            src: '/media/protocollabs.png',
+            href: null,
+          },
+          {
+            src: '/media/evp.png',
+            href: null,
+          },
+          {
+            src: '/media/protocollabs.png',
+            href: null,
+          },
+          {
+            src: '/media/evp.png',
+            href: null,
+          },
+          {
+            src: '/media/protocollabs.png',
+            href: null,
+          },
+          {
+            src: '/media/evp.png',
+            href: null,
+          },
+          {
+            src: '/media/protocollabs.png',
+            href: null,
+          },
+          {
+            src: '/media/evp.png',
+            href: null,
+          },
+          {
+            src: '/media/protocollabs.png',
+            href: null,
+          },
+          {
+            src: '/media/evp.png',
+            href: null,
+          },
+          {
+            src: '/media/protocollabs.png',
+            href: null,
+          },
+        ],
+      },
+    ],
+  },
+  {
+    id: '2',
+    title: 'Ticketing',
     direction: 'row',
     block: [
       {
@@ -61,7 +291,7 @@ export const EVENT_PAGE_CONTENT = [
         name: 'Student',
         description: 'Apply for the student rate. You must be able to present a valid university email address, university ID, or other official documentation.',
         img: {
-          src: 'https://images.megapixl.com/2987/29878522.jpg',
+          src: '/media/background.jpeg',
         },
         cta: {
           type: CallToActionVariantEnum.BORDER,
@@ -79,7 +309,7 @@ export const EVENT_PAGE_CONTENT = [
         name: 'General Ticket',
         description: 'You are welcome to support the event at this General Ticket price if you are able and would like to leave your Early Bird ticket for another.',
         img: {
-          src: 'https://images.megapixl.com/2987/29878522.jpg',
+          src: '/media/background.jpeg',
         },
         cta: {
           type: CallToActionVariantEnum.BORDER,
@@ -97,7 +327,7 @@ export const EVENT_PAGE_CONTENT = [
         name: 'Supporters Ticket',
         description: 'You are welcome to support the event at this General Ticket price if you are able and would like to leave your Early Bird ticket for another.',
         img: {
-          src: 'https://images.megapixl.com/2987/29878522.jpg',
+          src: '/media/background.jpeg',
         },
         cta: {
           type: CallToActionVariantEnum.BORDER,
