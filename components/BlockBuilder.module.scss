@@ -15,12 +15,11 @@
 
   @media (max-width: 765px) {
     flex-direction: column;
-    gap: 1rem;
   }
 }
 
 .directionColumn {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: 2rem;
 }

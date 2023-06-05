@@ -64,4 +64,6 @@ export enum CallToActionVariantEnum {
   LINK_ICON = 'link-icon',
   TEXT = 'text',
   WHITE = 'white',
+  BORDER = 'border',
+  NO_BORDER = 'no-border',
 }

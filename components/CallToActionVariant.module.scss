@@ -15,11 +15,28 @@
 }
 
 .button {
-  padding: 1rem;
+  padding: 0.5rem;
   text-decoration: none;
   cursor: pointer;
-  border: none;
   border-bottom: none;
   border-radius: var(--border-radius-tiny);
   font-size: 1rem;
+  border: none;
+
+  @media (max-width: 768px) {
+    font-size: var(--font-size-regular);
+  }
+}
+
+.borderButton {
+  padding: 0.5rem;
+  text-decoration: none;
+  cursor: pointer;
+  border-radius: var(--border-radius-tiny);
+  font-size: 1rem;
+  border: 1px solid;
+
+  @media (max-width: 768px) {
+    font-size: var(--font-size-regular);
+  }
 }

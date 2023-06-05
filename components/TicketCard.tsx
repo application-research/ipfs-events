@@ -1,7 +1,6 @@
 import styles from '@components/TicketCard.module.scss';
 
 import { CallToActionVariant } from './CallToActionVariant';
-import { CallToActionVariantEnum } from '@root/common/types';
 import Link from './Link';
 
 export default function TicketCard({ cta, description, price, name, img }) {
@@ -18,7 +17,7 @@ export default function TicketCard({ cta, description, price, name, img }) {
         {description && <p className={styles.description}>{description}</p>}
 
         <div className={styles.callToAction}>
-          {cta && <CallToActionVariant type={CallToActionVariantEnum.WHITE} cta={cta} />}
+          {cta && <CallToActionVariant type={cta.type} cta={cta} />}
           {price && <h3 className={styles.price}>{price}</h3>}
         </div>
       </section>

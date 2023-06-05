@@ -32,11 +32,17 @@
 }
 
 .textContent {
-  padding: 1rem;
+  padding: 1.5rem 1rem;
 }
 
 .callToAction {
   display: flex;
   justify-content: space-between;
+  gap: 1rem;
   padding-top: 0.5rem;
+
+  @media (max-width: 900px) {
+    display: grid;
+    gap: 1rem;
+  }
 }

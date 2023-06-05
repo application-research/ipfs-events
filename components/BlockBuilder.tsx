@@ -1,11 +1,8 @@
 import styles from '@components/BlockBuilder.module.scss';
 
 import { Block } from './Block';
-import GutterContainer from './GutterContainer';
 
 export default function BlockBuilder({ title, id, description, direction, block }) {
-  console.log(direction, 'direction');
-
   return (
     <div id={id} style={{ display: 'grid', rowGap: '2rem' }}>
       {(title || description) && (
