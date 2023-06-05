@@ -1,4 +1,4 @@
-import { BlockTypeEnum, CallToActionVariantEnum, Ratio, TypeName } from '@root/common/types';
+import { BlockDirectionEnum, BlockTypeEnum, CallToActionVariantEnum, Ratio, TypeName } from '@root/common/types';
 import { MARKDOWN_CONTENT } from './markdown-content';
 
 export const EVENT_PAGE_CONTENT = [
@@ -45,6 +45,67 @@ export const EVENT_PAGE_CONTENT = [
           src: '/media/ipfs-thing-2023.mp4',
           ariaLabel: 'IPFS Thing 2023',
           ratio: Ratio.TWENTY_ONE_BY_NINE,
+        },
+      },
+    ],
+  },
+  {
+    id: '2',
+    title: 'About',
+    direction: 'row',
+    block: [
+      {
+        id: 'media',
+        type: BlockTypeEnum.TICKET_CARD,
+        price: '$350',
+        name: 'Student',
+        description: 'Apply for the student rate. You must be able to present a valid university email address, university ID, or other official documentation.',
+        img: {
+          src: 'https://images.megapixl.com/2987/29878522.jpg',
+        },
+        cta: {
+          type: CallToActionVariantEnum.BORDER,
+          target: '_blank',
+          buttonColor: 'white',
+          textColor: 'white',
+          text: 'Receive My Student Promo Code',
+          link: '/ticket',
+        },
+      },
+      {
+        id: 'media',
+        type: BlockTypeEnum.TICKET_CARD,
+        price: '$650',
+        name: 'General Ticket',
+        description: 'You are welcome to support the event at this General Ticket price if you are able and would like to leave your Early Bird ticket for another.',
+        img: {
+          src: 'https://images.megapixl.com/2987/29878522.jpg',
+        },
+        cta: {
+          type: CallToActionVariantEnum.BORDER,
+          buttonColor: 'white',
+          textColor: 'white',
+          target: '_blank',
+          text: 'General Ticket',
+          link: '/ticket',
+        },
+      },
+      {
+        id: 'media',
+        type: BlockTypeEnum.TICKET_CARD,
+        price: '$650',
+        name: 'Supporters Ticket',
+        description: 'You are welcome to support the event at this General Ticket price if you are able and would like to leave your Early Bird ticket for another.',
+        img: {
+          src: 'https://images.megapixl.com/2987/29878522.jpg',
+        },
+        cta: {
+          type: CallToActionVariantEnum.BORDER,
+          buttonColor: 'white',
+          textColor: 'white',
+          target: '_blank',
+          text: 'General Ticket',
+          link: '/ticket',
         },
       },
     ],

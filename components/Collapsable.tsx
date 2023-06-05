@@ -1,26 +1,26 @@
 'use client';
 import styles from '@components/Collapsable.module.scss';
 
+import { MarkdownToJSX } from './Markdown';
 import { useState } from 'react';
 import PlusSVG from './svgs/PlusSVG';
-import { MarkdownToJSX } from './Markdown';
 
 export function Collapsable({ id, title, collapsedText }) {
-  const [expanded, setExpanded] = useState(false);
+  const [isExpanded, setExpanded] = useState(false);
 
-  const toggleExpanded = () => {
-    setExpanded((prevExpanded) => !prevExpanded);
-  };
+  function toggleExpanded() {
+    setExpanded(!isExpanded);
+  }
 
   return (
-    <div id={id ?? ''} onClick={toggleExpanded} className={styles.container} style={{ display: 'grid', rowGap: '1rem' }}>
+    <div id={id ?? ''} className={styles.container} onClick={toggleExpanded} style={{ display: 'grid', rowGap: '1rem' }}>
       <div className={styles.heading}>
         <h4>{title}</h4>
-        <PlusSVG className={styles.plusIcon} props={{ width: '2rem' }} onClick={toggleExpanded} />
+        <PlusSVG className={styles.plusIcon} props={{ width: '2rem' }} />{' '}
       </div>
 
-      {expanded && (
-        <section className={styles.collapsedText}>
+      {isExpanded && (
+        <section className={`${styles.collapsedText} ${styles.expanded}`}>
           <MarkdownToJSX>{collapsedText}</MarkdownToJSX>
         </section>
       )}

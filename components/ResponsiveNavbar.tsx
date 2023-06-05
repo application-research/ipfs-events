@@ -16,19 +16,21 @@ export default function ResponsiveNavbar({ navContent }) {
           </div>
           <div className={styles.container}>
             {navItems && (
-              <ul className={styles.list} style={{ paddingRight: '2rem' }}>
-                {navItems.map((navItem, index) => {
-                  return (
-                    <li className={styles.listItem} key={index}>
-                      <Link style="animated" href={navItem.href}>
-                        {navItem.name}
-                      </Link>
-                    </li>
-                  );
-                })}
-              </ul>
+              <>
+                <ul className={styles.list} style={{ paddingRight: '2rem' }}>
+                  {navItems.map((navItem, index) => {
+                    return (
+                      <li className={styles.listItem} key={index}>
+                        <Link style="animated" href={navItem.href}>
+                          {navItem.name}
+                        </Link>
+                      </li>
+                    );
+                  })}
+                </ul>
+                {navItems?.cta && <CallToActionVariant type={CallToActionVariantEnum.BLACK} cta={navItems.cta} />}
+              </>
             )}
-            <CallToActionVariant type={CallToActionVariantEnum.BLACK} cta={cta} />
           </div>
         </div>
       </GutterContainer>

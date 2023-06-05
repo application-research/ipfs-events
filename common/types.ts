@@ -2,6 +2,12 @@ export enum BlockTypeEnum {
   COLLAPSABLE = 'collapsable',
   HERO = 'hero',
   MEDIA = 'media',
+  TICKET_CARD = 'ticket-card',
+}
+
+export enum BlockDirectionEnum {
+  COLUMN = 'column',
+  ROW = 'row',
 }
 
 export interface Image {
@@ -58,4 +64,6 @@ export enum CallToActionVariantEnum {
   LINK_ICON = 'link-icon',
   TEXT = 'text',
   WHITE = 'white',
+  BORDER = 'border',
+  NO_BORDER = 'no-border',
 }
