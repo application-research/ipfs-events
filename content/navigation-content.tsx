@@ -7,13 +7,10 @@ export const NAVIGATION_ITEMS_CONTENT = [
     schedule: 'Schedule',
     href: '#schedule',
   },
-  {
-    schedule: 'Tickets',
-    href: '#schedule',
-  },
+
   {
     name: 'Contact',
-    href: '',
+    href: '#contact',
   },
 ];
 
@@ -105,7 +102,7 @@ export const NAVIGATION_HOMEPAGE_CONTENT = {
 
 export const NAVIGATION_CONTENT = {
   logo: {
-    src: '/media/ipfs-logo.png',
+    src: '/media/ipfs-logo2.png',
     altText: 'ipfs-logo',
     link: '/',
   },
@@ -121,13 +118,15 @@ export const NAVIGATION_CONTENT = {
       target: '_self',
     },
     {
-      name: 'Tickets',
-      href: 'http://localhost:3008/ipfs-thing#tickets',
-      target: '_self',
-    },
-    {
       name: 'Contact',
       href: 'http://localhost:3008/ipfs-thing#contact',
+      target: '_self',
+    },
+  ],
+  cta: [
+    {
+      text: 'Get Tickets Now',
+      href: '#tickets',
       target: '_self',
     },
   ],

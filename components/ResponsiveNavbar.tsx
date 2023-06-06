@@ -1,12 +1,13 @@
 import styles from '@components/ResponsiveNavbar.module.scss';
 
-import GutterContainer from './GutterContainer';
-import Link from './Link';
 import { CallToActionVariant } from './CallToActionVariant';
 import { CallToActionVariantEnum } from '@root/common/types';
+import GutterContainer from './GutterContainer';
+import Link from './Link';
 
 export default function ResponsiveNavbar({ navContent }) {
   let { logo, navItems } = navContent;
+
   return (
     <nav className={styles.navbar}>
       <GutterContainer>
@@ -28,7 +29,9 @@ export default function ResponsiveNavbar({ navContent }) {
                     );
                   })}
                 </ul>
-                {navItems?.cta && <CallToActionVariant type={CallToActionVariantEnum.BLACK} cta={navItems.cta} />}
+                {navContent?.cta?.map((ctaItem, index) => {
+                  return <CallToActionVariant type={CallToActionVariantEnum.BLACK} cta={ctaItem} key={index} />;
+                })}
               </>
             )}
           </div>

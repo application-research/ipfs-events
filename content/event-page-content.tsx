@@ -1,39 +1,35 @@
-import { BlockDirectionEnum, BlockTypeEnum, CallToActionVariantEnum, Ratio, TypeName } from '@root/common/types';
+import { BlockTypeEnum, CallToActionVariantEnum, Ratio, TypeName } from '@root/common/types';
 import { MARKDOWN_CONTENT } from './markdown-content';
 
-export const EVENT_PAGE_CONTENT = [
-  {
-    id: '1',
-    block: [
-      {
-        id: 'hero',
-        type: BlockTypeEnum.HERO,
-        label: 'Upcoming Event',
-        title: 'IPFS þing',
-        date: 'April 15th - 19th, 2023',
-        location: 'Brussels, Belgium',
-        description:
-          'IPFS þing is a week-long gathering for the IPFS implementors community. Everything from talks, workshops, discussion circles, hacking time, and more — all focused on advancing IPFS implementations.',
-        background: {
-          src: '/media/background.jpeg',
-        },
-        cta: [
-          {
-            type: CallToActionVariantEnum.BLACK,
-            target: '_blank',
-            text: 'Submit a Talk or a Track ',
-            link: '/ticket',
-          },
-          {
-            type: CallToActionVariantEnum.BLACK,
-            target: '_blank',
-            text: 'Get Tickets Now!',
-            link: '/ticket',
-          },
-        ],
-      },
-    ],
+export const EVENT_PAGE_HERO_CONTENT = {
+  id: 'hero',
+  type: BlockTypeEnum.HERO,
+  label: 'Upcoming Event',
+  title: 'IPFS þing',
+  date: 'April 15th - 19th, 2023',
+  location: 'Brussels, Belgium',
+  description:
+    'IPFS þing is a week-long gathering for the IPFS implementors community. Everything from talks, workshops, discussion circles, hacking time, and more — all focused on advancing IPFS implementations.',
+  background: {
+    src: '/media/background.jpeg',
   },
+  cta: [
+    {
+      type: CallToActionVariantEnum.BLACK,
+      target: '_blank',
+      text: 'Submit a Talk or a Track ',
+      link: '/ticket',
+    },
+    {
+      type: CallToActionVariantEnum.BLACK,
+      target: '_blank',
+      text: 'Get Tickets Now!',
+      link: '/ticket',
+    },
+  ],
+};
+
+export const EVENT_PAGE_CONTENT = [
   {
     id: '2',
     block: [
@@ -280,7 +276,7 @@ export const EVENT_PAGE_CONTENT = [
     ],
   },
   {
-    id: '2',
+    id: 'tickets',
     title: 'Ticketing',
     direction: 'row',
     block: [
@@ -334,7 +330,7 @@ export const EVENT_PAGE_CONTENT = [
           buttonColor: 'white',
           textColor: 'white',
           target: '_blank',
-          text: 'General Ticket',
+          text: 'Supporters Ticket',
           link: '/ticket',
         },
       },
@@ -384,14 +380,14 @@ export const EVENT_PAGE_CONTENT = [
   },
   {
     id: '2',
-    title: 'About',
+    // title: 'About',
     block: [
       {
         id: 'media',
         type: BlockTypeEnum.MEDIA,
         media: {
           type: TypeName.MEDIA_IMAGE,
-          src: '/media/compute-camp.png',
+          src: '/media/background.jpeg',
           ariaLabel: 'IPFS Thing 2023',
           ratio: Ratio.TWENTY_ONE_BY_NINE,
         },
