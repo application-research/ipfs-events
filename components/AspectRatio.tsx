@@ -35,7 +35,7 @@ export default function AspectRatio({ children, ratio, props }: AspectRatioProps
   const aspectRatio = getAspectRatio(ratio);
   const paddingBottomCalc = `${(1 / aspectRatio) * 100}%`;
   return (
-    <div className={styles.outerWrapper} style={{ paddingBottom: `${paddingBottomCalc}`, ...props }}>
+    <div className={styles.outerWrapper} style={{ paddingBottom: `${paddingBottomCalc}` }} {...props}>
       <div className={styles.innerWrapper}>{children}</div>
     </div>
   );

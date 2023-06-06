@@ -6,7 +6,7 @@ import { BreakpointEnum, useBreakpoint } from '@root/common/use-breakpoint';
 import * as React from 'react';
 import Link from './Link';
 
-export default function Footer({ disclaimer, filResourcesCard, contactUsCard, socialsCard, copyright }) {
+export default function Footer({ disclaimer, filResourcesCard, contactUsCard, socialsCard, copyright }: any) {
   const { siteList } = filResourcesCard;
 
   const breakpoint = useBreakpoint();
@@ -39,7 +39,7 @@ export default function Footer({ disclaimer, filResourcesCard, contactUsCard, so
                 })}
               </ul>
             </div>
-            {isMobile ? (
+            {isMobile && contactUsCard ? (
               <div className={`${styles.mobileContact} ${styles.cardBorder} `}>
                 <div className={styles.icon}>
                   <img src={contactUsCard.icon} />
@@ -53,12 +53,14 @@ export default function Footer({ disclaimer, filResourcesCard, contactUsCard, so
               <></>
             )}
             <div className={styles.sectionContact}>
-              <div className={`${styles.contact} ${styles.cardBorder}`}>
-                <div className={styles.textContact}>
-                  <div className={styles.heading}>{contactUsCard.heading}</div>
-                  <div className={styles.description} dangerouslySetInnerHTML={{ __html: contactUsCard.text }} />
+              {contactUsCard && (
+                <div className={`${styles.contact} ${styles.cardBorder}`}>
+                  <div className={styles.textContact}>
+                    <div className={styles.heading}>{contactUsCard.heading}</div>
+                    <div className={styles.description} dangerouslySetInnerHTML={{ __html: contactUsCard.text }} />
+                  </div>
                 </div>
-              </div>
+              )}
 
               <div className={`${styles.socials} ${styles.cardBorder}`}>
                 <div className={styles.panelTop}>

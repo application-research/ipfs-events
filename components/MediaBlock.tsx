@@ -1,6 +1,5 @@
 import { TypeName } from '@root/common/types';
 import { VideoPlayer } from './VideoPlayer';
-import GutterContainer from './GutterContainer';
 import Image from './Image';
 
 export default function MediaBlock({ media }) {

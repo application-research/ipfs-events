@@ -13,7 +13,7 @@ export default function Image({ altText, ariaLabel, className, src, priority, ra
     <>
       {ratio ? (
         <AspectRatio ratio={ratio}>
-          <NextImage fill aria-label={ariaLabel} className={className} {...props} alt={altText ?? 'image'} src={src} priority={priority} />
+          <NextImage fill aria-label={ariaLabel} className={className} {...props} alt={altText ?? 'image'} src={src} priority={priority} unoptimized={true} />
         </AspectRatio>
       ) : (
         <img className={className} {...props} alt={altText ?? 'image'} src={src} />
