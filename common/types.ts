@@ -1,9 +1,11 @@
 export enum BlockTypeEnum {
   COLLAPSABLE = 'collapsable',
   HERO = 'hero',
-  MEDIA = 'media',
-  TICKET_CARD = 'ticket-card',
   LOGO_GRID = 'logo-grid',
+  MEDIA = 'media',
+  SCHEDULE = 'schedule',
+  TEXT = 'text',
+  TICKET_CARD = 'ticket-card',
 }
 
 export enum BlockDirectionEnum {

@@ -18,13 +18,13 @@ export const EVENT_PAGE_HERO_CONTENT = {
       type: CallToActionVariantEnum.BLACK,
       target: '_blank',
       text: 'Submit a Talk or a Track ',
-      link: '/ticket',
+      link: '#tickets',
     },
     {
       type: CallToActionVariantEnum.BLACK,
       target: '_blank',
       text: 'Get Tickets Now!',
-      link: '/ticket',
+      link: '#tickets',
     },
   ],
 };
@@ -42,6 +42,92 @@ export const EVENT_PAGE_CONTENT = [
           ariaLabel: 'IPFS Thing 2023',
           ratio: Ratio.TWENTY_ONE_BY_NINE,
         },
+      },
+    ],
+  },
+  // {
+  //   id: 'about',
+  //   title: 'About',
+  //   direction: 'row',
+  //   block: [
+  //     {
+  //       type: BlockTypeEnum.TEXT,
+  //       paragraph: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut purus felis, luctus sit amet suscipit nec, vehicula hendrerit urna. Integer vel.',
+  //     },
+  //     {
+  //       type: BlockTypeEnum.TEXT,
+  //       bigTitle:
+  //         'IPFS þing is a week-long gathering for the IPFS implementors community. Everything from talks, workshops, discussion circles, hacking time, and more — all focused on advancing IPFS implementations.',
+  //     },
+  //   ],
+  // },
+  {
+    id: 'about',
+    direction: 'row',
+    title: 'About',
+    block: [
+      {
+        id: 'media',
+        type: BlockTypeEnum.MEDIA,
+        media: {
+          type: TypeName.MEDIA_IMAGE,
+          src: '/media/event-sample1.png',
+          ariaLabel: 'IPFS Thing 2023',
+        },
+      },
+      {
+        type: BlockTypeEnum.TEXT,
+        bigTitle:
+          'IPFS þing is a week-long gathering for the IPFS implementors community. Everything from talks, workshops, discussion circles, hacking time, and more — all focused on advancing IPFS implementations.',
+      },
+    ],
+  },
+  {
+    id: 'about',
+    direction: 'row',
+    block: [
+      {
+        type: BlockTypeEnum.TEXT,
+        paragraph: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut purus felis, luctus sit amet suscipit nec, vehicula hendrerit urna. Integer vel.',
+      },
+      {
+        id: 'media',
+        type: BlockTypeEnum.MEDIA,
+        media: {
+          type: TypeName.MEDIA_IMAGE,
+          src: '/media/event-sample2.png',
+          ariaLabel: 'IPFS Thing 2023',
+        },
+      },
+    ],
+  },
+  {
+    id: '2',
+    title: 'Sponsors',
+    direction: 'row',
+    block: [
+      {
+        id: 'participating-teams',
+        type: BlockTypeEnum.LOGO_GRID,
+        text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut ultrices dui. Aenean dapibus elit ac turpis laoreet posuere. Phasellus iaculis nibh eu quam accumsan, sit amet tincidunt risus dignissim.',
+        logos: [
+          {
+            src: '/media/evp.png',
+            href: null,
+          },
+          {
+            src: '/media/protocollabs.png',
+            href: null,
+          },
+          {
+            src: '/media/evp.png',
+            href: null,
+          },
+          {
+            src: '/media/protocollabs.png',
+            href: null,
+          },
+        ],
       },
     ],
   },
@@ -272,6 +358,16 @@ export const EVENT_PAGE_CONTENT = [
             href: null,
           },
         ],
+      },
+    ],
+  },
+  {
+    id: 'about',
+    direction: 'column',
+    title: 'Schedule',
+    block: [
+      {
+        type: BlockTypeEnum.SCHEDULE,
       },
     ],
   },

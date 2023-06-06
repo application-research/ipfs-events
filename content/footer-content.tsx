@@ -21,10 +21,10 @@ export const FOOTER_CONTENT = {
       },
     ],
   },
-  contactUsCard: {
-    heading: 'Contact Us',
-    text: 'Lorem Ipsum  email @ name',
-  },
+  // contactUsCard: {
+  //   heading: 'Contact Us',
+  //   text: 'Find',
+  // },
   socialsCard: {
     icon: '/media/message-bubbles.png',
     heading: 'IPFS Ecosystem',

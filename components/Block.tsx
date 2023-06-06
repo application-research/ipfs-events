@@ -1,10 +1,11 @@
 import { BlockTypeEnum } from '@root/common/types';
 import { Collapsable } from './Collapsable';
-import GutterContainer from './GutterContainer';
 import Hero from './Hero';
-import MediaBlock from './MediaBlock';
-import TicketCard from './TicketCard';
 import LogoGrid from './LogoGrid';
+import MediaBlock from './MediaBlock';
+import Text from './Text';
+import TicketCard from './TicketCard';
+import Schedule from './Schedule';
 
 export function Block({ block }) {
   switch (block.type) {
@@ -20,8 +21,12 @@ export function Block({ block }) {
       return <LogoGrid {...block} />;
     case (block.type = BlockTypeEnum.MEDIA):
       return <MediaBlock {...block} />;
+    case (block.type = BlockTypeEnum.SCHEDULE):
+      return <Schedule {...block} />;
     case (block.type = BlockTypeEnum.TICKET_CARD):
       return <TicketCard {...block} />;
+    case (block.type = BlockTypeEnum.TEXT):
+      return <Text {...block} />;
     default:
       return <></>;
   }
