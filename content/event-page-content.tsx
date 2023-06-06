@@ -47,6 +47,36 @@ export const EVENT_PAGE_CONTENT = [
   },
   {
     id: '2',
+    title: 'Sponsors',
+    direction: 'row',
+    block: [
+      {
+        id: 'participating-teams',
+        type: BlockTypeEnum.LOGO_GRID,
+        text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut ultrices dui. Aenean dapibus elit ac turpis laoreet posuere. Phasellus iaculis nibh eu quam accumsan, sit amet tincidunt risus dignissim.',
+        logos: [
+          {
+            src: '/media/evp.png',
+            href: null,
+          },
+          {
+            src: '/media/protocollabs.png',
+            href: null,
+          },
+          {
+            src: '/media/evp.png',
+            href: null,
+          },
+          {
+            src: '/media/protocollabs.png',
+            href: null,
+          },
+        ],
+      },
+    ],
+  },
+  {
+    id: '2',
     title: 'Participating Teams',
     direction: 'row',
     block: [

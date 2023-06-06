@@ -8,7 +8,7 @@ export default function SectionEventPage({ blocks }) {
   return (
     <div style={{ background: 'var(--color-white200)', display: 'grid', rowGap: '3rem' }}>
       <GutterContainer>
-        <div style={{ display: 'grid', rowGap: '3rem' }}>
+        <div style={{ display: 'grid', rowGap: '7rem' }}>
           {blocks.map((blockItems, index) => {
             const { block, description, direction, id, title } = blockItems ?? null;
 
