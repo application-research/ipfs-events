@@ -1,6 +1,6 @@
 export const FOOTER_CONTENT = {
   disclaimer: {
-    logo: '/media/ipfs-logo.png',
+    logo: '/media/ipfs-logo2.png',
     heading: 'IPFS þing is a week-long gathering for the IPFS implementors community.',
     text: '',
   },
@@ -36,7 +36,7 @@ export const FOOTER_CONTENT = {
       },
       {
         text: 'IPFS Events Github',
-        image: '/media/github-icon.png',
+        image: '/media/e.png',
         link: 'https://github.com/filecoin-project/community#forums',
       },
       {
@@ -102,7 +102,7 @@ export const FOOTER_TINY_CONTENT = {
     },
     {
       text: 'IPFS Events Github',
-      image: '/media/github-icon.png',
+      image: '/media/e.png',
       link: 'https://github.com/ipfs',
     },
     {
