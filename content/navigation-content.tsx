@@ -18,6 +18,36 @@ export const NAVIGATION_HOMEPAGE_CONTENT = {
   logo: { src: '/media/colored-logo.png' },
   navItems: [
     {
+      title: 'IPFS Camp',
+      link: null,
+      dropdown: [
+        {
+          header: 'Upcoming Event',
+          title: 'IPFS Camp 2023',
+          date: 'October 28 - November 5, 2023',
+          location: 'Location TBD',
+          link: 'https://lu.ma/ipfscamp23-prereg',
+          image: 'https://blog.ipfs.tech/assets/img/chooseyouradventure.bf5cb5ad.jpeg',
+          target: '_blank',
+        },
+        {
+          header: 'Past Events',
+          title: 'IPFS Camp 2022',
+          location: 'Lisbon, Portugal',
+          link: 'https://2022.ipfs.camp/',
+          image: 'https://blog.ipfs.tech/assets/img/ipfsfunding.b99f5959.jpeg',
+          target: '_blank',
+        },
+        {
+          title: 'IPFS Camp 2019',
+          location: 'Barcelona, Spain',
+          link: 'https://2019.ipfs.camp/',
+          image: 'https://blog.textile.io/content/images/downloaded_images/IPFS-Camp-2019--The-Highlights-and-Takeaways/1-OXfDETjmZqNL1nT3t8himA.jpeg',
+          target: '_blank',
+        },
+      ],
+    },
+    {
       title: 'IPFS Thing',
       link: null,
       dropdown: [
@@ -49,38 +79,8 @@ export const NAVIGATION_HOMEPAGE_CONTENT = {
       ],
     },
     {
-      title: 'IPFS Camp',
-      link: null,
-      dropdown: [
-        {
-          header: 'Upcoming Event',
-          title: 'IPFS Camp 2023',
-          date: 'October 28 - November 5, 2023',
-          location: 'Location TBD',
-          link: 'https://lu.ma/ipfscamp23-prereg',
-          image: 'https://blog.ipfs.tech/assets/img/chooseyouradventure.bf5cb5ad.jpeg',
-          target: '_blank',
-        },
-        {
-          header: 'Past Events',
-          title: 'IPFS Camp 2022',
-          location: 'Lisbon, Portugal',
-          link: 'https://2022.ipfs.camp/',
-          image: 'https://blog.ipfs.tech/assets/img/ipfsfunding.b99f5959.jpeg',
-          target: '_blank',
-        },
-        {
-          title: 'IPFS Camp 2019',
-          location: 'Barcelona, Spain',
-          link: 'https://2019.ipfs.camp/',
-          image: 'https://blog.textile.io/content/images/downloaded_images/IPFS-Camp-2019--The-Highlights-and-Takeaways/1-OXfDETjmZqNL1nT3t8himA.jpeg',
-          target: '_blank',
-        },
-      ],
-    },
-    {
       title: 'IPFS Friends + Cafe',
-      link: 'https://lu.ma/ipfsnfriends-paris23',
+      link: '',
       target: '_blank',
     },
     {
