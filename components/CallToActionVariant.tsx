@@ -18,7 +18,7 @@ export function CallToActionVariant({ type, cta }) {
   }
 }
 
-export function Button({ buttonColor, borderColor, variant, target, textColor, text, link }: any) {
+export function Button({ buttonColor, borderColor, className, variant, target, textColor, text, link }: any) {
   let buttonVariant = styles.button;
 
   if (variant === CallToActionVariantEnum.BORDER) {
@@ -26,21 +26,24 @@ export function Button({ buttonColor, borderColor, variant, target, textColor, t
   }
 
   return (
-    <Link className={styles.blackLink} href={link ?? ''} target={target ? target : '_blank'}>
-      <button
-        style={{
-          background: buttonColor ? buttonColor : 'none',
-          color: textColor ? textColor : 'var(--color-white)',
-          border: `1px solid ${borderColor ? borderColor : 'var(--color-black200)'}`,
-        }}
-        aria-label={text}
-        className={buttonVariant}
-      >
-        {text}
-      </button>
-    </Link>
+    <>
+      <Link className={`${styles.blackLink} ${className}`} href={link ?? ''} target={target ? target : '_blank'}>
+        <button
+          style={{
+            background: buttonColor ? buttonColor : 'none',
+            color: textColor ? textColor : 'var(--color-white)',
+            border: `1px solid ${borderColor ? borderColor : 'var(--color-black200)'}`,
+          }}
+          aria-label={text}
+          className={buttonVariant}
+        >
+          {text}
+        </button>
+      </Link>
+    </>
   );
 }
+
 export function ButtonText({ cta }) {
   return (
     <Link href={cta.link ?? ''} target={cta?.taget ? cta.taget : '_blank'}>

@@ -1,222 +1,86 @@
+'use client';
+import styles from '@components/Schedule.module.scss';
+
+import { CALENDAR_CONTENT } from '@root/content/calendar-content';
+import { SchedulePopUp } from './SchedulePopUp';
+import { useState } from 'react';
+import Link from './Link';
+
 export default function Schedule() {
+  const [selectedEvent, setSelectedEvent] = useState(null);
+  const [isOverlayOpen, setIsOverlayOpen] = useState(false);
+
+  const handleOverlayClick = () => {
+    setIsOverlayOpen(false);
+  };
+
+  const handleContainerClick = () => {
+    setIsOverlayOpen(true);
+  };
+
+  const handleEventClick = (event) => {
+    setSelectedEvent(event);
+    setIsOverlayOpen(true);
+  };
+
+  const eventsContent = CALENDAR_CONTENT;
+
   return (
-    <div style={{ width: '100%' }}>
-      <iframe
-        src="https://calendar.google.com/calendar/embed?height=600&wkst=1&bgcolor=%23f2fbff&ctz=America%2FNew_York&title=IPFS%20Thing&mode=WEEK&src=Y181MWM1NTBkNjYyYmZiODI4MTdlYjNjMTQ0YjQxNDVhMzc2YzFhOGUyNzRjY2RmYTA0YTU4MDIyMTk2NWRlZTBjQGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20&color=%23039BE5"
-        width="100%"
-        height="600"
-        frameBorder="0"
-        scrolling="no"
-      />
-    </div>
-  );
-}
-{
-  /* <section className={styles.calander}>
+    <div style={{ display: 'grid', rowGap: '2rem' }}>
+      <div>
         <section className={styles.calander}>
-          <div className={styles.eventHeading}>
-            <p>Fri</p>
-            <p>April 14</p>
-          </div>
-          <div className={styles.eventHeading}>
-            <p> Sat</p>
-            <p>April 15</p>
-          </div>
-          <div className={styles.eventHeading}>
-            <p> Sun</p>
-            <p>April 16</p>
-          </div>
-          <div className={styles.eventHeading}>
-            <p> Mon</p>
-            <p>April 17</p>
-          </div>
-          <div className={styles.eventHeading}>
-            <p> Tue</p>
-            <p>April 18</p>
-          </div>
-          <div className={styles.eventHeading}>
-            <p> Wed</p>
-            <p>April 19</p>
-          </div>
-          <div className={styles.eventHeading}>
-            <p>Thur</p>
-            <p>April 20</p>
+          <section className={styles.calander}>
+            {eventsContent.map((event, index) => {
+              return (
+                <div className={styles.eventHeading} key={index}>
+                  <p>{event.day}</p>
+                  <p>{event.date}</p>
+                </div>
+              );
+            })}
+          </section>
+        </section>
+
+        <section className={styles.calander}>
+          {eventsContent.map((eventItems, index) => {
+            const isLastIndex = index === eventsContent.length - 1;
+
+            return (
+              <div key={index} className={styles.eventStyle} style={{ borderRight: isLastIndex ? '0.5px solid var(--color-black)' : '' }}>
+                {eventItems.events.map((eventItem, eventIndex) => {
+                  return (
+                    <div>
+                      <div className={styles.eventBox} key={eventIndex} onClick={() => handleEventClick(eventItem)}>
+                        <p className={styles.eventName}>{eventItem.name}</p>
+                        <p className={styles.time}>{eventItem.time}</p>
+                        <p className={styles.location}>{eventItem.location}</p>
+                        <p className={styles.people}>👤 {eventItem.people}</p>
+                      </div>
+                    </div>
+                  );
+                })}
+              </div>
+            );
+          })}
+        </section>
+        {selectedEvent && (
+          <>
+            {isOverlayOpen && <div className={styles.overlay} onClick={handleOverlayClick} />}
+            <div className={`${styles.absoluteContainer} ${isOverlayOpen ? styles.active : ''}`} onClick={handleContainerClick}>
+              <SchedulePopUp eventItem={selectedEvent} setSelectedEvent={setSelectedEvent} />
+            </div>
+          </>
+        )}
+      </div>
+
+      <Link style="text" href="https://airtable.com/shr2Eq1juLJh0ri3i" target="_blank">
+        <section className={styles.submission}>
+          <div style={{ display: 'flex', gap: '0.5rem', flexDirection: 'column', alignItems: 'center' }}>
+            <p>+</p>
+            <h4 className={styles.submitTrack}>Submit a Track or Talk</h4>
           </div>
         </section>
-      </section>
-
-      <section className={styles.calander}>
-        <div className={styles.eventStyle}>
-          <div className={styles.eventBox}>
-            <p>Event Name</p>
-            <p>Time</p>
-            <p>Location</p>
-            <p># of people</p>
-          </div>
-        </div>
-        <div className={styles.eventStyle}>
-          <div className={styles.eventBox}>
-            <p>Event Name</p>
-            <p>Time</p>
-            <p>Location</p>
-            <p># of people</p>
-          </div>
-        </div>
-        <div className={styles.eventStyle}>
-          <div className={styles.eventBox}>
-            <p>Event Name</p>
-            <p>Time</p>
-            <p>Location</p>
-            <p># of people</p>
-          </div>
-        </div>
-        <div className={styles.eventStyle}>
-          <div className={styles.eventBox}>
-            <p>Event Name</p>
-            <p>Time</p>
-            <p>Location</p>
-            <p># of people</p>
-          </div>
-        </div>
-        <div className={styles.eventStyle}>
-          <div className={styles.eventBox}>
-            <p>Event Name</p>
-            <p>Time</p>
-            <p>Location</p>
-            <p># of people</p>
-          </div>
-        </div>
-        <div className={styles.eventStyle}>
-          <div className={styles.eventBox}>
-            <p>Event Name</p>
-            <p>Time</p>
-            <p>Location</p>
-            <p># of people</p>
-          </div>
-        </div>
-        <div className={styles.eventStyle}>
-          <div className={styles.eventBox}>
-            <p>Event Name</p>
-            <p>Time</p>
-            <p>Location</p>
-            <p># of people</p>
-          </div>
-        </div>
-      </section>
-      <section className={styles.calander}>
-        <div className={styles.eventStyle}>
-          <div className={styles.eventBox}>
-            <p>Event Name</p>
-            <p>Time</p>
-            <p>Location</p>
-            <p># of people</p>
-          </div>
-        </div>
-        <div className={styles.eventStyle}>
-          <div className={styles.eventBox}>
-            <p>Event Name</p>
-            <p>Time</p>
-            <p>Location</p>
-            <p># of people</p>
-          </div>
-        </div>
-        <div className={styles.eventStyle}>
-          <div className={styles.eventBox}>
-            <p>Event Name</p>
-            <p>Time</p>
-            <p>Location</p>
-            <p># of people</p>
-          </div>
-        </div>
-        <div className={styles.eventStyle}>
-          <div className={styles.eventBox}>
-            <p>Event Name</p>
-            <p>Time</p>
-            <p>Location</p>
-            <p># of people</p>
-          </div>
-        </div>
-        <div className={styles.eventStyle}>
-          <div className={styles.eventBox}>
-            <p>Event Name</p>
-            <p>Time</p>
-            <p>Location</p>
-            <p># of people</p>
-          </div>
-        </div>
-        <div className={styles.eventStyle}>
-          <div className={styles.eventBox}>
-            <p>Event Name</p>
-            <p>Time</p>
-            <p>Location</p>
-            <p># of people</p>
-          </div>
-        </div>
-        <div className={styles.eventStyle}>
-          <div className={styles.eventBox}>
-            <p>Event Name</p>
-            <p>Time</p>
-            <p>Location</p>
-            <p># of people</p>
-          </div>
-        </div>
-      </section>
-      <section className={styles.calander} style={{ paddingBottom: '4rem' }}>
-        <div className={styles.eventStyle}>
-          <div className={styles.eventBox}>
-            <p>Event Name</p>
-            <p>Time</p>
-            <p>Location</p>
-            <p># of people</p>
-          </div>
-        </div>
-        <div className={styles.eventStyle}>
-          <div className={styles.eventBox}>
-            <p>Event Name</p>
-            <p>Time</p>
-            <p>Location</p>
-            <p># of people</p>
-          </div>
-        </div>
-        <div className={styles.eventStyle}>
-          <div className={styles.eventBox}>
-            <p>Event Name</p>
-            <p>Time</p>
-            <p>Location</p>
-            <p># of people</p>
-          </div>
-        </div>
-        <div className={styles.eventStyle}>
-          <div className={styles.eventBox}>
-            <p>Event Name</p>
-            <p>Time</p>
-            <p>Location</p>
-            <p># of people</p>
-          </div>
-        </div>
-        <div className={styles.eventStyle}>
-          <div className={styles.eventBox}>
-            <p>Event Name</p>
-            <p>Time</p>
-            <p>Location</p>
-            <p># of people</p>
-          </div>
-        </div>
-        <div className={styles.eventStyle}>
-          <div className={styles.eventBox}>
-            <p>Event Name</p>
-            <p>Time</p>
-            <p>Location</p>
-            <p># of people</p>
-          </div>
-        </div>
-        <div className={styles.eventStyle}>
-          <div className={styles.eventBox}>
-            <p>Event Name</p>
-            <p>Time</p>
-            <p>Location</p>
-            <p># of people</p>
-          </div>
-        </div>
-      </section> */
+      </Link>
+    </div>
+  );
 }
