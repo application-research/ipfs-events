@@ -7,13 +7,6 @@ export const HOMEPAGE_HERO_CONTENT = {
 export const HOMEPAGE_CONTENT = {
   upcomingEvents: [
     {
-      date: ' July 17',
-      image: '/media/ipfs-friends-cafe.png',
-      link: 'https://lu.ma/ipfsnfriends-paris23',
-      location: 'TBD',
-      name: 'IPFS + Friends Cafe: Paris',
-    },
-    {
       date: 'September 22',
       image: '/media/compute-camp.png',
       link: 'https://lu.ma/compute-camp',
