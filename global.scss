@@ -130,6 +130,8 @@ body {
   --color-black: #000000;
   --color-black200: #202020;
   --color-gray: #848383;
+  --color-gray-transparent: #84838332;
+  --color-gray-transparent200: #8483835a;
   --color-text: #000000;
   --text-black: #000000;
   --text-white: #ffffff;
@@ -154,8 +156,8 @@ body {
   background: var(--color-background);
   color: var(--color-text);
   font-family: -apple-system, BlinkMacSystemFont, helvetica neue, helvetica, sans-serif;
-  scrollbar-width: none;
-  -ms-overflow-style: -ms-autohiding-scrollbar;
+  // scrollbar-width: none;
+  // -ms-overflow-style: -ms-autohiding-scrollbar;
   --page-gutters-desktop: 3rem;
 
   // ---------------------------------------------------------------------- Other
