@@ -166,3 +166,5 @@ export function classNames(...args: any[]): string {
 
   return classes.join(' ');
 }
+
+export const TWENTY_FOUR_HOURS = 24 * 60 * 60 * 1000;

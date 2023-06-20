@@ -3,7 +3,7 @@ import { Button, CallToActionVariant } from './CallToActionVariant';
 import { CallToActionVariantEnum } from '@root/common/types';
 import { MarkdownToJSX } from './Markdown';
 
-export function SchedulePopUp({ eventItem, setSelectedEvent }) {
+export function SchedulePopUp({ eventItem, eventData, setSelectedEvent }) {
   console.log(eventItem, 'event items');
   const closeCTA = {
     type: CallToActionVariantEnum.BLACK,

@@ -2,13 +2,22 @@
 import styles from '@components/Schedule.module.scss';
 
 import { CALENDAR_CONTENT } from '@root/content/calendar-content';
-import { SchedulePopUp } from './SchedulePopUp';
-import { useState } from 'react';
+import { fetchAirtableData } from '@root/pages/api/airtable';
+import { useEffect, useState } from 'react';
 import Link from './Link';
+
+const NODE = process.env.NODE_ENV || 'development';
+const IS_PRODUCTION = NODE === 'production';
+
+if (!IS_PRODUCTION) {
+  require('dotenv').config();
+}
 
 export default function Schedule() {
   const [selectedEvent, setSelectedEvent] = useState(null);
   const [isOverlayOpen, setIsOverlayOpen] = useState(false);
+  const [airtableData, setAirtableData] = useState([]);
+  const eventsContent = CALENDAR_CONTENT;
 
   const handleOverlayClick = () => {
     setIsOverlayOpen(false);
@@ -23,7 +32,17 @@ export default function Schedule() {
     setIsOverlayOpen(true);
   };
 
-  const eventsContent = CALENDAR_CONTENT;
+  useEffect(() => {
+    const getData = async () => {
+      const airtableData = await fetchAirtableData();
+
+      if (airtableData) {
+        setAirtableData(airtableData);
+      }
+    };
+
+    getData();
+  }, []);
 
   return (
     <div style={{ display: 'grid', rowGap: '2rem' }}>
@@ -67,7 +86,7 @@ export default function Schedule() {
           <>
             {isOverlayOpen && <div className={styles.overlay} onClick={handleOverlayClick} />}
             <div className={`${styles.absoluteContainer} ${isOverlayOpen ? styles.active : ''}`} onClick={handleContainerClick}>
-              <SchedulePopUp eventItem={selectedEvent} setSelectedEvent={setSelectedEvent} />
+              {/* <SchedulePopUp eventData={eventData} eventItem={selectedEvent} setSelectedEvent={setSelectedEvent} /> */}
             </div>
           </>
         )}
@@ -84,3 +103,30 @@ export default function Schedule() {
     </div>
   );
 }
+
+//  const fetchData = async () => {
+//    try {
+//      const cachedData = localStorage.getItem('schedule');
+
+//      if (cachedData) {
+//        const parsedData = JSON.parse(cachedData);
+//        const expirationTime = parsedData.timestamp + TWENTY_FOUR_HOURS;
+
+//        if (Date.now() < expirationTime) {
+//          setAirtableData(parsedData);
+//          return;
+//        }
+//      }
+//      const res = await fetch(`https://api.airtable.com/v0/${process.env.AIRTABLE_BASE_ID}/${process.env.AIRTABLE_TABLE_ID}`, {
+//        headers: { Authorization: `Bearer ${process.env.AIRTABLE_API}` },
+//      });
+//      const airtableData = await res.json();
+//      localStorage.setItem('schedule', JSON.stringify(airtableData));
+
+//      setAirtableData(airtableData);
+//    } catch (e) {
+//      return console.log(e);
+//    }
+//  };
+
+//  fetchData();
