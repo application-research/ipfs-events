@@ -6,6 +6,7 @@ export enum BlockTypeEnum {
   SCHEDULE = 'schedule',
   TEXT = 'text',
   TICKET_CARD = 'ticket-card',
+  IMAGE_TEXT_CARD = 'image-text-card',
 }
 
 export enum BlockDirectionEnum {

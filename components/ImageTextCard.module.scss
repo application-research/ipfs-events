@@ -1,0 +1,15 @@
+.title {
+  font-family: 'Inter';
+  font-size: var(--font-size-medium);
+}
+
+.image {
+  height: 15rem;
+}
+
+.imageBackground {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: var(--border-radius-small);
+}

@@ -3,8 +3,7 @@ import { Button, CallToActionVariant } from './CallToActionVariant';
 import { CallToActionVariantEnum } from '@root/common/types';
 import { MarkdownToJSX } from './Markdown';
 
-export function SchedulePopUp({ eventItem, setSelectedEvent }) {
-  console.log(eventItem, 'event items');
+export function SchedulePopUp({ eventItem, eventData, setSelectedEvent }) {
   const closeCTA = {
     type: CallToActionVariantEnum.BLACK,
     buttonColor: 'white',
@@ -13,10 +12,6 @@ export function SchedulePopUp({ eventItem, setSelectedEvent }) {
   };
   return (
     <section className={styles.eventStyle}>
-      {/* {eventItem?.map((eventItem, eventIndex) => { */}
-      {/* console.log(eventItem, 'eventItem');
-
-        return ( */}
       <div className={styles.popup}>
         <div style={{ display: 'grid', gap: '0.5rem', paddingBottom: '1rem' }}>
           {eventItem?.name && (

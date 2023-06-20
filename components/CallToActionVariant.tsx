@@ -6,9 +6,9 @@ import Link from './Link';
 export function CallToActionVariant({ type, cta }) {
   switch (type) {
     case CallToActionVariantEnum.BLACK:
-      return <Button {...cta} buttonColor={'var(--color-black200)'} textColor={'var(--color-white)'} />;
+      return <Button {...cta} buttonColor={cta?.backgroundColor ?? 'var(--color-black200)'} textColor={cta?.textColor ?? 'var(--color-white)'} />;
     case CallToActionVariantEnum.BORDER:
-      return <Button {...cta} textColor={cta?.textColor ?? 'var(--color-black200)'} buttonColor={'none'} borderColor={cta.buttonColor} />;
+      return <Button {...cta} textColor={cta?.textColor ?? 'var(--color-black200)'} buttonColor={cta?.backgroundColor ?? 'none'} borderColor={cta.buttonColor} />;
     case CallToActionVariantEnum.TEXT:
       return <ButtonText {...cta} />;
     case CallToActionVariantEnum.WHITE:
@@ -32,7 +32,7 @@ export function Button({ buttonColor, borderColor, className, variant, target, t
           style={{
             background: buttonColor ? buttonColor : 'none',
             color: textColor ? textColor : 'var(--color-white)',
-            border: `1px solid ${borderColor ? borderColor : 'var(--color-black200)'}`,
+            border: borderColor ?? `1px solid ${borderColor ? borderColor : ''}`,
           }}
           aria-label={text}
           className={buttonVariant}
