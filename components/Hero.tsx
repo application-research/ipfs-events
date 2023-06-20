@@ -1,8 +1,9 @@
 import styles from '@components/Hero.module.scss';
+
 import { CallToActionVariant } from './CallToActionVariant';
 import GutterContainer from './GutterContainer';
 
-export default function Hero({ background, cta, date, description, label, location, title }) {
+export default function Hero({ background, cta, date, description, label, location, title }: any) {
   const containerStyle = {
     backgroundImage: background && `url(${background.src})`,
   };

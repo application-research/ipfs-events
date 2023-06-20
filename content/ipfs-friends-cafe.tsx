@@ -1,0 +1,249 @@
+import { BlockTypeEnum, CallToActionVariantEnum, Ratio, TypeName } from '@root/common/types';
+
+export const IPFS_FRIENDS_CAFE_PAGE_HERO_CONTENT = {
+  id: 'hero',
+  type: BlockTypeEnum.HERO,
+  title: 'IPFS Friends + Cafe',
+  date: 'Community-Hosted Events',
+  location: 'Virtual & In Person',
+  description: 'Events that foster knowledge exchange, community growth, collaboration, innovation, and the continued advancement of IPFS as groundbreaking technology',
+  background: {
+    src: '/media/ipfs-friendscafe.png',
+  },
+  cta: [
+    {
+      type: CallToActionVariantEnum.BLACK,
+      target: '_blank',
+      text: 'Sign Up to Host an Event',
+      link: 'https://linktr.ee/ipfscommunity?lt_utm_source=lt_share_link#287213225',
+    },
+  ],
+};
+
+export const IPFS_FRIENDS_FOOTER_CONTENT = {
+  disclaimer: {
+    logo: '/media/ipfs-friends-cafe-logo.png',
+    heading: 'IPFS Friends + Cafe foster knowledge exchange, community growth, collaboration, innovation, and the continued advancement of IPFS as groundbreaking technology',
+    text: '',
+  },
+  filResourcesCard: {
+    heading: 'Resources',
+    siteList: [
+      {
+        text: 'IPFS',
+        link: 'https://ipfs.tech/',
+      },
+      {
+        text: 'IPFS Event Github',
+        link: 'https://github.com/ipfs-shipyard/ipfs-thing-2023',
+      },
+      {
+        text: 'YouTube',
+        link: 'https://www.youtube.com/@IPFSbot',
+      },
+    ],
+  },
+
+  socialsCard: {
+    icon: '/media/message-bubbles.png',
+    socialIcons: [
+      {
+        text: 'IPFS Twitter',
+        image: '/media/twitter-icon.png',
+        link: 'https://twitter.com/filecointldr?lang=en',
+      },
+      {
+        text: 'IPFS Events Github',
+        image: '/media/e.png',
+        link: 'https://github.com/filecoin-project/community#forums',
+      },
+      {
+        text: 'IPFS Discord',
+        image: '/media/discord-icon.png',
+        link: 'https://discord.com/invite/ipfs',
+      },
+      {
+        text: 'Youtube',
+        image: '/media/youtube-icon.png',
+        link: 'https://www.youtube.com/channel/UCPyYmtJYQwxM-EUyRUTp5DA',
+      },
+    ],
+  },
+  copyright: [
+    {
+      link: 'https://discuss.ipfs.tech/tos',
+      text: 'Terms & Conditions',
+    },
+    {
+      link: 'https://discuss.ipfs.tech/privacy',
+      text: 'Privacy',
+    },
+    {
+      link: 'https://ipfs.tech/legal/',
+      text: 'DMCA Policy',
+    },
+  ],
+};
+
+export const IPFS_FRIENDS_CAFE_NAVIGATION_CONTENT = {
+  logo: {
+    src: '/media/ipfs-friends-cafe-logo.png',
+    altText: 'ipfs-logo',
+    link: '/',
+  },
+  navItems: [
+    {
+      name: 'About',
+      href: 'http://localhost:3008/ipfs-thing#about',
+      target: '_self',
+    },
+    {
+      name: 'Past Events',
+      href: 'http://localhost:3008/ipfs-thing#schedule',
+      target: '_self',
+    },
+    {
+      name: 'Contact',
+      href: 'http://localhost:3008/ipfs-thing#contact',
+      target: '_self',
+    },
+  ],
+  //   cta: [
+  //     {
+  //       text: 'Get Tickets Now',
+  //       href: '#tickets',
+  //       target: '_self',
+  //     },
+  //   ],
+};
+
+export const IPFS_FRIENDS_CAFE_PAGE_CONTENT = [
+  {
+    id: 'poster',
+    // title: 'About',
+    block: [
+      {
+        id: 'media',
+        type: BlockTypeEnum.MEDIA,
+        media: {
+          type: TypeName.MEDIA_IMAGE,
+          src: '/media/background.jpeg',
+          ariaLabel: 'IPFS Thing 2023',
+          ratio: Ratio.TWENTY_ONE_BY_NINE,
+        },
+      },
+    ],
+  },
+  // {
+  //   id: 'about',
+  //   title: 'About',
+  //   direction: 'row',
+  //   block: [
+  //     {
+  //       type: BlockTypeEnum.TEXT,
+  //       paragraph: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut purus felis, luctus sit amet suscipit nec, vehicula hendrerit urna. Integer vel.',
+  //     },
+  //     {
+  //       type: BlockTypeEnum.TEXT,
+  //       bigTitle:
+  //         'IPFS þing is a week-long gathering for the IPFS implementors community. Everything from talks, workshops, discussion circles, hacking time, and more — all focused on advancing IPFS implementations.',
+  //     },
+  //   ],
+  // },
+  {
+    id: 'about',
+    direction: 'row',
+    title: 'About',
+    block: [
+      {
+        id: 'media',
+        type: BlockTypeEnum.MEDIA,
+        media: {
+          type: TypeName.MEDIA_IMAGE,
+          src: '/media/event-sample1.png',
+          ariaLabel: 'IPFS Thing 2023',
+        },
+      },
+      {
+        type: BlockTypeEnum.TEXT,
+        bigTitle:
+          'IPFS þing is a week-long gathering for the IPFS implementors community. Everything from talks, workshops, discussion circles, hacking time, and more — all focused on advancing IPFS implementations.',
+      },
+    ],
+  },
+  {
+    id: 'past-events',
+    direction: 'row',
+    title: 'Past Events',
+    block: [
+      {
+        id: 'past-event',
+        type: BlockTypeEnum.MEDIA,
+        media: {
+          type: TypeName.MEDIA_IMAGE,
+          src: '/media/event-sample1.png',
+          ariaLabel: 'IPFS Thing 2023',
+        },
+      },
+      {
+        type: BlockTypeEnum.TEXT,
+        bigTitle:
+          'IPFS þing is a week-long gathering for the IPFS implementors community. Everything from talks, workshops, discussion circles, hacking time, and more — all focused on advancing IPFS implementations.',
+      },
+    ],
+  },
+  {
+    id: '2',
+    title: 'FAQs',
+    block: [
+      {
+        id: 'media',
+        type: BlockTypeEnum.COLLAPSABLE,
+        title: 'What is IPFS Friends + Cafe?',
+        collapsedText: `At our core, we're here to support you, our community, in sharing and spreading the greatness of
+IPFS. Whether you're a tech guru or just curious about IPFS, we offer a helping hand to bring IPFS
+learnings and content to your own community.
+
+Twice a year, we host large-scale events where IPFS users come together from all over the world-
+but we believe in keeping the spirit & momentum alive throughout the year with smaller community
+events. These more intimate gatherings provide opportunities for everyone to stay connected, learn,
+and contribute to the ever-evolving world of IPFS.
+
+We understand the importance of accessibility and inclusivity which is why we're dedicated to
+ensuring that IPFS knowledge reaches every curious mind. Our regular community events are
+designed to break down barriers and foster connections, so no one misses out on the excitement
+and progress happening in the IPFS ecosystem.
+
+We're excited for you to join our global network of IPFS enthusiasts. Together, we can drive the
+adoption and limitless possibilities of the IPFS technology, transforming the way we store, share, and
+access information across the globe.`,
+      },
+      {
+        id: 'media',
+        type: BlockTypeEnum.COLLAPSABLE,
+        title: 'How do I host an event?',
+        collapsedText: `We'd love to learn about your ideas for hosting an IPFS + Friends Cafe Community Event. Reach out to miwa@protocol.ai or fill out this  [Interest Form]([https://www.linkedin.com/in/uraleva/](https://linktr.ee/ipfscommunity?lt_utm_source=lt_share_link#287213225)https://linktr.ee/ipfscommunity?lt_utm_source=lt_share_link#287213225).`,
+      },
+      {
+        id: 'media',
+        type: BlockTypeEnum.COLLAPSABLE,
+        title: 'What are the goals of IPFS Friends + Cafe?',
+        collapsedText: `### Knowledge sharing and education:
+The event provides a platform to share and disseminate knowledge about IPFS. It allows participants to learn from one another, engage in discussions, and gain a deeper understanding of the tech.
+
+Gathering feedback, insights, and collaboration:
+The event provides an opportunity to gather feedback and insights from the [PFS community. Attendees can share their experiences, challenges, and suggestions, which can inform future improvements and developments in the IPFS network.
+
+
+### Awareness and adoption:
+By organizing an event, you can raise awareness about IPFS and its potential applications. It helps attract attention from those who may be interested in adopting IPFS for their projects or exploring its capabilities.
+
+
+
+### Community building + Showcasing innovation:
+
+The event brings together IPFS users from around the world, fostering a sense of community and collaboration. It allows participants to connect, network, and build relationships with like-minded individuals who share a passion for IPFS and web3. It's also a platform to showcase innovative projects, use cases, and applications built on top of IPFS. It demonstrates the practicality and real-world impact of the technology, inspiring others to explore its possibilities.`,
+      },
+    ],
+  },
+];
