@@ -42,25 +42,3 @@ export const fetchAirtableData = async () => {
     return null;
   }
 };
-
-//all views: export const fetchAirtableData = async () => {
-//   try {
-//     const airtableData = {};
-
-//     // Fetch views
-//     const viewsUrl = `https://api.airtable.com/v0/${process.env.AIRTABLE_BASE_ID}/views`;
-//     const viewsRes = await fetch(viewsUrl, {
-//       headers: { Authorization: `Bearer ${process.env.AIRTABLE_API}` },
-//     });
-//     const viewsData = await viewsRes.json();
-//     airtableData.views = viewsData.views;
-
-//     localStorage.setItem('schedule', JSON.stringify(airtableData));
-
-//     console.log({ airtableData }, viewsData, 'views data');
-//     return airtableData;
-//   } catch (e) {
-//     console.log(e);
-//     return null;
-//   }
-// };

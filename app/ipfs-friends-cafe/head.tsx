@@ -4,7 +4,7 @@ import PlausibleScript from '@root/components/PlausibleScript';
 export default async function Head({ params }) {
   const title = 'IPFS Friends + Cafe';
   const description =
-    'IPFS þing is a week-long gathering for the IPFS implementors community. Everything from talks, workshops, discussion circles, hacking time, and more — all focused on advancing IPFS implementations. ';
+    'IPFS Friends + Cafe are community-hosted events that foster knowledge exchange, community growth, collaboration, innovation, and the continued advancement of IPFS as groundbreaking technology';
   const url = 'https://ipfs.events';
 
   // SUMMARY_LARGE_IMAGE: 1500x785

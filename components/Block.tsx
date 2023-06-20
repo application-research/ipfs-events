@@ -6,6 +6,7 @@ import MediaBlock from './MediaBlock';
 import Text from './Text';
 import TicketCard from './TicketCard';
 import Schedule from './Schedule';
+import ImageTextCard from './ImageTextCard';
 
 export function Block({ block }) {
   switch (block.type) {
@@ -17,6 +18,8 @@ export function Block({ block }) {
           <Hero {...block} />
         </div>
       );
+    case (block.type = BlockTypeEnum.IMAGE_TEXT_CARD):
+      return <ImageTextCard {...block} />;
     case (block.type = BlockTypeEnum.LOGO_GRID):
       return <LogoGrid {...block} />;
     case (block.type = BlockTypeEnum.MEDIA):

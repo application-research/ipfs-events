@@ -5,7 +5,7 @@ import { MarkdownToJSX } from './Markdown';
 import { useState } from 'react';
 import PlusSVG from './svgs/PlusSVG';
 
-export function Collapsable({ id, title, collapsedText }) {
+export function Collapsable({ id, title, backgroundColor, textColor, collapsedText }) {
   const [isExpanded, setExpanded] = useState(false);
 
   function toggleExpanded() {
@@ -13,7 +13,12 @@ export function Collapsable({ id, title, collapsedText }) {
   }
 
   return (
-    <div id={id ?? ''} className={styles.container} onClick={toggleExpanded} style={{ display: 'grid', rowGap: '1rem' }}>
+    <div
+      id={id ?? ''}
+      className={styles.container}
+      onClick={toggleExpanded}
+      style={{ background: backgroundColor ? backgroundColor : 'var(--color-black200)', color: textColor ? textColor : 'var(--text-white)', display: 'grid', rowGap: '1rem' }}
+    >
       <div className={styles.heading}>
         <h4>{title}</h4>
         <PlusSVG className={styles.plusIcon} props={{ width: '2rem' }} />{' '}
