@@ -45,22 +45,6 @@ export const EVENT_PAGE_CONTENT = [
       },
     ],
   },
-  // {
-  //   id: 'about',
-  //   title: 'About',
-  //   direction: 'row',
-  //   block: [
-  //     {
-  //       type: BlockTypeEnum.TEXT,
-  //       paragraph: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut purus felis, luctus sit amet suscipit nec, vehicula hendrerit urna. Integer vel.',
-  //     },
-  //     {
-  //       type: BlockTypeEnum.TEXT,
-  //       bigTitle:
-  //         'IPFS þing is a week-long gathering for the IPFS implementors community. Everything from talks, workshops, discussion circles, hacking time, and more — all focused on advancing IPFS implementations.',
-  //     },
-  //   ],
-  // },
   {
     id: 'about',
     direction: 'row',
