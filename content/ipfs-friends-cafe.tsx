@@ -123,24 +123,6 @@ export const IPFS_FRIENDS_CAFE_NAVIGATION_CONTENT = {
 
 export const IPFS_FRIENDS_CAFE_PAGE_CONTENT = [
   {
-    id: 'ipfs-friends-past-events',
-    direction: 'column',
-    title: 'Past Events',
-    description: 'View  our past event from IPFS Thing 2023 to learn more about what we do and how to get involved!',
-    block: [
-      {
-        id: 'past-event',
-        type: BlockTypeEnum.MEDIA,
-        media: {
-          type: TypeName.MEDIA_VIDEO,
-          src: '/media/ipfs-friends-cafe.mp4',
-          ariaLabel: 'IPFS Thing 2023',
-          ratio: Ratio.TWENTY_ONE_BY_NINE,
-        },
-      },
-    ],
-  },
-  {
     id: 'ipfs-friends-about',
     direction: 'row',
     title: 'About',
