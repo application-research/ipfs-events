@@ -5,6 +5,7 @@ import { CALENDAR_CONTENT } from '@root/content/calendar-content';
 import { fetchAirtableData } from '@root/pages/api/airtable';
 import { useEffect, useState } from 'react';
 import Link from './Link';
+import { SchedulePopUp } from './SchedulePopUp';
 
 const NODE = process.env.NODE_ENV || 'development';
 const IS_PRODUCTION = NODE === 'production';
@@ -13,11 +14,11 @@ if (!IS_PRODUCTION) {
   require('dotenv').config();
 }
 
-export default function Schedule() {
+export default function Schedule({ calendarData }) {
   const [selectedEvent, setSelectedEvent] = useState(null);
   const [isOverlayOpen, setIsOverlayOpen] = useState(false);
   const [airtableData, setAirtableData] = useState([]);
-  const eventsContent = CALENDAR_CONTENT;
+  const calendarContent = calendarData ?? CALENDAR_CONTENT;
 
   const handleOverlayClick = () => {
     setIsOverlayOpen(false);
@@ -43,13 +44,13 @@ export default function Schedule() {
 
     getData();
   }, []);
-
+  console.log(calendarData, 'data');
   return (
     <div style={{ display: 'grid', rowGap: '2rem' }}>
-      <div>
+      {/* <div>
         <section className={styles.calander}>
           <section className={styles.calander}>
-            {eventsContent.map((event, index) => {
+            {calendarContent.map((event, index) => {
               return (
                 <div className={styles.eventHeading} key={index}>
                   <p>{event.day}</p>
@@ -61,8 +62,8 @@ export default function Schedule() {
         </section>
 
         <section className={styles.calander}>
-          {eventsContent.map((eventItems, index) => {
-            const isLastIndex = index === eventsContent.length - 1;
+          {calendarContent.map((eventItems, index) => {
+            const isLastIndex = index === calendarContent.length - 1;
 
             return (
               <div key={index} className={styles.eventStyle} style={{ borderRight: isLastIndex ? '0.5px solid var(--color-black)' : '' }}>
@@ -86,20 +87,22 @@ export default function Schedule() {
           <>
             {isOverlayOpen && <div className={styles.overlay} onClick={handleOverlayClick} />}
             <div className={`${styles.absoluteContainer} ${isOverlayOpen ? styles.active : ''}`} onClick={handleContainerClick}>
-              {/* <SchedulePopUp eventData={eventData} eventItem={selectedEvent} setSelectedEvent={setSelectedEvent} /> */}
+              <SchedulePopUp eventData={eventData} eventItem={selectedEvent} setSelectedEvent={setSelectedEvent} />
             </div>
           </>
         )}
-      </div>
+      </div>  */}
 
-      <Link style="text" href="https://airtable.com/shr2Eq1juLJh0ri3i" target="_blank">
-        <section className={styles.submission}>
-          <div style={{ display: 'flex', gap: '0.5rem', flexDirection: 'column', alignItems: 'center' }}>
-            <p>+</p>
-            <h4 className={styles.submitTrack}>Submit a Track or Talk</h4>
-          </div>
-        </section>
-      </Link>
+      {calendarContent?.formLink && (
+        <Link style="text" href={calendarContent?.formLink.link} target="_blank">
+          <section className={styles.submission}>
+            <div style={{ display: 'flex', gap: '0.5rem', flexDirection: 'column', alignItems: 'center' }}>
+              <p>+</p>
+              <h4 className={styles.submitTrack}>{calendarContent?.formLink.title}</h4>
+            </div>
+          </section>
+        </Link>
+      )}
     </div>
   );
 }
