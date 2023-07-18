@@ -61,30 +61,31 @@ export default function Footer({ disclaimer, filResourcesCard, contactUsCard, so
                   </div>
                 </div>
               )}
+              {socialsCard && (
+                <div className={`${styles.socials} ${styles.cardBorder}`}>
+                  <div className={styles.panelTop}>
+                    <div className={styles.icon}></div>
+                    <div className={styles.textContact}>
+                      <div className={styles.heading}>{socialsCard.heading}</div>
+                    </div>
+                  </div>
+                  <div className={styles.socialIcons}>
+                    <div className={styles.socialIconsRow}>
+                      {socialsCard.socialIcons.map((socialCard, index) => {
+                        const { text, image, link } = socialCard;
 
-              <div className={`${styles.socials} ${styles.cardBorder}`}>
-                <div className={styles.panelTop}>
-                  <div className={styles.icon}></div>
-                  <div className={styles.textContact}>
-                    <div className={styles.heading}>{socialsCard.heading}</div>
+                        return (
+                          <div key={index} className={styles.socialIcon}>
+                            <a target="_blank" href={link} className={styles.link}>
+                              <img src={image} className={styles.socialIconImage} />
+                            </a>
+                          </div>
+                        );
+                      })}
+                    </div>
                   </div>
                 </div>
-                <div className={styles.socialIcons}>
-                  <div className={styles.socialIconsRow}>
-                    {socialsCard.socialIcons.map((socialCard, index) => {
-                      const { text, image, link } = socialCard;
-
-                      return (
-                        <div key={index} className={styles.socialIcon}>
-                          <a target="_blank" href={link} className={styles.link}>
-                            <img src={image} className={styles.socialIconImage} />
-                          </a>
-                        </div>
-                      );
-                    })}
-                  </div>
-                </div>
-              </div>
+              )}
             </div>
           </div>
 
