@@ -7,21 +7,21 @@ export const HOMEPAGE_HERO_CONTENT = {
 export const HOMEPAGE_CONTENT = {
   upcomingEvents: [
     {
-      date: 'September 22',
-      image: '/media/compute-camp.png',
+      date: 'September 2023',
+      image: 'https://images.pexels.com/photos/3617500/pexels-photo-3617500.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
       link: 'https://lu.ma/compute-camp',
-      location: 'TBD',
-      name: 'Compute Camp',
+      location: 'Iceland and Asia',
+      name: "FIL 'Thing'",
     },
     {
-      date: 'October 28',
+      date: 'Q2 2024',
       image: '/media/ipfs-camp.png',
       link: 'https://lu.ma/ipfscamp23-prereg',
       location: 'TBD',
       name: 'IPFS Camp 2023',
     },
     {
-      date: 'TBD',
+      date: 'Q3 2024',
       image: 'https://blog.ipfs.tech/assets/img/181806539-3c71476c-b247-4400-9778-5ccfce635f17.fac0cf11.png',
       link: null,
       location: 'TBD',
