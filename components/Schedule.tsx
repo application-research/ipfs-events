@@ -2,11 +2,12 @@
 import styles from '@components/Schedule.module.scss';
 
 import { CALENDAR_CONTENT } from '@root/content/calendar-content';
-import { fetchAirtableData } from '@root/pages/api/airtable';
+// import { fetchAirtableData } from '@root/pages/api/airtable';
+// import { SchedulePopUp } from './SchedulePopUp';
+// import { fetchAirtableData } from '@root/pages/api/airtable';
 import { useEffect, useState } from 'react';
 import Link from './Link';
-import { SchedulePopUp } from './SchedulePopUp';
-import ArrowCurvedSVG from './svgs/ArrowCurvedSVG';
+import { getAirtableData } from '@root/resolvers/airtable-import';
 
 const NODE = process.env.NODE_ENV || 'development';
 const IS_PRODUCTION = NODE === 'production';
@@ -34,21 +35,37 @@ export default function Schedule({ calendarData }) {
     setIsOverlayOpen(true);
   };
 
-  useEffect(() => {
-    const getData = async () => {
-      const airtableData = await fetchAirtableData();
+  // useEffect(() => {
+  //   const getData = async () => {
+  //     const airtableData = await fetchAirtableData();
 
-      if (airtableData) {
-        setAirtableData(airtableData);
+  //     if (airtableData) {
+  //       setAirtableData(airtableData);
+  //     }
+  //   };
+
+  //   getData();
+  // }, []);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const data = await getAirtableData();
+        if (data) {
+          setAirtableData(data);
+          // Do any other processing with the fetched data if needed
+        }
+      } catch (error) {
+        console.error('Error fetching Airtable data:', error);
       }
     };
 
-    getData();
+    fetchData();
   }, []);
 
   return (
     <div style={{ display: 'grid', rowGap: '2rem' }}>
-      {/* <div>
+      <div>
         <section className={styles.calander}>
           <section className={styles.calander}>
             {calendarContent.map((event, index) => {
@@ -88,12 +105,12 @@ export default function Schedule({ calendarData }) {
           <>
             {isOverlayOpen && <div className={styles.overlay} onClick={handleOverlayClick} />}
             <div className={`${styles.absoluteContainer} ${isOverlayOpen ? styles.active : ''}`} onClick={handleContainerClick}>
-              <SchedulePopUp eventData={eventData} eventItem={selectedEvent} setSelectedEvent={setSelectedEvent} />
+              {/* <SchedulePopUp eventData={eventData} eventItem={selectedEvent} setSelectedEvent={setSelectedEvent} /> */}
             </div>
           </>
         )}
-      </div>  */}
-      <div>Event Schedule Coming Soon</div>
+      </div>
+
       {calendarContent?.formLink && (
         <Link style="text" href={calendarContent?.formLink.link} target="_blank">
           <section className={styles.bigCTA}>
