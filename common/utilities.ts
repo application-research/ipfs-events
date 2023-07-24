@@ -9,13 +9,14 @@ export const pluralize = (text, count) => {
   return count > 1 || count === 0 ? `${text}s` : text;
 };
 
-export function toDateISOString(data: string) {
+export function toDateISOString(data, timezone) {
+  const timeZone = timezone ?? 'en-US';
   const date = new Date(data);
-  return date.toLocaleDateString('en-US', {
-    weekday: 'long',
+
+  return date.toLocaleDateString(timeZone, {
+    weekday: 'short',
     day: 'numeric',
     month: 'long',
-    year: 'numeric',
   });
 }
 
