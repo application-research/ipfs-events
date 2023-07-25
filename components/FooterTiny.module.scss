@@ -1,5 +1,5 @@
 .footer {
-  height: 120px;
+  height: 200px;
   bottom: 0;
 }
 
@@ -12,4 +12,14 @@
 
 .socialIconImage {
   width: 1.5rem;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
 }

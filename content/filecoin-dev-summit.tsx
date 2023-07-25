@@ -202,18 +202,18 @@ export const FILECOIN_DEV_SUMMIT_2023_PAGE_CONTENT = [
 ];
 
 export const FOOTER_FILECOIN_DEV_SUMMIT_CONTENT = {
-  copyright: [
+  links: [
     {
-      link: 'https://discuss.ipfs.tech/tos',
-      text: 'Terms & Conditions',
+      href: 'https://discuss.ipfs.tech/tos',
+      name: 'Terms & Conditions',
     },
     {
-      link: 'https://discuss.ipfs.tech/privacy',
-      text: 'Privacy',
+      href: 'https://discuss.ipfs.tech/privacy',
+      name: 'Privacy',
     },
     {
-      link: 'https://ipfs.tech/legal/',
-      text: 'DMCA Policy',
+      href: 'https://ipfs.tech/legal/',
+      name: 'DMCA Policy',
     },
   ],
 };
