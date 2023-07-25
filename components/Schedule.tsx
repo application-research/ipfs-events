@@ -6,6 +6,7 @@ import { fetchAirtableData } from '@root/pages/api/airtable';
 import { useEffect, useState } from 'react';
 import Link from './Link';
 import { SchedulePopUp } from './SchedulePopUp';
+import ArrowCurvedSVG from './svgs/ArrowCurvedSVG';
 
 const NODE = process.env.NODE_ENV || 'development';
 const IS_PRODUCTION = NODE === 'production';
@@ -92,13 +93,13 @@ export default function Schedule({ calendarData }) {
           </>
         )}
       </div>  */}
-
+      <div>Event Schedule Coming Soon</div>
       {calendarContent?.formLink && (
         <Link style="text" href={calendarContent?.formLink.link} target="_blank">
-          <section className={styles.submission}>
-            <div style={{ display: 'flex', gap: '0.5rem', flexDirection: 'column', alignItems: 'center' }}>
-              <p>+</p>
-              <h4 className={styles.submitTrack}>{calendarContent?.formLink.title}</h4>
+          <section className={styles.bigCTA}>
+            <div className={styles.bigCTARow}>
+              <h4 className={styles.bigCTATitle}>{calendarContent?.formLink.title}</h4>
+              <ArrowCurvedSVG />
             </div>
           </section>
         </Link>

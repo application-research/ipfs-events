@@ -16,14 +16,14 @@ export const FILECOIN_DEV_SUMMIT_2023_HERO_CONTENT = {
 
 export const FILECOIN_DEV_SUMMIT_ICELAND_CALENDAR = {
   formLink: {
-    title: 'Submit a Talk or a Track for Filecoin Dev Summit Iceland 2023',
+    title: 'Submit a Talk/Track',
     link: 'https://airtable.com/appEjnh5rpWMsjocb/shr6SmQjqdgn5Pc90',
   },
 };
 
 export const FILECOIN_DEV_SUMMIT_ASIA_CALENDAR = {
   formLink: {
-    title: 'Submit a Track & Talk for Filecoin Dev Summit Asia 2023  ',
+    title: 'Submit a Talk/Track',
     link: 'https://airtable.com/appEjnh5rpWMsjocb/shrw3Ha0yTusDmcOg',
   },
 };
