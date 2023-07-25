@@ -28,23 +28,22 @@ export default function Footer({ disclaimer, filResourcesCard, contactUsCard, so
               </div>
             )}
 
-            {siteList?.length > 0 &&
-              siteList(
-                <div className={`${styles.columnContainer} ${styles.columnContainerCard} ${styles.cardBorder}`}>
-                  <div className={styles.heading}>{filResourcesCard.heading}</div>
-                  <ul className={`${styles.filResources} ${styles.list}`}>
-                    {siteList?.map((site, index) => {
-                      return (
-                        <li key={index}>
-                          <a href={site.link} target="_blank" className={styles.link}>
-                            {site.text}
-                          </a>
-                        </li>
-                      );
-                    })}
-                  </ul>
-                </div>
-              )}
+            {siteList?.length > 0 && siteList && (
+              <div className={`${styles.columnContainer} ${styles.columnContainerCard} ${styles.cardBorder}`}>
+                <div className={styles.heading}>{filResourcesCard.heading}</div>
+                <ul className={`${styles.filResources} ${styles.list}`}>
+                  {siteList?.map((site, index) => {
+                    return (
+                      <li key={index}>
+                        <a href={site.link} target="_blank" className={styles.link}>
+                          {site.text}
+                        </a>
+                      </li>
+                    );
+                  })}
+                </ul>
+              </div>
+            )}
             {isMobile && contactUsCard ? (
               <div className={`${styles.mobileContact} ${styles.cardBorder} `}>
                 <div className={styles.icon}>

@@ -124,13 +124,13 @@ export const IPFS_FRIENDS_CAFE_NAVIGATION_CONTENT = {
 export const IPFS_FRIENDS_CAFE_PAGE_CONTENT = [
   {
     id: 'ipfs-friends-about',
-    direction: 'row',
+    direction: 'column',
     title: 'About',
     block: [
       {
         id: 'media',
-        type: BlockTypeEnum.MEDIA,
-        media: {
+        type: BlockTypeEnum.IMAGE_TEXT,
+        image: {
           type: TypeName.MEDIA_IMAGE,
           src: '/media/event-sample3.png',
           ariaLabel: 'IPFS Thing 2023',
@@ -144,28 +144,28 @@ export const IPFS_FRIENDS_CAFE_PAGE_CONTENT = [
       },
     ],
   },
-  {
-    id: 'ipfs-friends-about',
-    direction: 'row',
-    block: [
-      {
-        type: BlockTypeEnum.TEXT,
-        bigTitle:
-          'Our regular community events are designed to break down barriers and foster connections, so no one misses out on the excitement and progress happening in the IPFS ecosystem.',
-        paragraph:
-          "We understand the importance of accessibility and inclusivity which is why we're dedicated to ensuring that IPFS knowledge reaches every curious mind.We're excited for you to join our global network of IPFS enthusiasts!",
-      },
-      {
-        id: 'media',
-        type: BlockTypeEnum.MEDIA,
-        media: {
-          type: TypeName.MEDIA_IMAGE,
-          src: 'https://blog.ipfs.tech/assets/img/ipfs-thing-1.47413b26.png',
-          ariaLabel: 'IPFS Thing 2023',
-        },
-      },
-    ],
-  },
+  // {
+  //   id: 'ipfs-friends-about',
+  //   direction: 'row',
+  //   block: [
+  //     {
+  //       type: BlockTypeEnum.TEXT,
+  //       bigTitle:
+  //         'Our regular community events are designed to break down barriers and foster connections, so no one misses out on the excitement and progress happening in the IPFS ecosystem.',
+  //       paragraph:
+  //         "We understand the importance of accessibility and inclusivity which is why we're dedicated to ensuring that IPFS knowledge reaches every curious mind.We're excited for you to join our global network of IPFS enthusiasts!",
+  //     },
+  //     {
+  //       id: 'media',
+  //       type: BlockTypeEnum.IMAGE_TEXT,
+  //       image: {
+  //         type: TypeName.MEDIA_IMAGE,
+  //         src: 'https://blog.ipfs.tech/assets/img/ipfs-thing-1.47413b26.png',
+  //         ariaLabel: 'IPFS Thing 2023',
+  //       },
+  //     },
+  //   ],
+  // },
   {
     id: 'ipfs-friends-past-events',
     direction: 'row',
