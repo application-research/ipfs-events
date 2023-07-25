@@ -3,6 +3,10 @@
   font-weight: var(--font-weight-light);
   font-size: var(--font-size-extra-large);
   letter-spacing: -1px;
+
+  @media (max-width: 768px) {
+    font-size: var(--font-size-large);
+  }
 }
 
 .directionRow {

@@ -165,3 +165,11 @@
   gap: 1rem;
   font-size: var(--font-size-small);
 }
+
+.rowGap {
+  row-gap: 7rem;
+
+  @media (max-width: 768px) {
+    row-gap: 3rem;
+  }
+}
