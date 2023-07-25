@@ -1,7 +1,7 @@
-import styles from '@components/ImageTextCard.module.scss';
+import styles from '@components/ImageText.module.scss';
 import Image from './Image';
 
-export default function ImageTextCard({ title, description, image, id }: any) {
+export default function ImageText({ title, description, image, id }: any) {
   return (
     <div className={styles.container} id={id}>
       <div className={styles.imageBackground} style={{ background: image.backroundColor ?? 'white' }}>

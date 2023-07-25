@@ -28,7 +28,7 @@ export default async function Page(props) {
       </div>
       <SectionEventPage blocks={blocks} />
 
-      <Footer {...footerContent} />
+      {/* <Footer {...footerContent} /> */}
     </DefaultLayout>
   );
 }

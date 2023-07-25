@@ -1,12 +1,14 @@
 export enum BlockTypeEnum {
   COLLAPSABLE = 'collapsable',
   HERO = 'hero',
+  IMAGE_TEXT = 'image-text',
+  IMAGE_TEXT_WITH_OVERFLOW = 'image-text-with-overflow',
   LOGO_GRID = 'logo-grid',
   MEDIA = 'media',
+  MEDIA_GRID = 'media-grid',
   SCHEDULE = 'schedule',
   TEXT = 'text',
   TICKET_CARD = 'ticket-card',
-  IMAGE_TEXT_CARD = 'image-text-card',
 }
 
 export enum BlockDirectionEnum {
@@ -43,6 +45,7 @@ export enum Ratio {
 
 export enum TypeName {
   MEDIA_IMAGE = 'media-image',
+  MEDIA_IMAGE_WITH_OVERFLOWING_TEXT = 'media-image-width-text',
   MEDIA_ROW = 'media-row',
   MEDIA_VIDEO = 'media-video',
 }

@@ -1,0 +1,70 @@
+.container {
+  position: relative;
+}
+
+.textContainer {
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  z-index: var(--z-index-small);
+  font-family: Inter;
+  font-weight: var(--font-weight-regular);
+  top: -1.5rem;
+
+  @media (max-width: 768px) {
+    top: -1rem;
+  }
+
+  .column {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .heading {
+    font-family: 'Inter';
+    font-size: var(--font-size-mega-large);
+    font-weight: lighter;
+
+    @media (max-width: 768px) {
+      font-size: var(--font-size-large);
+    }
+  }
+}
+
+.description {
+  text-align: right;
+  padding-bottom: 1rem;
+  font-family: 'Inter';
+  font-size: var(--font-size-large);
+  font-weight: var(--font-weight-light);
+
+  @media (max-width: 1050px) {
+    font-size: var(--font-size-regular);
+  }
+
+  @media (max-width: 768px) {
+    font-size: var(--font-size-small);
+  }
+}
+
+.image {
+  width: 100%;
+  max-height: 35rem;
+  object-fit: cover;
+  display: block;
+  //   cursor: pointer;
+  transition: filter 0.3s ease;
+  filter: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'><filter id='grayscale'><feColorMatrix type='matrix' values='0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0'/></filter></svg>#grayscale"); /* Firefox 10+, Firefox on Android */
+  -webkit-filter: grayscale(100%);
+  -moz-filter: grayscale(100%);
+  -ms-filter: grayscale(100%);
+  filter: grayscale(100%);
+  filter: gray;
+
+  @media (max-width: 768px) {
+    max-height: 15rem;
+  }
+  //   &:hover {
+  //     filter: none;
+  //   }
+}
