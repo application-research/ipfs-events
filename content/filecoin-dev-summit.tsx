@@ -1,7 +1,7 @@
 import { BlockTypeEnum, CallToActionVariantEnum, Ratio, TypeName } from '@root/common/types';
 import { MARKDOWN_CONTENT } from './markdown-content';
 
-export const FILTHING_2023_HERO_CONTENT = {
+export const FILECOIN_DEV_SUMMIT_2023_HERO_CONTENT = {
   id: 'hero',
   type: BlockTypeEnum.HERO,
   // label: 'Events',
@@ -15,21 +15,21 @@ export const FILTHING_2023_HERO_CONTENT = {
   },
 };
 
-export const FILTHING_ICELAND_CALENDAR = {
+export const FILECOIN_DEV_SUMMIT_ICELAND_CALENDAR = {
   formLink: {
     title: 'Submit a Talk or a Track for FIL Thing Iceland 2023',
     link: 'https://airtable.com/appEjnh5rpWMsjocb/shr6SmQjqdgn5Pc90',
   },
 };
 
-export const FILTHING_ASIA_CALENDAR = {
+export const FILECOIN_DEV_SUMMIT_ASIA_CALENDAR = {
   formLink: {
     title: 'Submit a Track & Talk for FIL Thing Asia 2023  ',
     link: 'https://airtable.com/appEjnh5rpWMsjocb/shrw3Ha0yTusDmcOg',
   },
 };
 
-export const FILTHING_2023_PAGE_CONTENT = [
+export const FILECOIN_DEV_SUMMIT_2023_PAGE_CONTENT = [
   {
     id: 'about',
     direction: 'row',
@@ -72,6 +72,38 @@ export const FILTHING_2023_PAGE_CONTENT = [
       },
     ],
   },
+
+  {
+    id: 'about',
+    direction: 'column',
+    noGutter: 'no',
+    block: [
+      {
+        id: 'media',
+        type: BlockTypeEnum.IMAGE_TEXT_WITH_OVERFLOW,
+        heading: 'Asia',
+        subtitle: 'September 11-15, 2023',
+        description: 'September 11-15, 2023',
+        smallDesc: 'Organized by Miwa',
+        image: {
+          src: 'https://images.pexels.com/photos/236517/pexels-photo-236517.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+          ariaLabel: 'FIL Dev Summit',
+          link: '#filecoin-dev-asia',
+        },
+      },
+    ],
+  },
+  {
+    id: 'about',
+    direction: 'column',
+    title: 'IPFS - Asia Schedule',
+    block: [
+      {
+        type: BlockTypeEnum.SCHEDULE,
+        calendarData: FILECOIN_DEV_SUMMIT_ASIA_CALENDAR,
+      },
+    ],
+  },
   {
     id: 'about',
     direction: 'column',
@@ -94,20 +126,11 @@ export const FILTHING_2023_PAGE_CONTENT = [
   {
     id: 'about',
     direction: 'column',
-    noGutter: 'no',
+    title: 'IPFS - Iceland Schedule',
     block: [
       {
-        id: 'media',
-        type: BlockTypeEnum.IMAGE_TEXT_WITH_OVERFLOW,
-        heading: 'Asia',
-        subtitle: 'September 11-15, 2023',
-        description: 'September 11-15, 2023',
-        smallDesc: 'Organized by Miwa',
-        image: {
-          src: 'https://images.pexels.com/photos/236517/pexels-photo-236517.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-          ariaLabel: 'FIL Dev Summit',
-          link: '#filecoin-dev-asia',
-        },
+        type: BlockTypeEnum.SCHEDULE,
+        calendarData: FILECOIN_DEV_SUMMIT_ASIA_CALENDAR,
       },
     ],
   },
@@ -121,85 +144,18 @@ export const FILTHING_2023_PAGE_CONTENT = [
         type: BlockTypeEnum.LOGO_GRID,
         logos: [
           {
-            src: '/media/evp.png',
-            href: null,
-          },
-          {
             src: '/media/protocollabs.png',
-            href: null,
+            href: 'https://protocol.ai/',
           },
           {
-            src: '/media/evp.png',
-            href: null,
-          },
-          {
-            src: '/media/protocollabs.png',
-            href: null,
-          },
-          {
-            src: '/media/evp.png',
-            href: null,
-          },
-          {
-            src: '/media/protocollabs.png',
-            href: null,
-          },
-          {
-            src: '/media/evp.png',
-            href: null,
-          },
-          {
-            src: '/media/protocollabs.png',
-            href: null,
-          },
-          {
-            src: '/media/evp.png',
-            href: null,
-          },
-          {
-            src: '/media/protocollabs.png',
-            href: null,
-          },
-          {
-            src: '/media/evp.png',
-            href: null,
-          },
-          {
-            src: '/media/protocollabs.png',
+            src: '/media/filecoin-sponsor.png',
             href: null,
           },
         ],
       },
     ],
   },
-  // {
-  //   id: '2',
-  //   title: 'FIL Thing - Asia 2023',
-  //   direction: 'column',
-  //   block: [
-  //     {
-  //       id: 'media',
-  //       type: BlockTypeEnum.MEDIA,
-  //       media: {
-  //         type: TypeName.MEDIA_IMAGE,
-  //         src: 'https://images.pexels.com/photos/236517/pexels-photo-236517.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-  //         ariaLabel: 'IPFS Thing 2023',
-  //         ratio: Ratio.TWENTY_ONE_BY_NINE,
-  //       },
-  //     },
-  //   ],
-  // },
-  // {
-  //   id: 'about',
-  //   direction: 'column',
-  //   title: 'Schedule',
-  //   block: [
-  //     {
-  //       type: BlockTypeEnum.SCHEDULE,
-  //       calendarData: FILTHING_ASIA_CALENDAR,
-  //     },
-  //   ],
-  // },
+
   // {
   //   id: '2',
   //   title: 'FIL Thing - Iceland 2023',
@@ -224,7 +180,7 @@ export const FILTHING_2023_PAGE_CONTENT = [
   //   block: [
   //     {
   //       type: BlockTypeEnum.SCHEDULE,
-  //       calendarData: FILTHING_ICELAND_CALENDAR,
+  //       calendarData: FILECOIN_DEV_SUMMIT_ICELAND_CALENDAR,
   //     },
   //   ],
   // },
@@ -258,7 +214,7 @@ export const FILTHING_2023_PAGE_CONTENT = [
   // },
 ];
 
-// export const FOOTER_FILTHING_CONTENT = {
+// export const FOOTER_FILECOIN_DEV_SUMMIT_CONTENT = {
 //   disclaimer: {
 //     logo: 'https://static-00.iconduck.com/assets.00/filecoin-iou-cryptocurrency-icon-512x512-gw5j9yhd.png',
 //     text: '',
@@ -291,7 +247,7 @@ export const FILTHING_2023_PAGE_CONTENT = [
 //     },
 //   ],
 // };
-export const FILTHING_NAVIGATION_CONTENT = {
+export const FILECOIN_DEV_SUMMIT_NAVIGATION_CONTENT = {
   logo: {
     src: 'https://static-00.iconduck.com/assets.00/filecoin-iou-cryptocurrency-icon-512x512-gw5j9yhd.png',
     altText: 'ipfs-logo',

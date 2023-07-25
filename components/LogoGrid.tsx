@@ -1,6 +1,7 @@
 import styles from '@components/LogoGrid.module.scss';
 
 import Image from './Image';
+import Link from './Link';
 
 export default function LogoGrid({ id, logos, text }) {
   return (
@@ -10,7 +11,13 @@ export default function LogoGrid({ id, logos, text }) {
           {logos.map((logo, index) => {
             return (
               <div key={index} className={styles.col}>
-                <Image className={styles.logo} src={logo.src} altText={logo?.altText ?? ''} />
+                {logo.href !== null ? (
+                  <Link href={logo.href} target="_blank">
+                    <Image className={styles.logo} src={logo.src} altText={logo?.altText ?? ''} />
+                  </Link>
+                ) : (
+                  <Image className={styles.logo} src={logo.src} altText={logo?.altText ?? ''} />
+                )}
               </div>
             );
           })}
