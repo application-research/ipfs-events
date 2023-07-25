@@ -49,7 +49,7 @@ export const FILECOIN_DEV_SUMMIT_2023_PAGE_CONTENT = [
               type: TypeName.MEDIA_IMAGE,
               src: 'https://images.pexels.com/photos/236517/pexels-photo-236517.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
               ariaLabel: 'Filecoin Dev Summit',
-              link: '#filecoin-dev-iceland',
+              link: '#filecoin-dev-asia',
             },
           },
           {
@@ -64,7 +64,7 @@ export const FILECOIN_DEV_SUMMIT_2023_PAGE_CONTENT = [
               type: TypeName.MEDIA_IMAGE,
               src: 'https://images.pexels.com/photos/3617500/pexels-photo-3617500.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
               ariaLabel: 'FIL Dev Summit',
-              link: '#filecoin-dev-asia',
+              link: '#filecoin-dev-iceland',
             },
           },
         ],
@@ -73,7 +73,7 @@ export const FILECOIN_DEV_SUMMIT_2023_PAGE_CONTENT = [
   },
 
   {
-    id: 'about',
+    id: 'filecoin-dev-asia',
     direction: 'column',
     noGutter: 'no',
     block: [
@@ -95,7 +95,15 @@ export const FILECOIN_DEV_SUMMIT_2023_PAGE_CONTENT = [
   {
     id: 'about',
     direction: 'column',
-    title: 'IPFS - Asia Schedule',
+    title: 'Filecoin Dev Summit - Asia Schedule',
+    cta: {
+      type: CallToActionVariantEnum.BLACK,
+      buttonColor: 'black',
+      textColor: 'white',
+      target: '_blank',
+      text: 'Tickets for Asia',
+      link: 'https://lu.ma/tdbdprzd',
+    },
     block: [
       {
         type: BlockTypeEnum.SCHEDULE,
@@ -104,7 +112,7 @@ export const FILECOIN_DEV_SUMMIT_2023_PAGE_CONTENT = [
     ],
   },
   {
-    id: 'about',
+    id: 'filecoin-dev-iceland',
     direction: 'column',
     noGutter: 'no',
     block: [
@@ -125,7 +133,15 @@ export const FILECOIN_DEV_SUMMIT_2023_PAGE_CONTENT = [
   {
     id: 'about',
     direction: 'column',
-    title: 'IPFS - Iceland Schedule',
+    title: 'Filecoin Dev Summit - Iceland Schedule',
+    cta: {
+      type: CallToActionVariantEnum.BLACK,
+      buttonColor: 'black',
+      textColor: 'white',
+      target: '_blank',
+      text: 'Tickets for Iceland',
+      link: 'https://lu.ma/20menvfi',
+    },
     block: [
       {
         type: BlockTypeEnum.SCHEDULE,

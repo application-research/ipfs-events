@@ -1,6 +1,7 @@
 import styles from '@components/MediaGrid.module.scss';
 
 import MediaBlock from './MediaBlock';
+import Link from './Link';
 
 const getGridStyle = (media) => {
   const length = media.length;
@@ -27,19 +28,21 @@ export default function MediaGrid({ media, id }) {
 
         return (
           <section>
-            <figure key={index} className={styles.imageWrapper}>
-              <MediaBlock {...mediaItem} className={styles.image} />
-            </figure>
-            <div style={{ display: 'grid', rowGap: '0.2rem' }}>
-              <div className={styles.headingContainer}>
-                {heading && <h4 className={styles.heading}>{mediaItem.heading}</h4>}
-                {smallDesc && <p className={styles.smallDesc}>{mediaItem.smallDesc}</p>}
-              </div>
+            <a className={styles.link} href={mediaItem?.media.link} target="_self">
+              <figure key={index} className={styles.imageWrapper}>
+                <MediaBlock {...mediaItem} className={styles.image} />
+              </figure>
+              <div style={{ display: 'grid', rowGap: '0.2rem' }}>
+                <div className={styles.headingContainer}>
+                  {heading && <h4 className={styles.heading}>{mediaItem.heading}</h4>}
+                  {smallDesc && <p className={styles.smallDesc}>{mediaItem.smallDesc}</p>}
+                </div>
 
-              {title && <p className={styles.title}>{mediaItem.title}</p>}
-              {subtitle && <p className={styles.subtitle}>{mediaItem.subtitle}</p>}
-              {desc && <p className={styles.smallDesc}>{mediaItem.desc}</p>}
-            </div>
+                {title && <p className={styles.title}>{mediaItem.title}</p>}
+                {subtitle && <p className={styles.subtitle}>{mediaItem.subtitle}</p>}
+                {desc && <p className={styles.smallDesc}>{mediaItem.desc}</p>}
+              </div>
+            </a>
           </section>
         );
       })}

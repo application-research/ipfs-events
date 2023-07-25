@@ -8,7 +8,14 @@ export function CallToActionVariant({ type, cta }) {
     case CallToActionVariantEnum.BLACK:
       return <Button {...cta} buttonColor={cta?.backgroundColor ?? 'var(--color-black200)'} textColor={cta?.textColor ?? 'var(--color-white)'} />;
     case CallToActionVariantEnum.BORDER:
-      return <Button {...cta} textColor={cta?.textColor ?? 'var(--color-black200)'} buttonColor={cta?.backgroundColor ?? 'none'} borderColor={cta.buttonColor} />;
+      return (
+        <Button
+          {...cta}
+          textColor={cta?.textColor ?? 'var(--color-black200)'}
+          buttonColor={cta?.buttonColor ? cta.buttonColor : 'var(--color-black)'}
+          borderColor={cta?.borderColor ? cta.borderColor : 'none'}
+        />
+      );
     case CallToActionVariantEnum.TEXT:
       return <ButtonText {...cta} />;
     case CallToActionVariantEnum.WHITE:
@@ -30,7 +37,7 @@ export function Button({ buttonColor, borderColor, className, variant, target, t
       <Link className={`${styles.blackLink} ${className}`} href={(href || link) ?? ''} target={target ? target : '_blank'}>
         <button
           style={{
-            background: buttonColor ? buttonColor : 'none',
+            background: buttonColor ? buttonColor : 'var(--color-black)',
             color: textColor ? textColor : 'var(--color-white)',
             border: borderColor ?? `1px solid ${borderColor ? borderColor : ''}`,
           }}

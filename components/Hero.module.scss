@@ -23,6 +23,10 @@
   padding: 2rem 3rem;
   width: fit-content;
   border-radius: var(--border-radius-small);
+
+  @media (max-width: 768px) {
+    padding: 2rem 1rem;
+  }
 }
 
 .row {
@@ -35,6 +39,10 @@
   font-family: 'Inter';
   font-weight: var(--font-weight-light);
   letter-spacing: -1px;
+
+  @media (max-width: 768px) {
+    font-size: var(--font-size-large);
+  }
 }
 
 .date {
@@ -44,6 +52,10 @@
 
 .description {
   max-width: 60ch;
+
+  @media (max-width: 768px) {
+    font-size: var(--font-size-small);
+  }
 }
 
 .location {

@@ -124,6 +124,8 @@ section {
 
 html,
 body {
+  scroll-behavior: smooth;
+
   --color-white: #ffffff;
   --color-white200: #f3fbff;
   --color-white300: #dfeaef;
