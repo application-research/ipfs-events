@@ -35,6 +35,7 @@
   margin: 0 auto;
   width: 100%;
   border: 1px solid var(--text-black);
+  border-radius: var(--border-radius-tiny);
 
   &:last-child {
     border-right: none;
@@ -49,7 +50,7 @@
     padding: 0.5rem;
     border-bottom: 1px solid var(--text-black);
     border-right: 1px solid var(--text-black);
-
+    transition: cubic-bezier(0.23, 1, 0.32, 1);
     //remove bottom border fot the last row of columns
     &:nth-last-child(-n + 3) {
       border-bottom: none;
@@ -58,6 +59,10 @@
     //remove right border fot the last row of columns
     &:nth-last-child(-3n) {
       border-right: none;
+    }
+
+    &:hover {
+      background: var(--color-gray-transparent200);
     }
   }
 

@@ -4,7 +4,6 @@ import { MARKDOWN_CONTENT } from './markdown-content';
 export const FILECOIN_DEV_SUMMIT_2023_HERO_CONTENT = {
   id: 'hero',
   type: BlockTypeEnum.HERO,
-  // label: 'Events',
   title: 'Filecoin Dev Summit',
   // date: 'September 11-15, 2023 ',
   // location: 'Upcoming Locations - Asia and Iceland',
@@ -17,14 +16,14 @@ export const FILECOIN_DEV_SUMMIT_2023_HERO_CONTENT = {
 
 export const FILECOIN_DEV_SUMMIT_ICELAND_CALENDAR = {
   formLink: {
-    title: 'Submit a Talk or a Track for FIL Thing Iceland 2023',
+    title: 'Submit a Talk or a Track for Filecoin Dev Summit Iceland 2023',
     link: 'https://airtable.com/appEjnh5rpWMsjocb/shr6SmQjqdgn5Pc90',
   },
 };
 
 export const FILECOIN_DEV_SUMMIT_ASIA_CALENDAR = {
   formLink: {
-    title: 'Submit a Track & Talk for FIL Thing Asia 2023  ',
+    title: 'Submit a Track & Talk for Filecoin Dev Summit Asia 2023  ',
     link: 'https://airtable.com/appEjnh5rpWMsjocb/shrw3Ha0yTusDmcOg',
   },
 };
@@ -130,7 +129,7 @@ export const FILECOIN_DEV_SUMMIT_2023_PAGE_CONTENT = [
     block: [
       {
         type: BlockTypeEnum.SCHEDULE,
-        calendarData: FILECOIN_DEV_SUMMIT_ASIA_CALENDAR,
+        calendarData: FILECOIN_DEV_SUMMIT_ICELAND_CALENDAR,
       },
     ],
   },
@@ -155,98 +154,54 @@ export const FILECOIN_DEV_SUMMIT_2023_PAGE_CONTENT = [
       },
     ],
   },
-
-  // {
-  //   id: '2',
-  //   title: 'FIL Thing - Iceland 2023',
-  //   direction: 'column',
-  //   block: [
-  //     {
-  //       id: 'media',
-  //       type: BlockTypeEnum.MEDIA,
-  //       media: {
-  //         type: TypeName.MEDIA_IMAGE,
-  //         src: 'https://images.pexels.com/photos/3617500/pexels-photo-3617500.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-  //         ariaLabel: 'IPFS Thing 2023',
-  //         ratio: Ratio.TWENTY_ONE_BY_NINE,
-  //       },
-  //     },
-  //   ],
-  // },
-  // {
-  //   id: 'about',
-  //   direction: 'column',
-  //   title: 'Schedule',
-  //   block: [
-  //     {
-  //       type: BlockTypeEnum.SCHEDULE,
-  //       calendarData: FILECOIN_DEV_SUMMIT_ICELAND_CALENDAR,
-  //     },
-  //   ],
-  // },
-  // {
-  //   id: '2',
-  //   title: 'FAQs',
-  //   block: [
-  //     {
-  //       id: 'media',
-  //       type: BlockTypeEnum.COLLAPSABLE,
-  //       title: 'How can I lead a track?',
-  //       collapsedText: 'Please fill out the provided forms for FIL Thing Asia and FIL Thing Iceland to lead a track or a talk.',
-  //       backgroundColor: 'black',
-  //     },
-  //     {
-  //       id: 'media',
-  //       type: BlockTypeEnum.COLLAPSABLE,
-  //       title: 'How do I contact the organizers?',
-  //       collapsedText: 'You can reach out to us at ipfs-thing-2023@ipfs.io',
-  //       backgroundColor: 'black',
-  //     },
-  //     {
-  //       id: 'media',
-  //       type: BlockTypeEnum.COLLAPSABLE,
-  //       title: 'How do I participate?',
-  //       collapsedText:
-  //         'Recordings will be uploaded to our IPFS Youtube channel: https://www.youtube.com/@IPFSbot . Please check there for any updates. There will not be any live streaming.',
-  //       backgroundColor: 'black',
-  //     },
-  //   ],
-  // },
+  {
+    id: '2',
+    title: 'FAQs',
+    block: [
+      {
+        id: 'media',
+        type: BlockTypeEnum.COLLAPSABLE,
+        title: 'How can I lead a track?',
+        collapsedText: 'Please fill out the provided forms for Filecoin Dev Summit Asia and Filecoin Dev Summit Iceland to lead a track or a talk.',
+        backgroundColor: 'black',
+      },
+      {
+        id: 'media',
+        type: BlockTypeEnum.COLLAPSABLE,
+        title: 'Who is it for?',
+        collapsedText:
+          'FVM smart contract builders, core protocol devs, implementation engineering teams, tool builders, storage providers, large storage clients, token holders engaged in network governance, and more! People who care about how and why the protocol is evolving - Folks who are writing FIPS, implementing tools, or writing smart contracts. People who have product requirements. IPLD-yfiying the data as an example.',
+        backgroundColor: 'black',
+      },
+      {
+        id: 'media',
+        type: BlockTypeEnum.COLLAPSABLE,
+        title: 'What is the goal of Filecoin Dev Summit?',
+        collapsedText:
+          'What do we want to come out of Fil Thing? We want to bring the Fil dev community together, have important convos, show how the network is evolving, build collaboration connections between teams, collectively set a roadmap for critical protocol evolutions and extensions for next year, setting us up to review projects that we will launch really big at lab week and beyond.',
+        backgroundColor: 'black',
+      },
+    ],
+  },
 ];
 
-// export const FOOTER_FILECOIN_DEV_SUMMIT_CONTENT = {
-//   disclaimer: {
-//     logo: 'https://static-00.iconduck.com/assets.00/filecoin-iou-cryptocurrency-icon-512x512-gw5j9yhd.png',
-//     text: '',
-//   },
-//   filResourcesCard: {
-//     heading: 'Get Tickets',
-//     siteList: [
-//       {
-//         text: "FIL 'Thing' Asia",
-//         link: '',
-//       },
-//       {
-//         text: "FIL 'Thing' Iceland",
-//         link: '',
-//       },
-//     ],
-//   },
-//   copyright: [
-//     {
-//       link: 'https://discuss.ipfs.tech/tos',
-//       text: 'Terms & Conditions',
-//     },
-//     {
-//       link: 'https://discuss.ipfs.tech/privacy',
-//       text: 'Privacy',
-//     },
-//     {
-//       link: 'https://ipfs.tech/legal/',
-//       text: 'DMCA Policy',
-//     },
-//   ],
-// };
+export const FOOTER_FILECOIN_DEV_SUMMIT_CONTENT = {
+  copyright: [
+    {
+      link: 'https://discuss.ipfs.tech/tos',
+      text: 'Terms & Conditions',
+    },
+    {
+      link: 'https://discuss.ipfs.tech/privacy',
+      text: 'Privacy',
+    },
+    {
+      link: 'https://ipfs.tech/legal/',
+      text: 'DMCA Policy',
+    },
+  ],
+};
+
 export const FILECOIN_DEV_SUMMIT_NAVIGATION_CONTENT = {
   logo: {
     src: 'https://static-00.iconduck.com/assets.00/filecoin-iou-cryptocurrency-icon-512x512-gw5j9yhd.png',
@@ -258,14 +213,14 @@ export const FILECOIN_DEV_SUMMIT_NAVIGATION_CONTENT = {
       text: 'Tickets for Asia',
       backgroundColor: 'black',
       textColor: 'white',
-      href: '',
+      href: 'https://lu.ma/tdbdprzd',
       target: '_blank',
     },
     {
       text: 'Tickets for Iceland',
       backgroundColor: 'black',
       textColor: 'white',
-      href: '',
+      href: 'https://lu.ma/20menvfi',
       target: '_blank',
     },
   ],
