@@ -44,7 +44,7 @@ export default function Schedule({ calendarData }) {
 
     getData();
   }, []);
-  console.log(calendarData, 'data');
+
   return (
     <div style={{ display: 'grid', rowGap: '2rem' }}>
       {/* <div>
