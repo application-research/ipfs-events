@@ -5,9 +5,10 @@ import styles from '@components/Footer.module.scss';
 import { BreakpointEnum, useBreakpoint } from '@root/common/use-breakpoint';
 import * as React from 'react';
 import Link from './Link';
+import GutterContainer from './GutterContainer';
 
 export default function Footer({ disclaimer, filResourcesCard, contactUsCard, socialsCard, copyright }: any) {
-  const { siteList } = filResourcesCard;
+  const { siteList } = filResourcesCard ?? [];
 
   const breakpoint = useBreakpoint();
   const isMobile = breakpoint === BreakpointEnum.XS;
@@ -17,28 +18,33 @@ export default function Footer({ disclaimer, filResourcesCard, contactUsCard, so
       <div className={styles.sectionFooter}>
         <div className={styles.siteFooter}>
           <div className={styles.gridEqualHeight}>
-            <div className={`${styles.disclaimer} ${styles.cardBorder}`}>
-              <div className={styles.logo}>
-                <img src={disclaimer.logo} />
+            {disclaimer?.logo && (
+              <div className={`${styles.disclaimer} ${styles.cardBorder}`}>
+                <div className={styles.logo}>
+                  <img src={disclaimer.logo} />
+                </div>
+                {disclaimer.heading && <div className={`${styles.subheading} ${styles.alignment}`}>{disclaimer.heading}</div>}
+                {disclaimer.text && <p className={styles.text}>{disclaimer.text}</p>}
               </div>
-              <div className={`${styles.subheading} ${styles.alignment}`}>{disclaimer.heading}</div>
-              <p className={styles.text}>{disclaimer.text}</p>
-            </div>
+            )}
 
-            <div className={`${styles.columnContainer} ${styles.columnContainerCard} ${styles.cardBorder}`}>
-              <div className={styles.heading}>{filResourcesCard.heading}</div>
-              <ul className={`${styles.filResources} ${styles.list}`}>
-                {siteList.map((site, index) => {
-                  return (
-                    <li key={index}>
-                      <a href={site.link} target="_blank" className={styles.link}>
-                        {site.text}
-                      </a>
-                    </li>
-                  );
-                })}
-              </ul>
-            </div>
+            {siteList?.length > 0 &&
+              siteList(
+                <div className={`${styles.columnContainer} ${styles.columnContainerCard} ${styles.cardBorder}`}>
+                  <div className={styles.heading}>{filResourcesCard.heading}</div>
+                  <ul className={`${styles.filResources} ${styles.list}`}>
+                    {siteList?.map((site, index) => {
+                      return (
+                        <li key={index}>
+                          <a href={site.link} target="_blank" className={styles.link}>
+                            {site.text}
+                          </a>
+                        </li>
+                      );
+                    })}
+                  </ul>
+                </div>
+              )}
             {isMobile && contactUsCard ? (
               <div className={`${styles.mobileContact} ${styles.cardBorder} `}>
                 <div className={styles.icon}>
@@ -89,19 +95,21 @@ export default function Footer({ disclaimer, filResourcesCard, contactUsCard, so
             </div>
           </div>
 
-          <div className={styles.termsCopyright}>
-            <div className={styles.col}>
-              <div className={styles.sectionCopyright}>
-                {copyright.map((link, index) => {
-                  return (
-                    <Link href={link.link} className={styles.link} key={index} target="_blank" style={'animated'}>
-                      {link.text}
-                    </Link>
-                  );
-                })}
+          <GutterContainer>
+            <div className={styles.termsCopyright}>
+              <div className={styles.col}>
+                <div className={styles.sectionCopyright}>
+                  {copyright.map((link, index) => {
+                    return (
+                      <Link href={link.link} className={styles.link} key={index} target="_blank" style={'animated'}>
+                        {link.text}
+                      </Link>
+                    );
+                  })}
+                </div>
               </div>
             </div>
-          </div>
+          </GutterContainer>
         </div>
 
         <div className={styles.backToTopSection} style={{ paddingTop: '2.5rem' }}>

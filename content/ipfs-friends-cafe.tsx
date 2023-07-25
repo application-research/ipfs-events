@@ -175,7 +175,7 @@ export const IPFS_FRIENDS_CAFE_PAGE_CONTENT = [
     block: [
       {
         id: 'past-event',
-        type: BlockTypeEnum.IMAGE_TEXT_CARD,
+        type: BlockTypeEnum.IMAGE_TEXT,
         image: {
           alt: 'Logistics',
           src: '/media/ipfs-friends-trees.png',
@@ -185,7 +185,7 @@ export const IPFS_FRIENDS_CAFE_PAGE_CONTENT = [
       },
       {
         id: 'past-event',
-        type: BlockTypeEnum.IMAGE_TEXT_CARD,
+        type: BlockTypeEnum.IMAGE_TEXT,
         image: {
           alt: 'Maintain progress & momentum',
           src: '/media/ipfs-friends-people.png',
@@ -195,7 +195,7 @@ export const IPFS_FRIENDS_CAFE_PAGE_CONTENT = [
       },
       {
         id: 'past-event',
-        type: BlockTypeEnum.IMAGE_TEXT_CARD,
+        type: BlockTypeEnum.IMAGE_TEXT,
         image: {
           alt: 'Offers more opportunities to collaborate & foster connections between Camp + Thing',
           src: '/media/ipfs-friends-cloud.png',
@@ -205,7 +205,7 @@ export const IPFS_FRIENDS_CAFE_PAGE_CONTENT = [
       },
       {
         id: 'past-event',
-        type: BlockTypeEnum.IMAGE_TEXT_CARD,
+        type: BlockTypeEnum.IMAGE_TEXT,
         image: {
           alt: 'Promote accessibility & inclusivity by breaking down barriers to IPFS knowledge',
           src: '/media/ipfs-friends-books.png',
@@ -222,7 +222,7 @@ export const IPFS_FRIENDS_CAFE_PAGE_CONTENT = [
     block: [
       {
         id: 'past-event',
-        type: BlockTypeEnum.IMAGE_TEXT_CARD,
+        type: BlockTypeEnum.IMAGE_TEXT,
         image: {
           alt: 'Logistics',
           src: '/media/logistics.png',
@@ -233,7 +233,7 @@ export const IPFS_FRIENDS_CAFE_PAGE_CONTENT = [
       },
       {
         id: 'past-event',
-        type: BlockTypeEnum.IMAGE_TEXT_CARD,
+        type: BlockTypeEnum.IMAGE_TEXT,
         image: {
           alt: 'Securing PLN Speakers',
           src: '/media/special-guests.png',
@@ -244,7 +244,7 @@ export const IPFS_FRIENDS_CAFE_PAGE_CONTENT = [
       },
       {
         id: 'past-event',
-        type: BlockTypeEnum.IMAGE_TEXT_CARD,
+        type: BlockTypeEnum.IMAGE_TEXT,
         image: {
           alt: 'Providing Swag',
           src: '/media/swag.png',

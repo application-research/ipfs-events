@@ -18,6 +18,7 @@ export default function ResponsiveNavbar({ navContent }) {
           <div className={styles.container}>
             <ul className={styles.list} style={{ paddingRight: '2rem' }}>
               {navItems?.map((navItem, index) => {
+                console.log(navItem, 'navItem');
                 return (
                   <li className={styles.listItem} key={index}>
                     <Link style="animated" href={navItem.href}>

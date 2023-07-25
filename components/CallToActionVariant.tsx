@@ -18,7 +18,7 @@ export function CallToActionVariant({ type, cta }) {
   }
 }
 
-export function Button({ buttonColor, borderColor, className, variant, target, textColor, text, link }: any) {
+export function Button({ buttonColor, borderColor, className, variant, target, textColor, text, href, link }: any) {
   let buttonVariant = styles.button;
 
   if (variant === CallToActionVariantEnum.BORDER) {
@@ -27,7 +27,7 @@ export function Button({ buttonColor, borderColor, className, variant, target, t
 
   return (
     <>
-      <Link className={`${styles.blackLink} ${className}`} href={link ?? ''} target={target ? target : '_blank'}>
+      <Link className={`${styles.blackLink} ${className}`} href={(href || link) ?? ''} target={target ? target : '_blank'}>
         <button
           style={{
             background: buttonColor ? buttonColor : 'none',

@@ -11,13 +11,18 @@ import Footer from '@root/components/Footer';
 import Hero from '@root/components/Hero';
 import ResponsiveNavbar from '@root/components/ResponsiveNavbar';
 import SectionEventPage from '@root/components/SectionEventPage';
-import { FILTHING_2023_HERO_CONTENT, FILTHING_2023_PAGE_CONTENT, FILTHING_NAVIGATION_CONTENT, FOOTER_FILTHING_CONTENT } from '@root/content/filthing';
+import {
+  FILECOIN_DEV_SUMMIT_2023_HERO_CONTENT,
+  FILECOIN_DEV_SUMMIT_2023_PAGE_CONTENT,
+  FILECOIN_DEV_SUMMIT_NAVIGATION_CONTENT,
+  FOOTER_FILECOIN_DEV_SUMMIT_CONTENT,
+} from '@root/content/filecoin-dev-summit';
 
 export default async function Page(props) {
-  const blocks = FILTHING_2023_PAGE_CONTENT;
-  const footerContent = FOOTER_FILTHING_CONTENT;
-  const hero = FILTHING_2023_HERO_CONTENT;
-  const navContent = FILTHING_NAVIGATION_CONTENT;
+  const blocks = FILECOIN_DEV_SUMMIT_2023_PAGE_CONTENT;
+  const footerContent = FOOTER_FILECOIN_DEV_SUMMIT_CONTENT;
+  const hero = FILECOIN_DEV_SUMMIT_2023_HERO_CONTENT;
+  const navContent = FILECOIN_DEV_SUMMIT_NAVIGATION_CONTENT;
 
   return (
     <DefaultLayout>
@@ -26,6 +31,7 @@ export default async function Page(props) {
       <div style={{ paddingBottom: '5rem' }}>
         <Hero {...hero} />
       </div>
+
       <SectionEventPage blocks={blocks} />
 
       <Footer {...footerContent} />

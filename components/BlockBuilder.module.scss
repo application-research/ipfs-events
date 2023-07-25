@@ -1,11 +1,8 @@
 .mainTitle {
   font-family: 'Inter';
+  font-weight: var(--font-weight-light);
   font-size: var(--font-size-extra-large);
-}
-
-.borderBottom {
-  padding-bottom: 3rem;
-  border-bottom: 1px solid var(--color-text);
+  letter-spacing: -1px;
 }
 
 .directionRow {
