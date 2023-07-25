@@ -75,6 +75,10 @@
     font-family: 'Inter';
     font-size: var(--font-size-extra-large);
     font-weight: var(--font-weight-semi-bold);
+
+    @media (max-width: 768px) {
+      font-size: var(--font-size-large);
+    }
   }
 }
 

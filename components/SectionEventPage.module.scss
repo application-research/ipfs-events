@@ -166,10 +166,18 @@
   font-size: var(--font-size-small);
 }
 
-.rowGap {
+.grid {
+  display: grid;
+  position: relative;
   row-gap: 7rem;
 
   @media (max-width: 768px) {
     row-gap: 3rem;
   }
+}
+
+.stickyText {
+  position: sticky;
+  top: 0;
+  height: 300px;
 }
