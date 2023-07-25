@@ -48,23 +48,34 @@
   font-weight: var(--font-weight-semi-bold);
 }
 
-.submission {
+.bigCTA {
   cursor: pointer;
   border: 1px solid var(--color-black);
   padding: 1.5rem;
-  border-radius: var(--border-radius-small);
-  background: var(--color-gray-transparent);
+  border-radius: var(--border-radius-tiny);
   align-items: center;
   display: flex;
-  justify-content: center;
+  color: var(--color-black);
 
   &:hover {
     background: var(--color-gray-transparent200);
   }
-}
 
-.submitTrack {
-  color: var(--color-black);
+  .bigCTARow {
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .bigCTATitle {
+    color: var(--color-black);
+    font-family: 'Inter';
+    font-size: var(--font-size-extra-large);
+    font-weight: var(--font-weight-semi-bold);
+  }
 }
 
 .absoluteContainer {
@@ -75,7 +86,6 @@
   max-width: 700px;
   z-index: 999;
   top: 50%;
-  //   bottom: 5%;
   left: 50%;
   transform: translate(-50%, -50%);
   &.active {

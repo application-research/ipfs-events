@@ -16,14 +16,14 @@ export const FILECOIN_DEV_SUMMIT_2023_HERO_CONTENT = {
 
 export const FILECOIN_DEV_SUMMIT_ICELAND_CALENDAR = {
   formLink: {
-    title: 'Submit a Talk or a Track for Filecoin Dev Summit Iceland 2023',
+    title: 'Submit a Talk/Track',
     link: 'https://airtable.com/appEjnh5rpWMsjocb/shr6SmQjqdgn5Pc90',
   },
 };
 
 export const FILECOIN_DEV_SUMMIT_ASIA_CALENDAR = {
   formLink: {
-    title: 'Submit a Track & Talk for Filecoin Dev Summit Asia 2023  ',
+    title: 'Submit a Talk/Track',
     link: 'https://airtable.com/appEjnh5rpWMsjocb/shrw3Ha0yTusDmcOg',
   },
 };
@@ -202,18 +202,18 @@ export const FILECOIN_DEV_SUMMIT_2023_PAGE_CONTENT = [
 ];
 
 export const FOOTER_FILECOIN_DEV_SUMMIT_CONTENT = {
-  copyright: [
+  links: [
     {
-      link: 'https://discuss.ipfs.tech/tos',
-      text: 'Terms & Conditions',
+      href: 'https://discuss.ipfs.tech/tos',
+      name: 'Terms & Conditions',
     },
     {
-      link: 'https://discuss.ipfs.tech/privacy',
-      text: 'Privacy',
+      href: 'https://discuss.ipfs.tech/privacy',
+      name: 'Privacy',
     },
     {
-      link: 'https://ipfs.tech/legal/',
-      text: 'DMCA Policy',
+      href: 'https://ipfs.tech/legal/',
+      name: 'DMCA Policy',
     },
   ],
 };
