@@ -18,7 +18,6 @@
 }
 
 .eventStyle {
-  background: var(--color-white200);
   border-left: 0.5px solid var(--color-text);
   width: 14.2%;
   cursor: pointer;
@@ -74,7 +73,7 @@
     color: var(--color-black);
     font-family: 'Inter';
     font-size: var(--font-size-extra-large);
-    font-weight: var(--font-weight-semi-bold);
+    font-weight: var(--font-weight-light);
 
     @media (max-width: 768px) {
       font-size: var(--font-size-large);

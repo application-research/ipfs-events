@@ -9,6 +9,7 @@ import {
   FILECOIN_DEV_SUMMIT_2023_HERO_CONTENT,
   FILECOIN_DEV_SUMMIT_2023_PAGE_CONTENT,
   FILECOIN_DEV_SUMMIT_NAVIGATION_CONTENT,
+  FILECOIN_DEV_SUMMIT_PAGE_STYLE_CONTENT,
   FOOTER_FILECOIN_DEV_SUMMIT_CONTENT,
 } from '@root/content/filecoin-dev-summit';
 
@@ -17,18 +18,19 @@ export default async function Page(props) {
   const footerContent = FOOTER_FILECOIN_DEV_SUMMIT_CONTENT;
   const hero = FILECOIN_DEV_SUMMIT_2023_HERO_CONTENT;
   const navContent = FILECOIN_DEV_SUMMIT_NAVIGATION_CONTENT;
+  const pageStyle = FILECOIN_DEV_SUMMIT_PAGE_STYLE_CONTENT;
 
   return (
-    <DefaultLayout>
+    <div style={{ background: pageStyle.backgroundColor, color: pageStyle.textColor }}>
       <ResponsiveNavbar navContent={navContent} />
 
-      <div style={{ paddingBottom: '5rem' }}>
+      <div style={{ paddingBottom: '4rem' }}>
         <Hero {...hero} />
       </div>
 
-      <SectionEventPage blocks={blocks} />
+      <SectionEventPage blocks={blocks} pageStyle={pageStyle} />
 
       <FooterTiny {...footerContent} />
-    </DefaultLayout>
+    </div>
   );
 }

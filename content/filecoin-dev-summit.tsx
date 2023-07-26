@@ -1,17 +1,14 @@
-import { BlockTypeEnum, CallToActionVariantEnum, Ratio, TypeName } from '@root/common/types';
+import { BlockTypeEnum, CallToActionVariantEnum, NavigationTypeEnum, Ratio, TypeName } from '@root/common/types';
 import { MARKDOWN_CONTENT } from './markdown-content';
 
 export const FILECOIN_DEV_SUMMIT_2023_HERO_CONTENT = {
   id: 'hero',
-  type: BlockTypeEnum.HERO,
+  type: BlockTypeEnum.HERO_NO_BACKGROUND,
   title: 'Filecoin Dev Summit',
   // date: 'September 11-15, 2023 ',
   // location: 'Upcoming Locations - Asia and Iceland',
   description:
     'Filecoin Dev Summit is a gathering of developers, builders, and engaged community members who want to contribute to the core protocol and network evolution of Filecoin (see IPFS Thing, but bigger!).',
-  background: {
-    src: 'https://images.pexels.com/photos/11180714/pexels-photo-11180714.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-  },
 };
 
 export const FILECOIN_DEV_SUMMIT_ICELAND_CALENDAR = {
@@ -28,11 +25,39 @@ export const FILECOIN_DEV_SUMMIT_ASIA_CALENDAR = {
   },
 };
 
+export const FILECOIN_DEV_SUMMIT_PAGE_STYLE_CONTENT = {
+  backgroundColor: 'var(--color-beige)',
+  textColor: 'var(--color-black)',
+};
+
 export const FILECOIN_DEV_SUMMIT_2023_PAGE_CONTENT = [
+  {
+    id: '2',
+    subtitle: 'Sponsors',
+    direction: 'column',
+    backgroundColor: 'red',
+    block: [
+      {
+        id: 'participating-teams',
+        type: BlockTypeEnum.LOGO_GRID,
+        logos: [
+          {
+            src: '/media/protocollabs.png',
+            href: 'https://protocol.ai/',
+          },
+          {
+            src: '/media/filecoin-sponsor.png',
+            href: 'https://fil.org/',
+          },
+        ],
+      },
+    ],
+  },
   {
     id: 'about',
     direction: 'row',
     title: 'Upcoming Events',
+    backgroundColor: 'var(--color-beige)',
     block: [
       {
         id: 'media',
@@ -41,15 +66,15 @@ export const FILECOIN_DEV_SUMMIT_2023_PAGE_CONTENT = [
           {
             id: 'media',
             type: BlockTypeEnum.MEDIA,
-            heading: 'FIL Dev Summit - Asia',
+            heading: 'FIL Dev Summit - Singapore',
             subtitle: 'September 11-15, 2023',
-            desc: 'Taiwan, Asia',
+            desc: 'Singapore',
             smallDesc: 'Organized by Miwa',
             media: {
               type: TypeName.MEDIA_IMAGE,
-              src: 'https://images.pexels.com/photos/236517/pexels-photo-236517.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+              src: 'https://images.pexels.com/photos/3152126/pexels-photo-3152126.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
               ariaLabel: 'Filecoin Dev Summit',
-              link: '#filecoin-dev-asia',
+              link: '#filecoin-dev-singapore',
             },
           },
           {
@@ -71,31 +96,32 @@ export const FILECOIN_DEV_SUMMIT_2023_PAGE_CONTENT = [
       },
     ],
   },
-
   {
-    id: 'filecoin-dev-asia',
+    id: 'filecoin-dev-singapore',
     direction: 'column',
     noGutter: 'no',
+    backgroundColor: 'var(--color-beige)',
     block: [
       {
         id: 'media',
         type: BlockTypeEnum.IMAGE_TEXT_WITH_OVERFLOW,
-        heading: 'Asia',
+        heading: 'Singapore',
         subtitle: 'September 11-15, 2023',
         description: 'September 11-15, 2023',
         smallDesc: 'Organized by Miwa',
         image: {
-          src: 'https://images.pexels.com/photos/236517/pexels-photo-236517.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+          src: 'https://images.pexels.com/photos/3152126/pexels-photo-3152126.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
           ariaLabel: 'FIL Dev Summit',
-          link: '#filecoin-dev-asia',
+          link: '#filecoin-dev-singapore',
         },
       },
     ],
   },
   {
+    backgroundColor: 'var(--color-beige)',
     id: 'about',
     direction: 'column',
-    title: 'Filecoin Dev Summit - Asia Schedule',
+    title: 'Filecoin Dev Summit - Singapore Schedule',
     cta: {
       type: CallToActionVariantEnum.BLACK,
       buttonColor: 'black',
@@ -113,6 +139,7 @@ export const FILECOIN_DEV_SUMMIT_2023_PAGE_CONTENT = [
   },
   {
     id: 'filecoin-dev-iceland',
+    backgroundColor: 'var(--color-beige)',
     direction: 'column',
     noGutter: 'no',
     block: [
@@ -149,27 +176,7 @@ export const FILECOIN_DEV_SUMMIT_2023_PAGE_CONTENT = [
       },
     ],
   },
-  {
-    id: '2',
-    title: 'Sponsors',
-    direction: 'column',
-    block: [
-      {
-        id: 'participating-teams',
-        type: BlockTypeEnum.LOGO_GRID,
-        logos: [
-          {
-            src: '/media/protocollabs.png',
-            href: 'https://protocol.ai/',
-          },
-          {
-            src: '/media/filecoin-sponsor.png',
-            href: null,
-          },
-        ],
-      },
-    ],
-  },
+
   {
     id: '2',
     title: 'FAQs',
@@ -219,6 +226,8 @@ export const FOOTER_FILECOIN_DEV_SUMMIT_CONTENT = {
 };
 
 export const FILECOIN_DEV_SUMMIT_NAVIGATION_CONTENT = {
+  type: NavigationTypeEnum.WITH_BORDER,
+  backgroundColor: 'var(--color-beige)',
   logo: {
     src: 'https://static-00.iconduck.com/assets.00/filecoin-iou-cryptocurrency-icon-512x512-gw5j9yhd.png',
     altText: 'ipfs-logo',
