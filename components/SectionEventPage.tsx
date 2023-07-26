@@ -4,7 +4,7 @@ import BlockBuilder from './BlockBuilder';
 import GutterContainer from './GutterContainer';
 import { FadeInSection } from './FadeInSection';
 
-export default function SectionEventPage({ blocks, pageStyle }) {
+export default function SectionEventPage({ blocks, pageStyle }: any) {
   return (
     <div style={{ background: pageStyle?.backgroundColor ?? 'var(--color-white200)', display: 'grid', rowGap: '3rem' }}>
       <div className={styles.grid}>
