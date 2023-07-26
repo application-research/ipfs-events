@@ -69,7 +69,7 @@ export const FILECOIN_DEV_SUMMIT_2023_PAGE_CONTENT = [
             heading: 'FIL Dev Summit - Singapore',
             subtitle: 'September 12-14th, 2023',
             desc: 'Singapore',
-            smallDesc: 'Organized by Miwa',
+            smallDesc: 'Organized by Filecoin Foundation',
             media: {
               type: TypeName.MEDIA_IMAGE,
               src: 'https://images.pexels.com/photos/3152126/pexels-photo-3152126.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
@@ -84,7 +84,7 @@ export const FILECOIN_DEV_SUMMIT_2023_PAGE_CONTENT = [
             heading: 'FIL Dev Summit - Iceland',
             subtitle: 'September 25-27th, 2023',
             desc: 'Reykjavík, Iceland',
-            smallDesc: 'Organized by Filecoin Foundation',
+            smallDesc: 'Organized by Miwa',
             media: {
               type: TypeName.MEDIA_IMAGE,
               src: 'https://images.pexels.com/photos/3617500/pexels-photo-3617500.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
@@ -106,9 +106,15 @@ export const FILECOIN_DEV_SUMMIT_2023_PAGE_CONTENT = [
         id: 'media',
         type: BlockTypeEnum.IMAGE_TEXT_WITH_OVERFLOW,
         heading: 'Singapore',
+<<<<<<< HEAD
         subtitle: 'September 12-14th, 2023',
         description: 'September 12-14th, 2023',
         smallDesc: 'Organized by Miwa',
+=======
+        subtitle: 'September 11-15, 2023',
+        description: 'September 11-15, 2023',
+        smallDesc: 'Organized by Filecoin Foundation',
+>>>>>>> 8efa348 (updated copy)
         image: {
           src: 'https://images.pexels.com/photos/3152126/pexels-photo-3152126.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
           ariaLabel: 'FIL Dev Summit',

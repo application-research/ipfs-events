@@ -51,49 +51,17 @@ export default function Schedule({ scheduleData }) {
     setIsOverlayOpen(true);
   };
 
-  const handlePopupClose = () => {
-    setSelectedEvent(null);
-    setIsOverlayOpen(false);
-  };
+  // useEffect(() => {
+  //   const getData = async () => {
+  //     const airtableData = await fetchAirtableData();
 
-  useEffect(() => {
-    // Replace tableName with a specific view from airtable
-    getAirtableData(tableName, (records) => {
-      if (records) {
-        setData(records);
-      }
-    });
-  }, []);
+  //     if (airtableData) {
+  //       setAirtableData(airtableData);
+  //     }
+  //   };
 
-  useEffect(() => {
-    const tableElement = tableRef.current;
-
-    const handleScroll = () => {
-      if (tableElement) {
-        //Check the scroll position
-        setShowArrowLeft(tableElement.scrollLeft > 0);
-
-        setShowArrowRight(tableElement.scrollLeft + tableElement.clientWidth < tableElement.scrollWidth);
-
-        setIsScrolling(true);
-
-        //sync the scroll position between headers and schedule
-        if (headersRef.current) {
-          headersRef.current.scrollLeft = tableElement.scrollLeft;
-        }
-      }
-    };
-
-    if (tableElement) {
-      tableElement.addEventListener('scroll', handleScroll);
-      // Check initial scroll positions
-      handleScroll();
-      return () => {
-        tableElement.removeEventListener('scroll', handleScroll);
-      };
-    }
-  });
-  const calendarData: any = getFormattedAirtableFields(data);
+  //   getData();
+  // }, []);
 
   return (
     <div className={styles.container}>
