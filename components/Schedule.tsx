@@ -34,17 +34,17 @@ export default function Schedule({ calendarData }) {
     setIsOverlayOpen(true);
   };
 
-  useEffect(() => {
-    const getData = async () => {
-      const airtableData = await fetchAirtableData();
+  // useEffect(() => {
+  //   const getData = async () => {
+  //     const airtableData = await fetchAirtableData();
 
-      if (airtableData) {
-        setAirtableData(airtableData);
-      }
-    };
+  //     if (airtableData) {
+  //       setAirtableData(airtableData);
+  //     }
+  //   };
 
-    getData();
-  }, []);
+  //   getData();
+  // }, []);
 
   return (
     <div style={{ display: 'grid', rowGap: '2rem' }}>
