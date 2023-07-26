@@ -24,9 +24,9 @@ export const NAVIGATION_HOMEPAGE_CONTENT = {
         {
           header: 'Upcoming Event',
           title: 'IPFS Camp 2023',
-          date: 'October 28 - November 5, 2023',
+          date: 'TBD | Q2 2024',
           location: 'Location TBD',
-          link: 'https://lu.ma/ipfscamp23-prereg',
+          link: '',
           image: 'https://blog.ipfs.tech/assets/img/chooseyouradventure.bf5cb5ad.jpeg',
           target: '_blank',
         },
