@@ -2,10 +2,9 @@ import DefaultMetaTags from '@components/DefaultMetaTags';
 import PlausibleScript from '@root/components/PlausibleScript';
 
 export default async function Head({ params }) {
-  const title = 'IPFS.Events';
-  const description =
-    "Welcome to IPFS Events: IPFS powers the Distributed Web & we’re powering their events! IPFS is a peer-to-peer hypermedia protocol designed to preserve and grow humanity's knowledge by making the web upgradeable, resilient, and more open.";
-  const url = 'https://ipfs.events';
+  const title = 'Filecoin Dev Summit';
+  const description = 'Filecoin Dev Summit 2023 - Singapore and Iceland ';
+  const url = 'https://filecoindevsummit.io';
 
   // SUMMARY_LARGE_IMAGE: 1500x785
   return (
