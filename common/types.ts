@@ -1,6 +1,7 @@
 export enum BlockTypeEnum {
   COLLAPSABLE = 'collapsable',
   HERO = 'hero',
+  HERO_NO_BACKGROUND = 'hero-no-background',
   IMAGE_TEXT = 'image-text',
   IMAGE_TEXT_WITH_OVERFLOW = 'image-text-with-overflow',
   LOGO_GRID = 'logo-grid',
@@ -70,4 +71,8 @@ export enum CallToActionVariantEnum {
   WHITE = 'white',
   BORDER = 'border',
   NO_BORDER = 'no-border',
+}
+
+export enum NavigationTypeEnum {
+  WITH_BORDER = 'with-border',
 }

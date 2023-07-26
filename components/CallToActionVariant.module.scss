@@ -15,7 +15,7 @@
 }
 
 .button {
-  padding: 0.5rem;
+  padding: 0.5rem 1rem;
   text-decoration: none;
   cursor: pointer;
   border-bottom: none;
@@ -25,6 +25,7 @@
 
   @media (max-width: 768px) {
     font-size: var(--font-size-regular);
+    padding: 0.5rem;
   }
 }
 

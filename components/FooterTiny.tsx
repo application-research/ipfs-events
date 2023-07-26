@@ -13,7 +13,7 @@ export default function FooterTiny(footerContent) {
           {links?.map((link, index) => {
             return (
               <Link key={index} style="animated" href={link.href} target="_blank">
-                <h4>{link.name}</h4>
+                <h4 className={styles.link}>{link.name}</h4>
               </Link>
             );
           })}

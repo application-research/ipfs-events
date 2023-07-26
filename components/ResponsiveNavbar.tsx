@@ -1,15 +1,16 @@
 import styles from '@components/ResponsiveNavbar.module.scss';
 
 import { CallToActionVariant } from './CallToActionVariant';
-import { CallToActionVariantEnum } from '@root/common/types';
+import { CallToActionVariantEnum, NavigationTypeEnum } from '@root/common/types';
 import GutterContainer from './GutterContainer';
 import Link from './Link';
 
 export default function ResponsiveNavbar({ navContent }) {
   let { logo, navItems } = navContent;
+  const showBorder = navContent.type == NavigationTypeEnum.WITH_BORDER;
 
   return (
-    <nav className={styles.navbar}>
+    <nav className={styles.navbar} style={{ borderBottom: showBorder ? '1px solid black' : '', background: navContent?.backgroundColor ?? 'var(--color-white200)' }}>
       <GutterContainer>
         <div className={styles.container}>
           <div className={styles.logo}>
