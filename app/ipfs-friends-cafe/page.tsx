@@ -19,13 +19,13 @@ export default async function Page(props) {
   const navContent = IPFS_FRIENDS_CAFE_NAVIGATION_CONTENT;
 
   return (
-    <DefaultLayout>
+    <DefaultLayout props={{ background: 'var(--color-white200)' }}>
       <ResponsiveNavbar navContent={navContent} />
 
       <div style={{ paddingBottom: '5rem' }}>
         <Hero {...hero} />
       </div>
-      <SectionEventPage blocks={blocks} />
+      <SectionEventPage blocks={blocks} pageStyle={null} />
 
       <Footer {...footerContent} />
     </DefaultLayout>

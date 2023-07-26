@@ -1,4 +1,4 @@
-import { BlockTypeEnum, CallToActionVariantEnum, Ratio, TypeName } from '@root/common/types';
+import { BlockTypeEnum, CallToActionVariantEnum, NavigationTypeEnum, Ratio, TypeName } from '@root/common/types';
 
 export const IPFS_FRIENDS_CAFE_PAGE_HERO_CONTENT = {
   id: 'hero',
@@ -7,9 +7,6 @@ export const IPFS_FRIENDS_CAFE_PAGE_HERO_CONTENT = {
   date: 'Community-Hosted Events',
   location: 'Virtual & In Person',
   description: 'Events that foster knowledge exchange, community growth, collaboration, innovation, and the continued advancement of IPFS as groundbreaking technology',
-  background: {
-    src: '/media/ipfs-friendscafe.png',
-  },
   cta: [
     {
       type: CallToActionVariantEnum.BLACK,
@@ -88,6 +85,7 @@ export const IPFS_FRIENDS_FOOTER_CONTENT = {
 };
 
 export const IPFS_FRIENDS_CAFE_NAVIGATION_CONTENT = {
+  type: NavigationTypeEnum.WITH_BORDER,
   logo: {
     src: '/media/ipfs-friends-cafe-logo2.png',
     altText: 'ipfs-logo',
