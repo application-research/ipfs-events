@@ -1,11 +1,11 @@
 .calander {
-  display: flex;
-  flex-direction: row;
+  display: grid;
   width: 100%;
+  grid-template-columns: repeat(5, 1fr);
 }
 
 .eventHeading {
-  width: 14.2%;
+  width: 100%;
   background: var(--color-text);
   color: var(--color-white);
   display: flex;
@@ -19,7 +19,7 @@
 
 .eventStyle {
   border-left: 0.5px solid var(--color-text);
-  width: 14.2%;
+  width: 100%;
   cursor: pointer;
   transition: 0.05s ease;
 }
@@ -86,16 +86,26 @@
   top: 0;
   left: 0;
   width: 60%;
-  max-width: 700px;
+
   z-index: 999;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  min-width: 60vw;
+
   &.active {
     z-index: var(--z-index-small);
   }
+
+  @media (max-width: 1680px) {
+    min-width: 60vw;
+  }
+  @media (max-width: 1440px) {
+    min-width: 60vw;
+  }
+
   @media (max-width: 768px) {
-    width: 100%;
+    min-width: 95vw;
   }
 }
 

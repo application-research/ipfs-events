@@ -55,6 +55,20 @@ export const airtableFormattedFieldsMap = {
   Location: 'location',
 };
 
+function formatTalkDuration(timestamp, timezone, duration) {
+  const startDate = new Date(timestamp);
+
+  // Convert to the specified timezone
+  const options = { timeZone: timezone, hour12: true, hour: 'numeric', minute: 'numeric' };
+  const formattedStartDate = startDate.toLocaleString('en-US', options);
+
+  // Calculate the end time by adding the duration in minutes
+  const endDate = new Date(startDate.getTime() + duration * 60 * 1000);
+  const formattedEndDate = endDate.toLocaleString('en-US', options);
+
+  return `${formattedStartDate} - ${formattedEndDate}`;
+}
+
 const getValidDates = (trackDates) => {
   if (Array.isArray(trackDates)) {
     return trackDates.map((date) => new Date(date)).filter((date) => !isNaN(date.getTime()));
@@ -67,7 +81,7 @@ const getValidDates = (trackDates) => {
 };
 
 //format the raw airtable data into camelcase data
-export function formatAirtableMetaData(airtableData) {
+export function formatAirtableMetaData(airtableData, timezone) {
   const formattedRecords = airtableData.records.map((record) => {
     const formattedRecord: any = {};
 
@@ -78,9 +92,24 @@ export function formatAirtableMetaData(airtableData) {
     });
     formattedRecord.id = record.id;
 
+    // Calculate talk duration if startTime and duration are available, otherwise set to "Missing data"
+    if (formattedRecord.startTime && formattedRecord.duration) {
+      const talkDuration = formatTalkDuration(formattedRecord.startTime, timezone, formattedRecord.duration);
+      formattedRecord.talkDuration = talkDuration;
+    } else {
+      formattedRecord.talkDuration = 'Missing data for now';
+    }
+
     return formattedRecord;
   });
 
+  formattedRecords.sort((a, b) => {
+    const timeA = new Date(a.startTime).getTime();
+    const timeB = new Date(b.startTime).getTime();
+    return timeA - timeB;
+  });
+
+  console.log('formattedRecords final', formattedRecords);
   return formattedRecords;
 }
 
@@ -122,7 +151,7 @@ export function getTrackDetails(formattedRecords, timezone) {
 export function getFormattedAirtableFields(airtableData, timezone) {
   const groupedData = {};
 
-  const formattedRecords = formatAirtableMetaData(airtableData);
+  const formattedRecords = formatAirtableMetaData(airtableData, timezone);
   const trackDetails = getTrackDetails(formattedRecords, timezone);
 
   //group the trackDetails and all formattedRecords by date and track
