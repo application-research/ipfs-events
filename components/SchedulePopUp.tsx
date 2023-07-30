@@ -3,6 +3,7 @@ import { Button, CallToActionVariant } from './CallToActionVariant';
 import { CallToActionVariantEnum } from '@root/common/types';
 import { MarkdownToJSX } from './Markdown';
 import { useState } from 'react';
+import Link from './Link';
 
 //to do rename records to scheduled Talks
 export function SchedulePopUp({ trackTalks }) {
@@ -75,29 +76,39 @@ export function SchedulePopUp({ trackTalks }) {
             <div className={`${styles.tableRow} ${styles.tableHeader}`}>
               <h4 className={`${styles.col1} ${styles.headerTitle}`}>Time</h4>
               <h4 className={`${styles.col2} ${styles.headerTitle}`}>Title</h4>
-              <h4 className={`${styles.col1} ${styles.headerTitle}`}>Speaker</h4>
               <h4 className={`${styles.col3} ${styles.headerTitle}`}>Info</h4>
             </div>
 
             {sortedTalks &&
               sortedTalks.map((talk, index) => {
                 console.log('talk', talk);
-                const { desc, firstName, lastName, talkDuration, title } = talk;
+                const { desc, firstName, lastName, videoLink, talkDuration, title } = talk;
 
                 return (
                   <div className={styles.tableRow} key={index}>
                     <h4 className={styles.col1}> {talkDuration ? talkDuration : ''} </h4>
-                    <h4 className={styles.col2}>{title ? title : ''} </h4>
 
                     <h4 className={styles.col1}>{firstName ? `${firstName} ${lastName}  ` : ''}</h4>
-                    <div className={styles.col3}>{desc && <MarkdownToJSX>{desc}</MarkdownToJSX>}</div>
+                    <div className={styles.col3}>
+                      <div className={styles.flexCol}>
+                        <h4>{title ? title : ''}</h4>
+                        {desc && <MarkdownToJSX>{desc}</MarkdownToJSX>}
+                        {videoLink && (
+                          <Link href={videoLink} style="animated">
+                            <strong>Video Link</strong>
+                          </Link>
+                        )}
+                      </div>
+                    </div>
                   </div>
                 );
               })}
           </div>
         </div>
 
-        <Button type="button" target="_parent" onClick={handleCloseClick} text="Close" buttonColor={'var(--color-black200)'} textColor={'var(--color-white)'} />
+        <div style={{ borderTop: '1px solid var(--color-black)', paddingTop: '1rem' }}>
+          <Button type="button" target="_parent" onClick={handleCloseClick} text="Close" buttonColor={'var(--color-black200)'} textColor={'var(--color-white)'} />
+        </div>
       </div>
     </section>
   );
