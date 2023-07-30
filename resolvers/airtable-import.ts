@@ -81,13 +81,15 @@ const getValidDates = (trackDates) => {
 };
 
 //format the raw airtable data into camelcase data
-export function formatAirtableMetaData(airtableData, timezone) {
-  const formattedRecords = airtableData.records.map((record) => {
+export function formatAirtableMetaData(records, timezone) {
+  const formattedRecords = records.map((record) => {
+    const fields = record.fields;
+
     const formattedRecord: any = {};
 
     Object.entries(airtableFormattedFieldsMap).forEach(([airtableField, formattedField]) => {
-      if (record.fields.hasOwnProperty(airtableField)) {
-        formattedRecord[formattedField] = record.fields[airtableField];
+      if (fields.hasOwnProperty(airtableField)) {
+        formattedRecord[formattedField] = fields[airtableField];
       }
     });
     formattedRecord.id = record.id;
@@ -109,38 +111,33 @@ export function formatAirtableMetaData(airtableData, timezone) {
     return timeA - timeB;
   });
 
-  console.log('formattedRecords final', formattedRecords);
   return formattedRecords;
 }
 
 //get the details for each track group
-export function getTrackDetails(formattedRecords, timezone) {
+export function getTrackDetails(formattedRecords, trackSelected, timezone) {
   const trackDetails = {};
 
-  formattedRecords.map((record) => {
+  formattedRecords.forEach((record) => {
     const { id, trackAttendees, trackDesc, location, title, time, trackDate, trackStatus } = record;
 
     let confirmedTrackStatus = Array.isArray(trackStatus) ? trackStatus[0] === 'Confirmed' : trackStatus === 'Confirmed';
 
-    if (confirmedTrackStatus) {
+    if (confirmedTrackStatus && title === trackSelected) {
       if (trackDate) {
         const formattedDate = toDateISOString(trackDate, timezone);
 
-        if (!trackDetails.hasOwnProperty(formattedDate)) {
-          trackDetails[formattedDate] = [];
+        if (!trackDetails.hasOwnProperty(title)) {
+          trackDetails[title] = {
+            id,
+            trackDate: formattedDate,
+            title,
+            time,
+            trackDesc,
+            location,
+            trackAttendees,
+          };
         }
-
-        trackDetails[formattedDate].push({
-          id,
-          trackDate: formattedDate,
-          title,
-          time,
-          trackDesc,
-          location,
-          trackAttendees,
-        });
-
-        //To Do: sort the array based on 'time'
       }
     }
   });
@@ -149,13 +146,11 @@ export function getTrackDetails(formattedRecords, timezone) {
 }
 
 export function getFormattedAirtableFields(airtableData, timezone) {
+  const formattedRecords = formatAirtableMetaData(airtableData, timezone);
+
   const groupedData = {};
 
-  const formattedRecords = formatAirtableMetaData(airtableData, timezone);
-  const trackDetails = getTrackDetails(formattedRecords, timezone);
-
-  //group the trackDetails and all formattedRecords by date and track
-  //to do: leave out the talks that have not been accepted for now
+  // Iterate through each formatted record and group them by date and track
   formattedRecords.forEach((formattedRecord) => {
     const trackDates = getValidDates(formattedRecord.trackDate);
 
@@ -170,7 +165,8 @@ export function getFormattedAirtableFields(airtableData, timezone) {
           groupedData[formattedDate] = {};
         }
         if (!groupedData[formattedDate].hasOwnProperty(trackSelected)) {
-          groupedData[formattedDate][trackSelected] = { trackDetails: trackDetails[formattedDate], records: [] };
+          // Pass trackSelected to getTrackDetails to filter the details for that specific track
+          groupedData[formattedDate][trackSelected] = { trackDetails: getTrackDetails(formattedRecords, trackSelected, timezone), records: [] };
         }
 
         groupedData[formattedDate][trackSelected].records.push(formattedRecord);
@@ -181,26 +177,29 @@ export function getFormattedAirtableFields(airtableData, timezone) {
   return groupedData;
 }
 
-export async function getAirtableData(timezone) {
-  const url = `https://api.airtable.com/v0/${process.env.AIRTABLE_BASE_ID}/Responses`;
+export function getAirtableData(view, callback) {
+  const Airtable = require('airtable');
 
-  try {
-    const response = await fetch(url, {
-      headers: {
-        Authorization: `Bearer ${process.env.AIRTABLE_API}`,
+  const base = new Airtable({ apiKey: process.env.AIRTABLE_API }).base(process.env.AIRTABLE_BASE_ID);
+
+  const records = [];
+
+  base('Responses')
+    .select({ view })
+    .eachPage(
+      (pageRecords, fetchNextPage) => {
+        records.push(...pageRecords);
+        fetchNextPage();
       },
-    });
+      (err) => {
+        if (err) {
+          console.error('Error fetching Airtable data:', err);
+          callback(null);
+        } else {
+          callback(records);
+        }
+      }
+    );
 
-    if (!response.ok) {
-      throw new Error('Error fetching data from Airtable.');
-    }
-
-    const airtableData = await response.json();
-    const formattedData = getFormattedAirtableFields(airtableData, timezone);
-
-    return formattedData;
-  } catch (error) {
-    console.error('Error fetching Airtable data:', error);
-    return null;
-  }
+  return records;
 }

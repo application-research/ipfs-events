@@ -12,6 +12,7 @@
     "script": "ts-node -O '{\"module\":\"commonjs\"}' scripts/index.js"
   },
   "dependencies": {
+    "airtable": "^0.12.1",
     "dotenv": "^16.3.1",
     "knex": "^2.4.2",
     "markdown-to-jsx": "^7.2.1",

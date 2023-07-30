@@ -10,14 +10,17 @@ export const pluralize = (text, count) => {
 };
 
 export function toDateISOString(data, timezone) {
-  const timeZone = timezone ?? 'en-US';
+  const timeZone = timezone ?? 'UTC';
   const date = new Date(data);
 
-  return date.toLocaleDateString(timeZone, {
+  const options: any = {
+    timeZone,
     weekday: 'short',
     day: 'numeric',
     month: 'long',
-  });
+  };
+
+  return new Intl.DateTimeFormat('en-US', options).format(date);
 }
 
 export const elide = (string, length = 140, emptyState = '...') => {

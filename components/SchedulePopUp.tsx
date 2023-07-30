@@ -1,18 +1,21 @@
 import styles from '@components/SchedulePopUp.module.scss';
+
 import { Button, CallToActionVariant } from './CallToActionVariant';
 import { CallToActionVariantEnum } from '@root/common/types';
 import { MarkdownToJSX } from './Markdown';
 import { useState } from 'react';
 import Link from './Link';
 
-//to do rename records to scheduled Talks
 export function SchedulePopUp({ trackTalks }) {
   const [isOpen, setIsOpen] = useState(true);
 
   const talks = trackTalks && trackTalks.records;
   const trackDetails = trackTalks && trackTalks.trackDetails;
 
-  console.log('eventItem in popup', trackTalks);
+  //get the track name key from trackDetails object
+  const trackName = Object.keys(trackDetails)[0];
+  //access the track details values inside the track name
+  const { location, time, title, trackDate, trackAttendees, trackDesc } = trackDetails[trackName];
 
   // const closeCTA = {
   //   type: CallToActionVariantEnum.BLACK,
@@ -39,39 +42,45 @@ export function SchedulePopUp({ trackTalks }) {
     <section className={styles.eventStyle}>
       <div className={styles.popup}>
         <div style={{ display: 'grid', gap: '0.5rem', paddingBottom: '1rem' }}>
-          <h2 className={styles.eventName} style={{ paddingBottom: '0.5rem' }}>
-            name
-          </h2>
-
-          {/* {time && (
+          {title && (
+            <h2 className={styles.eventName} style={{ paddingBottom: '0.5rem' }}>
+              {title}
+            </h2>
+          )}
+          {trackDate && (
             <p className={styles.time}>
-              <strong>Time</strong>: {eventItem.time}
+              <strong>Date</strong>: {trackDate}
+            </p>
+          )}
+          {time && (
+            <p className={styles.time}>
+              <strong>Time</strong>: {time}
             </p>
           )}
           {location && (
             <p className={styles.location}>
-              <strong>Venue</strong>: {eventItem.location}
+              <strong>Venue</strong>: {location}
             </p>
           )}
-          {trackLead && (
+          {/* {trackLead && (
             <p className={styles.people}>
-              <strong>Track Lead</strong>: {eventItem.trackLead}
+              <strong>Track Lead</strong>: {trackLead}
             </p>
-          )}
-          {people && (
+          )} */}
+          {trackAttendees && (
             <p className={styles.people}>
-              <strong>Attendees</strong>: {eventItem.people}
+              <strong>Attendees</strong>: {trackAttendees}
             </p>
           )}
-          {description && <p className={styles.description}>{eventItem.description}</p>}
+          {trackDesc && <p className={styles.description}>{trackDesc}</p>}
 
-          {ctas && (
+          {/* {ctas && (
             <div className={styles.row} style={{ paddingTop: '0.5rem', display: 'flex', gap: '0.5rem' }}>
               {eventItem.ctas.map((ctaItem, index) => {
                 return <CallToActionVariant key={index} type={ctaItem.type} cta={ctaItem} />;
               })}
             </div>
-          )} */}
+          )}  */}
           <div className={styles.scheduleContainer}>
             <div className={`${styles.tableRow} ${styles.tableHeader}`}>
               <h4 className={`${styles.col1} ${styles.headerTitle}`}>Time</h4>
@@ -81,7 +90,6 @@ export function SchedulePopUp({ trackTalks }) {
 
             {sortedTalks &&
               sortedTalks.map((talk, index) => {
-                console.log('talk', talk);
                 const { desc, firstName, lastName, videoLink, talkDuration, title } = talk;
 
                 return (
