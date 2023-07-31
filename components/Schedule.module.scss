@@ -1,6 +1,3 @@
-.container {
-}
-
 .schedule {
   display: grid;
   width: 100%;
@@ -16,17 +13,11 @@
   padding: 0.5rem 1rem;
   justify-content: space-between;
   font-size: var(--font-size-small);
-  // border-left: 0.5px solid var(--color-white);
-  // border-right: 0.5px solid var(--color-white);
 }
 
 .eventStyle {
-<<<<<<< HEAD
-  border-left: 0.5px solid var(--color-text);
-=======
   background: var(--color-gray-transparent);
   border-left: 0.5px solid var(--color-gray-transparent);
->>>>>>> c47bcce (updated calendar styles)
   width: 100%;
   cursor: pointer;
   transition: 0.05s ease;

@@ -1,14 +1,9 @@
 import styles from '@components/SchedulePopUp.module.scss';
 
-import { Button, CallToActionVariant } from './CallToActionVariant';
-import { CallToActionVariantEnum } from '@root/common/types';
-import { MarkdownToJSX } from './Markdown';
-import { useState } from 'react';
 import Link from './Link';
+import { MarkdownToJSX } from './Markdown';
 
 export function SchedulePopUp({ trackTalks, isOpen, onClose }) {
-  // const [isOpen, setIsOpen] = useState(true);
-
   const talks = trackTalks && trackTalks.records;
   const trackDetails = trackTalks && trackTalks.trackDetails;
 
@@ -19,7 +14,6 @@ export function SchedulePopUp({ trackTalks, isOpen, onClose }) {
 
   const handleCloseClick = (e) => {
     e.preventDefault();
-    // setIsOpen(false);
     onClose();
   };
 

@@ -70,12 +70,20 @@ function formatTalkDuration(timestamp, timezone, duration) {
   return `${formattedStartDate} - ${formattedEndDate}`;
 }
 
+//get an array of valid Date objects from trackDates
 const getValidDates = (trackDates) => {
   if (Array.isArray(trackDates)) {
-    return trackDates.map((date) => new Date(date)).filter((date) => !isNaN(date.getTime()));
+    const validDates = trackDates.map((date) => new Date(date)).filter((date) => !isNaN(date.getTime()));
+    return validDates;
   } else if (typeof trackDates === 'string') {
-    const date = new Date(trackDates);
-    return isNaN(date as any) ? [] : [date];
+    //convert string to a date object
+    const date: any = new Date(trackDates);
+
+    if (!isNaN(date)) {
+      return [date];
+    } else {
+      return [];
+    }
   } else {
     return [];
   }
@@ -101,7 +109,7 @@ export function formatAirtableMetaData(records, timezone) {
       const talkDuration = formatTalkDuration(formattedRecord.startTime, timezone, formattedRecord.duration);
       formattedRecord.talkDuration = talkDuration;
     } else {
-      formattedRecord.talkDuration = 'Missing data for now';
+      formattedRecord.talkDuration = 'empty data';
     }
 
     return formattedRecord;
@@ -129,7 +137,7 @@ export function formatAirtableMetaData(records, timezone) {
   return acceptedRecords;
 }
 
-//get the details for each track group
+//get the track details for each track
 export function getTrackDetails(formattedRecords, trackSelected, timezone) {
   const trackDetails = {};
 
@@ -160,6 +168,7 @@ export function getTrackDetails(formattedRecords, trackSelected, timezone) {
   return trackDetails;
 }
 
+//To Do: make this more readable
 export function getFormattedAirtableFields(airtableData, timezone?: any): any {
   const formattedRecords = formatAirtableMetaData(airtableData, timezone);
 
@@ -182,7 +191,7 @@ export function getFormattedAirtableFields(airtableData, timezone?: any): any {
             groupedData[formattedDate] = {};
           }
           if (!groupedData[formattedDate].hasOwnProperty(trackSelected)) {
-            // Pass trackSelected to getTrackDetails to filter the details for that specific track
+            // Pass trackSelected to getTrackDetails to group trackDetails by the specific track
             groupedData[formattedDate][trackSelected] = { trackDetails: getTrackDetails(formattedRecords, trackSelected, timezone), records: [] };
           }
 

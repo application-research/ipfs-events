@@ -1,7 +1,6 @@
 import { BlockTypeEnum } from '@root/common/types';
 import { Collapsable } from './Collapsable';
 import Hero from './Hero';
-<<<<<<< HEAD
 import ImageText from './ImageText';
 import LogoGrid from './LogoGrid';
 import MediaBlock from './MediaBlock';
@@ -10,14 +9,6 @@ import Schedule from './Schedule';
 import Text from './Text';
 import TicketCard from './TicketCard';
 import ImageTextWithOverflow from './ImageTextWithOverflow';
-=======
-import ImageTextCard from './ImageTextCard';
-import LogoGrid from './LogoGrid';
-import MediaBlock from './MediaBlock';
-import Schedule from './Schedule';
-import Text from './Text';
-import TicketCard from './TicketCard';
->>>>>>> d26482f (updated airtable import)
 
 export function Block({ block }) {
   switch (block.type) {

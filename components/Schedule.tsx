@@ -17,7 +17,6 @@ export default function Schedule() {
   const [isOverlayOpen, setIsOverlayOpen] = useState(false);
   const [data, setData] = useState([]);
   const tableName = 'IPFS þing 2023 Track & Talk Submissions';
-  const timezone = 'UTC+2';
 
   const handleOverlayClick = () => {
     setIsOverlayOpen(false);
