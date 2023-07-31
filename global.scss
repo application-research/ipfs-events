@@ -129,12 +129,16 @@ body {
   --color-white: #ffffff;
   --color-white200: #f3fbff;
   --color-white300: #dfeaef;
+  --color-white-transparent: #f9f9f978;
+
   --color-black: #000000;
   --color-black200: #202020;
+
   --color-gray: #848383;
+
   --color-gray-transparent: #84838332;
-  --color-gray-transparent200: #8483835a;
-  --color-beige: #fffdf5;
+  --color-gray-transparent100: #9b9b9bbc;
+  --color-gray-transparent200: #9393938a;
   --color-text: #000000;
   --text-black: #000000;
   --text-white: #ffffff;
@@ -157,6 +161,7 @@ body {
 
   --z-index-small: 1;
   --z-index-medium: 2;
+  --z-index-large: 3;
 
   font-size: 16px;
   background: var(--color-background);
