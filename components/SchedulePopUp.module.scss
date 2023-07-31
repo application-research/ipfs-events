@@ -27,7 +27,7 @@
   row-gap: 0.5rem;
   padding-top: 1rem;
   padding-bottom: 1rem;
-  grid-template-columns: repeat(7, 1fr);
+  grid-template-columns: repeat(8, 1fr);
   gap: 1rem;
   padding-left: 0.5rem;
   padding-right: 0.5rem;
@@ -41,8 +41,8 @@
   .col2 {
     grid-column: span 2;
   }
-  .col3 {
-    grid-column: span 3;
+  .col4 {
+    grid-column: span 4;
   }
 
   .flexCol {
@@ -97,4 +97,18 @@
   justify-content: center;
   padding-top: 1rem;
   color: var(--color-gray);
+}
+
+.closeButton {
+  border: none;
+  border-radius: var(--border-radius-tiny);
+  background: var(--color-black200);
+  color: var(--color-white);
+  cursor: pointer;
+  font-family: Inter;
+  transition: background-color cubic-bezier(0.23, 1, 0.32, 1) ease;
+
+  &:hover {
+    background-color: var(--color-black200);
+  }
 }

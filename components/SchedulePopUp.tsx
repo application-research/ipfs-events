@@ -6,8 +6,8 @@ import { MarkdownToJSX } from './Markdown';
 import { useState } from 'react';
 import Link from './Link';
 
-export function SchedulePopUp({ trackTalks }) {
-  const [isOpen, setIsOpen] = useState(true);
+export function SchedulePopUp({ trackTalks, isOpen, onClose }) {
+  // const [isOpen, setIsOpen] = useState(true);
 
   const talks = trackTalks && trackTalks.records;
   const trackDetails = trackTalks && trackTalks.trackDetails;
@@ -15,17 +15,12 @@ export function SchedulePopUp({ trackTalks }) {
   //get the track name key from trackDetails object
   const trackName = Object.keys(trackDetails)[0];
   //access the track details values inside the track name
-  const { location, time, title, trackDate, trackAttendees, trackDesc } = trackDetails[trackName];
+  const { location, time, title, trackDate, trackAttendees, trackDesc } = trackDetails[trackName] ?? '';
 
-  // const closeCTA = {
-  //   type: CallToActionVariantEnum.BLACK,
-  //   buttonColor: 'white',
-  //   textColor: 'white',
-  //   text: 'Close',
-  // };
-
-  const handleCloseClick = () => {
-    setIsOpen(false);
+  const handleCloseClick = (e) => {
+    e.preventDefault();
+    // setIsOpen(false);
+    onClose();
   };
 
   if (!isOpen) {
@@ -46,8 +41,11 @@ export function SchedulePopUp({ trackTalks }) {
             {title ? title : ''}
           </h2>
 
-          <Button type="button" target="_parent" onClick={handleCloseClick} text="Close" buttonColor={'var(--color-black200)'} textColor={'var(--color-white)'} />
+          <button className={styles.closeButton} type="button" onClick={(e) => handleCloseClick(e)}>
+            Close
+          </button>
         </div>
+
         <div className={styles.scheduleContainer}>
           <section className={styles.eventDetails}>
             {trackDate && (
@@ -88,7 +86,7 @@ export function SchedulePopUp({ trackTalks }) {
           <div className={`${styles.tableRow} ${styles.tableHeader}`}>
             <h4 className={`${styles.col1} ${styles.headerTitle}`}>Time</h4>
             <h4 className={`${styles.col2} ${styles.headerTitle}`}>Track Lead</h4>
-            <h4 className={`${styles.col3} ${styles.headerTitle}`}>Info</h4>
+            <h4 className={`${styles.col4} ${styles.headerTitle}`}>Info</h4>
           </div>
 
           {sortedTalks &&
@@ -100,7 +98,7 @@ export function SchedulePopUp({ trackTalks }) {
                   <h4 className={styles.col1}> {talkDuration ? talkDuration : ''} </h4>
 
                   <p className={styles.col1}>{firstName ? `${firstName} ${lastName}  ` : ''}</p>
-                  <div className={styles.col3}>
+                  <div className={styles.col4}>
                     <div className={styles.flexCol}>
                       <h4>{title ? title : ''}</h4>
                       {desc && <MarkdownToJSX>{desc}</MarkdownToJSX>}

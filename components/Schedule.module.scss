@@ -1,4 +1,7 @@
-.calander {
+.container {
+}
+
+.schedule {
   display: grid;
   width: 100%;
   grid-template-columns: repeat(5, 1fr);
@@ -13,26 +16,33 @@
   padding: 0.5rem 1rem;
   justify-content: space-between;
   font-size: var(--font-size-small);
-  border-left: 0.5px solid var(--color-white);
-  border-right: 0.5px solid var(--color-white);
+  // border-left: 0.5px solid var(--color-white);
+  // border-right: 0.5px solid var(--color-white);
 }
 
 .eventStyle {
+<<<<<<< HEAD
   border-left: 0.5px solid var(--color-text);
+=======
+  background: var(--color-gray-transparent);
+  border-left: 0.5px solid var(--color-gray-transparent);
+>>>>>>> c47bcce (updated calendar styles)
   width: 100%;
   cursor: pointer;
   transition: 0.05s ease;
 }
 
 .eventBox {
+  background: var(--color-white);
   padding: 1rem;
   font-family: Inter;
   display: flex;
-  border-bottom: 0.5px solid var(--color-text);
+  border-bottom: 0.5px solid var(--color-gray-transparent200);
   flex-direction: column;
   gap: 1rem;
   font-size: var(--font-size-small);
   height: 180px;
+
   &:hover {
     background: var(--color-gray-transparent);
   }
@@ -85,9 +95,8 @@
   position: fixed;
   top: 0;
   left: 0;
-  width: 60%;
 
-  z-index: 99099;
+  z-index: var(--z-index-large);
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -107,7 +116,11 @@
   }
 
   @media (max-width: 768px) {
-    min-width: 95vw;
+    min-width: 85vw;
+  }
+
+  @media (max-width: 520px) {
+    width: 90%;
   }
 }
 
@@ -117,6 +130,6 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: var(--color-gray-transparent200);
+  background-color: var(--color-gray-transparent100);
   z-index: var(--z-index-small);
 }

@@ -55,16 +55,17 @@ export const airtableFormattedFieldsMap = {
   Location: 'location',
 };
 
+//To Do: update this to handle different timezone formats
 function formatTalkDuration(timestamp, timezone, duration) {
   const startDate = new Date(timestamp);
 
   // Convert to the specified timezone
-  const options = { timeZone: timezone, hour12: true, hour: 'numeric', minute: 'numeric' };
-  const formattedStartDate = startDate.toLocaleString('en-US', options);
+  const options: any = { timeZone: timezone, hour12: true, hour: 'numeric', minute: 'numeric' };
+  const formattedStartDate = startDate.toLocaleString(timezone, options);
 
   // Calculate the end time by adding the duration in minutes
   const endDate = new Date(startDate.getTime() + duration * 60 * 1000);
-  const formattedEndDate = endDate.toLocaleString('en-US', options);
+  const formattedEndDate = endDate.toLocaleString(timezone, options);
 
   return `${formattedStartDate} - ${formattedEndDate}`;
 }
@@ -92,6 +93,7 @@ export function formatAirtableMetaData(records, timezone) {
         formattedRecord[formattedField] = fields[airtableField];
       }
     });
+
     formattedRecord.id = record.id;
 
     // Calculate talk duration if startTime and duration are available, otherwise set to "Missing data"
@@ -105,13 +107,26 @@ export function formatAirtableMetaData(records, timezone) {
     return formattedRecord;
   });
 
+  // Sort the records by earliest to latest time
   formattedRecords.sort((a, b) => {
     const timeA = new Date(a.startTime).getTime();
     const timeB = new Date(b.startTime).getTime();
     return timeA - timeB;
   });
 
-  return formattedRecords;
+  // Filter out Talks or Tracks with status that is not confirmed or accepted
+  const acceptedRecords = formattedRecords.filter((record) => {
+    if (record.type === 'Talk') {
+      return record.status === 'Accepted by track lead';
+    } else if (record.type === 'Track') {
+      return record.trackStatus === 'Confirmed';
+    } else {
+      // Ignore records with unknown or missing type
+      return false;
+    }
+  });
+
+  return acceptedRecords;
 }
 
 //get the details for each track group
@@ -145,7 +160,7 @@ export function getTrackDetails(formattedRecords, trackSelected, timezone) {
   return trackDetails;
 }
 
-export function getFormattedAirtableFields(airtableData, timezone) {
+export function getFormattedAirtableFields(airtableData, timezone?: any): any {
   const formattedRecords = formatAirtableMetaData(airtableData, timezone);
 
   const groupedData = {};
@@ -161,15 +176,18 @@ export function getFormattedAirtableFields(airtableData, timezone) {
         const trackSelected =
           typeof rawTrackSelected === 'string' ? rawTrackSelected : Array.isArray(rawTrackSelected) && rawTrackSelected.length > 0 ? rawTrackSelected[0] : undefined;
 
-        if (!groupedData.hasOwnProperty(formattedDate)) {
-          groupedData[formattedDate] = {};
-        }
-        if (!groupedData[formattedDate].hasOwnProperty(trackSelected)) {
-          // Pass trackSelected to getTrackDetails to filter the details for that specific track
-          groupedData[formattedDate][trackSelected] = { trackDetails: getTrackDetails(formattedRecords, trackSelected, timezone), records: [] };
-        }
+        //some tracks return undefined so dont add them to final dictionary
+        if (trackSelected !== undefined) {
+          if (!groupedData.hasOwnProperty(formattedDate)) {
+            groupedData[formattedDate] = {};
+          }
+          if (!groupedData[formattedDate].hasOwnProperty(trackSelected)) {
+            // Pass trackSelected to getTrackDetails to filter the details for that specific track
+            groupedData[formattedDate][trackSelected] = { trackDetails: getTrackDetails(formattedRecords, trackSelected, timezone), records: [] };
+          }
 
-        groupedData[formattedDate][trackSelected].records.push(formattedRecord);
+          groupedData[formattedDate][trackSelected].records.push(formattedRecord);
+        }
       }
     });
   });
@@ -184,6 +202,7 @@ export function getAirtableData(view, callback) {
 
   const records = [];
 
+  //Reffer to Airtable Javascript library
   base('Responses')
     .select({ view })
     .eachPage(

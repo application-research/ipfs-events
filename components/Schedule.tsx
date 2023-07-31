@@ -16,6 +16,8 @@ export default function Schedule() {
   const [selectedEvent, setSelectedEvent] = useState(null);
   const [isOverlayOpen, setIsOverlayOpen] = useState(false);
   const [data, setData] = useState([]);
+  const tableName = 'IPFS þing 2023 Track & Talk Submissions';
+  const timezone = 'UTC+2';
 
   const handleOverlayClick = () => {
     setIsOverlayOpen(false);
@@ -25,29 +27,31 @@ export default function Schedule() {
     setIsOverlayOpen(true);
   };
 
-  const handleEventClick = (event) => {
-    setSelectedEvent(event);
+  const handleEventClick = (e) => {
+    setSelectedEvent(e);
     setIsOverlayOpen(true);
   };
 
+  const handlePopupClose = () => {
+    setSelectedEvent(null);
+    setIsOverlayOpen(false);
+  };
+
   useEffect(() => {
-    // Replace 'IPFS þing 2023 Track & Talk Submissions' with a specific view from airtable
-    getAirtableData('IPFS þing 2023 Track & Talk Submissions', (records) => {
+    // Replace tableName with a specific view from airtable
+    getAirtableData(tableName, (records) => {
       if (records) {
         setData(records);
       }
     });
   }, []);
 
-  const formattedData = getFormattedAirtableFields(data, 'Europe/Brussels');
-
-  console.log(formattedData, 'data final');
-  const calendarData = formattedData;
+  const calendarData: any = getFormattedAirtableFields(data);
 
   return (
-    <div style={{ display: 'grid', rowGap: '2rem' }}>
+    <div className={styles.container} style={{ display: 'grid', rowGap: '2rem' }}>
       <div>
-        <section className={styles.calander}>
+        <section className={styles.schedule}>
           {Object.keys(calendarData).map((date, index) => {
             return (
               <div className={styles.eventHeading} key={index}>
@@ -57,19 +61,20 @@ export default function Schedule() {
           })}
         </section>
 
-        <section className={styles.calander}>
-          {Object.keys(calendarData).map((dateKey, index) => {
+        <section className={styles.schedule}>
+          {Object.keys(calendarData)?.map((dateKey, index) => {
             const events = calendarData[dateKey];
             const eventKeys = Object.keys(events);
-            const isLastIndex = index === calendarData.length - 1;
+            const isLastIndex = index === Object.keys(calendarData).length - 1;
 
             return (
-              <div key={index} className={styles.eventStyle} style={{ borderRight: isLastIndex ? '0.5px solid var(--color-black)' : '' }}>
-                {eventKeys.map((eventItem, eventIndex) => {
+              <div key={index} className={styles.eventStyle} style={{ borderRight: isLastIndex ? '0.5px solid var(--color-gray-transparent)' : 'none' }}>
+                {eventKeys?.map((eventItem, eventIndex) => {
                   const events = calendarData[dateKey];
                   const eventDetails = events[eventItem];
 
                   const { title, time, trackDate, trackAttendees, location } = eventDetails.trackDetails[eventItem] ?? '';
+
                   return (
                     <div className={styles.eventBox} key={eventIndex} onClick={() => handleEventClick(eventDetails)}>
                       {title && <p className={styles.eventName}>{title}</p>}
@@ -87,7 +92,7 @@ export default function Schedule() {
           <section style={{ position: 'relative' }}>
             {isOverlayOpen && <div className={styles.overlay} onClick={handleOverlayClick} />}
             <div className={`${styles.absoluteContainer} ${isOverlayOpen ? styles.active : ''}`} onClick={handleContainerClick}>
-              <SchedulePopUp trackTalks={selectedEvent} />
+              <SchedulePopUp trackTalks={selectedEvent} isOpen={isOverlayOpen} onClose={handlePopupClose} />
             </div>
           </section>
         )}
