@@ -1,34 +1,55 @@
 .popup {
-  //   position: absolute;
-  padding: 1rem 2rem;
-  border: 2px solid var(--text-black);
+  padding: 2rem;
+  background: var(--color-white200);
+  border: 1px solid var(--text-black);
   border-radius: var(--border-radius-tiny);
   font-family: Inter;
+  height: 90vh;
+
+  @media (max-width: 768px) {
+    padding: 1rem;
+  }
 }
 
 .eventName {
   font-weight: var(--font-weight-bold);
   font-size: var(--font-size-medium);
+  display: flex;
+  align-items: center;
 }
 
 .description {
-  max-width: 80ch;
-}
-
-.tableHeader {
-  display: flex;
-  flex-direction: row;
-
-  border: 1px solid var(--text-black);
-  padding: 0.5rem;
-  background: var(--color-black);
+  max-width: 70ch;
 }
 
 .tableRow {
-  display: flex;
-  flex-direction: row;
-  border-bottom: 1px solid var(--text-black);
-  padding: 0.5rem;
+  display: grid;
+  row-gap: 0.5rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  grid-template-columns: repeat(8, 1fr);
+  gap: 1rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+
+  border-bottom: 1px solid var(--color-gray-transparent200);
+
+  .col1 {
+    grid-column: span 2;
+  }
+
+  .col2 {
+    grid-column: span 2;
+  }
+  .col4 {
+    grid-column: span 4;
+  }
+
+  .flexCol {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
 }
 
 .headerTitle {
@@ -36,16 +57,58 @@
   color: var(--color-white);
   font-size: var(--font-size-small);
 }
-.col25 {
-  width: 25%;
-}
-
-.col50 {
-  width: 50%;
-}
 
 .scheduleContainer {
-  max-height: 200px;
+  max-height: 70vh;
   overflow-y: scroll;
   scrollbar-width: thin;
+  border-bottom: 1px solid var(--color-black);
+}
+
+.tableHeader {
+  border: 1px solid var(--text-black);
+  padding: 0.5rem;
+  background: var(--color-black);
+  position: sticky;
+  top: 0;
+  z-index: var(--z-index-small);
+}
+
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-bottom: 1rem;
+}
+
+.eventDetails {
+  display: grid;
+  gap: 0.5rem;
+  padding-bottom: 2rem;
+
+  @media (max-width: 768px) {
+    padding-bottom: 1rem;
+  }
+}
+
+.tooltip {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 1rem;
+  color: var(--color-gray);
+}
+
+.closeButton {
+  border: none;
+  border-radius: var(--border-radius-tiny);
+  background: var(--color-black200);
+  color: var(--color-white);
+  cursor: pointer;
+  font-family: Inter;
+  transition: background-color cubic-bezier(0.23, 1, 0.32, 1) ease;
+
+  &:hover {
+    background-color: var(--color-black200);
+  }
 }

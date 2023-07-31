@@ -9,14 +9,18 @@ export const pluralize = (text, count) => {
   return count > 1 || count === 0 ? `${text}s` : text;
 };
 
-export function toDateISOString(data: string) {
+export function toDateISOString(data, timezone) {
+  const timeZone = timezone ?? 'UTC';
   const date = new Date(data);
-  return date.toLocaleDateString('en-US', {
-    weekday: 'long',
+
+  const options: any = {
+    timeZone,
+    weekday: 'short',
     day: 'numeric',
     month: 'long',
-    year: 'numeric',
-  });
+  };
+
+  return new Intl.DateTimeFormat('en-US', options).format(date);
 }
 
 export const elide = (string, length = 140, emptyState = '...') => {

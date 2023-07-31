@@ -6,8 +6,7 @@
 .sectionFooter {
   color: var(--white);
   font-size: var(--font-size_small);
-  position: relative;
-  z-index: 1;
+  z-index: var(--z-index-small);
   padding: 80px 0;
   line-height: leading(20, 14);
 
@@ -16,47 +15,6 @@
 
   @media (max-width: 768px) {
     font-size: var(--font-size-tiny-plus);
-  }
-
-  .coinSnake {
-    display: block;
-    position: absolute;
-
-    &.coinSnakeLeft {
-      width: 520px;
-      bottom: -96px;
-      left: -32px;
-      display: block;
-      position: absolute;
-      @media (max-width: 850px) {
-        display: none;
-      }
-
-      @media (max-width: 550px) {
-        display: block;
-        position: relative;
-        bottom: 64px;
-        left: -312px;
-        width: 536px;
-      }
-    }
-
-    &.coinSnakeRight {
-      width: 39.75rem;
-      top: -2rem;
-      right: -32rem;
-
-      @media (max-width: 850px) {
-        display: none;
-      }
-
-      @media (max-width: 550px) {
-        display: block;
-        width: 39.75rem;
-        top: -2rem;
-        right: -32rem;
-      }
-    }
   }
 }
 
