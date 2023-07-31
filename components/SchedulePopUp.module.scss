@@ -1,18 +1,25 @@
 .popup {
-  padding: 1rem 2rem;
-  border: 2px solid var(--text-black);
+  padding: 2rem;
+  background: var(--color-white200);
+  border: 1px solid var(--text-black);
   border-radius: var(--border-radius-tiny);
   font-family: Inter;
   height: 90vh;
+
+  @media (max-width: 768px) {
+    padding: 1rem;
+  }
 }
 
 .eventName {
   font-weight: var(--font-weight-bold);
   font-size: var(--font-size-medium);
+  display: flex;
+  align-items: center;
 }
 
 .description {
-  max-width: 80ch;
+  max-width: 70ch;
 }
 
 .tableRow {
@@ -22,7 +29,10 @@
   padding-bottom: 1rem;
   grid-template-columns: repeat(7, 1fr);
   gap: 1rem;
-  border-bottom: 1px solid black;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+
+  border-bottom: 1px solid var(--color-gray-transparent200);
 
   .col1 {
     grid-column: span 2;
@@ -49,13 +59,42 @@
 }
 
 .scheduleContainer {
-  max-height: 72vh;
+  max-height: 70vh;
   overflow-y: scroll;
   scrollbar-width: thin;
+  border-bottom: 1px solid var(--color-black);
 }
 
 .tableHeader {
   border: 1px solid var(--text-black);
   padding: 0.5rem;
   background: var(--color-black);
+  position: sticky;
+  top: 0;
+  z-index: var(--z-index-small);
+}
+
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-bottom: 1rem;
+}
+
+.eventDetails {
+  display: grid;
+  gap: 0.5rem;
+  padding-bottom: 2rem;
+
+  @media (max-width: 768px) {
+    padding-bottom: 1rem;
+  }
+}
+
+.tooltip {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 1rem;
+  color: var(--color-gray);
 }

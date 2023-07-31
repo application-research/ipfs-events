@@ -84,12 +84,12 @@ export default function Schedule() {
           })}
         </section>
         {selectedEvent && (
-          <>
+          <section style={{ position: 'relative' }}>
             {isOverlayOpen && <div className={styles.overlay} onClick={handleOverlayClick} />}
             <div className={`${styles.absoluteContainer} ${isOverlayOpen ? styles.active : ''}`} onClick={handleContainerClick}>
               <SchedulePopUp trackTalks={selectedEvent} />
             </div>
-          </>
+          </section>
         )}
       </div>
     </div>
