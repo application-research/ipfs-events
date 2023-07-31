@@ -12,11 +12,14 @@ if (!IS_PRODUCTION) {
   require('dotenv').config();
 }
 
-export default function Schedule() {
+export default function Schedule({ scheduleData }) {
+  if (scheduleData?.airtable?.tableName == null) return null;
+
   const [selectedEvent, setSelectedEvent] = useState(null);
   const [isOverlayOpen, setIsOverlayOpen] = useState(false);
   const [data, setData] = useState([]);
-  const tableName = 'IPFS þing 2023 Track & Talk Submissions';
+
+  const tableName = scheduleData?.airtable?.tableName;
 
   const handleOverlayClick = () => {
     setIsOverlayOpen(false);

@@ -1,6 +1,12 @@
 import { BlockTypeEnum, CallToActionVariantEnum, Ratio, TypeName } from '@root/common/types';
 import { MARKDOWN_CONTENT } from './markdown-content';
 
+export const EVENT_PAGE_SCHEDULE_IPFS_THING_2023 = {
+  airtable: {
+    tableName: 'IPFS þing 2023 Track & Talk Submissions',
+  },
+};
+
 export const EVENT_PAGE_HERO_CONTENT = {
   id: 'hero',
   type: BlockTypeEnum.HERO,
@@ -352,6 +358,7 @@ export const EVENT_PAGE_CONTENT = [
     block: [
       {
         type: BlockTypeEnum.SCHEDULE,
+        scheduleData: EVENT_PAGE_SCHEDULE_IPFS_THING_2023,
       },
     ],
   },
