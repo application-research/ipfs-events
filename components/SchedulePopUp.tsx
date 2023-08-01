@@ -3,7 +3,7 @@ import styles from '@components/SchedulePopUp.module.scss';
 import Link from './Link';
 import { MarkdownToJSX } from './Markdown';
 
-export function SchedulePopUp({ trackTalks, isOpen, onClose }) {
+export function SchedulePopUp({ trackTalks, isOpen, onClose, style }) {
   const talks = trackTalks && trackTalks.records;
   const trackDetails = trackTalks && trackTalks.trackDetails;
 
@@ -29,7 +29,7 @@ export function SchedulePopUp({ trackTalks, isOpen, onClose }) {
 
   return (
     <section className={styles.eventStyle}>
-      <div className={styles.popup}>
+      <div className={styles.popup} style={{ backgroundColor: style.backgroundColor }}>
         <div className={styles.header}>
           <h2 className={styles.eventName} style={{ paddingBottom: '0.5rem' }}>
             {title ? title : ''}
@@ -76,8 +76,8 @@ export function SchedulePopUp({ trackTalks, isOpen, onClose }) {
             </div>
           )}  */}
           </section>
-          <h4 style={{ paddingBottom: '1rem' }}>Schedule</h4>
-          <div className={`${styles.tableRow} ${styles.tableHeader}`}>
+          <h4 style={{ paddingBottom: '1rem', borderBottom: '0.5px solid var(--color-black)' }}>Schedule</h4>
+          <div className={` ${styles.tableHeader}`}>
             <h4 className={`${styles.col1} ${styles.headerTitle}`}>Time</h4>
             <h4 className={`${styles.col2} ${styles.headerTitle}`}>Track Lead</h4>
             <h4 className={`${styles.col4} ${styles.headerTitle}`}>Info</h4>

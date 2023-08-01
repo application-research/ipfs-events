@@ -1,0 +1,40 @@
+.sectionScrollTooltip {
+  display: flex;
+  gap: 1rem;
+  position: sticky;
+
+  z-index: var(--z-index-medium);
+  padding-top: 0.5rem;
+
+  font-weight: var(--fontWeight_Regular);
+  color: var(--gray-blue);
+  font-size: var(--fontSize_Tiny);
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  padding-bottom: 2rem;
+  top: 0;
+
+  @media (max-width: 768px) {
+    top: 1rem;
+    padding: 0.2rem 0.2rem 3.5rem;
+  }
+}
+
+.arrowButton {
+  border: none;
+  padding: 0.5rem;
+  border-radius: var(--border-radius-medium);
+  transition: cubic-bezier(0.9, -0.28, 0.735, 0.045);
+
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  &:hover {
+    background: var(--gray400);
+  }
+}
+
+.arrowButton.visible {
+  opacity: 1;
+}
