@@ -4,7 +4,7 @@
   justify-content: space-between;
   gap: 2rem;
 
-  @media (max-width: 1050px) {
+  @media (max-width: 1032px) {
     flex-direction: column;
     justify-content: flex-start;
   }
@@ -24,7 +24,7 @@
 .text {
   width: 30%;
 
-  @media (max-width: 1050px) {
+  @media (max-width: 1032px) {
     width: 100%;
   }
 }
@@ -73,7 +73,7 @@
     margin: 0 auto;
     height: 4rem;
 
-    @media (max-width: 1050px) {
+    @media (max-width: 1032px) {
       height: 3rem;
     }
     @media (max-width: 768px) {

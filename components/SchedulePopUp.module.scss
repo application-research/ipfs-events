@@ -1,6 +1,5 @@
 .popup {
   padding: 2rem;
-  background: var(--color-white200);
   border: 1px solid var(--text-black);
   border-radius: var(--border-radius-tiny);
   font-family: Inter;
@@ -24,32 +23,34 @@
 
 .tableRow {
   display: grid;
-  row-gap: 0.5rem;
-  padding-top: 1rem;
-  padding-bottom: 1rem;
   grid-template-columns: repeat(8, 1fr);
+  row-gap: 0.5rem;
+  padding: 1rem 0.5rem;
   gap: 1rem;
-  padding-left: 0.5rem;
-  padding-right: 0.5rem;
-
   border-bottom: 1px solid var(--color-gray-transparent200);
 
-  .col1 {
-    grid-column: span 2;
-  }
-
-  .col2 {
-    grid-column: span 2;
-  }
-  .col4 {
-    grid-column: span 4;
-  }
-
-  .flexCol {
+  @media (max-width: 768px) {
     display: flex;
     flex-direction: column;
-    gap: 0.5rem;
   }
+}
+
+.col1 {
+  grid-column: span 2;
+}
+
+.col2 {
+  grid-column: span 2;
+}
+
+.col4 {
+  grid-column: span 4;
+}
+
+.flexCol {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
 }
 
 .headerTitle {
@@ -66,12 +67,20 @@
 }
 
 .tableHeader {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
   border: 1px solid var(--text-black);
   padding: 0.5rem;
   background: var(--color-black);
   position: sticky;
-  top: 0;
+  top: -1px;
   z-index: var(--z-index-small);
+
+  @media (max-width: 768px) {
+    display: flex;
+    flex-direction: row;
+    gap: 3rem;
+  }
 }
 
 .header {
@@ -110,5 +119,9 @@
 
   &:hover {
     background-color: var(--color-black200);
+  }
+
+  @media (max-width: 768px) {
+    max-height: 2rem;
   }
 }

@@ -1,9 +1,10 @@
 'use client';
 import styles from '@components/NavbarLogoMiddle.module.scss';
 
-import ArrowSVG from './svgs/ArrowSVG';
+import ArrowSVG from './svgs/ArrowBoldSVG';
 import GutterContainer from './GutterContainer';
 import Link from './Link';
+import ArrowSVGStyleTwo from './svgs/ArrowBoldSVG';
 
 export default function NavbarLogoMiddle({ navContent }) {
   const { navItems } = navContent;
@@ -31,7 +32,7 @@ export default function NavbarLogoMiddle({ navContent }) {
                           <p>{item.title}</p>
                         </Link>
 
-                        <ArrowSVG className={styles.arrow} />
+                        <ArrowSVGStyleTwo className={styles.arrow} />
                       </div>
                       <Dropdown dropdown={item?.dropdown} />
                     </section>

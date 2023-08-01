@@ -2,6 +2,11 @@ import { BlockTypeEnum, CallToActionVariantEnum, Ratio, TypeName } from '@root/c
 import { MARKDOWN_CONTENT } from './markdown-content';
 
 export const EVENT_PAGE_SCHEDULE_IPFS_THING_2023 = {
+  style: {
+    backgroundColor: 'var(--color-beige)',
+    hoverColor: 'var(--gray-transparent)',
+    emptyContainerColor: 'var(--gray-transparent)',
+  },
   airtable: {
     tableName: 'IPFS þing 2023 Track & Talk Submissions',
   },

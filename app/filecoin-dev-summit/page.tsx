@@ -1,6 +1,5 @@
 import '@root/global.scss';
 
-import DefaultLayout from '@components/DefaultLayout';
 import FooterTiny from '@root/components/FooterTiny';
 import Hero from '@root/components/Hero';
 import ResponsiveNavbar from '@root/components/ResponsiveNavbar';
