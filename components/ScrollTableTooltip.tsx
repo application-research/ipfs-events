@@ -1,6 +1,6 @@
 import styles from '@components/ScrollTableTooltip.module.scss';
 
-import RightArrowSVG from './svgs/RightArrowSVG';
+import ArrowSVG from './svgs/ArrowBoldSVG';
 
 export default function ScrollTableTooltip({ backgroundColor, showArrowLeft, showArrowRight, tableRef }) {
   function scrollTableToRight() {
@@ -44,7 +44,7 @@ export default function ScrollTableTooltip({ backgroundColor, showArrowLeft, sho
           }
         }}
       >
-        <RightArrowSVG color={showArrowLeft ? 'var(--textBlack)' : 'var(--gray500)'} style={{ height: '0.5rem', transform: 'scaleX(-1)' }} />
+        <ArrowSVG color={showArrowLeft ? 'var(--textBlack)' : 'var(--gray500)'} style={{ height: '0.5rem', transform: 'scaleX(-1)' }} />
       </button>
       Scroll to see the full table{' '}
       <button
@@ -62,7 +62,7 @@ export default function ScrollTableTooltip({ backgroundColor, showArrowLeft, sho
           }
         }}
       >
-        <RightArrowSVG color={showArrowRight ? 'var(--textBlack)' : 'var(--gray500)'} style={{ height: '0.5rem' }} />
+        <ArrowSVG color={showArrowRight ? 'var(--textBlack)' : 'var(--gray500)'} style={{ height: '0.5rem' }} />
       </button>
     </>
   );
