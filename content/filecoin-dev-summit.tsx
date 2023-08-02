@@ -5,10 +5,10 @@ export const FILECOIN_DEV_SUMMIT_2023_HERO_CONTENT = {
   id: 'hero',
   type: BlockTypeEnum.HERO_NO_BACKGROUND,
   title: 'Filecoin Dev Summit',
-  // date: 'September 11-15, 2023 ',
+  // date: 'September 12 - 14th, 2023 ',
   // location: 'Upcoming Locations - Asia and Iceland',
   description:
-    'Filecoin Dev Summit is a gathering of developers, builders, and engaged community members who want to contribute to the core protocol and network evolution of Filecoin (see IPFS Thing, but bigger!).',
+    'Filecoin Dev Summit is a gathering of developers, builders, and engaged community members who want to contribute to the core protocol and network evolution of Filecoin (think IPFS Thing, but bigger!).',
 };
 
 export const FILECOIN_DEV_SUMMIT_ICELAND_CALENDAR = {
@@ -66,8 +66,8 @@ export const FILECOIN_DEV_SUMMIT_2023_PAGE_CONTENT = [
           {
             id: 'media',
             type: BlockTypeEnum.MEDIA,
-            heading: 'FIL Dev Summit - Singapore',
-            subtitle: 'September 11-15, 2023',
+            heading: 'Filecoin Dev Summit - Singapore',
+            subtitle: 'September 12 - 14th, 2023',
             desc: 'Singapore',
             smallDesc: 'Organized by Filecoin Foundation',
             media: {
@@ -81,14 +81,14 @@ export const FILECOIN_DEV_SUMMIT_2023_PAGE_CONTENT = [
             id: 'media',
             type: TypeName.MEDIA_IMAGE,
 
-            heading: 'FIL Dev Summit - Iceland',
-            subtitle: 'September 25-29, 2023',
+            heading: 'Filecoin Dev Summit - Iceland',
+            subtitle: 'September 25 - 27th, 2023',
             desc: 'Reykjavík, Iceland',
             smallDesc: 'Organized by Miwa',
             media: {
               type: TypeName.MEDIA_IMAGE,
               src: 'https://images.pexels.com/photos/3617500/pexels-photo-3617500.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-              ariaLabel: 'FIL Dev Summit',
+              ariaLabel: 'Filecoin Dev Summit',
               link: '#filecoin-dev-iceland',
             },
           },
@@ -106,12 +106,12 @@ export const FILECOIN_DEV_SUMMIT_2023_PAGE_CONTENT = [
         id: 'media',
         type: BlockTypeEnum.IMAGE_TEXT_WITH_OVERFLOW,
         heading: 'Singapore',
-        subtitle: 'September 11-15, 2023',
-        description: 'September 11-15, 2023',
+        subtitle: 'September 12 - 14th, 2023',
+        description: 'September 12 - 14th, 2023',
         smallDesc: 'Organized by Filecoin Foundation',
         image: {
           src: 'https://images.pexels.com/photos/3152126/pexels-photo-3152126.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-          ariaLabel: 'FIL Dev Summit',
+          ariaLabel: 'Filecoin Dev Summit',
           link: '#filecoin-dev-singapore',
         },
       },
@@ -147,8 +147,8 @@ export const FILECOIN_DEV_SUMMIT_2023_PAGE_CONTENT = [
         id: 'media',
         type: BlockTypeEnum.IMAGE_TEXT_WITH_OVERFLOW,
         heading: 'Iceland',
-        subtitle: 'September 25-29, 2023',
-        description: 'September 25-29, 2023',
+        subtitle: 'September 25 - 27th, 2023',
+        description: 'September 25 - 27th, 2023',
         smallDesc: 'Organized by Miwa',
         image: {
           alt: 'Maintain progress & momentum',
@@ -184,14 +184,15 @@ export const FILECOIN_DEV_SUMMIT_2023_PAGE_CONTENT = [
       {
         id: 'media',
         type: BlockTypeEnum.COLLAPSABLE,
-        title: 'How can I lead a track?',
-        collapsedText: 'Please fill out the provided forms for Filecoin Dev Summit Asia and Filecoin Dev Summit Iceland to lead a track or a talk.',
+        title: 'What is Filecoin Dev Summit?',
+        collapsedText:
+          'Filecoin Dev Summit is a gathering of developers, builders, and engaged community members who want to contribute to the core protocol and network evolution of Filecoin (think IPFS Thing, but bigger!). This would include FVM smart contract builders, core protocol devs, implementation engineering teams, tool builders, large storage clients, and even token holders engaged in network governance. Our goal would be to build alignment around the current roadmap and trajectory of protocol improvements, improve our dev tooling and capabilities, grow inter- and intra-team connections, and accelerate upcoming launches in Q4/Q1.',
         backgroundColor: 'black',
       },
       {
         id: 'media',
         type: BlockTypeEnum.COLLAPSABLE,
-        title: 'Who is it for?',
+        title: 'Who should attend Filecoin Dev Summit?',
         collapsedText:
           'FVM smart contract builders, core protocol devs, implementation engineering teams, tool builders, storage providers, large storage clients, token holders engaged in network governance, and more! People who care about how and why the protocol is evolving - Folks who are writing FIPS, implementing tools, or writing smart contracts. People who have product requirements. IPLD-yfiying the data as an example.',
         backgroundColor: 'black',
@@ -199,9 +200,24 @@ export const FILECOIN_DEV_SUMMIT_2023_PAGE_CONTENT = [
       {
         id: 'media',
         type: BlockTypeEnum.COLLAPSABLE,
+        title: 'Why are there 2 separate events & which should I attend?',
+        collapsedText:
+          'We are hosting two back-to-back Filecoin protocol events in different locations to reduce overhead costs and travel time. You do not need to attend both events; choose the one that makes the most sense for you. Attendees will be able to livestream both events and continue hallway track conversations through GitHub or Slack.',
+        backgroundColor: 'black',
+      },
+      {
+        id: 'media',
+        type: BlockTypeEnum.COLLAPSABLE,
         title: 'What is the goal of Filecoin Dev Summit?',
         collapsedText:
-          'What do we want to come out of Fil Thing? We want to bring the Fil dev community together, have important convos, show how the network is evolving, build collaboration connections between teams, collectively set a roadmap for critical protocol evolutions and extensions for next year, setting us up to review projects that we will launch really big at lab week and beyond.',
+          'What do we want to come out of Filecoin Dev Summit? We want to bring the Filecoin developer community together, have important convos, show how the network is evolving, build collaboration connections between teams, collectively set a roadmap for critical protocol evolutions and extensions for next year, setting us up to review projects that we will launch really big at lab week and beyond.',
+        backgroundColor: 'black',
+      },
+      {
+        id: 'media',
+        type: BlockTypeEnum.COLLAPSABLE,
+        title: 'How can I lead a track?',
+        collapsedText: 'Please fill out the provided forms for Filecoin Dev Summit Asia and Filecoin Dev Summit Iceland to lead a track or a talk.',
         backgroundColor: 'black',
       },
     ],
