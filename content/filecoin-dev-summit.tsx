@@ -127,8 +127,8 @@ export const FILECOIN_DEV_SUMMIT_2023_PAGE_CONTENT = [
       buttonColor: 'black',
       textColor: 'white',
       target: '_blank',
-      text: 'Tickets for Asia',
-      link: 'https://lu.ma/tdbdprzd',
+      text: 'Apply to Attend',
+      link: 'https://airtable.com/appEjnh5rpWMsjocb/shran7li4slfQSB04',
     },
     block: [
       {
@@ -166,8 +166,8 @@ export const FILECOIN_DEV_SUMMIT_2023_PAGE_CONTENT = [
       buttonColor: 'black',
       textColor: 'white',
       target: '_blank',
-      text: 'Tickets for Iceland',
-      link: 'https://lu.ma/20menvfi',
+      text: 'Apply to Attend',
+      link: 'https://airtable.com/appEjnh5rpWMsjocb/shran7li4slfQSB04',
     },
     block: [
       {
@@ -202,7 +202,7 @@ export const FILECOIN_DEV_SUMMIT_2023_PAGE_CONTENT = [
         type: BlockTypeEnum.COLLAPSABLE,
         title: 'Why are there 2 separate events & which should I attend?',
         collapsedText:
-          'We are hosting two back-to-back Filecoin protocol events in different locations to reduce overhead costs and travel time. You do not need to attend both events; choose the one that makes the most sense for you. Attendees will be able to livestream both events and continue hallway track conversations through GitHub or Slack.',
+          'We are hosting two back-to-back Filecoin protocol events in different locations to reduce overhead costs and travel time. You do not need to attend both events; choose the one that makes the most sense for you. The events, tracks, and talks will be recorded and uploaded to watch on our youtube throughout the event.',
         backgroundColor: 'black',
       },
       {
@@ -251,17 +251,10 @@ export const FILECOIN_DEV_SUMMIT_NAVIGATION_CONTENT = {
   },
   cta: [
     {
-      text: 'Tickets for Asia',
+      text: 'Apply to Attend',
       backgroundColor: 'black',
       textColor: 'white',
-      href: 'https://lu.ma/tdbdprzd',
-      target: '_blank',
-    },
-    {
-      text: 'Tickets for Iceland',
-      backgroundColor: 'black',
-      textColor: 'white',
-      href: 'https://lu.ma/20menvfi',
+      href: 'https://airtable.com/appEjnh5rpWMsjocb/shran7li4slfQSB04',
       target: '_blank',
     },
   ],
