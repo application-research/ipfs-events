@@ -17,6 +17,24 @@ export const FILECOIN_DEV_SUMMIT_ICELAND_CALENDAR = {
     title: 'Submit a Talk/Track',
     link: 'https://airtable.com/appEjnh5rpWMsjocb/shr6SmQjqdgn5Pc90',
   },
+  ctas: [
+    {
+      type: CallToActionVariantEnum.BUTTON,
+      textColor: 'white',
+      target: '_blank',
+      text: 'Apply to Attend',
+      buttonColor: 'linear-gradient(to right,#39C1CB, #006FEC);',
+      link: 'https://airtable.com/appEjnh5rpWMsjocb/shran7li4slfQSB04',
+    },
+    {
+      type: CallToActionVariantEnum.BUTTON,
+      textColor: 'white',
+      target: '_blank',
+      text: 'Submit a Talk/Track',
+      buttonColor: 'linear-gradient(to right,#39C1CB, #006FEC);',
+      link: 'https://airtable.com/appEjnh5rpWMsjocb/shrn57n37JyLSOTlV',
+    },
+  ],
 };
 
 export const FILECOIN_DEV_SUMMIT_ASIA_CALENDAR = {
@@ -25,10 +43,28 @@ export const FILECOIN_DEV_SUMMIT_ASIA_CALENDAR = {
     title: 'Submit a Talk/Track',
     link: 'https://airtable.com/appEjnh5rpWMsjocb/shrw3Ha0yTusDmcOg',
   },
+  ctas: [
+    {
+      type: CallToActionVariantEnum.BUTTON,
+      textColor: 'white',
+      target: '_blank',
+      text: 'Apply to Attend',
+      buttonColor: 'linear-gradient(to right,#39C1CB, #006FEC);',
+      link: 'https://airtable.com/appEjnh5rpWMsjocb/shran7li4slfQSB04',
+    },
+    {
+      type: CallToActionVariantEnum.BUTTON,
+      textColor: 'white',
+      target: '_blank',
+      text: 'Submit a Talk/Track',
+      buttonColor: 'linear-gradient(to right,#39C1CB, #006FEC);',
+      link: 'https://airtable.com/appEjnh5rpWMsjocb/shrn57n37JyLSOTlV',
+    },
+  ],
 };
 
 export const FILECOIN_DEV_SUMMIT_PAGE_STYLE_CONTENT = {
-  backgroundColor: 'var(--color-beige)',
+  backgroundColor: 'var(--color-white)',
   textColor: 'var(--color-black)',
 };
 
@@ -68,7 +104,7 @@ export const FILECOIN_DEV_SUMMIT_2023_PAGE_CONTENT = [
     id: 'about',
     direction: 'row',
     title: 'Upcoming Events',
-    backgroundColor: 'var(--color-beige)',
+    backgroundColor: 'var(--color-white)',
     block: [
       {
         id: 'media',
@@ -77,18 +113,10 @@ export const FILECOIN_DEV_SUMMIT_2023_PAGE_CONTENT = [
           {
             id: 'media',
             type: BlockTypeEnum.MEDIA,
-<<<<<<< HEAD
-            heading: 'FIL Dev Summit - Singapore',
-            subtitle: 'September 12-14th, 2023',
-=======
+
             heading: 'Filecoin Dev Summit - Singapore',
             subtitle: 'September 12 - 14th, 2023',
-<<<<<<< HEAD
->>>>>>> 1e4d745 (updated copy)
-            desc: 'Singapore',
-=======
 
->>>>>>> 25a88a3 (updated homepage)
             smallDesc: 'Organized by Filecoin Foundation',
             media: {
               type: TypeName.MEDIA_IMAGE,
@@ -129,7 +157,7 @@ export const FILECOIN_DEV_SUMMIT_2023_PAGE_CONTENT = [
     id: 'filecoin-dev-singapore',
     direction: 'column',
     noGutter: 'no',
-    backgroundColor: 'var(--color-beige)',
+    backgroundColor: 'var(--color-white)',
     block: [
       {
         id: 'media',
@@ -150,9 +178,10 @@ export const FILECOIN_DEV_SUMMIT_2023_PAGE_CONTENT = [
     ],
   },
   {
-    backgroundColor: 'var(--color-beige)',
+    backgroundColor: 'var(--color-white)',
     id: 'about',
     direction: 'column',
+<<<<<<< HEAD
     title: 'FIL Dev Summit - Singapore Schedule',
     cta: {
       type: CallToActionVariantEnum.BUTTON,
@@ -162,6 +191,9 @@ export const FILECOIN_DEV_SUMMIT_2023_PAGE_CONTENT = [
       buttonColor: 'linear-gradient(to right,#123693, #00D389);',
       link: 'https://airtable.com/appEjnh5rpWMsjocb/shran7li4slfQSB04',
     },
+=======
+    title: 'Filecoin Dev Summit - Singapore Schedule',
+>>>>>>> eeb976a (updated logo and buttons)
     block: [
       {
         type: BlockTypeEnum.SCHEDULE,
@@ -171,7 +203,7 @@ export const FILECOIN_DEV_SUMMIT_2023_PAGE_CONTENT = [
   },
   {
     id: 'filecoin-dev-iceland',
-    backgroundColor: 'var(--color-beige)',
+    backgroundColor: 'var(--color-white)',
     direction: 'column',
     noGutter: 'no',
     block: [
@@ -192,6 +224,7 @@ export const FILECOIN_DEV_SUMMIT_2023_PAGE_CONTENT = [
   {
     id: 'about',
     direction: 'column',
+<<<<<<< HEAD
     title: 'FIL Dev Summit - Iceland Schedule',
     cta: {
       type: CallToActionVariantEnum.BUTTON,
@@ -201,6 +234,10 @@ export const FILECOIN_DEV_SUMMIT_2023_PAGE_CONTENT = [
       buttonColor: 'linear-gradient(to right,#123693, #00D389);',
       link: 'https://airtable.com/appEjnh5rpWMsjocb/shran7li4slfQSB04',
     },
+=======
+    title: 'Filecoin Dev Summit - Iceland Schedule',
+
+>>>>>>> eeb976a (updated logo and buttons)
     block: [
       {
         type: BlockTypeEnum.SCHEDULE,
@@ -275,16 +312,16 @@ export const FOOTER_FILECOIN_DEV_SUMMIT_CONTENT = {
 
 export const FILECOIN_DEV_SUMMIT_NAVIGATION_CONTENT = {
   type: NavigationTypeEnum.WITH_BORDER,
-  backgroundColor: 'var(--color-beige)',
+  backgroundColor: 'var(--color-white)',
   logo: {
-    src: 'https://static-00.iconduck.com/assets.00/filecoin-iou-cryptocurrency-icon-512x512-gw5j9yhd.png',
-    altText: 'ipfs-logo',
+    src: '/media/filecoindevsummit-logo.png',
+    altText: 'Filecoin Dev Summit Logo',
     link: '/',
   },
   cta: [
     {
       text: 'Apply to Attend',
-      buttonColor: 'linear-gradient(to right,#123693, #00D389);',
+      buttonColor: 'linear-gradient(to right,#39C1CB, #006FEC);',
       textColor: 'white',
       href: 'https://airtable.com/appEjnh5rpWMsjocb/shran7li4slfQSB04',
       target: '_blank',

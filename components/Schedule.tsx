@@ -3,8 +3,8 @@ import styles from '@components/Schedule.module.scss';
 
 import { getAirtableData, getFormattedAirtableFields } from '@root/resolvers/airtable-import';
 import { SchedulePopUp } from './SchedulePopUp';
-import { useEffect, useRef, useState } from 'react';
-import ScrollTableTooltip from './ScrollTableTooltip';
+import ArrowCurvedSVG from './svgs/ArrowCurvedSVG';
+import { Button, CallToActionVariant } from './CallToActionVariant';
 
 const NODE = process.env.NODE_ENV || 'development';
 const IS_PRODUCTION = NODE === 'production';
@@ -136,8 +136,16 @@ export default function Schedule({ scheduleData }) {
             </div>
           </>
         )}
-      </div>  
-      <div>Event Schedule Coming Soon</div>
+      </div>  */}
+      <div>Full Event Schedule Coming Soon</div>
+
+      <div className={styles.row}>
+        {calendarData?.ctas?.map((cta, index) => {
+          return <CallToActionVariant cta={cta} type={cta.type} key={index} />;
+        })}
+      </div>
+
+      {/* 
       {calendarContent?.formLink && (
         <Link style="text" href={calendarContent?.formLink.link} target="_blank">
           <section className={styles.bigCTA}>
@@ -147,7 +155,7 @@ export default function Schedule({ scheduleData }) {
             </div>
           </section>
         </Link>
-      )}
+      )} */}
     </div>
   );
 }

@@ -167,3 +167,14 @@
     padding: 0.5rem;
   }
 }
+
+.row {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+}
