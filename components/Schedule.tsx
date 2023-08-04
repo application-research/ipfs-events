@@ -7,6 +7,7 @@ import { useEffect, useState } from 'react';
 import Link from './Link';
 import { SchedulePopUp } from './SchedulePopUp';
 import ArrowCurvedSVG from './svgs/ArrowCurvedSVG';
+import { Button, CallToActionVariant } from './CallToActionVariant';
 
 const NODE = process.env.NODE_ENV || 'development';
 const IS_PRODUCTION = NODE === 'production';
@@ -93,7 +94,15 @@ export default function Schedule({ calendarData }) {
           </>
         )}
       </div>  */}
-      <div>Event Schedule Coming Soon</div>
+      <div>Full Event Schedule Coming Soon</div>
+
+      <div className={styles.row}>
+        {calendarData?.ctas?.map((cta, index) => {
+          return <CallToActionVariant cta={cta} type={cta.type} key={index} />;
+        })}
+      </div>
+
+      {/* 
       {calendarContent?.formLink && (
         <Link style="text" href={calendarContent?.formLink.link} target="_blank">
           <section className={styles.bigCTA}>
@@ -103,7 +112,7 @@ export default function Schedule({ calendarData }) {
             </div>
           </section>
         </Link>
-      )}
+      )} */}
     </div>
   );
 }
