@@ -236,6 +236,9 @@ export const FILECOIN_DEV_SUMMIT_2023_PAGE_CONTENT = [
                 text: 'Capacity onboarding improvements, snap deals aggregation, deal markets/storage service platforms',
               },
               {
+                text: 'layer 0 vs 1 vs 2 protocol, moving functionality into FVM, IPC regions for Filecoin, upgrade path, Better PoReps, upgrading the filecoin economy',
+              },
+              {
                 text: 'FIL+, FIP process, Network upgrade scope/schedule, Ambassadors, Funding programs, 2024 events',
               },
             ],
@@ -294,26 +297,6 @@ export const FILECOIN_DEV_SUMMIT_2023_PAGE_CONTENT = [
             header: 'Track',
             tableItems: [
               {
-                text: 'FVM application & tooling',
-              },
-              {
-                text: 'SP tooling & stack',
-              },
-              {
-                text: 'Data onboarding protocol / tools / market Part 1',
-              },
-              {
-                text: 'Protocol  Development & Evolution: Part 1',
-              },
-              {
-                text: 'Governance & Community Part 1',
-              },
-            ],
-          },
-          {
-            header: 'Discussion Points',
-            tableItems: [
-              {
                 text: 'Data onboarding protocol / tools / market Part 2',
               },
               {
@@ -336,6 +319,35 @@ export const FILECOIN_DEV_SUMMIT_2023_PAGE_CONTENT = [
               },
               {
                 text: 'Filecoin Retrievals & Data Availability',
+              },
+            ],
+          },
+          {
+            header: 'Discussion Points',
+            tableItems: [
+              {
+                text: 'Capacity onboarding improvements, snap deals aggregation, deal markets/storage service platforms, Client advisory board feedback',
+              },
+              {
+                text: 'layer 0 vs 1 vs 2 protocol, moving functionality into FVM, IPC regions for Filecoin, upgrade path, Better PoReps, upgrading the filecoin economy',
+              },
+              {
+                text: 'FIL+, FIP process, Network upgrade scope/schedule, Ambassadors, Funding programs, 2024 events',
+              },
+              {
+                text: 'Identify gaps within the network users, and plan collaborative contributions to reduce friction and improve utilization of the network. (connect to data onboarding track)',
+              },
+              {
+                text: 'Snapshotting, API services, test networks, monitoring',
+              },
+              {
+                text: 'RaaS, new runtimes, moving modules into FVM',
+              },
+              {
+                text: 'IPC L2s, CoD, Meridian, Tableland, etc',
+              },
+              {
+                text: 'Content Address, Retrieval Market, Retrieval Incentives, etc',
               },
             ],
           },
