@@ -99,7 +99,7 @@ export default function Schedule({ calendarData }) {
           <section className={styles.bigCTA}>
             <div className={styles.bigCTARow}>
               <h4 className={styles.bigCTATitle}>{calendarContent?.formLink.title}</h4>
-              <ArrowCurvedSVG />
+              <ArrowCurvedSVG width={40} />
             </div>
           </section>
         </Link>
