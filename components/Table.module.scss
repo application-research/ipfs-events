@@ -14,6 +14,7 @@
   .header {
     font-weight: var(--font-weight-medium);
     padding: 1rem;
+    border-bottom: 1px solid var(--color-black);
   }
 
   .tableItem {
@@ -26,7 +27,30 @@
     justify-content: flex-start;
   }
 
+  .tableItem:last-child {
+    border-bottom: none;
+  }
+
   @media (max-width: 768px) {
-    display: none;
+    .tableItem {
+      height: 8rem;
+    }
+  }
+
+  @media (max-width: 667px) {
+    .header {
+      height: 5rem;
+      align-items: center;
+      display: flex;
+    }
+    .tableItem {
+      height: 12rem;
+    }
+  }
+
+  @media (max-width: 360px) {
+    .tableItem {
+      height: 20rem;
+    }
   }
 }

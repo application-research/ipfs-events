@@ -30,22 +30,3 @@ export default function Table({ title, table }) {
     </div>
   );
 }
-
-{
-  /* {header.map((column, index) => (
-                <div key={index} className={styles.column}>
-                  {column}
-                </div>
-              ))} */
-}
-{
-  /* {content.map((row, rowIndex) => (
-                <div key={rowIndex} className={styles.row}>
-                  {columns.map((column, columnIndex) => (
-                    <div key={columnIndex} className="cell">
-                      {row[column]}
-                    </div>
-                  ))}
-                </div>
-              ))} */
-}
