@@ -4,7 +4,7 @@ import { Block } from './Block';
 import { CallToActionVariant } from './CallToActionVariant';
 import GutterContainer from './GutterContainer';
 
-export default function BlockBuilder({ block, cta, smallDesc, title, subtitle, id, border, description, direction }) {
+export default function BlockBuilder({ block, cta, title, subtitle, id, border, description, direction }) {
   return (
     <div id={id} style={{ display: 'grid', rowGap: '2rem', background: block?.backgroundColor ?? 'none' }}>
       {!noGutter ? (
