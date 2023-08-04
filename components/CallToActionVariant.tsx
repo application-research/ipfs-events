@@ -12,8 +12,8 @@ export function CallToActionVariant({ type, cta }) {
         <Button
           {...cta}
           textColor={cta?.textColor ?? 'var(--color-black200)'}
-          buttonColor={cta?.buttonColor ? cta.buttonColor : 'var(--color-black)'}
-          borderColor={cta?.borderColor ? cta.borderColor : 'none'}
+          buttonColor={cta?.buttonColor ? cta.buttonColor : 'none'}
+          borderColor={cta?.borderColor ? cta.borderColor : '1px solid var(--color-black)'}
         />
       );
     case CallToActionVariantEnum.TEXT:
@@ -31,23 +31,21 @@ export function Button({ buttonColor, borderColor, className, variant, target, t
   if (variant === CallToActionVariantEnum.BORDER) {
     buttonVariant = styles.borderButton;
   }
-
+  console.log(buttonColor, borderColor, text, 'button');
   return (
-    <>
-      <Link className={`${styles.blackLink} ${className}`} href={(href || link) ?? ''} target={target ? target : '_blank'}>
-        <button
-          style={{
-            background: buttonColor ? buttonColor : 'var(--color-black)',
-            color: textColor ? textColor : 'var(--color-white)',
-            border: borderColor ?? `1px solid ${borderColor ? borderColor : ''}`,
-          }}
-          aria-label={text}
-          className={buttonVariant}
-        >
-          {text}
-        </button>
-      </Link>
-    </>
+    <Link className={`${styles.blackLink} ${className}`} href={(href || link) ?? ''} target={target ? target : '_blank'}>
+      <button
+        style={{
+          background: buttonColor ? buttonColor : 'var(--color-black)',
+          color: textColor ? textColor : 'var(--color-white)',
+          border: `1px solid ${borderColor}`,
+        }}
+        aria-label={text}
+        className={buttonVariant}
+      >
+        {text}
+      </button>
+    </Link>
   );
 }
 

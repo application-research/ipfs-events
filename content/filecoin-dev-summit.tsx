@@ -41,7 +41,8 @@ export const FILECOIN_DEV_SUMMIT_2023_PAGE_CONTENT = [
     cta: {
       type: CallToActionVariantEnum.BORDER,
       target: '_blank',
-      buttonColor: 'black',
+      buttonColor: null,
+      borderColor: 'black',
       textColor: 'black',
       text: 'Sponsor Filecoin Dev Summit',
       link: 'https://airtable.com/appEjnh5rpWMsjocb/shrn57n37JyLSOTlV',
