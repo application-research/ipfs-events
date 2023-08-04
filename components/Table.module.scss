@@ -1,0 +1,32 @@
+.container {
+  display: grid;
+  row-gap: 1rem;
+}
+
+.table {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-between;
+  border: 1px solid var(--color-black);
+  border-radius: var(--border-radius-small);
+
+  .header {
+    font-weight: var(--font-weight-medium);
+    padding: 1rem;
+  }
+
+  .tableItem {
+    width: 100%;
+    padding: 0.5rem 1rem;
+    border-bottom: 1px solid var(--color-black);
+    height: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  @media (max-width: 768px) {
+    display: none;
+  }
+}

@@ -9,6 +9,7 @@ export enum BlockTypeEnum {
   MEDIA_GRID = 'media-grid',
   MEDIA_GRID_SCROLLABLE = 'media-grid-scrollable',
   SCHEDULE = 'schedule',
+  TABLE = 'table',
   TEXT = 'text',
   TICKET_CARD = 'ticket-card',
   UPCOMING_EVENTS = 'upcoming-events',

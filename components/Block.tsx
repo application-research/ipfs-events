@@ -11,7 +11,8 @@ import MediaGridScrollable from './MediaGridScrollable';
 import Schedule from './Schedule';
 import Text from './Text';
 import TicketCard from './TicketCard';
-import GutterContainer from './GutterContainer';
+import ImageTextWithOverflow from './ImageTextWithOverflow';
+import Table from './Table';
 
 export function Block({ block }) {
   switch (block.type) {
@@ -33,6 +34,8 @@ export function Block({ block }) {
       return <MediaBlock {...block} />;
     case (block.type = BlockTypeEnum.SCHEDULE):
       return <Schedule {...block} />;
+    case (block.type = BlockTypeEnum.TABLE):
+      return <Table {...block} />;
     case (block.type = BlockTypeEnum.TICKET_CARD):
       return <TicketCard {...block} />;
     case (block.type = BlockTypeEnum.TEXT):
