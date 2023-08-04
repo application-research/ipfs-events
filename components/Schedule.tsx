@@ -128,6 +128,25 @@ export default function Schedule({ scheduleData }) {
             <SchedulePopUp style={scheduleStyle} trackTalks={selectedEvent} isOpen={isOverlayOpen} onClose={handlePopupClose} />
           </div>
         </section>
+        {selectedEvent && (
+          <>
+            {isOverlayOpen && <div className={styles.overlay} onClick={handleOverlayClick} />}
+            <div className={`${styles.absoluteContainer} ${isOverlayOpen ? styles.active : ''}`} onClick={handleContainerClick}>
+              <SchedulePopUp eventData={eventData} eventItem={selectedEvent} setSelectedEvent={setSelectedEvent} />
+            </div>
+          </>
+        )}
+      </div>  
+      <div>Event Schedule Coming Soon</div>
+      {calendarContent?.formLink && (
+        <Link style="text" href={calendarContent?.formLink.link} target="_blank">
+          <section className={styles.bigCTA}>
+            <div className={styles.bigCTARow}>
+              <h4 className={styles.bigCTATitle}>{calendarContent?.formLink.title}</h4>
+              <ArrowCurvedSVG width={40} />
+            </div>
+          </section>
+        </Link>
       )}
     </div>
   );

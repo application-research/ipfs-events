@@ -125,7 +125,7 @@
 .bigCTA {
   cursor: pointer;
   border: 1px solid var(--color-black);
-  padding: 1.5rem;
+  padding: 0.5rem;
   border-radius: var(--border-radius-tiny);
   align-items: center;
   display: flex;
@@ -147,7 +147,7 @@
   .bigCTATitle {
     color: var(--color-black);
     font-family: 'Inter';
-    font-size: var(--font-size-extra-large);
+    font-size: var(--font-size-regular);
     font-weight: var(--font-weight-light);
 
     @media (max-width: 768px) {
