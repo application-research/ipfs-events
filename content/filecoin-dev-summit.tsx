@@ -163,7 +163,6 @@ export const FILECOIN_DEV_SUMMIT_2023_PAGE_CONTENT = [
         id: 'media',
         type: BlockTypeEnum.IMAGE_TEXT_WITH_OVERFLOW,
         heading: 'Singapore',
-        subtitle: 'Singapore Track focus: SP tooling (venus), Client/Data, Governance',
         description: 'September 12 - 14th, 2023',
 <<<<<<< HEAD
        // smallDesc: 'Organized by Filecoin Foundation',
@@ -257,7 +256,6 @@ export const FILECOIN_DEV_SUMMIT_2023_PAGE_CONTENT = [
         id: 'media',
         type: BlockTypeEnum.IMAGE_TEXT_WITH_OVERFLOW,
         heading: 'Iceland',
-        subtitle: 'Iceland Track focus: Saturn, IPC (layer 2s), Governance',
         description: 'September 25 - 27th, 2023',
         smallDesc: 'Organized by Miwa',
         image: {
