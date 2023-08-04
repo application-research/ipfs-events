@@ -31,7 +31,6 @@ export function Button({ buttonColor, borderColor, className, variant, target, t
   if (variant === CallToActionVariantEnum.BORDER) {
     buttonVariant = styles.borderButton;
   }
-  console.log(buttonColor, borderColor, text, 'buttonnn');
   return (
     <Link className={`${styles.blackLink} ${className}`} href={(href || link) ?? ''} target={target ? target : '_blank'}>
       <button

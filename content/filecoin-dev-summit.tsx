@@ -31,7 +31,7 @@ export const FILECOIN_DEV_SUMMIT_ICELAND_CALENDAR = {
       target: '_blank',
       text: 'Submit a Talk/Track',
       buttonColor: 'linear-gradient(to right,#39C1CB, #006FEC);',
-      link: 'https://airtable.com/appEjnh5rpWMsjocb/shrn57n37JyLSOTlV',
+      link: 'https://airtable.com/appEjnh5rpWMsjocb/shrw3Ha0yTusDmcOg',
     },
   ],
 };
@@ -56,7 +56,7 @@ export const FILECOIN_DEV_SUMMIT_ASIA_CALENDAR = {
       target: '_blank',
       text: 'Submit a Talk/Track',
       buttonColor: 'linear-gradient(to right,#39C1CB, #006FEC);',
-      link: 'https://airtable.com/appEjnh5rpWMsjocb/shrn57n37JyLSOTlV',
+      link: 'https://airtable.com/appEjnh5rpWMsjocb/shrw3Ha0yTusDmcOg',
     },
   ],
 };
