@@ -5,8 +5,8 @@ import Link from './Link';
 
 export function CallToActionVariant({ type, cta }) {
   switch (type) {
-    case CallToActionVariantEnum.BLACK:
-      return <Button {...cta} buttonColor={cta?.backgroundColor ?? 'var(--color-black200)'} textColor={cta?.textColor ?? 'var(--color-white)'} />;
+    case CallToActionVariantEnum.BUTTON:
+      return <Button {...cta} buttonColor={cta?.buttonColor ?? 'var(--color-black200)'} textColor={cta?.textColor ?? 'var(--color-white)'} />;
     case CallToActionVariantEnum.BORDER:
       return (
         <Button

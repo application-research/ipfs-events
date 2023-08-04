@@ -1,7 +1,6 @@
 import styles from '@components/MediaGrid.module.scss';
 
 import MediaBlock from './MediaBlock';
-import Link from './Link';
 
 const getGridStyle = (media) => {
   const length = media.length;
@@ -33,13 +32,15 @@ export default function MediaGrid({ media, id }) {
                 <MediaBlock {...mediaItem} className={styles.image} />
               </figure>
               <div style={{ display: 'grid', rowGap: '0.2rem' }}>
-                <div className={styles.headingContainer}>
+                <div className={styles.headingContainer} style={{ paddingTop: '1rem', paddingBottom: '0.5rem' }}>
                   {heading && <h4 className={styles.heading}>{mediaItem.heading}</h4>}
+                </div>
+                {title && <p className={styles.title}>{mediaItem.title}</p>}
+
+                <div className={styles.headingContainer}>
+                  {subtitle && <p className={styles.subtitle}>{mediaItem.subtitle}</p>}
                   {smallDesc && <p className={styles.smallDesc}>{mediaItem.smallDesc}</p>}
                 </div>
-
-                {title && <p className={styles.title}>{mediaItem.title}</p>}
-                {subtitle && <p className={styles.subtitle}>{mediaItem.subtitle}</p>}
                 {desc && <p className={styles.smallDesc}>{mediaItem.desc}</p>}
               </div>
             </a>

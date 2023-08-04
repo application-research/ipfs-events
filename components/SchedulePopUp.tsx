@@ -5,7 +5,7 @@ import { MarkdownToJSX } from './Markdown';
 
 export function SchedulePopUp({ eventItem, eventData, setSelectedEvent }) {
   const closeCTA = {
-    type: CallToActionVariantEnum.BLACK,
+    type: CallToActionVariantEnum.BUTTON,
     buttonColor: 'white',
     textColor: 'white',
     text: 'Close',

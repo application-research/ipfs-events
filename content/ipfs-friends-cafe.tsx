@@ -9,7 +9,7 @@ export const IPFS_FRIENDS_CAFE_PAGE_HERO_CONTENT = {
   description: 'Events that foster knowledge exchange, community growth, collaboration, innovation, and the continued advancement of IPFS as groundbreaking technology',
   cta: [
     {
-      type: CallToActionVariantEnum.BLACK,
+      type: CallToActionVariantEnum.BUTTON,
       backgroundColor: '#589396',
       textColor: 'white',
       target: '_blank',

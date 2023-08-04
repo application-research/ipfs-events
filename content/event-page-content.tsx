@@ -15,13 +15,13 @@ export const EVENT_PAGE_HERO_CONTENT = {
   },
   cta: [
     {
-      type: CallToActionVariantEnum.BLACK,
+      type: CallToActionVariantEnum.BUTTON,
       target: '_blank',
       text: 'Submit a Talk or a Track ',
       link: '#tickets',
     },
     {
-      type: CallToActionVariantEnum.BLACK,
+      type: CallToActionVariantEnum.BUTTON,
       target: '_blank',
       text: 'Get Tickets Now!',
       link: '#tickets',
