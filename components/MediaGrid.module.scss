@@ -31,7 +31,6 @@
 }
 
 .headingContainer {
-  padding-top: 1rem;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -61,6 +60,7 @@
 
 .subtitle {
   font-family: 'Inter';
+  font-size: 14px;
 }
 
 .desc {
@@ -68,8 +68,13 @@
 }
 
 .smallDesc {
+  align-items: flex-end;
+  display: flex;
+  justify-content: flex-end;
+  text-align: right;
   font-family: 'Inter';
-  color: var(--color-gray);
+  color: var(--color-black);
+  font-size: 14px;
 }
 
 .link {

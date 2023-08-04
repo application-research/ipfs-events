@@ -13,8 +13,7 @@
   -ms-filter: grayscale(100%);
   filter: grayscale(100%);
   filter: rgb(136, 110, 110);
-
-  max-height: 35rem;
+  max-height: 100vh;
 
   @media (max-width: 768px) {
     max-height: 15rem;
@@ -27,7 +26,6 @@
   align-items: baseline;
   font-family: Inter;
   font-weight: var(--font-weight-regular);
-  padding-bottom: 1rem;
 }
 
 .heading {

@@ -3,7 +3,7 @@ import styles from '@components/BlockBuilder.module.scss';
 import { Block } from './Block';
 import { CallToActionVariant } from './CallToActionVariant';
 
-export default function BlockBuilder({ block, cta, title, subtitle, id, border, description, direction }) {
+export default function BlockBuilder({ block, cta, smallDesc, title, subtitle, id, border, description, direction }) {
   return (
     <div id={id} style={{ display: 'grid', rowGap: '2rem', background: block.backgroundColor }}>
       {(title || description || subtitle) && (
