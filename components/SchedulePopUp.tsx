@@ -3,18 +3,12 @@ import styles from '@components/SchedulePopUp.module.scss';
 import Link from './Link';
 import { MarkdownToJSX } from './Markdown';
 
-export function SchedulePopUp({ trackTalks, isOpen, onClose, style }) {
-  const talks = trackTalks && trackTalks.records;
-  const trackDetails = trackTalks && trackTalks.trackDetails;
-
-  //get the track name key from trackDetails object
-  const trackName = Object.keys(trackDetails)[0];
-  //access the track details values inside the track name
-  const { location, time, title, trackDate, trackAttendees, trackDesc } = trackDetails[trackName] ?? '';
-
-  const handleCloseClick = (e) => {
-    e.preventDefault();
-    onClose();
+export function SchedulePopUp({ eventItem, eventData, setSelectedEvent }) {
+  const closeCTA = {
+    type: CallToActionVariantEnum.BUTTON,
+    buttonColor: 'white',
+    textColor: 'white',
+    text: 'Close',
   };
 
   if (!isOpen) {

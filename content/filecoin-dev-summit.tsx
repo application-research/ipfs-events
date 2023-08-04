@@ -74,8 +74,12 @@ export const FILECOIN_DEV_SUMMIT_2023_PAGE_CONTENT = [
 =======
             heading: 'Filecoin Dev Summit - Singapore',
             subtitle: 'September 12 - 14th, 2023',
+<<<<<<< HEAD
 >>>>>>> 1e4d745 (updated copy)
             desc: 'Singapore',
+=======
+
+>>>>>>> 25a88a3 (updated homepage)
             smallDesc: 'Organized by Filecoin Foundation',
             media: {
               type: TypeName.MEDIA_IMAGE,
@@ -94,8 +98,12 @@ export const FILECOIN_DEV_SUMMIT_2023_PAGE_CONTENT = [
 =======
             heading: 'Filecoin Dev Summit - Iceland',
             subtitle: 'September 25 - 27th, 2023',
+<<<<<<< HEAD
 >>>>>>> 1e4d745 (updated copy)
             desc: 'Reykjavík, Iceland',
+=======
+
+>>>>>>> 25a88a3 (updated homepage)
             smallDesc: 'Organized by Miwa',
             media: {
               type: TypeName.MEDIA_IMAGE,
@@ -118,9 +126,12 @@ export const FILECOIN_DEV_SUMMIT_2023_PAGE_CONTENT = [
         id: 'media',
         type: BlockTypeEnum.IMAGE_TEXT_WITH_OVERFLOW,
         heading: 'Singapore',
-        subtitle: 'September 12 - 14th, 2023',
+        subtitle: 'Singapore Track focus: SP tooling (venus), Client/Data, Governance',
         description: 'September 12 - 14th, 2023',
+<<<<<<< HEAD
        // smallDesc: 'Organized by Filecoin Foundation',
+=======
+>>>>>>> 25a88a3 (updated homepage)
         image: {
           src: 'https://images.pexels.com/photos/3152126/pexels-photo-3152126.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
           ariaLabel: 'Filecoin Dev Summit',
@@ -135,11 +146,11 @@ export const FILECOIN_DEV_SUMMIT_2023_PAGE_CONTENT = [
     direction: 'column',
     title: 'FIL Dev Summit - Singapore Schedule',
     cta: {
-      type: CallToActionVariantEnum.BLACK,
-      buttonColor: 'black',
+      type: CallToActionVariantEnum.BUTTON,
       textColor: 'white',
       target: '_blank',
       text: 'Apply to Attend',
+      buttonColor: 'linear-gradient(to right,#123693, #00D389);',
       link: 'https://airtable.com/appEjnh5rpWMsjocb/shran7li4slfQSB04',
     },
     block: [
@@ -159,7 +170,7 @@ export const FILECOIN_DEV_SUMMIT_2023_PAGE_CONTENT = [
         id: 'media',
         type: BlockTypeEnum.IMAGE_TEXT_WITH_OVERFLOW,
         heading: 'Iceland',
-        subtitle: 'September 25 - 27th, 2023',
+        subtitle: 'Iceland Track focus: Saturn, IPC (layer 2s), Governance',
         description: 'September 25 - 27th, 2023',
         smallDesc: 'Organized by Miwa',
         image: {
@@ -174,11 +185,11 @@ export const FILECOIN_DEV_SUMMIT_2023_PAGE_CONTENT = [
     direction: 'column',
     title: 'FIL Dev Summit - Iceland Schedule',
     cta: {
-      type: CallToActionVariantEnum.BLACK,
-      buttonColor: 'black',
+      type: CallToActionVariantEnum.BUTTON,
       textColor: 'white',
       target: '_blank',
       text: 'Apply to Attend',
+      buttonColor: 'linear-gradient(to right,#123693, #00D389);',
       link: 'https://airtable.com/appEjnh5rpWMsjocb/shran7li4slfQSB04',
     },
     block: [
@@ -264,7 +275,7 @@ export const FILECOIN_DEV_SUMMIT_NAVIGATION_CONTENT = {
   cta: [
     {
       text: 'Apply to Attend',
-      backgroundColor: 'black',
+      buttonColor: 'linear-gradient(to right,#123693, #00D389);',
       textColor: 'white',
       href: 'https://airtable.com/appEjnh5rpWMsjocb/shran7li4slfQSB04',
       target: '_blank',

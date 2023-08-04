@@ -68,6 +68,7 @@ export interface Video {
 
 export enum CallToActionVariantEnum {
   BLACK = 'dark-blue',
+  BUTTON = 'button',
   LINK = 'link',
   LINK_ICON = 'link-icon',
   TEXT = 'text',

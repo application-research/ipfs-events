@@ -15,29 +15,29 @@ export const EVENT_PAGE_SCHEDULE_IPFS_THING_2023 = {
 export const EVENT_PAGE_HERO_CONTENT = {
   id: 'hero',
   type: BlockTypeEnum.HERO,
-  // label: 'Upcoming Event',
-  // title: 'IPFS þing',
-  // date: 'April 15th - 19th, 2023',
-  // location: 'Brussels, Belgium',
-  // description:
-  //   'IPFS þing is a week-long gathering for the IPFS implementors community. Everything from talks, workshops, discussion circles, hacking time, and more — all focused on advancing IPFS implementations.',
-  // background: {
-  //   src: '/media/background.jpeg',
-  // },
-  // cta: [
-  //   {
-  //     type: CallToActionVariantEnum.BLACK,
-  //     target: '_blank',
-  //     text: 'Submit a Talk or a Track ',
-  //     link: '#tickets',
-  //   },
-  //   {
-  //     type: CallToActionVariantEnum.BLACK,
-  //     target: '_blank',
-  //     text: 'Get Tickets Now!',
-  //     link: '#tickets',
-  //   },
-  // ],
+  label: 'Upcoming Event',
+  title: 'IPFS þing',
+  date: 'April 15th - 19th, 2023',
+  location: 'Brussels, Belgium',
+  description:
+    'IPFS þing is a week-long gathering for the IPFS implementors community. Everything from talks, workshops, discussion circles, hacking time, and more — all focused on advancing IPFS implementations.',
+  background: {
+    src: '/media/background.jpeg',
+  },
+  cta: [
+    {
+      type: CallToActionVariantEnum.BUTTON,
+      target: '_blank',
+      text: 'Submit a Talk or a Track ',
+      link: '#tickets',
+    },
+    {
+      type: CallToActionVariantEnum.BUTTON,
+      target: '_blank',
+      text: 'Get Tickets Now!',
+      link: '#tickets',
+    },
+  ],
 };
 
 export const EVENT_PAGE_CONTENT = [

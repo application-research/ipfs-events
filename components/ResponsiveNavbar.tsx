@@ -29,7 +29,7 @@ export default function ResponsiveNavbar({ navContent }) {
               })}
             </ul>
             {navContent?.cta?.map((ctaItem, index) => {
-              return <CallToActionVariant type={CallToActionVariantEnum.BLACK} cta={ctaItem} key={index} />;
+              return <CallToActionVariant type={CallToActionVariantEnum.BUTTON} cta={ctaItem} key={index} />;
             })}
           </div>
         </div>
