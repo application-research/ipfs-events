@@ -6,7 +6,7 @@ import Link from './Link';
 export function CallToActionVariant({ type, cta }) {
   switch (type) {
     case CallToActionVariantEnum.BUTTON:
-      return <Button {...cta} buttonColor={cta?.buttonColor ?? 'var(--color-black200)'} textColor={cta?.textColor ?? 'var(--color-white)'} />;
+      return <Button {...cta} />;
     case CallToActionVariantEnum.BORDER:
       return (
         <Button
@@ -31,7 +31,7 @@ export function Button({ buttonColor, borderColor, className, variant, target, t
   if (variant === CallToActionVariantEnum.BORDER) {
     buttonVariant = styles.borderButton;
   }
-  console.log(buttonColor, borderColor, text, 'button');
+  console.log(buttonColor, borderColor, text, 'buttonnn');
   return (
     <Link className={`${styles.blackLink} ${className}`} href={(href || link) ?? ''} target={target ? target : '_blank'}>
       <button
