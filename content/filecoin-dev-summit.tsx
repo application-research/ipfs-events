@@ -117,7 +117,7 @@ export const FILECOIN_DEV_SUMMIT_2023_PAGE_CONTENT = [
             smallDesc: 'Organized by Filecoin Foundation',
             media: {
               type: TypeName.MEDIA_IMAGE,
-              src: 'https://images.pexels.com/photos/3152126/pexels-photo-3152126.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+              src: '/media/singapore-full.jpg',
               ariaLabel: 'FIL Dev Summit',
               link: '#filecoin-dev-singapore',
             },
@@ -132,7 +132,7 @@ export const FILECOIN_DEV_SUMMIT_2023_PAGE_CONTENT = [
             smallDesc: 'Organized by Miwa',
             media: {
               type: TypeName.MEDIA_IMAGE,
-              src: 'https://images.pexels.com/photos/3617500/pexels-photo-3617500.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+              src: '/media/iceland-full.jpg',
               ariaLabel: 'FIL Dev Summit',
               link: '#filecoin-dev-iceland',
             },
@@ -153,7 +153,7 @@ export const FILECOIN_DEV_SUMMIT_2023_PAGE_CONTENT = [
         heading: 'Singapore',
         description: 'September 12 - 14th, 2023',
         image: {
-          src: 'https://images.pexels.com/photos/3152126/pexels-photo-3152126.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+          src: '/media/singapore-long.png',
           ariaLabel: 'FIL Dev Summit',
           link: '#filecoin-dev-singapore',
         },
@@ -232,7 +232,7 @@ export const FILECOIN_DEV_SUMMIT_2023_PAGE_CONTENT = [
         smallDesc: 'Organized by Miwa',
         image: {
           alt: 'Maintain progress & momentum',
-          src: 'https://images.pexels.com/photos/3617500/pexels-photo-3617500.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+          src: '/media/iceland-long.png',
         },
       },
     ],
@@ -388,8 +388,10 @@ Join [#fil-dev-summit](https://app.slack.com/client/TEHTVS1L6/C05LHC1ULG1) in [F
         type: BlockTypeEnum.COLLAPSABLE,
         title: 'What is the track system and how does it work?',
         collapsedText: `This is a choose-your-own-adventure event, so please choose the track(s), sessions, arrival and departure dates, and activities that are interesting and relevant to you. We are actively working on putting together an amazing schedule based on your submissions, suggestions, and feedback. Help shape this event by submitting your own talk or track!
-		    - [Submit for Asia](https://airtable.com/appEjnh5rpWMsjocb/shrw3Ha0yTusDmcOg)
-	   - [Submit for EU/NA](https://airtable.com/appEjnh5rpWMsjocb/shr6SmQjqdgn5Pc90) `,
+
+- [Submit for Asia](https://airtable.com/appEjnh5rpWMsjocb/shrw3Ha0yTusDmcOg)
+
+- [Submit for EU/NA](https://airtable.com/appEjnh5rpWMsjocb/shr6SmQjqdgn5Pc90) `,
         backgroundColor: 'black',
       },
       {
@@ -451,12 +453,12 @@ IPFS þing's Covid Policy:
 export const FOOTER_FILECOIN_DEV_SUMMIT_CONTENT = {
   links: [
     {
-      href: 'https://discuss.ipfs.tech/tos',
-      name: 'Terms & Conditions',
+      href: 'https://discuss.ipfs.tech/privacy',
+      name: 'Privacy Policy',
     },
     {
-      href: 'https://discuss.ipfs.tech/privacy',
-      name: 'Privacy',
+      href: 'https://discuss.ipfs.tech/tos',
+      name: 'Terms & Conditions',
     },
     {
       href: 'https://ipfs.tech/legal/',
