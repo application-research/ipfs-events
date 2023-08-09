@@ -230,8 +230,8 @@ export const FILECOIN_DEV_SUMMIT_2023_PAGE_CONTENT = [
         description: 'September 25 - 27th, 2023',
         smallDesc: 'Organized by Miwa',
         image: {
-          alt: 'Maintain progress & momentum',
-          src: '/media/iceland-long.png',
+          alt: 'Iceland September 25 - 27th, 2023',
+          src: '/media/icelandlong.png',
         },
       },
     ],
