@@ -1,5 +1,4 @@
-import { BlockTypeEnum, CallToActionVariantEnum, NavigationTypeEnum, Ratio, TypeName } from '@root/common/types';
-import { MARKDOWN_CONTENT } from './markdown-content';
+import { BlockDirectionEnum, BlockTypeEnum, CallToActionVariantEnum, NavigationTypeEnum, Ratio, TypeName } from '@root/common/types';
 
 export const FILECOIN_DEV_SUMMIT_2023_HERO_CONTENT = {
   id: 'hero',
@@ -70,7 +69,7 @@ export const FILECOIN_DEV_SUMMIT_2023_PAGE_CONTENT = [
   {
     id: '2',
     subtitle: 'Sponsors',
-    direction: 'column',
+    direction: BlockDirectionEnum.COLUMN,
     backgroundColor: 'red',
     cta: {
       type: CallToActionVariantEnum.BORDER,
@@ -100,7 +99,7 @@ export const FILECOIN_DEV_SUMMIT_2023_PAGE_CONTENT = [
   },
   {
     id: 'about',
-    direction: 'row',
+    direction: BlockDirectionEnum.ROW,
     title: 'Upcoming Events',
     backgroundColor: 'var(--color-white)',
     block: [
@@ -143,7 +142,7 @@ export const FILECOIN_DEV_SUMMIT_2023_PAGE_CONTENT = [
   },
   {
     id: 'filecoin-dev-singapore',
-    direction: 'column',
+    direction: BlockDirectionEnum.COLUMN,
     noGutter: 'no',
     backgroundColor: 'var(--color-white)',
     block: [
@@ -163,7 +162,7 @@ export const FILECOIN_DEV_SUMMIT_2023_PAGE_CONTENT = [
   {
     backgroundColor: 'var(--color-white)',
     id: 'about',
-    direction: 'column',
+    direction: BlockDirectionEnum.COLUMN,
     title: 'FIL Dev Summit - Singapore Schedule',
     block: [
       {
@@ -221,7 +220,7 @@ export const FILECOIN_DEV_SUMMIT_2023_PAGE_CONTENT = [
   {
     id: 'filecoin-dev-iceland',
     backgroundColor: 'var(--color-white)',
-    direction: 'column',
+    direction: BlockDirectionEnum.COLUMN,
     noGutter: 'no',
     block: [
       {
@@ -239,7 +238,7 @@ export const FILECOIN_DEV_SUMMIT_2023_PAGE_CONTENT = [
   },
   {
     id: 'about',
-    direction: 'column',
+    direction: BlockDirectionEnum.COLUMN,
     title: 'FIL Dev Summit - Iceland Schedule',
     block: [
       {
@@ -316,44 +315,43 @@ export const FILECOIN_DEV_SUMMIT_2023_PAGE_CONTENT = [
   {
     id: '2',
     title: 'FAQs',
+    direction: BlockDirectionEnum.TWO_COLUMN,
     block: [
       {
-        id: 'media',
-        type: BlockTypeEnum.COLLAPSABLE,
-        title: 'What is FIL Dev Summit?',
-        collapsedText:
-          'FIL Dev Summit is a gathering of developers, builders, and engaged community members who want to contribute to the core protocol and network evolution of Filecoin (think IPFS Thing, but bigger!). This would include FVM smart contract builders, core protocol devs, implementation engineering teams, tool builders, large storage clients, and even token holders engaged in network governance. Our goal would be to build alignment around the current roadmap and trajectory of protocol improvements, improve our dev tooling and capabilities, grow inter- and intra-team connections, and accelerate upcoming launches in Q4/Q1.',
-        backgroundColor: 'black',
-      },
-      {
-        id: 'media',
-        type: BlockTypeEnum.COLLAPSABLE,
-        title: 'What is the goal of FIL Dev Summit?',
-        collapsedText:
-          'What do we want to come out of FIL Dev Summit? We want to bring the Filecoin developer community together, have important convos, show how the network is evolving, build collaboration connections between teams, collectively set a roadmap for critical protocol evolutions and extensions for next year, setting us up to review projects that we will launch really big at lab week and beyond.',
-        backgroundColor: 'black',
-      },
-      {
-        id: 'media',
-        type: BlockTypeEnum.COLLAPSABLE,
-        title: 'Who should attend FIL Dev Summit?',
-        collapsedText:
-          'FVM smart contract builders, core protocol devs, implementation engineering teams, tool builders, storage providers, large storage clients, token holders engaged in network governance, and more! People who care about how and why the protocol is evolving - Folks who are writing FIPS, implementing tools, or writing smart contracts. People who have product requirements. IPLD-yfiying the data as an example.',
-        backgroundColor: 'black',
-      },
-      {
-        id: 'media',
-        type: BlockTypeEnum.COLLAPSABLE,
-        title: 'Why are there 2 separate events? Do I have to attend both? How Do I know which to attend?',
-        collapsedText:
-          'We are hosting two back-to-back Filecoin protocol events in different locations to reduce overhead costs and travel time. You do not need to attend both events; choose the one that makes the most sense for you. The events, tracks, and talks will be recorded and uploaded to watch [on our youtube](https://www.youtube.com/@IPFSbot) throughout the event.',
-        backgroundColor: 'black',
-      },
-      {
-        id: 'media',
-        type: BlockTypeEnum.COLLAPSABLE,
-        title: 'How can I participate at Fil Dev Summit?',
-        collapsedText: `
+        type: BlockTypeEnum.COLLAPSABLES,
+        collapsables: [
+          {
+            type: BlockTypeEnum.COLLAPSABLE,
+            title: 'What is FIL Dev Summit?',
+            collapsedText:
+              'FIL Dev Summit is a gathering of developers, builders, and engaged community members who want to contribute to the core protocol and network evolution of Filecoin (think IPFS Thing, but bigger!). This would include FVM smart contract builders, core protocol devs, implementation engineering teams, tool builders, large storage clients, and even token holders engaged in network governance. Our goal would be to build alignment around the current roadmap and trajectory of protocol improvements, improve our dev tooling and capabilities, grow inter- and intra-team connections, and accelerate upcoming launches in Q4/Q1.',
+            backgroundColor: 'black',
+          },
+          {
+            type: BlockTypeEnum.COLLAPSABLE,
+            title: 'What is the goal of FIL Dev Summit?',
+            collapsedText:
+              'What do we want to come out of FIL Dev Summit? We want to bring the Filecoin developer community together, have important convos, show how the network is evolving, build collaboration connections between teams, collectively set a roadmap for critical protocol evolutions and extensions for next year, setting us up to review projects that we will launch really big at lab week and beyond.',
+            backgroundColor: 'black',
+          },
+          {
+            type: BlockTypeEnum.COLLAPSABLE,
+            title: 'Who should attend FIL Dev Summit?',
+            collapsedText:
+              'FVM smart contract builders, core protocol devs, implementation engineering teams, tool builders, storage providers, large storage clients, token holders engaged in network governance, and more! People who care about how and why the protocol is evolving - Folks who are writing FIPS, implementing tools, or writing smart contracts. People who have product requirements. IPLD-yfiying the data as an example.',
+            backgroundColor: 'black',
+          },
+          {
+            type: BlockTypeEnum.COLLAPSABLE,
+            title: 'Why are there 2 separate events? Do I have to attend both? How Do I know which to attend?',
+            collapsedText:
+              'We are hosting two back-to-back Filecoin protocol events in different locations to reduce overhead costs and travel time. You do not need to attend both events; choose the one that makes the most sense for you. The events, tracks, and talks will be recorded and uploaded to watch [on our youtube](https://www.youtube.com/@IPFSbot) throughout the event.',
+            backgroundColor: 'black',
+          },
+          {
+            type: BlockTypeEnum.COLLAPSABLE,
+            title: 'How can I participate at Fil Dev Summit?',
+            collapsedText: `
 ####Join the conversations
 Join [#fil-dev-summit](https://app.slack.com/client/TEHTVS1L6/C05LHC1ULG1) in [Filecoin](https://filecoinproject.slack.com/ssb/redirect) Slack to stay connected with the conversations happening during the event and beyond.	
 
@@ -374,71 +372,79 @@ Join [#fil-dev-summit](https://app.slack.com/client/TEHTVS1L6/C05LHC1ULG1) in [F
 
 ##Keep up the momentum!
 - After the event, all of the tracks will be posted to the Filecoin Youtube channel. Be sure to share your talk or track videos with the world! Help the broader community see all of the great work that has transpired and get a sense of what they can expect to see more of for the rest of the year and beyond.`,
-        backgroundColor: 'black',
+            backgroundColor: 'black',
+          },
+          {
+            id: 'media',
+            type: BlockTypeEnum.COLLAPSABLE,
+            title: 'What if I need a visa?',
+            collapsedText: 'See attached docs.',
+            backgroundColor: 'black',
+          },
+        ],
       },
       {
-        id: 'media',
-        type: BlockTypeEnum.COLLAPSABLE,
-        title: 'What if I need a visa?',
-        collapsedText: 'See attached docs.',
-        backgroundColor: 'black',
-      },
-      {
-        id: 'media',
-        type: BlockTypeEnum.COLLAPSABLE,
-        title: 'What is the track system and how does it work?',
-        collapsedText: `This is a choose-your-own-adventure event, so please choose the track(s), sessions, arrival and departure dates, and activities that are interesting and relevant to you. We are actively working on putting together an amazing schedule based on your submissions, suggestions, and feedback. Help shape this event by submitting your own talk or track!
+        type: BlockTypeEnum.COLLAPSABLES,
+        collapsables: [
+          {
+            id: 'media',
+            type: BlockTypeEnum.COLLAPSABLE,
+            title: 'What is the track system and how does it work?',
+            collapsedText: `This is a choose-your-own-adventure event, so please choose the track(s), sessions, arrival and departure dates, and activities that are interesting and relevant to you. We are actively working on putting together an amazing schedule based on your submissions, suggestions, and feedback. Help shape this event by submitting your own talk or track!
 
 - [Submit for Asia](https://airtable.com/appEjnh5rpWMsjocb/shrw3Ha0yTusDmcOg)
 
 - [Submit for EU/NA](https://airtable.com/appEjnh5rpWMsjocb/shr6SmQjqdgn5Pc90) `,
-        backgroundColor: 'black',
-      },
-      {
-        id: 'media',
-        type: BlockTypeEnum.COLLAPSABLE,
-        title: 'How can I lead a track?',
-        collapsedText:
-          'Please fill out the provided forms for FIL Dev [Summit Asia](https://airtable.com/appEjnh5rpWMsjocb/shrw3Ha0yTusDmcOg) and [FIL Dev Summit EU/NA](https://airtable.com/appEjnh5rpWMsjocb/shr6SmQjqdgn5Pc90) to lead a track or a talk.',
-        backgroundColor: 'black',
-      },
-      {
-        id: 'media',
-        type: BlockTypeEnum.COLLAPSABLE,
-        title: 'Is there a cost to attend?',
-        collapsedText:
-          'This is an invite only event. Please fill out [this form to apply to attend](https://airtable.com/appEjnh5rpWMsjocb/shran7li4slfQSB04). Once you are accepted you will receive a ticket to attend FIL Dev Summit.',
-        backgroundColor: 'black',
-      },
-      {
-        id: 'media',
-        type: BlockTypeEnum.COLLAPSABLE,
-        title: 'How can I sponsor? What does it include?',
-        collapsedText:
-          'Yes! We offer multiple levels of sponsorship. From Scholars, Node, and Cluster, to Network and Interplanetary, there will be a sponsorship for you! Please fill out [this sponsor form](https://airtable.com/appEjnh5rpWMsjocb/shrn57n37JyLSOTlV) for more information on what is included in each sponsorship and to apply.',
-        backgroundColor: 'black',
-      },
-      {
-        id: 'media',
-        type: BlockTypeEnum.COLLAPSABLE,
-        title: 'Will the sessions be recorded?',
-        collapsedText:
-          'All sessions will be recorded and uploaded to [Youtube channel](https://www.youtube.com/@IPFSbot) ASAP. We are also encouraging everyone to join [#fil-dev-summit](https://app.slack.com/client/TEHTVS1L6/C05LHC1ULG1) in [Filecoin](https://filecoinproject.slack.com/ssb/redirect) slack to stay up to date with all hallway track conversations.',
-        backgroundColor: 'black',
-      },
-      {
-        id: 'media',
-        type: BlockTypeEnum.COLLAPSABLE,
-        title: 'Code of conduct/covid policy',
-        collapsedText: ` We will be following the [IPFS Code of Conduct](https://github.com/ipfs/community/blob/master/code-of-conduct.md), and the IPFS Code of [Conduct Events Addendum](https://github.com/ipfs/community/blob/master/code-of-conduct-for-events.md) as part of the above CoC.
+            backgroundColor: 'black',
+          },
+          {
+            id: 'media',
+            type: BlockTypeEnum.COLLAPSABLE,
+            title: 'How can I lead a track?',
+            collapsedText:
+              'Please fill out the provided forms for FIL Dev [Summit Asia](https://airtable.com/appEjnh5rpWMsjocb/shrw3Ha0yTusDmcOg) and [FIL Dev Summit EU/NA](https://airtable.com/appEjnh5rpWMsjocb/shr6SmQjqdgn5Pc90) to lead a track or a talk.',
+            backgroundColor: 'black',
+          },
+          {
+            id: 'media',
+            type: BlockTypeEnum.COLLAPSABLE,
+            title: 'Is there a cost to attend?',
+            collapsedText:
+              'This is an invite only event. Please fill out [this form to apply to attend](https://airtable.com/appEjnh5rpWMsjocb/shran7li4slfQSB04). Once you are accepted you will receive a ticket to attend FIL Dev Summit.',
+            backgroundColor: 'black',
+          },
+          {
+            id: 'media',
+            type: BlockTypeEnum.COLLAPSABLE,
+            title: 'How can I sponsor? What does it include?',
+            collapsedText:
+              'Yes! We offer multiple levels of sponsorship. From Scholars, Node, and Cluster, to Network and Interplanetary, there will be a sponsorship for you! Please fill out [this sponsor form](https://airtable.com/appEjnh5rpWMsjocb/shrn57n37JyLSOTlV) for more information on what is included in each sponsorship and to apply.',
+            backgroundColor: 'black',
+          },
+          {
+            id: 'media',
+            type: BlockTypeEnum.COLLAPSABLE,
+            title: 'Will the sessions be recorded?',
+            collapsedText:
+              'All sessions will be recorded and uploaded to [Youtube channel](https://www.youtube.com/@IPFSbot) ASAP. We are also encouraging everyone to join [#fil-dev-summit](https://app.slack.com/client/TEHTVS1L6/C05LHC1ULG1) in [Filecoin](https://filecoinproject.slack.com/ssb/redirect) slack to stay up to date with all hallway track conversations.',
+            backgroundColor: 'black',
+          },
+          {
+            id: 'media',
+            type: BlockTypeEnum.COLLAPSABLE,
+            title: 'Code of conduct/covid policy',
+            collapsedText: ` We will be following the [IPFS Code of Conduct](https://github.com/ipfs/community/blob/master/code-of-conduct.md), and the IPFS Code of [Conduct Events Addendum](https://github.com/ipfs/community/blob/master/code-of-conduct-for-events.md) as part of the above CoC.
         
 IPFS þing's Covid Policy:
 
 - Masks and testing are optional and at your discretion.
 
 - If you are presenting any symptoms of being sick or have come in contact with someone who has presented symptoms or tested positive in the last five days, please do not attend the event for your own and all other attendees' health and safety. Rest up and feel better!`,
-        backgroundColor: 'black',
+            backgroundColor: 'black',
+          },
+        ],
       },
+
       // {
       //   id: 'media',
       //   type: BlockTypeEnum.COLLAPSABLE,

@@ -1,4 +1,4 @@
-import { BlockTypeEnum, CallToActionVariantEnum, NavigationTypeEnum, Ratio, TypeName } from '@root/common/types';
+import { BlockDirectionEnum, BlockTypeEnum, CallToActionVariantEnum, NavigationTypeEnum, Ratio, TypeName } from '@root/common/types';
 
 export const IPFS_FRIENDS_CAFE_PAGE_HERO_CONTENT = {
   id: 'hero',
@@ -122,7 +122,7 @@ export const IPFS_FRIENDS_CAFE_NAVIGATION_CONTENT = {
 export const IPFS_FRIENDS_CAFE_PAGE_CONTENT = [
   {
     id: 'ipfs-friends-about',
-    direction: 'column',
+    direction: BlockDirectionEnum.COLUMN,
     title: 'About',
     block: [
       {
@@ -166,7 +166,7 @@ export const IPFS_FRIENDS_CAFE_PAGE_CONTENT = [
   // },
   {
     id: 'ipfs-friends-past-events',
-    direction: 'row',
+    direction: BlockDirectionEnum.ROW,
     title: 'Goals of IPFS + Friends',
     description:
       'Overall, these community-hosted events serve as a catalyst for knowledge exchange, community growth, collaboration, innovation, and the continued advancement of IPFS as a groundbreaking technology',
@@ -215,7 +215,7 @@ export const IPFS_FRIENDS_CAFE_PAGE_CONTENT = [
   },
   {
     id: 'ipfs-friends-past-events',
-    direction: 'row',
+    direction: BlockDirectionEnum.ROW,
     title: 'How We Can Help',
     block: [
       {
