@@ -1,4 +1,4 @@
-import { BlockTypeEnum, CallToActionVariantEnum, Ratio, TypeName } from '@root/common/types';
+import { BlockDirectionEnum, BlockTypeEnum, CallToActionVariantEnum, Ratio, TypeName } from '@root/common/types';
 import { MARKDOWN_CONTENT } from './markdown-content';
 
 export const EVENT_PAGE_HERO_CONTENT = {
@@ -47,7 +47,7 @@ export const EVENT_PAGE_CONTENT = [
   },
   {
     id: 'about',
-    direction: 'row',
+    direction: BlockDirectionEnum.ROW,
     title: 'About',
     block: [
       {
@@ -68,7 +68,7 @@ export const EVENT_PAGE_CONTENT = [
   },
   {
     id: 'about',
-    direction: 'row',
+    direction: BlockDirectionEnum.ROW,
     block: [
       {
         type: BlockTypeEnum.TEXT,
@@ -88,7 +88,7 @@ export const EVENT_PAGE_CONTENT = [
   {
     id: '2',
     title: 'Sponsors',
-    direction: 'row',
+    direction: BlockDirectionEnum.ROW,
     block: [
       {
         id: 'participating-teams',
@@ -118,7 +118,7 @@ export const EVENT_PAGE_CONTENT = [
   {
     id: '2',
     title: 'Participating Teams',
-    direction: 'row',
+    direction: BlockDirectionEnum.ROW,
     block: [
       {
         id: 'participating-teams',
@@ -347,7 +347,7 @@ export const EVENT_PAGE_CONTENT = [
   },
   {
     id: 'about',
-    direction: 'column',
+    direction: BlockDirectionEnum.COLUMN,
     title: 'Schedule',
     block: [
       {
@@ -358,7 +358,7 @@ export const EVENT_PAGE_CONTENT = [
   {
     id: 'tickets',
     title: 'Ticketing',
-    direction: 'row',
+    direction: BlockDirectionEnum.ROW,
     block: [
       {
         id: 'media',
