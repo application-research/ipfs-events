@@ -2,6 +2,8 @@
   max-width: 100%;
   height: auto;
   margin: 0 auto 0;
+  border-radius: var(--border-radius-small);
+  border: 1px solid var(--textBlack);
 }
 
 .figure {
@@ -12,8 +14,8 @@
   padding-left: 1rem;
   color: var(--gray1000);
   font-family: Inter;
-  font-size: var(--font-size-tiny);
-  font-weight: var(--font-weight-light);
+  font-size: var(--fontSize-TinyPlus);
+  font-weight: var(--fontWeight_Light);
   letter-spacing: -0.003em;
   line-height: 0.5rem;
 }
@@ -22,24 +24,24 @@
   padding-left: 1rem;
   color: var(--gray1000);
   font-family: Inter;
-  font-size: var(--font-size-tiny);
-  font-weight: var(--font-weight-light);
+  font-size: var(--fontSize-TinyPlus);
+  font-weight: var(--fontWeight_Light);
   letter-spacing: -0.003em;
   line-height: 0.5rem;
 }
 
 .li {
   line-height: 1.6rem;
-  font-weight: var(--font-weight-light);
+  font-weight: var(--fontWeight_Light);
 }
 
 .figcaption {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-weight: var(--font-weight-light);
+  font-weight: var(--fontWeight_Light);
   color: var(--gray500);
-  font-size: var(--font-size-tiny-plus);
+  font-size: var(--fontSize_TinyPlus);
   font-family: Inter;
   letter-spacing: -0.003em;
   line-height: 1rem;
@@ -57,18 +59,17 @@
 }
 
 .h1 {
-  font-weight: var(--font-weight-semibold);
-  font-size: var(--font-size-regular);
+  font-weight: var(--fontWeight_Semibold);
+  font-size: 2rem;
 }
 
 .h1,
 .h2,
 .h3,
 .h4 {
-  padding: 1rem 0rem;
   padding-bottom: 0.5rem;
   font-family: Inter;
-  font-weight: var(--font-weight-semibold);
+  font-weight: var(--fontWeight_Semibold);
 }
 
 h1 {
@@ -76,82 +77,77 @@ h1 {
   .ul,
   .ol,
   .li {
-    font-weight: var(--font-weight-semibold);
+    font-weight: var(--fontWeight_Semibold);
     font-family: Inter;
-    font-weight: var(--font-weight-semibold);
-    font-size: var(--font-size-medium);
+    font-weight: var(--fontWeight_Semibold);
+    font-size: var(--fontSize_Medium);
     margin-left: 0.2rem;
   }
 }
 
-.span,
 .p {
   padding-bottom: 0.5rem;
   color: var(--gray1000);
-  font-size: var(--font-size-tiny);
+  font-size: var(--fontSize-TinyPlus);
   font-family: Inter;
-  font-weight: var(--font-weight-light);
+  font-weight: var(--fontWeight_Light);
   letter-spacing: -0.003em;
   line-height: 1.6rem;
 
   .strong {
-    font-weight: var(--font-weight-medium);
+    font-weight: var(--fontWeight_Medium);
 
     .ol {
-      font-weight: var(--font-weight-medium);
+      font-weight: var(--fontWeight_Medium);
     }
 
     .ul {
-      font-weight: var(--font-weight-medium);
+      font-weight: var(--fontWeight_Medium);
     }
 
     .li {
-      font-weight: var(--font-weight-medium);
+      font-weight: var(--fontWeight_Medium);
     }
   }
 }
 
-.span {
-  font-weight: var(--font-weight-light);
-}
-
 .blockquote {
   font-style: italic;
-  font-weight: var(--font-weight-light);
-  border-left: 2px solid var(--text-black);
+  font-weight: var(--fontWeight_Light);
+  border-left: 2px solid var(--textBlack);
   padding-left: 1rem;
   padding-bottom: 0rem;
   color: var(--gray1000);
   font-size: 20px;
   font-family: Inter;
-  font-weight: var(--font-weight-light);
+  font-weight: var(--fontWeight_Light);
   letter-spacing: -0.003em;
   line-height: 2rem;
 
   @media (max-width: 768px) {
-    font-size: var(--font-size-tiny);
+    font-size: var(--fontSize-TinyPlus);
   }
 }
 
 .blockquote .link {
   font-size: 20px;
   font-family: Inter;
-  font-weight: var(--font-weight-light);
+  font-weight: var(--fontWeight_Light);
   letter-spacing: -0.003em;
   line-height: 2rem;
 
   @media (max-width: 768px) {
-    font-size: var(--font-size-tiny);
+    font-size: var(--fontSize-TinyPlus);
   }
 }
 
 .link {
-  color: inherit;
-  font-weight: var(--font-weight-medium);
+  color: var(--filecoinBlue);
+  font-weight: var(--fontWeight_Medium);
   padding-right: 0.1rem;
   padding-left: 0.1rem;
-  font-weight: var(--font-weight-light);
-  font-size: var(--font-size-tiny);
+  font-weight: var(--fontWeight_Light);
+  font-size: var(--fontSize-TinyPlus);
   font-family: Inter;
   letter-spacing: -0.003em;
   line-height: 1.6rem;
@@ -163,5 +159,5 @@ h1 {
 }
 
 .strong {
-  font-weight: var(--font-weight-medium);
+  font-weight: var(--fontWeight_Medium);
 }

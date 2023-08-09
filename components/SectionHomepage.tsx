@@ -16,9 +16,15 @@ export default function SectionHomepage({ upcomingEvents }) {
               <p>IPFS is a peer-to-peer hypermedia protocol designed to preserve and grow humanity's knowledge by making the web upgradeable, resilient, and more open.</p>
             </div>
 
+<<<<<<< HEAD
             <div className={`${styles.col40} ${styles.buttonContainer}`}>
               <Link style="text" href="https://fildev.io/" target="_blank">
                 <button className={`${styles.button}`}>Get Tickets for FIL Dev Summit</button>
+=======
+            <div className={` ${styles.col40} ${styles.buttonContainer}`}>
+              <Link style="text" href="https://lu.ma/tdbdprzd" target="_blank">
+                <button className={`${styles.button}`}>Get Tickets for FIL Dev Summit 2023</button>
+>>>>>>> ddccff6 (updated event copy)
               </Link>
             </div>
           </header>
