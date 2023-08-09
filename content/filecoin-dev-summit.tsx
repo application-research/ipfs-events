@@ -1,4 +1,4 @@
-import { BlockTypeEnum, CallToActionVariantEnum, NavigationTypeEnum, Ratio, TypeName } from '@root/common/types';
+import { BlockTypeEnum, CallToActionVariantEnum, NavigationTypeEnum, TypeName } from '@root/common/types';
 import { EVENT_PAGE_SCHEDULE_IPFS_THING_2023 } from './event-page-content';
 
 export const FILECOIN_DEV_SUMMIT_2023_HERO_CONTENT = {

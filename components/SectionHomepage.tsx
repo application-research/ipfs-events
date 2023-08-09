@@ -17,8 +17,8 @@ export default function SectionHomepage({ upcomingEvents }) {
             </div>
 
             <div className={` ${styles.col40} ${styles.buttonContainer}`}>
-              <Link style="text" href="https://lu.ma/tdbdprzd" target="_blank">
-                <button className={`${styles.button}`}>Get Tickets for Filecoin Dev Summit 2023</button>
+              <Link style="text" href="https://fildev.io/" target="_blank">
+                <button className={`${styles.button}`}>Get Tickets for FIL Dev Summit</button>
               </Link>
             </div>
           </header>
