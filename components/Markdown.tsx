@@ -1,4 +1,5 @@
 import Markdown from 'markdown-to-jsx';
+import { MarkdownToJSXComponents } from './MarkdownToJSXComponents';
 
 export interface MarkdownToJSXProps {
   children: string;
@@ -7,10 +8,9 @@ export interface MarkdownToJSXProps {
 export function MarkdownToJSX({ children }: MarkdownToJSXProps) {
   return (
     <Markdown
-    // to do: add styled components for the markdown options
-    //  options={{
-    //     overrides: MarkdownToJSXComponents,
-    //   }}
+      options={{
+        overrides: MarkdownToJSXComponents,
+      }}
     >
       {children}
     </Markdown>
