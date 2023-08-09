@@ -74,7 +74,7 @@ export const IPFS_FRIENDS_FOOTER_CONTENT = {
     },
     {
       link: 'https://discuss.ipfs.tech/privacy',
-      text: 'Privacy',
+      text: 'Privacy Policy',
     },
     {
       link: 'https://ipfs.tech/legal/',

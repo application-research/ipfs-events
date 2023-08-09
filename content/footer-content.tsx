@@ -54,7 +54,7 @@ export const FOOTER_CONTENT = {
     },
     {
       link: 'https://discuss.ipfs.tech/privacy',
-      text: 'Privacy',
+      text: 'Privacy Policy',
     },
     {
       link: 'https://ipfs.tech/legal/',
@@ -107,7 +107,7 @@ export const FOOTER_TINY_CONTENT = {
     },
     {
       link: 'https://discuss.ipfs.tech/privacy',
-      text: 'Privacy',
+      text: 'Privacy Policy',
     },
     {
       link: 'https://ipfs.tech/legal/',
