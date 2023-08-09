@@ -47,7 +47,7 @@
 .buttonContainer {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-end;
   width: 30%;
 
   @media (max-width: 768px) {
