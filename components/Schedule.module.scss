@@ -12,6 +12,10 @@
   top: 5rem;
   z-index: var(--z-index-small);
 
+  @media (max-width: 1040px) {
+    top: 0rem;
+  }
+
   @media (max-width: 768px) {
     top: 0rem;
     grid-template-columns: repeat(4, 1fr);
