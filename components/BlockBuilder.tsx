@@ -2,7 +2,30 @@ import styles from '@components/BlockBuilder.module.scss';
 
 import { Block } from './Block';
 import { CallToActionVariant } from './CallToActionVariant';
-import GutterContainer from './GutterContainer';
+import { BlockDirectionEnum } from '@root/common/types';
+
+function BlockBuilderDirectionStyle(direction) {
+  switch (direction) {
+    case BlockDirectionEnum.ROW:
+      return styles.directionRow;
+      break;
+    case BlockDirectionEnum.COLUMN:
+      return styles.directionCol;
+      break;
+    case BlockDirectionEnum.TWO_COLUMN:
+      return styles.directionCol2;
+      break;
+    case BlockDirectionEnum.THREE_COLUMN:
+      return styles.directionCol3;
+      break;
+    case BlockDirectionEnum.FOUR_COLUMN:
+      return styles.directionCol4;
+      break;
+    default:
+      return styles.directionCol;
+      break;
+  }
+}
 
 export default function BlockBuilder({ block, cta, title, subtitle, id, border, description, direction }) {
   return (
@@ -37,7 +60,7 @@ export default function BlockBuilder({ block, cta, title, subtitle, id, border, 
         </GutterContainer>
       )}
 
-      <div className={`${direction == 'row' ? styles.directionRow : styles.directionColumn}`}>
+      <div className={`${BlockBuilderDirectionStyle(direction)}`}>
         {block?.map((blockItem, index) => {
           return (
             <div key={index}>

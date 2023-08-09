@@ -1,5 +1,6 @@
 export enum BlockTypeEnum {
   COLLAPSABLE = 'collapsable',
+  COLLAPSABLES = 'collapsables',
   HERO = 'hero',
   HERO_NO_BACKGROUND = 'hero-no-background',
   IMAGE_TEXT = 'image-text',
@@ -17,7 +18,10 @@ export enum BlockTypeEnum {
 
 export enum BlockDirectionEnum {
   COLUMN = 'column',
+  FOUR_COLUMN = 'four-column',
   ROW = 'row',
+  THREE_COLUMN = 'three-column',
+  TWO_COLUMN = 'two-column',
 }
 
 export interface Image {

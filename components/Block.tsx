@@ -1,6 +1,11 @@
 import { BlockTypeEnum } from '@root/common/types';
 import { Collapsable } from './Collapsable';
+<<<<<<< HEAD
 import EventsRow from './EventsRow';
+=======
+
+import Collapsables from './Collapsables';
+>>>>>>> 769859b (updated columns for block direction)
 import Hero from './Hero';
 import ImageText from './ImageText';
 import ImageTextWithOverflow from './ImageTextWithOverflow';
@@ -9,15 +14,16 @@ import MediaBlock from './MediaBlock';
 import MediaGrid from './MediaGrid';
 import MediaGridScrollable from './MediaGridScrollable';
 import Schedule from './Schedule';
+import Table from './Table';
 import Text from './Text';
 import TicketCard from './TicketCard';
-import ImageTextWithOverflow from './ImageTextWithOverflow';
-import Table from './Table';
 
 export function Block({ block }) {
   switch (block.type) {
     case (block.type = BlockTypeEnum.COLLAPSABLE):
       return <Collapsable {...block} />;
+    case (block.type = BlockTypeEnum.COLLAPSABLES):
+      return <Collapsables {...block} />;
     case (block.type = BlockTypeEnum.MEDIA_GRID):
       return <MediaGrid {...block} />;
     case (block.type = BlockTypeEnum.MEDIA_GRID_SCROLLABLE):

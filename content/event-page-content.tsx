@@ -1,4 +1,4 @@
-import { BlockTypeEnum, CallToActionVariantEnum, Ratio, TypeName } from '@root/common/types';
+import { BlockDirectionEnum, BlockTypeEnum, CallToActionVariantEnum, Ratio, TypeName } from '@root/common/types';
 import { MARKDOWN_CONTENT } from './markdown-content';
 
 export const EVENT_PAGE_SCHEDULE_IPFS_THING_2023 = {
@@ -41,6 +41,7 @@ export const EVENT_PAGE_HERO_CONTENT = {
 };
 
 export const EVENT_PAGE_CONTENT = [
+<<<<<<< HEAD
   // {
   //   id: '2',
   //   block: [
@@ -356,9 +357,326 @@ export const EVENT_PAGE_CONTENT = [
   //     },
   //   ],
   // },
+=======
+  {
+    id: '2',
+    block: [
+      {
+        id: 'media',
+        type: BlockTypeEnum.MEDIA,
+        media: {
+          type: TypeName.MEDIA_VIDEO,
+          src: '/media/ipfs-thing-2023.mp4',
+          ariaLabel: 'IPFS Thing 2023',
+          ratio: Ratio.TWENTY_ONE_BY_NINE,
+        },
+      },
+    ],
+  },
   {
     id: 'about',
-    direction: 'column',
+    direction: BlockDirectionEnum.ROW,
+    title: 'About',
+    block: [
+      {
+        id: 'media',
+        type: BlockTypeEnum.MEDIA,
+        media: {
+          type: TypeName.MEDIA_IMAGE,
+          src: '/media/event-sample1.png',
+          ariaLabel: 'IPFS Thing 2023',
+        },
+      },
+      {
+        type: BlockTypeEnum.TEXT,
+        bigTitle:
+          'IPFS þing is a week-long gathering for the IPFS implementors community. Everything from talks, workshops, discussion circles, hacking time, and more — all focused on advancing IPFS implementations.',
+      },
+    ],
+  },
+  {
+    id: 'about',
+    direction: BlockDirectionEnum.ROW,
+    block: [
+      {
+        type: BlockTypeEnum.TEXT,
+        paragraph: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut purus felis, luctus sit amet suscipit nec, vehicula hendrerit urna. Integer vel.',
+      },
+      {
+        id: 'media',
+        type: BlockTypeEnum.MEDIA,
+        media: {
+          type: TypeName.MEDIA_IMAGE,
+          src: '/media/event-sample2.png',
+          ariaLabel: 'IPFS Thing 2023',
+        },
+      },
+    ],
+  },
+  {
+    id: '2',
+    title: 'Sponsors',
+    direction: BlockDirectionEnum.ROW,
+    block: [
+      {
+        id: 'participating-teams',
+        type: BlockTypeEnum.LOGO_GRID,
+        text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut ultrices dui. Aenean dapibus elit ac turpis laoreet posuere. Phasellus iaculis nibh eu quam accumsan, sit amet tincidunt risus dignissim.',
+        logos: [
+          {
+            src: '/media/evp.png',
+            href: null,
+          },
+          {
+            src: '/media/protocollabs.png',
+            href: null,
+          },
+          {
+            src: '/media/evp.png',
+            href: null,
+          },
+          {
+            src: '/media/protocollabs.png',
+            href: null,
+          },
+        ],
+      },
+    ],
+  },
+  {
+    id: '2',
+    title: 'Participating Teams',
+    direction: BlockDirectionEnum.ROW,
+    block: [
+      {
+        id: 'participating-teams',
+        type: BlockTypeEnum.LOGO_GRID,
+        text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut ultrices dui. Aenean dapibus elit ac turpis laoreet posuere. Phasellus iaculis nibh eu quam accumsan, sit amet tincidunt risus dignissim.',
+        logos: [
+          {
+            src: '/media/evp.png',
+            href: null,
+          },
+          {
+            src: '/media/protocollabs.png',
+            href: null,
+          },
+          {
+            src: '/media/e.png',
+            href: null,
+          },
+          {
+            src: '/media/protocollabs.png',
+            href: null,
+          },
+          {
+            src: '/media/e.png',
+            href: null,
+          },
+          {
+            src: '/media/protocollabs.png',
+            href: null,
+          },
+          {
+            src: '/media/e.png',
+            href: null,
+          },
+          {
+            src: '/media/protocollabs.png',
+            href: null,
+          },
+          {
+            src: '/media/evp.png',
+            href: null,
+          },
+          {
+            src: '/media/protocollabs.png',
+            href: null,
+          },
+          {
+            src: '/media/evp.png',
+            href: null,
+          },
+          {
+            src: '/media/protocollabs.png',
+            href: null,
+          },
+          {
+            src: '/media/evp.png',
+            href: null,
+          },
+          {
+            src: '/media/protocollabs.png',
+            href: null,
+          },
+          {
+            src: '/media/evp.png',
+            href: null,
+          },
+          {
+            src: '/media/protocollabs.png',
+            href: null,
+          },
+          {
+            src: '/media/evp.png',
+            href: null,
+          },
+          {
+            src: '/media/protocollabs.png',
+            href: null,
+          },
+          {
+            src: '/media/evp.png',
+            href: null,
+          },
+          {
+            src: '/media/protocollabs.png',
+            href: null,
+          },
+          {
+            src: '/media/evp.png',
+            href: null,
+          },
+          {
+            src: '/media/protocollabs.png',
+            href: null,
+          },
+          {
+            src: '/media/evp.png',
+            href: null,
+          },
+          {
+            src: '/media/protocollabs.png',
+            href: null,
+          },
+          {
+            src: '/media/evp.png',
+            href: null,
+          },
+          {
+            src: '/media/protocollabs.png',
+            href: null,
+          },
+          {
+            src: '/media/evp.png',
+            href: null,
+          },
+          {
+            src: '/media/protocollabs.png',
+            href: null,
+          },
+          {
+            src: '/media/evp.png',
+            href: null,
+          },
+          {
+            src: '/media/protocollabs.png',
+            href: null,
+          },
+          {
+            src: '/media/evp.png',
+            href: null,
+          },
+          {
+            src: '/media/protocollabs.png',
+            href: null,
+          },
+          {
+            src: '/media/evp.png',
+            href: null,
+          },
+          {
+            src: '/media/protocollabs.png',
+            href: null,
+          },
+          {
+            src: '/media/evp.png',
+            href: null,
+          },
+          {
+            src: '/media/protocollabs.png',
+            href: null,
+          },
+          {
+            src: '/media/evp.png',
+            href: null,
+          },
+          {
+            src: '/media/protocollabs.png',
+            href: null,
+          },
+          {
+            src: '/media/evp.png',
+            href: null,
+          },
+          {
+            src: '/media/protocollabs.png',
+            href: null,
+          },
+          {
+            src: '/media/evp.png',
+            href: null,
+          },
+          {
+            src: '/media/protocollabs.png',
+            href: null,
+          },
+          {
+            src: '/media/evp.png',
+            href: null,
+          },
+          {
+            src: '/media/protocollabs.png',
+            href: null,
+          },
+          {
+            src: '/media/evp.png',
+            href: null,
+          },
+          {
+            src: '/media/protocollabs.png',
+            href: null,
+          },
+          {
+            src: '/media/evp.png',
+            href: null,
+          },
+          {
+            src: '/media/protocollabs.png',
+            href: null,
+          },
+          {
+            src: '/media/evp.png',
+            href: null,
+          },
+          {
+            src: '/media/protocollabs.png',
+            href: null,
+          },
+          {
+            src: '/media/evp.png',
+            href: null,
+          },
+          {
+            src: '/media/protocollabs.png',
+            href: null,
+          },
+          {
+            src: '/media/evp.png',
+            href: null,
+          },
+          {
+            src: '/media/protocollabs.png',
+            href: null,
+          },
+        ],
+      },
+    ],
+  },
+>>>>>>> 769859b (updated columns for block direction)
+  {
+    id: 'about',
+    direction: BlockDirectionEnum.COLUMN,
     title: 'Schedule',
     block: [
       {
@@ -370,7 +688,7 @@ export const EVENT_PAGE_CONTENT = [
   {
     id: 'tickets',
     title: 'Ticketing',
-    direction: 'row',
+    direction: BlockDirectionEnum.ROW,
     block: [
       {
         id: 'media',
