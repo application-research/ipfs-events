@@ -64,32 +64,20 @@ export const FOOTER_CONTENT = {
 };
 
 export const FOOTER_TINY_CONTENT = {
-  disclaimer: {
-    logo: '/media/ipfs-logo.png',
-    heading: 'IPFS þing is a week-long gathering for the IPFS implementors community.',
-    text: '',
-  },
-  filResourcesCard: {
-    heading: 'Resources',
-    siteList: [
-      {
-        text: 'IPFS',
-        link: 'https://ipfs.tech/',
-      },
-      {
-        text: 'IPFS Event Github',
-        link: 'https://github.com/ipfs-shipyard/ipfs-thing-2023',
-      },
-      {
-        text: 'YouTube',
-        link: 'https://www.youtube.com/@IPFSbot',
-      },
-    ],
-  },
-  contactUsCard: {
-    heading: 'Contact Us',
-    text: 'Lorem Ipsum  email @ name',
-  },
+  links: [
+    {
+      href: 'https://discuss.ipfs.tech/privacy',
+      name: 'Privacy Policy',
+    },
+    {
+      href: 'https://discuss.ipfs.tech/tos',
+      name: 'Terms & Conditions',
+    },
+    {
+      href: 'https://ipfs.tech/legal/',
+      name: 'DMCA Policy',
+    },
+  ],
   socialIcons: [
     {
       text: 'IPFS Twitter',
