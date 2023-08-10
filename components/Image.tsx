@@ -4,6 +4,7 @@ import AspectRatio from './AspectRatio';
 
 export interface ImageProps extends ImageType {
   className?: any;
+  id?: string;
   priority?: boolean;
   ratio?: Ratio;
 }
