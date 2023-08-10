@@ -175,61 +175,74 @@ export const FILECOIN_DEV_SUMMIT_2023_PAGE_CONTENT = [
     direction: 'row',
     block: [
       {
-        id: 'media',
         type: BlockTypeEnum.TICKET_CARD,
-        price: '$150',
-        name: 'Singapore',
-        description:
-          'Apply to attend Singapore FIL Dev Summit from September 12 - 14th, 2023. Tickets are $150 for General Admission for all three days. Early bird tickets are 50% off until August 25th, speakers tickets are 50% off, and Volunteers get 30% off  for 2 hrs of time.',
-        img: {
-          src: '/media/singapore-logo.png',
-        },
-        cta: {
-          type: CallToActionVariantEnum.BORDER,
-          target: '_blank',
-          buttonColor: 'linear-gradient(to right,#39C1CB, #006FEC);',
-          textColor: 'white',
-          text: 'Apply to Attend',
-          link: 'https://airtable.com/appEjnh5rpWMsjocb/shran7li4slfQSB04',
-        },
-      },
-      {
-        id: 'media',
-        type: BlockTypeEnum.TICKET_CARD,
-        price: '$150',
-        name: 'Iceland',
-        description:
-          'Apply to attend Iceland FIL Dev Summit from September 25 - 27th, 2023. Tickets are $150 for General Admission for all three days. Early bird tickets are 50% off until August 25th, speakers tickets are 50% off, and Volunteers get 30% off  for 2 hrs of time.',
-        img: {
-          src: '/media/iceland-logo.png',
-        },
-        cta: {
-          type: CallToActionVariantEnum.BORDER,
-          buttonColor: 'linear-gradient(to right,#39C1CB, #006FEC);',
-          textColor: 'white',
-          target: '_blank',
-          text: 'Apply to Attend',
-          link: 'https://airtable.com/appEjnh5rpWMsjocb/shran7li4slfQSB04',
-        },
-      },
-      {
-        id: 'media',
-        type: BlockTypeEnum.TICKET_CARD,
-        price: 'Free',
-        name: 'Scholars',
-        description:
-          'This program is designed to provide opportunities for individuals from underrepresented communities, unique circumstances, or developing areas to participate in FIL Dev Summit. Priority will be given to individuals with a history of strong contributions to FIL implementations and related projects, or potential future contributions to the FIL Implementors community.',
-        img: {
-          src: '/media/scholars-logo.png',
-        },
-        cta: {
-          type: CallToActionVariantEnum.BORDER,
-          buttonColor: 'linear-gradient(to right,#39C1CB, #006FEC);',
-          textColor: 'white',
-          target: '_blank',
-          text: 'Supporters Ticket',
-          link: 'https://airtable.com/appEjnh5rpWMsjocb/shran7li4slfQSB04',
-        },
+        backgroundColor: 'white',
+        textColor: 'black',
+        tickets: [
+          {
+            id: 'media',
+            // type: BlockTypeEnum.TICKET_CARD,
+            price: '$150',
+            name: 'Singapore',
+            backgroundColor: 'white',
+            textColor: 'black',
+            description:
+              'Apply to attend Singapore FIL Dev Summit from September 12 - 14th, 2023. Tickets are $150 for General Admission for all three days. Early bird tickets are 50% off until August 25th, speakers tickets are 50% off, and Volunteers get 30% off  for 2 hrs of time.',
+            img: {
+              src: '/media/singapore-logo.png',
+            },
+            cta: {
+              type: CallToActionVariantEnum.BORDER,
+              target: '_blank',
+              buttonColor: 'linear-gradient(to right,#39C1CB, #006FEC);',
+              textColor: 'white',
+              text: 'Apply to Attend',
+              link: 'https://airtable.com/appEjnh5rpWMsjocb/shran7li4slfQSB04',
+            },
+          },
+          {
+            id: 'media',
+            type: BlockTypeEnum.TICKET_CARD,
+            price: '$150',
+            backgroundColor: 'white',
+            textColor: 'black',
+            name: 'Iceland',
+            description:
+              'Apply to attend Iceland FIL Dev Summit from September 25 - 27th, 2023. Tickets are $150 for General Admission for all three days. Early bird tickets are 50% off until August 25th, speakers tickets are 50% off, and Volunteers get 30% off  for 2 hrs of time.',
+            img: {
+              src: '/media/iceland-logo.png',
+            },
+            cta: {
+              type: CallToActionVariantEnum.BORDER,
+              buttonColor: 'linear-gradient(to right,#39C1CB, #006FEC);',
+              textColor: 'white',
+              target: '_blank',
+              text: 'Apply to Attend',
+              link: 'https://airtable.com/appEjnh5rpWMsjocb/shran7li4slfQSB04',
+            },
+          },
+          {
+            id: 'media',
+            type: BlockTypeEnum.TICKET_CARD,
+            backgroundColor: 'white',
+            textColor: 'black',
+            price: '',
+            name: 'Scholars',
+            description:
+              'This program is designed to provide opportunities for individuals from underrepresented communities, unique circumstances, or developing areas to participate in FIL Dev Summit. Priority will be given to individuals with a history of strong contributions to FIL implementations and related projects, or potential future contributions to the FIL Implementors community.',
+            img: {
+              src: '/media/scholars-logo.png',
+            },
+            cta: {
+              type: CallToActionVariantEnum.BORDER,
+              buttonColor: 'linear-gradient(to right,#39C1CB, #006FEC);',
+              textColor: 'white',
+              target: '_blank',
+              text: 'Apply to Attend',
+              link: 'https://airtable.com/appEjnh5rpWMsjocb/shran7li4slfQSB04',
+            },
+          },
+        ],
       },
     ],
   },
@@ -513,7 +526,7 @@ export const FILECOIN_DEV_SUMMIT_2023_PAGE_CONTENT = [
             type: BlockTypeEnum.COLLAPSABLE,
             title: 'What if I need a visa?',
             collapsedText:
-              'See the attached docs for Letter of Support/Invitation for Entry Visa: [Iceland](https://drive.google.com/file/d/1jZ8ZbYnX8nvJeS01ou7eKPWKY94IVTfb/view?usp=sharing) and [Singapore](https://drive.google.com/file/d/1Biowq7ENIF9aGNTz69rF0c7yHCusbXyd/view?usp=sharing)',
+              'See the attached docs for Letter of Support/Invitation for Entry Visa: [Iceland](https://drive.google.com/file/d/1jZ8ZbYnX8nvJeS01ou7eKPWKY94IVTfb/view?usp=sharing) and [Singapore](https://drive.google.com/file/d/1Biowq7ENIF9aGNTz69rF0c7yHCusbXyd/view?usp=sharing).',
             backgroundColor: 'linear-gradient(to right,#39C1CB, #006FEC)',
           },
         ],
@@ -622,24 +635,24 @@ export const FILECOIN_DEV_SUMMIT_NAVIGATION_CONTENT = {
     altText: 'FIL Dev Summit Logo',
     link: '/',
   },
-  navItems: [
-    {
-      name: 'Singapore',
-      href: '#filecoin-dev-singapore',
-    },
-    {
-      name: 'Iceland',
-      href: '#iceland',
-    },
-    {
-      name: 'Tickets',
-      href: '#tickets',
-    },
-    {
-      name: 'FAQ',
-      href: '#faqs',
-    },
-  ],
+  // navItems: [
+  //   {
+  //     name: 'Singapore',
+  //     href: '#filecoin-dev-singapore',
+  //   },
+  //   {
+  //     name: 'Iceland',
+  //     href: '#iceland',
+  //   },
+  //   {
+  //     name: 'Tickets',
+  //     href: '#tickets',
+  //   },
+  //   {
+  //     name: 'FAQ',
+  //     href: '#faqs',
+  //   },
+  // ],
   cta: [
     {
       text: 'Apply to Attend',
