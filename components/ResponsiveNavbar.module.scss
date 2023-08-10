@@ -12,9 +12,14 @@
   gap: 1rem;
 
   .list {
+    font-weight: var(--font-weight-light);
     display: flex;
     gap: 16px;
     list-style: none;
+
+    @media (max-width: 768px) {
+      display: none; //to do: add mobile menu
+    }
   }
 
   .listItem {
@@ -23,5 +28,5 @@
 }
 
 .logo {
-  height: 2.5rem;
+  height: 2rem;
 }

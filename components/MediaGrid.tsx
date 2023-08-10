@@ -6,11 +6,11 @@ const getGridStyle = (media) => {
   const length = media.length;
 
   if (length === 2) {
-    return 'repeat(2, minmax(0, 1fr))';
+    return styles.grid2Cols;
   } else if (length === 3) {
-    return 'repeat(3, minmax(0, 1fr))';
+    return styles.grid3Cols;
   } else if (length === 4) {
-    return 'repeat(4, minmax(0, 1fr))';
+    return styles.grid4Cols;
   } else {
     return 'repeat(1, minmax(0, 1fr))';
   }
@@ -21,7 +21,7 @@ export default function MediaGrid({ media, id }) {
   const gridStyle = getGridStyle(media);
 
   return (
-    <div className={styles.mediaContainer} style={{ display: 'grid', gridTemplateColumns: gridStyle, gap: '1rem' }}>
+    <div className={`${styles.mediaContainer} ${gridStyle}`} style={{ display: 'grid', gap: '1rem' }}>
       {media?.map((mediaItem, index) => {
         const { desc, heading, subtitle, smallDesc, title } = mediaItem;
 

@@ -74,9 +74,8 @@ export const FILECOIN_DEV_SUMMIT_2023_PAGE_CONTENT = [
     cta: {
       type: CallToActionVariantEnum.BORDER,
       target: '_blank',
-      buttonColor: null,
-      borderColor: 'black',
-      textColor: 'black',
+      buttonColor: 'linear-gradient(to right,#39C1CB, #006FEC);',
+      textColor: 'white',
       text: 'Sponsor FIL Dev Summit',
       link: 'https://airtable.com/appEjnh5rpWMsjocb/shrn57n37JyLSOTlV',
     },
@@ -104,36 +103,110 @@ export const FILECOIN_DEV_SUMMIT_2023_PAGE_CONTENT = [
     backgroundColor: 'var(--color-white)',
     block: [
       {
-        id: 'media',
+        id: 'upcoming-events',
         type: BlockTypeEnum.MEDIA_GRID,
         media: [
           {
-            id: 'media',
+            id: 'upcoming-events',
             type: BlockTypeEnum.MEDIA,
             heading: 'FIL Dev Summit - Singapore',
             subtitle: 'September 12 - 14th, 2023',
-
             smallDesc: 'Organized by Filecoin Foundation',
             media: {
               type: TypeName.MEDIA_IMAGE,
-              src: '/media/singapore-full.jpg',
+              src: '/media/singapore-full.png',
               ariaLabel: 'FIL Dev Summit',
               link: '#filecoin-dev-singapore',
             },
           },
           {
-            id: 'media',
+            id: 'upcoming-events',
             type: TypeName.MEDIA_IMAGE,
-
             heading: 'FIL Dev Summit - Iceland',
             subtitle: 'September 25 - 27th, 2023',
-
             smallDesc: 'Organized by Miwa',
             media: {
               type: TypeName.MEDIA_IMAGE,
               src: '/media/iceland-full.jpg',
               ariaLabel: 'FIL Dev Summit',
               link: '#filecoin-dev-iceland',
+            },
+          },
+        ],
+      },
+    ],
+  },
+  {
+    id: 'tickets',
+    title: 'Apply to Attend',
+    direction: 'row',
+    block: [
+      {
+        type: BlockTypeEnum.TICKET_CARD,
+        backgroundColor: 'white',
+        textColor: 'black',
+        tickets: [
+          {
+            id: 'media',
+            // type: BlockTypeEnum.TICKET_CARD,
+            price: '$150',
+            name: 'Singapore',
+            backgroundColor: 'white',
+            textColor: 'black',
+            description:
+              'Apply to attend Singapore FIL Dev Summit from September 12 - 14th, 2023. Tickets are $150 for General Admission for all three days. Early bird tickets are 50% off until August 25th, speakers tickets are 50% off, and Volunteers get 30% off  for 2 hrs of time.',
+            img: {
+              src: '/media/singapore-logo.png',
+            },
+            cta: {
+              type: CallToActionVariantEnum.BORDER,
+              target: '_blank',
+              buttonColor: 'linear-gradient(to right,#39C1CB, #006FEC);',
+              textColor: 'white',
+              text: 'Apply to Attend',
+              link: 'https://airtable.com/appEjnh5rpWMsjocb/shran7li4slfQSB04',
+            },
+          },
+          {
+            id: 'media',
+            type: BlockTypeEnum.TICKET_CARD,
+            price: '$150',
+            backgroundColor: 'white',
+            textColor: 'black',
+            name: 'Iceland',
+            description:
+              'Apply to attend Iceland FIL Dev Summit from September 25 - 27th, 2023. Tickets are $150 for General Admission for all three days. Early bird tickets are 50% off until August 25th, speakers tickets are 50% off, and Volunteers get 30% off  for 2 hrs of time.',
+            img: {
+              src: '/media/iceland-logo.png',
+            },
+            cta: {
+              type: CallToActionVariantEnum.BORDER,
+              buttonColor: 'linear-gradient(to right,#39C1CB, #006FEC);',
+              textColor: 'white',
+              target: '_blank',
+              text: 'Apply to Attend',
+              link: 'https://airtable.com/appEjnh5rpWMsjocb/shran7li4slfQSB04',
+            },
+          },
+          {
+            id: 'media',
+            type: BlockTypeEnum.TICKET_CARD,
+            backgroundColor: 'white',
+            textColor: 'black',
+            price: '',
+            name: 'Scholars',
+            description:
+              'This program is designed to provide opportunities for individuals from underrepresented communities, unique circumstances, or developing areas to participate in FIL Dev Summit. Priority will be given to individuals with a history of strong contributions to FIL implementations and related projects, or potential future contributions to the FIL Implementors community.',
+            img: {
+              src: '/media/scholars-logo.png',
+            },
+            cta: {
+              type: CallToActionVariantEnum.BORDER,
+              buttonColor: 'linear-gradient(to right,#39C1CB, #006FEC);',
+              textColor: 'white',
+              target: '_blank',
+              text: 'Apply to Attend',
+              link: 'https://airtable.com/appEjnh5rpWMsjocb/shran7li4slfQSB04',
             },
           },
         ],
@@ -325,61 +398,58 @@ export const FILECOIN_DEV_SUMMIT_2023_PAGE_CONTENT = [
             title: 'What is FIL Dev Summit?',
             collapsedText:
               'FIL Dev Summit is a gathering of developers, builders, and engaged community members who want to contribute to the core protocol and network evolution of Filecoin (think IPFS Thing, but bigger!). This would include FVM smart contract builders, core protocol devs, implementation engineering teams, tool builders, large storage clients, and even token holders engaged in network governance. Our goal would be to build alignment around the current roadmap and trajectory of protocol improvements, improve our dev tooling and capabilities, grow inter- and intra-team connections, and accelerate upcoming launches in Q4/Q1.',
-            backgroundColor: 'black',
+            backgroundColor: 'linear-gradient(to right,#39C1CB, #006FEC)',
           },
           {
             type: BlockTypeEnum.COLLAPSABLE,
             title: 'What is the goal of FIL Dev Summit?',
             collapsedText:
               'What do we want to come out of FIL Dev Summit? We want to bring the Filecoin developer community together, have important convos, show how the network is evolving, build collaboration connections between teams, collectively set a roadmap for critical protocol evolutions and extensions for next year, setting us up to review projects that we will launch really big at lab week and beyond.',
-            backgroundColor: 'black',
+            backgroundColor: 'linear-gradient(to right,#39C1CB, #006FEC)',
           },
           {
             type: BlockTypeEnum.COLLAPSABLE,
             title: 'Who should attend FIL Dev Summit?',
             collapsedText:
               'FVM smart contract builders, core protocol devs, implementation engineering teams, tool builders, storage providers, large storage clients, token holders engaged in network governance, and more! People who care about how and why the protocol is evolving - Folks who are writing FIPS, implementing tools, or writing smart contracts. People who have product requirements. IPLD-yfiying the data as an example.',
-            backgroundColor: 'black',
+            backgroundColor: 'linear-gradient(to right,#39C1CB, #006FEC)',
           },
           {
             type: BlockTypeEnum.COLLAPSABLE,
-            title: 'Why are there 2 separate events? Do I have to attend both? How Do I know which to attend?',
+            title: 'Why are there two separate events? Do I have to attend both? How Do I know which to attend?',
             collapsedText:
               'We are hosting two back-to-back Filecoin protocol events in different locations to reduce overhead costs and travel time. You do not need to attend both events; choose the one that makes the most sense for you. The events, tracks, and talks will be recorded and uploaded to watch [on our youtube](https://www.youtube.com/@IPFSbot) throughout the event.',
-            backgroundColor: 'black',
+            backgroundColor: 'linear-gradient(to right,#39C1CB, #006FEC)',
           },
           {
             type: BlockTypeEnum.COLLAPSABLE,
-            title: 'How can I participate at Fil Dev Summit?',
-            collapsedText: `
-####Join the conversations
-Join [#fil-dev-summit](https://app.slack.com/client/TEHTVS1L6/C05LHC1ULG1) in [Filecoin](https://filecoinproject.slack.com/ssb/redirect) Slack to stay connected with the conversations happening during the event and beyond.	
+            title: 'How can I participate at FIL Dev Summit?',
+            collapsedText: `- **Join the conversations**: Join [#fil-dev-summit](https://app.slack.com/client/TEHTVS1L6/C05LHC1ULG1) in [Filecoin](https://filecoinproject.slack.com/ssb/redirect) Slack to stay connected with the conversations happening during the event and beyond.	
 
- ##Tell a friend
-- Let us know if there is someone you think we should invite, or direct them to our [website](https://fildev.io/).
+- **Tell a friend**: Let us know if there is someone you think we should invite, or direct them to our [website](https://fildev.io/).
 
-##Lead a Track
-- Submit your track for either/both locations in the schedule section of our [website](https://fildev.io/).
+- **Lead a Track**: Submit your track for either/both locations in the schedule section of our [website](https://fildev.io/).
 
-##Give a Talk
-- Not ready to lead an entire track, but still would like to contribute? Submit your talk for either/both locations in the schedule section of our website.
+- **Give a Talk**: Not ready to lead an entire track, but still would like to contribute? Submit your talk for either/both locations in the schedule section of our website.
 
-##Volunteer
-- Email [miwa@protocol.ai](mailto:miwa@protocol.ai) if you’d like to help make the production of this event a success. We could really use your help!
+- **Volunteer**: Email [miwa@protocol.ai](mailto:miwa@protocol.ai) if you’d like to help make the production of this event a success. We could really use your help!
 
-##Sponsor
-- Your support helps bring together different teams from around the world to advance the core protocol development and evolve the Filecoin network. If you’re interested in sponsorship, please email us at [miwa@protocol.ai](mailto:miwa@protocol.ai) for more information.		
 
-##Keep up the momentum!
-- After the event, all of the tracks will be posted to the Filecoin Youtube channel. Be sure to share your talk or track videos with the world! Help the broader community see all of the great work that has transpired and get a sense of what they can expect to see more of for the rest of the year and beyond.`,
-            backgroundColor: 'black',
+- **Sponsor**: Your support helps bring together different teams from around the world to advance the core protocol development and evolve the Filecoin network. If you’re interested in sponsorship, please email us at [miwa@protocol.ai](mailto:miwa@protocol.ai) for more information.		
+
+
+- **Become a Scholar**: Note that this program is designed to provide opportunities for individuals from underrepresented communities, unique circumstances, or developing areas to participate in FIL Dev Summit. Priority will be given to individuals with a history of strong contributions to FIL implementations and related projects, or potential future contributions to the FIL Implementors community.
+
+- **Keep up the momentum!**: After the event, all of the tracks will be posted to the Filecoin Youtube channel. Be sure to share your talk or track videos with the world! Help the broader community see all of the great work that has transpired and get a sense of what they can expect to see more of for the rest of the year and beyond.`,
+            backgroundColor: 'linear-gradient(to right,#39C1CB, #006FEC)',
           },
           {
             id: 'media',
             type: BlockTypeEnum.COLLAPSABLE,
             title: 'What if I need a visa?',
-            collapsedText: 'See attached docs.',
-            backgroundColor: 'black',
+            collapsedText:
+              'See the attached docs for Letter of Support/Invitation for Entry Visa: [Iceland](https://drive.google.com/file/d/1jZ8ZbYnX8nvJeS01ou7eKPWKY94IVTfb/view?usp=sharing) and [Singapore](https://drive.google.com/file/d/1Biowq7ENIF9aGNTz69rF0c7yHCusbXyd/view?usp=sharing).',
+            backgroundColor: 'linear-gradient(to right,#39C1CB, #006FEC)',
           },
         ],
       },
@@ -395,7 +465,7 @@ Join [#fil-dev-summit](https://app.slack.com/client/TEHTVS1L6/C05LHC1ULG1) in [F
 - [Submit for Asia](https://airtable.com/appEjnh5rpWMsjocb/shrw3Ha0yTusDmcOg)
 
 - [Submit for EU/NA](https://airtable.com/appEjnh5rpWMsjocb/shr6SmQjqdgn5Pc90) `,
-            backgroundColor: 'black',
+            backgroundColor: 'linear-gradient(to right,#39C1CB, #006FEC)',
           },
           {
             id: 'media',
@@ -403,15 +473,21 @@ Join [#fil-dev-summit](https://app.slack.com/client/TEHTVS1L6/C05LHC1ULG1) in [F
             title: 'How can I lead a track?',
             collapsedText:
               'Please fill out the provided forms for FIL Dev [Summit Asia](https://airtable.com/appEjnh5rpWMsjocb/shrw3Ha0yTusDmcOg) and [FIL Dev Summit EU/NA](https://airtable.com/appEjnh5rpWMsjocb/shr6SmQjqdgn5Pc90) to lead a track or a talk.',
-            backgroundColor: 'black',
+            backgroundColor: 'linear-gradient(to right,#39C1CB, #006FEC)',
           },
           {
             id: 'media',
             type: BlockTypeEnum.COLLAPSABLE,
             title: 'Is there a cost to attend?',
-            collapsedText:
-              'This is an invite only event. Please fill out [this form to apply to attend](https://airtable.com/appEjnh5rpWMsjocb/shran7li4slfQSB04). Once you are accepted you will receive a ticket to attend FIL Dev Summit.',
-            backgroundColor: 'black',
+            collapsedText: `This is an invite only event. Please fill out [this form to apply to attend](https://airtable.com/appEjnh5rpWMsjocb/shran7li4slfQSB04).
+            
+- General Admission $150 USD
+- Early Bird $75 USD, now through Aug 25th!
+- Supporters ticket option with a description of: ‘Your supporter's ticket covers the cost of your own attendance & contributes to the IPFS Scholar's Program for others to attend as well. Thank you for your support!’ Priced at $1500 USD
+- Scholars - Limited Tickets Available
+
+`,
+            backgroundColor: 'linear-gradient(to right,#39C1CB, #006FEC)',
           },
           {
             id: 'media',
@@ -419,7 +495,7 @@ Join [#fil-dev-summit](https://app.slack.com/client/TEHTVS1L6/C05LHC1ULG1) in [F
             title: 'How can I sponsor? What does it include?',
             collapsedText:
               'Yes! We offer multiple levels of sponsorship. From Scholars, Node, and Cluster, to Network and Interplanetary, there will be a sponsorship for you! Please fill out [this sponsor form](https://airtable.com/appEjnh5rpWMsjocb/shrn57n37JyLSOTlV) for more information on what is included in each sponsorship and to apply.',
-            backgroundColor: 'black',
+            backgroundColor: 'linear-gradient(to right,#39C1CB, #006FEC)',
           },
           {
             id: 'media',
@@ -427,7 +503,7 @@ Join [#fil-dev-summit](https://app.slack.com/client/TEHTVS1L6/C05LHC1ULG1) in [F
             title: 'Will the sessions be recorded?',
             collapsedText:
               'All sessions will be recorded and uploaded to [Youtube channel](https://www.youtube.com/@IPFSbot) ASAP. We are also encouraging everyone to join [#fil-dev-summit](https://app.slack.com/client/TEHTVS1L6/C05LHC1ULG1) in [Filecoin](https://filecoinproject.slack.com/ssb/redirect) slack to stay up to date with all hallway track conversations.',
-            backgroundColor: 'black',
+            backgroundColor: 'linear-gradient(to right,#39C1CB, #006FEC)',
           },
           {
             id: 'media',
@@ -440,7 +516,7 @@ IPFS þing's Covid Policy:
 - Masks and testing are optional and at your discretion.
 
 - If you are presenting any symptoms of being sick or have come in contact with someone who has presented symptoms or tested positive in the last five days, please do not attend the event for your own and all other attendees' health and safety. Rest up and feel better!`,
-            backgroundColor: 'black',
+            backgroundColor: 'linear-gradient(to right,#39C1CB, #006FEC)',
           },
         ],
       },
@@ -450,7 +526,7 @@ IPFS þing's Covid Policy:
       //   type: BlockTypeEnum.COLLAPSABLE,
       //   title: 'Will there be recordings or live streams?',
       //   collapsedText: 'Please fill out the provided forms for FIL Dev Summit Asia and FIL Dev Summit Iceland to lead a track or a talk.',
-      //   backgroundColor: 'black',
+      //   backgroundColor: 'linear-gradient(to right,#39C1CB, #006FEC)',
       // },
     ],
   },
@@ -477,10 +553,28 @@ export const FILECOIN_DEV_SUMMIT_NAVIGATION_CONTENT = {
   type: NavigationTypeEnum.WITH_BORDER,
   backgroundColor: 'var(--color-white)',
   logo: {
-    src: '/media/filecoindevsummit-logo.png',
+    src: '/media/fildevsummit-logo.png',
     altText: 'FIL Dev Summit Logo',
     link: '/',
   },
+  // navItems: [
+  //   {
+  //     name: 'Singapore',
+  //     href: '#filecoin-dev-singapore',
+  //   },
+  //   {
+  //     name: 'Iceland',
+  //     href: '#iceland',
+  //   },
+  //   {
+  //     name: 'Tickets',
+  //     href: '#tickets',
+  //   },
+  //   {
+  //     name: 'FAQ',
+  //     href: '#faqs',
+  //   },
+  // ],
   cta: [
     {
       text: 'Apply to Attend',
