@@ -17,7 +17,7 @@ export default function SectionHomepage({ upcomingEvents }) {
             </div>
 
             <div className={` ${styles.col40} ${styles.buttonContainer}`}>
-              <Link style="text" href="https://lu.ma/tdbdprzd" target="_blank">
+              <Link linkStyle="text" href="https://lu.ma/tdbdprzd" target="_blank">
                 <button className={`${styles.button}`}>Get Tickets for FIL Dev Summit 2023</button>
               </Link>
             </div>
@@ -46,7 +46,7 @@ export default function SectionHomepage({ upcomingEvents }) {
             {upcomingEvents.map((event, index) => {
               return (
                 <div key={index}>
-                  <Link href={event?.link ?? ''} style="text" target={event?.target ?? '_blank'}>
+                  <Link href={event?.link ?? ''} linkStyle="text" target={event?.target ?? '_blank'}>
                     <img className={`${styles.col50} ${styles.image}`} src={event.image} />
                     <div className={styles.containerOverImage}>
                       <p className={`${styles.smallText}`} style={{ fontWeight: 'bold' }}>
