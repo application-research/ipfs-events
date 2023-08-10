@@ -6,7 +6,7 @@ export default async function Head({ params }) {
   const description =
     'FIL Dev Summit is a gathering of developers, builders, and engaged community members who want to contribute to the core protocol and network evolution of Filecoin (think IPFS Thing, but bigger!).';
   const url = 'https://filecoindevsummit.io';
-  const image = '/media/fildevsummet-twitter.png';
+  const image = '/media/twitter-preview-fildevsummit.png';
 
   // SUMMARY_LARGE_IMAGE: 1500x785
   return (
@@ -21,11 +21,11 @@ export default async function Head({ params }) {
       <meta property="og:description" content={description} />
       <meta property="og:image" content="" />
 
-      <meta property="twitter:card" content={image} />
+      <meta name="twitter:card" content="summary_large_image" />
       <meta property="twitter:url" content={url} />
       <meta property="twitter:title" content={title} />
       <meta property="twitter:description" content={description} />
-      <meta property="twitter:image" content="" />
+      <meta property="twitter:image" content={image} />
       <PlausibleScript />
     </>
   );
