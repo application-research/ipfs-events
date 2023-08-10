@@ -21,7 +21,7 @@ export default function ResponsiveNavbar({ navContent }) {
               {navItems?.map((navItem, index) => {
                 return (
                   <li className={styles.listItem} key={index}>
-                    <Link style="animated" href={navItem.href}>
+                    <Link linkStyle="animated" href={navItem.href}>
                       {navItem.name}
                     </Link>
                   </li>

@@ -100,7 +100,7 @@ export default function Footer({ disclaimer, filResourcesCard, contactUsCard, so
                 <div className={styles.sectionCopyright}>
                   {copyright.map((link, index) => {
                     return (
-                      <Link href={link.link} className={styles.link} key={index} target="_blank" style={'animated'}>
+                      <Link href={link.link} className={styles.link} key={index} target="_blank" linkStyle="animated">
                         {link.text}
                       </Link>
                     );
