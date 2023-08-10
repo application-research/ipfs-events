@@ -6,13 +6,15 @@ export interface MarkdownToJSXProps {
 }
 
 export function MarkdownToJSX({ children }: MarkdownToJSXProps) {
+  const contentWithLineBreaks = children.replace(/\n/g, '  \n');
+
   return (
     <Markdown
       options={{
         overrides: MarkdownToJSXComponents,
       }}
     >
-      {children}
+      {contentWithLineBreaks}
     </Markdown>
   );
 }

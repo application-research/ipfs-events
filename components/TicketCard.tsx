@@ -3,9 +3,9 @@ import styles from '@components/TicketCard.module.scss';
 import { CallToActionVariant } from './CallToActionVariant';
 import Link from './Link';
 
-export default function TicketCard({ cta, description, price, name, img }) {
+export default function TicketCard({ backgroundColor, textColor, cta, description, price, name, img }) {
   return (
-    <div className={styles.container}>
+    <div className={styles.container} style={{ color: textColor ?? 'var(--color-white)', backgroundColor: backgroundColor ?? 'var(--color-black)' }}>
       {img && (
         <Link href={cta?.link} target="_blank">
           <img className={styles.image} src={img?.src} aria-label={img?.ariaLabel ?? 'image'} />

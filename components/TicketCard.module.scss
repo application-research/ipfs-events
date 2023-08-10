@@ -1,25 +1,25 @@
 .container {
   border: 1px solid var(--color-black200);
-  background: var(--color-black200);
   color: var(--color-white);
   border-radius: var(--border-radius-small);
 }
 
 .image {
   width: 100%;
-  max-height: 18rem;
+  height: 18rem;
   object-fit: cover;
   border-top-left-radius: var(--border-radius-small);
   border-top-right-radius: var(--border-radius-small);
 
   @media (max-width: 768px) {
-    max-height: 15rem;
+    height: 15rem;
   }
 }
 
 .name {
   font-family: Inter;
   font-size: var(--font-size-medium);
+  font-weight: var(--font-weight-light);
 }
 
 .price {
@@ -29,6 +29,7 @@
 
 .description {
   max-width: 85ch;
+  font-family: Inter;
 }
 
 .textContent {
