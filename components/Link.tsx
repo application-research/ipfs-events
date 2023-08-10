@@ -23,16 +23,16 @@ export interface LinkProps {
   color?: string;
   href: string;
   props?: any;
-  style?: string;
+  linkStyle?: string;
   target?: string;
 }
 
-export default function Link({ children, className, color, href, props, style, target }: LinkProps) {
-  const defaultStyle = SwitchLinkStyle(style);
+export default function Link({ children, className, color, href, props, linkStyle, target }: LinkProps) {
+  const defaultStyle = SwitchLinkStyle(linkStyle);
 
   return (
-    <NextLink href={href} className={`${defaultStyle} ${className}`} {...props} target={target ?? '_self'}>
+    <a href={href} className={`${defaultStyle} ${className}`} {...props} target={target ?? '_self'}>
       <span>{children}</span>
-    </NextLink>
+    </a>
   );
 }

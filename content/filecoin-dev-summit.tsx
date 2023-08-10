@@ -247,7 +247,7 @@ export const FILECOIN_DEV_SUMMIT_2023_PAGE_CONTENT = [
     ],
   },
   {
-    id: 'filecoin-dev-singapore',
+    id: 'singapore',
     direction: BlockDirectionEnum.COLUMN,
     noGutter: 'no',
     backgroundColor: 'var(--color-white)',
@@ -348,7 +348,7 @@ export const FILECOIN_DEV_SUMMIT_2023_PAGE_CONTENT = [
     ],
   },
   {
-    id: 'filecoin-dev-iceland',
+    id: 'iceland',
     backgroundColor: 'var(--color-white)',
     direction: BlockDirectionEnum.COLUMN,
     noGutter: 'no',
@@ -464,7 +464,7 @@ export const FILECOIN_DEV_SUMMIT_2023_PAGE_CONTENT = [
   },
 
   {
-    id: '2',
+    id: 'faqs',
     title: 'FAQs',
     direction: BlockDirectionEnum.TWO_COLUMN,
     block: [
@@ -635,24 +635,24 @@ export const FILECOIN_DEV_SUMMIT_NAVIGATION_CONTENT = {
     altText: 'FIL Dev Summit Logo',
     link: '/',
   },
-  // navItems: [
-  //   {
-  //     name: 'Singapore',
-  //     href: '#filecoin-dev-singapore',
-  //   },
-  //   {
-  //     name: 'Iceland',
-  //     href: '#iceland',
-  //   },
-  //   {
-  //     name: 'Tickets',
-  //     href: '#tickets',
-  //   },
-  //   {
-  //     name: 'FAQ',
-  //     href: '#faqs',
-  //   },
-  // ],
+  navItems: [
+    {
+      name: 'Singapore',
+      href: '#singapore',
+    },
+    {
+      name: 'Iceland',
+      href: '#iceland',
+    },
+    {
+      name: 'Tickets',
+      href: '#tickets',
+    },
+    {
+      name: 'FAQs',
+      href: '#faqs',
+    },
+  ],
   cta: [
     {
       text: 'Apply to Attend',
