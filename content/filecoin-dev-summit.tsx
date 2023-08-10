@@ -188,9 +188,9 @@ export const FILECOIN_DEV_SUMMIT_2023_PAGE_CONTENT = [
             textColor: 'black',
             description:
               'Apply to attend Singapore FIL Dev Summit from September 12 - 14th, 2023. Tickets are $150 for General Admission for all three days. Early bird tickets are 50% off until August 25th, speakers tickets are 50% off, and Volunteers get 30% off  for 2 hrs of time.',
-            img: {
-              src: '/media/singapore-logo.png',
-            },
+            // img: {
+            //   src: '/media/singapore-logo.png',
+            // },
             cta: {
               type: CallToActionVariantEnum.BORDER,
               target: '_blank',
@@ -209,9 +209,9 @@ export const FILECOIN_DEV_SUMMIT_2023_PAGE_CONTENT = [
             name: 'Iceland',
             description:
               'Apply to attend Iceland FIL Dev Summit from September 25 - 27th, 2023. Tickets are $150 for General Admission for all three days. Early bird tickets are 50% off until August 25th, speakers tickets are 50% off, and Volunteers get 30% off  for 2 hrs of time.',
-            img: {
-              src: '/media/iceland-logo.png',
-            },
+            // img: {
+            //   src: '/media/iceland-logo.png',
+            // },
             cta: {
               type: CallToActionVariantEnum.BORDER,
               buttonColor: 'linear-gradient(to right,#39C1CB, #006FEC);',
@@ -230,9 +230,9 @@ export const FILECOIN_DEV_SUMMIT_2023_PAGE_CONTENT = [
             name: 'Scholars',
             description:
               'This program is designed to provide opportunities for individuals from underrepresented communities, unique circumstances, or developing areas to participate in FIL Dev Summit. Priority will be given to individuals with a history of strong contributions to FIL implementations and related projects, or potential future contributions to the FIL Implementors community.',
-            img: {
-              src: '/media/scholars-logo.png',
-            },
+            // img: {
+            //   src: '/media/scholars-logo.png',
+            // },
             cta: {
               type: CallToActionVariantEnum.BORDER,
               buttonColor: 'linear-gradient(to right,#39C1CB, #006FEC);',
