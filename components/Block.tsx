@@ -11,7 +11,7 @@ import MediaGrid from './MediaGrid';
 import Schedule from './Schedule';
 import Table from './Table';
 import Text from './Text';
-import TicketCard from './TicketCard';
+import Tickets from './Tickets';
 
 export function Block({ block }) {
   switch (block.type) {
@@ -40,7 +40,7 @@ export function Block({ block }) {
     case (block.type = BlockTypeEnum.TABLE):
       return <Table {...block} />;
     case (block.type = BlockTypeEnum.TICKET_CARD):
-      return <TicketCard {...block} />;
+      return <Tickets {...block} />;
     case (block.type = BlockTypeEnum.TEXT):
       return <Text {...block} />;
     default:
