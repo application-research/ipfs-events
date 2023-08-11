@@ -10,7 +10,7 @@ export function SchedulePopUp({ trackTalks, isOpen, onClose, style }) {
   //get the track name key from trackDetails object
   const trackName = Object.keys(trackDetails)[0];
   //access the track details values inside the track name
-  const { location, speakers, time, title, trackDate, trackAttendees, trackDesc } = trackDetails[trackName] ?? '';
+  const { discussionPoints, location, speakers, time, title, trackDate, trackAttendees, trackDesc } = trackDetails[trackName] ?? '';
 
   const handleCloseClick = (e) => {
     e.preventDefault();
@@ -143,9 +143,16 @@ export function SchedulePopUp({ trackTalks, isOpen, onClose, style }) {
 
             {speakers && (
               <p className={styles.people}>
-                <strong>Speakers</strong>: {trackAttendees}
+                <strong>Speakers</strong>: {speakers}
               </p>
             )}
+            {discussionPoints && (
+              <p className={styles.description}>
+                <strong>Discussion points: </strong>
+                {discussionPoints}
+              </p>
+            )}
+
             {trackDesc && <p className={styles.description}>{trackDesc}</p>}
             {/* {ctas && (
             <div className={styles.row} style={{ paddingTop: '0.5rem', display: 'flex', gap: '0.5rem' }}>
@@ -179,7 +186,7 @@ export function SchedulePopUp({ trackTalks, isOpen, onClose, style }) {
                       {desc && <MarkdownToJSX>{desc}</MarkdownToJSX>}
                       {videoLink && (
                         <span>
-                          <Link href={videoLink} style="animated">
+                          <Link href={videoLink} linkStyle="animated">
                             <strong style={{ fontSize: 'var(--font-size-small)' }}>View Video</strong>
                           </Link>
                         </span>
