@@ -183,8 +183,6 @@ export function getFormattedAirtableFields(airtableData, timezone?: any): any {
 
         const rawTrackSelected = formattedRecord.tracks;
 
-        console.log(rawTrackSelected, 'raw track selected');
-
         const trackSelected =
           typeof rawTrackSelected === 'string' ? rawTrackSelected : Array.isArray(rawTrackSelected) && rawTrackSelected.length > 0 ? rawTrackSelected[0] : undefined;
 

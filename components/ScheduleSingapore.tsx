@@ -98,7 +98,7 @@ export default function ScheduleSingapore({ scheduleData }) {
   // const calendarData: any = getFormattedAirtableFields(data);
 
   const calendarData = SCHEDULE_SINGAPORE;
-  console.log(calendarData, 'calendar data');
+
   return (
     <div className={styles.container}>
       <section
@@ -122,7 +122,6 @@ export default function ScheduleSingapore({ scheduleData }) {
           }}
         >
           {Object.keys(calendarData).map((date, index) => {
-            console.log(date, 'date');
             return (
               <div className={styles.heading} key={index}>
                 <p>{date}</p>
