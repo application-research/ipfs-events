@@ -171,7 +171,6 @@ export function getTrackDetails(formattedRecords, trackSelected, timezone) {
 //To Do: make this more readable
 export function getFormattedAirtableFields(airtableData, timezone?: any): any {
   const formattedRecords = formatAirtableMetaData(airtableData, timezone);
-
   const groupedData = {};
 
   // Iterate through each formatted record and group them by date and track
@@ -181,7 +180,11 @@ export function getFormattedAirtableFields(airtableData, timezone?: any): any {
     trackDates.forEach((trackDate) => {
       if (trackDate) {
         const formattedDate = toDateISOString(trackDate, timezone);
+
         const rawTrackSelected = formattedRecord.tracks;
+
+        console.log(rawTrackSelected, 'raw track selected');
+
         const trackSelected =
           typeof rawTrackSelected === 'string' ? rawTrackSelected : Array.isArray(rawTrackSelected) && rawTrackSelected.length > 0 ? rawTrackSelected[0] : undefined;
 
@@ -207,9 +210,9 @@ export function getFormattedAirtableFields(airtableData, timezone?: any): any {
 export function getAirtableData(view, callback) {
   const Airtable = require('airtable');
 
-  const base = new Airtable({ apiKey: process.env.AIRTABLE_API }).base(process.env.AIRTABLE_BASE_ID);
+  const base = new Airtable({ apiKey: process.env.AIRTABLE_API }).table(process.env.BASE_IPFS_THING);
 
-  const records = [] as any;
+  const records = [];
 
   //Reffer to Airtable Javascript library
   base('Responses')
@@ -231,3 +234,24 @@ export function getAirtableData(view, callback) {
 
   return records;
 }
+
+// export function getAirtableData() {
+//   const baseId = process.env.AIRTABLE_SINGAPORE_BASE_ID;
+
+//   const token = process.env.AIRTABLE_SINGAPORE_TOKEN;
+//   const url = `https://api.airtable.com/v0/${baseId}/`;
+//   const headers = {
+//     Authorization: `Bearer ${token}`,
+//   };
+
+//   fetch(url, { headers }).then((response) =>
+//     response
+//       .json()
+//       .then((data) => {
+//         console.log(data, 'airtable data');
+//       })
+//       .catch((error) => {
+//         console.log(error);
+//       })
+//   );
+// }

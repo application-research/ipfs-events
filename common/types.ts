@@ -13,7 +13,12 @@ export enum BlockTypeEnum {
   TABLE = 'table',
   TEXT = 'text',
   TICKET_CARD = 'ticket-card',
+<<<<<<< HEAD
   UPCOMING_EVENTS = 'upcoming-events',
+=======
+  SCHEDULE_ICELAND = 'schedule-iceland',
+  SCHEDULE_SINGAPORE = 'schedule-singapre',
+>>>>>>> 2127ccc (added track details)
 }
 
 export enum BlockDirectionEnum {

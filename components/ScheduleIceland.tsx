@@ -1,10 +1,11 @@
 'use client';
 import styles from '@components/Schedule.module.scss';
 
-import { getAirtableData, getFormattedAirtableFields } from '@root/resolvers/airtable-import';
+import { getFormattedAirtableFields } from '@root/resolvers/airtable-import';
 import { SchedulePopUp } from './SchedulePopUp';
 import { useEffect, useRef, useState } from 'react';
 import ScrollTableTooltip from './ScrollTableTooltip';
+import { SCHEDULE_ICELAND } from '@root/content/schedule-iceland';
 
 const NODE = process.env.NODE_ENV || 'development';
 const IS_PRODUCTION = NODE === 'production';
@@ -13,7 +14,7 @@ if (!IS_PRODUCTION) {
   require('dotenv').config();
 }
 
-export default function Schedule({ scheduleData }) {
+export default function ScheduleIceland({ scheduleData }) {
   if (scheduleData?.airtable?.tableName == null) return null;
 
   const [selectedEvent, setSelectedEvent] = useState(null);
@@ -27,16 +28,12 @@ export default function Schedule({ scheduleData }) {
   const tableRef = useRef<HTMLDivElement>(null);
   const headersRef = useRef<HTMLDivElement>(null);
 
-<<<<<<< HEAD
-  const tableName = scheduleData?.airtable?.tableName;
-=======
   // const apiKey = scheduleData?.airtable?.apiKey;
   // const baseId = scheduleData?.airtable?.baseId;
 
   // const tableName = 'Asia Talk/Track Submissions + Forms';
   const tableName = scheduleData?.airtable?.tableName;
 
->>>>>>> 2127ccc (added track details)
   const scheduleBackgroundColor = scheduleData?.style?.backgroundColor ?? 'var(--color-white)';
   const scheduleHoverColor = scheduleData?.style?.hoverColor ?? 'var(--color-gray-transparent)';
 
@@ -66,7 +63,7 @@ export default function Schedule({ scheduleData }) {
   };
 
   useEffect(() => {
-    getAirtableData(tableName, (records) => {
+    getAirtableDataIceland(tableName, (records) => {
       if (records) {
         setData(records);
       }
@@ -102,7 +99,9 @@ export default function Schedule({ scheduleData }) {
     }
   });
 
-  const calendarData: any = getFormattedAirtableFields(data);
+  //const calendarData: any = getFormattedAirtableFields(data);
+
+  const calendarData = SCHEDULE_ICELAND;
 
   return (
     <div className={styles.container}>
@@ -161,32 +160,6 @@ export default function Schedule({ scheduleData }) {
             );
           })}
         </div>
-<<<<<<< HEAD
-      </div>
-      {selectedEvent && (
-        <section style={{ position: 'relative' }}>
-          {isOverlayOpen && <div className={styles.overlay} onClick={handleOverlayClick} />}
-          <div className={`${styles.absoluteContainer} ${isOverlayOpen ? styles.active : ''}`} onClick={handleContainerClick}>
-            <SchedulePopUp style={scheduleStyle} trackTalks={selectedEvent} isOpen={isOverlayOpen} onClose={handlePopupClose} />
-          </div>
-        </section>
-        {selectedEvent && (
-          <>
-            {isOverlayOpen && <div className={styles.overlay} onClick={handleOverlayClick} />}
-            <div className={`${styles.absoluteContainer} ${isOverlayOpen ? styles.active : ''}`} onClick={handleContainerClick}>
-              <SchedulePopUp eventData={eventData} eventItem={selectedEvent} setSelectedEvent={setSelectedEvent} />
-            </div>
-          </>
-        )}
-      </div>  */}
-      <div>Full Event Schedule Coming Soon</div>
-
-      <div className={styles.row}>
-        {calendarData?.ctas?.map((cta, index) => {
-          return <CallToActionVariant cta={cta} type={cta.type} key={index} />;
-        })}
-=======
->>>>>>> 2127ccc (added track details)
       </div>
       {selectedEvent && (
         <section style={{ position: 'relative' }}>
@@ -198,4 +171,31 @@ export default function Schedule({ scheduleData }) {
       )}
     </div>
   );
+}
+
+export function getAirtableDataIceland(view, callback) {
+  const Airtable = require('airtable');
+  const base = new Airtable({ apiKey: process.env.AIRTABLE_API }).base(process.env.AIRTABLE_BASE_ID);
+
+  const records = [];
+
+  //Reffer to Airtable Javascript library
+  base('Responses')
+    .select({ view })
+    .eachPage(
+      (pageRecords, fetchNextPage) => {
+        records.push(...pageRecords);
+        fetchNextPage();
+      },
+      (err) => {
+        if (err) {
+          console.error('Error fetching Airtable data:', err);
+          callback(null);
+        } else {
+          callback(records);
+        }
+      }
+    );
+
+  return records;
 }
