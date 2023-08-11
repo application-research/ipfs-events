@@ -8,72 +8,9 @@ export const FILECOIN_DEV_SUMMIT_2023_HERO_CONTENT = {
     'FIL Dev Summit is a gathering of developers, builders, and engaged community members who want to contribute to the core protocol and network evolution of Filecoin (think IPFS Thing, but bigger!).',
 };
 
-export const FILECOIN_DEV_SUMMIT_ICELAND_CALENDAR = {
-  formLink: {
-    title: 'Submit a Talk/Track',
-    link: 'https://airtable.com/appEjnh5rpWMsjocb/shr6SmQjqdgn5Pc90',
-  },
-  ctas: [
-    {
-      type: CallToActionVariantEnum.BUTTON,
-      textColor: 'white',
-      target: '_blank',
-      text: 'Apply to Attend',
-      buttonColor: 'linear-gradient(to right,#39C1CB, #006FEC);',
-      link: 'https://airtable.com/appEjnh5rpWMsjocb/shran7li4slfQSB04',
-    },
-    {
-      type: CallToActionVariantEnum.BUTTON,
-      textColor: 'white',
-      target: '_blank',
-      text: 'Submit a Talk/Track',
-      buttonColor: 'linear-gradient(to right,#39C1CB, #006FEC);',
-      link: 'https://airtable.com/appEjnh5rpWMsjocb/shr6SmQjqdgn5Pc90',
-    },
-  ],
-};
-
-export const FILECOIN_DEV_SUMMIT_ASIA_CALENDAR = {
-  formLink: {
-    title: 'Submit a Talk/Track',
-    link: 'https://airtable.com/appEjnh5rpWMsjocb/shrw3Ha0yTusDmcOg',
-  },
-  ctas: [
-    {
-      type: CallToActionVariantEnum.BUTTON,
-      textColor: 'white',
-      target: '_blank',
-      text: 'Apply to Attend',
-      buttonColor: 'linear-gradient(to right,#39C1CB, #006FEC);',
-      link: 'https://airtable.com/appEjnh5rpWMsjocb/shran7li4slfQSB04',
-    },
-    {
-      type: CallToActionVariantEnum.BUTTON,
-      textColor: 'white',
-      target: '_blank',
-      text: 'Submit a Talk/Track',
-      buttonColor: 'linear-gradient(to right,#39C1CB, #006FEC);',
-      link: 'https://airtable.com/appEjnh5rpWMsjocb/shrw3Ha0yTusDmcOg',
-    },
-  ],
-};
-
 export const FILECOIN_DEV_SUMMIT_PAGE_STYLE_CONTENT = {
   backgroundColor: 'var(--color-white)',
   textColor: 'var(--color-black)',
-};
-
-export const EVENT_PAGE_SCHEDULE_IPFS_THING_2023 = {
-  style: {
-    backgroundColor: 'var(--color-white)',
-    hoverColor: 'var(--gray-transparent)',
-    emptyContainerColor: 'var(--gray-transparent)',
-  },
-  airtable: {
-    tableName: 'IPFS þing 2023 Track & Talk Submissions',
-    // apiKey: process.env.AIRTABLE_API,
-    // baseId: process.env.AIRTABLE_BASE_ID,
-  },
 };
 
 export const FIL_DEV_SUMMIT_ICELAND = {
@@ -99,17 +36,6 @@ export const FIL_DEV_SUMMIT_SINGAPORE = {
 };
 
 export const FILECOIN_DEV_SUMMIT_2023_PAGE_CONTENT = [
-  // {
-  //   id: 'about',
-  //   direction: 'column',
-  //   title: 'Schedule - Iceland',
-  //   block: [
-  //     {
-  //       type: BlockTypeEnum.SCHEDULE_ICELAND,
-  //       scheduleData: FIL_DEV_SUMMIT_ICELAND,
-  //     },
-  //   ],
-  // },
   {
     id: '2',
     subtitle: 'Sponsors',
@@ -274,61 +200,20 @@ export const FILECOIN_DEV_SUMMIT_2023_PAGE_CONTENT = [
     id: 'about',
     direction: BlockDirectionEnum.COLUMN,
     title: 'FIL Dev Summit - Singapore Schedule',
+    cta: {
+      type: CallToActionVariantEnum.BUTTON,
+      textColor: 'white',
+      target: '_blank',
+      text: 'Submit a Talk/Track',
+      buttonColor: 'linear-gradient(to right,#39C1CB, #006FEC);',
+      link: 'https://airtable.com/appEjnh5rpWMsjocb/shrw3Ha0yTusDmcOg',
+    },
+
     block: [
-      {
-        type: BlockTypeEnum.SCHEDULE,
-        calendarData: FILECOIN_DEV_SUMMIT_ASIA_CALENDAR,
-      },
       {
         type: BlockTypeEnum.SCHEDULE_SINGAPORE,
         scheduleData: FIL_DEV_SUMMIT_SINGAPORE,
       },
-      // {
-      //   type: BlockTypeEnum.TABLE,
-      //   title: 'Tentative Tracks and Key Topics',
-      //   table: [
-      //     {
-      //       header: 'Track',
-      //       tableItems: [
-      //         {
-      //           text: 'FVM application & tooling',
-      //         },
-      //         {
-      //           text: 'SP tooling & stack',
-      //         },
-      //         {
-      //           text: 'Client Data Onboarding protocol / tools / market Part 1: data onboarding improvements, deal markets/storage service platforms',
-      //         },
-      //         {
-      //           text: 'Protocol  Development & Evolution: Part 1',
-      //         },
-      //         {
-      //           text: 'Governance & Community Part 1',
-      //         },
-      //       ],
-      //     },
-      //     {
-      //       header: 'Discussion Points',
-      //       tableItems: [
-      //         {
-      //           text: 'Defi, program storage, explorers, wallets',
-      //         },
-      //         {
-      //           text: 'SP operations (data and storage onboarding, proving, block creation, account management, monitoring, recovery...), sealing as a service, seal optimization',
-      //         },
-      //         {
-      //           text: 'Capacity onboarding improvements, snap deals aggregation, deal markets/storage service platforms',
-      //         },
-      //         {
-      //           text: 'layer 0 vs 1 vs 2 protocol, moving functionality into FVM, IPC regions for Filecoin, upgrade path, Better PoReps, upgrading the filecoin economy',
-      //         },
-      //         {
-      //           text: 'FIL+, FIP process, Network upgrade scope/schedule, Ambassadors, Funding programs, 2024 events',
-      //         },
-      //       ],
-      //     },
-      //   ],
-      // },
     ],
   },
   {
@@ -354,80 +239,19 @@ export const FILECOIN_DEV_SUMMIT_2023_PAGE_CONTENT = [
     id: 'about',
     direction: BlockDirectionEnum.COLUMN,
     title: 'FIL Dev Summit - Iceland Schedule',
+    cta: {
+      type: CallToActionVariantEnum.BUTTON,
+      textColor: 'white',
+      target: '_blank',
+      text: 'Submit a Talk/Track',
+      buttonColor: 'linear-gradient(to right,#39C1CB, #006FEC);',
+      link: 'https://airtable.com/appEjnh5rpWMsjocb/shr6SmQjqdgn5Pc90',
+    },
     block: [
       {
         type: BlockTypeEnum.SCHEDULE_ICELAND,
         scheduleData: FIL_DEV_SUMMIT_ICELAND,
       },
-      {
-        type: BlockTypeEnum.SCHEDULE,
-        calendarData: FILECOIN_DEV_SUMMIT_ICELAND_CALENDAR,
-      },
-
-      // {
-      //   type: BlockTypeEnum.TABLE,
-      //   title: 'Tentative Tracks and Key Topics',
-      //   table: [
-      //     {
-      //       header: 'Track',
-      //       tableItems: [
-      //         {
-      //           text: 'Client Data Onboarding protocol / tools / market Part 2',
-      //         },
-      //         {
-      //           text: 'Protocol  Development & Evolution: Part 2',
-      //         },
-      //         {
-      //           text: 'Governance & Community Part 2',
-      //         },
-      //         {
-      //           text: 'Clients Onboarding Experience',
-      //         },
-      //         {
-      //           text: 'Chain tooling & infrastructure',
-      //         },
-      //         {
-      //           text: 'FVM & Runtimes',
-      //         },
-      //         {
-      //           text: 'Scalability & compute over data',
-      //         },
-      //         {
-      //           text: 'Filecoin Retrievals & Data Availability',
-      //         },
-      //       ],
-      //     },
-      //     {
-      //       header: 'Discussion Points',
-      //       tableItems: [
-      //         {
-      //           text: 'Capacity onboarding improvements, snap deals aggregation, deal markets/storage service platforms, Client advisory board feedback',
-      //         },
-      //         {
-      //           text: 'layer 0 vs 1 vs 2 protocol, moving functionality into FVM, IPC regions for Filecoin, upgrade path, Better PoReps, upgrading the filecoin economy',
-      //         },
-      //         {
-      //           text: 'FIL+, FIP process, Network upgrade scope/schedule, Ambassadors, Funding programs, 2024 events',
-      //         },
-      //         {
-      //           text: 'Identify gaps within the network users, and plan collaborative contributions to reduce friction and improve utilization of the network. (connect to Client Data Onboarding track)',
-      //         },
-      //         {
-      //           text: 'Snapshotting, API services, test networks, monitoring',
-      //         },
-      //         {
-      //           text: 'RaaS, new runtimes, moving modules into FVM',
-      //         },
-      //         {
-      //           text: 'IPC L2s, CoD, Meridian, Tableland, etc',
-      //         },
-      //         {
-      //           text: 'Content Address, Retrieval Market, Retrieval Incentives, etc',
-      //         },
-      //       ],
-      //     },
-      //   ],
-      // },
     ],
   },
 
