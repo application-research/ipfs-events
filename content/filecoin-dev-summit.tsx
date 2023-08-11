@@ -4,8 +4,6 @@ export const FILECOIN_DEV_SUMMIT_2023_HERO_CONTENT = {
   id: 'hero',
   type: BlockTypeEnum.HERO_NO_BACKGROUND,
   title: 'FIL Dev Summit',
-  // date: 'September 12 - 14th, 2023 ',
-  // location: 'Upcoming Locations - Asia and Iceland',
   description:
     'FIL Dev Summit is a gathering of developers, builders, and engaged community members who want to contribute to the core protocol and network evolution of Filecoin (think IPFS Thing, but bigger!).',
 };
@@ -65,7 +63,53 @@ export const FILECOIN_DEV_SUMMIT_PAGE_STYLE_CONTENT = {
   textColor: 'var(--color-black)',
 };
 
+export const EVENT_PAGE_SCHEDULE_IPFS_THING_2023 = {
+  style: {
+    backgroundColor: 'var(--color-white)',
+    hoverColor: 'var(--gray-transparent)',
+    emptyContainerColor: 'var(--gray-transparent)',
+  },
+  airtable: {
+    tableName: 'IPFS þing 2023 Track & Talk Submissions',
+    // apiKey: process.env.AIRTABLE_API,
+    // baseId: process.env.AIRTABLE_BASE_ID,
+  },
+};
+
+export const FIL_DEV_SUMMIT_ICELAND = {
+  style: {
+    backgroundColor: 'var(--color-white)',
+    hoverColor: 'var(--gray-transparent)',
+    emptyContainerColor: 'var(--gray-transparent)',
+  },
+  airtable: {
+    tableName: 'NA/EU Talk Track Submissions + Forms',
+  },
+};
+
+export const FIL_DEV_SUMMIT_SINGAPORE = {
+  style: {
+    backgroundColor: 'var(--color-white)',
+    hoverColor: 'var(--gray-transparent)',
+    emptyContainerColor: 'var(--gray-transparent)',
+  },
+  airtable: {
+    tableName: 'Asia Talk/Track Submissions + Forms',
+  },
+};
+
 export const FILECOIN_DEV_SUMMIT_2023_PAGE_CONTENT = [
+  // {
+  //   id: 'about',
+  //   direction: 'column',
+  //   title: 'Schedule - Iceland',
+  //   block: [
+  //     {
+  //       type: BlockTypeEnum.SCHEDULE_ICELAND,
+  //       scheduleData: FIL_DEV_SUMMIT_ICELAND,
+  //     },
+  //   ],
+  // },
   {
     id: '2',
     subtitle: 'Sponsors',
@@ -155,7 +199,6 @@ export const FILECOIN_DEV_SUMMIT_2023_PAGE_CONTENT = [
             textColor: 'black',
             description:
               'Apply to attend Singapore FIL Dev Summit from September 12-14, 2023. General Admission is $150 for all three days. Early bird tickets are 50% off until August 25.',
-
             cta: {
               type: CallToActionVariantEnum.BORDER,
               target: '_blank',
@@ -237,6 +280,10 @@ export const FILECOIN_DEV_SUMMIT_2023_PAGE_CONTENT = [
         calendarData: FILECOIN_DEV_SUMMIT_ASIA_CALENDAR,
       },
       {
+        type: BlockTypeEnum.SCHEDULE_SINGAPORE,
+        scheduleData: FIL_DEV_SUMMIT_SINGAPORE,
+      },
+      {
         type: BlockTypeEnum.TABLE,
         title: 'Tentative Tracks and Key Topics',
         table: [
@@ -309,9 +356,14 @@ export const FILECOIN_DEV_SUMMIT_2023_PAGE_CONTENT = [
     title: 'FIL Dev Summit - Iceland Schedule',
     block: [
       {
+        type: BlockTypeEnum.SCHEDULE_ICELAND,
+        scheduleData: FIL_DEV_SUMMIT_ICELAND,
+      },
+      {
         type: BlockTypeEnum.SCHEDULE,
         calendarData: FILECOIN_DEV_SUMMIT_ICELAND_CALENDAR,
       },
+
       {
         type: BlockTypeEnum.TABLE,
         title: 'Tentative Tracks and Key Topics',

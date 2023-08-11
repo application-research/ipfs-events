@@ -1,10 +1,11 @@
 'use client';
 import styles from '@components/Schedule.module.scss';
 
-import { getAirtableData, getFormattedAirtableFields } from '@root/resolvers/airtable-import';
+import { getFormattedAirtableFields } from '@root/resolvers/airtable-import';
 import { SchedulePopUp } from './SchedulePopUp';
 import { useEffect, useRef, useState } from 'react';
 import ScrollTableTooltip from './ScrollTableTooltip';
+import { SCHEDULE_ICELAND } from '@root/content/schedule-iceland';
 
 const NODE = process.env.NODE_ENV || 'development';
 const IS_PRODUCTION = NODE === 'production';
@@ -13,7 +14,7 @@ if (!IS_PRODUCTION) {
   require('dotenv').config();
 }
 
-export default function Schedule({ scheduleData }) {
+export default function ScheduleIceland({ scheduleData }) {
   if (scheduleData?.airtable?.tableName == null) return null;
 
   const [selectedEvent, setSelectedEvent] = useState(null);
@@ -26,9 +27,6 @@ export default function Schedule({ scheduleData }) {
 
   const tableRef = useRef<HTMLDivElement>(null);
   const headersRef = useRef<HTMLDivElement>(null);
-
-  // const apiKey = scheduleData?.airtable?.apiKey;
-  // const baseId = scheduleData?.airtable?.baseId;
 
   // const tableName = 'Asia Talk/Track Submissions + Forms';
   const tableName = scheduleData?.airtable?.tableName;
@@ -62,7 +60,7 @@ export default function Schedule({ scheduleData }) {
   };
 
   useEffect(() => {
-    getAirtableData(tableName, (records) => {
+    getAirtableDataIceland(tableName, (records) => {
       if (records) {
         setData(records);
       }
@@ -98,7 +96,9 @@ export default function Schedule({ scheduleData }) {
     }
   });
 
-  const calendarData: any = getFormattedAirtableFields(data);
+  //const calendarData: any = getFormattedAirtableFields(data);
+
+  const calendarData = SCHEDULE_ICELAND;
 
   return (
     <div className={styles.container}>
@@ -142,13 +142,15 @@ export default function Schedule({ scheduleData }) {
                   const events = calendarData[dateKey];
                   const eventDetails = events[eventItem];
 
-                  const { title, time, trackDate, trackAttendees, location } = eventDetails.trackDetails[eventItem] ?? '';
+                  const { title, time, speakers, trackDate, trackAttendees, location } = eventDetails.trackDetails[eventItem] ?? '';
 
                   return (
                     <div style={{ ...scheduleStyle }} className={styles.eventBox} key={eventIndex} onClick={() => handleEventClick(eventDetails)}>
                       {title && <p className={styles.eventName}>{title}</p>}
                       {time && <p className={styles.time}>{time}</p>}
                       {location && <p className={styles.location}>{location}</p>}
+                      {speakers && <p className={styles.location}> {speakers}</p>}
+
                       <p className={styles.people}>👤 {trackAttendees ?? 'All Welcome'}</p>
                     </div>
                   );
@@ -168,4 +170,31 @@ export default function Schedule({ scheduleData }) {
       )}
     </div>
   );
+}
+
+export function getAirtableDataIceland(view, callback) {
+  const Airtable = require('airtable');
+  const base = new Airtable({ apiKey: process.env.AIRTABLE_API }).base(process.env.AIRTABLE_BASE_ID);
+
+  const records = [];
+
+  //Reffer to Airtable Javascript library
+  base('Responses')
+    .select({ view })
+    .eachPage(
+      (pageRecords, fetchNextPage) => {
+        records.push(...pageRecords);
+        fetchNextPage();
+      },
+      (err) => {
+        if (err) {
+          console.error('Error fetching Airtable data:', err);
+          callback(null);
+        } else {
+          callback(records);
+        }
+      }
+    );
+
+  return records;
 }

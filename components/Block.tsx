@@ -12,6 +12,8 @@ import Schedule from './Schedule';
 import Table from './Table';
 import Text from './Text';
 import Tickets from './Tickets';
+import ScheduleIceland from './ScheduleIceland';
+import ScheduleSingapore from './ScheduleSingapore';
 
 export function Block({ block }) {
   switch (block.type) {
@@ -37,6 +39,10 @@ export function Block({ block }) {
       return <MediaBlock {...block} />;
     case (block.type = BlockTypeEnum.SCHEDULE):
       return <Schedule {...block} />;
+    case (block.type = BlockTypeEnum.SCHEDULE_ICELAND):
+      return <ScheduleIceland {...block} />;
+    case (block.type = BlockTypeEnum.SCHEDULE_SINGAPORE):
+      return <ScheduleSingapore {...block} />;
     case (block.type = BlockTypeEnum.TABLE):
       return <Table {...block} />;
     case (block.type = BlockTypeEnum.TICKET_CARD):

@@ -1,102 +1,133 @@
 import styles from '@components/SchedulePopUp.module.scss';
-import { Button, CallToActionVariant } from './CallToActionVariant';
-import { CallToActionVariantEnum } from '@root/common/types';
+
+import Link from './Link';
 import { MarkdownToJSX } from './Markdown';
 
-export function SchedulePopUp({ eventItem, eventData, setSelectedEvent }) {
-  const closeCTA = {
-    type: CallToActionVariantEnum.BUTTON,
-    buttonColor: 'white',
-    textColor: 'white',
-    text: 'Close',
+export function SchedulePopUp({ trackTalks, isOpen, onClose, style }) {
+  const talks = trackTalks && trackTalks.records;
+  const trackDetails = trackTalks && trackTalks.trackDetails;
+
+  //get the track name key from trackDetails object
+  const trackName = Object.keys(trackDetails)[0];
+  //access the track details values inside the track name
+  const { discussionPoints, location, speakers, time, title, trackDate, trackAttendees, trackDesc } = trackDetails[trackName] ?? '';
+
+  const handleCloseClick = (e) => {
+    e.preventDefault();
+    onClose();
   };
+
+  if (!isOpen) {
+    return null;
+  }
+
+  const sortedTalks =
+    talks &&
+    talks.slice().sort((a, b) => {
+      const timeA = new Date(a.startTime).getTime();
+      const timeB = new Date(b.startTime).getTime();
+      return timeA - timeB;
+    });
+
   return (
     <section className={styles.eventStyle}>
-      <div className={styles.popup}>
-        <div style={{ display: 'grid', gap: '0.5rem', paddingBottom: '1rem' }}>
-          {eventItem?.name && (
-            <h2 className={styles.eventName} style={{ paddingBottom: '0.5rem' }}>
-              {eventItem.name}
-            </h2>
-          )}
-          {eventItem?.time && (
-            <p className={styles.time}>
-              <strong>Time</strong>: {eventItem.time}
-            </p>
-          )}
-          {eventItem?.location && (
-            <p className={styles.location}>
-              <strong>Venue</strong>: {eventItem.location}
-            </p>
-          )}
-          {eventItem?.trackLead && (
-            <p className={styles.people}>
-              <strong>Track Lead</strong>: {eventItem.trackLead}
-            </p>
-          )}
-          {eventItem?.people && (
-            <p className={styles.people}>
-              <strong>Attendees</strong>: {eventItem.people}
-            </p>
-          )}
-          {eventItem?.description && <p className={styles.description}>{eventItem.description}</p>}
+      <div className={styles.popup} style={{ backgroundColor: style.backgroundColor }}>
+        <div className={styles.header}>
+          <h2 className={styles.eventName} style={{ paddingBottom: '0.5rem' }}>
+            {title ? title : ''}
+          </h2>
 
-          {eventItem?.ctas && (
+          <button className={styles.closeButton} type="button" onClick={(e) => handleCloseClick(e)}>
+            Close
+          </button>
+        </div>
+
+        <div className={styles.scheduleContainer}>
+          <section className={styles.eventDetails}>
+            {trackDate && (
+              <p className={styles.time}>
+                <strong>Date</strong>: {trackDate}
+              </p>
+            )}
+            {time && (
+              <p className={styles.time}>
+                <strong>Time</strong>: {time}
+              </p>
+            )}
+            {location && (
+              <p className={styles.location}>
+                <strong>Location</strong>: {location}
+              </p>
+            )}
+            {/* {trackLead && (
+            <p className={styles.people}>
+              <strong>Track Lead</strong>: {trackLead}
+            </p>
+          )} */}
+            {trackAttendees && (
+              <p className={styles.people}>
+                <strong>Attendees</strong>: {trackAttendees}
+              </p>
+            )}
+
+            {speakers && (
+              <p className={styles.people}>
+                <strong>Speakers</strong>: {speakers}
+              </p>
+            )}
+            {discussionPoints && (
+              <p className={styles.description}>
+                <strong>Discussion points: </strong>
+                {discussionPoints}
+              </p>
+            )}
+
+            {trackDesc && <p className={styles.description}>{trackDesc}</p>}
+            {/* {ctas && (
             <div className={styles.row} style={{ paddingTop: '0.5rem', display: 'flex', gap: '0.5rem' }}>
               {eventItem.ctas.map((ctaItem, index) => {
                 return <CallToActionVariant key={index} type={ctaItem.type} cta={ctaItem} />;
               })}
             </div>
+          )}  */}
+          </section>
+          {sortedTalks && <h4 style={{ paddingBottom: '1rem', borderBottom: '0.5px solid var(--color-black)' }}>Schedule</h4>}
+          {sortedTalks && (
+            <div className={` ${styles.tableHeader}`}>
+              <h4 className={`${styles.col1} ${styles.headerTitle}`}>Time</h4>
+              <h4 className={`${styles.col2} ${styles.headerTitle}`}>Track Lead</h4>
+              <h4 className={`${styles.col4} ${styles.headerTitle}`}>Info</h4>
+            </div>
           )}
 
-          {eventItem.schedule && (
-            <section>
-              <h4 style={{ paddingBottom: '1rem', paddingTop: '1rem' }}>Schedule</h4>
+          {sortedTalks &&
+            sortedTalks.map((talk, index) => {
+              const { desc, firstName, lastName, videoLink, talkDuration, title } = talk;
+              const isLastIndex = index === sortedTalks.length - 1;
+              return (
+                <div className={styles.tableRow} style={{ borderBottom: isLastIndex ? 'none' : '1px solid var(--color-gray-transparent200)' }} key={index}>
+                  <h4 className={styles.col1}> {talkDuration ? talkDuration : ''} </h4>
 
-              <div className={styles.tableHeader}>
-                <h4 className={`${styles.col25} ${styles.headerTitle}`}>Time</h4>
-                <h4 className={`${styles.col25} ${styles.headerTitle}`}>Speaker</h4>
-                <h4 className={`${styles.col50} ${styles.headerTitle}`}>Info</h4>
-              </div>
-              <div className={styles.scheduleContainer}>
-                <div className={styles.tableRow}>
-                  <h4 className={styles.col25}>09:00 - 09:10</h4>
-                  <h4 className={styles.col25}>Dietrich Ayala</h4>
-                  <div className={styles.col50}>
-                    <MarkdownToJSX>Welcome and Introduction - View video</MarkdownToJSX>
+                  <p className={styles.col1}>{firstName ? `${firstName} ${lastName}  ` : ''}</p>
+                  <div className={styles.col4}>
+                    <div className={styles.flexCol}>
+                      <h4>{title ? title : ''}</h4>
+                      {desc && <MarkdownToJSX>{desc}</MarkdownToJSX>}
+                      {videoLink && (
+                        <span>
+                          <Link href={videoLink} linkStyle="animated">
+                            <strong style={{ fontSize: 'var(--font-size-small)' }}>View Video</strong>
+                          </Link>
+                        </span>
+                      )}
+                    </div>
                   </div>
                 </div>
-                <div className={styles.tableRow}>
-                  <h4 className={styles.col25}>09:10 - 09:15 </h4>
-                  <h4 className={styles.col25}>Yiannis Psaras </h4>
-                  <div className={styles.col50}>
-                    <MarkdownToJSX>
-                      Measuring IPFS - We will introduce the importance of data-driven protocol design and optimisation and the measurement campaigns that the ProbeLab team has
-                      carried out in the past couple of quarters. We will selectively dive into a couple of them, present representative results and provide pointers for the rest.
-                      We will also talk about KPIs for the IPFS network and discuss our future plans. View video
-                    </MarkdownToJSX>
-                  </div>
-                </div>
-                <div className={styles.tableRow}>
-                  <h4 className={styles.col25}>09:15 - 09:20 </h4>
-                  <h4 className={styles.col25}>Will Scott </h4>
-                  <div className={styles.col50}>
-                    <MarkdownToJSX>Decentralizing IPFS Gateways with Project Rhea View video</MarkdownToJSX>
-                  </div>
-                </div>
-                <div className={styles.tableRow}>
-                  <h4 className={styles.col25}>09:20 - 09:25</h4>
-                  <h4 className={styles.col25}>Robin Berjon </h4>
-                  <div className={styles.col50}>
-                    <MarkdownToJSX>IPFS Principles A journey to the heart of the IPFS protocol, principles, and specifications. View video</MarkdownToJSX>
-                  </div>
-                </div>
-              </div>
-            </section>
-          )}
+              );
+            })}
         </div>
 
-        <Button target="_parent" text="Close" buttonColor={'var(--color-black200)'} textColor={'var(--color-white)'} />
+        {sortedTalks && <p className={styles.tooltip}>Scroll down to see full schedule</p>}
       </div>
     </section>
   );

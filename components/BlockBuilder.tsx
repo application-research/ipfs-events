@@ -29,7 +29,7 @@ function BlockBuilderDirectionStyle(direction) {
 
 export default function BlockBuilder({ block, cta, title, subtitle, id, border, description, direction }) {
   return (
-    <div id={id} style={{ display: 'grid', rowGap: '2rem', background: block.backgroundColor }}>
+    <div id={id} style={{ display: 'grid', rowGap: '2rem', background: block?.backgroundColor ?? 'var(--color-white)' }}>
       {(title || description || subtitle) && (
         <section className={styles.row} style={{ borderBottom: border ? '1px solid var(--color-text)' : '' }}>
           <div style={{ display: 'grid', rowGap: '1rem' }}>
