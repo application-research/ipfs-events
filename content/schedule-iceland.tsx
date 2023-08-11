@@ -189,6 +189,20 @@ export const SCHEDULE_ICELAND = {
         },
       },
     },
+    EXPO: {
+      trackDetails: {
+        EXPO: {
+          id: 'recKA6wmDzBjUZ445',
+          location: null,
+          time: '10:00AM - 5:15PM',
+          title: 'EXPO',
+          trackAttendees: 'All Welcome',
+          trackDate: 'Mon, Sept 27',
+          speakers: 'FIL Dev Summit',
+          trackDesc: 'Apply to showcase your booth at our EXPO space. Please reach out to miwa@protocol.ai for more information. ',
+        },
+      },
+    },
     'Scalability & Computation': {
       trackDetails: {
         'Scalability & Computation': {
@@ -220,22 +234,7 @@ export const SCHEDULE_ICELAND = {
         },
       },
     },
-  },
-  'Thu, Sept 28': {
-    EXPO: {
-      trackDetails: {
-        EXPO: {
-          id: 'recKA6wmDzBjUZ445',
-          location: null,
-          time: '10:00AM - 5:15PM',
-          title: 'EXPO',
-          trackAttendees: 'All Welcome',
-          trackDate: 'Mon, Sept 28',
-          speakers: 'FIL Dev Summit',
-          trackDesc: 'Apply to showcase your booth at our EXPO space. Please reach out to miwa@protocol.ai for more information. ',
-        },
-      },
-    },
+
     Closing: {
       trackDetails: {
         Closing: {
@@ -244,7 +243,7 @@ export const SCHEDULE_ICELAND = {
           time: '5:15PM - 6:00PM',
           title: 'Closing',
           trackAttendees: 'All Welcome',
-          trackDate: 'Mon, Sept 28',
+          trackDate: 'Mon, Sept 27',
           speakers: 'Juan Benet',
           trackDesc: '',
         },
