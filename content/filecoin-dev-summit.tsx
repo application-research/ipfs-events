@@ -187,7 +187,7 @@ export const FILECOIN_DEV_SUMMIT_2023_PAGE_CONTENT = [
             backgroundColor: 'white',
             textColor: 'black',
             description:
-              'Apply to attend Singapore FIL Dev Summit from September 12 - 14th, 2023. Tickets are $150 for General Admission for all three days. Early bird tickets are 50% off until August 25th, speakers tickets are 50% off, and Volunteers get 30% off  for 2 hrs of time.',
+              'Apply to attend Singapore FIL Dev Summit from September 12-14, 2023. General Admission is $150 for all three days. Early bird tickets are 50% off until August 25.',
             // img: {
             //   src: '/media/singapore-logo.png',
             // },
@@ -208,7 +208,7 @@ export const FILECOIN_DEV_SUMMIT_2023_PAGE_CONTENT = [
             textColor: 'black',
             name: 'Iceland',
             description:
-              'Apply to attend Iceland FIL Dev Summit from September 25 - 27th, 2023. Tickets are $150 for General Admission for all three days. Early bird tickets are 50% off until August 25th, speakers tickets are 50% off, and Volunteers get 30% off  for 2 hrs of time.',
+              'Apply to attend Iceland FIL Dev Summit from September 25-27, 2023. General Admission is $150 for all three days. Early bird tickets are 50% off until August 25.',
             // img: {
             //   src: '/media/iceland-logo.png',
             // },
@@ -238,8 +238,8 @@ export const FILECOIN_DEV_SUMMIT_2023_PAGE_CONTENT = [
               buttonColor: 'linear-gradient(to right,#39C1CB, #006FEC);',
               textColor: 'white',
               target: '_blank',
-              text: 'Apply to Attend',
-              link: 'https://airtable.com/appEjnh5rpWMsjocb/shran7li4slfQSB04',
+              text: 'Scholar Application',
+              link: 'https://airtable.com/appEjnh5rpWMsjocb/shrusGnJBsjYDlcwS',
             },
           },
         ],
