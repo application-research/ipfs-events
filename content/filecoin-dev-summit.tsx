@@ -154,10 +154,8 @@ export const FILECOIN_DEV_SUMMIT_2023_PAGE_CONTENT = [
             backgroundColor: 'white',
             textColor: 'black',
             description:
-              'Apply to attend Singapore FIL Dev Summit from September 12 - 14th, 2023. Tickets are $150 for General Admission for all three days. Early bird tickets are 50% off until August 25th, speakers tickets are 50% off, and Volunteers get 30% off  for 2 hrs of time.',
-            // img: {
-            //   src: '/media/singapore-logo.png',
-            // },
+              'Apply to attend Singapore FIL Dev Summit from September 12-14, 2023. General Admission is $150 for all three days. Early bird tickets are 50% off until August 25.',
+
             cta: {
               type: CallToActionVariantEnum.BORDER,
               target: '_blank',
@@ -175,10 +173,8 @@ export const FILECOIN_DEV_SUMMIT_2023_PAGE_CONTENT = [
             textColor: 'black',
             name: 'Iceland',
             description:
-              'Apply to attend Iceland FIL Dev Summit from September 25 - 27th, 2023. Tickets are $150 for General Admission for all three days. Early bird tickets are 50% off until August 25th, speakers tickets are 50% off, and Volunteers get 30% off  for 2 hrs of time.',
-            // img: {
-            //   src: '/media/iceland-logo.png',
-            // },
+              'Apply to attend Iceland FIL Dev Summit from September 25-27, 2023. General Admission is $150 for all three days. Early bird tickets are 50% off until August 25.',
+
             cta: {
               type: CallToActionVariantEnum.BORDER,
               buttonColor: 'linear-gradient(to right,#39C1CB, #006FEC);',
@@ -197,16 +193,14 @@ export const FILECOIN_DEV_SUMMIT_2023_PAGE_CONTENT = [
             name: 'Scholars',
             description:
               'This program is designed to provide opportunities for individuals from underrepresented communities, unique circumstances, or developing areas to participate in FIL Dev Summit. Priority will be given to individuals with a history of strong contributions to FIL implementations and related projects, or potential future contributions to the FIL Implementors community.',
-            // img: {
-            //   src: '/media/scholars-logo.png',
-            // },
+
             cta: {
               type: CallToActionVariantEnum.BORDER,
               buttonColor: 'linear-gradient(to right,#39C1CB, #006FEC);',
               textColor: 'white',
               target: '_blank',
-              text: 'Apply to Attend',
-              link: 'https://airtable.com/appEjnh5rpWMsjocb/shran7li4slfQSB04',
+              text: 'Scholar Application',
+              link: 'https://airtable.com/appEjnh5rpWMsjocb/shrusGnJBsjYDlcwS',
             },
           },
         ],
@@ -472,7 +466,7 @@ export const FILECOIN_DEV_SUMMIT_2023_PAGE_CONTENT = [
             type: BlockTypeEnum.COLLAPSABLE,
             title: 'How can I lead a track?',
             collapsedText:
-              'Please fill out the provided forms for FIL Dev [Summit Asia](https://airtable.com/appEjnh5rpWMsjocb/shrw3Ha0yTusDmcOg) and [FIL Dev Summit EU/NA](https://airtable.com/appEjnh5rpWMsjocb/shr6SmQjqdgn5Pc90) to lead a track or a talk.',
+              'Please fill out the provided forms for [FIL Dev Summit Asia](https://airtable.com/appEjnh5rpWMsjocb/shrw3Ha0yTusDmcOg) and [FIL Dev Summit EU/NA](https://airtable.com/appEjnh5rpWMsjocb/shr6SmQjqdgn5Pc90) to lead a track or a talk.',
             backgroundColor: 'linear-gradient(to right,#39C1CB, #006FEC)',
           },
           {
@@ -480,12 +474,11 @@ export const FILECOIN_DEV_SUMMIT_2023_PAGE_CONTENT = [
             type: BlockTypeEnum.COLLAPSABLE,
             title: 'Is there a cost to attend?',
             collapsedText: `This is an invite only event. Please fill out [this form to apply to attend](https://airtable.com/appEjnh5rpWMsjocb/shran7li4slfQSB04).
-            
-- General Admission $150 USD
-- Early Bird $75 USD, now through Aug 25th!
-- Supporters ticket option with a description of: ‘Your supporter's ticket covers the cost of your own attendance & contributes to the IPFS Scholar's Program for others to attend as well. Thank you for your support!’ Priced at $1500 USD
-- Scholars - Limited Tickets Available
 
+- General Admission ($150 USD)
+- Early Bird Ticket  ($75 USD), now through Aug 25th!
+- Supporters ticket ($1500 USD):  Your supporter's ticket covers the cost of your own attendance & contributes to the FIL Dev Scholar's Program for others to attend as well. Thank you for your support!
+- Scholars - Limited Tickets Available. [Apply as a scholar](https://airtable.com/appEjnh5rpWMsjocb/shrusGnJBsjYDlcwS). 
 `,
             backgroundColor: 'linear-gradient(to right,#39C1CB, #006FEC)',
           },
@@ -494,7 +487,7 @@ export const FILECOIN_DEV_SUMMIT_2023_PAGE_CONTENT = [
             type: BlockTypeEnum.COLLAPSABLE,
             title: 'How can I sponsor? What does it include?',
             collapsedText:
-              'Yes! We offer multiple levels of sponsorship. From Scholars, Node, and Cluster, to Network and Interplanetary, there will be a sponsorship for you! Please fill out [this sponsor form](https://airtable.com/appEjnh5rpWMsjocb/shrn57n37JyLSOTlV) for more information on what is included in each sponsorship and to apply.',
+              'Yes! We offer multiple levels of sponsorship for both locations. Please fill out our [sponsor form](https://airtable.com/appEjnh5rpWMsjocb/shrn57n37JyLSOTlV) for more information on what is included in each sponsorship.',
             backgroundColor: 'linear-gradient(to right,#39C1CB, #006FEC)',
           },
           {
@@ -505,19 +498,19 @@ export const FILECOIN_DEV_SUMMIT_2023_PAGE_CONTENT = [
               'All sessions will be recorded and uploaded to [Youtube channel](https://www.youtube.com/@IPFSbot) ASAP. We are also encouraging everyone to join [#fil-dev-summit](https://app.slack.com/client/TEHTVS1L6/C05LHC1ULG1) in [Filecoin](https://filecoinproject.slack.com/ssb/redirect) slack to stay up to date with all hallway track conversations.',
             backgroundColor: 'linear-gradient(to right,#39C1CB, #006FEC)',
           },
-          {
-            id: 'media',
-            type: BlockTypeEnum.COLLAPSABLE,
-            title: 'Code of conduct/covid policy',
-            collapsedText: ` We will be following the [IPFS Code of Conduct](https://github.com/ipfs/community/blob/master/code-of-conduct.md), and the IPFS Code of [Conduct Events Addendum](https://github.com/ipfs/community/blob/master/code-of-conduct-for-events.md) as part of the above CoC.
-        
-IPFS þing's Covid Policy:
+          //           {
+          //             id: 'media',
+          //             type: BlockTypeEnum.COLLAPSABLE,
+          //             title: 'Code of conduct/covid policy',
+          //             collapsedText: ` We will be following the [IPFS Code of Conduct](https://github.com/ipfs/community/blob/master/code-of-conduct.md), and the IPFS Code of [Conduct Events Addendum](https://github.com/ipfs/community/blob/master/code-of-conduct-for-events.md) as part of the above CoC.
 
-- Masks and testing are optional and at your discretion.
+          // FIL Dev Summit Covid Policy:
 
-- If you are presenting any symptoms of being sick or have come in contact with someone who has presented symptoms or tested positive in the last five days, please do not attend the event for your own and all other attendees' health and safety. Rest up and feel better!`,
-            backgroundColor: 'linear-gradient(to right,#39C1CB, #006FEC)',
-          },
+          // - Masks and testing are optional and at your discretion.
+
+          // - If you are presenting any symptoms of being sick or have come in contact with someone who has presented symptoms or tested positive in the last five days, please do not attend the event for your own and all other attendees' health and safety. Rest up and feel better!`,
+          //             backgroundColor: 'linear-gradient(to right,#39C1CB, #006FEC)',
+          //           },
         ],
       },
 
