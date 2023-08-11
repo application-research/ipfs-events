@@ -5,7 +5,7 @@ export default async function Head({ params }) {
   const title = 'FIL Dev Summit 2023: Singapore and Iceland';
   const description =
     'FIL Dev Summit is a gathering of developers, builders, and engaged community members who want to contribute to the core protocol and network evolution of Filecoin (think IPFS Thing, but bigger!).';
-  const url = 'https://filecoindevsummit.io';
+  const url = 'https://fildev.io';
   const image = '/media/twitter-preview-fildevsummit.png';
 
   // SUMMARY_LARGE_IMAGE: 1500x785
