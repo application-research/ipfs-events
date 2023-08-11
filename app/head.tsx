@@ -6,7 +6,7 @@ export default async function Head({ params }) {
   const description =
     'FIL Dev Summit is a gathering of developers, builders, and engaged community members who want to contribute to the core protocol and network evolution of Filecoin (think IPFS Thing, but bigger!).';
   const url = 'https://fildev.io';
-  const image = '/media/twitter.png';
+  const image = 'https://i.ibb.co/XXgFfk0/twitter.png';
 
   // SUMMARY_LARGE_IMAGE: 1500x785
   return (
