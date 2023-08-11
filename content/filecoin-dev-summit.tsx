@@ -283,52 +283,52 @@ export const FILECOIN_DEV_SUMMIT_2023_PAGE_CONTENT = [
         type: BlockTypeEnum.SCHEDULE_SINGAPORE,
         scheduleData: FIL_DEV_SUMMIT_SINGAPORE,
       },
-      {
-        type: BlockTypeEnum.TABLE,
-        title: 'Tentative Tracks and Key Topics',
-        table: [
-          {
-            header: 'Track',
-            tableItems: [
-              {
-                text: 'FVM application & tooling',
-              },
-              {
-                text: 'SP tooling & stack',
-              },
-              {
-                text: 'Client Data Onboarding protocol / tools / market Part 1: data onboarding improvements, deal markets/storage service platforms',
-              },
-              {
-                text: 'Protocol  Development & Evolution: Part 1',
-              },
-              {
-                text: 'Governance & Community Part 1',
-              },
-            ],
-          },
-          {
-            header: 'Discussion Points',
-            tableItems: [
-              {
-                text: 'Defi, program storage, explorers, wallets',
-              },
-              {
-                text: 'SP operations (data and storage onboarding, proving, block creation, account management, monitoring, recovery...), sealing as a service, seal optimization',
-              },
-              {
-                text: 'Capacity onboarding improvements, snap deals aggregation, deal markets/storage service platforms',
-              },
-              {
-                text: 'layer 0 vs 1 vs 2 protocol, moving functionality into FVM, IPC regions for Filecoin, upgrade path, Better PoReps, upgrading the filecoin economy',
-              },
-              {
-                text: 'FIL+, FIP process, Network upgrade scope/schedule, Ambassadors, Funding programs, 2024 events',
-              },
-            ],
-          },
-        ],
-      },
+      // {
+      //   type: BlockTypeEnum.TABLE,
+      //   title: 'Tentative Tracks and Key Topics',
+      //   table: [
+      //     {
+      //       header: 'Track',
+      //       tableItems: [
+      //         {
+      //           text: 'FVM application & tooling',
+      //         },
+      //         {
+      //           text: 'SP tooling & stack',
+      //         },
+      //         {
+      //           text: 'Client Data Onboarding protocol / tools / market Part 1: data onboarding improvements, deal markets/storage service platforms',
+      //         },
+      //         {
+      //           text: 'Protocol  Development & Evolution: Part 1',
+      //         },
+      //         {
+      //           text: 'Governance & Community Part 1',
+      //         },
+      //       ],
+      //     },
+      //     {
+      //       header: 'Discussion Points',
+      //       tableItems: [
+      //         {
+      //           text: 'Defi, program storage, explorers, wallets',
+      //         },
+      //         {
+      //           text: 'SP operations (data and storage onboarding, proving, block creation, account management, monitoring, recovery...), sealing as a service, seal optimization',
+      //         },
+      //         {
+      //           text: 'Capacity onboarding improvements, snap deals aggregation, deal markets/storage service platforms',
+      //         },
+      //         {
+      //           text: 'layer 0 vs 1 vs 2 protocol, moving functionality into FVM, IPC regions for Filecoin, upgrade path, Better PoReps, upgrading the filecoin economy',
+      //         },
+      //         {
+      //           text: 'FIL+, FIP process, Network upgrade scope/schedule, Ambassadors, Funding programs, 2024 events',
+      //         },
+      //       ],
+      //     },
+      //   ],
+      // },
     ],
   },
   {
@@ -364,70 +364,70 @@ export const FILECOIN_DEV_SUMMIT_2023_PAGE_CONTENT = [
         calendarData: FILECOIN_DEV_SUMMIT_ICELAND_CALENDAR,
       },
 
-      {
-        type: BlockTypeEnum.TABLE,
-        title: 'Tentative Tracks and Key Topics',
-        table: [
-          {
-            header: 'Track',
-            tableItems: [
-              {
-                text: 'Client Data Onboarding protocol / tools / market Part 2',
-              },
-              {
-                text: 'Protocol  Development & Evolution: Part 2',
-              },
-              {
-                text: 'Governance & Community Part 2',
-              },
-              {
-                text: 'Clients Onboarding Experience',
-              },
-              {
-                text: 'Chain tooling & infrastructure',
-              },
-              {
-                text: 'FVM & Runtimes',
-              },
-              {
-                text: 'Scalability & compute over data',
-              },
-              {
-                text: 'Filecoin Retrievals & Data Availability',
-              },
-            ],
-          },
-          {
-            header: 'Discussion Points',
-            tableItems: [
-              {
-                text: 'Capacity onboarding improvements, snap deals aggregation, deal markets/storage service platforms, Client advisory board feedback',
-              },
-              {
-                text: 'layer 0 vs 1 vs 2 protocol, moving functionality into FVM, IPC regions for Filecoin, upgrade path, Better PoReps, upgrading the filecoin economy',
-              },
-              {
-                text: 'FIL+, FIP process, Network upgrade scope/schedule, Ambassadors, Funding programs, 2024 events',
-              },
-              {
-                text: 'Identify gaps within the network users, and plan collaborative contributions to reduce friction and improve utilization of the network. (connect to Client Data Onboarding track)',
-              },
-              {
-                text: 'Snapshotting, API services, test networks, monitoring',
-              },
-              {
-                text: 'RaaS, new runtimes, moving modules into FVM',
-              },
-              {
-                text: 'IPC L2s, CoD, Meridian, Tableland, etc',
-              },
-              {
-                text: 'Content Address, Retrieval Market, Retrieval Incentives, etc',
-              },
-            ],
-          },
-        ],
-      },
+      // {
+      //   type: BlockTypeEnum.TABLE,
+      //   title: 'Tentative Tracks and Key Topics',
+      //   table: [
+      //     {
+      //       header: 'Track',
+      //       tableItems: [
+      //         {
+      //           text: 'Client Data Onboarding protocol / tools / market Part 2',
+      //         },
+      //         {
+      //           text: 'Protocol  Development & Evolution: Part 2',
+      //         },
+      //         {
+      //           text: 'Governance & Community Part 2',
+      //         },
+      //         {
+      //           text: 'Clients Onboarding Experience',
+      //         },
+      //         {
+      //           text: 'Chain tooling & infrastructure',
+      //         },
+      //         {
+      //           text: 'FVM & Runtimes',
+      //         },
+      //         {
+      //           text: 'Scalability & compute over data',
+      //         },
+      //         {
+      //           text: 'Filecoin Retrievals & Data Availability',
+      //         },
+      //       ],
+      //     },
+      //     {
+      //       header: 'Discussion Points',
+      //       tableItems: [
+      //         {
+      //           text: 'Capacity onboarding improvements, snap deals aggregation, deal markets/storage service platforms, Client advisory board feedback',
+      //         },
+      //         {
+      //           text: 'layer 0 vs 1 vs 2 protocol, moving functionality into FVM, IPC regions for Filecoin, upgrade path, Better PoReps, upgrading the filecoin economy',
+      //         },
+      //         {
+      //           text: 'FIL+, FIP process, Network upgrade scope/schedule, Ambassadors, Funding programs, 2024 events',
+      //         },
+      //         {
+      //           text: 'Identify gaps within the network users, and plan collaborative contributions to reduce friction and improve utilization of the network. (connect to Client Data Onboarding track)',
+      //         },
+      //         {
+      //           text: 'Snapshotting, API services, test networks, monitoring',
+      //         },
+      //         {
+      //           text: 'RaaS, new runtimes, moving modules into FVM',
+      //         },
+      //         {
+      //           text: 'IPC L2s, CoD, Meridian, Tableland, etc',
+      //         },
+      //         {
+      //           text: 'Content Address, Retrieval Market, Retrieval Incentives, etc',
+      //         },
+      //       ],
+      //     },
+      //   ],
+      // },
     ],
   },
 
