@@ -1,10 +1,12 @@
 'use client';
 import styles from '@components/Schedule.module.scss';
 
-import { getAirtableData, getFormattedAirtableFields } from '@root/resolvers/airtable-import';
+import { getFormattedAirtableFields } from '@root/resolvers/airtable-import';
 import { SchedulePopUp } from './SchedulePopUp';
 import { useEffect, useRef, useState } from 'react';
 import ScrollTableTooltip from './ScrollTableTooltip';
+import { SCHEDULE_ICELAND } from '@root/content/schedule-iceland';
+import { SCHEDULE_SINGAPORE } from '@root/content/schedule-singapore';
 
 const NODE = process.env.NODE_ENV || 'development';
 const IS_PRODUCTION = NODE === 'production';
@@ -13,7 +15,7 @@ if (!IS_PRODUCTION) {
   require('dotenv').config();
 }
 
-export default function Schedule({ scheduleData }) {
+export default function ScheduleSingapore({ scheduleData }) {
   if (scheduleData?.airtable?.tableName == null) return null;
 
   const [selectedEvent, setSelectedEvent] = useState(null);
@@ -26,12 +28,9 @@ export default function Schedule({ scheduleData }) {
 
   const tableRef = useRef<HTMLDivElement>(null);
   const headersRef = useRef<HTMLDivElement>(null);
+  // const tableName = scheduleData?.airtable?.tableName;
 
-  // const apiKey = scheduleData?.airtable?.apiKey;
-  // const baseId = scheduleData?.airtable?.baseId;
-
-  // const tableName = 'Asia Talk/Track Submissions + Forms';
-  const tableName = scheduleData?.airtable?.tableName;
+  const tableName = 'Asia Talk/Track Submissions + Forms';
 
   const scheduleBackgroundColor = scheduleData?.style?.backgroundColor ?? 'var(--color-white)';
   const scheduleHoverColor = scheduleData?.style?.hoverColor ?? 'var(--color-gray-transparent)';
@@ -42,33 +41,6 @@ export default function Schedule({ scheduleData }) {
       backgroundColor: scheduleHoverColor,
     },
   };
-
-  const handleOverlayClick = () => {
-    setIsOverlayOpen(false);
-  };
-
-  const handleContainerClick = () => {
-    setIsOverlayOpen(true);
-  };
-
-  const handleEventClick = (e) => {
-    setSelectedEvent(e);
-    setIsOverlayOpen(true);
-  };
-
-  const handlePopupClose = () => {
-    setSelectedEvent(null);
-    setIsOverlayOpen(false);
-  };
-
-  useEffect(() => {
-    getAirtableData(tableName, (records) => {
-      if (records) {
-        setData(records);
-      }
-    });
-  }, []);
-
   useEffect(() => {
     const tableElement = tableRef.current;
 
@@ -97,9 +69,36 @@ export default function Schedule({ scheduleData }) {
       };
     }
   });
+  const handleOverlayClick = () => {
+    setIsOverlayOpen(false);
+  };
 
-  const calendarData: any = getFormattedAirtableFields(data);
+  const handleContainerClick = () => {
+    setIsOverlayOpen(true);
+  };
 
+  const handleEventClick = (e) => {
+    setSelectedEvent(e);
+    setIsOverlayOpen(true);
+  };
+
+  const handlePopupClose = () => {
+    setSelectedEvent(null);
+    setIsOverlayOpen(false);
+  };
+
+  // useEffect(() => {
+  //   getAirtableDataSingapore(tableName, (records) => {
+  //     if (records) {
+  //       setData(records);
+  //     }
+  //   });
+  // }, []);
+
+  // const calendarData: any = getFormattedAirtableFields(data);
+
+  const calendarData = SCHEDULE_SINGAPORE;
+  console.log(calendarData, 'calendar data');
   return (
     <div className={styles.container}>
       <section
@@ -123,6 +122,7 @@ export default function Schedule({ scheduleData }) {
           }}
         >
           {Object.keys(calendarData).map((date, index) => {
+            console.log(date, 'date');
             return (
               <div className={styles.heading} key={index}>
                 <p>{date}</p>

@@ -143,6 +143,7 @@ body {
   --color-gray: #848383;
   --color-gray-transparent: #84838332;
   --color-gray-transparent200: #8483835a;
+  --color-blue: #0090ff;
   --color-beige: #fffdf5;
   --color-text: #000000;
   --text-black: #000000;
@@ -166,6 +167,7 @@ body {
 
   --z-index-small: 1;
   --z-index-medium: 2;
+  --z-index-large: 3;
 
   font-size: 16px;
   background: var(--color-background);

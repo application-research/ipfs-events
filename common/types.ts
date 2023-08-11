@@ -12,6 +12,8 @@ export enum BlockTypeEnum {
   TABLE = 'table',
   TEXT = 'text',
   TICKET_CARD = 'ticket-card',
+  SCHEDULE_ICELAND = 'schedule-iceland',
+  SCHEDULE_SINGAPORE = 'schedule-singapre',
 }
 
 export enum BlockDirectionEnum {
