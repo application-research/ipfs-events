@@ -550,19 +550,19 @@ export const FILECOIN_DEV_SUMMIT_2023_PAGE_CONTENT = [
               'All sessions will be recorded and uploaded to [Youtube channel](https://www.youtube.com/@IPFSbot) ASAP. We are also encouraging everyone to join [#fil-dev-summit](https://app.slack.com/client/TEHTVS1L6/C05LHC1ULG1) in [Filecoin](https://filecoinproject.slack.com/ssb/redirect) slack to stay up to date with all hallway track conversations.',
             backgroundColor: 'linear-gradient(to right,#39C1CB, #006FEC)',
           },
-          //           {
-          //             id: 'media',
-          //             type: BlockTypeEnum.COLLAPSABLE,
-          //             title: 'Code of conduct/covid policy',
-          //             collapsedText: ` We will be following the [IPFS Code of Conduct](https://github.com/ipfs/community/blob/master/code-of-conduct.md), and the IPFS Code of [Conduct Events Addendum](https://github.com/ipfs/community/blob/master/code-of-conduct-for-events.md) as part of the above CoC.
+          {
+            id: 'media',
+            type: BlockTypeEnum.COLLAPSABLE,
+            title: 'Code of conduct/covid policy',
+            collapsedText: ` We will be following the [Code of Conduct](https://github.com/filecoin-project/community/blob/master/CODE_OF_CONDUCT.md).
 
-          // FIL Dev Summit Covid Policy:
+          FIL Dev Summit Covid Policy:
 
-          // - Masks and testing are optional and at your discretion.
+          - Masks and testing are optional and at your discretion.
 
-          // - If you are presenting any symptoms of being sick or have come in contact with someone who has presented symptoms or tested positive in the last five days, please do not attend the event for your own and all other attendees' health and safety. Rest up and feel better!`,
-          //             backgroundColor: 'linear-gradient(to right,#39C1CB, #006FEC)',
-          //           },
+          - If you are presenting any symptoms of being sick or have come in contact with someone who has presented symptoms or tested positive in the last five days, please do not attend the event for your own and all other attendees' health and safety. Rest up and feel better!`,
+            backgroundColor: 'linear-gradient(to right,#39C1CB, #006FEC)',
+          },
         ],
       },
 
