@@ -27,6 +27,10 @@
     font-size: var(--font-size-regular);
     padding: 0.5rem;
   }
+
+  @media (max-width: 380px) {
+    font-size: var(--font-size-small);
+  }
 }
 
 .borderButton {
