@@ -230,7 +230,7 @@ export const SCHEDULE_ICELAND = {
           time: '10:00AM - 5:15PM',
           title: 'EXPO',
           trackAttendees: 'All Welcome',
-          trackDate: 'Mon, Sept 27',
+          trackDate: 'Mon, Sept 28',
           speakers: 'FIL Dev Summit',
           trackDesc: 'Apply to showcase your booth at our EXPO space. Please reach out to miwa@protocol.ai for more information. ',
         },

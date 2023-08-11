@@ -111,15 +111,11 @@
 .closeButton {
   border: none;
   border-radius: var(--border-radius-tiny);
-  background: var(--color-black200);
+  background: linear-gradient(to right, #39c1cb, #006fec);
   color: var(--color-white);
   cursor: pointer;
   font-family: Inter;
   transition: background-color cubic-bezier(0.23, 1, 0.32, 1) ease;
-
-  &:hover {
-    background-color: var(--color-black200);
-  }
 
   @media (max-width: 768px) {
     max-height: 2rem;

@@ -142,13 +142,15 @@ export default function ScheduleSingapore({ scheduleData }) {
                   const events = calendarData[dateKey];
                   const eventDetails = events[eventItem];
 
-                  const { title, time, trackDate, trackAttendees, location } = eventDetails.trackDetails[eventItem] ?? '';
+                  const { title, time, speakers, trackDate, trackAttendees, location } = eventDetails.trackDetails[eventItem] ?? '';
 
                   return (
                     <div style={{ ...scheduleStyle }} className={styles.eventBox} key={eventIndex} onClick={() => handleEventClick(eventDetails)}>
                       {title && <p className={styles.eventName}>{title}</p>}
                       {time && <p className={styles.time}>{time}</p>}
                       {location && <p className={styles.location}>{location}</p>}
+                      {speakers && <p className={styles.location}> {speakers}</p>}
+
                       <p className={styles.people}>👤 {trackAttendees ?? 'All Welcome'}</p>
                     </div>
                   );
