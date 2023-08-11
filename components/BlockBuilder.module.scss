@@ -30,7 +30,7 @@
   flex-direction: column;
   gap: 1rem;
 
-  @media (max-width: 1032px) {
+  @media (max-width: 768px) {
     overflow: hidden;
   }
 }
@@ -42,6 +42,7 @@
 
   @media (max-width: 768px) {
     grid-template-columns: repeat(1, 1fr);
+    overflow: hidden;
   }
 }
 
@@ -56,6 +57,7 @@
 
   @media (max-width: 768px) {
     grid-template-columns: repeat(1, 1fr);
+    overflow: hidden;
   }
 }
 
@@ -84,6 +86,10 @@
   }
 }
 
-.description {
-  font-weight: var(--font-weight-light);
+.directionColumn {
+  display: flex;
+
+  @media (max-width: 1032px) {
+    overflow: hidden;
+  }
 }
