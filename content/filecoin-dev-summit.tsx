@@ -75,7 +75,7 @@ export const FILECOIN_DEV_SUMMIT_2023_PAGE_CONTENT = [
               type: TypeName.MEDIA_IMAGE,
               src: '/media/singapore-full.png',
               ariaLabel: 'FIL Dev Summit',
-              link: '#filecoin-dev-singapore',
+              link: '#singapore',
             },
           },
           {
@@ -88,7 +88,7 @@ export const FILECOIN_DEV_SUMMIT_2023_PAGE_CONTENT = [
               type: TypeName.MEDIA_IMAGE,
               src: '/media/iceland-full.jpg',
               ariaLabel: 'FIL Dev Summit',
-              link: '#filecoin-dev-iceland',
+              link: '#iceland',
             },
           },
         ],
@@ -176,25 +176,18 @@ export const FILECOIN_DEV_SUMMIT_2023_PAGE_CONTENT = [
         description: 'September 12 - 14th, 2023',
         image: {
           src: '/media/singapore-long.png',
-          ariaLabel: 'FIL Dev Summit',
-          link: '#filecoin-dev-singapore',
+          ariaLabel: 'FIL Dev Summit - Singapore',
         },
       },
     ],
   },
   {
+    id: 'singapore',
     backgroundColor: 'var(--color-white)',
-    id: 'about',
+
     direction: BlockDirectionEnum.COLUMN,
     title: 'FIL Dev Summit - Singapore Schedule',
-    // cta: {
-    //   type: CallToActionVariantEnum.BUTTON,
-    //   textColor: 'white',
-    //   target: '_blank',
-    //   text: 'Submit a Talk/Track',
-    //   buttonColor: 'linear-gradient(to right,#39C1CB, #006FEC);',
-    //   link: 'https://airtable.com/appEjnh5rpWMsjocb/shrw3Ha0yTusDmcOg',
-    // },
+
     block: [
       {
         type: BlockTypeEnum.SCHEDULE_SINGAPORE,
@@ -222,7 +215,7 @@ export const FILECOIN_DEV_SUMMIT_2023_PAGE_CONTENT = [
     ],
   },
   {
-    id: 'about',
+    id: 'iceland',
     direction: BlockDirectionEnum.COLUMN,
     title: 'FIL Dev Summit - Iceland Schedule',
     // cta: {
