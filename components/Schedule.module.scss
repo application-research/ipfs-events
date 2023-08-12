@@ -27,7 +27,7 @@
 >>>>>>> 2127ccc (added track details)
   @media (max-width: 768px) {
     top: 0rem;
-    grid-template-columns: repeat(5, 200px);
+    grid-template-columns: repeat(3, 200px);
   }
 }
 
@@ -62,7 +62,7 @@
   }
 
   @media (max-width: 768px) {
-    grid-template-columns: repeat(5, 200px);
+    grid-template-columns: repeat(3, 200px);
   }
 }
 
