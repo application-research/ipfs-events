@@ -1,8 +1,8 @@
 import styles from '@components/Tickets.module.scss';
 
 import { CallToActionVariant } from './CallToActionVariant';
-import Link from './Link';
 import { MarkdownToJSX } from './Markdown';
+import Link from './Link';
 
 export default function Tickets({ backgroundColor, textColor, tickets }) {
   return (
@@ -10,6 +10,7 @@ export default function Tickets({ backgroundColor, textColor, tickets }) {
       <div className={styles.row}>
         {tickets?.map((ticket, index) => {
           const { cta, description, price, name, img } = ticket ?? null;
+          console.log(tickets, 'tickets');
 
           return (
             <div key={index} className={styles.column}>
@@ -22,11 +23,7 @@ export default function Tickets({ backgroundColor, textColor, tickets }) {
 
                 <section className={styles.textContent}>
                   {name && <h4 className={styles.name}>{name}</h4>}
-                  {description && (
-                    <p className={styles.description}>
-                      <MarkdownToJSX>{description}</MarkdownToJSX>
-                    </p>
-                  )}
+                  {description && <p className={styles.description} dangerouslySetInnerHTML={{ __html: description }} />}
                 </section>
               </div>
 

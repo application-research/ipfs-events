@@ -62,7 +62,8 @@
     }
 
     &:hover {
-      background: var(--color-gray-transparent200);
+      background: linear-gradient(to bottom right, var(--gradient-border-blue-green-transparent));
+      box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
     }
   }
 

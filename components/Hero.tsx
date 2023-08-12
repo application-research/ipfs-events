@@ -24,11 +24,7 @@ export default function Hero({ background, cta, date, description, label, locati
               )}
             </div>
           )}
-          {description && (
-            <p className={styles.description}>
-              <MarkdownToJSX>{description}</MarkdownToJSX>
-            </p>
-          )}
+          {description && <p className={styles.description} dangerouslySetInnerHTML={{ __html: description }} />}
 
         {cta && (
           <div className={styles.row} style={{ paddingTop: '1rem' }}>
