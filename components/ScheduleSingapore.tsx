@@ -1,11 +1,9 @@
 'use client';
 import styles from '@components/Schedule.module.scss';
 
-import { getFormattedAirtableFields } from '@root/resolvers/airtable-import';
 import { SchedulePopUp } from './SchedulePopUp';
-import { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import ScrollTableTooltip from './ScrollTableTooltip';
-import { SCHEDULE_ICELAND } from '@root/content/schedule-iceland';
 import { SCHEDULE_SINGAPORE } from '@root/content/schedule-singapore';
 
 const NODE = process.env.NODE_ENV || 'development';
@@ -101,13 +99,9 @@ export default function ScheduleSingapore({ scheduleData }) {
 
   return (
     <div className={styles.container}>
-      <section
-        className={styles.sectionScrollTooltip}
-        style={{
-          background: scheduleStyle.backgroundColor ?? 'var(--color-white)',
-        }}
-      >
-        <ScrollTableTooltip backgroundColor={scheduleStyle?.backgroundColor} showArrowLeft={showArrowLeft} showArrowRight={showArrowRight} tableRef={tableRef} />
+      <section className={styles.sectionScrollTooltip}>
+        {/* <ScrollTableTooltip backgroundColor={scheduleStyle?.backgroundColor} showArrowLeft={showArrowLeft} showArrowRight={showArrowRight} tableRef={tableRef} /> */}
+        Click and drag the schedule to navigate
       </section>
 
       <div className={styles.scheduleWrapper}>
@@ -122,8 +116,14 @@ export default function ScheduleSingapore({ scheduleData }) {
           }}
         >
           {Object.keys(calendarData).map((date, index) => {
+            const hasItems = Object.keys(calendarData[date]).length > 0;
+
             return (
-              <div className={styles.heading} key={index}>
+              <div
+                className={`${styles.heading} ${hasItems ? '' : styles.hideItems}`}
+                key={index}
+                style={{ backgroundColor: hasItems ? 'var(--color-blue)' : 'var(--color-blue-gray' }}
+              >
                 <p>{date}</p>
               </div>
             );
@@ -133,10 +133,10 @@ export default function ScheduleSingapore({ scheduleData }) {
           {Object.keys(calendarData)?.map((dateKey, index) => {
             const events = calendarData[dateKey];
             const eventKeys = Object.keys(events);
-            const isLastIndex = index === Object.keys(calendarData).length - 1;
+            const hasItems = Object.keys(calendarData[dateKey]).length > 0;
 
             return (
-              <div key={index} className={styles.eventStyle} style={{ borderRight: isLastIndex ? '0.5px solid var(--color-gray-transparent)' : 'none' }}>
+              <div key={index} className={`${styles.eventStyle} ${hasItems ? '' : styles.hideItems} `}>
                 {eventKeys?.map((eventItem, eventIndex) => {
                   const events = calendarData[dateKey];
                   const eventDetails = events[eventItem];
@@ -144,13 +144,16 @@ export default function ScheduleSingapore({ scheduleData }) {
                   const { title, time, speakers, trackDate, trackAttendees, location } = eventDetails.trackDetails[eventItem] ?? '';
 
                   return (
-                    <div style={{ ...scheduleStyle }} className={styles.eventBox} key={eventIndex} onClick={() => handleEventClick(eventDetails)}>
+                    <div className={styles.eventBox} key={eventIndex} onClick={() => handleEventClick(eventDetails)}>
                       {title && <p className={styles.eventName}>{title}</p>}
-                      {time && <p className={styles.time}>{time}</p>}
-                      {location && <p className={styles.location}>{location}</p>}
-                      {speakers && <p className={styles.location}> {speakers}</p>}
 
-                      <p className={styles.people}>👤 {trackAttendees ?? 'All Welcome'}</p>
+                      <div className={styles.eventDetails}>
+                        {time && <p className={styles.time}>{time}</p>}
+                        {location && <p className={styles.location}>{location}</p>}
+                        {speakers && <p className={styles.speakers}> {speakers}</p>}
+
+                        <p className={styles.people}>👤 {trackAttendees ?? '50 seats'}</p>
+                      </div>
                     </div>
                   );
                 })}
@@ -159,6 +162,7 @@ export default function ScheduleSingapore({ scheduleData }) {
           })}
         </div>
       </div>
+
       {selectedEvent && (
         <section style={{ position: 'relative' }}>
           {isOverlayOpen && <div className={styles.overlay} onClick={handleOverlayClick} />}
@@ -167,6 +171,56 @@ export default function ScheduleSingapore({ scheduleData }) {
           </div>
         </section>
       )}
+
+      <a href="https://airtable.com/appEjnh5rpWMsjocb/shrw3Ha0yTusDmcOg" className={styles.link} target="_blank">
+        <section className={styles.callToAction}>
+          <div className={styles.callToActionTextContainer}>
+            <p className={styles.plusIcon}>+</p>
+            <p className={styles.callToActionText}>Submit a Talk or Track </p>
+          </div>
+        </section>
+      </a>
     </div>
   );
 }
+// {
+//   Object.keys(calendarData).map((date, index) => {
+//     const hasItems = Object.keys(calendarData[date]).length > 0;
+
+//     return (
+//       <div className={styles.heading} key={index} style={{ backgroundColor: hasItems ? 'var(--color-blue)' : 'var(--color-blue-gray' }}>
+//         <p>{date}</p>
+//       </div>
+//     );
+//   });
+// }
+// {
+//   Object.keys(calendarData)?.map((dateKey, index) => {
+//     const events = calendarData[dateKey];
+//     const eventKeys = Object.keys(events);
+//     const hasItems = Object.keys(dateKey).length > 0;
+
+//     return (
+//       <React.Fragment key={index}>
+//         {eventKeys?.map((eventItem, eventIndex) => {
+//           const events = calendarData[dateKey];
+//           const eventDetails = events[eventItem];
+//           const { title, time, speakers, trackDate, trackAttendees, location } = eventDetails.trackDetails[eventItem] ?? '';
+
+//           return (
+//             <div style={{ ...scheduleStyle }} className={styles.eventBox} key={eventIndex} onClick={() => handleEventClick(eventDetails)}>
+//               {title && <p className={styles.eventName}>{title}</p>}
+//               <div className={styles.eventDetails}>
+//                 {time && <p className={styles.time}>{time}</p>}
+//                 {location && <p className={styles.location}>{location}</p>}
+//                 {speakers && <p className={styles.speakers}> {speakers}</p>}
+
+//                 <p className={styles.people}>👤 {trackAttendees ?? '50 seats'}</p>
+//               </div>
+//             </div>
+//           );
+//         })}
+//       </React.Fragment>
+//     );
+//   });
+// }
