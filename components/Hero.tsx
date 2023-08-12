@@ -2,6 +2,7 @@ import styles from '@components/Hero.module.scss';
 
 import { CallToActionVariant } from './CallToActionVariant';
 import GutterContainer from './GutterContainer';
+import { MarkdownToJSX } from './Markdown';
 
 export default function Hero({ background, cta, date, description, label, location, title }: any) {
   const containerStyle = {
@@ -24,7 +25,11 @@ export default function Hero({ background, cta, date, description, label, locati
               )}
             </div>
           )}
-          {description && <p className={styles.description}>{description}</p>}
+          {description && (
+            <p className={styles.description}>
+              <MarkdownToJSX>{description}</MarkdownToJSX>
+            </p>
+          )}
 
           {cta && (
             <div className={styles.row} style={{ paddingTop: '1rem' }}>

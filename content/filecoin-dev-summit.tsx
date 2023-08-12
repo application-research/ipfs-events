@@ -4,8 +4,9 @@ export const FILECOIN_DEV_SUMMIT_2023_HERO_CONTENT = {
   id: 'hero',
   type: BlockTypeEnum.HERO_NO_BACKGROUND,
   title: 'FIL Dev Summit',
-  description:
-    "FIL Dev Summit is a gathering of developers, builders, and engaged community members who want to contribute to the core protocol and network evolution of Filecoin (think IPFS Thing, but bigger!). This summit is more than just a meetup—it's a place for meaningful and impactful conversations that help push Filecoin forward. Discussions at the summit will cover a wide range of topics, from protocol scalability and network improvements to the intricacies of data onboarding and governance structures. These conversations serve to share and refine improvements - where participants can gain insights from diverse perspectives, challenge assumptions, and collectively arrive at innovative solutions to the challenges faced by the Filecoin ecosystem.",
+  description: `FIL Dev Summit is a gathering of developers, builders, and engaged community members who want to contribute to the core protocol and network evolution of Filecoin (think IPFS Thing, but bigger!). This summit is more than just a meetup—it's a place for meaningful and impactful conversations that help push Filecoin forward. 
+  
+  Discussions at the summit will cover a wide range of topics, from protocol scalability and network improvements to the intricacies of data onboarding and governance structures.These conversations serve to share and refine improvements - where participants can gain insights from diverse perspectives, challenge assumptions, and collectively arrive at innovative solutions to the challenges faced by the Filecoin ecosystem.`,
 };
 
 export const FILECOIN_DEV_SUMMIT_PAGE_STYLE_CONTENT = {
@@ -107,13 +108,14 @@ export const FILECOIN_DEV_SUMMIT_2023_PAGE_CONTENT = [
         tickets: [
           {
             id: 'media',
-            // type: BlockTypeEnum.TICKET_CARD,
+            type: BlockTypeEnum.TICKET_CARD,
             price: '$150',
             name: 'Singapore',
             backgroundColor: 'white',
             textColor: 'black',
-            description:
-              'Apply to attend Singapore FIL Dev Summit from September 12-14, 2023. General Admission is $150 for all three days. Early bird tickets are 50% off until August 25.',
+            description: `Apply to attend Singapore FIL Dev Summit from September 12-14, 2023. 
+
+General Admission is $150 for all three days. Early bird tickets are 50% off until August 25.`,
             cta: {
               type: CallToActionVariantEnum.BORDER,
               target: '_blank',
@@ -130,9 +132,9 @@ export const FILECOIN_DEV_SUMMIT_2023_PAGE_CONTENT = [
             backgroundColor: 'white',
             textColor: 'black',
             name: 'Iceland',
-            description:
-              'Apply to attend Iceland FIL Dev Summit from September 25-27, 2023. General Admission is $150 for all three days. Early bird tickets are 50% off until August 25.',
-
+            description: `Apply to attend Iceland FIL Dev Summit from September 25-27, 2023. 
+ 
+General Admission is $150 for all three days. Early bird tickets are 50% off until August 25.`,
             cta: {
               type: CallToActionVariantEnum.BORDER,
               buttonColor: 'linear-gradient(to right,#39C1CB, #006FEC);',
@@ -149,9 +151,9 @@ export const FILECOIN_DEV_SUMMIT_2023_PAGE_CONTENT = [
             textColor: 'black',
             price: '',
             name: 'Scholars',
-            description:
-              'This program is designed to provide opportunities for individuals from underrepresented communities, unique circumstances, or developing areas to participate in FIL Dev Summit.',
-
+            description: `This program is designed to provide opportunities for individuals from underrepresented communities, unique circumstances, or developing areas to participate in FIL Dev Summit.
+            
+            `,
             cta: {
               type: CallToActionVariantEnum.BORDER,
               buttonColor: 'linear-gradient(to right,#39C1CB, #006FEC);',
