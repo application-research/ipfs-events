@@ -137,7 +137,7 @@ export default function Schedule({ scheduleData }) {
             const isLastIndex = index === Object.keys(calendarData).length - 1;
 
             return (
-              <div key={index} className={styles.eventStyle} style={{ borderRight: isLastIndex ? '0.5px solid var(--color-gray-transparent)' : 'none' }}>
+              <div key={index} className={styles.eventStyle}>
                 {eventKeys?.map((eventItem, eventIndex) => {
                   const events = calendarData[dateKey];
                   const eventDetails = events[eventItem];
@@ -149,7 +149,7 @@ export default function Schedule({ scheduleData }) {
                       {title && <p className={styles.eventName}>{title}</p>}
                       {time && <p className={styles.time}>{time}</p>}
                       {location && <p className={styles.location}>{location}</p>}
-                      <p className={styles.people}>👤 {trackAttendees ?? 'All Welcome'}</p>
+                      <p className={styles.people}>👤 {trackAttendees ?? '50 seats'}</p>
                     </div>
                   );
                 })}

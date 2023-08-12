@@ -1,4 +1,5 @@
 export const SCHEDULE_ICELAND = {
+  'Sun, Sept 24': {},
   'Mon, Sept 25': {
     'Welcome & Intro': {
       trackDetails: {
@@ -7,7 +8,7 @@ export const SCHEDULE_ICELAND = {
           location: null,
           time: '10:00AM - 12:30PM',
           title: 'Welcome & Intro',
-          trackAttendees: 'All Welcome',
+          trackAttendees: '50 seats',
           trackDate: 'Mon, Sept 25',
           trackDesc: '',
           speakers: 'Juan Benet & Molly Mackinlay',
@@ -21,7 +22,7 @@ export const SCHEDULE_ICELAND = {
           location: null,
           time: '1:30PM - 6:00PM',
           title: 'Protocol Development & Evolution',
-          trackAttendees: 'All Welcome',
+          trackAttendees: '50 seats',
           trackDate: 'Mon, Sept 25',
           trackDesc: '',
           speakers: 'ZX Zhang',
@@ -37,7 +38,7 @@ export const SCHEDULE_ICELAND = {
           location: null,
           time: '1:30PM - 6:00PM',
           title: 'Clients Onboarding Experience',
-          trackAttendees: 'All Welcome',
+          trackAttendees: '50 seats',
           trackDate: 'Mon, Sept 25',
           speakers: 'Andrew Ferrone',
           trackDesc:
@@ -53,7 +54,7 @@ export const SCHEDULE_ICELAND = {
           location: null,
           time: '1:30PM - 6:00PM',
           title: 'Filecoin Retrievals & Data Availability',
-          trackAttendees: 'All Welcome',
+          trackAttendees: '50 seats',
           trackDate: 'Mon, Sept 25',
           speakers: 'Will Scott & Hannah Howard',
           trackDesc:
@@ -69,7 +70,7 @@ export const SCHEDULE_ICELAND = {
           location: null,
           time: '10:00AM - 6:00PM',
           title: 'EXPO',
-          trackAttendees: 'All Welcome',
+          trackAttendees: '50 seats',
           trackDate: 'Mon, Sept 25',
           speakers: 'FIL Dev Summit',
           trackDesc: 'Apply to showcase your booth at our EXPO space. Please reach out to miwa@protocol.ai for more information. ',
@@ -77,7 +78,6 @@ export const SCHEDULE_ICELAND = {
       },
     },
   },
-
   'Tue, Sept 26': {
     'Protocol Development & Evolution': {
       trackDetails: {
@@ -86,7 +86,7 @@ export const SCHEDULE_ICELAND = {
           location: null,
           time: '10:00AM - 6:00PM',
           title: 'Protocol Development & Evolution',
-          trackAttendes: 'All Welcome',
+          trackAttendes: '50 seats',
           trackDate: 'Tue, Sept 26',
           trackDesc: '',
           speakers: 'ZX Zhang',
@@ -101,7 +101,7 @@ export const SCHEDULE_ICELAND = {
             location: null,
             time: '10:00AM - 6:00PM',
             title: 'Filecoin Retrievals & Data Availability',
-            trackAttendees: 'All Welcome',
+            trackAttendees: '50 seats',
             trackDate: 'Tue, Sept 26',
             speakers: 'Will Scott & Hannah Howard',
             trackDesc:
@@ -118,7 +118,7 @@ export const SCHEDULE_ICELAND = {
           location: null,
           time: '10:00AM - 3:30PM',
           title: 'Clients Data Onboarding Protocol, Tools, & Market',
-          trackAttendes: 'All Welcome',
+          trackAttendes: '50 seats',
           trackDate: 'Tue, Sept 26',
           speakers: 'Deep Kapur',
           trackDesc: 'More information coming soon',
@@ -133,7 +133,7 @@ export const SCHEDULE_ICELAND = {
           location: null,
           time: '1:30PM - 6:00PM',
           title: 'Scalability & Computation',
-          trackAttendes: 'All Welcome',
+          trackAttendes: '50 seats',
           trackDate: 'Tue, Sept 26',
           speakers: 'Jorge M. Soares',
           trackDesc:
@@ -150,7 +150,7 @@ export const SCHEDULE_ICELAND = {
           location: null,
           time: '10:00AM - 6:00PM',
           title: 'EXPO',
-          trackAttendees: 'All Welcome',
+          trackAttendees: '50 seats',
           trackDate: 'Tue, Sept 26',
           speakers: 'FIL Dev Summit',
           trackDesc: 'Apply to showcase your booth at our EXPO space. Please reach out to miwa@protocol.ai for more information. ',
@@ -166,7 +166,7 @@ export const SCHEDULE_ICELAND = {
           location: null,
           time: '10:00AM - 12:30PM',
           title: 'FVM & Runtimes',
-          trackAttendes: 'All Welcome',
+          trackAttendes: '50 seats',
           trackDate: 'Wed, Sept 27',
           speakers: 'Steven Allen',
           trackDesc: 'More information coming soon',
@@ -181,7 +181,7 @@ export const SCHEDULE_ICELAND = {
           location: null,
           time: '10:00AM - 5:15PM',
           title: 'Governance & Community',
-          trackAttendes: 'All Welcome',
+          trackAttendes: '50 seats',
           trackDate: 'Wed, Sept 27',
           speakers: 'Kaitlin Beegle & Deep Kapur',
           trackDesc: 'More information coming soon',
@@ -196,7 +196,7 @@ export const SCHEDULE_ICELAND = {
           location: null,
           time: '10:00AM - 5:15PM',
           title: 'EXPO',
-          trackAttendees: 'All Welcome',
+          trackAttendees: '50 seats',
           trackDate: 'Mon, Sept 27',
           speakers: 'FIL Dev Summit',
           trackDesc: 'Apply to showcase your booth at our EXPO space. Please reach out to miwa@protocol.ai for more information. ',
@@ -210,7 +210,7 @@ export const SCHEDULE_ICELAND = {
           location: null,
           time: '1:30PM - 5:15PM',
           title: 'Scalability & Computation',
-          trackAttendes: 'All Welcome',
+          trackAttendes: '50 seats',
           trackDate: 'Wed, Sept 27',
           speakers: 'Jorge Soares',
           trackDesc:
@@ -226,7 +226,7 @@ export const SCHEDULE_ICELAND = {
           location: null,
           time: '1:30PM - 5:15PM',
           title: 'Chain tooling & infrastructure',
-          trackAttendes: 'All Welcome',
+          trackAttendes: '50 seats',
           trackDate: 'Wed, Sept 27',
           speakers: 'David Himmelstrup',
           trackDesc: 'More information coming soon',
@@ -242,7 +242,7 @@ export const SCHEDULE_ICELAND = {
           location: null,
           time: '5:15PM - 6:00PM',
           title: 'Closing',
-          trackAttendees: 'All Welcome',
+          trackAttendees: '50 seats',
           trackDate: 'Mon, Sept 27',
           speakers: 'Juan Benet',
           trackDesc: '',
@@ -250,4 +250,5 @@ export const SCHEDULE_ICELAND = {
       },
     },
   },
+  'Sun, Sept 28': {},
 };
