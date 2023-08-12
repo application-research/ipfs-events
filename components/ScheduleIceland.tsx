@@ -1,11 +1,9 @@
 'use client';
 import styles from '@components/Schedule.module.scss';
 
-import { getFormattedAirtableFields } from '@root/resolvers/airtable-import';
 import { SCHEDULE_ICELAND } from '@root/content/schedule-iceland';
 import { SchedulePopUp } from './SchedulePopUp';
 import { useEffect, useRef, useState } from 'react';
-import ScrollTableTooltip from './ScrollTableTooltip';
 
 const NODE = process.env.NODE_ENV || 'development';
 const IS_PRODUCTION = NODE === 'production';
@@ -19,10 +17,6 @@ export default function ScheduleIceland({ scheduleData }) {
 
   const [selectedEvent, setSelectedEvent] = useState(null);
   const [isOverlayOpen, setIsOverlayOpen] = useState(false);
-  const [showArrowLeft, setShowArrowLeft] = useState(false);
-  const [showArrowRight, setShowArrowRight] = useState(false);
-  const [isScrolling, setIsScrolling] = useState(false);
-
   const [data, setData] = useState([]);
 
   const tableRef = useRef<HTMLDivElement>(null);
@@ -59,42 +53,13 @@ export default function ScheduleIceland({ scheduleData }) {
     setIsOverlayOpen(false);
   };
 
-  useEffect(() => {
-    getAirtableDataIceland(tableName, (records) => {
-      if (records) {
-        setData(records);
-      }
-    });
-  }, []);
-
-  useEffect(() => {
-    const tableElement = tableRef.current;
-
-    const handleScroll = () => {
-      if (tableElement) {
-        //Check the scroll position
-        setShowArrowLeft(tableElement.scrollLeft > 0);
-
-        setShowArrowRight(tableElement.scrollLeft + tableElement.clientWidth < tableElement.scrollWidth);
-
-        setIsScrolling(true);
-
-        //sync the scroll position between headers and schedule
-        if (headersRef.current) {
-          headersRef.current.scrollLeft = tableElement.scrollLeft;
-        }
-      }
-    };
-
-    if (tableElement) {
-      tableElement.addEventListener('scroll', handleScroll);
-      // Check initial scroll positions
-      handleScroll();
-      return () => {
-        tableElement.removeEventListener('scroll', handleScroll);
-      };
-    }
-  });
+  // useEffect(() => {
+  //   getAirtableDataIceland(tableName, (records) => {
+  //     if (records) {
+  //       setData(records);
+  //     }
+  //   });
+  // }, []);
 
   //const calendarData: any = getFormattedAirtableFields(data);
 
@@ -174,7 +139,7 @@ export default function ScheduleIceland({ scheduleData }) {
         </section>
       )}
 
-      <a href="https://airtable.com/appEjnh5rpWMsjocb/shr6SmQjqdgn5Pc90" className={styles.link}>
+      <a href="https://airtable.com/appEjnh5rpWMsjocb/shr6SmQjqdgn5Pc90" className={styles.link} target="_blank">
         <section className={styles.callToAction}>
           <div className={styles.callToActionTextContainer}>
             <p className={styles.plusIcon}>+</p>
@@ -186,29 +151,29 @@ export default function ScheduleIceland({ scheduleData }) {
   );
 }
 
-export function getAirtableDataIceland(view, callback) {
-  const Airtable = require('airtable');
-  const base = new Airtable({ apiKey: process.env.AIRTABLE_API }).base(process.env.AIRTABLE_BASE_ID);
+// export function getAirtableDataIceland(view, callback) {
+//   const Airtable = require('airtable');
+//   const base = new Airtable({ apiKey: process.env.AIRTABLE_API }).base(process.env.AIRTABLE_BASE_ID);
 
-  const records = [];
+//   const records = [];
 
-  //Reffer to Airtable Javascript library
-  base('Responses')
-    .select({ view })
-    .eachPage(
-      (pageRecords, fetchNextPage) => {
-        records.push(...pageRecords);
-        fetchNextPage();
-      },
-      (err) => {
-        if (err) {
-          console.error('Error fetching Airtable data:', err);
-          callback(null);
-        } else {
-          callback(records);
-        }
-      }
-    );
+//   //Reffer to Airtable Javascript library
+//   base('Responses')
+//     .select({ view })
+//     .eachPage(
+//       (pageRecords, fetchNextPage) => {
+//         records.push(...pageRecords);
+//         fetchNextPage();
+//       },
+//       (err) => {
+//         if (err) {
+//           console.error('Error fetching Airtable data:', err);
+//           callback(null);
+//         } else {
+//           callback(records);
+//         }
+//       }
+//     );
 
-  return records;
-}
+//   return records;
+// }
