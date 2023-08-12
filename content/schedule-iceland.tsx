@@ -1,13 +1,14 @@
 export const SCHEDULE_ICELAND = {
+  'Sun, Sept 24': {},
   'Mon, Sept 25': {
     'Welcome & Intro': {
       trackDetails: {
         'Welcome & Intro': {
           id: 'recKA6wmDzBjUZ445',
-          location: null,
+          location: 'Silfurberg A',
           time: '10:00AM - 12:30PM',
           title: 'Welcome & Intro',
-          trackAttendees: 'All Welcome',
+          trackAttendees: '150 seats',
           trackDate: 'Mon, Sept 25',
           trackDesc: '',
           speakers: 'Juan Benet & Molly Mackinlay',
@@ -18,10 +19,10 @@ export const SCHEDULE_ICELAND = {
       trackDetails: {
         'Protocol Development & Evolution': {
           id: 'recKA6wmDzBjUZ445',
-          location: null,
+          location: 'Silfurberg A',
           time: '1:30PM - 6:00PM',
           title: 'Protocol Development & Evolution',
-          trackAttendees: 'All Welcome',
+          trackAttendees: '150 seats',
           trackDate: 'Mon, Sept 25',
           trackDesc: '',
           speakers: 'ZX Zhang',
@@ -30,14 +31,14 @@ export const SCHEDULE_ICELAND = {
         },
       },
     },
-    'Clients Onboarding Experience': {
+    'The Path to Enterprise Storage': {
       trackDetails: {
-        'Clients Onboarding Experience': {
+        'The Path to Enterprise Storage': {
           id: 'recKA6wmDzBjUZ445',
-          location: null,
+          location: 'Kaldalon',
           time: '1:30PM - 6:00PM',
-          title: 'Clients Onboarding Experience',
-          trackAttendees: 'All Welcome',
+          title: 'The Path to Enterprise Storage',
+          trackAttendees: '50 seats',
           trackDate: 'Mon, Sept 25',
           speakers: 'Andrew Ferrone',
           trackDesc:
@@ -50,10 +51,10 @@ export const SCHEDULE_ICELAND = {
       trackDetails: {
         'Filecoin Retrievals & Data Availability': {
           id: 'recKA6wmDzBjUZ445',
-          location: null,
+          location: 'Silfurberg B',
           time: '1:30PM - 6:00PM',
           title: 'Filecoin Retrievals & Data Availability',
-          trackAttendees: 'All Welcome',
+          trackAttendees: '150 Seats',
           trackDate: 'Mon, Sept 25',
           speakers: 'Will Scott & Hannah Howard',
           trackDesc:
@@ -66,7 +67,7 @@ export const SCHEDULE_ICELAND = {
       trackDetails: {
         EXPO: {
           id: 'recKA6wmDzBjUZ445',
-          location: null,
+          location: 'Nordurljos',
           time: '10:00AM - 6:00PM',
           title: 'EXPO',
           trackAttendees: 'All Welcome',
@@ -77,16 +78,15 @@ export const SCHEDULE_ICELAND = {
       },
     },
   },
-
   'Tue, Sept 26': {
     'Protocol Development & Evolution': {
       trackDetails: {
         'Protocol Development & Evolution': {
           id: 'recKA6wmDzBjUZ445',
-          location: null,
+          location: 'Silfurberg A',
           time: '10:00AM - 6:00PM',
           title: 'Protocol Development & Evolution',
-          trackAttendes: 'All Welcome',
+          trackAttendes: '150 Seats',
           trackDate: 'Tue, Sept 26',
           trackDesc: '',
           speakers: 'ZX Zhang',
@@ -98,10 +98,10 @@ export const SCHEDULE_ICELAND = {
         trackDetails: {
           'Filecoin Retrievals & Data Availability': {
             id: 'recKA6wmDzBjUZ445',
-            location: null,
+            location: 'Silfurberg B',
             time: '10:00AM - 6:00PM',
             title: 'Filecoin Retrievals & Data Availability',
-            trackAttendees: 'All Welcome',
+            trackAttendees: '150 Seats',
             trackDate: 'Tue, Sept 26',
             speakers: 'Will Scott & Hannah Howard',
             trackDesc:
@@ -115,10 +115,10 @@ export const SCHEDULE_ICELAND = {
       trackDetails: {
         'Clients Data Onboarding Protocol, Tools, & Market': {
           id: 'recKA6wmDzBjUZ445',
-          location: null,
+          location: 'Kaldalon',
           time: '10:00AM - 3:30PM',
           title: 'Clients Data Onboarding Protocol, Tools, & Market',
-          trackAttendes: 'All Welcome',
+          trackAttendes: '50 Seats',
           trackDate: 'Tue, Sept 26',
           speakers: 'Deep Kapur',
           trackDesc: 'More information coming soon',
@@ -130,10 +130,10 @@ export const SCHEDULE_ICELAND = {
       trackDetails: {
         'Scalability & Computation': {
           id: 'recKA6wmDzBjUZ445',
-          location: null,
+          location: 'Silfurberg A',
           time: '1:30PM - 6:00PM',
           title: 'Scalability & Computation',
-          trackAttendes: 'All Welcome',
+          trackAttendes: '50 seats',
           trackDate: 'Tue, Sept 26',
           speakers: 'Jorge M. Soares',
           trackDesc:
@@ -147,7 +147,7 @@ export const SCHEDULE_ICELAND = {
       trackDetails: {
         EXPO: {
           id: 'recKA6wmDzBjUZ445',
-          location: null,
+          location: 'Nordurljos',
           time: '10:00AM - 6:00PM',
           title: 'EXPO',
           trackAttendees: 'All Welcome',
@@ -163,10 +163,10 @@ export const SCHEDULE_ICELAND = {
       trackDetails: {
         'FVM & Runtimes': {
           id: 'recKA6wmDzBjUZ445',
-          location: null,
+          location: 'Silfurberg A',
           time: '10:00AM - 12:30PM',
           title: 'FVM & Runtimes',
-          trackAttendes: 'All Welcome',
+          trackAttendes: '150 Seats',
           trackDate: 'Wed, Sept 27',
           speakers: 'Steven Allen',
           trackDesc: 'More information coming soon',
@@ -178,10 +178,10 @@ export const SCHEDULE_ICELAND = {
       trackDetails: {
         'Governance & Community': {
           id: 'recKA6wmDzBjUZ445',
-          location: null,
+          location: 'Silfurberg B',
           time: '10:00AM - 5:15PM',
           title: 'Governance & Community',
-          trackAttendes: 'All Welcome',
+          trackAttendes: '150 Seats',
           trackDate: 'Wed, Sept 27',
           speakers: 'Kaitlin Beegle & Deep Kapur',
           trackDesc: 'More information coming soon',
@@ -193,7 +193,7 @@ export const SCHEDULE_ICELAND = {
       trackDetails: {
         EXPO: {
           id: 'recKA6wmDzBjUZ445',
-          location: null,
+          location: 'Nordurljos',
           time: '10:00AM - 5:15PM',
           title: 'EXPO',
           trackAttendees: 'All Welcome',
@@ -207,10 +207,10 @@ export const SCHEDULE_ICELAND = {
       trackDetails: {
         'Scalability & Computation': {
           id: 'recKA6wmDzBjUZ445',
-          location: null,
+          location: 'Silfurberg A',
           time: '1:30PM - 5:15PM',
           title: 'Scalability & Computation',
-          trackAttendes: 'All Welcome',
+          trackAttendes: '150 Seats',
           trackDate: 'Wed, Sept 27',
           speakers: 'Jorge Soares',
           trackDesc:
@@ -223,10 +223,10 @@ export const SCHEDULE_ICELAND = {
       trackDetails: {
         'Chain tooling & infrastructure': {
           id: 'recKA6wmDzBjUZ445',
-          location: null,
+          location: 'Kaldalon',
           time: '1:30PM - 5:15PM',
           title: 'Chain tooling & infrastructure',
-          trackAttendes: 'All Welcome',
+          trackAttendes: '50 Seats',
           trackDate: 'Wed, Sept 27',
           speakers: 'David Himmelstrup',
           trackDesc: 'More information coming soon',
@@ -239,10 +239,10 @@ export const SCHEDULE_ICELAND = {
       trackDetails: {
         Closing: {
           id: 'recKA6wmDzBjUZ445',
-          location: null,
+          location: 'Silfurberg A',
           time: '5:15PM - 6:00PM',
           title: 'Closing',
-          trackAttendees: 'All Welcome',
+          trackAttendees: '150 Seats',
           trackDate: 'Mon, Sept 27',
           speakers: 'Juan Benet',
           trackDesc: '',
@@ -250,4 +250,5 @@ export const SCHEDULE_ICELAND = {
       },
     },
   },
+  'Sun, Sept 28': {},
 };

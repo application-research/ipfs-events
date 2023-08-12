@@ -170,6 +170,7 @@ body {
 =======
   --color-gray-transparent200: #8483835a;
   --color-blue: #0090ff;
+  --color-blue-gray: #b0b0bf;
   --color-beige: #fffdf5;
 >>>>>>> 2127ccc (added track details)
   --color-text: #000000;
@@ -178,6 +179,7 @@ body {
   --text-white: #ffffff;
   --color-white100: #ccc;
   --font-size-small: 12px;
+  --font-size-regular-small: 15px;
   --font-size-regular: 16px;
   --font-size-medium: 24px;
   --font-size-large: 32px;
@@ -196,6 +198,21 @@ body {
   --z-index-small: 1;
   --z-index-medium: 2;
   --z-index-large: 3;
+
+  --accent1-color: #081828;
+  --accent2-color: #8bf935;
+  --accent3-color: #6fbd97;
+  --accent4-color: #1a95fa;
+  --tw-gradient-from: var(--accent4-color);
+  --tw-gradient-to: var(--accent3-color);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--accent2-color), var(--tw-gradient-to, hsla(0, 0%, 100%, 0));
+
+  --gradient-border-blue-green: #1a95fa, #8bf935, #6fbd97;
+  --gradient-border-blue-green-transparent: rgba(26, 149, 250, 0.2), rgba(139, 249, 53, 0.2), rgba(111, 189, 151, 0.2);
+
+  --shadow-gray: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --tw-ring-shadow: #green;
+  --tw-shadow: #red;
 
   font-size: 16px;
   background: var(--color-background);

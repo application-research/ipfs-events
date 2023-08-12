@@ -10,7 +10,7 @@ export const FILECOIN_DEV_SUMMIT_2023_HERO_CONTENT = {
   type: BlockTypeEnum.HERO_NO_BACKGROUND,
   title: 'FIL Dev Summit',
   description:
-    'FIL Dev Summit is a gathering of developers, builders, and engaged community members who want to contribute to the core protocol and network evolution of Filecoin (think IPFS Thing, but bigger!).',
+    "FIL Dev Summit is a gathering of developers, builders, and engaged community members who want to contribute to the core protocol and network evolution of Filecoin (think IPFS Thing, but bigger!). This summit is more than just a meetup—it's a place for meaningful and impactful conversations that help push Filecoin forward. Discussions at the summit will cover a wide range of topics, from protocol scalability and network improvements to the intricacies of data onboarding and governance structures. These conversations serve to share and refine improvements - where participants can gain insights from diverse perspectives, challenge assumptions, and collectively arrive at innovative solutions to the challenges faced by the Filecoin ecosystem.",
 };
 
 <<<<<<< HEAD
@@ -74,22 +74,12 @@ export const FILECOIN_DEV_SUMMIT_PAGE_STYLE_CONTENT = {
 };
 
 export const FIL_DEV_SUMMIT_ICELAND = {
-  style: {
-    backgroundColor: 'var(--color-white)',
-    hoverColor: 'var(--gray-transparent)',
-    emptyContainerColor: 'var(--gray-transparent)',
-  },
   airtable: {
     tableName: 'NA/EU Talk Track Submissions + Forms',
   },
 };
 
 export const FIL_DEV_SUMMIT_SINGAPORE = {
-  style: {
-    backgroundColor: 'var(--color-white)',
-    hoverColor: 'var(--gray-transparent)',
-    emptyContainerColor: 'var(--gray-transparent)',
-  },
   airtable: {
     tableName: 'Asia Talk/Track Submissions + Forms',
   },
@@ -100,7 +90,6 @@ export const FILECOIN_DEV_SUMMIT_2023_PAGE_CONTENT = [
     id: '2',
     subtitle: 'Sponsors',
     direction: BlockDirectionEnum.COLUMN,
-    backgroundColor: 'red',
     cta: {
       type: CallToActionVariantEnum.BORDER,
       target: '_blank',
@@ -119,7 +108,7 @@ export const FILECOIN_DEV_SUMMIT_2023_PAGE_CONTENT = [
             href: 'https://protocol.ai/',
           },
           {
-            src: '/media/filecoin-sponsor.png',
+            src: '/media/ff-logo.png',
             href: 'https://fil.org/',
           },
         ],
@@ -247,7 +236,7 @@ export const FILECOIN_DEV_SUMMIT_2023_PAGE_CONTENT = [
             price: '',
             name: 'Scholars',
             description:
-              'This program is designed to provide opportunities for individuals from underrepresented communities, unique circumstances, or developing areas to participate in FIL Dev Summit. Priority will be given to individuals with a history of strong contributions to FIL implementations and related projects, or potential future contributions to the FIL Implementors community.',
+              'This program is designed to provide opportunities for individuals from underrepresented communities, unique circumstances, or developing areas to participate in FIL Dev Summit.',
 
             cta: {
               type: CallToActionVariantEnum.BORDER,
@@ -296,6 +285,7 @@ export const FILECOIN_DEV_SUMMIT_2023_PAGE_CONTENT = [
     direction: BlockDirectionEnum.COLUMN,
 >>>>>>> 769859b (updated columns for block direction)
     title: 'FIL Dev Summit - Singapore Schedule',
+<<<<<<< HEAD
     cta: {
       type: CallToActionVariantEnum.BUTTON,
       textColor: 'white',
@@ -323,6 +313,16 @@ export const FILECOIN_DEV_SUMMIT_2023_PAGE_CONTENT = [
       link: 'https://airtable.com/appEjnh5rpWMsjocb/shrw3Ha0yTusDmcOg',
     },
 
+=======
+    // cta: {
+    //   type: CallToActionVariantEnum.BUTTON,
+    //   textColor: 'white',
+    //   target: '_blank',
+    //   text: 'Submit a Talk/Track',
+    //   buttonColor: 'linear-gradient(to right,#39C1CB, #006FEC);',
+    //   link: 'https://airtable.com/appEjnh5rpWMsjocb/shrw3Ha0yTusDmcOg',
+    // },
+>>>>>>> 16f616b (updated calendar)
     block: [
       {
 >>>>>>> f9ceb8d (submit track or talk)
@@ -360,6 +360,7 @@ export const FILECOIN_DEV_SUMMIT_2023_PAGE_CONTENT = [
     direction: BlockDirectionEnum.COLUMN,
 >>>>>>> 769859b (updated columns for block direction)
     title: 'FIL Dev Summit - Iceland Schedule',
+<<<<<<< HEAD
     cta: {
       type: CallToActionVariantEnum.BUTTON,
       textColor: 'white',
@@ -382,6 +383,16 @@ export const FILECOIN_DEV_SUMMIT_2023_PAGE_CONTENT = [
       link: 'https://airtable.com/appEjnh5rpWMsjocb/shr6SmQjqdgn5Pc90',
     },
 >>>>>>> f9ceb8d (submit track or talk)
+=======
+    // cta: {
+    //   type: CallToActionVariantEnum.BUTTON,
+    //   textColor: 'white',
+    //   target: '_blank',
+    //   text: 'Submit a Talk/Track',
+    //   buttonColor: 'linear-gradient(to right,#39C1CB, #006FEC);',
+    //   link: 'https://airtable.com/appEjnh5rpWMsjocb/shr6SmQjqdgn5Pc90',
+    // },
+>>>>>>> 16f616b (updated calendar)
     block: [
       {
         type: BlockTypeEnum.SCHEDULE_ICELAND,
@@ -461,7 +472,6 @@ export const FILECOIN_DEV_SUMMIT_2023_PAGE_CONTENT = [
 >>>>>>> f9ceb8d (submit track or talk)
     ],
   },
-
   {
     id: 'faqs',
     title: 'FAQs',
@@ -518,6 +528,13 @@ export const FILECOIN_DEV_SUMMIT_2023_PAGE_CONTENT = [
 - **Become a Scholar**: Note that this program is designed to provide opportunities for individuals from underrepresented communities, unique circumstances, or developing areas to participate in FIL Dev Summit. Priority will be given to individuals with a history of strong contributions to FIL implementations and related projects, or potential future contributions to the FIL Implementors community.
 
 - **Keep up the momentum!**: After the event, all of the tracks will be posted to the Filecoin Youtube channel. Be sure to share your talk or track videos with the world! Help the broader community see all of the great work that has transpired and get a sense of what they can expect to see more of for the rest of the year and beyond.`,
+            backgroundColor: 'linear-gradient(to right,#39C1CB, #006FEC)',
+          },
+          {
+            type: BlockTypeEnum.COLLAPSABLE,
+            title: 'What are the venues for FIL Dev Summit?',
+            collapsedText:
+              'Logistical details will be sent to you once your application has been received, approved, and you have completed the registration for this event by purchasing a ticket.',
             backgroundColor: 'linear-gradient(to right,#39C1CB, #006FEC)',
           },
           {

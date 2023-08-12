@@ -30,8 +30,8 @@
   flex-direction: column;
   gap: 1rem;
 
-  @media (max-width: 768px) {
-    overflow: hidden;
+  @media (max-width: 1050px) {
+    overflow: scroll;
   }
 }
 

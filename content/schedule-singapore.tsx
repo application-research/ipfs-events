@@ -1,13 +1,14 @@
 export const SCHEDULE_SINGAPORE = {
+  'Mon, Sept 11': {},
   'Tue, Sept 12': {
     'Welcome & Intro': {
       trackDetails: {
         'Welcome & Intro': {
           id: 'recKA6wmDzBjUZ445',
-          location: null,
+          location: 'Hullet Ballroom',
           time: '10:00AM - 12:30PM',
           title: 'Welcome & Intro',
-          trackAttendees: 'All Welcome',
+          trackAttendees: '100 Seats',
           trackDate: 'Tue, Sept 12',
           trackDesc: '',
           speakers: 'Juan Benet & Molly Mackinlay',
@@ -18,10 +19,10 @@ export const SCHEDULE_SINGAPORE = {
       trackDetails: {
         'Client Data Onboarding Workshop': {
           id: 'recKA6wmDzBjUZ445',
-          location: null,
+          location: 'Ord',
           time: '1:30PM - 6:00PM',
           title: 'Client Data Onboarding Workshop',
-          trackAttendees: 'All Welcome',
+          trackAttendees: '25 Seats',
           trackDate: 'Tue, Sept 12',
           trackDesc:
             'Navigating enterprise deals requires thoughtful strategy and planning. In this interactive series of workshops, we will facilitate roundtable discussions to align on best practices for preparing enterprise deals and improving the user experience. Working together with ecosystem members, product managers and engineers, we will discuss deal structures, strategies for large-scale data storage and payments, and approaches to access controls and supporting deletions. This is an opportunity to cultivate shared knowledge to close and support large-scale Enterprise deals.',
@@ -33,10 +34,10 @@ export const SCHEDULE_SINGAPORE = {
       trackDetails: {
         'Protocol Development & Evolution': {
           id: 'recKA6wmDzBjUZ445',
-          location: null,
+          location: 'Hullet Ballroom',
           time: '1:30PM - 6:00PM',
           title: 'Protocol Development & Evolution',
-          trackAttendees: 'All Welcome',
+          trackAttendees: '100 Seats',
           trackDate: 'Tue, Sept 12',
           speakers: 'Nicola Greco & Jennifer Wang',
           trackDesc: 'Expecting reps from Filecoin core implementers, CNL, CEL, CL, and active FIP authors to participate and share their 🧠 in this track!',
@@ -51,10 +52,10 @@ export const SCHEDULE_SINGAPORE = {
       trackDetails: {
         'Protocol Development & Evolution': {
           id: 'recKA6wmDzBjUZ445',
-          location: null,
+          location: 'Hullet Ballroom',
           time: '10:00AM - 6:00PM',
           title: 'Protocol Development & Evolution',
-          trackAttendes: 'All Welcome',
+          trackAttendes: '100 Seats',
           trackDate: 'Wed, Sept 13',
           trackDesc: 'Expecting reps from Filecoin core implementers, CNL, CEL, CL, and active FIP authors to participate and share their 🧠 in this track!',
           speakers: 'Nicola Greco & Jennifer Wang',
@@ -67,10 +68,10 @@ export const SCHEDULE_SINGAPORE = {
       trackDetails: {
         'SP tooling & stack': {
           id: 'recKA6wmDzBjUZ445',
-          location: null,
+          location: 'Minto',
           time: '10:00AM - 2:30PM',
           title: 'SP tooling & stack',
-          trackAttendes: 'All Welcome',
+          trackAttendes: '90 Seats',
           trackDate: 'Wed, Sept 13',
           speakers: 'Orjan Roren',
           trackDesc:
@@ -83,9 +84,10 @@ export const SCHEDULE_SINGAPORE = {
       trackDetails: {
         'IPC & Friends': {
           id: 'recKA6wmDzBjUZ445',
+          location: 'Minto',
           time: '2:30PM - 6:00PM',
           title: 'IPC & Friends',
-          trackAttendees: 'All Welcome',
+          trackAttendees: '90 Seats',
           trackDate: 'Wed, Sept 13',
           trackDesc:
             'IPC is the next frontier in Filecoin scalability, unlocking unmatched capacity and customisability and enabling new use cases. This track will present the latest developments on IPC but is mainly intended as an opportunity to hear from current and future users of IPC, establish new connections, and build the best possible future for applications on Filecoin.',
@@ -93,16 +95,15 @@ export const SCHEDULE_SINGAPORE = {
       },
     },
   },
-
   'Thu, Sept 14': {
     'Governance & Community': {
       trackDetails: {
         'Governance & Community': {
           id: 'recKA6wmDzBjUZ445',
-          location: null,
+          location: 'Hullet Ballroom',
           time: '10:00AM - 5:15M',
           title: 'Governance & Community',
-          trackAttendes: 'All Welcome',
+          trackAttendes: '100 Seats',
           trackDate: 'Thu, Sept 14',
           trackDesc: 'Expecting reps from Filecoin core implementers, CNL, CEL, CL, and active FIP authors to participate and share their 🧠 in this track!',
           speakers: 'Kaitlin Beegle & Galen McAndrew',
@@ -114,15 +115,15 @@ export const SCHEDULE_SINGAPORE = {
       trackDetails: {
         'FVM applications & toolings': {
           id: 'recKA6wmDzBjUZ445',
-          location: null,
+          location: 'Morrison Ballroom',
           time: '10:00AM - 5:15PM',
           title: 'FVM applications & toolings',
-          trackAttendes: 'All Welcome',
+          trackAttendes: '100 Seats',
           trackDate: 'Thu, Sept 14',
           speakers: 'Longfei Wang',
           trackDesc:
             "This technical deep dive focuses on the tooling and technology stack to scale a storage provider's business while increasing profitability. We will connect with development teams and users in an open forum on the impact to lower gas fees, reduce costs and scale profitability.",
-          discussionPoints: 'Defi, programmable storage,  explorers, wallets',
+          discussionPoints: 'Defi, programmable storage, explorers, wallets',
         },
       },
     },
@@ -130,9 +131,10 @@ export const SCHEDULE_SINGAPORE = {
       trackDetails: {
         'SP tooling & stack copy': {
           id: 'recKA6wmDzBjUZ445',
+          location: 'Indiana',
           time: '10:00AM - 2:30PM',
           title: 'SP tooling & stack copy',
-          trackAttendees: 'All Welcome',
+          trackAttendees: '90 Seats',
           trackDate: 'Thu, Sept 14',
           trackDesc:
             'IPC is the next frontier in Filecoin scalability, unlocking unmatched capacity and customisability and enabling new use cases. This track will present the latest developments on IPC but is mainly intended as an opportunity to hear from current and future users of IPC, establish new connections, and build the best possible future for applications on Filecoin.',
@@ -145,13 +147,15 @@ export const SCHEDULE_SINGAPORE = {
       trackDetails: {
         Closing: {
           id: 'recKA6wmDzBjUZ445',
+          location: 'Hullet Ballroom',
           time: '5:15PM - 6:00PM',
           title: 'Closing',
-          trackAttendees: 'All Welcome',
+          trackAttendees: '100 Seats',
           trackDate: 'Thu, Sept 14',
           trackDesc: '',
         },
       },
     },
   },
+  'Fri, Sept 15': {},
 };
