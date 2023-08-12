@@ -10,15 +10,15 @@ export default function LogoGrid({ id, logos, text }) {
         <div className={styles.col6}>
           {logos.map((logo, index) => {
             return (
-              <div key={index} className={styles.col}>
+              <>
                 {logo.href !== null ? (
-                  <Link href={logo.href} target="_blank">
+                  <Link key={index} href={logo.href} target="_blank" className={styles.col}>
                     <Image className={styles.logo} src={logo.src} altText={logo?.altText ?? ''} />
                   </Link>
                 ) : (
                   <Image className={styles.logo} src={logo.src} altText={logo?.altText ?? ''} />
                 )}
-              </div>
+              </>
             );
           })}
         </div>
