@@ -1,11 +1,15 @@
 .container {
-  width: 100%;
+  // width: 100%;
+  display: grid;
+  row-gap: 1rem;
 }
 
 .headers {
-  display: flex;
-  flex-direction: row;
-  background-color: var(--color-blue);
+  padding-bottom: 1rem;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+
+  gap: 1rem;
   color: var(--color-white);
   font-size: var(--font-size-small);
   top: 60px;
@@ -13,52 +17,86 @@
 
   @media (max-width: 768px) {
     top: 0rem;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(5, 200px);
   }
 }
 
 .heading {
+  display: flex;
   width: 100%;
   min-width: 150px;
+  grid-column: span 1;
   background-color: var(--color-blue);
   color: var(--color-white);
-  display: flex;
   gap: 3rem;
-  padding: 0.5rem 1rem;
+  padding: 0.9rem 0.75rem;
   justify-content: space-between;
-  font-size: var(--font-size-small);
+  font-size: var(--font-size-regular);
+}
+
+.hideEmptyHeadingsMobile {
+  @media (max-width: 768px) {
+    display: none;
+  }
 }
 
 .schedule {
-  display: flex;
-  overflow: auto;
-  width: 100%;
-  position: relative;
-  z-index: 1;
-  overflow: auto;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  align-items: stretch;
+  display: grid;
+  gap: 1rem;
+
+  @media (max-width: 1050px) {
+    padding-top: 2rem;
+  }
+
+  @media (max-width: 768px) {
+    grid-template-columns: repeat(5, 200px);
+  }
 }
 
+.dateColumn {
+  display: flex;
+  flex-direction: column;
+}
 .eventStyle {
-  background: var(--color-gray-transparent);
-  border-left: 0.5px solid var(--color-black);
   width: 100%;
   cursor: pointer;
   transition: 0.05s ease;
   min-width: 150px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
 
 .eventBox {
-  padding: 1rem;
+  padding: 0.75rem;
   font-family: Inter;
   display: flex;
-  border-bottom: 0.5px solid var(--color-black);
   flex-direction: column;
   gap: 1rem;
   font-size: var(--font-size-small);
-  height: 180px;
+  height: 200px;
+  border: 2px solid var(--color-blue-gray);
+  background: var(--color-white);
+  transition: background 200ms ease-in;
 
   &:hover {
-    background: var(--color-gray-transparent200);
+    background: linear-gradient(to right, var(--gradient-border-blue-green-transparent));
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+    border: 2px solid transparent;
+    border-image: linear-gradient(to right, var(--gradient-border-blue-green));
+    border-image-slice: 1;
+  }
+
+  @media (max-width: 1140px) {
+    height: 240px;
+  }
+
+  @media (max-width: 1024px) {
+    height: 240px;
   }
 
   @media (max-width: 768px) {
@@ -68,11 +106,11 @@
 
 .eventName {
   font-weight: var(--font-weight-semi-bold);
-  font-size: var(--font-size-small);
+  font-size: var(--font-size-regular-small);
 }
 
 .time {
-  font-weight: var(--font-weight-semi-bold);
+  font-size: var(--font-size-regular-small);
 }
 
 .absoluteContainer {
@@ -157,8 +195,72 @@
 
   @media (max-width: 768px) {
     display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 0.5rem;
+  }
+}
+
+.people {
+  font-size: var(--font-size-regular-small);
+}
+
+.speakers {
+  font-size: var(--font-size-regular-small);
+}
+
+.location {
+  font-size: var(--font-size-regular-small);
+}
+
+.eventDetails {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.callToAction {
+  border: 2px solid var(--color-blue-gray);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  color: inherit;
+
+  &:hover {
+    border: 2px solid transparent;
+    border-image: linear-gradient(to right, var(--gradient-border-blue-green));
+    border-image-slice: 1;
+    background: linear-gradient(to right, var(--gradient-border-blue-green-transparent));
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+  }
+
+  .callToActionTextContainer {
+    display: flex;
     align-items: center;
     justify-content: center;
-    padding: 0.5rem;
+    gap: 0.5rem;
+    flex-direction: column;
+  }
+
+  .callToActionText {
+    padding-bottom: 1.25rem;
+    color: var(--color-black);
+  }
+
+  .plusIcon {
+    color: var(--color-black);
+    font-weight: var(--font-weight-medium);
+  }
+}
+
+.link {
+  text-decoration: none;
+}
+
+.hideItems {
+  @media (max-width: 768px) {
+    display: none;
   }
 }
