@@ -48,7 +48,7 @@ export const FILECOIN_DEV_SUMMIT_2023_PAGE_CONTENT = [
             href: 'https://protocol.ai/',
           },
           {
-            src: '/media/ff-logo.png',
+            src: '/media/ff-logo2.png',
             href: 'https://fil.org/',
           },
         ],
