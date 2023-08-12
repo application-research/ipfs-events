@@ -140,7 +140,7 @@ export const FILECOIN_DEV_SUMMIT_2023_PAGE_CONTENT = [
               type: TypeName.MEDIA_IMAGE,
               src: '/media/singapore-full.png',
               ariaLabel: 'FIL Dev Summit',
-              link: '#filecoin-dev-singapore',
+              link: '#singapore',
             },
           },
           {
@@ -174,7 +174,7 @@ export const FILECOIN_DEV_SUMMIT_2023_PAGE_CONTENT = [
               type: TypeName.MEDIA_IMAGE,
               src: '/media/iceland-full.jpg',
               ariaLabel: 'FIL Dev Summit',
-              link: '#filecoin-dev-iceland',
+              link: '#iceland',
             },
           },
         ],
@@ -266,23 +266,28 @@ export const FILECOIN_DEV_SUMMIT_2023_PAGE_CONTENT = [
 >>>>>>> 25a88a3 (updated homepage)
         image: {
           src: '/media/singapore-long.png',
-          ariaLabel: 'FIL Dev Summit',
-          link: '#filecoin-dev-singapore',
+          ariaLabel: 'FIL Dev Summit - Singapore',
         },
       },
     ],
   },
   {
+    id: 'singapore',
     backgroundColor: 'var(--color-white)',
+<<<<<<< HEAD
     id: 'about',
 <<<<<<< HEAD
     direction: 'column',
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
+=======
+
+>>>>>>> 7b68555 (fixed anchor)
     direction: BlockDirectionEnum.COLUMN,
 >>>>>>> 769859b (updated columns for block direction)
     title: 'FIL Dev Summit - Singapore Schedule',
+<<<<<<< HEAD
 <<<<<<< HEAD
     cta: {
       type: CallToActionVariantEnum.BUTTON,
@@ -321,6 +326,9 @@ export const FILECOIN_DEV_SUMMIT_2023_PAGE_CONTENT = [
     //   link: 'https://airtable.com/appEjnh5rpWMsjocb/shrw3Ha0yTusDmcOg',
     // },
 >>>>>>> 16f616b (updated calendar)
+=======
+
+>>>>>>> 7b68555 (fixed anchor)
     block: [
       {
 >>>>>>> f9ceb8d (submit track or talk)
@@ -349,12 +357,16 @@ export const FILECOIN_DEV_SUMMIT_2023_PAGE_CONTENT = [
     ],
   },
   {
+<<<<<<< HEAD
     id: 'about',
 <<<<<<< HEAD
     direction: 'column',
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
+=======
+    id: 'iceland',
+>>>>>>> 7b68555 (fixed anchor)
     direction: BlockDirectionEnum.COLUMN,
 >>>>>>> 769859b (updated columns for block direction)
     title: 'FIL Dev Summit - Iceland Schedule',

@@ -26,7 +26,7 @@ export default function MediaGrid({ media, id }) {
         const { description, heading, subtitle, smallDesc, title } = mediaItem;
 
         return (
-          <a className={styles.link} href={mediaItem?.media.link} target="_self">
+          <a className={styles.link} href={mediaItem.media.link} target="_self">
             <figure key={index} className={styles.imageWrapper}>
               <MediaBlock {...mediaItem} className={styles.image} />
             </figure>
