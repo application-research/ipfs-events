@@ -3,7 +3,6 @@
   align-items: center;
   justify-content: center;
   padding-top: 4rem;
-  padding-bottom: 4rem;
 }
 
 .rowGap {
@@ -52,6 +51,11 @@
 
 .description {
   max-width: 80ch;
+  font-size: var(--font-size-tiny);
+  font-family: Inter;
+  font-weight: var(--font-weight-light);
+  letter-spacing: -0.003em;
+  line-height: 1.6rem;
 
   @media (max-width: 768px) {
     font-size: var(--font-size-small);

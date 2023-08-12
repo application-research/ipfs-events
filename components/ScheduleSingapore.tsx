@@ -1,10 +1,9 @@
 'use client';
 import styles from '@components/Schedule.module.scss';
 
+import { SCHEDULE_SINGAPORE } from '@root/content/schedule-singapore';
 import { SchedulePopUp } from './SchedulePopUp';
 import React, { useEffect, useRef, useState } from 'react';
-import ScrollTableTooltip from './ScrollTableTooltip';
-import { SCHEDULE_SINGAPORE } from '@root/content/schedule-singapore';
 
 const NODE = process.env.NODE_ENV || 'development';
 const IS_PRODUCTION = NODE === 'production';
@@ -18,10 +17,6 @@ export default function ScheduleSingapore({ scheduleData }) {
 
   const [selectedEvent, setSelectedEvent] = useState(null);
   const [isOverlayOpen, setIsOverlayOpen] = useState(false);
-  const [showArrowLeft, setShowArrowLeft] = useState(false);
-  const [showArrowRight, setShowArrowRight] = useState(false);
-  const [isScrolling, setIsScrolling] = useState(false);
-
   const [data, setData] = useState([]);
 
   const tableRef = useRef<HTMLDivElement>(null);
@@ -39,34 +34,7 @@ export default function ScheduleSingapore({ scheduleData }) {
       backgroundColor: scheduleHoverColor,
     },
   };
-  useEffect(() => {
-    const tableElement = tableRef.current;
 
-    const handleScroll = () => {
-      if (tableElement) {
-        //Check the scroll position
-        setShowArrowLeft(tableElement.scrollLeft > 0);
-
-        setShowArrowRight(tableElement.scrollLeft + tableElement.clientWidth < tableElement.scrollWidth);
-
-        setIsScrolling(true);
-
-        //sync the scroll position between headers and schedule
-        if (headersRef.current) {
-          headersRef.current.scrollLeft = tableElement.scrollLeft;
-        }
-      }
-    };
-
-    if (tableElement) {
-      tableElement.addEventListener('scroll', handleScroll);
-      // Check initial scroll positions
-      handleScroll();
-      return () => {
-        tableElement.removeEventListener('scroll', handleScroll);
-      };
-    }
-  });
   const handleOverlayClick = () => {
     setIsOverlayOpen(false);
   };

@@ -61,7 +61,11 @@
 
 .description {
   max-width: 85ch;
+  font-size: var(--font-size-tiny);
   font-family: Inter;
+  font-weight: var(--font-weight-light);
+  letter-spacing: -0.003em;
+  line-height: 1.6rem;
 }
 
 .textContent {
