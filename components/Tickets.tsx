@@ -2,6 +2,7 @@ import styles from '@components/Tickets.module.scss';
 
 import { CallToActionVariant } from './CallToActionVariant';
 import Link from './Link';
+import { MarkdownToJSX } from './Markdown';
 
 export default function Tickets({ backgroundColor, textColor, tickets }) {
   return (
@@ -21,7 +22,11 @@ export default function Tickets({ backgroundColor, textColor, tickets }) {
 
                 <section className={styles.textContent}>
                   {name && <h4 className={styles.name}>{name}</h4>}
-                  {description && <p className={styles.description}>{description}</p>}
+                  {description && (
+                    <p className={styles.description}>
+                      <MarkdownToJSX>{description}</MarkdownToJSX>
+                    </p>
+                  )}
                 </section>
               </div>
 
