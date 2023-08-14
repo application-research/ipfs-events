@@ -94,6 +94,7 @@ export default function Schedule({ scheduleData }) {
     }
   });
   const calendarData: any = getFormattedAirtableFields(data);
+  console.log(calendarData, 'data');
 
   return (
     <div className={styles.container}>

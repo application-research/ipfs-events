@@ -181,7 +181,9 @@ export function getFormattedAirtableFields(airtableData, timezone?: any): any {
     trackDates.forEach((trackDate) => {
       if (trackDate) {
         const formattedDate = toDateISOString(trackDate, timezone);
+
         const rawTrackSelected = formattedRecord.tracks;
+
         const trackSelected =
           typeof rawTrackSelected === 'string' ? rawTrackSelected : Array.isArray(rawTrackSelected) && rawTrackSelected.length > 0 ? rawTrackSelected[0] : undefined;
 
@@ -205,6 +207,7 @@ export function getFormattedAirtableFields(airtableData, timezone?: any): any {
 }
 
 export function getAirtableData(view, callback) {
+  console.log(view, 'view');
   const Airtable = require('airtable');
 
   const base = new Airtable({ apiKey: process.env.AIRTABLE_API }).base(process.env.AIRTABLE_BASE_ID);

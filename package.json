@@ -6,7 +6,7 @@
   "license": "MIT",
   "version": "0.0.7",
   "scripts": {
-    "dev": "next -p 3008",
+    "dev": "next -p 3007",
     "build": "next build",
     "start": "next start",
     "script": "ts-node -O '{\"module\":\"commonjs\"}' scripts/index.js"
