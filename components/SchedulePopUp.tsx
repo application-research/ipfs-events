@@ -144,11 +144,11 @@ export function SchedulePopUp({ trackTalks, isOpen, onClose, style }) {
             )}
             {speakers && (
               <p className={styles.people}>
-                <strong>Track Leads</strong>: {speakers}
+                <strong>Speakers</strong>: {speakers}
               </p>
             )}
             {discussionPoints && (
-              <p className={styles.description}>
+              <p className={styles.description} style={{ paddingTop: '1rem' }}>
                 <strong>Discussion points: </strong>
                 {discussionPoints}
               </p>
