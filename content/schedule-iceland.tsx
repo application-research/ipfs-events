@@ -219,13 +219,13 @@ export const SCHEDULE_ICELAND = {
         },
       },
     },
-    'Chain tooling & infrastructure': {
+    'Chain Tooling & Infrastructure': {
       trackDetails: {
-        'Chain tooling & infrastructure': {
+        'Chain Tooling & Infrastructure': {
           id: 'recKA6wmDzBjUZ445',
           location: 'Kaldalon',
           time: '1:30PM - 5:15PM',
-          title: 'Chain tooling & infrastructure',
+          title: 'Chain Tooling & Infrastructure',
           trackAttendes: '50 Seats',
           trackDate: 'Wed, Sept 27',
           speakers: 'David Himmelstrup',

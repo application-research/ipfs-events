@@ -72,7 +72,7 @@ export function SchedulePopUp({ trackTalks, isOpen, onClose, style }) {
 
             {speakers && (
               <p className={styles.people}>
-                <strong>Speakers</strong>: {speakers}
+                <strong>Track Leads</strong>: {speakers}
               </p>
             )}
             {discussionPoints && (

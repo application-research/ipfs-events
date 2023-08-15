@@ -64,13 +64,13 @@ export const SCHEDULE_SINGAPORE = {
         },
       },
     },
-    'SP tooling & stack': {
+    'SP Tooling & Stack': {
       trackDetails: {
-        'SP tooling & stack': {
+        'SP Tooling & Stack': {
           id: 'recKA6wmDzBjUZ445',
           location: 'Minto',
           time: '10:00AM - 2:30PM',
-          title: 'SP tooling & stack',
+          title: 'SP Tooling & Stack',
           trackAttendes: '90 Seats',
           trackDate: 'Wed, Sept 13',
           speakers: 'Orjan Roren',
@@ -111,29 +111,30 @@ export const SCHEDULE_SINGAPORE = {
         },
       },
     },
-    'FVM applications & toolings': {
+    'FVM Applications & Toolings': {
       trackDetails: {
-        'FVM applications & toolings': {
+        'FVM Applications & Toolings': {
           id: 'recKA6wmDzBjUZ445',
           location: 'Morrison Ballroom',
           time: '10:00AM - 5:15PM',
           title: 'FVM applications & toolings',
           trackAttendes: '100 Seats',
           trackDate: 'Thu, Sept 14',
-          speakers: 'Longfei Wang',
+          trackLead: 'Sarah Thiam',
+          speakers: '',
           trackDesc:
             "This technical deep dive focuses on the tooling and technology stack to scale a storage provider's business while increasing profitability. We will connect with development teams and users in an open forum on the impact to lower gas fees, reduce costs and scale profitability.",
           discussionPoints: 'Defi, programmable storage, explorers, wallets',
         },
       },
     },
-    'SP tooling & stack copy': {
+    'SP Tooling & Stack': {
       trackDetails: {
-        'SP tooling & stack copy': {
+        'SP Tooling & Stack': {
           id: 'recKA6wmDzBjUZ445',
           location: 'Indiana',
           time: '10:00AM - 2:30PM',
-          title: 'SP tooling & stack copy',
+          title: 'SP Tooling & Stack',
           trackAttendees: '90 Seats',
           trackDate: 'Thu, Sept 14',
           trackDesc:
