@@ -144,7 +144,7 @@ export default function ScheduleSingapore({ scheduleData }) {
         <section className={styles.callToAction}>
           <div className={styles.callToActionTextContainer}>
             <p className={styles.plusIcon}>+</p>
-            <p className={styles.callToActionText}>Submit a Talk or Track </p>
+            <p className={styles.callToActionText}>submit a track or talk for Singapore</p>
           </div>
         </section>
       </a>

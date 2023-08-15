@@ -143,7 +143,7 @@ export default function ScheduleIceland({ scheduleData }) {
         <section className={styles.callToAction}>
           <div className={styles.callToActionTextContainer}>
             <p className={styles.plusIcon}>+</p>
-            <p className={styles.callToActionText}>Submit a Talk or Track </p>
+            <p className={styles.callToActionText}>submit a track or talk for Iceland</p>
           </div>
         </section>
       </a>
