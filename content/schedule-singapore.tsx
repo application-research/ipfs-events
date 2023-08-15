@@ -40,6 +40,7 @@ export const SCHEDULE_SINGAPORE = {
           trackAttendees: '100 Seats',
           trackDate: 'Tue, Sept 12',
           trackLeads: 'Nicola Greco & Jennifer Wang',
+          speakers: 'Jennifer Wang',
           trackDesc: 'Expecting reps from Filecoin core implementers, CNL, CEL, CL, and active FIP authors to participate and share their 🧠 in this track!',
           discussionPoints:
             'layer 0 vs 1 vs 2 protocol, moving functionality into FVM, IPC regions for Filecoin, upgrade path, Better PoReps (proof of space & IPC), upgrading the filecoin economy',
@@ -59,6 +60,7 @@ export const SCHEDULE_SINGAPORE = {
           trackDate: 'Wed, Sept 13',
           trackDesc: 'Expecting reps from Filecoin core implementers, CNL, CEL, CL, and active FIP authors to participate and share their 🧠 in this track!',
           trackLeads: 'Nicola Greco & Jennifer Wang',
+          speakers: 'Jennifer Wang',
           discussionPoints:
             'layer 0 vs 1 vs 2 protocol, moving functionality into FVM, IPC regions for Filecoin, upgrade path, Better PoReps (proof of space & IPC), upgrading the filecoin economy',
         },
@@ -77,6 +79,7 @@ export const SCHEDULE_SINGAPORE = {
           trackDesc:
             "This technical deep dive focuses on the tooling and technology stack to scale a storage provider's business while increasing profitability. We will connect with development teams and users in an open forum on the impact to lower gas fees, reduce costs and scale profitability.",
           discussionPoints: '',
+          speakers: 'lotus-miner, boost, SP engineering teams w custom tooling/impls,  filmine, venus hub, storswift, supranational',
         },
       },
     },
@@ -89,6 +92,7 @@ export const SCHEDULE_SINGAPORE = {
           title: 'IPC & Friends',
           trackAttendees: '90 Seats',
           trackDate: 'Wed, Sept 13',
+          trackLeads: 'Mikhail Turilin',
           trackDesc:
             'IPC is the next frontier in Filecoin scalability, unlocking unmatched capacity and customisability and enabling new use cases. This track will present the latest developments on IPC but is mainly intended as an opportunity to hear from current and future users of IPC, establish new connections, and build the best possible future for applications on Filecoin.',
         },
@@ -142,6 +146,7 @@ export const SCHEDULE_SINGAPORE = {
             'IPC is the next frontier in Filecoin scalability, unlocking unmatched capacity and customisability and enabling new use cases. This track will present the latest developments on IPC but is mainly intended as an opportunity to hear from current and future users of IPC, establish new connections, and build the best possible future for applications on Filecoin.',
           discussionPoints:
             'Lotus, Boost, Venus technical teams discussions, automation enhancements to scale your business, SP profitability, and becoming a new SP - onboarding gaps & requirements.',
+          speakers: 'lotus-miner, boost, SP engineering teams w custom tooling/impls,  filmine, venus hub, storswift, supranational',
         },
       },
     },
