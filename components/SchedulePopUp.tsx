@@ -10,7 +10,7 @@ export function SchedulePopUp({ trackTalks, isOpen, onClose, style }) {
   //get the track name key from trackDetails object
   const trackName = Object.keys(trackDetails)[0];
   //access the track details values inside the track name
-  const { discussionPoints, location, speakers, time, title, trackDate, trackAttendees, trackDesc } = trackDetails[trackName] ?? '';
+  const { discussionPoints, location, speakers, trackLeads, time, title, trackDate, trackAttendees, trackDesc } = trackDetails[trackName] ?? '';
 
   const handleCloseClick = (e) => {
     e.preventDefault();
@@ -59,17 +59,18 @@ export function SchedulePopUp({ trackTalks, isOpen, onClose, style }) {
                 <strong>Location</strong>: {location}
               </p>
             )}
-            {/* {trackLead && (
-            <p className={styles.people}>
-              <strong>Track Lead</strong>: {trackLead}
-            </p>
-          )} */}
+
             {trackAttendees && (
               <p className={styles.people}>
                 <strong>Attendees</strong>: {trackAttendees}
               </p>
             )}
 
+            {trackLeads && (
+              <p className={styles.people}>
+                <strong>Track Leads</strong>: {trackLeads}
+              </p>
+            )}
             {speakers && (
               <p className={styles.people}>
                 <strong>Track Leads</strong>: {speakers}
