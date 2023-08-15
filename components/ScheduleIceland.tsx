@@ -109,7 +109,7 @@ export default function ScheduleIceland({ scheduleData }) {
                   const events = calendarData[dateKey];
                   const eventDetails = events[eventItem];
 
-                  const { title, time, speakers, trackDate, trackAttendees, location } = eventDetails.trackDetails[eventItem] ?? '';
+                  const { title, time, speakers, trackLeads, trackDate, trackAttendees, location } = eventDetails.trackDetails[eventItem] ?? '';
 
                   return (
                     <div className={styles.eventBox} key={eventIndex} onClick={() => handleEventClick(eventDetails)}>
@@ -118,7 +118,7 @@ export default function ScheduleIceland({ scheduleData }) {
                       <div className={styles.eventDetails}>
                         {time && <p className={styles.time}>{time}</p>}
                         {location && <p className={styles.location}>{location}</p>}
-                        {speakers && <p className={styles.speakers}> {speakers}</p>}
+                        {trackLeads && <p className={styles.speakers}> {trackLeads}</p>}
 
                         <p className={styles.people}>👤 {trackAttendees ?? '50 seats'}</p>
                       </div>
