@@ -33,7 +33,7 @@ export const FILECOIN_DEV_SUMMIT_2023_PAGE_CONTENT = [
     cta: {
       type: CallToActionVariantEnum.BORDER,
       target: '_blank',
-      buttonColor: 'linear-gradient(to right,#39C1CB, #006FEC);',
+      buttonColor: 'linear-gradient(to right,#39C1CB, #006FEC)',
       textColor: 'white',
       text: 'Sponsor FIL Dev Summit',
       link: 'https://airtable.com/appEjnh5rpWMsjocb/shrn57n37JyLSOTlV',
@@ -117,7 +117,7 @@ export const FILECOIN_DEV_SUMMIT_2023_PAGE_CONTENT = [
             cta: {
               type: CallToActionVariantEnum.BORDER,
               target: '_blank',
-              buttonColor: 'linear-gradient(to right,#39C1CB, #006FEC);',
+              buttonColor: 'linear-gradient(to right,#39C1CB, #006FEC)',
               textColor: 'white',
               text: 'Apply to Attend',
               link: 'https://airtable.com/appEjnh5rpWMsjocb/shran7li4slfQSB04',
@@ -134,7 +134,7 @@ export const FILECOIN_DEV_SUMMIT_2023_PAGE_CONTENT = [
               'Apply to attend Iceland FIL Dev Summit from September 25-27, 2023. </br></br> General Admission is $150 for all three days. Early bird tickets are 50% off until August 25.',
             cta: {
               type: CallToActionVariantEnum.BORDER,
-              buttonColor: 'linear-gradient(to right,#39C1CB, #006FEC);',
+              buttonColor: 'linear-gradient(to right,#39C1CB, #006FEC)',
               textColor: 'white',
               target: '_blank',
               text: 'Apply to Attend',
@@ -152,7 +152,7 @@ export const FILECOIN_DEV_SUMMIT_2023_PAGE_CONTENT = [
               'This program is designed to provide opportunities for individuals from underrepresented communities, unique circumstances, or developing areas to participate in FIL Dev Summit.',
             cta: {
               type: CallToActionVariantEnum.BORDER,
-              buttonColor: 'linear-gradient(to right,#39C1CB, #006FEC);',
+              buttonColor: 'linear-gradient(to right,#39C1CB, #006FEC)',
               textColor: 'white',
               target: '_blank',
               text: 'Scholar Application',
@@ -223,7 +223,7 @@ export const FILECOIN_DEV_SUMMIT_2023_PAGE_CONTENT = [
     //   textColor: 'white',
     //   target: '_blank',
     //   text: 'Submit a Talk/Track',
-    //   buttonColor: 'linear-gradient(to right,#39C1CB, #006FEC);',
+    //   buttonColor: 'linear-gradient(to right,#39C1CB, #006FEC)',
     //   link: 'https://airtable.com/appEjnh5rpWMsjocb/shr6SmQjqdgn5Pc90',
     // },
     block: [
@@ -439,7 +439,7 @@ export const FILECOIN_DEV_SUMMIT_NAVIGATION_CONTENT = {
   cta: [
     {
       text: 'Apply to Attend',
-      buttonColor: 'linear-gradient(to right,#39C1CB, #006FEC);',
+      buttonColor: 'linear-gradient(to right,#39C1CB, #006FEC)',
       textColor: 'white',
       href: 'https://airtable.com/appEjnh5rpWMsjocb/shran7li4slfQSB04',
       target: '_blank',
