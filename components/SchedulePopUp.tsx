@@ -12,6 +12,7 @@ export function SchedulePopUp({ trackTalks, isOpen, onClose, style }) {
   //access the track details values inside the track name
   const { attendees, discussionPoints, location, speakers, trackLeads, time, title, trackDate, trackAttendees, trackDesc } = trackDetails[trackName] ?? '';
 
+  // console.log(trackSpeakersAndAttendees, 'attendees');
   const handleCloseClick = (e) => {
     e.preventDefault();
     onClose();
@@ -130,7 +131,16 @@ export function SchedulePopUp({ trackTalks, isOpen, onClose, style }) {
                 <strong>Location</strong>: {location}
               </p>
             )}
-
+            {roomName && (
+              <p className={styles.location}>
+                <strong>Room</strong>: {roomName}
+              </p>
+            )}
+            {/* {trackLead && (
+            <p className={styles.people}>
+              <strong>Track Lead</strong>: {trackLead}
+            </p>
+          )} */}
             {trackAttendees && (
               <p className={styles.people}>
                 <strong>Attendees</strong>: {trackAttendees}
@@ -158,6 +168,13 @@ export function SchedulePopUp({ trackTalks, isOpen, onClose, style }) {
                 {discussionPoints}
               </p>
             )}
+
+            {/* {trackSpeakersAndAttendees && (
+              <p className={styles.description}>
+                <strong>Likely Attendees & Speakers: </strong>
+                {trackSpeakersAndAttendees}
+              </p>
+            )} */}
 
             {trackDesc && <p className={styles.description}>{trackDesc}</p>}
             {/* {ctas && (
@@ -204,8 +221,12 @@ export function SchedulePopUp({ trackTalks, isOpen, onClose, style }) {
             })}
         </div>
 
+<<<<<<< HEAD
         {sortedTalks && <p className={styles.tooltip}>Scroll down to see full schedule</p>}
 >>>>>>> 2127ccc (added track details)
+=======
+        {/* {sortedTalks && <p className={styles.tooltip}>Scroll down to see full schedule</p>} */}
+>>>>>>> 5417c65 (draft airtable connection)
       </div>
     </section>
   );

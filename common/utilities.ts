@@ -9,8 +9,20 @@ export const pluralize = (text, count) => {
   return count > 1 || count === 0 ? `${text}s` : text;
 };
 
-export function toDateISOString(data, timezone) {
-  const timeZone = timezone ?? 'UTC';
+export function toDateISOString(data) {
+  const date = new Date(data);
+
+  const options: any = {
+    weekday: 'short',
+    day: 'numeric',
+    month: 'short',
+  };
+
+  return new Intl.DateTimeFormat('en-US', options).format(date);
+}
+
+export function toDateISOStrinWithTimezone(data, timezone) {
+  const timeZone = timezone;
   const date = new Date(data);
 
   const options: any = {
