@@ -529,10 +529,10 @@ export const FILECOIN_DEV_SUMMIT_2023_PAGE_CONTENT = [
 
 - **Give a Talk**: Not ready to lead an entire track, but still would like to contribute? Submit your talk for either/both locations in the schedule section of our website.
 
-- **Volunteer**: Email [miwa@protocol.ai](mailto:miwa@protocol.ai) if you’d like to help make the production of this event a success. We could really use your help!
+- **Volunteer**: Email [hello@fildev.io](mailto:hello@fildev.io) if you’d like to help make the production of this event a success. We could really use your help!
 
 
-- **Sponsor**: Your support helps bring together different teams from around the world to advance the core protocol development and evolve the Filecoin network. If you’re interested in sponsorship, please email us at [miwa@protocol.ai](mailto:miwa@protocol.ai) for more information.		
+- **Sponsor**: Your support helps bring together different teams from around the world to advance the core protocol development and evolve the Filecoin network. If you’re interested in sponsorship, please email us at [hello@fildev.io](mailto:hello@fildev.io) for more information.		
 
 
 - **Become a Scholar**: Note that this program is designed to provide opportunities for individuals from underrepresented communities, unique circumstances, or developing areas to participate in FIL Dev Summit. Priority will be given to individuals with a history of strong contributions to FIL implementations and related projects, or potential future contributions to the FIL Implementors community.
