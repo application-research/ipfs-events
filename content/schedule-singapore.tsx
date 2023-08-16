@@ -24,6 +24,7 @@ export const SCHEDULE_SINGAPORE = {
           title: 'Client Data Onboarding Workshop',
           trackAttendees: '25 Seats',
           trackDate: 'Tue, Sept 12',
+          trackLeads: 'Xilin Zhang & Mara MacMahon',
           trackDesc:
             'Navigating enterprise deals requires thoughtful strategy and planning. In this interactive series of workshops, we will facilitate roundtable discussions to align on best practices for preparing enterprise deals and improving the user experience. Working together with ecosystem members, product managers and engineers, we will discuss deal structures, strategies for large-scale data storage and payments, and approaches to access controls and supporting deletions. This is an opportunity to cultivate shared knowledge to close and support large-scale Enterprise deals.',
           discussionPoints: 'Enterprise Deal Preparedness, Singularity, Project Motion and Filecoin Use Cases',
@@ -40,9 +41,10 @@ export const SCHEDULE_SINGAPORE = {
           title: 'Protocol Development & Evolution',
           trackAttendees: '100 Seats',
           trackDate: 'Tue, Sept 12',
-          trackLeads: 'Nicola Greco & Jennifer Wang',
-          speakers: 'Jennifer Wang',
-          trackDesc: 'Expecting reps from Filecoin core implementers, CNL, CEL, CL, and active FIP authors to participate and share their 🧠 in this track!',
+          trackLeads: 'Jennifer Wang (@jennijuju) & Nicola Greco',
+          speakers: 'Jennifer Wang (@jennijuju)',
+          trackDesc:
+            'Time to discuss deeper how the Filecoin protocol can further evolve, especially with the introduction of FVM! Things to discuss: Filecoin layer 0 vs 1 vs 2 protocol, moving functionality into FVM, IPC regions for Filecoin, upgrade path, Better PoReps (proof of space & IPC), new consensus, upgrading the filecoin economy & etcc.. Expecting reps from Filecoin core implementers, CNL, CEL, CL, and active FIP authors to participate and share their 🧠 in this track!',
           discussionPoints:
             'layer 0 vs 1 vs 2 protocol, moving functionality into FVM, IPC regions for Filecoin, upgrade path, Better PoReps (proof of space & IPC), upgrading the filecoin economy',
         },
@@ -59,9 +61,10 @@ export const SCHEDULE_SINGAPORE = {
           title: 'Protocol Development & Evolution',
           trackAttendes: '100 Seats',
           trackDate: 'Wed, Sept 13',
-          trackDesc: 'Expecting reps from Filecoin core implementers, CNL, CEL, CL, and active FIP authors to participate and share their 🧠 in this track!',
-          trackLeads: 'Nicola Greco & Jennifer Wang',
-          speakers: 'Jennifer Wang',
+          trackDesc:
+            'Time to discuss deeper how the Filecoin protocol can further evolve, especially with the introduction of FVM! Things to discuss: Filecoin layer 0 vs 1 vs 2 protocol, moving functionality into FVM, IPC regions for Filecoin, upgrade path, Better PoReps (proof of space & IPC), new consensus, upgrading the filecoin economy & etcc.. Expecting reps from Filecoin core implementers, CNL, CEL, CL, and active FIP authors to participate and share their 🧠 in this track!',
+          trackLeads: 'Jennifer Wang (@jennijuju) & Nicola Greco',
+          speakers: 'Jennifer Wang (@jennijuju)',
           discussionPoints:
             'layer 0 vs 1 vs 2 protocol, moving functionality into FVM, IPC regions for Filecoin, upgrade path, Better PoReps (proof of space & IPC), upgrading the filecoin economy',
         },
@@ -129,10 +132,9 @@ export const SCHEDULE_SINGAPORE = {
           title: 'FVM Applications & Toolings',
           trackAttendes: '100 Seats',
           trackDate: 'Thu, Sept 14',
-          trackLead: 'Sarah Thiam',
-          trackLeads: '',
+          trackLeads: 'Sarah Thiam & Longfei Wang',
           trackDesc:
-            "This technical deep dive focuses on the tooling and technology stack to scale a storage provider's business while increasing profitability. We will connect with development teams and users in an open forum on the impact to lower gas fees, reduce costs and scale profitability.",
+            "The Filecoin Virtual Machine (FVM) launched on Filecoin mainnet in March 2023, bringing unique opportunities for builders and storage providers, around storage. There has been tremendous progress around infrastructure and tooling since launch, as well as a rapidly growing dApp ecosystem. This track will cover insights into FVM's current and future dApp and infrastructure plans, as well as to foster highly collaborative technical discussions with the builder community and protocol devs. We look forward to exploring the potential of FVM and Filecoin with builders. ",
           discussionPoints: 'Defi, programmable storage, explorers, wallets',
           attendees: 'Sarah, Aadi, Ashwanth, Anshuman, JV, Raul, Starboard, CollectFi, Infinity Pool, StFil, PalladiumX',
         },
@@ -148,7 +150,7 @@ export const SCHEDULE_SINGAPORE = {
           trackAttendees: '90 Seats',
           trackDate: 'Thu, Sept 14',
           trackDesc:
-            'IPC is the next frontier in Filecoin scalability, unlocking unmatched capacity and customisability and enabling new use cases. This track will present the latest developments on IPC but is mainly intended as an opportunity to hear from current and future users of IPC, establish new connections, and build the best possible future for applications on Filecoin.',
+            "This technical deep dive focuses on the tooling and technology stack to scale a storage provider's business while increasing profitability. We will connect with development teams and users in an open forum on the impact to lower gas fees, reduce costs and scale profitability.",
           discussionPoints:
             'Lotus, Boost, Venus technical teams discussions, automation enhancements to scale your business, SP profitability, and becoming a new SP - onboarding gaps & requirements.',
           attendees: 'lotus-miner, boost, SP engineering teams w custom tooling/impls,  filmine, venus hub, storswift, supranational',
@@ -164,6 +166,7 @@ export const SCHEDULE_SINGAPORE = {
           title: 'Closing',
           trackAttendees: '100 Seats',
           trackDate: 'Thu, Sept 14',
+          trackLeads: 'Juan Benet',
           trackDesc: '',
         },
       },
