@@ -9,11 +9,17 @@ export enum BlockTypeEnum {
   MEDIA = 'media',
   MEDIA_GRID = 'media-grid',
   SCHEDULE = 'schedule',
+  SCHEDULE_ICELAND = 'schedule-iceland',
+  SCHEDULE_SINGAPORE = 'schedule-singapre',
+  SPEAKERS = 'speakers',
   TABLE = 'table',
   TEXT = 'text',
   TICKET_CARD = 'ticket-card',
-  SCHEDULE_ICELAND = 'schedule-iceland',
-  SCHEDULE_SINGAPORE = 'schedule-singapre',
+}
+
+export enum LocationEnum {
+  SINGAPORE = 'singapore',
+  ICELAND = 'iceland',
 }
 
 export enum BlockDirectionEnum {
@@ -83,4 +89,14 @@ export enum CallToActionVariantEnum {
 
 export enum NavigationTypeEnum {
   WITH_BORDER = 'with-border',
+}
+
+export enum ScheduleStatusEnum {
+  ACCEPTED_BY_TRACK_LEAD = 'Accepted by track lead',
+  CONFIRMED = 'Confirmed',
+}
+
+export enum TrackOrTalkEnum {
+  TRACK = 'Track',
+  TALK = 'Talk',
 }

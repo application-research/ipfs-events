@@ -1,3 +1,4 @@
+import { ScheduleStatusEnum, TrackOrTalkEnum } from '@root/common/types';
 import { toDateISOString } from '@root/common/utilities';
 
 export const airtableFormattedFieldsMap = {
@@ -90,8 +91,10 @@ const getValidDates = (trackDates) => {
 };
 
 //format the raw airtable data into camelcase data
-export function formatAirtableMetaData(records, timezone) {
-  const formattedRecords = records.map((record) => {
+export function formatAirtableMetaData({ records, timezone }) {
+  if (!records) return null;
+
+  const formattedRecords = records?.map((record) => {
     const fields = record.fields;
 
     const formattedRecord: any = {};
@@ -109,7 +112,7 @@ export function formatAirtableMetaData(records, timezone) {
       const talkDuration = formatTalkDuration(formattedRecord.startTime, timezone, formattedRecord.duration);
       formattedRecord.talkDuration = talkDuration;
     } else {
-      formattedRecord.talkDuration = 'empty data';
+      formattedRecord.talkDuration = '';
     }
 
     return formattedRecord;
@@ -119,15 +122,16 @@ export function formatAirtableMetaData(records, timezone) {
   formattedRecords.sort((a, b) => {
     const timeA = new Date(a.startTime).getTime();
     const timeB = new Date(b.startTime).getTime();
+
     return timeA - timeB;
   });
 
   // Filter out Talks or Tracks with status that is not confirmed or accepted
   const acceptedRecords = formattedRecords.filter((record) => {
-    if (record.type === 'Talk') {
-      return record.status === 'Accepted by track lead';
-    } else if (record.type === 'Track') {
-      return record.trackStatus === 'Confirmed';
+    if (record.type === TrackOrTalkEnum.TRACK) {
+      return record.trackStatus === ScheduleStatusEnum.CONFIRMED;
+    } else if (record.type === TrackOrTalkEnum.TALK) {
+      return record.status === ScheduleStatusEnum.ACCEPTED_BY_TRACK_LEAD;
     } else {
       // Ignore records with unknown or missing type
       return false;
@@ -170,7 +174,7 @@ export function getTrackDetails(formattedRecords, trackSelected, timezone) {
 
 //To Do: make this more readable
 export function getFormattedAirtableFields(airtableData, timezone?: any): any {
-  const formattedRecords = formatAirtableMetaData(airtableData, timezone);
+  const formattedRecords = formatAirtableMetaData(airtableData);
   const groupedData = {};
 
   // Iterate through each formatted record and group them by date and track
@@ -254,3 +258,19 @@ export function getAirtableData(view, callback) {
 //       })
 //   );
 // }
+
+export function getSpeakers(formattedAirtableData) {
+  const speakers = [];
+
+  formattedAirtableData.map((data) => {
+    const { firstName, lastName, spkrTitle, status, twitterUrl, headshot } = data ?? null;
+
+    if (firstName && lastName && status == ScheduleStatusEnum.ACCEPTED_BY_TRACK_LEAD) {
+      speakers.push({ firstName, lastName, spkrTitle, twitterUrl, headshot });
+    } else if (firstName && status == ScheduleStatusEnum.ACCEPTED_BY_TRACK_LEAD) {
+      speakers.push({ firstName, spkrTitle, twitterUrl, headshot });
+    }
+  });
+
+  return speakers;
+}
