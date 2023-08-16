@@ -149,6 +149,7 @@ export const SCHEDULE_SINGAPORE = {
           title: 'SP Tooling & Stack',
           trackAttendees: '90 Seats',
           trackDate: 'Thu, Sept 14',
+          trackLeads: 'Orjan Roren',
           trackDesc:
             "This technical deep dive focuses on the tooling and technology stack to scale a storage provider's business while increasing profitability. We will connect with development teams and users in an open forum on the impact to lower gas fees, reduce costs and scale profitability.",
           discussionPoints:
