@@ -26,7 +26,7 @@ export const SCHEDULE_ICELAND = {
           trackDate: 'Mon, Sept 25',
           speakers: 'Jennifer Wang',
           trackDesc:
-            "Let's continue the thoughts from Part 1 and discuss deeper how the Filecoin protocol can further evolve, especially with the introduction of IPC and FVM! We will look back the Filecoin protocol developement since the past 3 years, identify the challenges and working on the future trajectories: Filecoin layer 0 vs 1 vs 2 protocol, moving functionality into FVM, IPC regions for Filecoin, Upgrade path, Better PoReps, new consensus, strengthening the filecoin economy & etc.. Expecting reps from Filecoin core implementers (Lotus, Venus, Forest), CryptoNetLab, CryptoEconLab, ConsensusLab(IPC), and active FIP authors to participate and share their 🧠 in this track!",
+            "Let's continue the thoughts from Part 1 and discuss deeper how the Filecoin protocol can further evolve, especially with the introduction of IPC and FVM! We will look back the Filecoin protocol developement since the past 3 years, identify the challenges and working on the future trajectories: Filecoin layer 0 vs 1 vs 2 protocol, moving functionality into FVM, IPC regions for Filecoin, Upgrade path, Better PoReps, new consensus, strengthening the filecoin economy & etc..",
           trackLeads: 'ZX Zhang',
           discussionPoints:
             'layer 0 vs 1 vs 2 protocol, moving functionality into FVM, IPC regions for Filecoin, upgrade path, Better PoReps (proof of space & IPC), strengthening the filecoin economy',
@@ -45,7 +45,9 @@ export const SCHEDULE_ICELAND = {
           trackLeads: 'Andrew Ferrone',
           trackDesc:
             'Navigating enterprise deals requires thoughtful strategy and planning. In this interactive series of workshops, we will facilitate roundtable discussions to align on best practices for preparing enterprise deals and improving the user experience. Working together with ecosystem members, product managers and engineers, we will discuss deal structures, strategies for large-scale data storage and payments, and approaches to access controls and supporting deletions. This is an opportunity to cultivate shared knowledge to close and support large-scale Enterprise deals.',
-          discussionPoints: 'Discovering, qualifying, selecting, and operationalizing SPs from an ISV perspective',
+          speakers: 'Deep, Andrew, Jen King, Marina',
+          discussionPoints:
+            'GDPR and Filecoin, Filecoin client journey end-to-end and workflow, pricing models, deal structures and payments, data tiering models, operationalizing SPs from an ISV perspective, Motion, Singularity and Speed, and DSA membership discussions.',
         },
       },
     },
@@ -62,6 +64,7 @@ export const SCHEDULE_ICELAND = {
           trackDesc:
             'Filecoin is a platform the storage and retrieval of data. While the storage aspect of the protocol has scaled to an exabyte of capacity, this track will focus on retrieval. Retrieval work covers four topics: SLA expectations, measurement of retrieval performance, reputation, and incentivization. Our sessions will build alignment across the community on the ongoing work in these areas.',
           discussionPoints: 'Discovering, qualifying, selecting, and operationalizing SPs from an ISV perspective',
+          attendees: 'IPNI, Saturn, Titan, Rhea(?), DagHouse',
         },
       },
     },
@@ -143,6 +146,7 @@ export const SCHEDULE_ICELAND = {
           trackDesc:
             'We have built the largest decentralised storage network on the planet and imbued it with the ability to execute user-defined code. Where do we go from here? In this track, we will explore the future of the Filecoin network, and how we can unlock applications and use cases by scaling capacity, enriching it with IPC subnets, and empowering it with additional computation capabilities.',
           discussionPoints: 'Data tiering - archive vs. warm - Filecoin vs. IPFS',
+          attendees: 'CL, Lilypad, FVM, Fluence, Protofire, Saturn',
         },
       },
     },
@@ -177,6 +181,7 @@ export const SCHEDULE_ICELAND = {
             'Discuss future FVM improvements including the path to user-deployable WASM actors, potential new runtimes and their requirements, account abstraction, and actor interface/data schemas. This track will be design & brainstorming heavy with very few scheduled presentations. Unlike the FVM applications & tooling track, this track will focus on improvements to the FVM itself.',
           discussionPoints:
             'Path to user-deployable wasm actors, new runtimes & requirements, account abstraction, actor interface schemas, actor/fvm interfaces, wasm/ipld actor tooling (testing, state manipulation, debugging).',
+          attendees: 'FVM, fluence, fission (wasm/ipld), chainsafe (forest), venus(?), tableland (runtime user), cryptonetlab(?).',
         },
       },
     },
@@ -193,6 +198,7 @@ export const SCHEDULE_ICELAND = {
           trackDesc:
             'The purpose of this track is to hold open conversations and work towards solutions on some of our toughest community needs, with a specific focus on tooling and process improvements for protocol and Filecoin+ governance.  We specifically seek to deep-dive on issues related to governance re-design, process improvement, and community capacity building.  In track 2, we will continue the conversations we began in Track 1, but will shift specific focus towards methods for supporting community groups for new and currently underrepresented community groups, finding representation for WGs in the governance process, and deep-diving on the Filecoin+ multiplier as well as the long-term scope and footprint of the program. ',
           discussionPoints: 'FIL+, FIP process, Network upgrade scope/schedule, Ambassadors, Funding programs, 2024 events',
+          attendees: 'Founders program, FIL+, core devs, grants, FF',
         },
       },
     },
@@ -223,6 +229,7 @@ export const SCHEDULE_ICELAND = {
           trackLeads: 'David Himmelstrup',
           trackDesc: '',
           discussionPoints: 'Filecoin client journey end-to-end and workflow',
+          attendees: 'Fil-Infra, Forest, Protofire, Lotus, Sentinel',
         },
       },
     },
