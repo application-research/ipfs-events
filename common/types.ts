@@ -10,15 +10,26 @@ export enum BlockTypeEnum {
   MEDIA_GRID = 'media-grid',
   MEDIA_GRID_SCROLLABLE = 'media-grid-scrollable',
   SCHEDULE = 'schedule',
+  SCHEDULE_ICELAND = 'schedule-iceland',
+  SCHEDULE_SINGAPORE = 'schedule-singapre',
+  SPEAKERS = 'speakers',
   TABLE = 'table',
   TEXT = 'text',
   TICKET_CARD = 'ticket-card',
+<<<<<<< HEAD
 <<<<<<< HEAD
   UPCOMING_EVENTS = 'upcoming-events',
 =======
   SCHEDULE_ICELAND = 'schedule-iceland',
   SCHEDULE_SINGAPORE = 'schedule-singapre',
 >>>>>>> 2127ccc (added track details)
+=======
+}
+
+export enum LocationEnum {
+  SINGAPORE = 'singapore',
+  ICELAND = 'iceland',
+>>>>>>> 7f59565 (added speakers row)
 }
 
 export enum BlockDirectionEnum {
@@ -89,4 +100,14 @@ export enum CallToActionVariantEnum {
 
 export enum NavigationTypeEnum {
   WITH_BORDER = 'with-border',
+}
+
+export enum ScheduleStatusEnum {
+  ACCEPTED_BY_TRACK_LEAD = 'Accepted by track lead',
+  CONFIRMED = 'Confirmed',
+}
+
+export enum TrackOrTalkEnum {
+  TRACK = 'Track',
+  TALK = 'Talk',
 }
