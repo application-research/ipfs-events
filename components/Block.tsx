@@ -14,6 +14,7 @@ import Text from './Text';
 import Tickets from './Tickets';
 import ScheduleIceland from './ScheduleIceland';
 import ScheduleSingapore from './ScheduleSingapore';
+import Speakers from './Speakers';
 
 export function Block({ block }) {
   switch (block.type) {

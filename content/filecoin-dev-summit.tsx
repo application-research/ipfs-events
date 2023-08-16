@@ -1,4 +1,4 @@
-import { BlockDirectionEnum, BlockTypeEnum, CallToActionVariantEnum, NavigationTypeEnum, Ratio, TypeName } from '@root/common/types';
+import { BlockDirectionEnum, BlockTypeEnum, CallToActionVariantEnum, LocationEnum, NavigationTypeEnum, Ratio, TypeName } from '@root/common/types';
 
 export const FILECOIN_DEV_SUMMIT_2023_HERO_CONTENT = {
   id: 'hero',
@@ -187,11 +187,14 @@ export const FILECOIN_DEV_SUMMIT_2023_PAGE_CONTENT = [
 
     direction: BlockDirectionEnum.COLUMN,
     title: 'FIL Dev Summit - Singapore Schedule',
-
     block: [
       {
         type: BlockTypeEnum.SCHEDULE_SINGAPORE,
         scheduleData: FIL_DEV_SUMMIT_SINGAPORE,
+      },
+      {
+        type: BlockTypeEnum.SPEAKERS,
+        location: LocationEnum.SINGAPORE,
       },
     ],
   },
