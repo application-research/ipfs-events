@@ -24,10 +24,10 @@ export const SCHEDULE_ICELAND = {
           title: 'Protocol Development & Evolution',
           trackAttendees: '150 seats',
           trackDate: 'Mon, Sept 25',
-          speakers: 'Jennifer Wang',
+          speakers: 'Jennifer Wang (@jennijuju)',
           trackDesc:
             "Let's continue the thoughts from Part 1 and discuss deeper how the Filecoin protocol can further evolve, especially with the introduction of IPC and FVM! We will look back the Filecoin protocol developement since the past 3 years, identify the challenges and working on the future trajectories: Filecoin layer 0 vs 1 vs 2 protocol, moving functionality into FVM, IPC regions for Filecoin, Upgrade path, Better PoReps, new consensus, strengthening the filecoin economy & etc..",
-          trackLeads: 'ZX Zhang',
+          trackLeads: 'Jennifer Wang (@jennijuju) & ZX Zhang',
           discussionPoints:
             'layer 0 vs 1 vs 2 protocol, moving functionality into FVM, IPC regions for Filecoin, upgrade path, Better PoReps (proof of space & IPC), strengthening the filecoin economy',
         },
@@ -94,8 +94,8 @@ export const SCHEDULE_ICELAND = {
           trackAttendes: '150 Seats',
           trackDate: 'Tue, Sept 26',
           trackDesc: '',
-          trackLeads: 'ZX Zhang',
-          speakers: 'Jennifer Wang',
+          trackLeads: 'Jennifer Wang (@jennijuju) & ZX Zhang',
+          speakers: 'Jennifer Wang (@jennijuju)',
           discussionPoints:
             'layer 0 vs 1 vs 2 protocol, moving functionality into FVM, IPC regions for Filecoin, upgrade path, Better PoReps (proof of space & IPC), upgrading the filecoin economy',
         },
