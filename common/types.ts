@@ -18,12 +18,22 @@ export enum BlockTypeEnum {
   TICKET_CARD = 'ticket-card',
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   UPCOMING_EVENTS = 'upcoming-events',
 =======
   SCHEDULE_ICELAND = 'schedule-iceland',
   SCHEDULE_SINGAPORE = 'schedule-singapre',
 >>>>>>> 2127ccc (added track details)
 =======
+=======
+=======
+}
+
+export enum LocationEnum {
+  SINGAPORE = 'singapore',
+  ICELAND = 'iceland',
+>>>>>>> d59c4cc (added speaker section)
+>>>>>>> 6f84cbc (added speaker section)
 }
 
 <<<<<<< HEAD
@@ -68,6 +78,16 @@ export enum Ratio {
   SIXTEEN_BY_NINE = '16 / 9',
   THREE_BY_FOUR = '3 / 4',
   TWENTY_ONE_BY_NINE = '21 / 9',
+}
+
+export enum ScheduleStatusEnum {
+  ACCEPTED_BY_TRACK_LEAD = 'Accepted by track lead',
+  CONFIRMED = 'Confirmed',
+}
+
+export enum TrackOrTalkEnum {
+  TRACK = 'Track',
+  TALK = 'Talk',
 }
 
 export enum TypeName {

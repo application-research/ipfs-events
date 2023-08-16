@@ -30,9 +30,15 @@
   flex-direction: column;
   gap: 1rem;
 
+<<<<<<< HEAD
   @media (max-width: 1050px) {
     overflow: hidden;
   }
+=======
+  // @media (max-width: 1050px) {
+  //   overflow: scroll;
+  // }
+>>>>>>> d59c4cc (added speaker section)
 }
 
 .directionCol2 {

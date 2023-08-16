@@ -5,7 +5,12 @@ import styles from '@components/Schedule.module.scss';
 import { useState, useEffect } from 'react';
 import { formatAirtableMetaData, getSpeakers } from '@root/resolvers/airtable-import';
 import { makeRequest } from '@root/common/utilities';
+<<<<<<< HEAD
 import { SCHEDULE_ICELAND } from '@root/content/schedule-iceland';
+=======
+import { calendarDataWithAddedDates, formatAirtableMetaData, getFormattedAirtableFields, getSpeakers } from '@root/resolvers/airtable-import';
+import { headers } from 'next/headers';
+>>>>>>> d59c4cc (added speaker section)
 import Schedule from './Schedule';
 import Speakers from './Speakers';
 
@@ -20,6 +25,7 @@ export default function ScheduleIceland({ scheduleData }) {
   const [icelandData, setIcelandData] = useState(null);
   const [speakers, setSpeakers] = useState([]);
 
+<<<<<<< HEAD
   useEffect(() => {
     if (scheduleData?.airtable?.tableName) {
       const fetchData = async () => {
@@ -64,6 +70,33 @@ export default function ScheduleIceland({ scheduleData }) {
           <Speakers speakers={speakers} />
         </div>
       )}
+=======
+  const currentHeaders = headers();
+  const host = currentHeaders.get('host');
+  const iceland = await makeRequest({ host, endpoint: 'airtable/iceland' });
+
+  const submitTrackLink = 'https://airtable.com/appEjnh5rpWMsjocb/shr6SmQjqdgn5Pc90';
+  const emptyDatesToAdd = ['Mon, Sep 24', 'Fri, Sep 28'];
+
+  const formattedAirtableData = formatAirtableMetaData(iceland.data);
+  const formattedCalendarData: any = getFormattedAirtableFields(formattedAirtableData);
+  const speakers = getSpeakers(formattedAirtableData);
+
+  const calendarData = calendarDataWithAddedDates(formattedCalendarData, emptyDatesToAdd);
+
+  return (
+    <>
+      <div style={{ display: 'grid', rowGap: '7rem' }}>
+        <Schedule calendarData={calendarData} submitTrackLink={submitTrackLink} />
+
+        {speakers.length > 0 && (
+          <div style={{ display: 'grid', rowGap: '2rem' }}>
+            <h1 style={{ fontSize: 'var(--font-size-large)', fontWeight: 'var(--font-weight-light' }}> Speakers</h1>
+            <Speakers speakers={speakers} />
+          </div>
+        )}
+      </div>
+>>>>>>> d59c4cc (added speaker section)
     </>
   );
 }

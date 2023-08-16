@@ -1,9 +1,13 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { BlockTypeEnum, CallToActionVariantEnum, NavigationTypeEnum, TypeName } from '@root/common/types';
 import { EVENT_PAGE_SCHEDULE_IPFS_THING_2023 } from './event-page-content';
 =======
 import { BlockDirectionEnum, BlockTypeEnum, CallToActionVariantEnum, NavigationTypeEnum, Ratio, TypeName } from '@root/common/types';
 >>>>>>> 769859b (updated columns for block direction)
+=======
+import { BlockDirectionEnum, BlockTypeEnum, CallToActionVariantEnum, LocationEnum, NavigationTypeEnum, Ratio, TypeName } from '@root/common/types';
+>>>>>>> 6f84cbc (added speaker section)
 
 export const FILECOIN_DEV_SUMMIT_2023_HERO_CONTENT = {
   id: 'hero',
@@ -289,6 +293,7 @@ export const FILECOIN_DEV_SUMMIT_2023_PAGE_CONTENT = [
     title: 'FIL Dev Summit - Singapore Schedule',
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     cta: {
       type: CallToActionVariantEnum.BUTTON,
       textColor: 'white',
@@ -304,6 +309,8 @@ export const FILECOIN_DEV_SUMMIT_2023_PAGE_CONTENT = [
 =======
     title: 'FIL Dev Summit - Singapore Schedule',
 >>>>>>> ddccff6 (updated event copy)
+=======
+>>>>>>> 6f84cbc (added speaker section)
     block: [
       {
         type: BlockTypeEnum.SCHEDULE,
@@ -334,6 +341,10 @@ export const FILECOIN_DEV_SUMMIT_2023_PAGE_CONTENT = [
 >>>>>>> f9ceb8d (submit track or talk)
         type: BlockTypeEnum.SCHEDULE_SINGAPORE,
         scheduleData: FIL_DEV_SUMMIT_SINGAPORE,
+      },
+      {
+        type: BlockTypeEnum.SPEAKERS,
+        location: LocationEnum.SINGAPORE,
       },
     ],
   },

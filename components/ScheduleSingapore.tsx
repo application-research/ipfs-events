@@ -4,8 +4,13 @@ import styles from '@components/Schedule.module.scss';
 
 import { formatAirtableMetaData, getSpeakers } from '@root/resolvers/airtable-import';
 import { makeRequest } from '@root/common/utilities';
+<<<<<<< HEAD
 import { SCHEDULE_SINGAPORE } from '@root/content/schedule-singapore';
 import { useEffect, useState } from 'react';
+=======
+import { calendarDataWithAddedDates, formatAirtableMetaData, getFormattedAirtableFields, getSpeakers } from '@root/resolvers/airtable-import';
+import { headers } from 'next/headers';
+>>>>>>> d59c4cc (added speaker section)
 import Schedule from './Schedule';
 import Speakers from './Speakers';
 
@@ -30,6 +35,7 @@ export default function ScheduleSingapore({ scheduleData }) {
         setSpeakers(fetchedSpeakers);
       };
 
+<<<<<<< HEAD
       fetchData();
     }
   }, [scheduleData]);
@@ -64,6 +70,28 @@ export default function ScheduleSingapore({ scheduleData }) {
           <Speakers speakers={speakers} />
         </div>
       )}
+=======
+  const formattedAirtableData = formatAirtableMetaData(singapore.data);
+  const formattedCalendarData: any = getFormattedAirtableFields(formattedAirtableData);
+  const speakers = getSpeakers(formattedAirtableData);
+
+  const emptyDatesToAdd = ['Mon, Sep 11', 'Fri, Sep 15'];
+  const submitTrackLink = 'https://airtable.com/appEjnh5rpWMsjocb/shrw3Ha0yTusDmcOg';
+  const calendarData = calendarDataWithAddedDates(formattedCalendarData, emptyDatesToAdd);
+
+  return (
+    <>
+      <div style={{ display: 'grid', rowGap: '7rem' }}>
+        <Schedule calendarData={calendarData} submitTrackLink={submitTrackLink} />
+
+        {speakers.length > 0 && (
+          <div style={{ display: 'grid', rowGap: '2rem' }}>
+            <h1 style={{ fontSize: 'var(--font-size-large)', fontWeight: 'var(--font-weight-light' }}> Speakers</h1>
+            <Speakers speakers={speakers} />
+          </div>
+        )}
+      </div>
+>>>>>>> d59c4cc (added speaker section)
     </>
   );
 }

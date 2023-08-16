@@ -9,9 +9,13 @@ export const airtableFormattedFieldsMap = {
   'Start Time': 'startTime', // date + time
   'Youtube Link': 'videoLink',
   TrackLink: 'trackLink',
+<<<<<<< HEAD
   'Twitter Profile URL': 'trackLink',
   'Confirmed for website': 'confirmedForWebsite',
   'Confirmed for Website': 'confirmedForWebsite',
+=======
+  'Twitter Profile URL': 'twitterUrl',
+>>>>>>> d59c4cc (added speaker section)
 
   // talk details
   'Talk Description': 'desc',
@@ -150,10 +154,10 @@ export function formatAirtableMetaData({ records, timezone }) {
 }
 
 //get the track details for each track
-export function getTrackDetails(formattedRecords, trackSelected, timezone) {
+export function getTrackDetails(formattedAirtableData, trackSelected, timezone) {
   const trackDetails = {};
 
-  formattedRecords.forEach((record) => {
+  formattedAirtableData.forEach((record) => {
     const { capacity, discussionPoints, id, location, order, roomName, startDate, time, title, trackDate, trackDesc, trackSpeakersAndAttendees, trackStatus } = record;
 
     let confirmedTrackStatus = Array.isArray(trackStatus) ? trackStatus[0] === 'Confirmed' : trackStatus === 'Confirmed';
@@ -185,12 +189,11 @@ export function getTrackDetails(formattedRecords, trackSelected, timezone) {
   return trackDetails;
 }
 
-export function getFormattedAirtableFields(airtableData, timezone?: any): any {
-  const formattedRecords = formatAirtableMetaData(airtableData);
+export function getFormattedAirtableFields(formattedAirtableData, timezone?: any): any {
   const groupedData = {};
 
   // Iterate through each formatted record and group them by date and track
-  formattedRecords.forEach((formattedRecord) => {
+  formattedAirtableData.forEach((formattedRecord) => {
     const trackDates = getValidDates(formattedRecord.trackDate);
 
     trackDates.forEach((trackDate) => {
@@ -202,7 +205,7 @@ export function getFormattedAirtableFields(airtableData, timezone?: any): any {
           const trackSelected = typeof track === 'string' ? track : Array.isArray(track) && track.length > 0 ? track[0] : undefined;
 
           if (trackSelected !== undefined) {
-            const trackDetailData = getTrackDetails(formattedRecords, trackSelected, timezone);
+            const trackDetailData = getTrackDetails(formattedAirtableData, trackSelected, timezone);
             const trackDetailDate = trackDetailData[trackSelected]?.trackDate;
             console.log(trackDetailData, 'track detail date');
 
@@ -238,7 +241,6 @@ export function getFormattedAirtableFields(airtableData, timezone?: any): any {
     groupedData[dateKey].sort((a, b) => (a.trackDetails[a.title].order || 0) - (b.trackDetails[b.title].order || 0));
   }
 
-  console.log(groupedData, 'grouped data');
   return groupedData;
 }
 
@@ -286,3 +288,4 @@ export function calendarDataWithAddedDates(formattedCalendarData, emptyDatesToAd
     return formattedCalendarData;
   }
 }
+
