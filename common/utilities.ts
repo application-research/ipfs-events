@@ -173,9 +173,9 @@ export function classNames(...args: any[]): string {
 
 export const TWENTY_FOUR_HOURS = 24 * 60 * 60 * 1000;
 
-export async function makeRequest({ host, endpoint }) {
+export async function makeRequest({ endpoint }) {
   try {
-    const res = await fetch(`http://${host}/api/${endpoint}`);
+    const res = await fetch(`/api/${endpoint}`);
     const json = await res.json();
 
     return { ...json };

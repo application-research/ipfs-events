@@ -10,7 +10,6 @@ export default function Tickets({ backgroundColor, textColor, tickets }) {
       <div className={styles.row}>
         {tickets?.map((ticket, index) => {
           const { cta, description, price, name, img } = ticket ?? null;
-          console.log(tickets, 'tickets');
 
           return (
             <div key={index} className={styles.column}>
