@@ -604,7 +604,7 @@ export const FILECOIN_DEV_SUMMIT_2023_PAGE_CONTENT = [
             id: 'media',
             type: BlockTypeEnum.COLLAPSABLE,
             title: 'Will the sessions be recorded?',
-            collapsedText:
+            collapsed text:
               'All sessions will be recorded and uploaded to [Youtube channel](https://www.youtube.com/@IPFSbot) ASAP. We are also encouraging everyone to join [#fil-dev-summit](https://app.slack.com/client/TEHTVS1L6/C05LHC1ULG1) in [Filecoin](https://filecoinproject.slack.com/ssb/redirect) slack to stay up to date with all hallway track conversations.',
             backgroundColor: 'linear-gradient(to right,#39C1CB, #006FEC)',
           },
@@ -619,6 +619,13 @@ export const FILECOIN_DEV_SUMMIT_2023_PAGE_CONTENT = [
           - Masks and testing are optional and at your discretion.
 
           - If you are presenting any symptoms of being sick or have come in contact with someone who has presented symptoms or tested positive in the last five days, please do not attend the event for your own and all other attendees' health and safety. Rest up and feel better!`,
+            backgroundColor: 'linear-gradient(to right,#39C1CB, #006FEC)',
+          },
+           {
+            id: 'media',
+            type: BlockTypeEnum.COLLAPSABLE,
+            title: 'Will translation services be provided in Singapore?',
+            collapsedText: `Yes, translations will be available in English to Mandarin and Mandarin to English.',
             backgroundColor: 'linear-gradient(to right,#39C1CB, #006FEC)',
           },
         ],
