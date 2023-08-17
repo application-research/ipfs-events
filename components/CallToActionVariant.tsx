@@ -32,7 +32,6 @@ export function Button({ buttonColor, borderColor, className, variant, target, t
     buttonVariant = styles.borderButton;
   }
 
-  console.log(buttonColor, borderColor, className, variant, target, textColor, text, href, link);
   return (
     <Link className={`${styles.blackLink} ${className}`} href={(href || link) ?? ''} target={target ? target : '_blank'}>
       <button

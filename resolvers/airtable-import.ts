@@ -262,12 +262,12 @@ export function getSpeakers(formattedAirtableData) {
   const speakers = [];
 
   formattedAirtableData.map((data) => {
-    const { firstName, lastName, spkrTitle, status, twitterUrl, headshot } = data ?? null;
-
+    const { firstName, title, lastName, spkrTitle, status, twitterUrl, headshot } = data ?? null;
+    console.log(data, 'data speaker');
     if (firstName && lastName && status == ScheduleStatusEnum.ACCEPTED_BY_TRACK_LEAD) {
-      speakers.push({ firstName, lastName, spkrTitle, twitterUrl, headshot });
+      speakers.push({ title, firstName, lastName, spkrTitle, twitterUrl, headshot });
     } else if (firstName && status == ScheduleStatusEnum.ACCEPTED_BY_TRACK_LEAD) {
-      speakers.push({ firstName, spkrTitle, twitterUrl, headshot });
+      speakers.push({ title, firstName, spkrTitle, twitterUrl, headshot });
     }
   });
 

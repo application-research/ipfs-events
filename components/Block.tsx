@@ -44,8 +44,8 @@ export function Block({ block }) {
       return <Schedule {...block} />;
     case (block.type = BlockTypeEnum.SCHEDULE_ICELAND):
       return <ScheduleIceland {...block} />;
-    // case (block.type = BlockTypeEnum.SCHEDULE_SINGAPORE):
-    //   return <ScheduleSingapore {...block} />;
+    case (block.type = BlockTypeEnum.SCHEDULE_SINGAPORE):
+      return <ScheduleSingapore {...block} />;
     case (block.type = BlockTypeEnum.TABLE):
       return <Table {...block} />;
     case (block.type = BlockTypeEnum.TICKET_CARD):

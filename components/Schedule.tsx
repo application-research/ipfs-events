@@ -18,24 +18,6 @@ export default function Schedule({ calendarData, submitTrack }) {
   const tableRef = useRef<HTMLDivElement>(null);
   const headersRef = useRef<HTMLDivElement>(null);
 
-  const tableName = scheduleData?.airtable?.tableName;
-
-  // const apiKey = scheduleData?.airtable?.apiKey;
-  // const baseId = scheduleData?.airtable?.baseId;
-
-  // const tableName = 'Asia Talk/Track Submissions + Forms';
-  const tableName = scheduleData?.airtable?.tableName;
-
-  const scheduleBackgroundColor = scheduleData?.style?.backgroundColor ?? 'var(--color-white)';
-  const scheduleHoverColor = scheduleData?.style?.hoverColor ?? 'var(--color-gray-transparent)';
-
-  // const scheduleBackgroundColor = scheduleData?.style?.backgroundColor ?? 'var(--color-white)';
-  // const scheduleHoverColor = scheduleData?.style?.hoverColor ?? 'var(--color-gray-transparent)';
-
-  // const scheduleStyle = {
-  //   backgroundColor: scheduleBackgroundColor,
-  // };
-
   const scheduleStyle = {
     backgroundColor: 'var(--color-white)',
   };
