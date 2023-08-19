@@ -1,7 +1,7 @@
 'use client';
 import styles from '@components/Schedule.module.scss';
 
-import { useRef, useState } from 'react';
+import { useCallback, useRef, useState } from 'react';
 import { SchedulePopUp } from './SchedulePopUp';
 
 const NODE = process.env.NODE_ENV || 'development';
@@ -14,6 +14,7 @@ if (!IS_PRODUCTION) {
 export default function Schedule({ calendarData, submitTrack }) {
   const [selectedEvent, setSelectedEvent] = useState(null);
   const [isOverlayOpen, setIsOverlayOpen] = useState(false);
+  const [isScrolling, setIsScrolling] = useState(false);
 
   const tableRef = useRef<HTMLDivElement>(null);
   const headersRef = useRef<HTMLDivElement>(null);
@@ -21,6 +22,19 @@ export default function Schedule({ calendarData, submitTrack }) {
   const scheduleStyle = {
     backgroundColor: 'var(--color-white)',
   };
+
+  const handleScroll = useCallback((event) => {
+    if (isScrolling) return;
+
+    const source = event.target;
+    setIsScrolling(true);
+    if (source === tableRef.current) {
+      headersRef.current.scrollLeft = source.scrollLeft;
+    } else if (source === headersRef.current) {
+      tableRef.current.scrollLeft = source.scrollLeft;
+    }
+    setIsScrolling(false);
+  }, []);
 
   const handleOverlayClick = () => {
     setIsOverlayOpen(false);
@@ -42,6 +56,8 @@ export default function Schedule({ calendarData, submitTrack }) {
 
   return (
     <div className={styles.container}>
+      <section className={styles.sectionScrollTooltip}>Click and drag the schedule to navigate</section>
+
       <div className={styles.scheduleWrapper}>
         <div
           className={` ${styles.headers}`}
@@ -50,25 +66,34 @@ export default function Schedule({ calendarData, submitTrack }) {
             position: 'sticky',
             zIndex: 'var(--z-index-medium)',
             maxWidth: '100%',
-            overflow: 'hidden',
+            overflow: 'scroll',
+            top: '-5rem',
           }}
+          onScroll={handleScroll}
         >
           {Object.keys(calendarData).map((date, index) => {
+            const hasItems = Object.keys(calendarData[date]).length > 0;
+
             return (
-              <div className={styles.heading} key={index}>
+              <div
+                className={`${styles.heading} ${hasItems ? '' : styles.hideItems}`}
+                key={index}
+                style={{ backgroundColor: hasItems ? 'var(--color-blue)' : 'var(--color-blue-gray' }}
+              >
                 <p>{date}</p>
               </div>
             );
           })}
         </div>
-        <div ref={tableRef} className={styles.schedule} style={{ overflowX: 'auto' }}>
+
+        <div ref={tableRef} onScroll={handleScroll} className={styles.schedule} style={{ overflowX: 'auto' }}>
           {Object.keys(calendarData)?.map((dateKey, index) => {
             const events = calendarData[dateKey];
             const eventKeys = Object.keys(events);
-            const isLastIndex = index === Object.keys(calendarData).length - 1;
+            const hasItems = Object.keys(calendarData[dateKey]).length > 0;
 
             return (
-              <div key={index} className={styles.eventStyle}>
+              <div key={index} className={`${styles.eventStyle} ${hasItems ? '' : styles.hideItems} `}>
                 {eventKeys?.map((eventItem, eventIndex) => {
                   const events = calendarData[dateKey];
                   const eventDetails = events[eventItem];
@@ -89,16 +114,7 @@ export default function Schedule({ calendarData, submitTrack }) {
           })}
         </div>
       </div>
-      {submitTrack.url && (
-        <a href={submitTrack.url} className={styles.link} target="_blank">
-          <section className={styles.callToAction}>
-            <div className={styles.callToActionTextContainer}>
-              <p className={styles.plusIcon}>+</p>
-              <p className={styles.callToActionText}>{submitTrack.text}</p>
-            </div>
-          </section>
-        </a>
-      )}
+
       {selectedEvent && (
         <section style={{ position: 'relative' }}>
           {isOverlayOpen && <div className={styles.overlay} onClick={handleOverlayClick} />}

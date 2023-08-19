@@ -10,6 +10,8 @@ export const airtableFormattedFieldsMap = {
   'Youtube Link': 'videoLink',
   TrackLink: 'trackLink',
   'Twitter Profile URL': 'trackLink',
+  'Confirmed for website': 'confirmedForWebsite',
+  'Confirmed for Website': 'confirmedForWebsite',
 
   // talk details
   'Talk Description': 'desc',
@@ -238,36 +240,15 @@ export function getAirtableData(view, callback) {
   return records;
 }
 
-// export function getAirtableData() {
-//   const baseId = process.env.AIRTABLE_SINGAPORE_BASE_ID;
-
-//   const token = process.env.AIRTABLE_SINGAPORE_TOKEN;
-//   const url = `https://api.airtable.com/v0/${baseId}/`;
-//   const headers = {
-//     Authorization: `Bearer ${token}`,
-//   };
-
-//   fetch(url, { headers }).then((response) =>
-//     response
-//       .json()
-//       .then((data) => {
-//         console.log(data, 'airtable data');
-//       })
-//       .catch((error) => {
-//         console.log(error);
-//       })
-//   );
-// }
-
 export function getSpeakers(formattedAirtableData) {
   const speakers = [];
 
   formattedAirtableData.map((data) => {
-    const { firstName, title, lastName, spkrTitle, status, twitterUrl, headshot } = data ?? null;
-    console.log(data, 'data speaker');
+    const { confirmedForWebsite, firstName, title, lastName, spkrTitle, status, twitterUrl, headshot } = data ?? null;
+
     if (firstName && lastName && status == ScheduleStatusEnum.ACCEPTED_BY_TRACK_LEAD) {
       speakers.push({ title, firstName, lastName, spkrTitle, twitterUrl, headshot });
-    } else if (firstName && status == ScheduleStatusEnum.ACCEPTED_BY_TRACK_LEAD) {
+    } else if (firstName && status == ScheduleStatusEnum.ACCEPTED_BY_TRACK_LEAD && confirmedForWebsite == true) {
       speakers.push({ title, firstName, spkrTitle, twitterUrl, headshot });
     }
   });

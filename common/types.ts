@@ -17,11 +17,6 @@ export enum BlockTypeEnum {
   TICKET_CARD = 'ticket-card',
 }
 
-export enum LocationEnum {
-  SINGAPORE = 'singapore',
-  ICELAND = 'iceland',
-}
-
 export enum BlockDirectionEnum {
   COLUMN = 'column',
   FOUR_COLUMN = 'four-column',
