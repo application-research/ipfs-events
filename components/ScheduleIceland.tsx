@@ -1,5 +1,7 @@
 'use client';
 
+import styles from '@components/Schedule.module.scss';
+
 import { useState, useEffect } from 'react';
 import { formatAirtableMetaData, getSpeakers } from '@root/resolvers/airtable-import';
 import { makeRequest } from '@root/common/utilities';
@@ -42,15 +44,26 @@ export default function ScheduleIceland({ scheduleData }) {
 
   return (
     <>
-      <div style={{ display: 'grid', rowGap: '7rem' }}>
+      <div style={{ paddingBottom: '4rem', display: 'grid', rowGap: '3rem' }}>
         <Schedule calendarData={calendarData} submitTrack={submitTrack} />
-        {speakers.length > 0 && (
-          <div style={{ display: 'grid', rowGap: '2rem' }}>
-            <h1 style={{ fontSize: 'var(--font-size-large)', fontWeight: 'var(--font-weight-light' }}> Speakers</h1>
-            <Speakers speakers={speakers} />
-          </div>
+
+        {submitTrack.url && (
+          <a href={submitTrack.url} className={styles.link} target="_blank">
+            <section className={styles.callToAction}>
+              <div className={styles.callToActionTextContainer}>
+                <p className={styles.plusIcon}>+</p>
+                <p className={styles.callToActionText}>{submitTrack.text}</p>
+              </div>
+            </section>
+          </a>
         )}
       </div>
+      {speakers.length > 0 && (
+        <div style={{ display: 'grid', rowGap: '2rem' }}>
+          <h1 style={{ fontSize: 'var(--font-size-large)', fontWeight: 'var(--font-weight-light' }}> Speakers</h1>
+          <Speakers speakers={speakers} />
+        </div>
+      )}
     </>
   );
 }

@@ -1,5 +1,7 @@
 'use client';
 
+import styles from '@components/Schedule.module.scss';
+
 import { formatAirtableMetaData, getSpeakers } from '@root/resolvers/airtable-import';
 import { makeRequest } from '@root/common/utilities';
 import { SCHEDULE_SINGAPORE } from '@root/content/schedule-singapore';
@@ -14,17 +16,17 @@ if (!IS_PRODUCTION) {
   require('dotenv').config();
 }
 
-export default function ScheduleIceland({ scheduleData }) {
-  const [icelandData, setIcelandData] = useState(null);
+export default function ScheduleSingapore({ scheduleData }) {
+  const [singaporeData, setSingaporeData] = useState(null);
   const [speakers, setSpeakers] = useState([]);
 
   useEffect(() => {
     if (scheduleData?.airtable?.tableName) {
       const fetchData = async () => {
-        const iceland = await makeRequest({ endpoint: 'airtable/singapore' });
-        const formattedAirtableData = formatAirtableMetaData(iceland.data);
+        const singapore = await makeRequest({ endpoint: 'airtable/singapore' });
+        const formattedAirtableData = formatAirtableMetaData(singapore.data);
         const fetchedSpeakers = getSpeakers(formattedAirtableData);
-        setIcelandData(formattedAirtableData);
+        setSingaporeData(formattedAirtableData);
         setSpeakers(fetchedSpeakers);
       };
 
@@ -32,25 +34,36 @@ export default function ScheduleIceland({ scheduleData }) {
     }
   }, [scheduleData]);
 
-  if (!icelandData) return null;
+  if (!singaporeData) return null;
 
   const calendarData = SCHEDULE_SINGAPORE;
   const submitTrack = {
     text: 'submit a track or talk for Singapore',
-    url: 'https://airtable.com/appEjnh5rpWMsjocb/shr6SmQjqdgn5Pc90',
+    url: 'https://airtable.com/appEjnh5rpWMsjocb/shrw3Ha0yTusDmcOg',
   };
 
   return (
     <>
-      <div style={{ display: 'grid', rowGap: '7rem' }}>
+      <div style={{ paddingBottom: '4rem', display: 'grid', rowGap: '3rem' }}>
         <Schedule calendarData={calendarData} submitTrack={submitTrack} />
-        {speakers.length > 0 && (
-          <div style={{ display: 'grid', rowGap: '2rem' }}>
-            <h1 style={{ fontSize: 'var(--font-size-large)', fontWeight: 'var(--font-weight-light' }}> Speakers</h1>
-            <Speakers speakers={speakers} />
-          </div>
+
+        {submitTrack.url && (
+          <a href={submitTrack.url} className={styles.link} target="_blank">
+            <section className={styles.callToAction}>
+              <div className={styles.callToActionTextContainer}>
+                <p className={styles.plusIcon}>+</p>
+                <p className={styles.callToActionText}>{submitTrack.text}</p>
+              </div>
+            </section>
+          </a>
         )}
       </div>
+      {speakers.length > 0 && (
+        <div style={{ display: 'grid', rowGap: '2rem' }}>
+          <h1 style={{ fontSize: 'var(--font-size-large)', fontWeight: 'var(--font-weight-light' }}> Speakers</h1>
+          <Speakers speakers={speakers} />
+        </div>
+      )}
     </>
   );
 }

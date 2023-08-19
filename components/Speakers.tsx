@@ -9,7 +9,7 @@ export default function Speakers({ speakers }) {
         {speakers.map((speaker, index) => {
           const { firstName, title, twitterUrl, spkrTitle, headshot } = speaker;
 
-          const headShotSrc = headshot[0]?.url ?? null;
+          const headShotSrc = headshot && headshot[0]?.url ? headshot[0]?.url : '/media/placeholder.png';
 
           return (
             <div key={index}>

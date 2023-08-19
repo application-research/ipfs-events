@@ -26,12 +26,15 @@ export enum BlockTypeEnum {
 =======
 }
 
+<<<<<<< HEAD
 export enum LocationEnum {
   SINGAPORE = 'singapore',
   ICELAND = 'iceland',
 >>>>>>> 7f59565 (added speakers row)
 }
 
+=======
+>>>>>>> 7f4f289 (fixed overflow for calendar)
 export enum BlockDirectionEnum {
   COLUMN = 'column',
   FOUR_COLUMN = 'four-column',
