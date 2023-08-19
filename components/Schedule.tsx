@@ -1,10 +1,8 @@
 'use client';
 import styles from '@components/Schedule.module.scss';
 
-import { getAirtableData, getFormattedAirtableFields } from '@root/resolvers/airtable-import';
+import { useCallback, useRef, useState } from 'react';
 import { SchedulePopUp } from './SchedulePopUp';
-import { useEffect, useRef, useState } from 'react';
-import ScrollTableTooltip from './ScrollTableTooltip';
 
 const NODE = process.env.NODE_ENV || 'development';
 const IS_PRODUCTION = NODE === 'production';
@@ -13,35 +11,30 @@ if (!IS_PRODUCTION) {
   require('dotenv').config();
 }
 
-export default function Schedule({ scheduleData }) {
-  if (scheduleData?.airtable?.tableName == null) return null;
-
+export default function Schedule({ calendarData, submitTrack }) {
   const [selectedEvent, setSelectedEvent] = useState(null);
   const [isOverlayOpen, setIsOverlayOpen] = useState(false);
-  const [showArrowLeft, setShowArrowLeft] = useState(false);
-  const [showArrowRight, setShowArrowRight] = useState(false);
   const [isScrolling, setIsScrolling] = useState(false);
-
-  const [data, setData] = useState([]);
 
   const tableRef = useRef<HTMLDivElement>(null);
   const headersRef = useRef<HTMLDivElement>(null);
 
-  // const apiKey = scheduleData?.airtable?.apiKey;
-  // const baseId = scheduleData?.airtable?.baseId;
-
-  // const tableName = 'Asia Talk/Track Submissions + Forms';
-  const tableName = scheduleData?.airtable?.tableName;
-
-  const scheduleBackgroundColor = scheduleData?.style?.backgroundColor ?? 'var(--color-white)';
-  const scheduleHoverColor = scheduleData?.style?.hoverColor ?? 'var(--color-gray-transparent)';
-
   const scheduleStyle = {
-    backgroundColor: scheduleBackgroundColor,
-    ':hover': {
-      backgroundColor: scheduleHoverColor,
-    },
+    backgroundColor: 'var(--color-white)',
   };
+
+  const handleScroll = useCallback((event) => {
+    if (isScrolling) return;
+
+    const source = event.target;
+    setIsScrolling(true);
+    if (source === tableRef.current) {
+      headersRef.current.scrollLeft = source.scrollLeft;
+    } else if (source === headersRef.current) {
+      tableRef.current.scrollLeft = source.scrollLeft;
+    }
+    setIsScrolling(false);
+  }, []);
 
   const handleOverlayClick = () => {
     setIsOverlayOpen(false);
@@ -61,55 +54,9 @@ export default function Schedule({ scheduleData }) {
     setIsOverlayOpen(false);
   };
 
-  useEffect(() => {
-    getAirtableData(tableName, (records) => {
-      if (records) {
-        setData(records);
-      }
-    });
-  }, []);
-
-  useEffect(() => {
-    const tableElement = tableRef.current;
-
-    const handleScroll = () => {
-      if (tableElement) {
-        //Check the scroll position
-        setShowArrowLeft(tableElement.scrollLeft > 0);
-
-        setShowArrowRight(tableElement.scrollLeft + tableElement.clientWidth < tableElement.scrollWidth);
-
-        setIsScrolling(true);
-
-        //sync the scroll position between headers and schedule
-        if (headersRef.current) {
-          headersRef.current.scrollLeft = tableElement.scrollLeft;
-        }
-      }
-    };
-
-    if (tableElement) {
-      tableElement.addEventListener('scroll', handleScroll);
-      // Check initial scroll positions
-      handleScroll();
-      return () => {
-        tableElement.removeEventListener('scroll', handleScroll);
-      };
-    }
-  });
-
-  const calendarData: any = getFormattedAirtableFields(data);
-
   return (
     <div className={styles.container}>
-      <section
-        className={styles.sectionScrollTooltip}
-        style={{
-          background: scheduleStyle.backgroundColor ?? 'var(--color-white)',
-        }}
-      >
-        <ScrollTableTooltip backgroundColor={scheduleStyle?.backgroundColor} showArrowLeft={showArrowLeft} showArrowRight={showArrowRight} tableRef={tableRef} />
-      </section>
+      <section className={styles.sectionScrollTooltip}>Click and drag the schedule to navigate</section>
 
       <div className={styles.scheduleWrapper}>
         <div
@@ -119,25 +66,34 @@ export default function Schedule({ scheduleData }) {
             position: 'sticky',
             zIndex: 'var(--z-index-medium)',
             maxWidth: '100%',
-            overflow: 'hidden',
+            overflow: 'scroll',
+            top: '-5rem',
           }}
+          onScroll={handleScroll}
         >
           {Object.keys(calendarData).map((date, index) => {
+            const hasItems = Object.keys(calendarData[date]).length > 0;
+
             return (
-              <div className={styles.heading} key={index}>
+              <div
+                className={`${styles.heading} ${hasItems ? '' : styles.hideItems}`}
+                key={index}
+                style={{ backgroundColor: hasItems ? 'var(--color-blue)' : 'var(--color-blue-gray' }}
+              >
                 <p>{date}</p>
               </div>
             );
           })}
         </div>
-        <div ref={tableRef} className={styles.schedule} style={{ overflowX: 'auto' }}>
+
+        <div ref={tableRef} onScroll={handleScroll} className={styles.schedule} style={{ overflowX: 'auto' }}>
           {Object.keys(calendarData)?.map((dateKey, index) => {
             const events = calendarData[dateKey];
             const eventKeys = Object.keys(events);
-            const isLastIndex = index === Object.keys(calendarData).length - 1;
+            const hasItems = Object.keys(calendarData[dateKey]).length > 0;
 
             return (
-              <div key={index} className={styles.eventStyle}>
+              <div key={index} className={`${styles.eventStyle} ${hasItems ? '' : styles.hideItems} `}>
                 {eventKeys?.map((eventItem, eventIndex) => {
                   const events = calendarData[dateKey];
                   const eventDetails = events[eventItem];
@@ -158,6 +114,7 @@ export default function Schedule({ scheduleData }) {
           })}
         </div>
       </div>
+
       {selectedEvent && (
         <section style={{ position: 'relative' }}>
           {isOverlayOpen && <div className={styles.overlay} onClick={handleOverlayClick} />}
