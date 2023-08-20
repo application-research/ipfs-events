@@ -41,7 +41,7 @@ export default function ScheduleIceland({ scheduleData }) {
     url: 'https://airtable.com/appEjnh5rpWMsjocb/shr6SmQjqdgn5Pc90',
   };
 
-  const emptyDatesToAdd = ['Sun, Sept 24', 'Sun, Sept 28'];
+  const emptyDatesToAdd = ['Sun, Sept 24', 'Thu, Sept 28'];
   const formattedAirtableData = getFormattedAirtableFields(icelandData);
   const calendarData = calendarDataWithAddedDates(formattedAirtableData, emptyDatesToAdd);
 
