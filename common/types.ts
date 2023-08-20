@@ -52,16 +52,6 @@ export enum Ratio {
   TWENTY_ONE_BY_NINE = '21 / 9',
 }
 
-export enum ScheduleStatusEnum {
-  ACCEPTED_BY_TRACK_LEAD = 'Accepted by track lead',
-  CONFIRMED = 'Confirmed',
-}
-
-export enum TrackOrTalkEnum {
-  TRACK = 'Track',
-  TALK = 'Talk',
-}
-
 export enum TypeName {
   MEDIA_IMAGE = 'media-image',
   MEDIA_IMAGE_WITH_OVERFLOWING_TEXT = 'media-image-width-text',

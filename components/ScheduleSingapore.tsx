@@ -2,7 +2,7 @@
 
 import styles from '@components/Schedule.module.scss';
 
-import { formatAirtableMetaData, getFormattedAirtableFields, getSpeakers } from '@root/resolvers/airtable-import';
+import { calendarDataWithAddedDates, formatAirtableMetaData, getFormattedAirtableFields, getSpeakers } from '@root/resolvers/airtable-import';
 import { makeRequest } from '@root/common/utilities';
 import { useEffect, useState } from 'react';
 import Schedule from './Schedule';
@@ -40,13 +40,15 @@ export default function ScheduleSingapore({ scheduleData }) {
     url: 'https://airtable.com/appEjnh5rpWMsjocb/shrw3Ha0yTusDmcOg',
   };
 
-  const calendarData = getFormattedAirtableFields(singaporeData);
+  const emptyDatesToAdd = ['Mon, Sept 11', 'Fri, Sept 15'];
+  const formattedAirtableData = getFormattedAirtableFields(singaporeData);
+  const calendarData = calendarDataWithAddedDates(formattedAirtableData, emptyDatesToAdd);
 
-  console.log('singapore data', calendarData);
+  console.log(calendarData, 'calendar dataa');
   return (
     <>
       <div style={{ paddingBottom: '4rem', display: 'grid', rowGap: '3rem' }}>
-        {singaporeData && <Schedule calendarData={calendarData} />}
+        {calendarData && <Schedule calendarData={calendarData} />}
 
         {submitTrack.url && (
           <a href={submitTrack.url} className={styles.link} target="_blank">

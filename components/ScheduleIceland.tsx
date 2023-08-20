@@ -3,7 +3,7 @@
 import styles from '@components/Schedule.module.scss';
 
 import { useState, useEffect } from 'react';
-import { formatAirtableMetaData, getFormattedAirtableFields, getSpeakers } from '@root/resolvers/airtable-import';
+import { calendarDataWithAddedDates, formatAirtableMetaData, getFormattedAirtableFields, getSpeakers } from '@root/resolvers/airtable-import';
 import { makeRequest } from '@root/common/utilities';
 import { SCHEDULE_ICELAND } from '@root/content/schedule-iceland';
 import Schedule from './Schedule';
@@ -41,7 +41,9 @@ export default function ScheduleIceland({ scheduleData }) {
     url: 'https://airtable.com/appEjnh5rpWMsjocb/shr6SmQjqdgn5Pc90',
   };
 
-  const calendarData = getFormattedAirtableFields(icelandData);
+  const emptyDatesToAdd = ['Sun, Sept 24', 'Sun, Sept 28'];
+  const formattedAirtableData = getFormattedAirtableFields(icelandData);
+  const calendarData = calendarDataWithAddedDates(formattedAirtableData, emptyDatesToAdd);
 
   return (
     <>
