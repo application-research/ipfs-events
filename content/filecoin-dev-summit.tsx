@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { BlockTypeEnum, CallToActionVariantEnum, NavigationTypeEnum, TypeName } from '@root/common/types';
 import { EVENT_PAGE_SCHEDULE_IPFS_THING_2023 } from './event-page-content';
 =======
@@ -8,6 +9,9 @@ import { BlockDirectionEnum, BlockTypeEnum, CallToActionVariantEnum, NavigationT
 =======
 import { BlockDirectionEnum, BlockTypeEnum, CallToActionVariantEnum, LocationEnum, NavigationTypeEnum, Ratio, TypeName } from '@root/common/types';
 >>>>>>> 6f84cbc (added speaker section)
+=======
+import { BlockDirectionEnum, BlockTypeEnum, CallToActionVariantEnum, NavigationTypeEnum, Ratio, TypeName } from '@root/common/types';
+>>>>>>> 5777794 (updated airtable sync)
 
 export const FILECOIN_DEV_SUMMIT_2023_HERO_CONTENT = {
   id: 'hero',
@@ -342,10 +346,10 @@ export const FILECOIN_DEV_SUMMIT_2023_PAGE_CONTENT = [
         type: BlockTypeEnum.SCHEDULE_SINGAPORE,
         scheduleData: FIL_DEV_SUMMIT_SINGAPORE,
       },
-      {
-        type: BlockTypeEnum.SPEAKERS,
-        location: LocationEnum.SINGAPORE,
-      },
+      // {
+      //   type: BlockTypeEnum.SPEAKERS,
+      //   location: LocationEnum.SINGAPORE,
+      // },
     ],
   },
   {

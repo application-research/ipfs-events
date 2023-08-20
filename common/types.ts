@@ -19,6 +19,7 @@ export enum BlockTypeEnum {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   UPCOMING_EVENTS = 'upcoming-events',
 =======
   SCHEDULE_ICELAND = 'schedule-iceland',
@@ -34,6 +35,8 @@ export enum LocationEnum {
   ICELAND = 'iceland',
 >>>>>>> d59c4cc (added speaker section)
 >>>>>>> 6f84cbc (added speaker section)
+=======
+>>>>>>> 5777794 (updated airtable sync)
 }
 
 <<<<<<< HEAD

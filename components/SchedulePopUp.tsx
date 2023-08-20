@@ -32,6 +32,8 @@ export function SchedulePopUp({ selectedEvent, isOpen, onClose, style }) {
     });
 >>>>>>> 2127ccc (added track details)
 
+  console.log('event items', selectedEvent);
+
   return (
     <section className={styles.eventStyle}>
       <div className={styles.popup} style={{ backgroundColor: styles.backgroundColor ?? 'var(--color-white)' }}>
@@ -168,7 +170,7 @@ export function SchedulePopUp({ selectedEvent, isOpen, onClose, style }) {
             {trackDesc && <p className={styles.description}>{trackDesc}</p>}
           </section>
 
-          {sortedTalks.length > 0 && (
+          {sortedTalks && sortedTalks.length > 0 && (
             <>
               {sortedTalks && <h4 style={{ paddingBottom: '1rem' }}>Schedule</h4>}
               {sortedTalks && (
