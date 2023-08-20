@@ -297,11 +297,11 @@ export function calendarDataWithAddedDates(formattedCalendarData, emptyDatesToAd
 
   if (emptyDatesToAdd.length > 1) {
     emptyDatesToAdd.forEach((dateString) => {
-      result[dateString] = {};
+      result[dateString] = [];
     });
 
     // Sort the keys (dates) in ascending order
-    const sortedDates = Object.keys(result).sort((a, b) => new Date(a) - new Date(b));
+    const sortedDates = Object.keys(result).sort((a, b) => new Date(a).getTime() - new Date(b).getTime());
 
     // Create a new object with sorted dates
     const sortedResult = {};

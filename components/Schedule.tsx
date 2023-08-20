@@ -57,11 +57,8 @@ export default function Schedule({ calendarData }) {
       <div className={styles.scheduleWrapper}>
         <div ref={tableRef} className={styles.schedule} style={{ overflowX: 'auto' }}>
           {Object.entries(calendarData).map(([dateKey, tracksForDate], index) => {
-            if (!Array.isArray(tracksForDate) || tracksForDate.length === 0) {
-              return null; // or handle this situation differently if needed
-            }
             // Check if there are any items for the given date
-            const hasItems = tracksForDate && tracksForDate.length > 0;
+            const hasItems = Array.isArray(tracksForDate) && tracksForDate.length > 0;
 
             return (
               <div key={index} className={`${styles.eventStyle} ${hasItems ? '' : styles.hideItems}`}>
@@ -74,22 +71,24 @@ export default function Schedule({ calendarData }) {
                   <p>{dateKey}</p>
                 </div>
 
-                {tracksForDate.map((track, trackIndex) => {
-                  const { title: trackTitle, trackDetails, records } = track;
-                  const { title, time, speakers, trackDate, order, capacity, roomName } = track.trackDetails[trackTitle];
+                {Array.isArray(tracksForDate) &&
+                  tracksForDate.map((track, trackIndex) => {
+                    const { title: trackTitle, trackDetails, records } = track;
+                    const { title, time, speakers, firstName, trackDate, order, capacity, roomName } = track.trackDetails[trackTitle];
 
-                  return (
-                    <div className={styles.eventBox} key={trackIndex} onClick={() => handleEventClick({ ...trackDetails[trackTitle], records })} onScroll={handleScroll}>
-                      {title && <p className={styles.eventName}>{title}</p>}
-                      <div className={styles.eventDetails}>
-                        {time && <p className={styles.time}>{time}</p>}
-                        {roomName && <p className={styles.location}>{roomName}</p>}
-                        {speakers && <p className={styles.speakers}> {speakers}</p>}
-                        <p className={styles.people}>👤 {capacity ?? '50 seats'}</p>
+                    return (
+                      <div className={styles.eventBox} key={trackIndex} onClick={() => handleEventClick({ ...trackDetails[trackTitle], records })} onScroll={handleScroll}>
+                        {title && <p className={styles.eventName}>{title}</p>}
+                        <div className={styles.eventDetails}>
+                          {time && <p className={styles.time}>{time}</p>}
+                          {roomName && <p className={styles.location}>{roomName}</p>}
+                          {speakers && <p className={styles.speakers}> {speakers}</p>}
+                          {firstName && <p className={styles.speakers}> {firstName}</p>}
+                          <p className={styles.people}>👤 {capacity ?? '50 seats'}</p>
+                        </div>
                       </div>
-                    </div>
-                  );
-                })}
+                    );
+                  })}
               </div>
             );
           })}
@@ -107,8 +106,3 @@ export default function Schedule({ calendarData }) {
     </div>
   );
 }
-
-// return records.map((eventDetails, eventIndex) => {
-//   //  const { title, time, speakers, trackDate, order, capacity, roomName } = eventDetails.trackDetails[trackTitle] || {};
-//   const { title, time, speakers, trackDate, order, capacity, roomName } = eventDetails;
-//   console.log(eventDetails, 'event details');
