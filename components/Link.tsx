@@ -1,6 +1,5 @@
 import styles from '@components/Link.module.scss';
 
-import NextLink from 'next/link';
 import { ReactNode } from 'react';
 
 function SwitchLinkStyle(style) {

@@ -17,6 +17,7 @@ export const airtableFormattedFieldsMap = {
   'Talk Description': 'desc',
   'What track(s) would be suitable for your session?': 'tracks',
   'What track(s) would be suitable for your session': 'tracks',
+  'What category(s) would be suitable for your session?': 'tracks',
   'Archive of Original Tracks Submission': 'tracksSubmittedFor',
   'What format(s) are suitable for your talk or workshop?': 'format',
   'Talk Status': 'status',
@@ -46,16 +47,20 @@ export const airtableFormattedFieldsMap = {
   'Last Modified': 'lastModifiedDate',
 
   // track details
-  Time: 'time', // date + time
-  'Track Description': 'trackDesc',
+  'Room Name': 'roomName',
+  'Track Attendees': 'trackAttendees',
   'Track Date': 'trackDate',
-  Priority: 'priority',
-  'Track Status': 'trackStatus',
+  'Track Description': 'trackDesc',
   'Track Filename': 'trackFilename',
   'Track Length': 'trackLength',
-  'Track Attendees': 'trackAttendees',
   'Track Org': 'trackOrg',
+  'Track Speakers And Attendees': 'trackSpeakersAndAttendees',
+  'Track Status': 'trackStatus',
+  Capacity: 'capacity',
+  'Discussion Points': 'discussionPoints',
   Location: 'location',
+  Priority: 'priority',
+  Time: 'time', // date + time
 };
 
 //To Do: update this to handle different timezone formats
@@ -77,6 +82,7 @@ function formatTalkDuration(timestamp, timezone, duration) {
 const getValidDates = (trackDates) => {
   if (Array.isArray(trackDates)) {
     const validDates = trackDates.map((date) => new Date(date)).filter((date) => !isNaN(date.getTime()));
+
     return validDates;
   } else if (typeof trackDates === 'string') {
     //convert string to a date object
@@ -141,30 +147,39 @@ export function formatAirtableMetaData({ records, timezone }) {
   });
 
   return acceptedRecords;
+  // return formattedRecords;
 }
 
 //get the track details for each track
-export function getTrackDetails(formattedRecords, trackSelected, timezone) {
+export function getTrackDetails(formattedAirtableData, trackSelected, timezone) {
   const trackDetails = {};
 
-  formattedRecords.forEach((record) => {
-    const { id, trackAttendees, trackDesc, location, title, time, trackDate, trackStatus } = record;
+  formattedAirtableData.forEach((record) => {
+    const { capacity, firstName, tracks, discussionPoints, id, location, order, roomName, startDate, time, title, trackDate, trackDesc, trackSpeakersAndAttendees, trackStatus } =
+      record;
 
     let confirmedTrackStatus = Array.isArray(trackStatus) ? trackStatus[0] === 'Confirmed' : trackStatus === 'Confirmed';
 
     if (confirmedTrackStatus && title === trackSelected) {
       if (trackDate) {
-        const formattedDate = toDateISOString(trackDate, timezone);
+        const formattedDate = toDateISOString(trackDate);
 
         if (!trackDetails.hasOwnProperty(title)) {
           trackDetails[title] = {
+            capacity,
+            discussionPoints,
+            firstName,
             id,
-            trackDate: formattedDate,
-            title,
-            time,
-            trackDesc,
             location,
-            trackAttendees,
+            order,
+            roomName,
+            startDate,
+            time,
+            title,
+            trackDate: formattedDate,
+            trackDesc,
+            tracks,
+            trackSpeakersAndAttendees,
           };
         }
       }
@@ -174,70 +189,91 @@ export function getTrackDetails(formattedRecords, trackSelected, timezone) {
   return trackDetails;
 }
 
-//To Do: make this more readable
-export function getFormattedAirtableFields(airtableData, timezone?: any): any {
-  const formattedRecords = formatAirtableMetaData(airtableData);
+export function getFormattedAirtableFields(formattedAirtableData, timezone?: any): any {
   const groupedData = {};
+  const talkRecords = []; // Store all Talk records
 
-  // Iterate through each formatted record and group them by date and track
-  formattedRecords.forEach((formattedRecord) => {
+  formattedAirtableData.forEach((formattedRecord) => {
     const trackDates = getValidDates(formattedRecord.trackDate);
 
     trackDates.forEach((trackDate) => {
       if (trackDate) {
-        const formattedDate = toDateISOString(trackDate, timezone);
+        const formattedDate = toDateISOString(trackDate);
 
-        const rawTrackSelected = formattedRecord.tracks;
+        switch (formattedRecord.type) {
+          case 'Track':
+            if (!groupedData.hasOwnProperty(formattedDate)) {
+              groupedData[formattedDate] = [];
+            }
 
-        const trackSelected =
-          typeof rawTrackSelected === 'string' ? rawTrackSelected : Array.isArray(rawTrackSelected) && rawTrackSelected.length > 0 ? rawTrackSelected[0] : undefined;
+            let existingTrack = groupedData[formattedDate].find((trackData) => trackData.title === formattedRecord.title);
 
-        //some tracks return undefined so dont add them to final dictionary
-        if (trackSelected !== undefined) {
-          if (!groupedData.hasOwnProperty(formattedDate)) {
-            groupedData[formattedDate] = {};
-          }
+            if (!existingTrack) {
+              const trackDetailsForTrack = getTrackDetails(formattedAirtableData, formattedRecord.title, timezone);
 
-          if (!groupedData[formattedDate].hasOwnProperty(trackSelected)) {
-            // Pass trackSelected to getTrackDetails to group trackDetails by the specific track
-            groupedData[formattedDate][trackSelected] = { trackDetails: getTrackDetails(formattedRecords, trackSelected, timezone), records: [] };
-          }
+              existingTrack = {
+                title: formattedRecord.title,
+                trackDetails: trackDetailsForTrack,
+                records: [],
+              };
 
-          groupedData[formattedDate][trackSelected].records.push(formattedRecord);
+              groupedData[formattedDate].push(existingTrack);
+            }
+
+            break;
+
+          case 'Talk':
+            // Save 'Talk' records for processing later
+            talkRecords.push(formattedRecord);
+            break;
+
+          default:
+            // Handle other types if necessary
+            break;
         }
       }
     });
   });
 
+  // Process 'Talk' records
+  talkRecords.forEach((talk) => {
+    const trackDatesForTalk = getValidDates(talk.trackDate);
+
+    trackDatesForTalk.forEach((trackDateForTalk) => {
+      if (trackDateForTalk) {
+        const formattedDateForTalk = toDateISOString(trackDateForTalk);
+        const trackForTalk = talk.tracks[0];
+
+        if (groupedData.hasOwnProperty(formattedDateForTalk)) {
+          let existingTrackForTalk = groupedData[formattedDateForTalk].find((trackData) => trackData.title === trackForTalk);
+
+          if (existingTrackForTalk) {
+            existingTrackForTalk.records.push(talk);
+          } else {
+            const trackDetailsForTalk = getTrackDetails(formattedAirtableData, trackForTalk, timezone);
+            groupedData[formattedDateForTalk].push({
+              title: trackForTalk,
+              trackDetails: trackDetailsForTalk,
+              records: [talk],
+            });
+          }
+        }
+      }
+    });
+  });
+
+  // Sort the tracks based on their order
+  sortTracksByOrder(groupedData);
+
   return groupedData;
 }
 
-export function getAirtableData(view, callback) {
-  const Airtable = require('airtable');
+// const sortedData = sortTracksByOrder(groupedData);
 
-  const base = new Airtable({ apiKey: process.env.AIRTABLE_API }).table(process.env.BASE_IPFS_THING);
-
-  const records = [];
-
-  //Reffer to Airtable Javascript library
-  base('Responses')
-    .select({ view })
-    .eachPage(
-      (pageRecords, fetchNextPage) => {
-        records.push(...pageRecords);
-        fetchNextPage();
-      },
-      (err) => {
-        if (err) {
-          console.error('Error fetching Airtable data:', err);
-          callback(null);
-        } else {
-          callback(records);
-        }
-      }
-    );
-
-  return records;
+function sortTracksByOrder(groupedData) {
+  for (const dateKey in groupedData) {
+    groupedData[dateKey].sort((a, b) => (a.trackDetails[a.title].order || 0) - (b.trackDetails[b.title].order || 0));
+  }
 }
 
 export function getSpeakers(formattedAirtableData) {
@@ -254,4 +290,27 @@ export function getSpeakers(formattedAirtableData) {
   });
 
   return speakers;
+}
+
+export function calendarDataWithAddedDates(formattedCalendarData, emptyDatesToAdd) {
+  const result = { ...formattedCalendarData };
+
+  if (emptyDatesToAdd.length > 1) {
+    emptyDatesToAdd.forEach((dateString) => {
+      result[dateString] = [];
+    });
+
+    // Sort the keys (dates) in ascending order
+    const sortedDates = Object.keys(result).sort((a, b) => new Date(a).getTime() - new Date(b).getTime());
+
+    // Create a new object with sorted dates
+    const sortedResult = {};
+    sortedDates.forEach((date) => {
+      sortedResult[date] = result[date];
+    });
+
+    return sortedResult;
+  } else {
+    return formattedCalendarData;
+  }
 }

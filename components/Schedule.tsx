@@ -19,10 +19,6 @@ export default function Schedule({ calendarData }) {
   const tableRef = useRef<HTMLDivElement>(null);
   const headersRef = useRef<HTMLDivElement>(null);
 
-  const scheduleStyle = {
-    backgroundColor: 'var(--color-white)',
-  };
-
   const handleScroll = useCallback((event) => {
     if (isScrolling) return;
 
@@ -59,56 +55,40 @@ export default function Schedule({ calendarData }) {
       <section className={styles.sectionScrollTooltip}>Click and drag the schedule to navigate</section>
 
       <div className={styles.scheduleWrapper}>
-        <div
-          className={` ${styles.headers}`}
-          ref={headersRef}
-          style={{
-            position: 'sticky',
-            zIndex: 'var(--z-index-medium)',
-            maxWidth: '100%',
-            overflow: 'scroll',
-            top: '-5rem',
-          }}
-          onScroll={handleScroll}
-        >
-          {Object.keys(calendarData).map((date, index) => {
-            const hasItems = Object.keys(calendarData[date]).length > 0;
+        <div ref={tableRef} className={styles.schedule} style={{ overflowX: 'auto' }}>
+          {Object.entries(calendarData).map(([dateKey, tracksForDate], index) => {
+            // Check if there are any items for the given date
+            const hasItems = Array.isArray(tracksForDate) && tracksForDate.length > 0;
 
             return (
-              <div
-                className={`${styles.heading} ${hasItems ? '' : styles.hideItems}`}
-                key={index}
-                style={{ backgroundColor: hasItems ? 'var(--color-blue)' : 'var(--color-blue-gray' }}
-              >
-                <p>{date}</p>
-              </div>
-            );
-          })}
-        </div>
+              <div key={index} className={`${styles.eventStyle} ${hasItems ? '' : styles.hideItems}`}>
+                <div
+                  className={`${styles.heading} ${hasItems ? '' : styles.hideItems}`}
+                  key={index}
+                  onScroll={handleScroll}
+                  style={{ backgroundColor: hasItems ? 'var(--color-blue)' : 'var(--color-blue-gray' }}
+                >
+                  <p>{dateKey}</p>
+                </div>
 
-        <div ref={tableRef} onScroll={handleScroll} className={styles.schedule} style={{ overflowX: 'auto' }}>
-          {Object.keys(calendarData)?.map((dateKey, index) => {
-            const events = calendarData[dateKey];
-            const eventKeys = Object.keys(events);
-            const hasItems = Object.keys(calendarData[dateKey]).length > 0;
+                {Array.isArray(tracksForDate) &&
+                  tracksForDate.map((track, trackIndex) => {
+                    const { title: trackTitle, trackDetails, records } = track;
+                    const { title, time, speakers, firstName, trackDate, order, capacity, roomName } = track.trackDetails[trackTitle];
 
-            return (
-              <div key={index} className={`${styles.eventStyle} ${hasItems ? '' : styles.hideItems} `}>
-                {eventKeys?.map((eventItem, eventIndex) => {
-                  const events = calendarData[dateKey];
-                  const eventDetails = events[eventItem];
-
-                  const { title, time, trackDate, trackAttendees, location } = eventDetails.trackDetails[eventItem] ?? '';
-
-                  return (
-                    <div style={{ ...scheduleStyle }} className={styles.eventBox} key={eventIndex} onClick={() => handleEventClick(eventDetails)}>
-                      {title && <p className={styles.eventName}>{title}</p>}
-                      {time && <p className={styles.time}>{time}</p>}
-                      {location && <p className={styles.location}>{location}</p>}
-                      <p className={styles.people}>👤 {trackAttendees ?? '50 seats'}</p>
-                    </div>
-                  );
-                })}
+                    return (
+                      <div className={styles.eventBox} key={trackIndex} onClick={() => handleEventClick({ ...trackDetails[trackTitle], records })} onScroll={handleScroll}>
+                        {title && <p className={styles.eventName}>{title}</p>}
+                        <div className={styles.eventDetails}>
+                          {time && <p className={styles.time}>{time}</p>}
+                          {roomName && <p className={styles.location}>{roomName}</p>}
+                          {speakers && <p className={styles.speakers}> {speakers}</p>}
+                          {firstName && <p className={styles.speakers}> {firstName}</p>}
+                          <p className={styles.people}>👤 {capacity ?? '50 seats'}</p>
+                        </div>
+                      </div>
+                    );
+                  })}
               </div>
             );
           })}
@@ -119,7 +99,7 @@ export default function Schedule({ calendarData }) {
         <section style={{ position: 'relative' }}>
           {isOverlayOpen && <div className={styles.overlay} onClick={handleOverlayClick} />}
           <div className={`${styles.absoluteContainer} ${isOverlayOpen ? styles.active : ''}`} onClick={handleContainerClick}>
-            <SchedulePopUp style={scheduleStyle} trackTalks={selectedEvent} isOpen={isOverlayOpen} onClose={handlePopupClose} />
+            <SchedulePopUp style={null} selectedEvent={selectedEvent} isOpen={isOverlayOpen} onClose={handlePopupClose} />
           </div>
         </section>
       )}

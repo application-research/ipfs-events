@@ -3,7 +3,7 @@
 import styles from '@components/Schedule.module.scss';
 
 import { useState, useEffect } from 'react';
-import { formatAirtableMetaData, getSpeakers } from '@root/resolvers/airtable-import';
+import { calendarDataWithAddedDates, formatAirtableMetaData, getFormattedAirtableFields, getSpeakers } from '@root/resolvers/airtable-import';
 import { makeRequest } from '@root/common/utilities';
 import { SCHEDULE_ICELAND } from '@root/content/schedule-iceland';
 import Schedule from './Schedule';
@@ -36,16 +36,19 @@ export default function ScheduleIceland({ scheduleData }) {
 
   if (!icelandData) return null;
 
-  const calendarData = SCHEDULE_ICELAND;
   const submitTrack = {
     text: 'submit a track or talk for Iceland',
     url: 'https://airtable.com/appEjnh5rpWMsjocb/shr6SmQjqdgn5Pc90',
   };
 
+  const emptyDatesToAdd = ['Sun, Sept 24', 'Sun, Sept 28'];
+  const formattedAirtableData = getFormattedAirtableFields(icelandData);
+  const calendarData = calendarDataWithAddedDates(formattedAirtableData, emptyDatesToAdd);
+
   return (
     <>
       <div style={{ paddingBottom: '4rem', display: 'grid', rowGap: '3rem' }}>
-        <Schedule calendarData={calendarData} submitTrack={submitTrack} />
+        <Schedule calendarData={calendarData} />
 
         {submitTrack.url && (
           <a href={submitTrack.url} className={styles.link} target="_blank">
