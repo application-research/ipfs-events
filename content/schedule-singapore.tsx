@@ -157,7 +157,7 @@ export const SCHEDULE_SINGAPORE = {
           attendees: 'lotus-miner, boost, SP engineering teams w custom tooling/impls,  filmine, venus hub, storswift, supranational',
         },
       },
-    ],
+    },
     Closing: {
       trackDetails: {
         Closing: {
@@ -175,4 +175,3 @@ export const SCHEDULE_SINGAPORE = {
   },
   'Fri, Sept 15': {},
 };
-

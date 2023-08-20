@@ -40,8 +40,8 @@ export function Block({ block }) {
       return <MediaBlock {...block} />;
     case (block.type = BlockTypeEnum.SCHEDULE):
       return <Schedule {...block} />;
-    // case (block.type = BlockTypeEnum.SCHEDULE_ICELAND):
-    //   return <ScheduleIceland {...block} />;
+    case (block.type = BlockTypeEnum.SCHEDULE_ICELAND):
+      return <ScheduleIceland {...block} />;
     case (block.type = BlockTypeEnum.SCHEDULE_SINGAPORE):
       return <ScheduleSingapore {...block} />;
     case (block.type = BlockTypeEnum.TABLE):

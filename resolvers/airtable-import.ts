@@ -9,13 +9,9 @@ export const airtableFormattedFieldsMap = {
   'Start Time': 'startTime', // date + time
   'Youtube Link': 'videoLink',
   TrackLink: 'trackLink',
-<<<<<<< HEAD
   'Twitter Profile URL': 'trackLink',
   'Confirmed for website': 'confirmedForWebsite',
   'Confirmed for Website': 'confirmedForWebsite',
-=======
-  'Twitter Profile URL': 'twitterUrl',
->>>>>>> d59c4cc (added speaker section)
 
   // talk details
   'Talk Description': 'desc',
@@ -318,4 +314,3 @@ export function calendarDataWithAddedDates(formattedCalendarData, emptyDatesToAd
     return formattedCalendarData;
   }
 }
-

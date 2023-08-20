@@ -19,10 +19,6 @@ export default function Schedule({ calendarData }) {
   const tableRef = useRef<HTMLDivElement>(null);
   const headersRef = useRef<HTMLDivElement>(null);
 
-  const scheduleStyle = {
-    backgroundColor: 'var(--color-white)',
-  };
-
   const handleScroll = useCallback((event) => {
     if (isScrolling) return;
 
@@ -44,8 +40,8 @@ export default function Schedule({ calendarData }) {
     setIsOverlayOpen(true);
   };
 
-  const handleEventClick = (details, records) => {
-    setSelectedEvent({ ...details, records });
+  const handleEventClick = (e) => {
+    setSelectedEvent(e);
     setIsOverlayOpen(true);
   };
 
@@ -62,7 +58,7 @@ export default function Schedule({ calendarData }) {
         <div ref={tableRef} className={styles.schedule} style={{ overflowX: 'auto' }}>
           {Object.entries(calendarData).map(([dateKey, tracksForDate], index) => {
             if (!Array.isArray(tracksForDate) || tracksForDate.length === 0) {
-              return null;
+              return null; // or handle this situation differently if needed
             }
             // Check if there are any items for the given date
             const hasItems = tracksForDate && tracksForDate.length > 0;
@@ -72,25 +68,24 @@ export default function Schedule({ calendarData }) {
                 <div
                   className={`${styles.heading} ${hasItems ? '' : styles.hideItems}`}
                   key={index}
+                  onScroll={handleScroll}
                   style={{ backgroundColor: hasItems ? 'var(--color-blue)' : 'var(--color-blue-gray' }}
                 >
                   <p>{dateKey}</p>
                 </div>
-                {tracksForDate.map((track, trackIndex) => {
-                  const { title, trackDetails, records } = track;
 
-                  const details = trackDetails[title];
-                  const { time, roomName, firstName, speakers, capacity } = details;
+                {tracksForDate.map((track, trackIndex) => {
+                  const { title: trackTitle, trackDetails, records } = track;
+                  const { title, time, speakers, trackDate, order, capacity, roomName } = track.trackDetails[trackTitle];
 
                   return (
-                    <div className={styles.eventBox} key={`${trackIndex}`} onClick={() => handleEventClick(details, records)}>
+                    <div className={styles.eventBox} key={trackIndex} onClick={() => handleEventClick({ ...trackDetails[trackTitle], records })} onScroll={handleScroll}>
                       {title && <p className={styles.eventName}>{title}</p>}
                       <div className={styles.eventDetails}>
                         {time && <p className={styles.time}>{time}</p>}
                         {roomName && <p className={styles.location}>{roomName}</p>}
                         {speakers && <p className={styles.speakers}> {speakers}</p>}
-                        {firstName && <p className={styles.speakers}> {firstName}</p>}
-                        {capacity && <p className={styles.people}>👤 {capacity ?? '50 seats'}</p>}
+                        <p className={styles.people}>👤 {capacity ?? '50 seats'}</p>
                       </div>
                     </div>
                   );
@@ -109,17 +104,11 @@ export default function Schedule({ calendarData }) {
           </div>
         </section>
       )}
-
-      {submitTrackLink && (
-        <a href={submitTrackLink} className={styles.link} target="_blank">
-          <section className={styles.callToAction}>
-            <div className={styles.callToActionTextContainer}>
-              <p className={styles.plusIcon}>+</p>
-              <p className={styles.callToActionText}>Submit a Talk or Track </p>
-            </div>
-          </section>
-        </a>
-      )}
     </div>
   );
 }
+
+// return records.map((eventDetails, eventIndex) => {
+//   //  const { title, time, speakers, trackDate, order, capacity, roomName } = eventDetails.trackDetails[trackTitle] || {};
+//   const { title, time, speakers, trackDate, order, capacity, roomName } = eventDetails;
+//   console.log(eventDetails, 'event details');

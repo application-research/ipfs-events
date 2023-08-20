@@ -15,14 +15,6 @@ export enum BlockTypeEnum {
   TABLE = 'table',
   TEXT = 'text',
   TICKET_CARD = 'ticket-card',
-<<<<<<< HEAD
-=======
-}
-
-export enum LocationEnum {
-  SINGAPORE = 'singapore',
-  ICELAND = 'iceland',
->>>>>>> d59c4cc (added speaker section)
 }
 
 export enum BlockDirectionEnum {
