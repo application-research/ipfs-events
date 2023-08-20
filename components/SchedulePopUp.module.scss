@@ -5,8 +5,6 @@
   border: 3px solid transparent;
   border-image: linear-gradient(to right, var(--gradient-border-blue-green));
   border-image-slice: 1;
-
-  //undo after
   // height: 60vh;
 
   @media (max-width: 768px) {
@@ -15,7 +13,7 @@
 }
 
 .eventName {
-  font-weight: var(--font-weight-bold);
+  font-weight: var(--font-weight-regular);
   font-size: var(--font-size-medium);
   display: flex;
   align-items: center;
@@ -40,15 +38,18 @@
 }
 
 .col1 {
-  grid-column: span 2;
+  // grid-column: span 2;
+  grid-column: span 3;
 }
 
 .col2 {
-  grid-column: span 2;
+  //  grid-column: span 2;
+  grid-column: span 3;
 }
 
 .col4 {
-  grid-column: span 4;
+  // grid-column: span 4;
+  grid-column: span 5;
 }
 
 .flexCol {
@@ -67,16 +68,14 @@
   max-height: 70vh;
   overflow-y: scroll;
   scrollbar-width: thin;
-  border-bottom: 1px solid var(--color-black);
+  border-bottom: 0.5px solid var(--color-black);
 }
 
 .tableHeader {
   display: grid;
   grid-template-columns: repeat(8, 1fr);
-  border: 1px solid var(--text-black);
   padding: 0.5rem;
-  background: var(--color-black);
-
+  background: var(--color-blue);
   position: sticky;
   top: -1px;
   z-index: var(--z-index-small);
@@ -97,7 +96,7 @@
 
 .eventDetails {
   display: grid;
-  gap: 0.5rem;
+  gap: 0.2rem;
   padding-bottom: 2rem;
 
   @media (max-width: 768px) {
@@ -121,8 +120,21 @@
   cursor: pointer;
   font-family: Inter;
   transition: background-color cubic-bezier(0.23, 1, 0.32, 1) ease;
+  max-height: 2.5rem;
 
   @media (max-width: 768px) {
     max-height: 2rem;
   }
+}
+
+.people,
+.location,
+.time,
+.description {
+  color: var(--gray1000);
+  font-size: var(--font-size-tiny);
+  font-family: Inter;
+  font-weight: var(--font-weight-light);
+  letter-spacing: -0.003em;
+  line-height: 1.6rem;
 }

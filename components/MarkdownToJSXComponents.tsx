@@ -4,10 +4,7 @@ import Image from './Image';
 export const MarkdownToJSXComponents = {
   a: (props) => <a {...props} className={styles.link} target="_blank" />,
   p: (props) => <p {...props} className={styles.p} />,
-<<<<<<< HEAD
   span: (props) => <span {...props} className={styles.span} />,
-=======
->>>>>>> ddccff6 (updated event copy)
   h1: (props) => <h1 {...props} className={styles.h1} />,
   h2: (props) => <h1 {...props} className={styles.h2} />,
   h3: (props) => <h1 {...props} className={styles.h3} />,
