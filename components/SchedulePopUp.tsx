@@ -24,8 +24,6 @@ export function SchedulePopUp({ selectedEvent, isOpen, onClose, style }) {
       return timeA - timeB;
     });
 
-  console.log('event items', selectedEvent);
-
   return (
     <section className={styles.eventStyle}>
       <div className={styles.popup} style={{ backgroundColor: styles.backgroundColor ?? 'var(--color-white)' }}>
@@ -142,29 +140,4 @@ export function SchedulePopUp({ selectedEvent, isOpen, onClose, style }) {
       </div>
     </section>
   );
-}
-
-{
-  /* {attendees && (
-              <p className={styles.people}>
-                <strong>Likely Attendees</strong>: {attendees}
-              </p>
-            )} */
-}
-{
-  /* {trackSpeakersAndAttendees && (
-              <p className={styles.description}>
-                <strong>Likely Attendees & Speakers: </strong>
-                {trackSpeakersAndAttendees}
-              </p>
-            )} */
-}
-{
-  /* {ctas && (
-            <div className={styles.row} style={{ paddingTop: '0.5rem', display: 'flex', gap: '0.5rem' }}>
-              {eventItem.ctas.map((ctaItem, index) => {
-                return <CallToActionVariant key={index} type={ctaItem.type} cta={ctaItem} />;
-              })}
-            </div>
-          )}  */
 }

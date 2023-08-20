@@ -44,7 +44,6 @@ export default function ScheduleSingapore({ scheduleData }) {
   const formattedAirtableData = getFormattedAirtableFields(singaporeData);
   const calendarData = calendarDataWithAddedDates(formattedAirtableData, emptyDatesToAdd);
 
-  console.log(calendarData, 'calendar dataa');
   return (
     <>
       <div style={{ paddingBottom: '4rem', display: 'grid', rowGap: '3rem' }}>
