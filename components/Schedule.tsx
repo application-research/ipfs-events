@@ -11,7 +11,7 @@ if (!IS_PRODUCTION) {
   require('dotenv').config();
 }
 
-export default function Schedule({ calendarData, submitTrack }) {
+export default function Schedule({ calendarData }) {
   const [selectedEvent, setSelectedEvent] = useState(null);
   const [isOverlayOpen, setIsOverlayOpen] = useState(false);
   const [isScrolling, setIsScrolling] = useState(false);
