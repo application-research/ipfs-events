@@ -1,5 +1,5 @@
 {
-  "name": "next-sass",
+  "name": "www-fildev",
   "engines": {
     "npm": ">=9.0.0 <10.0.0",
     "node": ">=19.0.0 <20.6.1"

@@ -21,6 +21,7 @@ export default function ScheduleSingapore({ scheduleData }) {
 
   useEffect(() => {
     if (scheduleData?.airtable?.tableName) {
+      console.log('version 1');
       const fetchData = async () => {
         const singapore = await makeRequest({ endpoint: 'airtable/singapore' });
         const formattedAirtableData = formatAirtableMetaData(singapore.data);
