@@ -73,16 +73,16 @@ export default function Schedule({ calendarData }) {
 
                 {Array.isArray(tracksForDate) &&
                   tracksForDate.map((track, trackIndex) => {
-                    const { title: trackTitle, trackDetails, records } = track;
-                    const { title, time, speakers, firstName, trackDate, order, capacity, roomName } = track.trackDetails[trackTitle];
+                    const trackDetails = track.trackDetails;
+                    const records = track.records;
+                    const { title, firstName, roomName, time, capacity, trackDates } = trackDetails ?? null;
 
                     return (
-                      <div className={styles.eventBox} key={trackIndex} onClick={() => handleEventClick({ ...trackDetails[trackTitle], records })} onScroll={handleScroll}>
+                      <div className={styles.eventBox} key={trackIndex} onClick={() => handleEventClick({ ...trackDetails, records })} onScroll={handleScroll}>
                         {title && <p className={styles.eventName}>{title}</p>}
                         <div className={styles.eventDetails}>
                           {time && <p className={styles.time}>{time}</p>}
                           {roomName && <p className={styles.location}>{roomName}</p>}
-                          {speakers && <p className={styles.speakers}> {speakers}</p>}
                           {firstName && <p className={styles.speakers}> {firstName}</p>}
                           <p className={styles.people}>👤 {capacity ?? '50 seats'}</p>
                         </div>
