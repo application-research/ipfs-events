@@ -102,12 +102,16 @@
     border-image-slice: 1;
   }
 
+  @media (max-width: 1440px) {
+    height: 210px;
+  }
+
   @media (max-width: 1140px) {
-    height: 240px;
+    height: 260px;
   }
 
   @media (max-width: 1024px) {
-    height: 240px;
+    height: 260px;
   }
 
   @media (max-width: 768px) {
