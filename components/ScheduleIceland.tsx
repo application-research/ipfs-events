@@ -2,10 +2,9 @@
 
 import styles from '@components/Schedule.module.scss';
 
-import { useState, useEffect } from 'react';
 import { calendarDataWithAddedDates, formatAirtableMetaData, getFormattedAirtableFields, getSpeakers } from '@root/resolvers/airtable-import';
 import { makeRequest } from '@root/common/utilities';
-import { SCHEDULE_ICELAND } from '@root/content/schedule-iceland';
+import { useState, useEffect } from 'react';
 import Schedule from './Schedule';
 import Speakers from './Speakers';
 
@@ -40,8 +39,7 @@ export default function ScheduleIceland({ scheduleData }) {
     text: 'submit a track or talk for Iceland',
     url: 'https://airtable.com/appEjnh5rpWMsjocb/shr6SmQjqdgn5Pc90',
   };
-
-  const emptyDatesToAdd = ['Sun, Sept 24', 'Thu, Sept 28'];
+  const emptyDatesToAdd = [' Mon Sep 24 2023 20:00:00 GMT+0900 (Japan Standard Time)', 'Fri Sep 28 2023 20:00:00 GMT+0900 (Japan Standard Time)'];
   const formattedAirtableData = getFormattedAirtableFields(icelandData);
   const calendarData = calendarDataWithAddedDates(formattedAirtableData, emptyDatesToAdd);
 
