@@ -21,7 +21,6 @@ export default function ScheduleSingapore({ scheduleData }) {
 
   useEffect(() => {
     if (scheduleData?.airtable?.tableName) {
-      console.log('version 1');
       const fetchData = async () => {
         const singapore = await makeRequest({ endpoint: 'airtable/singapore' });
         const formattedAirtableData = formatAirtableMetaData(singapore.data);
@@ -41,7 +40,7 @@ export default function ScheduleSingapore({ scheduleData }) {
     url: 'https://airtable.com/appEjnh5rpWMsjocb/shrw3Ha0yTusDmcOg',
   };
 
-  const emptyDatesToAdd = ['Mon, Sept 11', 'Fri, Sept 15'];
+  const emptyDatesToAdd = ['Mon Sep 11 2023 20:00:00 GMT+0900 (Japan Standard Time)', 'Fri Sep 15 2023 20:00:00 GMT+0900 (Japan Standard Time)'];
   const formattedAirtableData = getFormattedAirtableFields(singaporeData);
   const calendarData = calendarDataWithAddedDates(formattedAirtableData, emptyDatesToAdd);
 
