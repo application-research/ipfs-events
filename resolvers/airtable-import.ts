@@ -1,5 +1,5 @@
 import { ScheduleStatusEnum, TrackOrTalkEnum } from '@root/common/types';
-import { toDateISOString } from '@root/common/utilities';
+import { formatUTCDateString } from '@root/common/utilities';
 
 export const airtableFormattedFieldsMap = {
   // for all
@@ -78,17 +78,19 @@ function formatTalkDuration(timestamp, timezone, duration) {
   return `${formattedStartDate} - ${formattedEndDate}`;
 }
 
-//get an array of valid Date objects from trackDates
 const getValidDates = (trackDates) => {
-  if (Array.isArray(trackDates)) {
-    const validDates = trackDates.map((date) => new Date(date)).filter((date) => !isNaN(date.getTime()));
+  // Helper function to convert a date to UTC Date object, it needs to be an object so that it can stay in the UTC time format
+  const toUTCDateObject = (dateString) => {
+    const date = new Date(dateString);
+    return new Date(Date.UTC(date.getUTCFullYear(), date.getUTCMonth(), date.getUTCDate(), date.getUTCHours(), date.getUTCMinutes(), date.getUTCSeconds()));
+  };
 
+  if (Array.isArray(trackDates)) {
+    const validDates = trackDates.map((date) => toUTCDateObject(date)).filter((date) => !isNaN(date.getTime()));
     return validDates;
   } else if (typeof trackDates === 'string') {
-    //convert string to a date object
-    const date: any = new Date(trackDates);
-
-    if (!isNaN(date)) {
+    const date = toUTCDateObject(trackDates);
+    if (!isNaN(date.getTime())) {
       return [date];
     } else {
       return [];
@@ -160,7 +162,7 @@ export function getTrackDetails(formattedAirtableData, trackSelected) {
 
     if (confirmedTrackStatus && title === trackSelected) {
       if (trackDate) {
-        const formattedDate = toDateISOString(trackDate);
+        const formattedDate = formatUTCDateString(trackDate);
 
         // Use 'id' as the unique key to avoid overwriting tracks with the same title but different dates
         if (!trackDetails.hasOwnProperty(id)) {
@@ -197,7 +199,7 @@ export function getFormattedAirtableFields(formattedAirtableData): any {
 
     trackDates.forEach((trackDate) => {
       if (trackDate) {
-        const formattedDate = toDateISOString(trackDate);
+        const formattedDate = formatUTCDateString(trackDate);
 
         switch (formattedRecord.type) {
           case 'Track':
@@ -239,7 +241,7 @@ export function getFormattedAirtableFields(formattedAirtableData): any {
 
     trackDatesForTalk.forEach((trackDateForTalk) => {
       if (trackDateForTalk) {
-        const formattedDateForTalk = toDateISOString(trackDateForTalk);
+        const formattedDateForTalk = formatUTCDateString(trackDateForTalk);
         const trackForTalk = talk.tracks[0]; //pick the first track for now since the unique talks shows up under 1 track
 
         if (groupedData.hasOwnProperty(formattedDateForTalk)) {
@@ -291,9 +293,17 @@ export function getSpeakers(formattedAirtableData) {
 export function calendarDataWithAddedDates(formattedCalendarData, emptyDatesToAdd) {
   const result = { ...formattedCalendarData };
 
-  if (emptyDatesToAdd.length > 1) {
-    emptyDatesToAdd.forEach((dateString) => {
-      result[dateString] = [];
+  const formattedDates = emptyDatesToAdd.map((dateString) => {
+    return formatUTCDateString(dateString);
+  });
+
+  if (formattedDates.length > 0) {
+    formattedDates.forEach((formattedDate, index) => {
+      if (formattedDate) {
+        result[formattedDate] = [];
+      } else {
+        console.warn('Invalid formatted date for:', emptyDatesToAdd[index]);
+      }
     });
 
     // Sort the keys (dates) in ascending order

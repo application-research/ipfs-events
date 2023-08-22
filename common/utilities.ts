@@ -12,6 +12,11 @@ export const pluralize = (text, count) => {
 export function toDateISOString(data) {
   const date = new Date(data);
 
+  if (isNaN(date.getTime())) {
+    console.error('Invalid Date:', data);
+    return;
+  }
+
   const options: any = {
     weekday: 'short',
     day: 'numeric',
@@ -19,6 +24,28 @@ export function toDateISOString(data) {
   };
 
   return new Intl.DateTimeFormat('en-US', options).format(date);
+}
+
+export function formatUTCDateString(data: string | number | Date): string {
+  const date = new Date(data);
+
+  if (isNaN(date.getTime())) {
+    console.error('Invalid Date:', data);
+    return '';
+  }
+
+  function getUTCDayName(date: Date): string {
+    const days = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+    return days[date.getUTCDay()];
+  }
+
+  function getUTCMonthName(date: Date): string {
+    const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+    return months[date.getUTCMonth()];
+  }
+
+  const formattedDate = `${getUTCDayName(date)}, ${getUTCMonthName(date)} ${date.getUTCDate()}`;
+  return formattedDate;
 }
 
 export function toDateISOStrinWithTimezone(data, timezone) {
