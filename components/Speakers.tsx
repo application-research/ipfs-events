@@ -30,7 +30,7 @@ export default function Speakers({ speakers }) {
 
 function SpeakerCard({ headShotSrc, firstName, spkrTitle, title, twitterUrl }) {
   return (
-    <div className={styles.speakerContainer}>
+    <div className={styles.speakerContainer} style={{ border: '1px solid var(--color-black)' }}>
       {headShotSrc && <img className={styles.headshot} alt={firstName} src={headShotSrc} />}
 
       <div className={styles.col}>
