@@ -221,14 +221,14 @@ export const FILECOIN_DEV_SUMMIT_2023_PAGE_CONTENT = [
     id: 'iceland',
     direction: BlockDirectionEnum.COLUMN,
     title: 'FIL Dev Summit - Iceland Schedule',
-    // cta: {
-    //   type: CallToActionVariantEnum.BUTTON,
-    //   textColor: 'white',
-    //   target: '_blank',
-    //   text: 'Submit a Talk/Track',
-    //   buttonColor: 'linear-gradient(to right,#39C1CB, #006FEC)',
-    //   link: 'https://airtable.com/appEjnh5rpWMsjocb/shr6SmQjqdgn5Pc90',
-    // },
+    cta: {
+      type: CallToActionVariantEnum.BUTTON,
+      textColor: 'white',
+      target: '_blank',
+      text: 'Showcase Your Project at the EXPO',
+      buttonColor: 'linear-gradient(to right,#39C1CB, #006FEC)',
+      link: 'https://airtable.com/appEjnh5rpWMsjocb/shr4Pv7K5CxTo6DGi',
+    },
     block: [
       {
         type: BlockTypeEnum.SCHEDULE_ICELAND,
