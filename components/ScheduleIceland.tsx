@@ -39,7 +39,7 @@ export default function ScheduleIceland({ scheduleData }) {
     text: 'submit a track or talk for Iceland',
     url: 'https://airtable.com/appEjnh5rpWMsjocb/shr6SmQjqdgn5Pc90',
   };
-  const emptyDatesToAdd = [' Mon Sep 24 2023 20:00:00 GMT+0900 (Japan Standard Time)', 'Fri Sep 28 2023 20:00:00 GMT+0900 (Japan Standard Time)'];
+  const emptyDatesToAdd = ['Fri Sep 28 2023 20:00:00 GMT+0900 (Japan Standard Time)'];
   const formattedAirtableData = getFormattedAirtableFields(icelandData);
   const calendarData = calendarDataWithAddedDates(formattedAirtableData, emptyDatesToAdd);
 
