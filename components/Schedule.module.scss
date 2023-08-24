@@ -158,6 +158,8 @@
   height: 100%;
   background-color: var(--color-gray-transparent100);
   z-index: var(--z-index-large);
+  height: 100vh;
+  overflow: hidden; /* prevent overlay from scrolling */
 }
 
 .bigCTA {
@@ -272,4 +274,8 @@
 
 .scheduleWrapper {
   overflow: scroll;
+}
+
+.noScroll {
+  overflow: hidden;
 }

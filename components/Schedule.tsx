@@ -1,7 +1,7 @@
 'use client';
 import styles from '@components/Schedule.module.scss';
 
-import { useCallback, useRef, useState } from 'react';
+import { useCallback, useEffect, useRef, useState } from 'react';
 import { SchedulePopUp } from './SchedulePopUp';
 
 const NODE = process.env.NODE_ENV || 'development';
@@ -19,10 +19,17 @@ export default function Schedule({ calendarData }) {
   const tableRef = useRef<HTMLDivElement>(null);
   const headersRef = useRef<HTMLDivElement>(null);
 
+  useEffect(() => {
+    if (isOverlayOpen) {
+      document.body.style.overflow = 'hidden';
+    }
+  }, [isOverlayOpen]);
+
   const handleScroll = useCallback((event) => {
     if (isScrolling) return;
 
     const source = event.target;
+
     setIsScrolling(true);
     if (source === tableRef.current) {
       headersRef.current.scrollLeft = source.scrollLeft;
