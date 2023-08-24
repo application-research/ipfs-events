@@ -1,5 +1,4 @@
 .container {
-  // width: 100%;
   display: grid;
   row-gap: 1rem;
 }
@@ -61,6 +60,7 @@
   display: flex;
   flex-direction: column;
 }
+
 .eventStyle {
   width: 100%;
   cursor: pointer;
@@ -118,11 +118,10 @@
   font-size: var(--font-size-regular-small);
 }
 
-.absoluteContainer {
+.fixedContainer {
   position: fixed;
   top: 0;
   left: 0;
-
   z-index: var(--z-index-large);
   top: 50%;
   left: 50%;
@@ -158,8 +157,6 @@
   height: 100%;
   background-color: var(--color-gray-transparent100);
   z-index: var(--z-index-large);
-  height: 100vh;
-  overflow: hidden; /* prevent overlay from scrolling */
 }
 
 .bigCTA {
@@ -274,8 +271,4 @@
 
 .scheduleWrapper {
   overflow: scroll;
-}
-
-.noScroll {
-  overflow: hidden;
 }
