@@ -386,10 +386,14 @@ export const FILECOIN_DEV_SUMMIT_2023_PAGE_CONTENT = [
 >>>>>>> 769859b (updated columns for block direction)
     title: 'FIL Dev Summit - Iceland Schedule',
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> a6f7ecb (added button to apply for expo)
     cta: {
       type: CallToActionVariantEnum.BUTTON,
       textColor: 'white',
       target: '_blank',
+<<<<<<< HEAD
 <<<<<<< HEAD
       text: 'Apply to Attend',
       buttonColor: 'linear-gradient(to right,#123693, #00D389);',
@@ -418,6 +422,12 @@ export const FILECOIN_DEV_SUMMIT_2023_PAGE_CONTENT = [
     //   link: 'https://airtable.com/appEjnh5rpWMsjocb/shr6SmQjqdgn5Pc90',
     // },
 >>>>>>> 16f616b (updated calendar)
+=======
+      text: 'Showcase Your Project at the EXPO',
+      buttonColor: 'linear-gradient(to right,#39C1CB, #006FEC)',
+      link: 'https://airtable.com/appEjnh5rpWMsjocb/shr4Pv7K5CxTo6DGi',
+    },
+>>>>>>> a6f7ecb (added button to apply for expo)
     block: [
       {
         type: BlockTypeEnum.SCHEDULE_ICELAND,
