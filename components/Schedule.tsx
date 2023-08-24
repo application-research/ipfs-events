@@ -23,6 +23,7 @@ export default function Schedule({ calendarData }) {
     if (isScrolling) return;
 
     const source = event.target;
+
     setIsScrolling(true);
     if (source === tableRef.current) {
       headersRef.current.scrollLeft = source.scrollLeft;
@@ -96,9 +97,10 @@ export default function Schedule({ calendarData }) {
       </div>
 
       {selectedEvent && (
-        <section style={{ position: 'relative' }}>
+        <section>
           {isOverlayOpen && <div className={styles.overlay} onClick={handleOverlayClick} />}
-          <div className={`${styles.absoluteContainer} ${isOverlayOpen ? styles.active : ''}`} onClick={handleContainerClick}>
+
+          <div className={`${styles.fixedContainer} ${isOverlayOpen ? styles.active : ''}`} onClick={handleContainerClick}>
             <SchedulePopUp style={null} selectedEvent={selectedEvent} isOpen={isOverlayOpen} onClose={handlePopupClose} />
           </div>
         </section>
