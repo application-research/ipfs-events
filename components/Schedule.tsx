@@ -1,7 +1,7 @@
 'use client';
 import styles from '@components/Schedule.module.scss';
 
-import { useCallback, useEffect, useRef, useState } from 'react';
+import { useCallback, useRef, useState } from 'react';
 import { SchedulePopUp } from './SchedulePopUp';
 
 const NODE = process.env.NODE_ENV || 'development';
@@ -18,12 +18,6 @@ export default function Schedule({ calendarData }) {
 
   const tableRef = useRef<HTMLDivElement>(null);
   const headersRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    if (isOverlayOpen) {
-      document.body.style.overflow = 'hidden';
-    }
-  }, [isOverlayOpen]);
 
   const handleScroll = useCallback((event) => {
     if (isScrolling) return;
@@ -103,9 +97,10 @@ export default function Schedule({ calendarData }) {
       </div>
 
       {selectedEvent && (
-        <section style={{ position: 'relative' }}>
+        <section>
           {isOverlayOpen && <div className={styles.overlay} onClick={handleOverlayClick} />}
-          <div className={`${styles.absoluteContainer} ${isOverlayOpen ? styles.active : ''}`} onClick={handleContainerClick}>
+
+          <div className={`${styles.fixedContainer} ${isOverlayOpen ? styles.active : ''}`} onClick={handleContainerClick}>
             <SchedulePopUp style={null} selectedEvent={selectedEvent} isOpen={isOverlayOpen} onClose={handlePopupClose} />
           </div>
         </section>

@@ -1,5 +1,5 @@
 .popup {
-  padding: 2rem;
+  padding: 2rem 1.5rem 2rem 2rem;
   border-radius: var(--border-radius-tiny);
   font-family: Inter;
   border: 3px solid transparent;
@@ -62,9 +62,19 @@
 
 .scheduleContainer {
   max-height: 70vh;
+  border-bottom: 0.5px solid var(--color-black);
   overflow-y: scroll;
   scrollbar-width: thin;
-  border-bottom: 0.5px solid var(--color-black);
+
+  &::-webkit-scrollbar {
+    display: initial;
+    width: 8px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: var(--color-gray-transparent200);
+    border-radius: 0.25rem;
+  }
 }
 
 .tableHeader {
@@ -88,6 +98,7 @@
   flex-direction: row;
   justify-content: space-between;
   padding-bottom: 1rem;
+  padding-right: 0.5rem;
 }
 
 .eventDetails {
@@ -124,7 +135,6 @@
 .time,
 .description {
   color: var(--gray1000);
-  font-size: var(--font-size-tiny);
   font-family: Inter;
   font-weight: var(--font-weight-light);
   letter-spacing: -0.003em;
