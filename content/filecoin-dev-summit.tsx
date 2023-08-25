@@ -52,7 +52,7 @@ export const FILECOIN_DEV_SUMMIT_2023_PAGE_CONTENT = [
             href: 'https://fil.org/',
           },
           {
-            src: 'https://pbs.twimg.com/profile_images/1651516803535843328/nHoT5pcX_400x400.png',
+            src: 'https://i.ibb.co/Dt6G116/logo-black-text.png',
             href: 'https://web3mine.io/',
           },
         ],
