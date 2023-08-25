@@ -39,7 +39,7 @@ function SpeakerCard({ headShotSrc, firstName, spkrTitle, title, twitterUrl }) {
           {spkrTitle && <p className={styles.spkrTitle}>{spkrTitle}</p>}
         </div>
         {twitterUrl && <TwitterSVG className={styles.logo} width="1rem" height="2rem" props={{ height: '1rem', width: '1rem' }} />}
-        {title && <p className={styles.trackTitle}>{title}</p>}
+        {/* {title && <p className={styles.trackTitle}>{title}</p>} */}
       </div>
     </div>
   );
