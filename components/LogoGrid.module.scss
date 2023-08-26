@@ -51,10 +51,6 @@
     border-bottom: 1px solid var(--text-black);
     border-right: 1px solid var(--text-black);
     transition: cubic-bezier(0.23, 1, 0.32, 1);
-    //remove bottom border fot the last row of columns
-    &:nth-last-child(-n + 3) {
-      border-bottom: none;
-    }
 
     //remove right border fot the last row of columns
     &:nth-last-child(-3n) {
