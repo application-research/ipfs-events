@@ -10,17 +10,6 @@
   }
 }
 
-.logo {
-  height: 2rem;
-
-  @media (max-width: 500px) {
-    height: 1.5rem;
-  }
-  @media (max-width: 3px) {
-    height: 1rem;
-  }
-}
-
 .text {
   width: 30%;
 
@@ -29,58 +18,47 @@
   }
 }
 
-.col6 {
-  // display: flex;
-  // flex-wrap: wrap;
-  // margin: 0 auto;
+.grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   grid-gap: 1rem;
   width: 100%;
+}
 
+.gridItem,
+.logo {
+  display: block;
+  max-width: 100%;
+  width: 100%;
+  object-fit: contain;
+}
+
+.gridItem {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   border: 1px solid var(--text-black);
   border-radius: var(--border-radius-tiny);
 
-  // &:last-child {
-  //   border-right: none;
-  // }
-
-  .col {
-    // flex: 1 0 calc(33.666% - 0.5rem);
-    // display: flex;
-    // justify-content: center;
-    // align-items: center;
-    // height: 120px;
-    padding: 1rem;
-    // padding: 0.5rem;
-    // border-bottom: 1px solid var(--text-black);
-    border-right: 1px solid var(--text-black);
-    transition: cubic-bezier(0.23, 1, 0.32, 1);
-
-    //remove right border fot the last row of columns
-    // &:nth-last-child(-3n) {
-    //   border-right: none;
-    // }
-
-    &:hover {
-      background: linear-gradient(to bottom right, var(--gradient-border-blue-green-transparent));
-      box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
-    }
+  &:hover {
+    background: linear-gradient(to bottom right, var(--gradient-border-blue-green-transparent));
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
   }
+}
 
-  .logo {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0 auto;
-    height: 3rem;
-    // width: 5rem;
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 10rem;
+  height: 5rem;
+  object-fit: contain;
+}
 
-    @media (max-width: 1032px) {
-      height: 3rem;
-    }
-    @media (max-width: 768px) {
-      height: 2rem;
-    }
-  }
+.link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
 }
