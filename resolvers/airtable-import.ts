@@ -1,5 +1,6 @@
 import { ScheduleStatusEnum, TrackOrTalkEnum } from '@root/common/types';
 import { formatUTCDateString } from '@root/common/utilities';
+import moment from 'moment';
 
 export const airtableFormattedFieldsMap = {
   // for all
@@ -306,8 +307,12 @@ export function calendarDataWithAddedDates(formattedCalendarData, emptyDatesToAd
       }
     });
 
-    // Sort the keys (dates) in ascending order
-    const sortedDates = Object.keys(result).sort((a, b) => new Date(a).getTime() - new Date(b).getTime());
+    // Sort the keys (dates) in ascending order using Moment.js library
+    const sortedDates = Object.keys(result).sort((a, b) => {
+      const dateA = moment.utc(a, 'ddd, MMM D');
+      const dateB = moment.utc(b, 'ddd, MMM D');
+      return dateA.isBefore(dateB) ? -1 : dateA.isAfter(dateB) ? 1 : 0;
+    });
 
     // Create a new object with sorted dates
     const sortedResult = {};
