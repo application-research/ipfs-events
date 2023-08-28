@@ -14,14 +14,14 @@ import Airtable from 'airtable';
 //     const base = new Airtable({ apiKey: process.env.FILSUMMIT_TOKEN }).base(process.env.FILSUMMIT_BASE_ID!);
 //     const records = await base(name).select().firstPage();
 
-//     res.json({ records });
+// res.json({ records });
 //   } catch (e) {
 //     console.log(e);
 //     res.json({ error: true });
 //   }
 // }
 
-export default async function apiAirtableSingapore(req, res) {
+export default async function apiAirtableIceland(req, res) {
   const url = 'https://internet-apis.onrender.com/api/airtable/iceland?version=1';
   const TOKEN = process.env.FILSUMMIT_TOKEN;
 
