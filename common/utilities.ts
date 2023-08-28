@@ -1,3 +1,5 @@
+import moment from 'moment';
+
 const hasOwn = {}.hasOwnProperty;
 const protocolAndDomainRE = /^(?:\w+:)?\/\/(\S+)$/;
 const localhostDomainRE = /^localhost[\:?\d]*(?:[^\:?\d]\S*)?$/;
@@ -27,24 +29,17 @@ export function toDateISOString(data) {
 }
 
 export function formatUTCDateString(data: string | number | Date): string {
-  const date = new Date(data);
+  // Initialize a moment.js library object
+  const date = moment.utc(data);
 
-  if (isNaN(date.getTime())) {
+  // Check if the date is valid
+  if (!date.isValid()) {
     console.error('Invalid Date:', data);
     return '';
   }
 
-  function getUTCDayName(date: Date): string {
-    const days = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
-    return days[date.getUTCDay()];
-  }
-
-  function getUTCMonthName(date: Date): string {
-    const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
-    return months[date.getUTCMonth()];
-  }
-
-  const formattedDate = `${getUTCDayName(date)}, ${getUTCMonthName(date)} ${date.getUTCDate()}`;
+  // Format the date
+  const formattedDate = date.format('ddd, MMM D');
   return formattedDate;
 }
 
