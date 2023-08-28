@@ -205,6 +205,7 @@ export function getFormattedAirtableFields(airtableData, timezone?: any): any {
 }
 
 export function getAirtableData(view, callback) {
+  console.log(view, 'view');
   const Airtable = require('airtable');
 
   const base = new Airtable({ apiKey: process.env.AIRTABLE_API }).base(process.env.AIRTABLE_BASE_ID);
