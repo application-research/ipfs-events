@@ -243,6 +243,12 @@ export function getFormattedAirtableFields(formattedAirtableData): any {
     trackDatesForTalk.forEach((trackDateForTalk) => {
       if (trackDateForTalk) {
         const formattedDateForTalk = formatUTCDateString(trackDateForTalk);
+        // NOTE(jim):
+        // Hotfixes mising array.
+        if (!talk.tracks) {
+          return;
+        }
+
         const trackForTalk = talk.tracks[0]; //pick the first track for now since the unique talks shows up under 1 track
 
         if (groupedData.hasOwnProperty(formattedDateForTalk)) {
