@@ -6,7 +6,7 @@ import { NAVIGATION_HOMEPAGE_CONTENT } from '@root/content/navigation-camp-page-
 import DefaultLayout from '@components/DefaultLayout';
 import FooterTiny from '@root/components/FooterTiny';
 import GutterContainer from '@root/components/GutterContainer';
-import NavbarLogoMiddle from '@root/components/NavbarLogoMiddle';
+import CampNavbarLogoMiddle from '@root/components/CampNavbarLogoMiddle';
 import SectionCamppage from '@root/components/SectionIPFSCampPage';
 
 export default async function Page(props) {
@@ -16,7 +16,7 @@ export default async function Page(props) {
 
   return (
     <DefaultLayout props={{ background: 'var(--color-black-fade)' }}>
-      <NavbarLogoMiddle navContent={navContent} />
+      <CampNavbarLogoMiddle navContent={navContent} />
       <GutterContainer>
         <SectionCamppage {...homepage} />
       </GutterContainer>
