@@ -1,33 +1,27 @@
 import '@root/global.scss';
 
-import {
-  IPFS_FRIENDS_CAFE_NAVIGATION_CONTENT,
-  IPFS_FRIENDS_CAFE_PAGE_CONTENT,
-  IPFS_FRIENDS_CAFE_PAGE_HERO_CONTENT,
-  IPFS_FRIENDS_FOOTER_CONTENT,
-} from '@root/content/ipfs-friends-cafe';
+import { FOOTER_TINY_CONTENT } from '@root/content/footer-content';
+import { IPFS_CAMP_PAGE_CONTENT } from '@root/content/ipfs-camp-content';
+import { NAVIGATION_HOMEPAGE_CONTENT } from '@root/content/navigation-camp-page-content';
 import DefaultLayout from '@components/DefaultLayout';
-import Footer from '@root/components/Footer';
-import Hero from '@root/components/Hero';
-import ResponsiveNavbar from '@root/components/ResponsiveNavbar';
-import SectionEventPage from '@root/components/SectionEventPage';
+import FooterTiny from '@root/components/FooterTiny';
+import GutterContainer from '@root/components/GutterContainer';
+import NavbarLogoMiddle from '@root/components/NavbarLogoMiddle';
+import SectionCamppage from '@root/components/SectionIPFSCampPage';
 
 export default async function Page(props) {
-  const blocks = IPFS_FRIENDS_CAFE_PAGE_CONTENT;
-  const footerContent = IPFS_FRIENDS_FOOTER_CONTENT;
-  const hero = IPFS_FRIENDS_CAFE_PAGE_HERO_CONTENT;
-  const navContent = IPFS_FRIENDS_CAFE_NAVIGATION_CONTENT;
+  const footerContent = FOOTER_TINY_CONTENT;
+  const homepage = IPFS_CAMP_PAGE_CONTENT;
+  const navContent = NAVIGATION_HOMEPAGE_CONTENT;
 
   return (
-    <DefaultLayout props={{ background: 'var(--color-white200)' }}>
-      <ResponsiveNavbar navContent={navContent} />
+    <DefaultLayout props={{ background: 'var(--color-black-fade)' }}>
+      <NavbarLogoMiddle navContent={navContent} />
+      <GutterContainer>
+        <SectionCamppage {...homepage} />
+      </GutterContainer>
 
-      <div style={{ paddingBottom: '5rem' }}>
-        <Hero {...hero} />
-      </div>
-      <SectionEventPage blocks={blocks} pageStyle={null} />
-
-      <Footer {...footerContent} />
+      <FooterTiny {...footerContent} />
     </DefaultLayout>
   );
 }

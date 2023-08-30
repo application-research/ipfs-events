@@ -13,62 +13,64 @@ export default function NavbarLogoMiddle({ navContent }) {
   const rightSide = navItems.slice(middleIndex);
 
   return (
-    <GutterContainer>
-      <div className={`${styles.container} ${styles.navbar}`}>
-        <div className={styles.columns}>
-          <div className={`${styles.column} ${styles.container}`} style={{ gap: '2rem' }}>
-            {leftSide.map((item, index) => {
-              return (
-                <div key={index}>
-                  {!item.dropdown && (
-                    <Link style="animated" href={item.link}>
-                      <p>{item.title}</p>
-                    </Link>
-                  )}
-                  {item?.dropdown && (
-                    <section className={styles.dropdownContainer}>
-                      <div className={`${styles.container}`} style={{ gap: '1rem' }}>
-                        <Link style="animated" href={item?.link ?? ''}>
-                          <p>{item.title}</p>
-                        </Link>
+    <nav className={styles.navbar} style={{ background: navContent?.backgroundColor ?? 'var(--color-transparent)' }}>
+      <GutterContainer>
+        <div className={`${styles.container} ${styles.navbar}`}>
+          <div className={styles.columns}>
+            <div className={`${styles.column} ${styles.container}`} style={{ gap: '2rem' }}>
+              {leftSide.map((item, index) => {
+                return (
+                  <div key={index}>
+                    {!item.dropdown && (
+                      <Link style="animated" href={item.link}>
+                        <p>{item.title}</p>
+                      </Link>
+                    )}
+                    {item?.dropdown && (
+                      <section className={styles.dropdownContainer}>
+                        <div className={`${styles.container}`} style={{ gap: '1rem' }}>
+                          <Link style="animated" href={item?.link ?? ''}>
+                            <p>{item.title}</p>
+                          </Link>
 
-                        <ArrowSVGStyleTwo className={styles.arrow} />
-                      </div>
-                      <Dropdown dropdown={item?.dropdown} />
-                    </section>
-                  )}
-                </div>
-              );
-            })}
-          </div>
-          <div className={styles.logoWrapper}>
-            <img src={navContent.logo.src} className={styles.logo} alt="IPFS Logo" />
-          </div>
-          <div className={`${styles.column} ${styles.container}`} style={{ gap: '2rem' }}>
-            {rightSide.map((item, index) => {
-              return (
-                <div key={index}>
-                  {!item.dropdown && (
-                    <Link style="animated" href={item.link} target={item?.target ?? '_self'}>
-                      <p>{item.title}</p>
-                    </Link>
-                  )}
-                  {item?.dropdown && (
-                    <>
-                      <p>{item.title}</p>
-
-                      <div className={`${styles.dropdownRow}`}>
+                          <ArrowSVGStyleTwo className={styles.arrow} />
+                        </div>
                         <Dropdown dropdown={item?.dropdown} />
-                      </div>
-                    </>
-                  )}
-                </div>
-              );
-            })}
+                      </section>
+                    )}
+                  </div>
+                );
+              })}
+            </div>
+            <div className={styles.logoWrapper}>
+              <img src={navContent.logo.src} className={styles.logo} alt="IPFS Logo" />
+            </div>
+            <div className={`${styles.column} ${styles.container}`} style={{ gap: '2rem' }}>
+              {rightSide.map((item, index) => {
+                return (
+                  <div key={index}>
+                    {!item.dropdown && (
+                      <Link style="animated" href={item.link} target={item?.target ?? '_self'}>
+                        <p>{item.title}</p>
+                      </Link>
+                    )}
+                    {item?.dropdown && (
+                      <>
+                        <p>{item.title}</p>
+
+                        <div className={`${styles.dropdownRow}`}>
+                          <Dropdown dropdown={item?.dropdown} />
+                        </div>
+                      </>
+                    )}
+                  </div>
+                );
+              })}
+            </div>
           </div>
         </div>
-      </div>
-    </GutterContainer>
+      </GutterContainer>
+    </nav>
   );
 }
 

@@ -79,7 +79,7 @@ export const NAVIGATION_HOMEPAGE_CONTENT = {
       ],
     },
     {
-      title: 'IPFS Friends + Cafe',
+      title: 'IPFS Friends',
       link: '/ipfs-friends-cafe',
       target: '_blank',
     },

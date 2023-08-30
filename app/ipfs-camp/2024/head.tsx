@@ -2,9 +2,9 @@ import DefaultMetaTags from '@components/DefaultMetaTags';
 import PlausibleScript from '@root/components/PlausibleScript';
 
 export default async function Head({ params }) {
-  const title = 'IPFS Friends + Cafe';
+  const title = 'IPFS Camp';
   const description =
-    'IPFS Friends + Cafe are community-hosted events that foster knowledge exchange, community growth, collaboration, innovation, and the continued advancement of IPFS as groundbreaking technology';
+    ' IPFS Camp provides the ideal platform to exchange ideas, collaborate, and co-create solutions for the real-world challenges that the web is currently facing.';
   const url = 'https://ipfs.events';
 
   // SUMMARY_LARGE_IMAGE: 1500x785
