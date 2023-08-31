@@ -25,11 +25,14 @@ export default function Schedule({ calendarData }) {
     const source = event.target;
 
     setIsScrolling(true);
-    if (source === tableRef.current) {
-      headersRef.current.scrollLeft = source.scrollLeft;
-    } else if (source === headersRef.current) {
-      tableRef.current.scrollLeft = source.scrollLeft;
+    if (tableRef.current && headersRef.current) {
+      if (source === tableRef.current) {
+        headersRef.current.scrollLeft = source.scrollLeft;
+      } else if (source === headersRef.current) {
+        tableRef.current.scrollLeft = source.scrollLeft;
+      }
     }
+
     setIsScrolling(false);
   }, []);
 

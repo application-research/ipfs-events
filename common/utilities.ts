@@ -172,19 +172,19 @@ export function debounce<Args extends unknown[]>(fn: (...args: Args) => void, de
 }
 
 export function classNames(...args: any[]): string {
-  var classes = [];
+  let classes: string[] = [];
 
-  for (var i = 0; i < arguments.length; i++) {
-    var arg = arguments[i];
+  for (let i = 0; i < arguments.length; i++) {
+    let arg = arguments[i];
     if (!arg) continue;
 
-    var argType = typeof arg;
+    let argType = typeof arg;
 
     if (argType === 'string' || argType === 'number') {
       classes.push(arg);
     } else if (Array.isArray(arg)) {
       if (arg.length) {
-        var inner = classNames.apply(null, arg);
+        let inner = classNames.apply(null, arg);
         if (inner) {
           classes.push(inner);
         }
@@ -193,7 +193,7 @@ export function classNames(...args: any[]): string {
       if (arg.toString !== Object.prototype.toString) {
         classes.push(arg.toString());
       } else {
-        for (var key in arg) {
+        for (let key in arg) {
           if (hasOwn.call(arg, key) && arg[key]) {
             classes.push(key);
           }
