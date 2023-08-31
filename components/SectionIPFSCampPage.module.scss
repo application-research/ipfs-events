@@ -36,10 +36,11 @@
 }
 
 .rainbowBorderWrapper {
-  background: linear-gradient(to right, blue, green, yellow, orange, red);
+  background: linear-gradient(to left, #E01633, #CDB235, #4FD3CD, #0098C9);
   border-radius: 12px;
   padding: 2px;
   display: inline-block;
+  margin-bottom: 2rem;
 }
 
 .innerContent {
@@ -49,6 +50,7 @@
   justify-content: space-between;
   width: 100%;
   height: 100%;
+  font-family: Inter;
 }
 
 .diptychHalf{
@@ -142,6 +144,103 @@
 
 .p {
   font-size: var(--font-size-regular);
+}
+
+.campEvents { 
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  width: 100%;
+}
+
+.sectionTitle {
+  color: #ffffff;
+  padding-left: 1rem;
+  padding-bottom: 2rem;
+}
+
+.centeredSectionTitle {
+  color: #ffffff;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  padding-bottom: 2rem;
+  justify-content: center;
+  text-align: center;
+}
+
+.getInvolvedColumns {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+
+  .involvementColumn {
+    flex: 1;
+    margin: 0 1rem;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .involvementContent {
+    background: black;
+    color: #ffffff;
+    border-radius: 10px;
+    display: flex; 
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+    padding: 2rem;
+    font-family: Inter;
+
+    position: relative;
+
+    p {
+      margin: 0;
+      flex: 1;
+    }
+
+    .plus-symbol {
+      margin-left: auto; 
+    }
+  }
+}
+
+.faqColumns {
+  display: flex;
+  justify-content: space-between;
+
+  .faqLeft,
+  .faqRight {
+    flex: 1;
+    margin: 0 1rem;
+
+    .faqBorderWrapper {
+      margin-bottom: 1rem;
+      width: 100%;
+      margin: 1rem 0;
+    }
+
+    .faqContent {
+      background: linear-gradient(to left, #E01633, #CDB235, #4FD3CD, #0098C9);
+      border-radius: 10px;
+      display: flex; 
+      justify-content: space-between;
+      width: 100%;
+      height: 100%;
+      padding: 2rem;
+      font-family: Inter;
+
+      position: relative;
+
+      p {
+        margin: 0;
+        flex: 1;
+      }
+
+      .plus-symbol {
+        margin-left: auto; 
+      }
+    }
+  }
 }
 
 .calander {

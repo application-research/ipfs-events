@@ -15,7 +15,6 @@ export default function SectionCamppage({ upcomingEvents }) {
             <div className={styles.headerText}>
               <h3 className={styles.h3}>IPFS is more than just a ‘conference’; it’s a global movement of builders and visionaries committed to creating a better web. </h3>
               <p>Over the course of three days, we will host hundreds of talks, workshops, and hacking sessions, all focused on the latest advancements in decentralized technologies and the future of the internet. IPFS Camp provides the ideal platform to exchange ideas, collaborate, and co-create solutions for the real-world challenges that the web is currently facing.</p>
-              {/* New box underneath */}
               <div className={styles.rainbowBorderWrapper}>
                 <div className={styles.innerContent}>
                   <div className={styles.diptychHalf}>CAMP 2024 
@@ -68,39 +67,108 @@ export default function SectionCamppage({ upcomingEvents }) {
           </div>
         </section>
 
-        <div className={styles.twoColumns}>
-          <h1 className={styles.h1}>
-            Get Involved
-          </h1>
-            {/* Input boxes here */}
+        <h3 className={styles.centeredSectionTitle}>
+              Get Involved
+        </h3>
+        <div className={styles.getInvolvedColumns}>
+          <div className={styles.involvementColumn}>
+            <div className={styles.rainbowBorderWrapper}>
+              <div className={styles.involvementContent}>
+                Test Content
+              </div>
+            </div>
+            <div className={styles.rainbowBorderWrapper}>
+              <div className={styles.involvementContent}>
+                Test Content
+              </div>
+            </div>
+          </div>
+          <div className={styles.involvementColumn}>
+            <div className={styles.rainbowBorderWrapper}>
+              <div className={styles.involvementContent}>
+                Test Content
+              </div>
+            </div>
+            <div className={styles.rainbowBorderWrapper}>
+              <div className={styles.involvementContent}>
+                Test Content
+              </div>
+            </div>
+          </div>
+          <div className={styles.involvementColumn}>
+            <div className={styles.rainbowBorderWrapper}>
+              <div className={styles.involvementContent}>
+                Test Content
+              </div>
+            </div>
+            <div className={styles.rainbowBorderWrapper}>
+              <div className={styles.involvementContent}>
+                Test Content
+              </div>
+            </div>
+          </div>
         </div>
-        <section>
-          <h3 className={styles.h3} style={{ paddingBottom: '2rem' }}>
+
+        <h3 className={styles.sectionTitle}>
             Past Camp Events
-          </h3>
+        </h3>
+        <section className={styles.campEvents}>
+          
           {/* Impact section */}
-
-          <section className={styles.grid4cols} style={{ paddingBottom: '1rem' }}>
-            {upcomingEvents.map((event, index) => {
-              return (
-                <div key={index}>
-                  <Link href={event?.link ?? ''} style="text" target={event?.target ?? '_blank'}>
-                    <img className={`${styles.col50} ${styles.image}`} src={event.image} />
-                    <div className={styles.containerOverImage}>
-                      <p className={`${styles.smallText}`} style={{ fontWeight: 'bold' }}>
-                        {event.name}
-                      </p>
-
-                      <p className={`${styles.tinyText}`}>
-                        {event.location} | {event.date}
-                      </p>
-                    </div>
-                  </Link>
+        </section>
+        {/* FAQ */}
+        <section className={styles.faqSection}>
+          <h1 className={styles.sectionTitle} style={{ paddingBottom: '2rem' }}>
+            FAQs
+          </h1>
+          <div className={styles.faqColumns}>
+            <div className={styles.faqLeft}>
+              <div className={styles.faqBorderWrapper}>
+                <div className={styles.faqContent}>
+                  <h4>qui dolorem ipsum, quia dolor sit amet consectetur adipisci velit?</h4>
+                  <div className={styles.plusSymbol}>+</div>
                 </div>
-              );
-            })}
-          </section>
-          {/* FAQ */}
+              </div>
+              <div className={styles.faqBorderWrapper}>
+                <div className={styles.faqContent}>
+                  <h4>qui dolorem ipsum, quia dolor sit amet consectetur adipisci velit?</h4>
+                  <div className={styles.plusSymbol}>+</div>
+                </div>
+              </div>
+              <div className={styles.faqBorderWrapper}>
+                <div className={styles.faqContent}>
+                  <h4>qui dolorem ipsum, quia dolor sit amet consectetur adipisci velit?</h4>
+                  <div className={styles.plusSymbol}>+</div>
+                </div>
+              </div>
+              <div className={styles.faqBorderWrapper}>
+                <div className={styles.faqContent}>
+                  <h4>qui dolorem ipsum, quia dolor sit amet consectetur adipisci velit?</h4>
+                  <div className={styles.plusSymbol}>+</div>
+                </div>
+              </div>
+            </div>
+            <div className={styles.faqRight}>
+              <div className={styles.faqBorderWrapper}>
+                <div className={styles.faqContent}>
+                  <h4>qui dolorem ipsum, quia dolor sit amet consectetur adipisci velit?</h4>
+                  <div className={styles.plusSymbol}>+</div>
+                </div>
+              </div>
+              <div className={styles.faqBorderWrapper}>
+                <div className={styles.faqContent}>
+                  <h4>qui dolorem ipsum, quia dolor sit amet consectetur adipisci velit?</h4>
+                  <div className={styles.plusSymbol}>+</div>
+                </div>
+              </div>
+              <div className={styles.faqBorderWrapper}>
+                <div className={styles.faqContent}>
+                  <h4>qui dolorem ipsum, quia dolor sit amet consectetur adipisci velit?</h4>
+                  <div className={styles.plusSymbol}>+</div>
+                </div>
+              </div>
+            </div>
+          </div>
         </section>
       </div>
     </div>
