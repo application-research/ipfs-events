@@ -6,7 +6,7 @@
   "license": "MIT",
   "version": "0.0.7",
   "scripts": {
-    "dev": "next -p 3008",
+    "dev": "next -p 1000",
     "build": "next build",
     "start": "next start",
     "script": "ts-node -O '{\"module\":\"commonjs\"}' scripts/index.js"
@@ -18,7 +18,7 @@
     "knex": "^2.4.2",
     "markdown-to-jsx": "^7.2.1",
     "moment": "^2.29.4",
-    "next": "13.1.6",
+    "next": "13.4.12",
     "pg": "^8.9.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",

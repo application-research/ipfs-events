@@ -192,8 +192,8 @@ export function getTrackDetails(formattedAirtableData, trackSelected) {
 }
 
 export function getFormattedAirtableFields(formattedAirtableData): any {
-  const groupedData = {};
-  const talkRecords = []; // Store all Talk records
+  const groupedData: any = {};
+  const talkRecords: any = []; // Store all Talk records
 
   formattedAirtableData.forEach((formattedRecord) => {
     const trackDates = getValidDates(formattedRecord.trackDate);
@@ -282,7 +282,7 @@ function sortTracksByOrder(groupedData) {
 }
 
 export function getSpeakers(formattedAirtableData) {
-  const speakers = [];
+  const speakers: any = [];
 
   formattedAirtableData.map((data) => {
     const { confirmedForWebsite, firstName, title, lastName, spkrTitle, status, twitterUrl, headshot } = data ?? null;

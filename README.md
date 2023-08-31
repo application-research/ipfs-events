@@ -18,7 +18,7 @@ npm install
 npm run dev
 ```
 
-Go to `http://localhost:3005` in your browser of choice. Enjoy!
+Go to `http://localhost:1000` in your browser of choice. Enjoy!
 
 ### Scripts
 
