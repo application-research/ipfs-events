@@ -42,7 +42,7 @@ export const FILECOIN_DEV_SUMMIT_2023_PAGE_CONTENT = [
       {
         id: 'participating-teams',
         type: BlockTypeEnum.LOGO_GRID,
-        logos: [
+        logosLarge: [
           {
             src: '/media/protocollabs.png',
             href: 'https://protocol.ai/',
@@ -54,6 +54,12 @@ export const FILECOIN_DEV_SUMMIT_2023_PAGE_CONTENT = [
           {
             src: 'https://i.ibb.co/Dt6G116/logo-black-text.png',
             href: 'https://web3mine.io/',
+          },
+        ],
+        logosMedium: [
+          {
+            src: '/media/greaterheat.png',
+            href: 'https://www.greaterheat.com/',
           },
         ],
       },

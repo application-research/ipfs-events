@@ -94,7 +94,25 @@ export const EVENT_PAGE_CONTENT = [
         id: 'participating-teams',
         type: BlockTypeEnum.LOGO_GRID,
         text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut ultrices dui. Aenean dapibus elit ac turpis laoreet posuere. Phasellus iaculis nibh eu quam accumsan, sit amet tincidunt risus dignissim.',
-        logos: [
+        logosLarge: [
+          {
+            src: '/media/evp.png',
+            href: null,
+          },
+          {
+            src: '/media/protocollabs.png',
+            href: null,
+          },
+          {
+            src: '/media/evp.png',
+            href: null,
+          },
+          {
+            src: '/media/protocollabs.png',
+            href: null,
+          },
+        ],
+        logosMedium: [
           {
             src: '/media/evp.png',
             href: null,
