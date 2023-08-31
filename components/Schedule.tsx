@@ -76,22 +76,26 @@ export default function Schedule({ calendarData }) {
                 </div>
 
                 {Array.isArray(tracksForDate) &&
-                  tracksForDate.map((track, trackIndex) => {
+                  tracksForDate?.map((track, trackIndex) => {
                     const trackDetails = track.trackDetails;
                     const records = track.records;
-                    const { title, firstName, roomName, time, capacity, trackDates } = trackDetails ?? null;
+                    if (trackDetails) {
+                      const { title, firstName, roomName, time, capacity } = trackDetails ?? '';
 
-                    return (
-                      <div className={styles.eventBox} key={trackIndex} onClick={() => handleEventClick({ ...trackDetails, records })} onScroll={handleScroll}>
-                        {title && <p className={styles.eventName}>{title}</p>}
-                        <div className={styles.eventDetails}>
-                          {time && <p className={styles.time}>{time}</p>}
-                          {roomName && <p className={styles.location}>{roomName}</p>}
-                          {firstName && <p className={styles.speakers}> {firstName}</p>}
-                          <p className={styles.people}>👤 {capacity ?? '50 seats'}</p>
+                      return (
+                        <div className={styles.eventBox} key={trackIndex} onClick={() => handleEventClick({ ...trackDetails, records })} onScroll={handleScroll}>
+                          {title && <p className={styles.eventName}>{title}</p>}
+                          <div className={styles.eventDetails}>
+                            {time && <p className={styles.time}>{time}</p>}
+                            {roomName && <p className={styles.location}>{roomName}</p>}
+                            {firstName && <p className={styles.speakers}> {firstName}</p>}
+                            <p className={styles.people}>👤 {capacity ?? '50 seats'}</p>
+                          </div>
                         </div>
-                      </div>
-                    );
+                      );
+                    } else {
+                      return <></>;
+                    }
                   })}
               </div>
             );
