@@ -202,35 +202,29 @@ export function getFormattedAirtableFields(formattedAirtableData): any {
       if (trackDate) {
         const formattedDate = formatUTCDateString(trackDate);
 
-        switch (formattedRecord.type) {
-          case 'Track':
-            if (!groupedData.hasOwnProperty(formattedDate)) {
-              groupedData[formattedDate] = [];
-            }
+        if (formattedRecord.type === 'Track') {
+          if (!groupedData.hasOwnProperty(formattedDate)) {
+            groupedData[formattedDate] = [];
+          }
 
-            let existingTrack = groupedData[formattedDate].find((trackData) => trackData.trackDetails.id === formattedRecord.id);
+          let existingTrack = groupedData[formattedDate].find((trackData) => trackData.trackDetails.id === formattedRecord.id);
 
-            if (!existingTrack) {
-              const trackDetailsForTrack = getTrackDetails(formattedAirtableData, formattedRecord.title);
+          if (!existingTrack) {
+            const trackDetailsForTrack = getTrackDetails(formattedAirtableData, formattedRecord.title);
 
-              existingTrack = {
-                title: formattedRecord.title,
-                trackDetails: trackDetailsForTrack[formattedRecord.id],
-                records: [],
-              };
-              groupedData[formattedDate].push(existingTrack);
-            }
+            existingTrack = {
+              title: formattedRecord.title,
+              trackDetails: trackDetailsForTrack[formattedRecord.id],
+              records: [],
+            };
+            groupedData[formattedDate].push(existingTrack);
+          }
+        } else if (formattedRecord.type === 'Talk') {
+          // Save 'Talk' records for processing later
 
-            break;
-
-          case 'Talk':
-            // Save 'Talk' records for processing later
-            talkRecords.push(formattedRecord);
-            break;
-
-          default:
-            // Handle other types if necessary
-            break;
+          talkRecords.push(formattedRecord);
+        } else {
+          return;
         }
       }
     });
@@ -243,9 +237,14 @@ export function getFormattedAirtableFields(formattedAirtableData): any {
     trackDatesForTalk.forEach((trackDateForTalk) => {
       if (trackDateForTalk) {
         const formattedDateForTalk = formatUTCDateString(trackDateForTalk);
+
         // NOTE(jim):
         // Hotfixes mising array.
         if (!talk.tracks) {
+          return;
+        }
+
+        if (!Array.isArray(talk.tracks) || talk.tracks.length === 0) {
           return;
         }
 
@@ -277,7 +276,7 @@ export function getFormattedAirtableFields(formattedAirtableData): any {
 
 function sortTracksByOrder(groupedData) {
   for (const dateKey in groupedData) {
-    groupedData[dateKey].sort((a, b) => (a.trackDetails.order || 0) - (b.trackDetails.order || 0));
+    groupedData[dateKey].sort((a, b) => (a?.trackDetails?.order ?? 0) - (b?.trackDetails?.order ?? 0));
   }
 }
 
