@@ -16,8 +16,8 @@ if (!IS_PRODUCTION) {
 }
 
 export default function ScheduleSingapore({ scheduleData }) {
-  const [singaporeData, setSingaporeData] = useState(null);
-  const [speakers, setSpeakers] = useState([]);
+  const [singaporeData, setSingaporeData] = useState<any[] | null>([]);
+  const [speakers, setSpeakers] = useState<any[]>([]);
 
   useEffect(() => {
     if (scheduleData?.airtable?.tableName) {

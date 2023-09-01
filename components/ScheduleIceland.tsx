@@ -16,8 +16,8 @@ if (!IS_PRODUCTION) {
 }
 
 export default function ScheduleIceland({ scheduleData }) {
-  const [icelandData, setIcelandData] = useState(null);
-  const [speakers, setSpeakers] = useState([]);
+  const [icelandData, setIcelandData] = useState<any[] | null>(null);
+  const [speakers, setSpeakers] = useState<any[]>([]);
 
   useEffect(() => {
     if (scheduleData?.airtable?.tableName) {
