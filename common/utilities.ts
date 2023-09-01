@@ -43,6 +43,21 @@ export function formatUTCDateString(data: string | number | Date): string {
   return formattedDate;
 }
 
+export function formatUTCTime(data: string | number | Date): string {
+  // Initialize a moment.js library object
+  const time = moment.utc(data);
+
+  // Check if the time is valid
+  if (!time.isValid()) {
+    console.error('Invalid Date:', data);
+    return '';
+  }
+
+  // Format the time
+  const formattedTime = time.format('h:mm a');
+  return formattedTime;
+}
+
 export function toDateISOStrinWithTimezone(data, timezone) {
   const timeZone = timezone;
   const date = new Date(data);

@@ -1,5 +1,5 @@
 import { ScheduleStatusEnum, TrackOrTalkEnum } from '@root/common/types';
-import { formatUTCDateString } from '@root/common/utilities';
+import { formatUTCDateString, formatUTCTime } from '@root/common/utilities';
 import moment from 'moment';
 
 export const airtableFormattedFieldsMap = {
@@ -138,7 +138,7 @@ export function formatAirtableMetaData({ records, timezone }) {
   });
 
   // Filter out Talks or Tracks with status that is not confirmed or accepted
-  const acceptedRecords = formattedRecords.filter((record) => {
+  const acceptedRecords = formattedRecords?.filter((record) => {
     if (record.type === TrackOrTalkEnum.TRACK) {
       return record.trackStatus === ScheduleStatusEnum.CONFIRMED;
     } else if (record.type === TrackOrTalkEnum.TALK) {
@@ -149,7 +149,27 @@ export function formatAirtableMetaData({ records, timezone }) {
     }
   });
 
-  return acceptedRecords;
+  const sortedTalksByStartTime = [...acceptedRecords]?.sort((a, b) => {
+    if (a.startTime && b.startTime) {
+      return new Date(a.startTime).getTime() - new Date(b.startTime).getTime();
+    }
+
+    if (a.startTime) return -1; //a is ordered before b
+    if (b.startTime) return 1; //b is ordered before a
+
+    return 0; //if neither have a startTime then they are equal
+  });
+
+  const formattedTalks = sortedTalksByStartTime?.map((record) => {
+    if (record?.startTime != null) {
+      const formattedStartTime = formatUTCTime(record.startTime);
+      return { ...record, startTime: formattedStartTime };
+    } else {
+      return record;
+    }
+  });
+
+  return formattedTalks;
 }
 
 export function getTrackDetails(formattedAirtableData, trackSelected) {

@@ -190,7 +190,7 @@ export function SchedulePopUp({ selectedEvent, isOpen, onClose, style }) {
                 {sortedTalks && <h4 style={{ paddingBottom: '1rem' }}>Schedule</h4>}
                 {sortedTalks && (
                   <div className={` ${styles.tableHeader}`}>
-                    {/* <h4 className={`${styles.col1} ${styles.headerTitle}`}>Time</h4> */}
+                    <h4 className={`${styles.col1} ${styles.headerTitle}`}>Time</h4>
                     <h4 className={`${styles.col2} ${styles.headerTitle}`}>Speakers</h4>
                     <h4 className={`${styles.col4} ${styles.headerTitle}`}>Info</h4>
                   </div>
@@ -198,13 +198,13 @@ export function SchedulePopUp({ selectedEvent, isOpen, onClose, style }) {
 
                 {sortedTalks &&
                   sortedTalks.map((talk, index) => {
-                    const { desc, firstName, lastName, videoLink, talkDuration, title } = talk;
+                    const { desc, firstName, lastName, startTime, videoLink, talkDuration, title } = talk ?? null;
                     const isLastIndex = index === sortedTalks.length - 1;
                     return (
                       <div className={styles.tableRow} style={{ borderBottom: isLastIndex ? 'none' : '1px solid var(--color-gray-transparent200)' }} key={index}>
-                        {/* <h4 className={styles.col1}> {talkDuration ? talkDuration : ''} </h4> */}
+                        <h4 className={`${styles.col1}`}> {startTime ? startTime : '─'}</h4>
 
-                        <p className={`${styles.col1} ${styles.people}`}>{firstName ? `${firstName}` : ''}</p>
+                        <p className={`${styles.col2} ${styles.people}`}>{firstName ? `${firstName}` : ''}</p>
                         <div className={styles.col4}>
                           <div className={styles.flexCol}>
                             {title && <h4>{title ? title : ''}</h4>}
