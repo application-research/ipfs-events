@@ -24,7 +24,7 @@ export default function SectionCamppage({ upcomingEvents }) {
                 </div>
               </div>
             </div>
-            <div className={styles.squiggleContainer}>
+            <div className={styles.topSquiggleContainer}>
                 <svg xmlns="http://www.w3.org/2000/svg" width="400" height="200" viewBox="0 0 564 457" fill="none">
                 <path 
                     d="M120.782 32.3641C120.782 32.3641 1.58132 63 40.1581 119.934C78.7345 176.868 422.805 132.753 447.428 218.508C459.666 261.127 410.739 275.773 364.08 289.127C316.63 302.709 273.007 352.037 295.73 390.707C340.904 467.586 466.655 329.914 531.557 424.09" 
@@ -48,7 +48,7 @@ export default function SectionCamppage({ upcomingEvents }) {
           <div className={styles.mediaContainer}>
             <VideoPlayer src={'/media/ipfs-thing-2023.mp4'} autoPlay muted ariaLabel="video" ratio={Ratio.TWENTY_ONE_BY_NINE} />
           </div>
-          <div className={styles.squiggleContainer}>
+          <div className={styles.videoSquiggleContainer}>
               <svg xmlns="http://www.w3.org/2000/svg" width="400" height="200" viewBox="0 0 564 457" fill="none">
               <path 
                   d="M120.782 32.3641C120.782 32.3641 1.58132 63 40.1581 119.934C78.7345 176.868 422.805 132.753 447.428 218.508C459.666 261.127 410.739 275.773 364.08 289.127C316.63 302.709 273.007 352.037 295.73 390.707C340.904 467.586 466.655 329.914 531.557 424.09" 
@@ -66,57 +66,54 @@ export default function SectionCamppage({ upcomingEvents }) {
               </svg>
           </div>
         </section>
-
-        <h3 className={styles.centeredSectionTitle}>
+        <h1 className={styles.centeredSectionTitle}>
               Get Involved
-        </h3>
+        </h1>
         <div className={styles.getInvolvedColumns}>
           <div className={styles.involvementColumn}>
             <div className={styles.rainbowBorderWrapper}>
               <div className={styles.involvementContent}>
-                Test Content
+                <h4>Become a Speaker</h4>
               </div>
             </div>
             <div className={styles.rainbowBorderWrapper}>
               <div className={styles.involvementContent}>
-                Test Content
-              </div>
-            </div>
-          </div>
-          <div className={styles.involvementColumn}>
-            <div className={styles.rainbowBorderWrapper}>
-              <div className={styles.involvementContent}>
-                Test Content
-              </div>
-            </div>
-            <div className={styles.rainbowBorderWrapper}>
-              <div className={styles.involvementContent}>
-                Test Content
+                <h4>Lead a Track/Talk</h4>
               </div>
             </div>
           </div>
           <div className={styles.involvementColumn}>
             <div className={styles.rainbowBorderWrapper}>
               <div className={styles.involvementContent}>
-                Test Content
+                <h4>Apply to be a Scholar</h4>
               </div>
             </div>
             <div className={styles.rainbowBorderWrapper}>
               <div className={styles.involvementContent}>
-                Test Content
+                <h4>Apply for Expo Space</h4>
+              </div>
+            </div>
+          </div>
+          <div className={styles.involvementColumn}>
+            <div className={styles.rainbowBorderWrapper}>
+              <div className={styles.involvementContent}>
+                <h4>Become a Key Organizer</h4>
+              </div>
+            </div>
+            <div className={styles.rainbowBorderWrapper}>
+              <div className={styles.involvementContent}>
+                <h4>Volunteer</h4>
               </div>
             </div>
           </div>
         </div>
 
-        <h3 className={styles.sectionTitle}>
+        <h1 className={styles.sectionTitle}>
             Past Camp Events
-        </h3>
+        </h1>
         <section className={styles.campEvents}>
-          
           {/* Impact section */}
         </section>
-        {/* FAQ */}
         <section className={styles.faqSection}>
           <h1 className={styles.sectionTitle} style={{ paddingBottom: '2rem' }}>
             FAQs

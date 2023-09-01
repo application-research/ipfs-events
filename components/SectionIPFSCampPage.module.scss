@@ -101,11 +101,31 @@
   }
 }
 
+.mediaContainer, .videoSquiggleContainer {
+  position: relative;
+}
+
 .mediaContainer {
   display: flex;
   flex-direction: row wrap;
   width: 100%;
   gap: 1rem;
+  z-index: 2;
+}
+
+.squiggleContainer {
+  z-index: 1;
+}
+
+.videoSquiggleContainer {
+  z-index: 1;
+  top: 110%;
+  left: 0;
+  position: absolute;
+}
+
+.topSquiggleContainer {
+  z-index: 1;
 }
 
 .image {
@@ -185,21 +205,16 @@
     color: #ffffff;
     border-radius: 10px;
     display: flex; 
-    justify-content: space-between;
+    align-items: center;
+    justify-content: center;
     width: 100%;
     height: 100%;
     padding: 2rem;
     font-family: Inter;
 
-    position: relative;
-
     p {
       margin: 0;
       flex: 1;
-    }
-
-    .plus-symbol {
-      margin-left: auto; 
     }
   }
 }
