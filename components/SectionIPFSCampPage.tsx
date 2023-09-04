@@ -4,10 +4,12 @@ import { Ratio } from '@root/common/types';
 import { VideoPlayer } from './VideoPlayer';
 import Link from './Link';
 import React from 'react';
+import GutterContainer from '@root/components/GutterContainer';
 
 export default function SectionCamppage({ upcomingEvents }) {
   return (
     <div className={styles.pageContainer}>
+      <GutterContainer>
       <div style={{ display: 'grid', rowGap: '8rem', marginTop: '2.5rem', background: 'var(--black)' }}>
         <section>
           <img src="/media/ipfs-camp-2024.png" alt="IPFS Camp 2024" className={styles.imageClass} />
@@ -179,14 +181,15 @@ export default function SectionCamppage({ upcomingEvents }) {
             </div>
           </div>
         </section>
-        <section className={styles.campYearbookSection}>
+      </div>
+      </GutterContainer>
+      <section className={styles.campYearbookSection}>
           <div className={styles.yearbookTitle}>Camp Yearbook</div>
           <div className={styles.buttonsContainer}>
             <button className={styles.yearButton}>Camp 2022</button>
             <button className={styles.yearButton}>Camp 2019</button>
           </div>
         </section>
-      </div>
     </div>
   );
 }
