@@ -109,26 +109,43 @@ export default function SectionCamppage({ upcomingEvents }) {
             </div>
           </div>
         </div>
-
-        <h1 className={styles.sectionTitle}>
+        <div className={styles.headerWrapper}>
+          <h1 className={styles.sectionTitle}>
             Past Camp Events
-        </h1>
-        <section className={styles.campEvents}>
-        <div className={styles.statsColumn}>
-          <h2>
-            <span className={styles.rainbowText}>17 tracks</span>
-          </h2>
-
-          <h2 className={styles.rainbowText}>100+ Speakers</h2>
-          <h2 className={styles.rainbowText}>5400 Participants</h2>
-          {/* Add more stats here */}
+          </h1>
+          <div className={styles.imageAndTextWrapper}>
+            <img src="/media/ipfs-camp-2024.png" alt="Image 1" />
+            <div className={styles.impactText}>
+              2022 Impact
+            </div>
+          </div>
         </div>
-        <div className={styles.imageColumn}>
-          <img src="/media/ipfs-camp-2024.png" alt="Image 1" />
-          <h4 className={styles.rainbowText}>34 IPFS Scholars</h4>
-          <h4 className={styles.rainbowText}>30 Countries</h4>
-          <h4 className={styles.rainbowText}>20 Volunteers</h4>
-          {/* Add more images here */}
+        <section className={styles.campEvents}>
+        <div className={styles.statsColumnLeft}>
+          <div className={styles.lineOne}>
+            <h2>
+              <span className={styles.greaterRainbowText}>17 </span> <span className={styles.whiteText}>Tracks</span>
+            </h2>
+            <h2> 
+              <span className={styles.greaterRainbowText}>100+ </span> <span className={styles.whiteText}>Speakers</span>
+            </h2>
+          </div>
+          <div className={styles.lineTwo}>
+            <h2> 
+              <span className={styles.greaterRainbowText}>5400 </span> <span className={styles.whiteText}>Participants</span>
+            </h2>
+          </div>
+        </div>
+        <div className={styles.statsColumnRight}>
+          <h4>
+            <span className={styles.lesserRainbowText}>34 </span> <span className={styles.whiteText}>IPFS Scholars</span>
+          </h4>
+          <h4>
+            <span className={styles.lesserRainbowText}>30 </span> <span className={styles.whiteText}>Countries</span>
+          </h4>
+          <h4>
+            <span className={styles.lesserRainbowText}>20 </span> <span className={styles.whiteText}>Volunteers</span>
+          </h4>
         </div>
         </section>
         <section className={styles.faqSection}>
