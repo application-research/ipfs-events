@@ -8,7 +8,7 @@ import React from 'react';
 export default function SectionCamppage({ upcomingEvents }) {
   return (
     <div className={styles.pageContainer}>
-      <div style={{ display: 'grid', rowGap: '8rem', marginTop: '2.5rem', background: 'var(--transparent)' }}>
+      <div style={{ display: 'grid', rowGap: '8rem', marginTop: '2.5rem', background: 'var(--black)' }}>
         <section>
           <img src="/media/ipfs-camp-2024.png" alt="IPFS Camp 2024" className={styles.imageClass} />
           <header className={styles.header} style={{ paddingBottom: '4rem' }}>
@@ -112,7 +112,19 @@ export default function SectionCamppage({ upcomingEvents }) {
             Past Camp Events
         </h1>
         <section className={styles.campEvents}>
-          {/* Impact section */}
+        <div className={styles.statsColumn}>
+          <h2 className={styles.rainbowText}>17 Tracks</h2>
+          <h2 className={styles.rainbowText}>100+ Speakers</h2>
+          <h2 className={styles.rainbowText}>5400 Participants</h2>
+          {/* Add more stats here */}
+        </div>
+        <div className={styles.imageColumn}>
+          <img src="/media/ipfs-camp-2024.png" alt="Image 1" />
+          <h4 className={styles.rainbowText}>34 IPFS Scholars</h4>
+          <h4 className={styles.rainbowText}>30 Countries</h4>
+          <h4 className={styles.rainbowText}>20 Volunteers</h4>
+          {/* Add more images here */}
+        </div>
         </section>
         <section className={styles.faqSection}>
           <h1 className={styles.sectionTitle} style={{ paddingBottom: '2rem' }}>
@@ -165,6 +177,13 @@ export default function SectionCamppage({ upcomingEvents }) {
                 </div>
               </div>
             </div>
+          </div>
+        </section>
+        <section className={styles.campYearbookSection}>
+          <div className={styles.yearbookTitle}>Camp Yearbook</div>
+          <div className={styles.buttonsContainer}>
+            <button className={styles.yearButton}>Camp 2022</button>
+            <button className={styles.yearButton}>Camp 2019</button>
           </div>
         </section>
       </div>

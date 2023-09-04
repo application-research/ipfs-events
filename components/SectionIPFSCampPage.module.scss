@@ -168,9 +168,35 @@
 
 .campEvents { 
   display: flex;
-  flex-direction: column;
-  gap: 2rem;
-  width: 100%;
+  justify-content: space-between;
+  .rainbowText {
+    font-size: 3rem;
+    background-image: linear-gradient(to bottom, #E01633 25%, #CDB235, #4FD3CD 70%, #0098C9 90%);
+    -webkit-background-clip: text;
+    color: transparent;
+  }
+  
+  .statsColumn {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+  }
+
+  .imageColumn {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+    margin-left: 20%;
+
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+  }
 }
 
 .sectionTitle {
@@ -219,41 +245,85 @@
   }
 }
 
-.faqColumns {
-  display: flex;
-  justify-content: space-between;
+.faqSection {
+  .faqColumns {
+    display: flex;
+    justify-content: space-between;
+  
+    .faqLeft,
+    .faqRight {
+      flex: 1;
+      margin: 0 1rem;
+  
+      .faqBorderWrapper {
+        margin-bottom: 1rem;
+        width: 100%;
+        margin: 1rem 0;
+      }
+  
+      .faqContent {
+        background: linear-gradient(to left, #E01633, #CDB235, #4FD3CD, #0098C9);
+        border-radius: 10px;
+        display: flex; 
+        justify-content: space-between;
+        width: 100%;
+        height: 100%;
+        padding: 2rem;
+        font-family: Inter;
+  
+        position: relative;
+  
+        p {
+          margin: 0;
+          flex: 1;
+        }
+  
+        .plus-symbol {
+          margin-left: auto; 
+        }
+      }
+    }
+  }
+}
 
-  .faqLeft,
-  .faqRight {
-    flex: 1;
-    margin: 0 1rem;
+.campYearbookSection {
+  background: linear-gradient(to left, #E01633, #CDB235, #4FD3CD, #0098C9);
+  text-align: center;
+  margin: 0;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0;
+  padding-bottom: 5rem;
 
-    .faqBorderWrapper {
-      margin-bottom: 1rem;
-      width: 100%;
-      margin: 1rem 0;
+    .yearbookTitle{
+      color: #000;
+      padding: 5rem 0;
+      font-size: 2rem;
+      font-family: Inter;
     }
 
-    .faqContent {
-      background: linear-gradient(to left, #E01633, #CDB235, #4FD3CD, #0098C9);
-      border-radius: 10px;
-      display: flex; 
-      justify-content: space-between;
+    .buttonsContainer {
+      display: flex;
+      flex-direction: row;
+      gap: 5rem;
       width: 100%;
-      height: 100%;
-      padding: 2rem;
-      font-family: Inter;
+      justify-content: center;
+    }
 
-      position: relative;
+    .yearButton {
+      background-color: #000;
+      border: none;
+      border-radius: 50px;
+      color: white;
+      padding: 10px 20px;
+      font-size: 1rem;
+      padding: 20px 80px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
 
-      p {
-        margin: 0;
-        flex: 1;
-      }
-
-      .plus-symbol {
-        margin-left: auto; 
-      }
+    &:hover {
+      background-color: #333;
     }
   }
 }
