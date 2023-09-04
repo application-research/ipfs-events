@@ -115,7 +115,10 @@ export default function SectionCamppage({ upcomingEvents }) {
         </h1>
         <section className={styles.campEvents}>
         <div className={styles.statsColumn}>
-          <h2 className={styles.rainbowText}>17 Tracks</h2>
+          <h2>
+            <span className={styles.rainbowText}>17 tracks</span>
+          </h2>
+
           <h2 className={styles.rainbowText}>100+ Speakers</h2>
           <h2 className={styles.rainbowText}>5400 Participants</h2>
           {/* Add more stats here */}
