@@ -35,6 +35,10 @@
   }
 }
 
+.pageContainer {
+  background: linear-gradient(to bottom, #022232 0%, #000000 20%);
+}
+
 .rainbowBorderWrapper {
   background: linear-gradient(to left, #E01633, #CDB235, #4FD3CD, #0098C9);
   border-radius: 12px;
@@ -249,6 +253,7 @@
   .faqColumns {
     display: flex;
     justify-content: space-between;
+    margin-bottom: 10rem;
   
     .faqLeft,
     .faqRight {

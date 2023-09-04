@@ -10,9 +10,9 @@ export default function SectionCamppage({ upcomingEvents }) {
   return (
     <div className={styles.pageContainer}>
       <GutterContainer>
-      <div style={{ display: 'grid', rowGap: '8rem', marginTop: '2.5rem', background: 'var(--black)' }}>
+      <div style={{ display: 'grid', rowGap: '8rem' }}>
         <section>
-          <img src="/media/ipfs-camp-2024.png" alt="IPFS Camp 2024" className={styles.imageClass} />
+          <img src="/media/ipfs-camp-2024.png" alt="IPFS Camp 2024" className={styles.imageClass} style={{ paddingBottom: '2rem' }}/>
           <header className={styles.header} style={{ paddingBottom: '4rem' }}>
             <div className={styles.headerText}>
               <h3 className={styles.h3}>IPFS is more than just a ‘conference’; it’s a global movement of builders and visionaries committed to creating a better web. </h3>

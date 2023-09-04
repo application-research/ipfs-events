@@ -15,6 +15,7 @@ export const NAVIGATION_ITEMS_CONTENT = [
   ];
   
   export const NAVIGATION_HOMEPAGE_CONTENT = {
+    backgroundColor: 'var(--color-blueblack)',
     logo: { src: '/media/colored-logo.png' },
     navItems: [
       {

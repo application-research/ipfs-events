@@ -14,7 +14,7 @@ export default async function Page(props) {
   const navContent = NAVIGATION_HOMEPAGE_CONTENT;
 
   return (
-    <DefaultLayout props={{ background: 'var(--color-black-fade)' }}>
+    <DefaultLayout>
       <CampNavbarLogoMiddle navContent={navContent} />
 
       <SectionCamppage {...homepage} />

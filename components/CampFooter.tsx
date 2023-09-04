@@ -14,7 +14,7 @@ export default function CampFooter({ disclaimer, filResourcesCard, contactUsCard
   const isMobile = breakpoint === BreakpointEnum.XS;
 
   return (
-    <div className={styles.footerBody}>
+    <div className={styles.footerBody} style={{ background: 'var(--color-rainbow)' }}>
       <div className={styles.sectionFooter}>
         <div className={styles.siteFooter}>
           <div className={styles.gridEqualHeight}>
