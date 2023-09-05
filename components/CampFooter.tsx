@@ -29,6 +29,7 @@ export default function CampFooter({ disclaimer, filResourcesCard, contactUsCard
           <div style={{ flex: 1, display: 'flex', justifyContent: 'flex-end', alignItems: 'center' }}>
             <div className={styles.heading} style={{ margin: '0 15px' }}>IPFS Camp</div>
             <div className={styles.heading} style={{ margin: '0 15px' }}>IPFS Thing</div>
+            <div className={styles.heading} style={{ margin: '0 15px' }}>IPFS Cafe</div>
             <div className={styles.heading} style={{ margin: '0 15px' }}>Calendar</div>
           </div>
         </div>
