@@ -133,6 +133,10 @@ export const FILECOIN_DEV_SUMMIT_2023_PAGE_CONTENT = [
             src: 'https://miro.medium.com/v2/resize:fit:2400/1*yjx1hYS0aLMntv_IQjIyyw.png',
             href: 'https://www.glif.io/',
           },
+          {
+            src: 'https://i.ibb.co/JrQzymQ/Fil-Fi-logo.jpg',
+            href: 'https://filfi.io/',
+          },
         ],
       },
     ],
