@@ -125,6 +125,7 @@ section {
 html,
 body {
   scroll-behavior: smooth;
+  --color-transparent: rgba(0, 0, 0, 0);
 
   --color-white: #ffffff;
   --color-white200: #f3fbff;
@@ -134,6 +135,9 @@ body {
 
   --color-black: #000000;
   --color-black200: #202020;
+  --color-blueblack: #022232;
+  --color-black-fade: linear-gradient(to bottom, #022232 0%, #000000 20%);
+  --color-rainbow: linear-gradient(to left, #E01633, #CDB235, #4FD3CD, #0098C9);
 
   --color-gray: #848383;
 

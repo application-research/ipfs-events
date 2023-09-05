@@ -1,12 +1,12 @@
 'use client';
-import styles from '@components/NavbarLogoMiddle.module.scss';
+import styles from '@components/CampNavbarLogoMiddle.module.scss';
 
 import ArrowSVG from './svgs/ArrowBoldSVG';
 import GutterContainer from './GutterContainer';
 import Link from './Link';
-import ArrowSVGStyleTwo from './svgs/ArrowBoldSVG';
+import ArrowSVGStyleTwo from './svgs/ArrowBoldWhiteSVG';
 
-export default function NavbarLogoMiddle({ navContent }) {
+export default function CampNavbarLogoMiddle({ navContent }) {
   const { navItems } = navContent;
   const middleIndex = Math.floor(navItems.length / 2);
   const leftSide = navItems.slice(0, middleIndex);
@@ -30,7 +30,7 @@ export default function NavbarLogoMiddle({ navContent }) {
                       <section className={styles.dropdownContainer}>
                         <div className={`${styles.container}`} style={{ gap: '1rem' }}>
                           <Link style="animated" href={item?.link ?? ''}>
-                            <p>{item.title}</p>
+                            <p className={styles.whiteText}>{item.title}</p>
                           </Link>
 
                           <ArrowSVGStyleTwo className={styles.arrow} />
@@ -51,7 +51,7 @@ export default function NavbarLogoMiddle({ navContent }) {
                   <div key={index}>
                     {!item.dropdown && (
                       <Link style="animated" href={item.link} target={item?.target ?? '_self'}>
-                        <p>{item.title}</p>
+                        <p className={styles.whiteText}>{item.title}</p>
                       </Link>
                     )}
                     {item?.dropdown && (

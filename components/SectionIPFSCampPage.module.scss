@@ -1,0 +1,436 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  width: 100%;
+  gap: 2rem;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
+}
+
+.headerText {
+  display: grid;
+  row-gap: 1rem;
+  width: 55%;
+  color: #ffffff;
+
+  @media (max-width: 768px) {
+    width: 100%;
+  }
+}
+
+.headerWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; 
+  margin-bottom: 0;
+
+  .imageAndTextWrapper {
+    display: flex;
+    align-items: center;
+
+    img {
+      height: auto;
+      width: auto;
+      // Set height or width as needed
+    }
+
+    .impactText {
+      color: #ffffff;
+      margin-left: 16px; // You can adjust this value
+      font-size: 16px;   // And this one too
+    }
+  }
+}
+
+.videoTitle {
+  display: grid;
+  row-gap: 1rem;
+  width: 100%;
+  height: 10%;
+  color: #ffffff;
+  justify-content: center;
+  align-items: center;
+
+  @media (max-width: 768px) {
+    width: 100%;
+  }
+}
+
+.pageContainer {
+  background: linear-gradient(to bottom, #022232 0%, #000000 20%);
+}
+
+.rainbowBorderWrapper {
+  background: linear-gradient(to left, #E01633, #CDB235, #4FD3CD, #0098C9);
+  border-radius: 12px;
+  padding: 2px;
+  display: inline-block;
+  margin-bottom: 2rem;
+}
+
+.innerContent {
+  background: black;
+  border-radius: 10px;
+  display: flex; 
+  justify-content: space-between;
+  width: 100%;
+  height: 100%;
+  font-family: Inter;
+}
+
+.diptychHalf{
+  flex: 1;
+  padding: 20px;
+  text-align: center;
+  border-right: 1px solid #ccc;
+}
+
+.diptychHalf:last-child{
+  border-right: 0;
+}
+
+.button {
+  background: var(--color-text);
+  border-bottom: none;
+  border-radius: var(--border-radius-tiny);
+  font-size: 1rem;
+  color: var(--color-white);
+  padding: 1rem;
+  text-decoration: none;
+  cursor: pointer;
+  border: none;
+
+  &:hover {
+    background: var(--color-black200);
+  }
+}
+
+.col40 {
+  width: 40%;
+}
+
+.col50 {
+  width: 50%;
+}
+
+.buttonContainer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  width: 30%;
+
+  @media (max-width: 768px) {
+    width: 100%;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+}
+
+.mediaContainer, .videoSquiggleContainer {
+  position: relative;
+}
+
+.mediaContainer {
+  display: flex;
+  flex-direction: row wrap;
+  width: 100%;
+  gap: 1rem;
+  z-index: 2;
+}
+
+.squiggleContainer {
+  z-index: 1;
+}
+
+.videoSquiggleContainer {
+  z-index: 1;
+  top: 110%;
+  left: 0;
+  position: absolute;
+}
+
+.topSquiggleContainer {
+  z-index: 1;
+}
+
+.image {
+  border-radius: var(--border-radius-small);
+  cursor: pointer;
+  width: 100%;
+  height: 18rem;
+  object-fit: cover;
+}
+
+.grid4cols {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  width: 100%;
+  gap: 1rem;
+
+  @media (max-width: 1032px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (max-width: 768px) {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+.flexContainer {
+  display: flex;
+  gap: 2rem;
+}
+
+.h4 {
+  font-size: var(--font-size-medium);
+  font-weight: 400;
+  max-width: 50ch;
+}
+
+.p {
+  font-size: var(--font-size-regular);
+}
+
+.campEvents { 
+  display: flex;
+  justify-content: space-between;
+
+  .greaterRainbowText {
+    font-size: 5rem;
+    background-image: linear-gradient(to bottom, #E01633 25%, #CDB235, #4FD3CD 70%, #0098C9 90%);
+    -webkit-background-clip: text;
+    color: transparent;
+  }
+
+  .lesserRainbowText {
+    font-size: 2rem;
+    background-image: linear-gradient(to bottom, #E01633 25%, #CDB235, #4FD3CD 70%, #0098C9 90%);
+    -webkit-background-clip: text;
+    color: transparent;
+  }
+
+  .whiteText {
+    font-size: 2rem;
+    color: white;
+  }
+  
+  .statsColumnLeft {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+
+    .lineOne {
+      display: flex;
+      justify-content: space-between;
+      gap: 10rem;
+      margin-bottom: 5rem;
+      white-space: nowrap;
+    }
+    
+    .lineTwo {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: flex-start;
+      gap: 1rem;
+    }
+  }
+
+  .statsColumnRight {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-left: 20%;
+  }
+}
+
+.sectionTitle {
+  color: #ffffff;
+  padding-left: 1rem;
+  padding-bottom: 1rem;
+}
+
+.centeredSectionTitle {
+  color: #ffffff;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  padding-bottom: 2rem;
+  justify-content: center;
+  text-align: center;
+}
+
+.getInvolvedColumns {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+
+  .involvementColumn {
+    flex: 1;
+    margin: 0 1rem;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .involvementContent {
+    background: black;
+    color: #ffffff;
+    border-radius: 10px;
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    padding: 2rem;
+    font-family: Inter;
+
+    p {
+      margin: 0;
+      flex: 1;
+    }
+  }
+}
+
+.faqSection {
+  .faqColumns {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10rem;
+  
+    .faqLeft,
+    .faqRight {
+      flex: 1;
+      margin: 0 1rem;
+  
+      .faqBorderWrapper {
+        margin-bottom: 1rem;
+        width: 100%;
+        margin: 1rem 0;
+      }
+  
+      .faqContent {
+        background: linear-gradient(to left, #E01633, #CDB235, #4FD3CD, #0098C9);
+        border-radius: 10px;
+        display: flex; 
+        justify-content: space-between;
+        width: 100%;
+        height: 100%;
+        padding: 2rem;
+        font-family: Inter;
+  
+        position: relative;
+  
+        p {
+          margin: 0;
+          flex: 1;
+        }
+  
+        .plus-symbol {
+          margin-left: auto; 
+        }
+      }
+    }
+  }
+}
+
+.campYearbookSection {
+  background: linear-gradient(to left, #E01633, #CDB235, #4FD3CD, #0098C9);
+  text-align: center;
+  margin: 0;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0;
+  padding-bottom: 5rem;
+
+    .yearbookTitle{
+      color: #000;
+      padding: 5rem 0;
+      font-size: 2rem;
+      font-family: Inter;
+    }
+
+    .buttonsContainer {
+      display: flex;
+      flex-direction: row;
+      gap: 5rem;
+      width: 100%;
+      justify-content: center;
+    }
+
+    .yearButton {
+      background-color: #000;
+      border: none;
+      border-radius: 50px;
+      color: white;
+      padding: 10px 20px;
+      font-size: 1rem;
+      padding: 20px 80px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+
+    &:hover {
+      background-color: #333;
+    }
+  }
+}
+
+.calander {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  width: 100%;
+}
+
+.mainTitle {
+  padding-bottom: 3rem;
+  border-bottom: 1px solid var(--color-text);
+}
+
+.containerOverImage {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 1rem;
+  background: var(--color-text);
+  height: 4.5rem;
+  color: var(--color-white);
+  padding: 1rem;
+  font-size: var(--font-size-small);
+  border-bottom-left-radius: var(--border-radius-small);
+  border-bottom-right-radius: var(--border-radius-small);
+  margin-top: -3rem;
+  position: relative;
+}
+
+.smallText {
+  font-size: var(--font-size-small);
+}
+
+.twoColumns {
+  display: flex;
+  flex-direction: row;
+  gap: 3rem;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    gap: 2rem;
+  }
+}
+
+.h3,
+.h1 {
+  font-family: Inter;
+}
+
+.h3 {
+  font-weight: var(--font-weight-regular);
+}
+  
