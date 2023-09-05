@@ -69,6 +69,10 @@ export const FILECOIN_DEV_SUMMIT_2023_PAGE_CONTENT = [
             src: 'https://i.ibb.co/JrQzymQ/Fil-Fi-logo.jpg',
             href: 'https://filfi.io/',
           },
+           {
+            src: 'https://i.ibb.co/LRgQZ5j/STFIL-Logo-white-background.png',
+            href: 'https://www.stfil.io/',
+          },
         ],
       },
     ],
