@@ -48,7 +48,7 @@ export default function SectionCamppage({ upcomingEvents }) {
               <h3 className={styles.h3}> IPFS Þing 2022 - Recap </h3>
           </div>
           <div className={styles.mediaContainer}>
-            <VideoPlayer src={'/media/ipfs-thing-2023.mp4'} autoPlay muted ariaLabel="video" ratio={Ratio.TWENTY_ONE_BY_NINE} />
+            <VideoPlayer src={'/media/ipfs-camp-2022.mp4'} autoPlay muted ariaLabel="video" ratio={Ratio.TWENTY_ONE_BY_NINE} />
           </div>
           <div className={styles.videoSquiggleContainer}>
               <svg xmlns="http://www.w3.org/2000/svg" width="400" height="200" viewBox="0 0 564 457" fill="none">
