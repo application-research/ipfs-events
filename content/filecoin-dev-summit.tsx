@@ -73,6 +73,9 @@ export const FILECOIN_DEV_SUMMIT_2023_PAGE_CONTENT = [
             src: 'https://www.minefi.io/images/logo.png',
             href: 'https://www.minefi.io/',
           },
+            {
+            src: 'https://i.ibb.co/JrZ6WNk/STFIL-Logo-white-background.png',
+            href: 'https://stfil.io/#/',
           },
         ],
       },
