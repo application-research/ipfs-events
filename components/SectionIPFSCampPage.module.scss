@@ -21,6 +21,18 @@
   }
 }
 
+.imageClass {
+  width: 15%;
+  height: 7.5%;
+  object-fit: cover;
+  border-radius: var(--border-radius-small);
+
+  @media (max-width: 768px) {
+    width: 15%;
+    height: 7.5%;
+  }
+}
+
 .headerWrapper {
   display: flex;
   align-items: center;
@@ -83,9 +95,35 @@
 
 .diptychHalf{
   flex: 1;
-  padding: 20px;
-  text-align: center;
+  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   border-right: 1px solid #ccc;
+
+  .centerTextContainer {
+    padding: 2rem 0;
+
+    .boldText {
+      font-weight: bold;
+      font-size: 1.2rem;
+      margin-bottom: 2px;
+      font-family: Inter;
+    }
+    
+    .newlineText {
+      display: block;
+      font-family: Inter;
+      text-align: left;
+    }
+  
+    .newlineBoldText {
+      display: block;
+      font-family: Inter;
+      text-align: left;
+      font-weight: bold;
+    }
+  }
 }
 
 .diptychHalf:last-child{
@@ -153,7 +191,9 @@
 }
 
 .topSquiggleContainer {
-  z-index: 1;
+  top: 20%;
+  left: 55%;
+  position: absolute;
 }
 
 .image {
@@ -332,7 +372,10 @@
         }
   
         .plus-symbol {
-          margin-left: auto; 
+          margin-left: auto;
+          font-size: 100rem;
+          font-weight: bold;
+          font-family: Inter;
         }
       }
     }

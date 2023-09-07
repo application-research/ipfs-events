@@ -6,6 +6,23 @@ import Link from './Link';
 import React from 'react';
 import GutterContainer from '@root/components/GutterContainer';
 
+/* TODOS:
+* Make IPFS camp image smaller
+* More gap between top bar and page
+* Fix squiggle on dropdown
+* Make dropdown dark
+* Fix mobile view
+* Make the container for the video same for the video itself (no black edging)
+* Make Get Involved same style as IPFS thing
+* Get involved is too far from its own section
+* Add button functionality (add hover - fade in full gradient (invert the white text))
+* Make things less floaty with a box around the stats section
+* "bold" the plus sign via. increasing float width
+* Work on the dropdown functionality
+* Footer capoff, export the black / white logo to use
+* Squiggles need to be larger & use them as design element
+*/
+
 export default function SectionCamppage({ upcomingEvents }) {
   return (
     <div className={styles.pageContainer}>
@@ -19,15 +36,23 @@ export default function SectionCamppage({ upcomingEvents }) {
               <p>Over the course of three days, we will host hundreds of talks, workshops, and hacking sessions, all focused on the latest advancements in decentralized technologies and the future of the internet. IPFS Camp provides the ideal platform to exchange ideas, collaborate, and co-create solutions for the real-world challenges that the web is currently facing.</p>
               <div className={styles.rainbowBorderWrapper}>
                 <div className={styles.innerContent}>
-                  <div className={styles.diptychHalf}>CAMP 2024 
-                  Tokyo, Japan</div>
-                  <div className={styles.diptychHalf}>October 10 - 20, 
-                  2024</div>
+                  <div className={styles.diptychHalf}>
+                    <div className={styles.centerTextContainer}>
+                      <span className={styles.boldText}>CAMP 2024</span>
+                      <span className={styles.newlineText}>Tokyo, Japan</span>
+                    </div>
+                  </div>
+                  <div className={styles.diptychHalf}>
+                    <div className={styles.centerTextContainer}>
+                      <span className={styles.boldText}>October 10 - 20,</span>
+                      <span className={styles.newlineBoldText}>2024</span>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
             <div className={styles.topSquiggleContainer}>
-                <svg xmlns="http://www.w3.org/2000/svg" width="400" height="200" viewBox="0 0 564 457" fill="none">
+                <svg xmlns="http://www.w3.org/2000/svg" width="600" height="400" viewBox="0 0 564 457" fill="none">
                 <path 
                     d="M120.782 32.3641C120.782 32.3641 1.58132 63 40.1581 119.934C78.7345 176.868 422.805 132.753 447.428 218.508C459.666 261.127 410.739 275.773 364.08 289.127C316.63 302.709 273.007 352.037 295.73 390.707C340.904 467.586 466.655 329.914 531.557 424.09" 
                     stroke="url(#paint0_linear_778_2)" 
@@ -51,7 +76,7 @@ export default function SectionCamppage({ upcomingEvents }) {
             <VideoPlayer src={'/media/ipfs-camp-2022.mp4'} autoPlay muted ariaLabel="video" ratio={Ratio.TWENTY_ONE_BY_NINE} />
           </div>
           <div className={styles.videoSquiggleContainer}>
-              <svg xmlns="http://www.w3.org/2000/svg" width="400" height="200" viewBox="0 0 564 457" fill="none">
+              <svg xmlns="http://www.w3.org/2000/svg" width="700" height="400" viewBox="0 0 564 457" fill="none">
               <path 
                   d="M120.782 32.3641C120.782 32.3641 1.58132 63 40.1581 119.934C78.7345 176.868 422.805 132.753 447.428 218.508C459.666 261.127 410.739 275.773 364.08 289.127C316.63 302.709 273.007 352.037 295.73 390.707C340.904 467.586 466.655 329.914 531.557 424.09" 
                   stroke="url(#paint0_linear_778_2)" 
