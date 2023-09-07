@@ -7,10 +7,6 @@ import React from 'react';
 import GutterContainer from '@root/components/GutterContainer';
 
 /* TODOS:
-* Make IPFS camp image smaller
-* More gap between top bar and page
-* Fix squiggle on dropdown
-* Make dropdown dark
 * Fix mobile view
 * Make the container for the video same for the video itself (no black edging)
 * Make Get Involved same style as IPFS thing
@@ -70,13 +66,13 @@ export default function SectionCamppage({ upcomingEvents }) {
             </div>
           </header>
           <div className={styles.videoTitle}>
-              <h3 className={styles.h3}> IPFS Þing 2022 - Recap </h3>
+              <h2 className={styles.centeredSectionTitle}> IPFS Þing 2022 - Recap </h2>
           </div>
           <div className={styles.mediaContainer}>
-            <VideoPlayer src={'/media/ipfs-camp-2022.mp4'} autoPlay muted ariaLabel="video" ratio={Ratio.TWENTY_ONE_BY_NINE} />
+            <VideoPlayer src={'/media/ipfs-camp-2022.mp4'} autoPlay muted ariaLabel="video" ratio={Ratio.SIXTEEN_BY_NINE} />
           </div>
           <div className={styles.videoSquiggleContainer}>
-              <svg xmlns="http://www.w3.org/2000/svg" width="700" height="400" viewBox="0 0 564 457" fill="none">
+              <svg xmlns="http://www.w3.org/2000/svg" width="800" height="500" viewBox="0 0 564 457" fill="none">
               <path 
                   d="M120.782 32.3641C120.782 32.3641 1.58132 63 40.1581 119.934C78.7345 176.868 422.805 132.753 447.428 218.508C459.666 261.127 410.739 275.773 364.08 289.127C316.63 302.709 273.007 352.037 295.73 390.707C340.904 467.586 466.655 329.914 531.557 424.09" 
                   stroke="url(#paint0_linear_778_2)" 
@@ -93,47 +89,57 @@ export default function SectionCamppage({ upcomingEvents }) {
               </svg>
           </div>
         </section>
-        <h1 className={styles.centeredSectionTitle}>
-              Get Involved
-        </h1>
-        <div className={styles.getInvolvedColumns}>
+        <section>
+          <h2 className={styles.centeredSectionTitle}>
+                Get Involved
+          </h2>
+          <div className={styles.getInvolvedColumns}>
           <div className={styles.involvementColumn}>
             <div className={styles.rainbowBorderWrapper}>
               <div className={styles.involvementContent}>
-                <h4>Become a Speaker</h4>
+                <Link href={"https://airtable.com/appM094R1Ma5HG757/shrXTUagRUI1aC4G1"} target="_blank">
+                  <h4 className={styles.involvementText}>Become a Sponsor</h4>
+                </Link>
               </div>
             </div>
             <div className={styles.rainbowBorderWrapper}>
+              <Link href={"https://airtable.com/appM094R1Ma5HG757/shrXTUagRUI1aC4G1"} target="_blank">
               <div className={styles.involvementContent}>
-                <h4>Lead a Track/Talk</h4>
+                  <h4 className={styles.involvementText}>Submit a track or talk</h4>
               </div>
+              </Link>
             </div>
           </div>
           <div className={styles.involvementColumn}>
             <div className={styles.rainbowBorderWrapper}>
               <div className={styles.involvementContent}>
-                <h4>Apply to be a Scholar</h4>
+                <Link href={"https://airtable.com/appM094R1Ma5HG757/shrXTUagRUI1aC4G1"} target="_blank">
+                  <h4 className={styles.involvementText}>Apply as an IPFS Scholar</h4>
+                </Link>
               </div>
             </div>
             <div className={styles.rainbowBorderWrapper}>
-              <div className={styles.involvementContent}>
-                <h4>Apply for Expo Space</h4>
-              </div>
+              <Link href={"https://airtable.com/appM094R1Ma5HG757/shrk7f2pNpNHkFGld"} target="_blank">
+                <div className={styles.involvementContent}>
+                  <h4 className={styles.involvementText}>Apply for Expo Space</h4>
+                </div>
+              </Link>
             </div>
           </div>
           <div className={styles.involvementColumn}>
             <div className={styles.rainbowBorderWrapper}>
               <div className={styles.involvementContent}>
-                <h4>Become a Key Organizer</h4>
+                <h4 className={styles.involvementText}>Become a Key Organizer</h4>
               </div>
             </div>
             <div className={styles.rainbowBorderWrapper}>
               <div className={styles.involvementContent}>
-                <h4>Volunteer</h4>
+                  <h4 className={styles.involvementText}>Volunteer</h4>
               </div>
             </div>
           </div>
         </div>
+        </section>
         <div className={styles.headerWrapper}>
           <h1 className={styles.sectionTitle}>
             Past Camp Events

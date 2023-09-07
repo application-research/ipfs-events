@@ -22,14 +22,24 @@
 }
 
 .imageClass {
-  width: 15%;
-  height: 7.5%;
   object-fit: cover;
   border-radius: var(--border-radius-small);
+
+  img {  // Target the <img> element within the .imageClass
+    width: 100%;  // Take the full width of the parent container (.imageClass)
+    height: 100%; // Take the full height of the parent container (.imageClass)
+    object-fit: cover;  // Cover the entire dimension of the parent
+    border-radius: inherit;  // Inherit the border-radius from parent
+  }
 
   @media (max-width: 768px) {
     width: 15%;
     height: 7.5%;
+
+    img { // Target the <img> element within the .imageClass for mobile sizes
+      width: 100%;
+      height: 100%;
+    }
   }
 }
 
@@ -177,6 +187,7 @@
   width: 100%;
   gap: 1rem;
   z-index: 2;
+  margin-bottom: 5rem;
 }
 
 .squiggleContainer {
@@ -185,9 +196,13 @@
 
 .videoSquiggleContainer {
   z-index: 1;
-  top: 110%;
+  top: 145%;
   left: 0;
   position: absolute;
+
+  @media (max-width: 768px) {
+    top: 110%;
+  }
 }
 
 .topSquiggleContainer {
@@ -301,7 +316,7 @@
   color: #ffffff;
   margin-left: 1rem;
   margin-right: 1rem;
-  padding-bottom: 2rem;
+  padding-bottom: 4rem;
   justify-content: center;
   text-align: center;
 }
@@ -316,6 +331,7 @@
     margin: 0 1rem;
     display: flex;
     flex-direction: column;
+    z-index: 2;
   }
 
   .involvementContent {
@@ -329,10 +345,20 @@
     height: 100%;
     padding: 2rem;
     font-family: Inter;
-
+    transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
+    
     p {
       margin: 0;
       flex: 1;
+    }
+
+    .involvementText {
+      font-family: Inter;
+      color: white;
+    }
+
+    &:hover {
+      background: linear-gradient(to left, #E01633, #CDB235, #4FD3CD, #0098C9);
     }
   }
 }
