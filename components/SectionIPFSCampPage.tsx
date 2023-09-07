@@ -8,15 +8,8 @@ import GutterContainer from '@root/components/GutterContainer';
 
 /* TODOS:
 * Fix mobile view
-* Make the container for the video same for the video itself (no black edging)
-* Make Get Involved same style as IPFS thing
-* Get involved is too far from its own section
-* Add button functionality (add hover - fade in full gradient (invert the white text))
 * Make things less floaty with a box around the stats section
-* "bold" the plus sign via. increasing float width
 * Work on the dropdown functionality
-* Footer capoff, export the black / white logo to use
-* Squiggles need to be larger & use them as design element
 */
 
 export default function SectionCamppage({ upcomingEvents }) {

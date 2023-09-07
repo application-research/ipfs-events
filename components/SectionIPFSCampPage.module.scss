@@ -215,9 +215,8 @@
 }
 
 .bottomSquiggleContainer {
-  z-index: 1;
   top: 320%;
-  left: 75%;
+  left: 70%;
   position: absolute;
 }
 
@@ -385,12 +384,14 @@
       margin: 0 1rem;
   
       .faqBorderWrapper {
+        z-index: 2;
         margin-bottom: 1rem;
         width: 100%;
         margin: 1rem 0;
       }
   
       .faqContent {
+        z-index: 2;
         background: linear-gradient(to left, #E01633, #CDB235, #4FD3CD, #0098C9);
         border-radius: 10px;
         display: flex; 
