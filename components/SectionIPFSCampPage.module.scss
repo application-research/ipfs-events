@@ -371,11 +371,11 @@
           flex: 1;
         }
   
-        .plus-symbol {
+        .plusSymbol {
           margin-left: auto;
-          font-size: 100rem;
-          font-weight: bold;
+          font-size: 1rem;
           font-family: Inter;
+          transform: scale(2);
         }
       }
     }
@@ -389,7 +389,7 @@
   width: 100%;
   box-sizing: border-box;
   padding: 0;
-  padding-bottom: 5rem;
+  padding-bottom: 7rem;
 
     .yearbookTitle{
       color: #000;
