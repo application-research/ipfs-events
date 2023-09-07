@@ -235,6 +235,18 @@ export default function SectionCamppage({ upcomingEvents }) {
               </div>
             </div>
           </div>
+          <div className={styles.bottomSquiggleContainer}>
+          <svg width="498" height="305" viewBox="0 0 498 305" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M36.4165 187.05C36.4165 187.05 15.1919 277.772 66.9163 271.843C118.641 265.914 209.641 19.5789 275.813 33.115C308.7 39.842 301.378 77.8058 293.984 113.795C286.466 150.395 304.275 196.955 338.187 195.263C405.607 191.898 419.559 52.4113 505.5 41.8714" stroke="url(#paint0_linear_924_2294)" stroke-width="63.9167" stroke-linecap="round"/>
+                <defs>
+                  <linearGradient id="paint0_linear_924_2294" x1="480.044" y1="48.2646" x2="-7.94242" y2="226.323" gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#08ADE3"/>
+                    <stop offset="0.5" stop-color="#CDAB37"/>
+                    <stop offset="1" stop-color="#E01C33"/>
+                  </linearGradient>
+                </defs>
+            </svg>
+          </div>
         </section>
       </div>
       </GutterContainer>
