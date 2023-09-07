@@ -96,27 +96,27 @@ export default function SectionCamppage({ upcomingEvents }) {
           <div className={styles.getInvolvedColumns}>
           <div className={styles.involvementColumn}>
             <div className={styles.rainbowBorderWrapper}>
-              <div className={styles.involvementContent}>
-                <Link href={"https://airtable.com/appM094R1Ma5HG757/shrXTUagRUI1aC4G1"} target="_blank">
-                  <h4 className={styles.involvementText}>Become a Sponsor</h4>
-                </Link>
-              </div>
+              <Link href={"https://airtable.com/appM094R1Ma5HG757/shrXTUagRUI1aC4G1"} target="_blank">
+                <div className={styles.involvementContent}>
+                    <h4 className={styles.involvementText}>Become a Sponsor</h4>
+                </div>
+              </Link>
             </div>
             <div className={styles.rainbowBorderWrapper}>
               <Link href={"https://airtable.com/appM094R1Ma5HG757/shrXTUagRUI1aC4G1"} target="_blank">
-              <div className={styles.involvementContent}>
-                  <h4 className={styles.involvementText}>Submit a track or talk</h4>
-              </div>
+                <div className={styles.involvementContent}>
+                    <h4 className={styles.involvementText}>Submit a track or talk</h4>
+                </div>
               </Link>
             </div>
           </div>
           <div className={styles.involvementColumn}>
             <div className={styles.rainbowBorderWrapper}>
-              <div className={styles.involvementContent}>
-                <Link href={"https://airtable.com/appM094R1Ma5HG757/shrXTUagRUI1aC4G1"} target="_blank">
-                  <h4 className={styles.involvementText}>Apply as an IPFS Scholar</h4>
-                </Link>
-              </div>
+              <Link href={"https://airtable.com/appM094R1Ma5HG757/shrXTUagRUI1aC4G1"} target="_blank">
+                <div className={styles.involvementContent}>
+                    <h4 className={styles.involvementText}>Apply as an IPFS Scholar</h4>
+                </div>
+              </Link>
             </div>
             <div className={styles.rainbowBorderWrapper}>
               <Link href={"https://airtable.com/appM094R1Ma5HG757/shrk7f2pNpNHkFGld"} target="_blank">
@@ -128,14 +128,18 @@ export default function SectionCamppage({ upcomingEvents }) {
           </div>
           <div className={styles.involvementColumn}>
             <div className={styles.rainbowBorderWrapper}>
-              <div className={styles.involvementContent}>
-                <h4 className={styles.involvementText}>Become a Key Organizer</h4>
-              </div>
+              <Link href={"mailto:miwa@protocol.ai"} target="_blank">
+                <div className={styles.involvementContent}>
+                  <h4 className={styles.involvementText}>Become a Key Organizer</h4>
+                </div>
+              </Link>
             </div>
             <div className={styles.rainbowBorderWrapper}>
-              <div className={styles.involvementContent}>
-                  <h4 className={styles.involvementText}>Volunteer</h4>
-              </div>
+              <Link href={"mailto:miwa@protocol.ai"} target="_blank">
+                <div className={styles.involvementContent}>
+                    <h4 className={styles.involvementText}>Volunteer</h4>
+                </div>
+              </Link>
             </div>
           </div>
         </div>
@@ -145,39 +149,39 @@ export default function SectionCamppage({ upcomingEvents }) {
             Past Camp Events
           </h1>
           <div className={styles.imageAndTextWrapper}>
-            <img src="/media/ipfs-camp-2024.png" alt="Image 1" />
+            <img src="/media/ipfs-camp-2024.png" alt="IPFS Camp" />
             <div className={styles.impactText}>
               2022 Impact
             </div>
           </div>
         </div>
         <section className={styles.campEvents}>
-        <div className={styles.statsColumnLeft}>
-          <div className={styles.lineOne}>
-            <h2>
-              <span className={styles.greaterRainbowText}>17 </span> <span className={styles.whiteText}>Tracks</span>
-            </h2>
-            <h2> 
-              <span className={styles.greaterRainbowText}>100+ </span> <span className={styles.whiteText}>Speakers</span>
-            </h2>
+          <div className={styles.statsColumnLeft}>
+            <div className={styles.lineOne}>
+              <h2>
+                <span className={styles.greaterRainbowText}>17 </span> <span className={styles.whiteText}>Tracks</span>
+              </h2>
+              <h2> 
+                <span className={styles.greaterRainbowText}>100+ </span> <span className={styles.whiteText}>Speakers</span>
+              </h2>
+            </div>
+            <div className={styles.lineTwo}>
+              <h2> 
+                <span className={styles.greaterRainbowText}>5400 </span> <span className={styles.whiteText}>Participants</span>
+              </h2>
+            </div>
           </div>
-          <div className={styles.lineTwo}>
-            <h2> 
-              <span className={styles.greaterRainbowText}>5400 </span> <span className={styles.whiteText}>Participants</span>
-            </h2>
+          <div className={styles.statsColumnRight}>
+            <h4>
+              <span className={styles.lesserRainbowText}>34 </span> <span className={styles.whiteText}>IPFS Scholars</span>
+            </h4>
+            <h4>
+              <span className={styles.lesserRainbowText}>30 </span> <span className={styles.whiteText}>Countries</span>
+            </h4>
+            <h4>
+              <span className={styles.lesserRainbowText}>20 </span> <span className={styles.whiteText}>Volunteers</span>
+            </h4>
           </div>
-        </div>
-        <div className={styles.statsColumnRight}>
-          <h4>
-            <span className={styles.lesserRainbowText}>34 </span> <span className={styles.whiteText}>IPFS Scholars</span>
-          </h4>
-          <h4>
-            <span className={styles.lesserRainbowText}>30 </span> <span className={styles.whiteText}>Countries</span>
-          </h4>
-          <h4>
-            <span className={styles.lesserRainbowText}>20 </span> <span className={styles.whiteText}>Volunteers</span>
-          </h4>
-        </div>
         </section>
         <section className={styles.faqSection}>
           <h1 className={styles.sectionTitle} style={{ paddingBottom: '2rem' }}>

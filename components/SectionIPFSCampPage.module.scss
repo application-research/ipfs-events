@@ -25,18 +25,18 @@
   object-fit: cover;
   border-radius: var(--border-radius-small);
 
-  img {  // Target the <img> element within the .imageClass
-    width: 100%;  // Take the full width of the parent container (.imageClass)
-    height: 100%; // Take the full height of the parent container (.imageClass)
-    object-fit: cover;  // Cover the entire dimension of the parent
-    border-radius: inherit;  // Inherit the border-radius from parent
+  img {
+    width: 100%; 
+    height: 100%;
+    object-fit: cover; 
+    border-radius: inherit;
   }
 
   @media (max-width: 768px) {
     width: 15%;
     height: 7.5%;
 
-    img { // Target the <img> element within the .imageClass for mobile sizes
+    img {
       width: 100%;
       height: 100%;
     }
@@ -52,17 +52,20 @@
   .imageAndTextWrapper {
     display: flex;
     align-items: center;
+    margin-right: 5rem;
 
     img {
-      height: auto;
-      width: auto;
-      // Set height or width as needed
+      margin-left: 5rem; // Add left margin to move the image to the right
+      height: 30px; // Adjust the height as needed
+      width: 124.86px; // Adjust the width as needed
+      object-fit: cover; // Makes sure the image maintains aspect ratio
     }
 
     .impactText {
       color: #ffffff;
-      margin-left: 16px; // You can adjust this value
-      font-size: 16px;   // And this one too
+      margin-left: 16px;
+      font-size: 25px;
+      font-family: Inter;
     }
   }
 }
@@ -252,6 +255,9 @@
 .campEvents { 
   display: flex;
   justify-content: space-between;
+  border: 10px solid linear-gradient(to bottom, #E01633 25%, #CDB235, #4FD3CD 70%, #0098C9 90%); // White border
+  padding: 20px; // Padding inside the box
+  border-radius: 10px; // Rounded corners, optional
 
   .greaterRainbowText {
     font-size: 5rem;
