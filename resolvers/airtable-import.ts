@@ -10,7 +10,7 @@ export const airtableFormattedFieldsMap = {
   'Start Time': 'startTime', // date + time
   'Youtube Link': 'videoLink',
   TrackLink: 'trackLink',
-  'Twitter Profile URL': 'trackLink',
+  'Twitter Profile URL': 'twitterUrl',
   'Confirmed for website': 'confirmedForWebsite',
   'Confirmed for Website': 'confirmedForWebsite',
 
