@@ -62,10 +62,6 @@ export const FILECOIN_DEV_SUMMIT_2023_PAGE_CONTENT = [
             href: 'https://www.greaterheat.com/',
           },
           {
-            src: 'https://yourimageshare.com/ib/T9uiL019Wc',
-            href: 'https://www.glif.io/',
-          },
-          {
             src: 'https://i.ibb.co/JrQzymQ/Fil-Fi-logo.jpg',
             href: 'https://filfi.io/',
           },
