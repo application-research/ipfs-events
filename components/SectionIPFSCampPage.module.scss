@@ -551,11 +551,17 @@
 
       .faqAnswer {
         background: linear-gradient(to left, #e01633, #cdb235, #4fd3cd, #0098c9);
-        padding: 1rem;
+        padding: 0rem 2rem 2rem 2rem;
         border-radius: 0px 0px 10px 10px;
         z-index: var(--z-index-medium);
         transition: max-height 0.5s ease-in-out;
         font-family: Inter;
+
+        font-size: var(--font-size-tiny);
+        font-family: Inter;
+        font-weight: var(--font-weight-light);
+        letter-spacing: -.003em;
+        line-height: 1.6rem;
       }
 
       .faqAnswer.open {
