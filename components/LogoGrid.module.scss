@@ -40,6 +40,21 @@
   }
 }
 
+.gridSmall {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  grid-gap: 1rem;
+  width: 100%;
+
+  @media (max-width: 768px) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  @media (max-width: 350px) {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
 .gridItem,
 .logo {
   display: block;
