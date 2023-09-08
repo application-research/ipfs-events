@@ -1,18 +1,49 @@
+'use client';
+
 import styles from '@components/SectionIPFSCampPage.module.scss';
 
 import { Ratio } from '@root/common/types';
 import { VideoPlayer } from './VideoPlayer';
 import Link from './Link';
-import React from 'react';
+import React, { useState } from 'react';
 import GutterContainer from '@root/components/GutterContainer';
 
 /* TODOS:
- * Fix mobile view
- * Make things less floaty with a box around the stats section
+ * Fix mobile view for squiggles
  * Work on the dropdown functionality
+ * Refactor this code into something more componentized
  */
 
 export default function SectionCamppage({ upcomingEvents }) {
+  const [expandedFaqLeft, setExpandedFaqLeft] = useState(null);
+  const [expandedFaqRight, setExpandedFaqRight] = useState(null);
+
+  const toggleFaq = (side, index) => {
+    if (side === "left") {
+      if (expandedFaqLeft === index) {
+        setExpandedFaqLeft(null);
+      } else {
+        setExpandedFaqLeft(index);
+      }
+    } else {
+      if (expandedFaqRight === index) {
+        setExpandedFaqRight(null);
+      } else {
+        setExpandedFaqRight(index);
+      }
+    }
+  };
+ 
+  const faqsLeft = [
+    { question: "What is IPFS Camp and who is it for?", answer: "IPFS Camp is more than just a 'conference'; it's a global movement of builders and visionaries committed to creating a better web. Over the course of three days, we will host hundreds of talks, workshops, and hacking sessions, all focused on the latest advancements in decentralized technologies and the future of the internet. IPFS Camp provides the ideal platform to exchange ideas, collaborate, and co-create solutions for the real-world challenges that the web is currently facing."},
+    { question: "What does the ticket include?", answer: "All tickets include entry to the full 3-day event with coffee, morning pastries, lunch, and dinner at the IPFS Camp venue."}
+  ];
+  
+  const faqsRight = [
+    { question: "How can I participate?", answer: "You can: Submit a track or talk, Sponsor, Apply as an IPFS Scholar, Become a key organizer, Volunteer, Apply for Expo Space"},
+    { question: "How can I reach out to the organizers", answer: "Please reach out to miwa@protocol.ai with any questions or suggestions"}
+  ];
+  
   return (
     <div className={styles.pageContainer}>
       <GutterContainer>
@@ -44,7 +75,7 @@ export default function SectionCamppage({ upcomingEvents }) {
                   </div>
                 </div>
               </div>
-              {/* <div className={styles.topSquiggleContainer}>
+              <div className={styles.topSquiggleContainer}>
                 <svg xmlns="http://www.w3.org/2000/svg" width="600" height="400" viewBox="0 0 564 457" fill="none">
                   <path
                     d="M120.782 32.3641C120.782 32.3641 1.58132 63 40.1581 119.934C78.7345 176.868 422.805 132.753 447.428 218.508C459.666 261.127 410.739 275.773 364.08 289.127C316.63 302.709 273.007 352.037 295.73 390.707C340.904 467.586 466.655 329.914 531.557 424.09"
@@ -60,7 +91,7 @@ export default function SectionCamppage({ upcomingEvents }) {
                     </linearGradient>
                   </defs>
                 </svg>
-              </div> */}
+              </div>
             </header>
             <div className={styles.videoTitle}>
               <h2 className={styles.centeredSectionTitle}> IPFS Þing 2022 - Recap </h2>
@@ -68,7 +99,7 @@ export default function SectionCamppage({ upcomingEvents }) {
             <div className={styles.mediaContainer}>
               <VideoPlayer src={'/media/ipfs-camp-2022.mp4'} autoPlay muted ariaLabel="video" ratio={Ratio.SIXTEEN_BY_NINE} />
             </div>
-            {/* <div className={styles.videoSquiggleContainer}>
+            <div className={styles.videoSquiggleContainer}>
               <svg xmlns="http://www.w3.org/2000/svg" width="800" height="500" viewBox="0 0 564 457" fill="none">
                 <path
                   d="M120.782 32.3641C120.782 32.3641 1.58132 63 40.1581 119.934C78.7345 176.868 422.805 132.753 447.428 218.508C459.666 261.127 410.739 275.773 364.08 289.127C316.63 302.709 273.007 352.037 295.73 390.707C340.904 467.586 466.655 329.914 531.557 424.09"
@@ -84,7 +115,7 @@ export default function SectionCamppage({ upcomingEvents }) {
                   </linearGradient>
                 </defs>
               </svg>
-            </div> */}
+            </div>
           </section>
           <section>
             <h2 className={styles.centeredSectionTitle}>Get Involved</h2>
@@ -175,59 +206,33 @@ export default function SectionCamppage({ upcomingEvents }) {
             </div>
           </section>
           <section className={styles.faqSection}>
-            <h1 className={styles.sectionTitle} style={{ paddingBottom: '2rem' }}>
-              FAQs
-            </h1>
+          <h1 className={styles.sectionTitle} style={{ paddingBottom: '2rem' }}>FAQs</h1>
             <div className={styles.faqColumns}>
-              <div className={styles.faqLeft}>
-                <div className={styles.faqBorderWrapper}>
-                  <div className={styles.faqContent}>
-                    <h4>qui dolorem ipsum, quia dolor sit amet consectetur adipisci velit?</h4>
-                    <div className={styles.plusSymbol}>+</div>
-                  </div>
+                <div className={styles.faqLeft}>
+                  {faqsLeft.map((faq, index) => (
+                    <div className={styles.faqBorderWrapper} key={index} onClick={() => toggleFaq('left', index)}>
+                      <div className={`${styles.faqContent} ${expandedFaqLeft === index ? styles.open : ''}`}>
+                        <h4>{faq.question}</h4>
+                        <div className={styles.plusSymbol}>{expandedFaqLeft === index ? "-" : "+"}</div>
+                      </div>
+                      {expandedFaqLeft === index && <div className={styles.faqAnswer}>{faq.answer}</div>}
+                    </div>
+                  ))}
                 </div>
-                <div className={styles.faqBorderWrapper}>
-                  <div className={styles.faqContent}>
-                    <h4>qui dolorem ipsum, quia dolor sit amet consectetur adipisci velit?</h4>
-                    <div className={styles.plusSymbol}>+</div>
-                  </div>
-                </div>
-                <div className={styles.faqBorderWrapper}>
-                  <div className={styles.faqContent}>
-                    <h4>qui dolorem ipsum, quia dolor sit amet consectetur adipisci velit?</h4>
-                    <div className={styles.plusSymbol}>+</div>
-                  </div>
-                </div>
-                <div className={styles.faqBorderWrapper}>
-                  <div className={styles.faqContent}>
-                    <h4>qui dolorem ipsum, quia dolor sit amet consectetur adipisci velit?</h4>
-                    <div className={styles.plusSymbol}>+</div>
-                  </div>
+                <div className={styles.faqRight}>
+                  {faqsRight.map((faq, index) => (
+                    <div className={styles.faqBorderWrapper} key={index} onClick={() => toggleFaq('right', index)}>
+                      <div className={`${styles.faqContent} ${expandedFaqRight === index ? styles.open : ''}`}>
+                        <h4>{faq.question}</h4>
+                        <div className={styles.plusSymbol}>{expandedFaqRight === index ? "-" : "+"}</div>
+                      </div>
+                      {expandedFaqRight === index && <div className={styles.faqAnswer}>{faq.answer}</div>}
+                    </div>
+                  ))}
                 </div>
               </div>
-              <div className={styles.faqRight}>
-                <div className={styles.faqBorderWrapper}>
-                  <div className={styles.faqContent}>
-                    <h4>qui dolorem ipsum, quia dolor sit amet consectetur adipisci velit?</h4>
-                    <div className={styles.plusSymbol}>+</div>
-                  </div>
-                </div>
-                <div className={styles.faqBorderWrapper}>
-                  <div className={styles.faqContent}>
-                    <h4>qui dolorem ipsum, quia dolor sit amet consectetur adipisci velit?</h4>
-                    <div className={styles.plusSymbol}>+</div>
-                  </div>
-                </div>
-                <div className={styles.faqBorderWrapper}>
-                  <div className={styles.faqContent}>
-                    <h4>qui dolorem ipsum, quia dolor sit amet consectetur adipisci velit?</h4>
-                    <div className={styles.plusSymbol}>+</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            {/* <div className={styles.bottomSquiggleContainer}>
-              <svg width="498" height="305" viewBox="0 0 498 305" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <div className={styles.bottomSquiggleContainer}>
+              <svg className={styles.bottomSquiggleStyle} width="498" height="305" viewBox="0 0 498 305" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path
                   d="M36.4165 187.05C36.4165 187.05 15.1919 277.772 66.9163 271.843C118.641 265.914 209.641 19.5789 275.813 33.115C308.7 39.842 301.378 77.8058 293.984 113.795C286.466 150.395 304.275 196.955 338.187 195.263C405.607 191.898 419.559 52.4113 505.5 41.8714"
                   stroke="url(#paint0_linear_924_2294)"
@@ -242,7 +247,7 @@ export default function SectionCamppage({ upcomingEvents }) {
                   </linearGradient>
                 </defs>
               </svg>
-            </div> */}
+            </div>
           </section>
         </div>
       </GutterContainer>

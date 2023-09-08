@@ -15,7 +15,7 @@ export default async function Page(props) {
 
   return (
     <DefaultLayout>
-      {/* <CampNavbarLogoMiddle navContent={navContent} /> */}
+      <CampNavbarLogoMiddle navContent={navContent} />
 
       <SectionCamppage {...homepage} />
 
