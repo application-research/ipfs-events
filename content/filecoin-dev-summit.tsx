@@ -62,7 +62,7 @@ export const FILECOIN_DEV_SUMMIT_2023_PAGE_CONTENT = [
             href: 'https://www.greaterheat.com/',
           },
           {
-            src: 'https://i.ibb.co/KD1py2R/long-dark.png',
+            src: 'https://yourimageshare.com/ib/T9uiL019Wc',
             href: 'https://www.glif.io/',
           },
           {
