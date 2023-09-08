@@ -506,6 +506,7 @@
     .faqRight {
       flex: 1;
       margin: 0 1rem;
+      z-index: var(--z-index-medium);
 
       .faqBorderWrapper {
         z-index: var(--z-index-medium);
