@@ -180,27 +180,27 @@ export default function SectionCamppage({ upcomingEvents }) {
           <section className={styles.campEvents}>
             <div className={styles.statsColumnLeft}>
               <div className={styles.lineOne}>
-                <h2 className={styles.campEventsStats}>
+                <h2 className={styles.campEventsStatsPartOne}>
                   <span className={styles.greaterRainbowText}>17 </span> <span className={styles.whiteText}>Tracks</span>
                 </h2>
-                <h2 className={styles.campEventsStats}>
+                <h2 className={styles.campEventsStatsPartOne}>
                   <span className={styles.greaterRainbowText}>100+ </span> <span className={styles.whiteText}>Speakers</span>
                 </h2>
               </div>
               <div className={styles.lineTwo}>
-                <h2 className={styles.campEventsStats}>
+                <h2 className={styles.campEventsStatsPartOne}>
                   <span className={styles.greaterRainbowText}>5400 </span> <span className={styles.whiteText}>Participants</span>
                 </h2>
               </div>
             </div>
             <div className={styles.statsColumnRight}>
-              <h4 className={styles.campEventsStats}>
+              <h4 className={styles.campEventsStatsPartTwo}>
                 <span className={styles.lesserRainbowText}>34 </span> <span className={styles.whiteText}>IPFS Scholars</span>
               </h4>
-              <h4 className={styles.campEventsStats}>
+              <h4 className={styles.campEventsStatsPartTwo}>
                 <span className={styles.lesserRainbowText}>30 </span> <span className={styles.whiteText}>Countries</span>
               </h4>
-              <h4 className={styles.campEventsStats}>
+              <h4 className={styles.campEventsStatsPartTwo}>
                 <span className={styles.lesserRainbowText}>20 </span> <span className={styles.whiteText}>Volunteers</span>
               </h4>
             </div>
