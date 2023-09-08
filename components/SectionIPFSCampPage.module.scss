@@ -14,7 +14,7 @@
   display: grid;
   row-gap: 1rem;
   width: 55%;
-  color: #ffffff;
+  color: var(--text-white);
 
   @media (max-width: 768px) {
     width: 100%;
@@ -26,9 +26,9 @@
   border-radius: var(--border-radius-small);
 
   img {
-    width: 100%; 
+    width: 100%;
     height: 100%;
-    object-fit: cover; 
+    object-fit: cover;
     border-radius: inherit;
   }
 
@@ -46,8 +46,12 @@
 .headerWrapper {
   display: flex;
   align-items: center;
-  justify-content: space-between; 
+  justify-content: space-between;
   margin-bottom: 0;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
 
   .imageAndTextWrapper {
     display: flex;
@@ -75,7 +79,7 @@
   row-gap: 1rem;
   width: 100%;
   height: 10%;
-  color: #ffffff;
+  color: var(--text-white);
   justify-content: center;
   align-items: center;
 
@@ -89,7 +93,7 @@
 }
 
 .rainbowBorderWrapper {
-  background: linear-gradient(to left, #E01633, #CDB235, #4FD3CD, #0098C9);
+  background: linear-gradient(to left, #e01633, #cdb235, #4fd3cd, #0098c9);
   border-radius: 12px;
   padding: 2px;
   display: inline-block;
@@ -99,16 +103,19 @@
 .innerContent {
   background: black;
   border-radius: 10px;
-  display: flex; 
+  display: flex;
   justify-content: space-between;
   width: 100%;
   height: 100%;
   font-family: Inter;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
 }
 
-.diptychHalf{
+.diptychHalf {
   flex: 1;
-  
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -123,13 +130,13 @@
       margin-bottom: 2px;
       font-family: Inter;
     }
-    
+
     .newlineText {
       display: block;
       font-family: Inter;
       text-align: left;
     }
-  
+
     .newlineBoldText {
       display: block;
       font-family: Inter;
@@ -139,7 +146,7 @@
   }
 }
 
-.diptychHalf:last-child{
+.diptychHalf:last-child {
   border-right: 0;
 }
 
@@ -180,7 +187,8 @@
   }
 }
 
-.mediaContainer, .videoSquiggleContainer {
+.mediaContainer,
+.videoSquiggleContainer {
   position: relative;
 }
 
@@ -189,16 +197,16 @@
   flex-direction: row wrap;
   width: 100%;
   gap: 1rem;
-  z-index: 2;
-  margin-bottom: 5rem;
+  z-index: var(--z-index-medium);
+  // margin-bottom: 5rem;
 }
 
 .squiggleContainer {
-  z-index: 1;
+  z-index: var(--z-index-small);
 }
 
 .videoSquiggleContainer {
-  z-index: 1;
+  z-index: var(--z-index-small);
   top: 145%;
   left: 0;
   position: absolute;
@@ -258,60 +266,115 @@
   font-size: var(--font-size-regular);
 }
 
-.campEvents { 
-  display: flex;
-  justify-content: space-between;
+.campEvents {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  border: 1px solid var(--text-white);
+  border-radius: var(--border-radius-small);
+
+  @media (max-width: 768px) {
+    grid-template-columns: repeat(1, 1fr);
+  }
 
   .greaterRainbowText {
     font-size: 5rem;
-    background-image: linear-gradient(to bottom, #E01633 25%, #CDB235, #4FD3CD 70%, #0098C9 90%);
+    background-image: linear-gradient(to bottom, #e01633 25%, #cdb235, #4fd3cd 70%, #0098c9 90%);
     -webkit-background-clip: text;
     color: transparent;
+
+    @media (max-width: 1050px) {
+      font-size: 3rem;
+    }
+    @media (max-width: 768px) {
+      font-size: 2rem;
+    }
   }
 
   .lesserRainbowText {
     font-size: 2rem;
-    background-image: linear-gradient(to bottom, #E01633 25%, #CDB235, #4FD3CD 70%, #0098C9 90%);
+    background-image: linear-gradient(to bottom, #e01633 25%, #cdb235, #4fd3cd 70%, #0098c9 90%);
     -webkit-background-clip: text;
     color: transparent;
   }
 
   .whiteText {
     font-size: 2rem;
-    color: white;
+    color: var(--text-white);
+    font-weight: var(--font-weight-light);
+
+    @media (max-width: 1050px) {
+      font-size: 1.5rem;
+    }
   }
-  
-  .statsColumnLeft {
-    width: 50%;
+
+  .lineOne {
+    display: flex;
+    flex-direction: revert;
+    border-bottom: 1px solid var(--color-white);
+  }
+
+  .campEventsStats {
+    padding: 1rem;
+    width: 100%;
+    @media (max-width: 768px) {
+      border-bottom: 1px solid var(--color-white);
+    }
+  }
+
+  .statsColumnRight {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
+    padding: 1rem;
+    gap: 1rem;
+    padding-left: 3rem;
+    width: 100%;
+    //  width: 50%;
+
+    // display: flex;
+    // flex-direction: column;
+    // align-items: flex-start;
+    // justify-content: space-between;
+    // margin-left: 20%;
+
+    @media (max-width: 768px) {
+      padding-left: 1rem;
+      border: 1px solid white;
+      padding: 0rem;
+    }
+  }
+
+  .statsColumnLeft {
+    // padding: 1rem;
+    grid-column: 1/3;
+    // width: 50%;
+    // display: flex;
+    // flex-direction: column;
+    // align-items: flex-start;
+    // justify-content: center;
+    // padding-bottom: 2rem;
+    border-right: 1px solid var(--text-white);
+
+    @media (max-width: 768px) {
+      width: 100%;
+      grid-column: 1;
+    }
 
     .lineOne {
       display: flex;
       justify-content: space-between;
       gap: 10rem;
-      margin-bottom: 5rem;
+      //  margin-bottom: 5rem;
       white-space: nowrap;
-    }
-    
-    .lineTwo {
-      display: flex;
       flex-direction: row;
-      align-items: center;
-      justify-content: flex-start;
-      gap: 1rem;
-    }
-  }
 
-  .statsColumnRight {
-    width: 50%;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: space-between;
-    margin-left: 20%;
+      @media (max-width: 1050px) {
+        // gap: 1rem;
+        gap: 0rem;
+        flex-direction: column;
+      }
+    }
   }
 }
 
@@ -319,6 +382,7 @@
   color: #ffffff;
   padding-left: 1rem;
   padding-bottom: 1rem;
+  font-weight: var(--font-weight-light);
 }
 
 .centeredSectionTitle {
@@ -335,6 +399,10 @@
   justify-content: space-between;
   text-align: center;
 
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
+
   .involvementColumn {
     flex: 1;
     margin: 0 1rem;
@@ -347,7 +415,7 @@
     background: black;
     color: #ffffff;
     border-radius: 10px;
-    display: flex; 
+    display: flex;
     align-items: center;
     justify-content: center;
     width: 100%;
@@ -355,7 +423,7 @@
     padding: 2rem;
     font-family: Inter;
     transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
-    
+
     p {
       margin: 0;
       flex: 1;
@@ -363,11 +431,11 @@
 
     .involvementText {
       font-family: Inter;
-      color: white;
+      color: var(--text-white);
     }
 
     &:hover {
-      background: linear-gradient(to left, #E01633, #CDB235, #4FD3CD, #0098C9);
+      background: linear-gradient(to left, #e01633, #cdb235, #4fd3cd, #0098c9);
     }
   }
 }
@@ -377,37 +445,41 @@
     display: flex;
     justify-content: space-between;
     margin-bottom: 10rem;
-  
+
+    @media (max-width: 768px) {
+      flex-direction: column;
+    }
+
     .faqLeft,
     .faqRight {
       flex: 1;
       margin: 0 1rem;
-  
+
       .faqBorderWrapper {
         z-index: 2;
         margin-bottom: 1rem;
         width: 100%;
         margin: 1rem 0;
       }
-  
+
       .faqContent {
         z-index: 2;
-        background: linear-gradient(to left, #E01633, #CDB235, #4FD3CD, #0098C9);
+        background: linear-gradient(to left, #e01633, #cdb235, #4fd3cd, #0098c9);
         border-radius: 10px;
-        display: flex; 
+        display: flex;
         justify-content: space-between;
         width: 100%;
         height: 100%;
         padding: 2rem;
         font-family: Inter;
-  
+
         position: relative;
-  
+
         p {
           margin: 0;
           flex: 1;
         }
-  
+
         .plusSymbol {
           margin-left: auto;
           font-size: 1rem;
@@ -420,7 +492,7 @@
 }
 
 .campYearbookSection {
-  background: linear-gradient(to left, #E01633, #CDB235, #4FD3CD, #0098C9);
+  background: linear-gradient(to left, #e01633, #cdb235, #4fd3cd, #0098c9);
   text-align: center;
   margin: 0;
   width: 100%;
@@ -428,32 +500,36 @@
   padding: 0;
   padding-bottom: 7rem;
 
-    .yearbookTitle{
-      color: #000;
-      padding: 5rem 0;
-      font-size: 2rem;
-      font-family: Inter;
-    }
+  .yearbookTitle {
+    color: #000;
+    padding: 5rem 0;
+    font-size: 2rem;
+    font-family: Inter;
+  }
 
-    .buttonsContainer {
-      display: flex;
-      flex-direction: row;
-      gap: 5rem;
-      width: 100%;
-      justify-content: center;
-    }
+  .buttonsContainer {
+    display: flex;
+    flex-direction: row;
+    gap: 5rem;
+    width: 100%;
+    justify-content: center;
 
-    .yearButton {
-      background-color: #000;
-      border: none;
-      border-radius: 50px;
-      color: white;
-      padding: 10px 20px;
-      font-size: 1rem;
-      padding: 20px 80px;
-      font-size: 1rem;
-      cursor: pointer;
-      transition: background-color 0.3s ease;
+    @media (max-width: 768px) {
+      flex-direction: column;
+    }
+  }
+
+  .yearButton {
+    background-color: #000;
+    border: none;
+    border-radius: 50px;
+    color: var(--text-white);
+    padding: 10px 20px;
+    font-size: 1rem;
+    padding: 20px 80px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 
     &:hover {
       background-color: #333;
@@ -513,4 +589,3 @@
 .h3 {
   font-weight: var(--font-weight-regular);
 }
-  
