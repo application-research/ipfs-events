@@ -131,10 +131,14 @@ export const FILECOIN_DEV_SUMMIT_2023_PAGE_CONTENT = [
           },
           {
 <<<<<<< HEAD
+<<<<<<< HEAD
             src: '/media/glif.png',
 =======
             src: 'https://i.ibb.co/KD1py2R/long-dark.png',
 >>>>>>> ec34361 (updating glif logo)
+=======
+            src: 'https://yourimageshare.com/ib/T9uiL019Wc',
+>>>>>>> 259348d (updating glif logo)
             href: 'https://www.glif.io/',
           },
           {
