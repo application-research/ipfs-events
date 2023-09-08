@@ -76,7 +76,7 @@ export default function SectionCamppage({ upcomingEvents }) {
                 </div>
               </div>
               <div className={styles.topSquiggleContainer}>
-                <svg xmlns="http://www.w3.org/2000/svg" width="600" height="400" viewBox="0 0 564 457" fill="none">
+                <svg className={styles.topSquiggleStyle} xmlns="http://www.w3.org/2000/svg" width="600" height="400" viewBox="0 0 564 457" fill="none">
                   <path
                     d="M120.782 32.3641C120.782 32.3641 1.58132 63 40.1581 119.934C78.7345 176.868 422.805 132.753 447.428 218.508C459.666 261.127 410.739 275.773 364.08 289.127C316.63 302.709 273.007 352.037 295.73 390.707C340.904 467.586 466.655 329.914 531.557 424.09"
                     stroke="url(#paint0_linear_778_2)"
@@ -100,7 +100,7 @@ export default function SectionCamppage({ upcomingEvents }) {
               <VideoPlayer src={'/media/ipfs-camp-2022.mp4'} autoPlay muted ariaLabel="video" ratio={Ratio.SIXTEEN_BY_NINE} />
             </div>
             <div className={styles.videoSquiggleContainer}>
-              <svg xmlns="http://www.w3.org/2000/svg" width="800" height="500" viewBox="0 0 564 457" fill="none">
+              <svg className={styles.videoSquiggleStyle} xmlns="http://www.w3.org/2000/svg" width="800" height="500" viewBox="0 0 564 457" fill="none">
                 <path
                   d="M120.782 32.3641C120.782 32.3641 1.58132 63 40.1581 119.934C78.7345 176.868 422.805 132.753 447.428 218.508C459.666 261.127 410.739 275.773 364.08 289.127C316.63 302.709 273.007 352.037 295.73 390.707C340.904 467.586 466.655 329.914 531.557 424.09"
                   stroke="url(#paint0_linear_778_2)"

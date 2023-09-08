@@ -216,16 +216,52 @@
   }
 }
 
+.videoSquiggleStyle {
+  @media (max-width: 1020px) {
+    width: 80%;
+    height: auto;
+  }
+
+  @media (max-width: 768px) {
+    width: 60%;
+    height: auto;
+  }
+}
+
 .topSquiggleContainer {
   top: 20%;
   left: 55%;
   position: absolute;
 }
 
+.topSquiggleStyle {
+  @media (max-width: 1020px) {
+    width: 80%;
+    height: auto;
+  }
+
+  @media (max-width: 768px) {
+    width: 60%;
+    height: auto;
+  }
+}
+
 .bottomSquiggleContainer {
   top: 320%;
   left: 70%;
   position: absolute;
+}
+
+.bottomSquiggleStyle {
+  @media (max-width: 1020px) {
+    width: 80%;
+    height: auto;
+  }
+
+  @media (max-width: 768px) {
+    width: 60%;
+    height: auto;
+  }
 }
 
 .image {
@@ -555,12 +591,6 @@
     &:hover {
       background-color: #333;
     }
-  }
-}
-
-.bottomSquiggleStyle {
-  @media (max-width: 1020px) {
-    
   }
 }
 
