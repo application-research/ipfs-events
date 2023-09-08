@@ -94,7 +94,7 @@ export default function SectionCamppage({ upcomingEvents }) {
               </div>
             </header>
             <div className={styles.videoTitle}>
-              <h2 className={styles.centeredSectionTitle}> IPFS Þing 2022 - Recap </h2>
+              <h2 className={styles.centeredSectionTitle}> IPFS Camp 2022 - Recap </h2>
             </div>
             <div className={styles.mediaContainer}>
               <VideoPlayer src={'/media/ipfs-camp-2022.mp4'} autoPlay muted ariaLabel="video" ratio={Ratio.SIXTEEN_BY_NINE} />
