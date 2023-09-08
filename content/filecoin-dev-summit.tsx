@@ -132,6 +132,7 @@ export const FILECOIN_DEV_SUMMIT_2023_PAGE_CONTENT = [
           {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             src: '/media/glif.png',
 =======
             src: 'https://i.ibb.co/KD1py2R/long-dark.png',
@@ -142,6 +143,8 @@ export const FILECOIN_DEV_SUMMIT_2023_PAGE_CONTENT = [
             href: 'https://www.glif.io/',
           },
           {
+=======
+>>>>>>> 30c63c2 (Update filecoin-dev-summit.tsx)
             src: 'https://i.ibb.co/JrQzymQ/Fil-Fi-logo.jpg',
             href: 'https://filfi.io/',
           },
