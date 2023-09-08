@@ -122,7 +122,7 @@ export default function SectionCamppage({ upcomingEvents }) {
             <div className={styles.getInvolvedColumns}>
               <div className={styles.involvementColumn}>
                 <div className={styles.rainbowBorderWrapper}>
-                  <Link href={'https://airtable.com/appM094R1Ma5HG757/shrXTUagRUI1aC4G1'} target="_blank">
+                  <Link href={'https://airtable.com/appM094R1Ma5HG757/shrWn6XaRgUkYWPm3'} target="_blank">
                     <div className={styles.involvementContent}>
                       <h4 className={styles.involvementText}>Become a Sponsor</h4>
                     </div>
