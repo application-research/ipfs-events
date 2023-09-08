@@ -318,9 +318,17 @@
 .campEvents {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  border: 1px solid var(--text-white);
   border-radius: var(--border-radius-small);
   z-index: var(--z-index-medium);
+  background: linear-gradient(to right, #e01633, #cdb235, #4fd3cd, #0098c9);
+  padding: 1px; /* size of your border */
+  box-sizing: border-box;
+
+  > * {
+    background: black;
+    border-radius: calc(var(--border-radius-small) - 1px);
+    box-sizing: border-box;
+  }
 
   @media (max-width: 768px) {
     grid-template-columns: repeat(1, 1fr);
