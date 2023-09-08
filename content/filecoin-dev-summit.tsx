@@ -61,7 +61,7 @@ export const FILECOIN_DEV_SUMMIT_2023_PAGE_CONTENT = [
             src: '/media/greaterheat.png',
             href: 'https://www.greaterheat.com/',
           },
-           {
+          {
             src: 'https://miro.medium.com/v2/resize:fit:2400/1*yjx1hYS0aLMntv_IQjIyyw.png',
             href: 'https://www.glif.io/',
           },
@@ -69,13 +69,19 @@ export const FILECOIN_DEV_SUMMIT_2023_PAGE_CONTENT = [
             src: 'https://i.ibb.co/JrQzymQ/Fil-Fi-logo.jpg',
             href: 'https://filfi.io/',
           },
-            {
+          {
             src: 'https://www.minefi.io/images/logo.png',
             href: 'https://www.minefi.io/',
           },
-            {
+          {
             src: 'https://i.ibb.co/JrZ6WNk/STFIL-Logo-white-background.png',
             href: 'https://stfil.io/#/',
+          },
+        ],
+        logosSmall: [
+          {
+            src: '/media/io-net.png',
+            href: 'https://io.net/',
           },
         ],
       },
