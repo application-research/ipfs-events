@@ -122,14 +122,14 @@ export default function SectionCamppage({ upcomingEvents }) {
             <div className={styles.getInvolvedColumns}>
               <div className={styles.involvementColumn}>
                 <div className={styles.rainbowBorderWrapper}>
-                  <Link href={'https://airtable.com/appM094R1Ma5HG757/shrWn6XaRgUkYWPm3'} target="_blank">
+                  <Link href={'https://airtable.com/appM094R1Ma5HG757/shrXTUagRUI1aC4G1'} target="_blank">
                     <div className={styles.involvementContent}>
                       <h4 className={styles.involvementText}>Become a Sponsor</h4>
                     </div>
                   </Link>
                 </div>
                 <div className={styles.rainbowBorderWrapper}>
-                  <Link href={'https://airtable.com/appM094R1Ma5HG757/shrXTUagRUI1aC4G1'} target="_blank">
+                  <Link href={'https://airtable.com/appM094R1Ma5HG757/shrWn6XaRgUkYWPm3'} target="_blank">
                     <div className={styles.involvementContent}>
                       <h4 className={styles.involvementText}>Submit a track or talk</h4>
                     </div>
@@ -138,7 +138,7 @@ export default function SectionCamppage({ upcomingEvents }) {
               </div>
               <div className={styles.involvementColumn}>
                 <div className={styles.rainbowBorderWrapper}>
-                  <Link href={'https://airtable.com/appM094R1Ma5HG757/shrXTUagRUI1aC4G1'} target="_blank">
+                  <Link href={'https://airtable.com/appM094R1Ma5HG757/shrQGQ8gH7OUXdUuc'} target="_blank">
                     <div className={styles.involvementContent}>
                       <h4 className={styles.involvementText}>Apply as an IPFS Scholar</h4>
                     </div>
