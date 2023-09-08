@@ -29,7 +29,7 @@ export default function CampNavbarLogoMiddle({ navContent }) {
                     {item?.dropdown && (
                       <section className={styles.dropdownContainer}>
                         <div className={`${styles.container}`} style={{ gap: '1rem' }}>
-                          <Link style="animated" href={item?.link ?? ''}>
+                          <Link style="animated-white" href={item?.link ?? ''}>
                             <p className={styles.whiteText}>{item.title}</p>
                           </Link>
 
