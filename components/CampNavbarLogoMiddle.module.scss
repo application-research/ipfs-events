@@ -21,11 +21,21 @@
 
 .container {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
   height: 80px;
   color: var(--color-white);
   z-index: var(--z-index-large);
+  gap: 1rem;
+  @media (max-width: 768px) {
+    gap: 0rem;
+  }
+}
+
+.linkAndArrowWrapper {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
 }
 
 .logo {
@@ -74,7 +84,7 @@
 .dropdownRow {
   display: flex;
   flex-direction: row;
-  gap: 2rem;
+  gap: 0rem;
 
   @media (max-width: 768px) {
     flex-direction: column;
@@ -117,6 +127,10 @@
 
 .whiteText {
   color: #ffffff;
+
+  @media (max-width: 768px) {
+    font-size: var(--font-size-small);
+  }
 }
 
 .columns {
@@ -127,7 +141,7 @@
 
 .column {
   display: flex;
-  gap: 2rem;
+  gap: 1rem;
   align-items: center;
 }
 

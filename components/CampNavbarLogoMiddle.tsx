@@ -28,13 +28,14 @@ export default function CampNavbarLogoMiddle({ navContent }) {
                       </Link>
                     )}
                     {item?.dropdown && (
-                      <section className={styles.dropdownContainer}>
-                        <div className={`${styles.container}`} style={{ gap: '0.2rem', cursor: 'pointer' }} onClick={() => setDropdownVisible(!isDropdownVisible)}>
-                          <Link style="animated-white" href={item?.link ?? ''}>
-                            <p className={styles.whiteText}>{item.title}</p>
-                          </Link>
-
-                          <ArrowSVGStyleTwo className={styles.arrow} />
+                      <section className={styles.dropdownContainer} onMouseOver={() => setDropdownVisible(!isDropdownVisible)}>
+                        <div className={`${styles.container}`}>
+                          <div className={`${styles.linkAndArrowWrapper}`}>
+                            <Link style="animated-white" href={item?.link ?? ''}>
+                              <p className={styles.whiteText}>{item.title}</p>
+                            </Link>
+                            <ArrowSVGStyleTwo className={styles.arrow} />
+                          </div>  
                         </div>
                         {isDropdownVisible && <Dropdown dropdown={item?.dropdown} />}
                       </section>
@@ -46,7 +47,7 @@ export default function CampNavbarLogoMiddle({ navContent }) {
             <div className={styles.logoWrapper}>
               <img src={navContent.logo.src} className={styles.logo} alt="IPFS Logo" />
             </div>
-            <div className={`${styles.column} ${styles.container}`} style={{ gap: '2rem' }}>
+            <div className={`${styles.column} ${styles.container}`} style={{ gap: '1rem' }}>
               {rightSide.map((item, index) => {
                 return (
                   <div key={index}>
