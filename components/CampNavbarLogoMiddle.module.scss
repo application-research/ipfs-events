@@ -63,6 +63,10 @@
   top: 80px;
   padding-top: 2rem;
   overflow: hidden;
+
+  @media (max-width: 768px) {
+    height: 100%;
+  }
 }
 
 .dropdownRow {
@@ -70,11 +74,20 @@
   flex-direction: row;
   gap: 2rem;
 
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
+
   .dropdownImage {
     height: 10rem;
     max-width: 16rem;
     object-fit: cover;
     border-radius: var(--border-radius-tiny);
+
+    @media (max-width: 768px) {
+      height: 100%;
+      max-width: 100%;
+    }
   }
 }
 
@@ -93,6 +106,10 @@
   }
   100% {
     height: 400px;
+
+    @media (max-width: 768px) {
+      height: 80vh;
+    }
   }
 }
 

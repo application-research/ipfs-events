@@ -1,12 +1,13 @@
 'use client';
 import styles from '@components/CampNavbarLogoMiddle.module.scss';
 
-import ArrowSVG from './svgs/ArrowBoldSVG';
 import GutterContainer from './GutterContainer';
 import Link from './Link';
 import ArrowSVGStyleTwo from './svgs/ArrowBoldWhiteSVG';
+import { useState } from 'react';
 
 export default function CampNavbarLogoMiddle({ navContent }) {
+  const [isDropdownVisible, setDropdownVisible] = useState(false);
   const { navItems } = navContent;
   const middleIndex = Math.floor(navItems.length / 2);
   const leftSide = navItems.slice(0, middleIndex);
@@ -28,14 +29,14 @@ export default function CampNavbarLogoMiddle({ navContent }) {
                     )}
                     {item?.dropdown && (
                       <section className={styles.dropdownContainer}>
-                        <div className={`${styles.container}`} style={{ gap: '0.2rem' }}>
+                        <div className={`${styles.container}`} style={{ gap: '0.2rem', cursor: 'pointer' }} onClick={() => setDropdownVisible(!isDropdownVisible)}>
                           <Link style="animated-white" href={item?.link ?? ''}>
                             <p className={styles.whiteText}>{item.title}</p>
                           </Link>
 
                           <ArrowSVGStyleTwo className={styles.arrow} />
                         </div>
-                        <Dropdown dropdown={item?.dropdown} />
+                        {isDropdownVisible && <Dropdown dropdown={item?.dropdown} />}
                       </section>
                     )}
                   </div>
