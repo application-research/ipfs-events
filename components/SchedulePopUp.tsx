@@ -57,24 +57,12 @@ export function SchedulePopUp({ trackTalks, isOpen, onClose, style }) {
                 <strong>Location</strong>: {location}
               </p>
             )}
-            {/* {trackLead && (
-            <p className={styles.people}>
-              <strong>Track Lead</strong>: {trackLead}
-            </p>
-          )} */}
             {trackAttendees && (
               <p className={styles.people}>
                 <strong>Attendees</strong>: {trackAttendees}
               </p>
             )}
             {trackDesc && <p className={styles.description}>{trackDesc}</p>}
-            {/* {ctas && (
-            <div className={styles.row} style={{ paddingTop: '0.5rem', display: 'flex', gap: '0.5rem' }}>
-              {eventItem.ctas.map((ctaItem, index) => {
-                return <CallToActionVariant key={index} type={ctaItem.type} cta={ctaItem} />;
-              })}
-            </div>
-          )}  */}
           </section>
           <h4 style={{ paddingBottom: '1rem', borderBottom: '0.5px solid var(--color-black)' }}>Schedule</h4>
           <div className={` ${styles.tableHeader}`}>

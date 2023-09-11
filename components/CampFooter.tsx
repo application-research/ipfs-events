@@ -1,6 +1,6 @@
 'use client';
 
-import styles from '@components/Footer.module.scss';
+import styles from '@components/CampFooter.module.scss';
 
 import { BreakpointEnum, useBreakpoint } from '@root/common/use-breakpoint';
 import * as React from 'react';
@@ -16,23 +16,27 @@ export default function CampFooter({ disclaimer, filResourcesCard, contactUsCard
   return (
     <div className={styles.footerBody} style={{ background: 'var(--color-rainbow)' }}>
       <div className={styles.sectionFooter}>
-        <div className={styles.siteFooter} style={{ display: 'flex', justifyContent: 'space-between' }}>
-          
-          {/* Left Side: Logo */}
-          <div style={{ flex: 1 }}>
+        <GutterContainer>
+          <div className={styles.siteFooter}>
             <div className={styles.logo}>
-              <img src="/media/colored-logo.png" alt="Logo" />
+              <img src="/media/black-and-white-logo.png" alt="Logo" />
+            </div>
+            <div className={styles.referralsContainer}>
+              <Link href={"/ipfs-camp/2024"} target="_blank">
+                <span className={styles.footerReferrals}>IPFS Camp</span>
+              </Link>
+              <Link href={"https://2023.ipfs-thing.io/"} target="_blank">
+                <span className={styles.footerReferrals}>IPFS Thing</span>
+              </Link>
+              <Link href={"/ipfs-friends-cafe"} target="_blank">
+                <span className={styles.footerReferrals}>IPFS Cafe</span>
+              </Link>
+              <Link href={"https://lu.ma/ipfs"} target="_blank">
+                <span className={styles.footerReferrals}>Calendar</span>
+              </Link>
             </div>
           </div>
-
-          {/* Right Side: IPFS Camp, IPFS Thing, and Calendar */}
-          <div style={{ flex: 1, display: 'flex', justifyContent: 'flex-end', alignItems: 'center' }}>
-            <div className={styles.heading} style={{ margin: '0 15px' }}>IPFS Camp</div>
-            <div className={styles.heading} style={{ margin: '0 15px' }}>IPFS Thing</div>
-            <div className={styles.heading} style={{ margin: '0 15px' }}>IPFS Cafe</div>
-            <div className={styles.heading} style={{ margin: '0 15px' }}>Calendar</div>
-          </div>
-        </div>
+        </GutterContainer>
       </div>
     </div>
   );
