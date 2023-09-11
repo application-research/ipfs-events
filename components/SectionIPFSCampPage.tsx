@@ -69,9 +69,11 @@ export default function SectionCamppage({ upcomingEvents }) {
                 <div className={styles.rainbowBorderWrapper}>
                   <div className={styles.innerContent}>
                     <div className={styles.diptychHalf}>
+                    <Link href={'https://airtable.com/appM094R1Ma5HG757/shrPwanwnxoCDYT56'} target="_blank">
                       <div className={styles.rainbowButton}>
                         <span className={styles.boldText}>PRE-REGISTER</span>
                       </div>
+                    </Link>
                     </div>
                     <div className={styles.diptychHalf}>
                       <div className={styles.centerTextContainer}>
