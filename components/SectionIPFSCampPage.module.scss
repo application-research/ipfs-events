@@ -335,11 +335,13 @@
   @media (max-width: 1020px) {
     width: 110%;
     height: 100%;
+    filter: brightness(90%);
   }
 
   @media (max-width: 768px) {
     width: 150%;
     height: 100%;
+    filter: brightness(80%) hue-rotate(20deg);
   }
 }
 
@@ -367,7 +369,6 @@
 }
 
 .bottomSquiggleStyle {
-  filter: brightness(50%);
   overflow: hidden;
   width: 100%;
   height: auto;
