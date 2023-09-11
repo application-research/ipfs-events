@@ -57,7 +57,7 @@ export default function SectionCamppage({ upcomingEvents }) {
       <GutterContainer>
         <div style={{ display: 'grid', rowGap: '8rem' }}>
           <section>
-            <img src="/media/ipfs-camp-2024.png" alt="IPFS Camp 2024" className={styles.imageClass}/>
+            <img src="/media/ipfs-camp-2024.png" alt="IPFS Camp 2024" className={styles.imageClass} style={{ marginBottom: "2rem" }} />
             <header className={styles.header} style={{ paddingBottom: '4rem' }}>
               <div className={styles.headerText}>
                 <h2 className={styles.h2}>IPFS is more than just a ‘conference’; it’s a global movement of builders and visionaries committed to creating a better web. </h2>
@@ -180,7 +180,7 @@ export default function SectionCamppage({ upcomingEvents }) {
           </section>
           <div style={{ display: 'grid', rowGap: '2rem' }}>
             <div className={styles.headerWrapper}>
-              <h1 className={styles.sectionTitle}>Past Camp Events</h1>
+              <h2 className={styles.sectionTitle}>Past Camp Events</h2>
               <div className={styles.imageAndTextWrapper}>
                 <img src="/media/ipfs-camp-2024.png" alt="IPFS Camp" />
                 <div className={styles.impactText}>2022 Impact</div>

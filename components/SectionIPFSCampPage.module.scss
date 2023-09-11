@@ -120,12 +120,12 @@
 
 .rainbowBorderWrapper {
   background: linear-gradient(to left, #e01633, #cdb235, #4fd3cd, #0098c9);
-  border-radius: 5px;
+  border-radius: var(--border-radius-small);
   padding: 2px;
   display: inline-block;
   margin-bottom: 2rem;
   width: 70%;
-  z-index: var(--z-index-medium);
+  z-index: var(--z-index-small);
 
   @media (max-width: 768px) {
     width: 100%;
@@ -156,6 +156,11 @@
 
   .centerTextContainer {
     padding: 2rem 0;
+
+    @media (max-width: 768px) {
+      padding-top: 0.75rem;
+      padding-bottom: 0.01rem;
+    }
 
     .boldText {
       font-weight: bold;
@@ -428,6 +433,10 @@
     background-image: linear-gradient(to bottom, #e01633 25%, #cdb235, #4fd3cd 70%, #0098c9 90%);
     -webkit-background-clip: text;
     color: transparent;
+    margin-right: 1rem;
+    @media (max-width: 768px) {
+      margin-right: 0rem;
+    }
   }
 
   .whiteText {
@@ -542,7 +551,7 @@
   justify-content: center;
   font-weight: var(--font-weight-light);
   text-align: center;
-  z-index: var(--z-index-large);
+  z-index: var(--z-index-medium);
 }
 
 .getInvolvedColumns {
@@ -706,6 +715,7 @@
 
     @media (max-width: 768px) {
       flex-direction: column;
+      gap: 2rem;
     }
   }
 

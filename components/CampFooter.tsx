@@ -21,6 +21,7 @@ export default function CampFooter({ disclaimer, filResourcesCard, contactUsCard
             <div className={styles.logo}>
               <img src="/media/black-and-white-logo.png" alt="Logo" />
             </div>
+            { !isMobile ? ( 
             <div className={styles.referralsContainer}>
               <Link href={"/ipfs-camp/2024"} target="_blank">
                 <span className={styles.footerReferrals}>IPFS Camp</span>
@@ -35,6 +36,15 @@ export default function CampFooter({ disclaimer, filResourcesCard, contactUsCard
                 <span className={styles.footerReferrals}>Calendar</span>
               </Link>
             </div>
+            ) : (
+            <div className={styles.backToTopButtonContainer}>
+              <div className={styles.backToTopButton}>
+                <a href="#top" className={`${styles.toTop} ${styles.link}`}>
+                  Back to Top
+                </a>
+              </div>
+            </div>
+            )}
           </div>
         </GutterContainer>
       </div>

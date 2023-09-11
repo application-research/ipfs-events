@@ -25,6 +25,7 @@
   align-items: center;
   height: 80px;
   color: var(--color-white);
+  z-index: var(--z-index-large);
 }
 
 .logo {
@@ -32,6 +33,7 @@
 
   @media (max-width: 768px) {
     width: 1rem;
+    display: none;
   }
 }
 
