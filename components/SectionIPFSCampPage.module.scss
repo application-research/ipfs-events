@@ -491,11 +491,14 @@
     gap: 4.5rem;
     padding-left: 3rem;
     width: 100%;
+    border-top-left-radius: 0%;
+    border-bottom-left-radius: 0%;
     @media (max-width: 768px) {
       padding-left: 1rem;
       padding: 0rem;
       border-top-right-radius: 0%;
       border-top-left-radius: 0%;
+      border-bottom-left-radius: 0.5rem;
       gap: 0rem;
     }
   }
