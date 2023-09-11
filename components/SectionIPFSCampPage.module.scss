@@ -64,7 +64,7 @@
     }
 
     .impactText {
-      color: #ffffff;
+      color: var(--color-white);
       margin-left: 16px;
       font-size: 25px;
       font-family: Inter;
@@ -87,7 +87,7 @@
 }
 
 .pageContainer {
-  background: linear-gradient(to bottom, #022232 0%, #000000 20%);
+  background: linear-gradient(to bottom, #022232 0%, var(--color-black) 000 20%);
 }
 
 .rainbowBorderWrapper {
@@ -117,7 +117,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  border-right: 1px solid #ccc;
+  border-right: 1px solid var(--color-white100);
 
   .centerTextContainer {
     padding: 2rem 0;
@@ -145,7 +145,7 @@
 
   @media (max-width: 768px) {
     border-right: 0;
-    border-bottom: 1px solid #ccc;
+    border-bottom: 1px solid var(--color-white100);
   }
 }
 
@@ -451,14 +451,14 @@
 }
 
 .sectionTitle {
-  color: #ffffff;
+  color: var(--color-white);
   padding-left: 1rem;
   padding-bottom: 1rem;
   font-weight: var(--font-weight-light);
 }
 
 .centeredSectionTitle {
-  color: #ffffff;
+  color: var(--color-white);
   margin-left: 1rem;
   margin-right: 1rem;
   padding-bottom: 4rem;
@@ -487,7 +487,7 @@
   .involvementContent {
     z-index: var(--z-index-medium);
     background: black;
-    color: #ffffff;
+    color: var(--color-white);
     border-radius: 10px;
     display: flex;
     align-items: center;
@@ -582,7 +582,7 @@
         font-size: var(--font-size-tiny);
         font-family: Inter;
         font-weight: var(--font-weight-light);
-        letter-spacing: -.003em;
+        letter-spacing: -0.003em;
         line-height: 1.6rem;
       }
 
@@ -603,7 +603,7 @@
   padding-bottom: 7rem;
 
   .yearbookTitle {
-    color: #000;
+    color: var(--color-black);
     padding: 5rem 0;
     font-size: 2rem;
     font-family: Inter;
@@ -622,7 +622,7 @@
   }
 
   .yearButton {
-    background-color: #000;
+    background-color: var(--color-black);
     border: none;
     border-radius: 50px;
     color: var(--text-white);
