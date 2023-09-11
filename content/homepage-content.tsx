@@ -18,7 +18,7 @@ export const HOMEPAGE_CONTENT = {
       image: '/media/ipfs-camp.png',
       link: '/ipfs-camp/2024',
       location: 'TBD',
-      name: 'IPFS Camp 2023',
+      name: 'IPFS Camp 2024',
     },
     {
       date: 'Q3 2024',

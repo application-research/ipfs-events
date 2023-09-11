@@ -5,7 +5,7 @@ export default async function Head({ params }) {
   const title = 'IPFS Friends + Cafe';
   const description =
     'IPFS Friends + Cafe are community-hosted events that foster knowledge exchange, community growth, collaboration, innovation, and the continued advancement of IPFS as groundbreaking technology';
-  const url = 'https://ipfs.events';
+  const url = 'https://ipfsevents.io';
 
   // SUMMARY_LARGE_IMAGE: 1500x785
   return (

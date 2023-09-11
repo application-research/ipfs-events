@@ -24,8 +24,8 @@ export const NAVIGATION_HOMEPAGE_CONTENT = {
       dropdown: [
         {
           header: 'Upcoming Event',
-          title: 'IPFS Camp 2023',
-          date: 'TBD | Q2 2024',
+          title: 'IPFS Camp 2024',
+          date: 'TBD | Spring 2024',
           location: 'Location TBD',
           link: '/ipfs-camp/2024',
           image: 'https://blog.ipfs.tech/assets/img/chooseyouradventure.bf5cb5ad.jpeg',

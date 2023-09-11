@@ -2,10 +2,10 @@ import DefaultMetaTags from '@components/DefaultMetaTags';
 import PlausibleScript from '@root/components/PlausibleScript';
 
 export default async function Head({ params }) {
-  const title = 'IPFS.Events';
+  const title = 'IPFS Events';
   const description =
     'IPFS þing is a week-long gathering for the IPFS implementors community. Everything from talks, workshops, discussion circles, hacking time, and more — all focused on advancing IPFS implementations. ';
-  const url = 'https://ipfs.events';
+  const url = 'https://ipfsevents.io';
 
   // SUMMARY_LARGE_IMAGE: 1500x785
   return (
