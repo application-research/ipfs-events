@@ -34,6 +34,13 @@
   @media (max-width: 768px) {
     width: 100%;
     height: 100%;
+    top: -10%;
+  }
+
+  @media (max-width: 488px) {
+    width: 100%;
+    height: 100%;
+    top: -20%;
   }
 }
 
@@ -379,7 +386,7 @@
   border-radius: var(--border-radius-small);
   z-index: var(--z-index-medium);
   background: linear-gradient(to left, #e01633, #cdb235, #4fd3cd, #0098c9);
-  padding: 1px; /* size of your border */
+  padding: 1px;
   box-sizing: border-box;
 
   > * {
@@ -460,6 +467,7 @@
   .campEventsStatsPartTwo {
     width: 100%;
     display: flex;
+    white-space: nowrap;
     @media (max-width: 768px) {
       display: inline-block;
       padding: 1rem;
