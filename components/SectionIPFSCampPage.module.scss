@@ -49,18 +49,23 @@
 
   @media (max-width: 768px) {
     flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
   }
 
   .imageAndTextWrapper {
     display: flex;
     align-items: center;
-    margin-right: 5rem;
 
     img {
       margin-left: 5rem; // Add left margin to move the image to the right
       height: 30px; // Adjust the height as needed
-      width: 124.86px; // Adjust the width as needed
+      height: 2.5rem; // Adjust the width as needed
       object-fit: cover; // Makes sure the image maintains aspect ratio
+
+      @media (max-width: 768px) {
+        margin-left: 0rem;
+      }
     }
 
     .impactText {
@@ -97,10 +102,14 @@
   display: inline-block;
   margin-bottom: 2rem;
   width: 70%;
+
+  @media (max-width: 768px) {
+    width: 100%;
+  }
 }
 
 .innerContent {
-  background: black;
+  background: var(--color-black);
   border-radius: 5px;
   display: flex;
   justify-content: space-between;
@@ -255,6 +264,10 @@
   left: 55%;
   overflow: hidden;
   position: absolute;
+
+  @media (max-width: 768px) {
+    display: none;
+  }
 }
 
 .topSquiggleStyle {
@@ -280,11 +293,14 @@
 }
 
 .bottomSquiggleContainer {
-  top: 340%;
   left: 75%;
   overflow: hidden;
   position: absolute;
   clip-path: inset(0);
+
+  @media (max-width: 768px) {
+    display: none;
+  }
 }
 
 .bottomSquiggleStyle {
@@ -378,7 +394,6 @@
     background-image: linear-gradient(to bottom, #e01633 25%, #cdb235, #4fd3cd 70%, #0098c9 90%);
     -webkit-background-clip: text;
     color: transparent;
-    
   }
 
   .whiteText {
@@ -477,7 +492,6 @@
 
 .sectionTitle {
   color: var(--color-white);
-  padding-left: 1rem;
   padding-bottom: 1rem;
   font-weight: var(--font-weight-light);
 }
@@ -488,6 +502,7 @@
   margin-right: 1rem;
   padding-bottom: 4rem;
   justify-content: center;
+  font-weight: var(--font-weight-light);
   text-align: center;
   z-index: var(--z-index-large);
 }
@@ -555,6 +570,10 @@
       flex: 1;
       margin: 0 1rem;
       z-index: var(--z-index-medium);
+
+      @media (max-width: 768px) {
+        margin: 0;
+      }
 
       .faqBorderWrapper {
         z-index: var(--z-index-medium);
@@ -722,9 +741,13 @@
 
 .p {
   font-family: Inter;
-  font-size: 14px;
-  margin-top: 0.5rem;
-  margin-bottom: 2rem;
+  padding-top: 0.5rem;
+  padding-bottom: 1rem;
+  font-family: Inter;
+  font-size: var(--font-size-regular);
+  font-family: var(--font-size-small);
+  font-weight: var(--font-weight-light);
+  line-height: 1.6rem;
 }
 
 .h3 {

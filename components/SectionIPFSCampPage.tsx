@@ -19,7 +19,7 @@ export default function SectionCamppage({ upcomingEvents }) {
   const [expandedFaqRight, setExpandedFaqRight] = useState(null);
 
   const toggleFaq = (side, index) => {
-    if (side === "left") {
+    if (side === 'left') {
       if (expandedFaqLeft === index) {
         setExpandedFaqLeft(null);
       } else {
@@ -33,19 +33,26 @@ export default function SectionCamppage({ upcomingEvents }) {
       }
     }
   };
- 
+
   const faqsLeft = [
-    { question: "What is IPFS Camp and who is it for?", answer: "IPFS Camp is more than just a 'conference'; it's a global movement of builders and visionaries committed to creating a better web. Over the course of three days, we will host hundreds of talks, workshops, and hacking sessions, all focused on the latest advancements in decentralized technologies and the future of the internet. IPFS Camp provides the ideal platform to exchange ideas, collaborate, and co-create solutions for the real-world challenges that the web is currently facing."},
-    { question: "What does the ticket include?", answer: "All tickets include entry to the full 3-day event with coffee, morning pastries, lunch, and dinner at the IPFS Camp venue."}
+    {
+      question: 'What is IPFS Camp and who is it for?',
+      answer:
+        "IPFS Camp is more than just a 'conference'; it's a global movement of builders and visionaries committed to creating a better web. Over the course of three days, we will host hundreds of talks, workshops, and hacking sessions, all focused on the latest advancements in decentralized technologies and the future of the internet. IPFS Camp provides the ideal platform to exchange ideas, collaborate, and co-create solutions for the real-world challenges that the web is currently facing.",
+    },
+    {
+      question: 'What does the ticket include?',
+      answer: 'All tickets include entry to the full 3-day event with coffee, morning pastries, lunch, and dinner at the IPFS Camp venue.',
+    },
   ];
-  
+
   const faqsRight = [
-    { question: "How can I participate?", answer: "You can: Submit a track or talk, Sponsor, Apply as an IPFS Scholar, Become a key organizer, Volunteer, Apply for Expo Space"},
-    { question: "How can I reach out to the organizers", answer: "Please reach out to miwa@protocol.ai with any questions or suggestions"}
+    { question: 'How can I participate?', answer: 'You can: Submit a track or talk, Sponsor, Apply as an IPFS Scholar, Become a key organizer, Volunteer, Apply for Expo Space' },
+    { question: 'How can I reach out to the organizers', answer: 'Please reach out to miwa@protocol.ai with any questions or suggestions' },
   ];
-  
+
   return (
-    <div className={styles.pageContainer}>
+    <div className={styles.pageContainer} style={{ overflow: 'hidden' }}>
       <GutterContainer>
         <div style={{ display: 'grid', rowGap: '8rem' }}>
           <section>
@@ -62,7 +69,7 @@ export default function SectionCamppage({ upcomingEvents }) {
                   <div className={styles.innerContent}>
                     <div className={styles.diptychHalf}>
                       <div className={styles.rainbowButton}>
-                        <span className={styles.boldText}>PREREGISTER</span>
+                        <span className={styles.boldText}>PRE-REGISTER</span>
                       </div>
                     </div>
                     <div className={styles.diptychHalf}>
@@ -99,14 +106,19 @@ export default function SectionCamppage({ upcomingEvents }) {
             </div>
             <div className={styles.videoSquiggleContainer}>
               <svg className={styles.videoSquiggleStyle} width="560" height="390" viewBox="0 0 560 390" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M85.7689 32.7635C85.7689 32.7635 -0.535029 83.9408 46.8507 130.949C94.2358 177.956 356.248 72.3749 400.875 149.369C423.055 187.636 388.233 210.611 354.847 231.94C320.897 253.631 300.406 308.606 329.812 341.178C388.272 405.932 448.657 251.756 527.911 329.311" stroke="url(#paint0_linear_924_1095)" stroke-width="63.9167" stroke-linecap="round"/>
-              <defs>
-              <linearGradient id="paint0_linear_924_1095" x1="566.574" y1="358.265" x2="-20.8976" y2="107.673" gradientUnits="userSpaceOnUse">
-              <stop stop-color="#08ADE3"/>
-              <stop offset="0.5" stop-color="#CDAB37"/>
-              <stop offset="1" stop-color="#E01C33"/>
-              </linearGradient>
-              </defs>
+                <path
+                  d="M85.7689 32.7635C85.7689 32.7635 -0.535029 83.9408 46.8507 130.949C94.2358 177.956 356.248 72.3749 400.875 149.369C423.055 187.636 388.233 210.611 354.847 231.94C320.897 253.631 300.406 308.606 329.812 341.178C388.272 405.932 448.657 251.756 527.911 329.311"
+                  stroke="url(#paint0_linear_924_1095)"
+                  stroke-width="63.9167"
+                  stroke-linecap="round"
+                />
+                <defs>
+                  <linearGradient id="paint0_linear_924_1095" x1="566.574" y1="358.265" x2="-20.8976" y2="107.673" gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#08ADE3" />
+                    <stop offset="0.5" stop-color="#CDAB37" />
+                    <stop offset="1" stop-color="#E01C33" />
+                  </linearGradient>
+                </defs>
               </svg>
             </div>
           </section>
@@ -163,67 +175,71 @@ export default function SectionCamppage({ upcomingEvents }) {
               </div>
             </div>
           </section>
-          <div className={styles.headerWrapper}>
-            <h1 className={styles.sectionTitle}>Past Camp Events</h1>
-            <div className={styles.imageAndTextWrapper}>
-              <img src="/media/ipfs-camp-2024.png" alt="IPFS Camp" />
-              <div className={styles.impactText}>2022 Impact</div>
+          <div style={{ display: 'grid', rowGap: '2rem' }}>
+            <div className={styles.headerWrapper}>
+              <h1 className={styles.sectionTitle}>Past Camp Events</h1>
+              <div className={styles.imageAndTextWrapper}>
+                <img src="/media/ipfs-camp-2024.png" alt="IPFS Camp" />
+                <div className={styles.impactText}>2022 Impact</div>
+              </div>
             </div>
+            <section className={styles.campEvents}>
+              <div className={styles.statsColumnLeft}>
+                <div className={styles.lineOne}>
+                  <h2 className={styles.campEventsStatsPartOne}>
+                    <span className={styles.greaterRainbowText}>17 </span> <span className={styles.whiteText}>Tracks</span>
+                  </h2>
+                  <h2 className={styles.campEventsStatsPartOne}>
+                    <span className={styles.greaterRainbowText}>100+ </span> <span className={styles.whiteText}>Speakers</span>
+                  </h2>
+                </div>
+                <div className={styles.lineTwo}>
+                  <h2 className={styles.campEventsStatsPartOne}>
+                    <span className={styles.greaterRainbowText}>540 </span> <span className={styles.whiteText}>Participants</span>
+                  </h2>
+                </div>
+              </div>
+              <div className={styles.statsColumnRight}>
+                <h4 className={styles.campEventsStatsPartTwo}>
+                  <span className={styles.lesserRainbowText}>34 </span> <span className={styles.whiteText}>IPFS Scholars</span>
+                </h4>
+                <h4 className={styles.campEventsStatsPartTwo}>
+                  <span className={styles.lesserRainbowText}>30 </span> <span className={styles.whiteText}>Countries</span>
+                </h4>
+                <h4 className={styles.campEventsStatsPartTwo}>
+                  <span className={styles.lesserRainbowText}>20 </span> <span className={styles.whiteText}>Volunteers</span>
+                </h4>
+              </div>
+            </section>
           </div>
-          <section className={styles.campEvents}>
-            <div className={styles.statsColumnLeft}>
-              <div className={styles.lineOne}>
-                <h2 className={styles.campEventsStatsPartOne}>
-                  <span className={styles.greaterRainbowText}>17 </span> <span className={styles.whiteText}>Tracks</span>
-                </h2>
-                <h2 className={styles.campEventsStatsPartOne}>
-                  <span className={styles.greaterRainbowText}>100+ </span> <span className={styles.whiteText}>Speakers</span>
-                </h2>
-              </div>
-              <div className={styles.lineTwo}>
-                <h2 className={styles.campEventsStatsPartOne}>
-                  <span className={styles.greaterRainbowText}>540 </span> <span className={styles.whiteText}>Participants</span>
-                </h2>
-              </div>
-            </div>
-            <div className={styles.statsColumnRight}>
-              <h4 className={styles.campEventsStatsPartTwo}>
-                <span className={styles.lesserRainbowText}>34 </span> <span className={styles.whiteText}>IPFS Scholars</span>
-              </h4>
-              <h4 className={styles.campEventsStatsPartTwo}>
-                <span className={styles.lesserRainbowText}>30 </span> <span className={styles.whiteText}>Countries</span>
-              </h4>
-              <h4 className={styles.campEventsStatsPartTwo}>
-                <span className={styles.lesserRainbowText}>20 </span> <span className={styles.whiteText}>Volunteers</span>
-              </h4>
-            </div>
-          </section>
           <section className={styles.faqSection}>
-          <h1 className={styles.sectionTitle} style={{ paddingBottom: '2rem' }}>FAQs</h1>
+            <h1 className={styles.sectionTitle} style={{ paddingBottom: '2rem' }}>
+              FAQs
+            </h1>
             <div className={styles.faqColumns}>
-                <div className={styles.faqLeft}>
-                  {faqsLeft.map((faq, index) => (
-                    <div className={styles.faqBorderWrapper} key={index} onClick={() => toggleFaq('left', index)}>
-                      <div className={`${styles.faqContent} ${expandedFaqLeft === index ? styles.open : ''}`}>
-                        <h4>{faq.question}</h4>
-                        <div className={styles.plusSymbol}>{expandedFaqLeft === index ? "-" : "+"}</div>
-                      </div>
-                      {expandedFaqLeft === index && <div className={styles.faqAnswer}>{faq.answer}</div>}
+              <div className={styles.faqLeft}>
+                {faqsLeft.map((faq, index) => (
+                  <div className={styles.faqBorderWrapper} key={index} onClick={() => toggleFaq('left', index)}>
+                    <div className={`${styles.faqContent} ${expandedFaqLeft === index ? styles.open : ''}`}>
+                      <h4>{faq.question}</h4>
+                      <div className={styles.plusSymbol}>{expandedFaqLeft === index ? '-' : '+'}</div>
                     </div>
-                  ))}
-                </div>
-                <div className={styles.faqRight}>
-                  {faqsRight.map((faq, index) => (
-                    <div className={styles.faqBorderWrapper} key={index} onClick={() => toggleFaq('right', index)}>
-                      <div className={`${styles.faqContent} ${expandedFaqRight === index ? styles.open : ''}`}>
-                        <h4>{faq.question}</h4>
-                        <div className={styles.plusSymbol}>{expandedFaqRight === index ? "-" : "+"}</div>
-                      </div>
-                      {expandedFaqRight === index && <div className={styles.faqAnswer}>{faq.answer}</div>}
-                    </div>
-                  ))}
-                </div>
+                    {expandedFaqLeft === index && <div className={styles.faqAnswer}>{faq.answer}</div>}
+                  </div>
+                ))}
               </div>
+              <div className={styles.faqRight}>
+                {faqsRight.map((faq, index) => (
+                  <div className={styles.faqBorderWrapper} key={index} onClick={() => toggleFaq('right', index)}>
+                    <div className={`${styles.faqContent} ${expandedFaqRight === index ? styles.open : ''}`}>
+                      <h4>{faq.question}</h4>
+                      <div className={styles.plusSymbol}>{expandedFaqRight === index ? '-' : '+'}</div>
+                    </div>
+                    {expandedFaqRight === index && <div className={styles.faqAnswer}>{faq.answer}</div>}
+                  </div>
+                ))}
+              </div>
+            </div>
             <div className={styles.bottomSquiggleContainer}>
               <svg className={styles.bottomSquiggleStyle} width="498" height="305" viewBox="0 0 498 305" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path

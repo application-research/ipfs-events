@@ -29,6 +29,10 @@
 
 .logo {
   width: 3.5rem;
+
+  @media (max-width: 768px) {
+    width: 1rem;
+  }
 }
 
 .arrow {
