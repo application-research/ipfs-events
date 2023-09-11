@@ -303,18 +303,46 @@
 }
 
 .topSquiggleContainer {
+  right: 0;
   top: 17%;
-  left: 55%;
   overflow: hidden;
   position: absolute;
+
+  @media (max-width: 1440px) {
+    top: 20%;
+  }
+
+  @media (max-width: 1020px) {
+    top: 17%;
+  }
+
+  @media (max-width: 768px) {
+    top: 17%;
+  }
 }
 
 .topSquiggleStyle {
   overflow: hidden;
-  width: 100%;
+  width: 110%;
   height: auto;
   z-index: 0;
+
+  @media (max-width: 1440px) {
+    width: 110%;
+    height: 100%;
+  }
+
+  @media (max-width: 1020px) {
+    width: 110%;
+    height: 100%;
+  }
+
+  @media (max-width: 768px) {
+    width: 150%;
+    height: 100%;
+  }
 }
+
 
 .bottomSquiggleContainer {
   left: 75%;
