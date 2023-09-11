@@ -303,20 +303,23 @@
 }
 
 .topSquiggleContainer {
-  right: 0;
+  right: 10%;
   top: 17%;
   overflow: hidden;
   position: absolute;
 
   @media (max-width: 1440px) {
+    right: 0%;
     top: 20%;
   }
 
   @media (max-width: 1020px) {
-    top: 17%;
+    right: 0%;
+    top: 25%;
   }
 
   @media (max-width: 768px) {
+    right: 0%;
     top: 17%;
   }
 }
@@ -335,7 +338,7 @@
   @media (max-width: 1020px) {
     width: 110%;
     height: 100%;
-    filter: brightness(90%);
+    filter: brightness(95%);
   }
 
   @media (max-width: 768px) {
