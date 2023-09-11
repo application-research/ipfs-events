@@ -125,6 +125,7 @@
   display: inline-block;
   margin-bottom: 2rem;
   width: 70%;
+  z-index: var(--z-index-medium);
 
   @media (max-width: 768px) {
     width: 100%;
