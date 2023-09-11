@@ -346,6 +346,27 @@
   }
 }
 
+.backToTopButtonContainer {
+  @media (max-width: 768px) {
+    flex-direction: row;
+    gap: 1rem;
+  }
+}
+
+.backToTopButton {
+  background-color: var(--color-transparent);
+  border: 2px solid var(--color-black);
+  border-radius: 40px;
+  color: var(--text-black);
+  padding: 20px 50px 20px 50px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: #333;
+  }
+}
 //Back To Top Buttom
 .backToTopSection {
   display: none;
