@@ -16,17 +16,7 @@ export default async function Page(props) {
   return (
     <DefaultLayout>
       <CampNavbarLogoMiddle navContent={navContent} />
-
-      <div
-        style={{
-          backgroundImage: 'radial-gradient(circle at center, #ffffff 1px, transparent 1px), radial-gradient(circle at center, transparent 1px, transparent 2px)',
-          backgroundSize: '10px 10px',
-          background: 'red',
-        }}
-      >
-        <SectionCamppage {...homepage} />
-      </div>
-
+      <SectionCamppage {...homepage} />
       <CampFooter {...footerContent} />
     </DefaultLayout>
   );
