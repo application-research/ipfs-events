@@ -52,8 +52,8 @@ export default function SectionCamppage({ upcomingEvents }) {
             <img src="/media/ipfs-camp-2024.png" alt="IPFS Camp 2024" className={styles.imageClass} style={{ paddingBottom: '2rem' }} />
             <header className={styles.header} style={{ paddingBottom: '4rem' }}>
               <div className={styles.headerText}>
-                <h3 className={styles.h3}>IPFS is more than just a ‘conference’; it’s a global movement of builders and visionaries committed to creating a better web. </h3>
-                <p>
+                <h2 className={styles.h2}>IPFS is more than just a ‘conference’; it’s a global movement of builders and visionaries committed to creating a better web. </h2>
+                <p className={styles.p}>
                   Over the course of three days, we will host hundreds of talks, workshops, and hacking sessions, all focused on the latest advancements in decentralized
                   technologies and the future of the internet. IPFS Camp provides the ideal platform to exchange ideas, collaborate, and co-create solutions for the real-world
                   challenges that the web is currently facing.
@@ -61,15 +61,13 @@ export default function SectionCamppage({ upcomingEvents }) {
                 <div className={styles.rainbowBorderWrapper}>
                   <div className={styles.innerContent}>
                     <div className={styles.diptychHalf}>
-                      <div className={styles.centerTextContainer}>
-                        <span className={styles.boldText}>CAMP 2024</span>
-                        <span className={styles.newlineText}>Tokyo, Japan</span>
+                      <div className={styles.rainbowButton}>
+                        <span className={styles.boldText}>PREREGISTER</span>
                       </div>
                     </div>
                     <div className={styles.diptychHalf}>
                       <div className={styles.centerTextContainer}>
-                        <span className={styles.boldText}>October 10 - 20,</span>
-                        <span className={styles.newlineBoldText}>2024</span>
+                        <span className={styles.boldText}>SPRING 2024</span>
                       </div>
                     </div>
                   </div>
@@ -97,23 +95,18 @@ export default function SectionCamppage({ upcomingEvents }) {
               <h2 className={styles.centeredSectionTitle}> IPFS Camp 2022 - Recap </h2>
             </div>
             <div className={styles.mediaContainer}>
-              <VideoPlayer src={'/media/ipfs-camp-2022.mp4'} autoPlay muted ariaLabel="video" ratio={Ratio.SIXTEEN_BY_NINE} />
+              <VideoPlayer src={'/media/ipfs-camp-2022.mp4'} autoPlay muted ariaLabel="video" ratio={Ratio.ORIGINAL} />
             </div>
             <div className={styles.videoSquiggleContainer}>
-              <svg className={styles.videoSquiggleStyle} xmlns="http://www.w3.org/2000/svg" width="800" height="500" viewBox="0 0 564 457" fill="none">
-                <path
-                  d="M120.782 32.3641C120.782 32.3641 1.58132 63 40.1581 119.934C78.7345 176.868 422.805 132.753 447.428 218.508C459.666 261.127 410.739 275.773 364.08 289.127C316.63 302.709 273.007 352.037 295.73 390.707C340.904 467.586 466.655 329.914 531.557 424.09"
-                  stroke="url(#paint0_linear_778_2)"
-                  strokeWidth="63.9167"
-                  strokeLinecap="round"
-                />
-                <defs>
-                  <linearGradient id="paint0_linear_778_2" x1="554.599" y1="466.891" x2="47.6704" y2="4.44691" gradientUnits="userSpaceOnUse">
-                    <stop stopColor="#08ADE3" />
-                    <stop offset="0.5" stopColor="#CDAB37" />
-                    <stop offset="1" stopColor="#E01C33" />
-                  </linearGradient>
-                </defs>
+              <svg className={styles.videoSquiggleStyle} width="560" height="390" viewBox="0 0 560 390" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M85.7689 32.7635C85.7689 32.7635 -0.535029 83.9408 46.8507 130.949C94.2358 177.956 356.248 72.3749 400.875 149.369C423.055 187.636 388.233 210.611 354.847 231.94C320.897 253.631 300.406 308.606 329.812 341.178C388.272 405.932 448.657 251.756 527.911 329.311" stroke="url(#paint0_linear_924_1095)" stroke-width="63.9167" stroke-linecap="round"/>
+              <defs>
+              <linearGradient id="paint0_linear_924_1095" x1="566.574" y1="358.265" x2="-20.8976" y2="107.673" gradientUnits="userSpaceOnUse">
+              <stop stop-color="#08ADE3"/>
+              <stop offset="0.5" stop-color="#CDAB37"/>
+              <stop offset="1" stop-color="#E01C33"/>
+              </linearGradient>
+              </defs>
               </svg>
             </div>
           </section>
@@ -189,7 +182,7 @@ export default function SectionCamppage({ upcomingEvents }) {
               </div>
               <div className={styles.lineTwo}>
                 <h2 className={styles.campEventsStatsPartOne}>
-                  <span className={styles.greaterRainbowText}>5400 </span> <span className={styles.whiteText}>Participants</span>
+                  <span className={styles.greaterRainbowText}>540 </span> <span className={styles.whiteText}>Participants</span>
                 </h2>
               </div>
             </div>
