@@ -28,8 +28,8 @@ export default function CampNavbarLogoMiddle({ navContent }) {
                       </Link>
                     )}
                     {item?.dropdown && (
-                      <section className={styles.dropdownContainer} onMouseOver={() => setDropdownVisible(!isDropdownVisible)}>
-                        <div className={`${styles.container}`}>
+                      <section className={styles.dropdownContainer}>
+                        <div className={`${styles.container}`} style={{ gap: '0.2rem', cursor: 'pointer' }} onClick={() => setDropdownVisible(!isDropdownVisible)}>
                           <div className={`${styles.linkAndArrowWrapper}`}>
                             <Link style="animated-white" href={item?.link ?? ''}>
                               <p className={styles.whiteText}>{item.title}</p>
@@ -52,7 +52,7 @@ export default function CampNavbarLogoMiddle({ navContent }) {
                 return (
                   <div key={index}>
                     {!item.dropdown && (
-                      <Link style="animated" href={item.link} target={item?.target ?? '_self'}>
+                      <Link style="animated-white" href={item.link} target={item?.target ?? '_self'}>
                         <p className={styles.whiteText}>{item.title}</p>
                       </Link>
                     )}
