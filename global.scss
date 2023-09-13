@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700;800&family=Poppins&display=swap');
-
 @import url('https://use.typekit.net/qai1loi.css');
 
 @font-face {
@@ -32,6 +30,11 @@
 @font-face {
   font-family: 'Inter';
   src: url('https://next-s3-public.s3.us-west-2.amazonaws.com/inter/Inter-Medium.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Inter Light';
+  src: url('https://next-s3-public.s3.us-west-2.amazonaws.com/inter/Inter-Light.woff') format('woff');
 }
 
 html,
