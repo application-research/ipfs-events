@@ -49,12 +49,14 @@
 .imageWrapper {
   z-index: var(--z-index-medium);
   position: relative;
+  display: block;
 }
 
 .imageStyle {
   object-fit: cover;
   border-radius: var(--border-radius-small);
   margin-bottom: 2rem;
+  display: block;
 
   img {
     z-index: var(--z-index-medium);

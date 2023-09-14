@@ -115,7 +115,7 @@ export default function SectionCamppage({ upcomingEvents }) {
                   d="M85.7689 32.7635C85.7689 32.7635 -0.535029 83.9408 46.8507 130.949C94.2358 177.956 356.248 72.3749 400.875 149.369C423.055 187.636 388.233 210.611 354.847 231.94C320.897 253.631 300.406 308.606 329.812 341.178C388.272 405.932 448.657 251.756 527.911 329.311"
                   stroke="url(#paint0_linear_924_1095)"
                   stroke-width="63.9167"
-                  stroke-linecap="round"
+                  strokeLinecap="round"
                 />
                 <defs>
                   <linearGradient id="paint0_linear_924_1095" x1="566.574" y1="358.265" x2="-20.8976" y2="107.673" gradientUnits="userSpaceOnUse">
@@ -251,7 +251,7 @@ export default function SectionCamppage({ upcomingEvents }) {
                   d="M36.4165 187.05C36.4165 187.05 15.1919 277.772 66.9163 271.843C118.641 265.914 209.641 19.5789 275.813 33.115C308.7 39.842 301.378 77.8058 293.984 113.795C286.466 150.395 304.275 196.955 338.187 195.263C405.607 191.898 419.559 52.4113 505.5 41.8714"
                   stroke="url(#paint0_linear_924_2294)"
                   stroke-width="63.9167"
-                  stroke-linecap="round"
+                  strokeLinecap="round"
                 />
                 <defs>
                   <linearGradient id="paint0_linear_924_2294" x1="480.044" y1="48.2646" x2="-7.94242" y2="226.323" gradientUnits="userSpaceOnUse">
