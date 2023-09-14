@@ -16,18 +16,23 @@
     "airtable": "^0.12.1",
     "dotenv": "^16.3.1",
     "knex": "^2.4.2",
+<<<<<<< HEAD
     "markdown-to-jsx": "^7.3.2",
     "next": "^13.4.20-canary.28",
+=======
+    "markdown-to-jsx": "^7.2.1",
+    "next": "13.4.19",
+>>>>>>> d00e458 (update packages to latest)
     "pg": "^8.9.0",
     "react-dom": "^18.2.0",
     "react-markdown": "^8.0.7",
     "react-use": "^17.4.0",
-    "sass": "^1.67.0"
+    "sass": "1.67.0"
   },
   "devDependencies": {
-    "@types/node": "^18.17.15",
-    "@types/react": "^18.2.20",
+    "@types/node": "^20.6.0",
+    "@types/react": "^18.0.27",
     "ts-node": "^10.9.1",
-    "typescript": "^4.9.5"
+    "typescript": "^5.2.2"
   }
 }
