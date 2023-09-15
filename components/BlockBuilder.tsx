@@ -2,20 +2,39 @@ import styles from '@components/BlockBuilder.module.scss';
 
 import { Block } from './Block';
 import { CallToActionVariant } from './CallToActionVariant';
+import GutterContainer from './GutterContainer';
 
-export default function BlockBuilder({ block, cta, title, subtitle, id, border, description, direction }) {
+export default function BlockBuilder({ block, cta, noGutter, title, subtitle, id, border, description, direction }) {
   return (
-    <div id={id} style={{ display: 'grid', rowGap: '2rem', background: block.backgroundColor }}>
-      {(title || description || subtitle) && (
-        <section className={styles.row} style={{ borderBottom: border ? '1px solid var(--color-text)' : '' }}>
-          <div style={{ display: 'grid', rowGap: '1rem' }}>
-            {title && <h1 className={styles.mainTitle}>{title}</h1>}
-            {subtitle && <h4 className={styles.subtitle}>{subtitle}</h4>}
-            {description && <p className={styles.description}>{description}</p>}
-          </div>
+    <div id={id} style={{ display: 'grid', rowGap: '2rem', background: block?.backgroundColor ?? 'none' }}>
+      {!noGutter ? (
+        <>
+          {(title || description || subtitle) && (
+            <section className={styles.row} style={{ borderBottom: border ? '1px solid var(--color-text)' : '' }}>
+              <div style={{ display: 'grid', rowGap: '1rem' }}>
+                {title && <h1 className={styles.mainTitle}>{title}</h1>}
+                {subtitle && <h4 className={styles.subtitle}>{subtitle}</h4>}
+                {description && <p className={styles.description}>{description}</p>}
+              </div>
 
-          {cta && <CallToActionVariant cta={cta} type={cta.type} />}
-        </section>
+              {cta && <CallToActionVariant cta={cta} type={cta.type} />}
+            </section>
+          )}
+        </>
+      ) : (
+        <GutterContainer>
+          {(title || description || subtitle) && (
+            <section className={styles.row} style={{ borderBottom: border ? '1px solid var(--color-text)' : '' }}>
+              <div style={{ display: 'grid', rowGap: '1rem' }}>
+                {title && <h1 className={styles.mainTitle}>{title}</h1>}
+                {subtitle && <h4 className={styles.subtitle}>{subtitle}</h4>}
+                {description && <p className={styles.description}>{description}</p>}
+              </div>
+
+              {cta && <CallToActionVariant cta={cta} type={cta.type} />}
+            </section>
+          )}
+        </GutterContainer>
       )}
 
       <div className={`${direction == 'row' ? styles.directionRow : styles.directionColumn}`}>

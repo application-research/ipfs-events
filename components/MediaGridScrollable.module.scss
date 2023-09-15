@@ -1,0 +1,135 @@
+.grid4Cols {
+  display: grid;
+  /* display 4 columns and the rest allow to overflow horizontally */
+  grid-template-columns: repeat(auto-fit, minmax(min-content, 40%));
+  gap: 1rem;
+  overflow-x: auto;
+
+  @media (max-width: 768px) {
+    gap: 0.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(min-content, 50%));
+  }
+}
+
+.scrollableContainer {
+  display: flex;
+  overflow-x: scroll;
+  scrollbar-width: thin; /* for modern browsers for a slimmer scrollbar */
+  -ms-overflow-style: none; /* For Internet Explorer and Edge */
+  overflow-x: scroll;
+}
+
+.scrollableItem {
+  min-width: calc(40% - 1rem); //25% so that 4 columns can fit
+  border: 1px solid var(--color-black);
+  background: var(--gray-transparent200);
+  transition: background 200ms ease;
+
+  @media (max-width: 768px) {
+    min-width: calc(60% - 1rem);
+  }
+
+  &:hover {
+    background: var(--color-white);
+  }
+}
+
+.buttonContainer {
+  display: flex;
+  align-items: center;
+
+  .arrowButton {
+    border: none;
+    padding: 0.5rem;
+    transition: cubic-bezier(0.9, -0.28, 0.735, 0.045);
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    border-radius: var(--border-radius-small);
+
+    &:hover {
+      background: var(--gray400);
+    }
+  }
+
+  .arrowButton.visible {
+    opacity: 1;
+    background: var(--color-black);
+    cursor: pointer;
+  }
+}
+
+.gutterLeft {
+  padding-left: 1.5rem;
+  padding-right: 1rem;
+}
+
+.gutterRight {
+  padding-right: 1.5rem;
+  padding-left: 1rem;
+}
+
+.dots {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1rem;
+}
+
+.dot {
+  width: 0.5rem;
+  height: 0.5rem;
+  background: var(--color-gray400);
+  border-radius: 1rem;
+}
+
+.icon {
+  width: auto;
+  height: 3rem;
+
+  @media (max-width: 768px) {
+    width: auto;
+    height: 2rem;
+  }
+}
+
+.cardLink {
+  text-decoration: none;
+  cursor: pointer;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  row-gap: 1rem;
+  color: var(--color-black);
+}
+
+.paddingScrollLeft {
+  padding-left: 4rem;
+
+  @media (max-width: 768px) {
+    padding-left: 0.5rem;
+  }
+}
+
+.paddingScrollRight {
+  padding-right: 4rem;
+
+  @media (max-width: 768px) {
+    padding-right: 0.5rem;
+  }
+}
+
+.heading {
+  font-weight: var(--font-weight-regular);
+}
+
+.subtitle,
+.description {
+  font-weight: var(--font-weight-light);
+}
+
+.scrollableItem {
+  display: grid;
+  row-gap: 1rem;
+  padding: 1rem;
+  border-radius: var(--border-radius-small);
+}

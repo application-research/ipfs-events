@@ -2,7 +2,12 @@ import { TypeName } from '@root/common/types';
 import { VideoPlayer } from './VideoPlayer';
 import Image from './Image';
 
-export default function MediaBlock({ media, className }) {
+interface MediaBlock {
+  media: any;
+  className?: string | null;
+}
+
+export default function MediaBlock({ media, className }: MediaBlock) {
   switch (media.type) {
     case TypeName.MEDIA_IMAGE:
       return <Image {...media} style={{ borderRadius: 'var(--border-radius-small)' }} ratio={media.ratio} className={className} />;

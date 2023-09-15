@@ -7,6 +7,7 @@ export enum BlockTypeEnum {
   LOGO_GRID = 'logo-grid',
   MEDIA = 'media',
   MEDIA_GRID = 'media-grid',
+  MEDIA_GRID_SCROLLABLE = 'media-grid-scrollable',
   SCHEDULE = 'schedule',
   TEXT = 'text',
   TICKET_CARD = 'ticket-card',

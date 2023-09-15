@@ -46,9 +46,7 @@ export default async function Page(props) {
   return (
     <DefaultLayout>
       <NavbarLogoMiddle navContent={navContent} />
-      {/* <div style={{ paddingBottom: '5rem' }}>
-        <Hero {...hero} />
-      </div> */}
+
       <SectionEventPage blocks={blocks} />
       <FooterTiny {...footerContent} />
     </DefaultLayout>
