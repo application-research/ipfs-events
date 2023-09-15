@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700;800&family=Poppins&display=swap');
-
 @font-face {
   font-family: 'Mono';
   src: url('https://next-s3-public.s3.us-west-2.amazonaws.com/JetBrainsMono-Regular.woff2') format('woff');
@@ -18,6 +16,11 @@
 @font-face {
   font-family: 'Parabole';
   src: url('https://next-s3-public.s3.us-west-2.amazonaws.com/Parabole-Regular.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Inter';
+  src: url('https://next-s3-public.s3.us-west-2.amazonaws.com/inter/Inter-Medium.woff') format('woff');
 }
 
 html,

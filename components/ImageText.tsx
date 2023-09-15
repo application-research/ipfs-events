@@ -4,7 +4,7 @@ import Image from './Image';
 export default function ImageText({ title, description, backroundColor, image, id }: any) {
   return (
     <div className={styles.container} id={id}>
-      <div className={styles.imageBackground} style={{ background: backroundColor ?? 'white' }}>
+      <div className={styles.imageBackground} style={{ background: backroundColor ?? 'none' }}>
         <Image className={styles.image} {...image} />
       </div>
       <div style={{ display: 'grid', rowGap: '1rem', paddingTop: '1.5rem' }}>
