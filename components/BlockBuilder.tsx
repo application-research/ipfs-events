@@ -11,7 +11,7 @@ export default function BlockBuilder({ block, cta, title, subtitle, id, border, 
           <div style={{ display: 'grid', rowGap: '1rem' }}>
             {title && <h1 className={styles.mainTitle}>{title}</h1>}
             {subtitle && <h4 className={styles.subtitle}>{subtitle}</h4>}
-            {description && <p>{description}</p>}
+            {description && <p className={styles.description}>{description}</p>}
           </div>
 
           {cta && <CallToActionVariant cta={cta} type={cta.type} />}

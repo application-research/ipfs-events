@@ -19,70 +19,70 @@ export const IPFS_FRIENDS_CAFE_PAGE_HERO_CONTENT = {
   ],
 };
 
-export const IPFS_FRIENDS_FOOTER_CONTENT = {
-  disclaimer: {
-    logo: '/media/ipfs-friends-cafe-logo2.png',
-    heading: 'IPFS Friends + Cafe fosters knowledge exchange, community growth, collaboration, innovation, and the continued advancement of IPFS as groundbreaking technology',
-    text: '',
-  },
-  filResourcesCard: {
-    heading: 'Resources',
-    siteList: [
-      {
-        text: 'IPFS',
-        link: 'https://ipfs.tech/',
-      },
-      {
-        text: 'IPFS Event Github',
-        link: 'https://github.com/ipfs-shipyard/ipfs-thing-2023',
-      },
-      {
-        text: 'YouTube',
-        link: 'https://www.youtube.com/@IPFSbot',
-      },
-    ],
-  },
+// export const IPFS_FRIENDS_FOOTER_CONTENT = {
+//   disclaimer: {
+//     logo: '/media/ipfs-friends-cafe-logo2.png',
+//     heading: 'IPFS Friends + Cafe fosters knowledge exchange, community growth, collaboration, innovation, and the continued advancement of IPFS as groundbreaking technology',
+//     text: '',
+//   },
+//   filResourcesCard: {
+//     heading: 'Resources',
+//     siteList: [
+//       {
+//         text: 'IPFS',
+//         link: 'https://ipfs.tech/',
+//       },
+//       {
+//         text: 'IPFS Event Github',
+//         link: 'https://github.com/ipfs-shipyard/ipfs-thing-2023',
+//       },
+//       {
+//         text: 'YouTube',
+//         link: 'https://www.youtube.com/@IPFSbot',
+//       },
+//     ],
+//   },
 
-  socialsCard: {
-    icon: '/media/message-bubbles.png',
-    socialIcons: [
-      {
-        text: 'IPFS Twitter',
-        image: '/media/twitter-icon.png',
-        link: 'https://twitter.com/filecointldr?lang=en',
-      },
-      {
-        text: 'IPFS Events Github',
-        image: '/media/e.png',
-        link: 'https://github.com/filecoin-project/community#forums',
-      },
-      {
-        text: 'IPFS Discord',
-        image: '/media/discord-icon.png',
-        link: 'https://discord.com/invite/ipfs',
-      },
-      {
-        text: 'Youtube',
-        image: '/media/youtube-icon.png',
-        link: 'https://www.youtube.com/channel/UCPyYmtJYQwxM-EUyRUTp5DA',
-      },
-    ],
-  },
-  copyright: [
-    {
-      link: 'https://discuss.ipfs.tech/tos',
-      text: 'Terms & Conditions',
-    },
-    {
-      link: 'https://discuss.ipfs.tech/privacy',
-      text: 'Privacy',
-    },
-    {
-      link: 'https://ipfs.tech/legal/',
-      text: 'DMCA Policy',
-    },
-  ],
-};
+//   socialsCard: {
+//     icon: '/media/message-bubbles.png',
+//     socialIcons: [
+//       {
+//         text: 'IPFS Twitter',
+//         image: '/media/twitter-icon.png',
+//         link: 'https://twitter.com/filecointldr?lang=en',
+//       },
+//       {
+//         text: 'IPFS Events Github',
+//         image: '/media/e.png',
+//         link: 'https://github.com/filecoin-project/community#forums',
+//       },
+//       {
+//         text: 'IPFS Discord',
+//         image: '/media/discord-icon.png',
+//         link: 'https://discord.com/invite/ipfs',
+//       },
+//       {
+//         text: 'Youtube',
+//         image: '/media/youtube-icon.png',
+//         link: 'https://www.youtube.com/channel/UCPyYmtJYQwxM-EUyRUTp5DA',
+//       },
+//     ],
+//   },
+//   copyright: [
+//     {
+//       link: 'https://discuss.ipfs.tech/tos',
+//       text: 'Terms & Conditions',
+//     },
+//     {
+//       link: 'https://discuss.ipfs.tech/privacy',
+//       text: 'Privacy',
+//     },
+//     {
+//       link: 'https://ipfs.tech/legal/',
+//       text: 'DMCA Policy',
+//     },
+//   ],
+// };
 
 export const IPFS_FRIENDS_CAFE_NAVIGATION_CONTENT = {
   type: NavigationTypeEnum.WITH_BORDER,
@@ -137,7 +137,6 @@ export const IPFS_FRIENDS_CAFE_PAGE_CONTENT = [
       {
         type: BlockTypeEnum.TEXT,
         bigTitle: "At our core, we're here to support you, our community, in sharing and spreading the greatness of IPFS.",
-        title: 'Test',
         paragraph: "Whether you're a tech guru or just curious about IPFS, we offer a helping hand to bring IPFS learnings and content to your own community. ",
       },
     ],
@@ -176,8 +175,8 @@ export const IPFS_FRIENDS_CAFE_PAGE_CONTENT = [
         type: BlockTypeEnum.IMAGE_TEXT,
         image: {
           alt: 'Logistics',
-          src: '/media/ipfs-friends-trees.png',
-          backgroundColor: 'white',
+          src: '/media/trees.png',
+          ratio: Ratio.ONE_BY_ONE,
         },
         description: 'Growth of IPFS community',
       },
@@ -186,8 +185,8 @@ export const IPFS_FRIENDS_CAFE_PAGE_CONTENT = [
         type: BlockTypeEnum.IMAGE_TEXT,
         image: {
           alt: 'Maintain progress & momentum',
-          src: '/media/ipfs-friends-people.png',
-          backgroundColor: 'white',
+          src: '/media/blocks.png',
+          ratio: Ratio.ONE_BY_ONE,
         },
         description: 'Maintain progress & momentum',
       },
@@ -196,8 +195,8 @@ export const IPFS_FRIENDS_CAFE_PAGE_CONTENT = [
         type: BlockTypeEnum.IMAGE_TEXT,
         image: {
           alt: 'Offers more opportunities to collaborate & foster connections between Camp + Thing',
-          src: '/media/ipfs-friends-cloud.png',
-          backgroundColor: 'white',
+          src: '/media/network.png',
+          ratio: Ratio.ONE_BY_ONE,
         },
         description: 'Foster Connections between Camp + Thing',
       },
@@ -206,8 +205,8 @@ export const IPFS_FRIENDS_CAFE_PAGE_CONTENT = [
         type: BlockTypeEnum.IMAGE_TEXT,
         image: {
           alt: 'Promote accessibility & inclusivity by breaking down barriers to IPFS knowledge',
-          src: '/media/ipfs-friends-books.png',
-          backgroundColor: 'white',
+          src: '/media/speaker.png',
+          ratio: Ratio.ONE_BY_ONE,
         },
         description: 'Promote accessibility & inclusivity by breaking down barriers to IPFS knowledge',
       },
@@ -224,7 +223,7 @@ export const IPFS_FRIENDS_CAFE_PAGE_CONTENT = [
         image: {
           alt: 'Logistics',
           src: '/media/logistics.png',
-          backgroundColor: 'white',
+          ratio: Ratio.ONE_BY_ONE,
         },
         title: 'Logistics',
         description: 'Registration, comms, & basic marketing',
@@ -234,8 +233,8 @@ export const IPFS_FRIENDS_CAFE_PAGE_CONTENT = [
         type: BlockTypeEnum.IMAGE_TEXT,
         image: {
           alt: 'Securing PLN Speakers',
-          src: '/media/special-guests.png',
-          backgroundColor: 'white',
+          src: '/media/speakers.png',
+          ratio: Ratio.ONE_BY_ONE,
         },
         title: 'Securing PLN Speakers',
         description: 'Our Support to notify and secure PLN speakers or content for your event',
@@ -246,7 +245,7 @@ export const IPFS_FRIENDS_CAFE_PAGE_CONTENT = [
         image: {
           alt: 'Providing Swag',
           src: '/media/swag.png',
-          backgroundColor: 'white',
+          ratio: Ratio.ONE_BY_ONE,
         },
         title: 'Providing Swag',
         description: "Pins, stickers, sunnies, mugs, hats - you name it, we're on it",
