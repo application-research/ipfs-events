@@ -16,13 +16,8 @@
     "airtable": "^0.12.1",
     "dotenv": "^16.3.1",
     "knex": "^2.4.2",
-<<<<<<< HEAD
     "markdown-to-jsx": "^7.3.2",
     "next": "^13.4.20-canary.28",
-=======
-    "markdown-to-jsx": "^7.2.1",
-    "next": "13.4.19",
->>>>>>> d00e458 (update packages to latest)
     "pg": "^8.9.0",
     "react-dom": "^18.2.0",
     "react-markdown": "^8.0.7",

@@ -10,6 +10,7 @@ export enum BlockTypeEnum {
   SCHEDULE = 'schedule',
   TEXT = 'text',
   TICKET_CARD = 'ticket-card',
+  UPCOMING_EVENTS = 'upcoming-events',
 }
 
 export enum BlockDirectionEnum {
