@@ -20,7 +20,7 @@ export function Collapsable({ id, title, backgroundColor, textColor, collapsedTe
       style={{ background: backgroundColor ? backgroundColor : 'var(--color-black200)', color: textColor ? textColor : 'var(--text-white)', display: 'grid', rowGap: '1rem' }}
     >
       <div className={styles.heading}>
-        <h4>{title}</h4>
+        <p>{title}</p>
         <PlusSVG className={styles.plusIcon} props={{ width: '2rem' }} />{' '}
       </div>
 
