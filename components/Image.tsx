@@ -3,6 +3,7 @@ import NextImage from 'next/image';
 import AspectRatio from './AspectRatio';
 
 export interface ImageProps extends ImageType {
+  ariaLabel?: string;
   className?: any;
   priority?: boolean;
   ratio?: Ratio;
@@ -15,7 +16,7 @@ export default function Image({ altText, ariaLabel, className, src, priority, ra
         <AspectRatio ratio={ratio}>
           <NextImage
             fill
-            aria-label={ariaLabel}
+            aria-label={ariaLabel ?? ''}
             className={className}
             {...props}
             alt={altText ?? 'image'}

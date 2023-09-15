@@ -18,7 +18,7 @@ const getGridStyle = (media) => {
 };
 
 export default function MediaGrid({ media, id }) {
-  if (media.length < 1) return;
+  if (media.length < 1) return <></>;
   const gridStyle = getGridStyle(media);
 
   return (
