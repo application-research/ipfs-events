@@ -209,7 +209,7 @@ export function getAirtableData(view, callback) {
 
   const base = new Airtable({ apiKey: process.env.AIRTABLE_API }).base(process.env.AIRTABLE_BASE_ID);
 
-  const records = [];
+  const records = [] as any;
 
   //Reffer to Airtable Javascript library
   base('Responses')
