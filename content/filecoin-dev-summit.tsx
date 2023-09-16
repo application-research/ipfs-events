@@ -4,9 +4,9 @@ import { EVENT_PAGE_SCHEDULE_IPFS_THING_2023 } from './event-page-content';
 export const FILECOIN_DEV_SUMMIT_2023_HERO_CONTENT = {
   id: 'hero',
   type: BlockTypeEnum.HERO_NO_BACKGROUND,
-  title: 'Filecoin Dev Summit',
+  title: 'FIL Dev Summit',
   description:
-    'Filecoin Dev Summit is a gathering of developers, builders, and engaged community members who want to contribute to the core protocol and network evolution of Filecoin (think IPFS Thing, but bigger!).',
+    'FIL Dev Summit is a gathering of developers, builders, and engaged community members who want to contribute to the core protocol and network evolution of Filecoin (think IPFS Thing, but bigger!).',
 };
 
 export const FILECOIN_DEV_SUMMIT_ICELAND_CALENDAR = {
@@ -66,14 +66,14 @@ export const FILECOIN_DEV_SUMMIT_2023_PAGE_CONTENT = [
           {
             id: 'media',
             type: BlockTypeEnum.MEDIA,
-            heading: 'Filecoin Dev Summit - Singapore',
+            heading: 'FIL Dev Summit - Singapore',
             subtitle: 'September 12-14th, 2023',
             desc: 'Singapore',
             smallDesc: 'Organized by Miwa',
             media: {
               type: TypeName.MEDIA_IMAGE,
               src: 'https://images.pexels.com/photos/3152126/pexels-photo-3152126.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-              ariaLabel: 'Filecoin Dev Summit',
+              ariaLabel: 'FIL Dev Summit',
               link: '#filecoin-dev-singapore',
             },
           },
@@ -81,7 +81,7 @@ export const FILECOIN_DEV_SUMMIT_2023_PAGE_CONTENT = [
             id: 'media',
             type: TypeName.MEDIA_IMAGE,
 
-            heading: 'Filecoin Dev Summit - Iceland',
+            heading: 'FIL Dev Summit - Iceland',
             subtitle: 'September 25-27th, 2023',
             desc: 'Reykjavík, Iceland',
             smallDesc: 'Organized by Filecoin Foundation',
@@ -121,7 +121,7 @@ export const FILECOIN_DEV_SUMMIT_2023_PAGE_CONTENT = [
     backgroundColor: 'var(--color-beige)',
     id: 'about',
     direction: 'column',
-    title: 'Filecoin Dev Summit - Singapore Schedule',
+    title: 'FIL Dev Summit - Singapore Schedule',
     cta: {
       type: CallToActionVariantEnum.BLACK,
       buttonColor: 'black',
@@ -160,7 +160,7 @@ export const FILECOIN_DEV_SUMMIT_2023_PAGE_CONTENT = [
   {
     id: 'about',
     direction: 'column',
-    title: 'Filecoin Dev Summit - Iceland Schedule',
+    title: 'FIL Dev Summit - Iceland Schedule',
     cta: {
       type: CallToActionVariantEnum.BLACK,
       buttonColor: 'black',
@@ -185,7 +185,7 @@ export const FILECOIN_DEV_SUMMIT_2023_PAGE_CONTENT = [
         id: 'media',
         type: BlockTypeEnum.COLLAPSABLE,
         title: 'How can I lead a track?',
-        collapsedText: 'Please fill out the provided forms for Filecoin Dev Summit Asia and Filecoin Dev Summit Iceland to lead a track or a talk.',
+        collapsedText: 'Please fill out the provided forms for FIL Dev Summit Asia and FIL Dev Summit Iceland to lead a track or a talk.',
         backgroundColor: 'black',
       },
       {
@@ -199,7 +199,7 @@ export const FILECOIN_DEV_SUMMIT_2023_PAGE_CONTENT = [
       {
         id: 'media',
         type: BlockTypeEnum.COLLAPSABLE,
-        title: 'What is the goal of Filecoin Dev Summit?',
+        title: 'What is the goal of FIL Dev Summit?',
         collapsedText:
           'What do we want to come out of Fil Thing? We want to bring the Fil dev community together, have important convos, show how the network is evolving, build collaboration connections between teams, collectively set a roadmap for critical protocol evolutions and extensions for next year, setting us up to review projects that we will launch really big at lab week and beyond.',
         backgroundColor: 'black',
@@ -244,14 +244,14 @@ export const FILECOIN_DEV_SUMMIT_EXAMPLE_2023_PAGE_CONTENT = [
           {
             id: 'media',
             type: BlockTypeEnum.MEDIA,
-            heading: 'Filecoin Dev Summit - Singapore',
+            heading: 'FIL Dev Summit - Singapore',
             subtitle: 'September 12-14th, 2023',
             desc: 'Singapore',
             smallDesc: 'Organized by Miwa',
             media: {
               type: TypeName.MEDIA_IMAGE,
               src: 'https://images.pexels.com/photos/3152126/pexels-photo-3152126.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-              ariaLabel: 'Filecoin Dev Summit',
+              ariaLabel: 'FIL Dev Summit',
               link: '#filecoin-dev-singapore',
             },
           },
@@ -259,7 +259,7 @@ export const FILECOIN_DEV_SUMMIT_EXAMPLE_2023_PAGE_CONTENT = [
             id: 'media',
             type: TypeName.MEDIA_IMAGE,
 
-            heading: 'Filecoin Dev Summit - Iceland',
+            heading: 'FIL Dev Summit - Iceland',
             subtitle: 'September 25-27th, 2023',
             desc: 'Reykjavík, Iceland',
             smallDesc: 'Organized by Filecoin Foundation',
@@ -299,7 +299,7 @@ export const FILECOIN_DEV_SUMMIT_EXAMPLE_2023_PAGE_CONTENT = [
     backgroundColor: 'var(--color-beige)',
     id: 'about',
     direction: 'column',
-    title: 'Filecoin Dev Summit - Singapore Schedule',
+    title: 'FIL Dev Summit - Singapore Schedule',
     cta: {
       type: CallToActionVariantEnum.BLACK,
       buttonColor: 'black',
@@ -338,7 +338,7 @@ export const FILECOIN_DEV_SUMMIT_EXAMPLE_2023_PAGE_CONTENT = [
   {
     id: 'about',
     direction: 'column',
-    title: 'Filecoin Dev Summit - Iceland Schedule',
+    title: 'FIL Dev Summit - Iceland Schedule',
     cta: {
       type: CallToActionVariantEnum.BLACK,
       buttonColor: 'black',
@@ -363,7 +363,7 @@ export const FILECOIN_DEV_SUMMIT_EXAMPLE_2023_PAGE_CONTENT = [
         id: 'media',
         type: BlockTypeEnum.COLLAPSABLE,
         title: 'How can I lead a track?',
-        collapsedText: 'Please fill out the provided forms for Filecoin Dev Summit Asia and Filecoin Dev Summit Iceland to lead a track or a talk.',
+        collapsedText: 'Please fill out the provided forms for FIL Dev Summit Asia and FIL Dev Summit Iceland to lead a track or a talk.',
         backgroundColor: 'black',
       },
       {
@@ -377,7 +377,7 @@ export const FILECOIN_DEV_SUMMIT_EXAMPLE_2023_PAGE_CONTENT = [
       {
         id: 'media',
         type: BlockTypeEnum.COLLAPSABLE,
-        title: 'What is the goal of Filecoin Dev Summit?',
+        title: 'What is the goal of FIL Dev Summit?',
         collapsedText:
           'What do we want to come out of Fil Thing? We want to bring the Fil dev community together, have important convos, show how the network is evolving, build collaboration connections between teams, collectively set a roadmap for critical protocol evolutions and extensions for next year, setting us up to review projects that we will launch really big at lab week and beyond.',
         backgroundColor: 'black',

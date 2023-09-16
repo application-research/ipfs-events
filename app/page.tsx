@@ -8,6 +8,8 @@ import FooterTiny from '@root/components/FooterTiny';
 import GutterContainer from '@root/components/GutterContainer';
 import NavbarLogoMiddle from '@root/components/NavbarLogoMiddle';
 import SectionHomepage from '@root/components/SectionHomepage';
+import Hero from '@root/components/Hero';
+import SectionEventPage from '@root/components/SectionEventPage';
 
 export async function generateMetadata({ params, searchParams }) {
   const title = 'IPFS.Events';
@@ -38,16 +40,14 @@ export async function generateMetadata({ params, searchParams }) {
 
 export default async function Page(props) {
   const footerContent = FOOTER_TINY_CONTENT;
-  const homepage = HOMEPAGE_CONTENT;
+  const blocks = HOMEPAGE_CONTENT;
   const navContent = NAVIGATION_HOMEPAGE_CONTENT;
 
   return (
     <DefaultLayout>
       <NavbarLogoMiddle navContent={navContent} />
-      <GutterContainer>
-        <SectionHomepage {...homepage} />
-      </GutterContainer>
 
+      <SectionEventPage blocks={blocks} />
       <FooterTiny {...footerContent} />
     </DefaultLayout>
   );

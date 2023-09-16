@@ -7,9 +7,11 @@ export enum BlockTypeEnum {
   LOGO_GRID = 'logo-grid',
   MEDIA = 'media',
   MEDIA_GRID = 'media-grid',
+  MEDIA_GRID_SCROLLABLE = 'media-grid-scrollable',
   SCHEDULE = 'schedule',
   TEXT = 'text',
   TICKET_CARD = 'ticket-card',
+  UPCOMING_EVENTS = 'upcoming-events',
 }
 
 export enum BlockDirectionEnum {
@@ -46,7 +48,8 @@ export enum Ratio {
 
 export enum TypeName {
   MEDIA_IMAGE = 'media-image',
-  MEDIA_IMAGE_WITH_OVERFLOWING_TEXT = 'media-image-width-text',
+  MEDIA_IMAGE_ICON = 'media-image-icon',
+  MEDIA_IMAGE_WITH_TEXT = 'media-image-with-text',
   MEDIA_ROW = 'media-row',
   MEDIA_VIDEO = 'media-video',
 }

@@ -5,11 +5,12 @@ import AspectRatio from './AspectRatio';
 export interface ImageProps extends ImageType {
   ariaLabel?: string;
   className?: any;
+  imageSize?: string;
   priority?: boolean;
   ratio?: Ratio;
 }
 
-export default function Image({ altText, ariaLabel, className, src, priority, ratio, ...props }: ImageProps) {
+export default function Image({ altText, ariaLabel, className, src, priority, ratio, imageSize, ...props }: ImageProps) {
   return (
     <>
       {ratio ? (
@@ -23,7 +24,7 @@ export default function Image({ altText, ariaLabel, className, src, priority, ra
             src={src}
             priority={priority}
             unoptimized={true}
-            style={{ objectFit: 'contain' }}
+            style={{ objectFit: imageSize == 'fit' ? 'contain' : 'cover' }}
           />
         </AspectRatio>
       ) : (

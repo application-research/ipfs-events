@@ -16,7 +16,7 @@ export default function SectionHomepage({ upcomingEvents }) {
               <p>IPFS is a peer-to-peer hypermedia protocol designed to preserve and grow humanity's knowledge by making the web upgradeable, resilient, and more open.</p>
             </div>
 
-            <div className={` ${styles.col40} ${styles.buttonContainer}`}>
+            <div className={`${styles.col40} ${styles.buttonContainer}`}>
               <Link style="text" href="https://fildev.io/" target="_blank">
                 <button className={`${styles.button}`}>Get Tickets for FIL Dev Summit</button>
               </Link>
@@ -41,27 +41,6 @@ export default function SectionHomepage({ upcomingEvents }) {
           <h3 className={styles.h3} style={{ paddingBottom: '2rem' }}>
             Other Upcoming Events
           </h3>
-
-          <section className={styles.grid4cols} style={{ paddingBottom: '1rem' }}>
-            {upcomingEvents.map((event, index) => {
-              return (
-                <div key={index}>
-                  <Link href={event?.link ?? ''} style="text" target={event?.target ?? '_blank'}>
-                    <img className={`${styles.col50} ${styles.image}`} src={event.image} />
-                    <div className={styles.containerOverImage}>
-                      <p className={`${styles.smallText}`} style={{ fontWeight: 'bold' }}>
-                        {event.name}
-                      </p>
-
-                      <p className={`${styles.tinyText}`}>
-                        {event.location} | {event.date}
-                      </p>
-                    </div>
-                  </Link>
-                </div>
-              );
-            })}
-          </section>
         </section>
       </div>
     </div>

@@ -7,6 +7,7 @@ import FooterTiny from '@root/components/FooterTiny';
 import Hero from '@root/components/Hero';
 import ResponsiveNavbar from '@root/components/ResponsiveNavbar';
 import SectionEventPage from '@root/components/SectionEventPage';
+import GutterContainer from '@root/components/GutterContainer';
 
 export async function generateMetadata({ params, searchParams }) {
   const title = 'IPFS Events: IPFS Thing';
@@ -46,7 +47,9 @@ export default async function Page(props) {
       <ResponsiveNavbar navContent={navContent} />
 
       <div style={{ paddingBottom: '5rem' }}>
-        <Hero {...hero} />
+        <GutterContainer>
+          <Hero {...hero} />
+        </GutterContainer>
       </div>
       <SectionEventPage blocks={blocks} pageStyle={null} />
 
