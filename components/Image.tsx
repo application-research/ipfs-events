@@ -8,10 +8,9 @@ export interface ImageProps extends ImageType {
   imageSize?: string;
   priority?: boolean;
   ratio?: Ratio;
-  style?: string;
 }
 
-export default function Image({ altText, ariaLabel, style, className, src, priority, ratio, imageSize, ...props }: ImageProps) {
+export default function Image({ altText, ariaLabel, className, src, priority, ratio, imageSize, ...props }: ImageProps) {
   return (
     <>
       {ratio ? (
@@ -25,7 +24,7 @@ export default function Image({ altText, ariaLabel, style, className, src, prior
             src={src}
             priority={priority}
             unoptimized={true}
-            style={{ objectFit: imageSize == 'fit' ? 'contain' : 'cover', ...style }}
+            style={{ objectFit: imageSize == 'fit' ? 'contain' : 'cover' }}
           />
         </AspectRatio>
       ) : (

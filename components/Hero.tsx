@@ -7,10 +7,9 @@ export default function Hero({ background, cta, date, description, label, locati
   const containerStyle = {
     backgroundImage: background && `url(${background.src})`,
   };
-
   return (
     <div className={classNames(styles.container, background && styles.backgroundImage)} style={containerStyle}>
-      <section className={`${styles.rowGap} ${background && styles.textBackground}`}>
+      <section className={classNames(styles.rowGap, background && styles.textBackground)}>
         {label && <p className={styles.label}>{label}</p>}
         {title && <h1 className={styles.title}>{title}</h1>}
         {(date || location) && (

@@ -1,88 +1,87 @@
 import { BlockTypeEnum, CallToActionVariantEnum, NavigationTypeEnum, Ratio, TypeName } from '@root/common/types';
 
-// export const IPFS_FRIENDS_CAFE_PAGE_HERO_CONTENT = {
-//   id: 'hero',
-//   type: BlockTypeEnum.HERO,
-//   title: 'IPFS Friends + Cafe',
-//   date: 'Community-Hosted Events',
-//   location: 'Virtual & In Person',
-//   description: 'Events that foster knowledge exchange, community growth, collaboration, innovation, and the continued advancement of IPFS as groundbreaking technology',
-//   cta: [
-//     {
-//       type: CallToActionVariantEnum.BLACK,
-//       backgroundColor: '#589396',
-//       textColor: 'white',
-//       target: '_blank',
-//       text: 'Sign Up to Host an Event',
-//       link: 'https://linktr.ee/ipfscommunity?lt_utm_source=lt_share_link#287213225',
-//     },
-//   ],
-// };
+export const IPFS_FRIENDS_CAFE_PAGE_HERO_CONTENT = {
+  id: 'hero',
+  title: 'IPFS Friends + Cafe',
+  date: 'Community-Hosted Events',
+  location: 'Virtual & In Person',
+  description: 'Events that foster knowledge exchange, community growth, collaboration, innovation, and the continued advancement of IPFS as groundbreaking technology',
+  cta: [
+    {
+      type: CallToActionVariantEnum.BLACK,
+      backgroundColor: '#589396',
+      textColor: 'white',
+      target: '_blank',
+      text: 'Sign Up to Host an Event',
+      link: 'https://linktr.ee/ipfscommunity?lt_utm_source=lt_share_link#287213225',
+    },
+  ],
+};
 
-// export const IPFS_FRIENDS_FOOTER_CONTENT = {
-//   disclaimer: {
-//     logo: '/media/ipfs-friends-cafe-logo2.png',
-//     heading: 'IPFS Friends + Cafe fosters knowledge exchange, community growth, collaboration, innovation, and the continued advancement of IPFS as groundbreaking technology',
-//     text: '',
-//   },
-//   filResourcesCard: {
-//     heading: 'Resources',
-//     siteList: [
-//       {
-//         text: 'IPFS',
-//         link: 'https://ipfs.tech/',
-//       },
-//       {
-//         text: 'IPFS Event Github',
-//         link: 'https://github.com/ipfs-shipyard/ipfs-thing-2023',
-//       },
-//       {
-//         text: 'YouTube',
-//         link: 'https://www.youtube.com/@IPFSbot',
-//       },
-//     ],
-//   },
+export const IPFS_FRIENDS_FOOTER_CONTENT = {
+  disclaimer: {
+    logo: '/media/ipfs-friends-cafe-logo2.png',
+    heading: 'IPFS Friends + Cafe fosters knowledge exchange, community growth, collaboration, innovation, and the continued advancement of IPFS as groundbreaking technology',
+    text: '',
+  },
+  filResourcesCard: {
+    heading: 'Resources',
+    siteList: [
+      {
+        text: 'IPFS',
+        link: 'https://ipfs.tech/',
+      },
+      {
+        text: 'IPFS Event Github',
+        link: 'https://github.com/ipfs-shipyard/ipfs-thing-2023',
+      },
+      {
+        text: 'YouTube',
+        link: 'https://www.youtube.com/@IPFSbot',
+      },
+    ],
+  },
 
-//   socialsCard: {
-//     icon: '/media/message-bubbles.png',
-//     socialIcons: [
-//       {
-//         text: 'IPFS Twitter',
-//         image: '/media/twitter-icon.png',
-//         link: 'https://twitter.com/filecointldr?lang=en',
-//       },
-//       {
-//         text: 'IPFS Events Github',
-//         image: '/media/e.png',
-//         link: 'https://github.com/filecoin-project/community#forums',
-//       },
-//       {
-//         text: 'IPFS Discord',
-//         image: '/media/discord-icon.png',
-//         link: 'https://discord.com/invite/ipfs',
-//       },
-//       {
-//         text: 'Youtube',
-//         image: '/media/youtube-icon.png',
-//         link: 'https://www.youtube.com/channel/UCPyYmtJYQwxM-EUyRUTp5DA',
-//       },
-//     ],
-//   },
-//   copyright: [
-//     {
-//       link: 'https://discuss.ipfs.tech/tos',
-//       text: 'Terms & Conditions',
-//     },
-//     {
-//       link: 'https://discuss.ipfs.tech/privacy',
-//       text: 'Privacy',
-//     },
-//     {
-//       link: 'https://ipfs.tech/legal/',
-//       text: 'DMCA Policy',
-//     },
-//   ],
-// };
+  socialsCard: {
+    icon: '/media/message-bubbles.png',
+    socialIcons: [
+      {
+        text: 'IPFS Twitter',
+        image: '/media/twitter-icon.png',
+        link: 'https://twitter.com/filecointldr?lang=en',
+      },
+      {
+        text: 'IPFS Events Github',
+        image: '/media/e.png',
+        link: 'https://github.com/filecoin-project/community#forums',
+      },
+      {
+        text: 'IPFS Discord',
+        image: '/media/discord-icon.png',
+        link: 'https://discord.com/invite/ipfs',
+      },
+      {
+        text: 'Youtube',
+        image: '/media/youtube-icon.png',
+        link: 'https://www.youtube.com/channel/UCPyYmtJYQwxM-EUyRUTp5DA',
+      },
+    ],
+  },
+  copyright: [
+    {
+      link: 'https://discuss.ipfs.tech/tos',
+      text: 'Terms & Conditions',
+    },
+    {
+      link: 'https://discuss.ipfs.tech/privacy',
+      text: 'Privacy',
+    },
+    {
+      link: 'https://ipfs.tech/legal/',
+      text: 'DMCA Policy',
+    },
+  ],
+};
 
 export const IPFS_FRIENDS_CAFE_NAVIGATION_CONTENT = {
   type: NavigationTypeEnum.WITH_BORDER,
@@ -120,24 +119,24 @@ export const IPFS_FRIENDS_CAFE_NAVIGATION_CONTENT = {
 };
 
 export const IPFS_FRIENDS_CAFE_PAGE_CONTENT = [
-  {
-    id: 'hero',
-    type: BlockTypeEnum.HERO,
-    title: 'IPFS Friends + Cafe',
-    date: 'Community-Hosted Events',
-    location: 'Virtual & In Person',
-    description: 'Events that foster knowledge exchange, community growth, collaboration, innovation, and the continued advancement of IPFS as groundbreaking technology',
-    cta: [
-      {
-        type: CallToActionVariantEnum.BLACK,
-        backgroundColor: '#589396',
-        textColor: 'white',
-        target: '_blank',
-        text: 'Sign Up to Host an Event',
-        link: 'https://linktr.ee/ipfscommunity?lt_utm_source=lt_share_link#287213225',
-      },
-    ],
-  },
+  // {
+  //   id: 'hero',
+  //   type: BlockTypeEnum.HERO,
+  //   title: 'IPFS Friends + Cafe',
+  //   date: 'Community-Hosted Events',
+  //   location: 'Virtual & In Person',
+  //   description: 'Events that foster knowledge exchange, community growth, collaboration, innovation, and the continued advancement of IPFS as groundbreaking technology',
+  //   cta: [
+  //     {
+  //       type: CallToActionVariantEnum.BLACK,
+  //       backgroundColor: '#589396',
+  //       textColor: 'white',
+  //       target: '_blank',
+  //       text: 'Sign Up to Host an Event',
+  //       link: 'https://linktr.ee/ipfscommunity?lt_utm_source=lt_share_link#287213225',
+  //     },
+  //   ],
+  // },
   {
     id: 'ipfs-friends-about',
     direction: 'column',
