@@ -11,6 +11,7 @@ import MediaGridScrollable from './MediaGridScrollable';
 import Schedule from './Schedule';
 import Text from './Text';
 import TicketCard from './TicketCard';
+import GutterContainer from './GutterContainer';
 
 export function Block({ block }) {
   switch (block.type) {

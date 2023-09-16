@@ -5,7 +5,7 @@ export default function ImageText({ title, description, backroundColor, image, i
   return (
     <div className={styles.container} id={id}>
       <div className={styles.imageBackground} style={{ background: backroundColor ?? 'none' }}>
-        <Image className={styles.image} {...image} />
+        <Image {...image} imageSize={image.imageSize} className={`${image.imageSize ? styles.image : styles.imageWithHeight}`} />
       </div>
       <div style={{ display: 'grid', rowGap: '1rem', paddingTop: '1.5rem' }}>
         {title && <h4 className={styles.title}>{title}</h4>}

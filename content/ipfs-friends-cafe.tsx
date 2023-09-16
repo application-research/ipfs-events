@@ -1,23 +1,23 @@
 import { BlockTypeEnum, CallToActionVariantEnum, NavigationTypeEnum, Ratio, TypeName } from '@root/common/types';
 
-export const IPFS_FRIENDS_CAFE_PAGE_HERO_CONTENT = {
-  id: 'hero',
-  type: BlockTypeEnum.HERO,
-  title: 'IPFS Friends + Cafe',
-  date: 'Community-Hosted Events',
-  location: 'Virtual & In Person',
-  description: 'Events that foster knowledge exchange, community growth, collaboration, innovation, and the continued advancement of IPFS as groundbreaking technology',
-  cta: [
-    {
-      type: CallToActionVariantEnum.BLACK,
-      backgroundColor: '#589396',
-      textColor: 'white',
-      target: '_blank',
-      text: 'Sign Up to Host an Event',
-      link: 'https://linktr.ee/ipfscommunity?lt_utm_source=lt_share_link#287213225',
-    },
-  ],
-};
+// export const IPFS_FRIENDS_CAFE_PAGE_HERO_CONTENT = {
+//   id: 'hero',
+//   type: BlockTypeEnum.HERO,
+//   title: 'IPFS Friends + Cafe',
+//   date: 'Community-Hosted Events',
+//   location: 'Virtual & In Person',
+//   description: 'Events that foster knowledge exchange, community growth, collaboration, innovation, and the continued advancement of IPFS as groundbreaking technology',
+//   cta: [
+//     {
+//       type: CallToActionVariantEnum.BLACK,
+//       backgroundColor: '#589396',
+//       textColor: 'white',
+//       target: '_blank',
+//       text: 'Sign Up to Host an Event',
+//       link: 'https://linktr.ee/ipfscommunity?lt_utm_source=lt_share_link#287213225',
+//     },
+//   ],
+// };
 
 // export const IPFS_FRIENDS_FOOTER_CONTENT = {
 //   disclaimer: {
@@ -121,6 +121,24 @@ export const IPFS_FRIENDS_CAFE_NAVIGATION_CONTENT = {
 
 export const IPFS_FRIENDS_CAFE_PAGE_CONTENT = [
   {
+    id: 'hero',
+    type: BlockTypeEnum.HERO,
+    title: 'IPFS Friends + Cafe',
+    date: 'Community-Hosted Events',
+    location: 'Virtual & In Person',
+    description: 'Events that foster knowledge exchange, community growth, collaboration, innovation, and the continued advancement of IPFS as groundbreaking technology',
+    cta: [
+      {
+        type: CallToActionVariantEnum.BLACK,
+        backgroundColor: '#589396',
+        textColor: 'white',
+        target: '_blank',
+        text: 'Sign Up to Host an Event',
+        link: 'https://linktr.ee/ipfscommunity?lt_utm_source=lt_share_link#287213225',
+      },
+    ],
+  },
+  {
     id: 'ipfs-friends-about',
     direction: 'column',
     title: 'About',
@@ -130,7 +148,8 @@ export const IPFS_FRIENDS_CAFE_PAGE_CONTENT = [
         type: BlockTypeEnum.IMAGE_TEXT,
         image: {
           type: TypeName.MEDIA_IMAGE,
-          src: '/media/event-sample3.png',
+          imageSize: 'fit',
+          src: '/media/ipfs-friends-about.png',
           ariaLabel: 'IPFS Thing 2023',
         },
       },
@@ -172,43 +191,45 @@ export const IPFS_FRIENDS_CAFE_PAGE_CONTENT = [
     block: [
       {
         id: 'past-event',
-        type: BlockTypeEnum.IMAGE_TEXT,
-        image: {
-          alt: 'Logistics',
-          src: '/media/trees.png',
-          ratio: Ratio.ONE_BY_ONE,
-        },
-        description: 'Growth of IPFS community',
-      },
-      {
-        id: 'past-event',
-        type: BlockTypeEnum.IMAGE_TEXT,
-        image: {
-          alt: 'Maintain progress & momentum',
-          src: '/media/blocks.png',
-          ratio: Ratio.ONE_BY_ONE,
-        },
-        description: 'Maintain progress & momentum',
-      },
-      {
-        id: 'past-event',
-        type: BlockTypeEnum.IMAGE_TEXT,
-        image: {
-          alt: 'Offers more opportunities to collaborate & foster connections between Camp + Thing',
-          src: '/media/network.png',
-          ratio: Ratio.ONE_BY_ONE,
-        },
-        description: 'Foster Connections between Camp + Thing',
-      },
-      {
-        id: 'past-event',
-        type: BlockTypeEnum.IMAGE_TEXT,
-        image: {
-          alt: 'Promote accessibility & inclusivity by breaking down barriers to IPFS knowledge',
-          src: '/media/speaker.png',
-          ratio: Ratio.ONE_BY_ONE,
-        },
-        description: 'Promote accessibility & inclusivity by breaking down barriers to IPFS knowledge',
+        type: BlockTypeEnum.MEDIA_GRID,
+        media: [
+          {
+            id: 'past-event',
+            media: {
+              type: TypeName.MEDIA_IMAGE_ICON,
+              alt: 'Logistics',
+              src: '/media/trees.png',
+            },
+            title: 'Growth of IPFS community',
+          },
+          {
+            id: 'past-event',
+            media: {
+              type: TypeName.MEDIA_IMAGE_ICON,
+              alt: 'Maintain progress & momentum',
+              src: '/media/blocks.png',
+            },
+            title: 'Maintain progress & momentum',
+          },
+          {
+            id: 'past-event',
+            media: {
+              type: TypeName.MEDIA_IMAGE_ICON,
+              alt: 'Offers more opportunities to collaborate & foster connections between Camp + Thing',
+              src: '/media/network.png',
+            },
+            title: 'Foster Connections between Camp + Thing',
+          },
+          {
+            id: 'past-event',
+            media: {
+              type: TypeName.MEDIA_IMAGE_ICON,
+              alt: 'Promote accessibility & inclusivity by breaking down barriers to IPFS knowledge',
+              src: '/media/speaker.png',
+            },
+            title: 'Promote accessibility & inclusivity by breaking down barriers to IPFS knowledge',
+          },
+        ],
       },
     ],
   },
@@ -219,36 +240,40 @@ export const IPFS_FRIENDS_CAFE_PAGE_CONTENT = [
     block: [
       {
         id: 'past-event',
-        type: BlockTypeEnum.IMAGE_TEXT,
-        image: {
-          alt: 'Logistics',
-          src: '/media/logistics.png',
-          ratio: Ratio.ONE_BY_ONE,
-        },
-        title: 'Logistics',
-        description: 'Registration, comms, & basic marketing',
-      },
-      {
-        id: 'past-event',
-        type: BlockTypeEnum.IMAGE_TEXT,
-        image: {
-          alt: 'Securing PLN Speakers',
-          src: '/media/speakers.png',
-          ratio: Ratio.ONE_BY_ONE,
-        },
-        title: 'Securing PLN Speakers',
-        description: 'Our Support to notify and secure PLN speakers or content for your event',
-      },
-      {
-        id: 'past-event',
-        type: BlockTypeEnum.IMAGE_TEXT,
-        image: {
-          alt: 'Providing Swag',
-          src: '/media/swag.png',
-          ratio: Ratio.ONE_BY_ONE,
-        },
-        title: 'Providing Swag',
-        description: "Pins, stickers, sunnies, mugs, hats - you name it, we're on it",
+        type: BlockTypeEnum.MEDIA_GRID,
+        media: [
+          {
+            media: {
+              type: TypeName.MEDIA_IMAGE_ICON,
+              alt: 'Logistics',
+              src: '/media/logistics.png',
+            },
+            title: 'Logistics',
+            subtitle: 'Registration, comms, & basic marketing',
+          },
+          {
+            id: 'past-event',
+            type: TypeName.MEDIA_IMAGE,
+            media: {
+              type: TypeName.MEDIA_IMAGE_ICON,
+              alt: 'Securing PLN Speakers',
+              src: '/media/speakers.png',
+            },
+            title: 'Securing PLN Speakers',
+            subtitle: 'Our Support to notify and secure PLN speakers or content for your event',
+          },
+          {
+            id: 'past-event',
+            type: TypeName.MEDIA_IMAGE,
+            media: {
+              type: TypeName.MEDIA_IMAGE_ICON,
+              alt: 'Providing Swag',
+              src: '/media/swag.png',
+            },
+            title: 'Providing Swag',
+            subtitle: "Pins, stickers, sunnies, mugs, hats - you name it, we're on it",
+          },
+        ],
       },
     ],
   },

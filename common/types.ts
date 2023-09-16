@@ -48,7 +48,8 @@ export enum Ratio {
 
 export enum TypeName {
   MEDIA_IMAGE = 'media-image',
-  MEDIA_IMAGE_WITH_OVERFLOWING_TEXT = 'media-image-width-text',
+  MEDIA_IMAGE_ICON = 'media-image-icon',
+  MEDIA_IMAGE_WITH_TEXT = 'media-image-with-text',
   MEDIA_ROW = 'media-row',
   MEDIA_VIDEO = 'media-video',
 }

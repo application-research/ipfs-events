@@ -11,6 +11,8 @@ export default function MediaBlock({ media, className }: MediaBlock) {
   switch (media.type) {
     case TypeName.MEDIA_IMAGE:
       return <Image {...media} style={{ borderRadius: 'var(--border-radius-small)' }} ratio={media.ratio} className={className} />;
+    case TypeName.MEDIA_IMAGE_ICON:
+      return <img {...media} style={{ height: '8rem', width: 'auto' }} />;
     case TypeName.MEDIA_VIDEO:
       return <VideoPlayer {...media.video} controls={true} muted={media.muted} ratio={media.ratio} src={media.src} />;
     default:
