@@ -47,7 +47,7 @@ export default function ScheduleSingapore({ scheduleData }) {
   return (
     <>
       <div style={{ paddingBottom: '4rem', display: 'grid', rowGap: '3rem' }}>
-        {calendarData && <Schedule calendarData={calendarData} />}
+        {calendarData && <Schedule calendarData={calendarData} scheduleId={'singapore-schedule'} />}
 
         {submitTrack.url && (
           <a href={submitTrack.url} className={styles.link} target="_blank">

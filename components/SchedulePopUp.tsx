@@ -25,7 +25,7 @@ export function SchedulePopUp({ selectedEvent, isOpen, onClose, style }) {
     });
 
   return (
-    <section className={styles.eventStyle}>
+    <section className={styles.eventStyle} id={title}>
       <div className={styles.popup} style={{ backgroundColor: styles.backgroundColor ?? 'var(--color-white)' }}>
         <div className={styles.header}>
           <h2 className={styles.eventName} style={{ paddingBottom: '0.5rem' }}>
