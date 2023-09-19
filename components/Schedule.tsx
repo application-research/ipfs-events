@@ -1,7 +1,7 @@
 'use client';
 import styles from '@components/Schedule.module.scss';
 
-import { useCallback, useRef, useState } from 'react';
+import { useCallback, useEffect, useRef, useState } from 'react';
 import { SchedulePopUp } from './SchedulePopUp';
 
 const NODE = process.env.NODE_ENV || 'development';
@@ -11,13 +11,48 @@ if (!IS_PRODUCTION) {
   require('dotenv').config();
 }
 
-export default function Schedule({ calendarData }) {
+export default function Schedule({ calendarData, scheduleId }) {
   const [selectedEvent, setSelectedEvent] = useState(null);
   const [isOverlayOpen, setIsOverlayOpen] = useState(false);
   const [isScrolling, setIsScrolling] = useState(false);
 
   const tableRef = useRef<HTMLDivElement>(null);
   const headersRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    function handleHashChange() {
+      const currentHash = window.location.hash.substring(1).toLowerCase();
+
+      if (currentHash) {
+        const allTracks = Object.values(calendarData).flat();
+        const eventData = allTracks.find((track) => {
+          const formattedTitle = (track as any)?.trackDetails?.title.toLowerCase().replace(/ /g, '-').replace(/,/g, '').replace(/\./g, '');
+          const formattedDate = (track as any)?.trackDetails?.trackDate.toLowerCase().replace(/ /g, '-').replace(/,/g, '').replace(/\./g, '');
+          const expectedHash = `${formattedTitle}-${formattedDate}`;
+          return expectedHash === currentHash;
+        });
+
+        if (eventData) {
+          setSelectedEvent((eventData as any).trackDetails);
+          setIsOverlayOpen(true);
+          document.getElementById(scheduleId)?.scrollIntoView({ behavior: 'smooth' });
+        } else {
+          return;
+        }
+      }
+    }
+
+    // Call the hash function once initially
+    handleHashChange();
+
+    // Listen for hash changes
+    window.addEventListener('hashchange', handleHashChange);
+
+    // Cleanup listener on unmount
+    return () => {
+      window.removeEventListener('hashchange', handleHashChange);
+    };
+  }, [scheduleId, calendarData]);
 
   const handleScroll = useCallback((event) => {
     if (isScrolling) return;
@@ -47,15 +82,24 @@ export default function Schedule({ calendarData }) {
   const handleEventClick = (e) => {
     setSelectedEvent(e);
     setIsOverlayOpen(true);
+    handleOpenPopup(e.title, e.trackDate);
   };
 
-  const handlePopupClose = () => {
+  const handlePopupClose = (e) => {
     setSelectedEvent(null);
     setIsOverlayOpen(false);
+    window.history.pushState({}, '', window.location.pathname);
+    e.preventDefault();
+  };
+
+  const handleOpenPopup = (title, trackDate) => {
+    const formattedTitle = title.replace(/[\s,()"':`?!;.]+/g, '-').toLowerCase();
+    const formattedDate = trackDate.replace(/[\s,()"'`:?!;.]+/g, '-').toLowerCase();
+    window.history.pushState({}, '', `#${formattedTitle}-${formattedDate}`);
   };
 
   return (
-    <div className={styles.container}>
+    <div className={styles.container} id={scheduleId}>
       <section className={styles.sectionScrollTooltip}>Click and drag the schedule to navigate</section>
 
       <div className={styles.scheduleWrapper}>
