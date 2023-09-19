@@ -46,7 +46,7 @@ export default function ScheduleIceland({ scheduleData }) {
   return (
     <>
       <div style={{ paddingBottom: '4rem', display: 'grid', rowGap: '3rem' }}>
-        <Schedule calendarData={calendarData} />
+        <Schedule calendarData={calendarData} scheduleId={'iceland-schedule'} />
 
         {submitTrack.url && (
           <a href={submitTrack.url} className={styles.link} target="_blank">
