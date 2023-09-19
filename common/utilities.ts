@@ -232,3 +232,10 @@ export async function makeRequest({ endpoint }) {
     return console.log(e);
   }
 }
+
+export function cleanString(input = '') {
+  return input
+    .replace(/[\s,()"':`?!;.]+/g, '-')
+    .replace(/-+/g, '-')
+    .replace(/^-+|-+$/g, '');
+}
