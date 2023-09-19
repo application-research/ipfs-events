@@ -3,6 +3,7 @@ import styles from '@components/Schedule.module.scss';
 
 import { useCallback, useEffect, useRef, useState } from 'react';
 import { SchedulePopUp } from './SchedulePopUp';
+import { cleanString } from '@root/common/utilities';
 
 const NODE = process.env.NODE_ENV || 'development';
 const IS_PRODUCTION = NODE === 'production';
@@ -26,8 +27,8 @@ export default function Schedule({ calendarData, scheduleId }) {
       if (currentHash) {
         const allTracks = Object.values(calendarData).flat();
         const eventData = allTracks.find((track) => {
-          const formattedTitle = (track as any)?.trackDetails?.title.toLowerCase().replace(/ /g, '-').replace(/,/g, '').replace(/\./g, '');
-          const formattedDate = (track as any)?.trackDetails?.trackDate.toLowerCase().replace(/ /g, '-').replace(/,/g, '').replace(/\./g, '');
+          const formattedTitle = cleanString((track as any)?.trackDetails?.title).toLowerCase();
+          const formattedDate = cleanString((track as any)?.trackDetails?.trackDate).toLowerCase();
           const expectedHash = `${formattedTitle}-${formattedDate}`;
           return expectedHash === currentHash;
         });
@@ -93,8 +94,8 @@ export default function Schedule({ calendarData, scheduleId }) {
   };
 
   const handleOpenPopup = (title, trackDate) => {
-    const formattedTitle = title.replace(/[\s,()"':`?!;.]+/g, '-').toLowerCase();
-    const formattedDate = trackDate.replace(/[\s,()"'`:?!;.]+/g, '-').toLowerCase();
+    const formattedTitle = cleanString(title).toLowerCase();
+    const formattedDate = cleanString(trackDate).toLowerCase();
     window.history.pushState({}, '', `#${formattedTitle}-${formattedDate}`);
   };
 
