@@ -90,26 +90,14 @@ export const FILECOIN_DEV_SUMMIT_2023_PAGE_CONTENT = [
   {
     id: 'about',
     direction: BlockDirectionEnum.ROW,
-    title: 'Upcoming Events',
+
     backgroundColor: 'var(--color-white)',
     block: [
       {
         id: 'upcoming-events',
         type: BlockTypeEnum.MEDIA_GRID,
+        title: 'Upcoming Event',
         media: [
-          {
-            id: 'upcoming-events',
-            type: BlockTypeEnum.MEDIA,
-            heading: 'FIL Dev Summit - Singapore',
-            subtitle: 'September 12 - 14th, 2023',
-            smallDesc: 'Organized by Filecoin Foundation',
-            media: {
-              type: TypeName.MEDIA_IMAGE,
-              src: '/media/singapore-full.png',
-              ariaLabel: 'FIL Dev Summit',
-              link: '#singapore',
-            },
-          },
           {
             id: 'upcoming-events',
             type: TypeName.MEDIA_IMAGE,
@@ -121,6 +109,27 @@ export const FILECOIN_DEV_SUMMIT_2023_PAGE_CONTENT = [
               src: '/media/iceland-full.jpg',
               ariaLabel: 'FIL Dev Summit',
               link: '#iceland',
+            },
+          },
+        ],
+      },
+      {
+        id: 'upcoming-events',
+        type: BlockTypeEnum.MEDIA_GRID,
+        title: 'Past Event',
+        media: [
+          {
+            id: 'upcoming-events',
+            type: BlockTypeEnum.MEDIA,
+
+            heading: 'Past Event - Singapore',
+            subtitle: 'September 12 - 14th, 2023',
+            smallDesc: 'Organized by Filecoin Foundation',
+            media: {
+              type: TypeName.MEDIA_IMAGE,
+              src: '/media/singapore-full.png',
+              ariaLabel: 'FIL Dev Summit',
+              link: '#singapore',
             },
           },
         ],
@@ -137,24 +146,24 @@ export const FILECOIN_DEV_SUMMIT_2023_PAGE_CONTENT = [
         backgroundColor: 'white',
         textColor: 'black',
         tickets: [
-          {
-            id: 'media',
-            type: BlockTypeEnum.TICKET_CARD,
-            price: '$150',
-            name: 'Singapore',
-            backgroundColor: 'white',
-            textColor: 'black',
-            description:
-              'Apply to attend Singapore FIL Dev Summit from September 12-14, 2023. </br></br> General Admission is $150 for all three days. Early bird tickets are 50% off until August 25.',
-            cta: {
-              type: CallToActionVariantEnum.BORDER,
-              target: '_blank',
-              buttonColor: 'linear-gradient(to right,#39C1CB, #006FEC)',
-              textColor: 'white',
-              text: 'Apply to Attend',
-              link: 'https://airtable.com/appEjnh5rpWMsjocb/shran7li4slfQSB04',
-            },
-          },
+          // {
+          //   id: 'media',
+          //   type: BlockTypeEnum.TICKET_CARD,
+          //   price: '$150',
+          //   name: 'Singapore',
+          //   backgroundColor: 'white',
+          //   textColor: 'black',
+          //   description:
+          //     'Apply to attend Singapore FIL Dev Summit from September 12-14, 2023. </br></br> General Admission is $150 for all three days. Early bird tickets are 50% off until August 25.',
+          //   cta: {
+          //     type: CallToActionVariantEnum.BORDER,
+          //     target: '_blank',
+          //     buttonColor: 'linear-gradient(to right,#39C1CB, #006FEC)',
+          //     textColor: 'white',
+          //     text: 'Apply to Attend',
+          //     link: 'https://airtable.com/appEjnh5rpWMsjocb/shran7li4slfQSB04',
+          //   },
+          // },
           {
             id: 'media',
             type: BlockTypeEnum.TICKET_CARD,
@@ -196,41 +205,6 @@ export const FILECOIN_DEV_SUMMIT_2023_PAGE_CONTENT = [
     ],
   },
   {
-    id: 'singapore',
-    direction: BlockDirectionEnum.COLUMN,
-    noGutter: 'no',
-    backgroundColor: 'var(--color-white)',
-    block: [
-      {
-        id: 'media',
-        type: BlockTypeEnum.IMAGE_TEXT_WITH_OVERFLOW,
-        heading: 'Singapore',
-        description: 'September 12 - 14th, 2023',
-        image: {
-          src: '/media/singapore-long.png',
-          ariaLabel: 'FIL Dev Summit - Singapore',
-        },
-      },
-    ],
-  },
-  {
-    id: 'singapore',
-    backgroundColor: 'var(--color-white)',
-
-    direction: BlockDirectionEnum.COLUMN,
-    title: 'FIL Dev Summit - Singapore Schedule',
-    block: [
-      {
-        type: BlockTypeEnum.SCHEDULE_SINGAPORE,
-        scheduleData: FIL_DEV_SUMMIT_SINGAPORE,
-      },
-      // {
-      //   type: BlockTypeEnum.SPEAKERS,
-      //   location: LocationEnum.SINGAPORE,
-      // },
-    ],
-  },
-  {
     id: 'iceland',
     backgroundColor: 'var(--color-white)',
     direction: BlockDirectionEnum.COLUMN,
@@ -268,6 +242,38 @@ export const FILECOIN_DEV_SUMMIT_2023_PAGE_CONTENT = [
       },
     ],
   },
+  {
+    id: 'singapore',
+    direction: BlockDirectionEnum.COLUMN,
+    noGutter: 'no',
+    backgroundColor: 'var(--color-white)',
+    block: [
+      {
+        id: 'media',
+        type: BlockTypeEnum.IMAGE_TEXT_WITH_OVERFLOW,
+        heading: 'Past Event - Singapore',
+        description: 'September 12 - 14th, 2023',
+        image: {
+          src: '/media/singapore-long.png',
+          ariaLabel: 'FIL Dev Summit - Singapore',
+        },
+      },
+    ],
+  },
+  {
+    id: 'singapore',
+    backgroundColor: 'var(--color-white)',
+
+    direction: BlockDirectionEnum.COLUMN,
+    title: 'FIL Dev Summit - Singapore Schedule',
+    block: [
+      {
+        type: BlockTypeEnum.SCHEDULE_SINGAPORE,
+        scheduleData: FIL_DEV_SUMMIT_SINGAPORE,
+      },
+    ],
+  },
+
   {
     id: 'faqs',
     title: 'FAQs',
