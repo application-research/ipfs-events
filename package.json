@@ -1,7 +1,8 @@
 {
   "name": "www-fildev",
   "engines": {
-    "node": ">=18"
+    "npm": ">=9.0.0 <10.0.0",
+    "node": ">=19.0.0 <20.6.1"
   },
   "license": "MIT",
   "version": "0.0.7",
