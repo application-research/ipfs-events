@@ -16,12 +16,14 @@ const getGridStyle = (media) => {
   }
 };
 
-export default function MediaGrid({ media, id }) {
+export default function MediaGrid({ media, title, id }) {
   if (media.length < 1) return <></>;
   const gridStyle = getGridStyle(media);
 
   return (
     <div className={`${styles.mediaContainer} ${gridStyle}`} style={{ display: 'grid', gap: '1rem' }}>
+      {title && <h1 className={styles.title}>{title}</h1>}
+
       {media?.map((mediaItem, index) => {
         const { description, heading, subtitle, smallDesc, title } = mediaItem;
 

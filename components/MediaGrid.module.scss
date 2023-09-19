@@ -105,3 +105,11 @@
     grid-template-columns: repeat(1, minmax(0, 1fr));
   }
 }
+
+.title {
+  font-size: var(--font-size-extra-large);
+  font-family: 'Inter';
+  font-weight: var(--font-weight-light);
+  letter-spacing: -1px;
+  padding-bottom: 1rem;
+}
