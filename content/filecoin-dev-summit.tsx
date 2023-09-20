@@ -462,8 +462,12 @@ export const FILECOIN_DEV_SUMMIT_2023_PAGE_CONTENT = [
     title: 'FIL Dev Summit - Iceland Schedule',
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> a6f7ecb (added button to apply for expo)
+=======
+    description: "<a style='color:#0090FF; text-decoration: none' href='/iceland'>Click here </a> to view the schedule in a list format",
+>>>>>>> bf13e72 (list of schedule)
     cta: {
       type: CallToActionVariantEnum.BUTTON,
       textColor: 'white',
