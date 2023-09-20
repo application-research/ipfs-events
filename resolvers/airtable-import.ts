@@ -294,7 +294,7 @@ export function getFormattedAirtableFields(formattedAirtableData): any {
   return groupedData;
 }
 
-function sortTracksByOrder(groupedData) {
+export function sortTracksByOrder(groupedData) {
   for (const dateKey in groupedData) {
     groupedData[dateKey].sort((a, b) => (a?.trackDetails?.order ?? 0) - (b?.trackDetails?.order ?? 0));
   }
@@ -349,4 +349,21 @@ export function calendarDataWithAddedDates(formattedCalendarData, emptyDatesToAd
   } else {
     return formattedCalendarData;
   }
+}
+
+export function sortCalendarDataByDate(formattedCalendarData) {
+  // Sort the keys (dates) in ascending order using Moment.js library
+  const sortedDates = Object.keys(formattedCalendarData).sort((a, b) => {
+    const dateA = moment.utc(a, 'ddd, MMM D');
+    const dateB = moment.utc(b, 'ddd, MMM D');
+    return dateA.isBefore(dateB) ? -1 : dateA.isAfter(dateB) ? 1 : 0;
+  });
+
+  // Create a new object with sorted dates
+  const sortedResult = {};
+  sortedDates.forEach((date) => {
+    sortedResult[date] = formattedCalendarData[date];
+  });
+
+  return sortedResult;
 }

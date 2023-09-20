@@ -11,6 +11,7 @@ export enum BlockTypeEnum {
   SCHEDULE = 'schedule',
   SCHEDULE_ICELAND = 'schedule-iceland',
   SCHEDULE_SINGAPORE = 'schedule-singapre',
+  SCHEDULE_LIST_ICELAND = 'schedule-list-iceland',
   SPEAKERS = 'speakers',
   TABLE = 'table',
   TEXT = 'text',

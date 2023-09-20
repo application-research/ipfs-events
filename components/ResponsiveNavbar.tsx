@@ -13,9 +13,11 @@ export default function ResponsiveNavbar({ navContent }) {
     <nav className={styles.navbar} style={{ borderBottom: showBorder ? '1px solid black' : '', background: navContent?.backgroundColor ?? 'var(--color-white200)' }}>
       <GutterContainer>
         <div className={styles.container}>
-          <div className={styles.logo}>
-            <img src={logo.src} className={styles.logo} />
-          </div>
+          <Link href={'/'}>
+            <div className={styles.logo}>
+              <img src={logo.src} className={styles.logo} />
+            </div>
+          </Link>
           <div className={styles.container}>
             <ul className={styles.list} style={{ paddingRight: '2rem' }}>
               {navItems?.map((navItem, index) => {
