@@ -22,7 +22,7 @@ import Airtable from 'airtable';
 // }
 
 export default async function apiAirtableIceland(req, res) {
-  const url = 'https://internet-apis.onrender.com/api/airtable/iceland?version=1';
+  const url = 'https://internet-apis.onrender.com/api/airtable/iceland';
   const TOKEN = process.env.FILSUMMIT_TOKEN;
 
   fetch(url, {
