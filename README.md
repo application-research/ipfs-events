@@ -5,6 +5,9 @@ Links Page: https://fil.page/
 
 <img width="1439" alt="Screen Shot 2023-09-25 at 2 17 46 AM" src="https://github.com/application-research/fildevsummit/assets/28320272/7400fc3b-0a69-4c6d-b18c-ca254b25e51f">
 
+# Updating Copy
+To update copy, please go to the `/content` folder and find `filecoin-dev-summit.tsx` which contains the content for the general page copy. To edit the Schedule, please open a github issue requesting a change you would like to make.
+
 
 # NEXT-SASS
 
