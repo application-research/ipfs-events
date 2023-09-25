@@ -467,11 +467,15 @@ export const FILECOIN_DEV_SUMMIT_2023_PAGE_CONTENT = [
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> a6f7ecb (added button to apply for expo)
 =======
     description: "<a style='color:#0090FF; text-decoration: none' href='/iceland'>Click here </a> to view the schedule in a list format",
 >>>>>>> bf13e72 (list of schedule)
+=======
+    description: "<a style='color:#0090FF; text-decoration: none' href='/iceland-list'>Click here </a> to view the schedule in a list format",
+>>>>>>> 1add20f (added talk description)
     cta: {
       type: CallToActionVariantEnum.BUTTON,
       textColor: 'white',
