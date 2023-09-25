@@ -1,3 +1,11 @@
+# Filecoin Dev Summit 2023
+Website Url: https://fildev.io/
+Links Page: https://fil.page/
+
+
+<img width="1439" alt="Screen Shot 2023-09-25 at 2 17 46 AM" src="https://github.com/application-research/fildevsummit/assets/28320272/7400fc3b-0a69-4c6d-b18c-ca254b25e51f">
+
+
 # NEXT-SASS
 
 Why would I use this?
