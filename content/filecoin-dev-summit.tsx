@@ -227,7 +227,7 @@ export const FILECOIN_DEV_SUMMIT_2023_PAGE_CONTENT = [
     id: 'iceland',
     direction: BlockDirectionEnum.COLUMN,
     title: 'FIL Dev Summit - Iceland Schedule',
-    description: "<a style='color:#0090FF; text-decoration: none' href='/iceland'>Click here </a> to view the schedule in a list format",
+    description: "<a style='color:#0090FF; text-decoration: none' href='/iceland-list'>Click here </a> to view the schedule in a list format",
     cta: {
       type: CallToActionVariantEnum.BUTTON,
       textColor: 'white',

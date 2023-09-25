@@ -44,33 +44,42 @@ export default function ScheduleList({ scheduleData }) {
                   {event.title && <h3 className={styles.title}>{event.title}</h3>}
                   {event.trackDetails ? (
                     <div className={classNames(styles.row)}>
-                      {/* <p>{event.trackDetails.trackDesc}</p> */}
                       {event.trackDetails.time && <p className={styles.time}>{event.trackDetails.time}</p>}
-                      {/* <p>First Name: {event.trackDetails.firstName}</p> */}
                       {event.trackDetails.capacity && <p> Room: {event.trackDetails.roomName}</p>}
-
                       {event.trackDetails.capacity && <p> Capacity: {event.trackDetails.capacity}</p>}
                     </div>
                   ) : null}
-                  {event?.records.length > 1 && <h4 style={{ paddingTop: '1rem' }}>Scheduled Talks</h4>}
+                  {event?.records.length > 1 && <h4 style={{ padding: '0.5rem 0rem' }}>Scheduled Talks</h4>}
 
-                  {/* <div className={styles.scheduleRow}>
-                    <p className={styles.col20}>Time</p>
-                    <p className={styles.col50}>Title</p>
-                    <p className={styles.col20}>Speakers</p>
-                  </div> */}
                   {event.records?.map((record, index) => {
                     return (
-                      <div
-                        key={index}
-                        className={classNames(styles.grid2Cols, styles.borderTalksContainer)}
-                        style={{ borderBottom: index === event.records.length - 1 ? 'none' : '0.5px solid var(--color-black)' }}
-                      >
-                        <p className={styles.col20}>{record.startTime ?? '─'}</p>
-                        <p className={styles.col50} style={{ color: 'var(--color-blue)' }}>
-                          {record.title}
-                        </p>
-                        <p className={styles.col20}>{record.firstName}</p>
+                      <div key={index}>
+                        {index === 0 && (record?.firstName || record?.desc) && (
+                          <div className={classNames(styles.grid2Cols, styles.scheduleRow)}>
+                            <p className={classNames(styles.col10, styles.scheduleRowTitle)}>Time</p>
+                            <p className={classNames(styles.col20, styles.scheduleRowTitle)}>Title</p>
+                            <p className={classNames(styles.col10, styles.scheduleRowTitle)}>Speakers</p>
+                            <p className={classNames(styles.col50, styles.scheduleRowTitle)}>Description</p>
+                          </div>
+                        )}
+                        <div
+                          className={classNames(styles.grid2Cols, styles.borderTalksContainer)}
+                          style={{ borderBottom: index === event.records.length - 1 ? 'none' : '0.5px solid var(--color-black)' }}
+                        >
+                          <p className={styles.col10}>{record.startTime ?? '─'}</p>
+                          {record?.title && (
+                            <p className={styles.col20} style={{ color: 'var(--color-blue)' }}>
+                              {record.title}
+                            </p>
+                          )}
+
+                          {record?.firstName && (
+                            <p className={styles.col10} style={{ color: 'var(--color-blue)' }}>
+                              {record.firstName}
+                            </p>
+                          )}
+                          <p className={classNames(styles.col50, styles.desc)}>{record?.desc && record.desc}</p>
+                        </div>
                       </div>
                     );
                   })}
