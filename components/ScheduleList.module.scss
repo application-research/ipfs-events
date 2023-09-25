@@ -43,12 +43,16 @@
   gap: 1rem;
   padding-bottom: 1rem;
   padding-top: 0.5rem;
+  padding-left: 0.5rem;
 
   @media (max-width: 768px) {
     flex-direction: column;
   }
 }
 
+.col10 {
+  width: 10%;
+}
 .col20 {
   width: 20%;
 }
@@ -57,6 +61,7 @@
   width: 50%;
 }
 
+.col10,
 .col20,
 .col50 {
   @media (max-width: 768px) {
@@ -67,7 +72,20 @@
 .scheduleRow {
   display: flex;
   flex-direction: row;
-  padding-left: 0.5rem;
+  padding-left: 1rem;
   padding-right: 1rem;
-  background: var(--color-blue);
+  padding-bottom: 0.5rem;
+  background: var(--color-gray-transparent);
+}
+
+.scheduleRowTitle {
+  font-family: Inter;
+  color: var(--color-black);
+  font-weight: var(--font-size-medium);
+  font-size: var(--font-size-small);
+}
+
+.desc {
+  font-family: Inter;
+  font-weight: var(--font-weight-light);
 }
