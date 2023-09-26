@@ -17,14 +17,21 @@ export const FILECOIN_DEV_SUMMIT_ICELAND_PAGE_CONTENT = [
     },
     block: [
       {
-        type: BlockTypeEnum.SCHEDULE_LIST_ICELAND,
+        type: BlockTypeEnum.SCHEDULE_LIST_BY_TALK_ICELAND,
         scheduleData: {
           airtable: {
             tableName: 'NA/EU Talk Track Submissions + Forms',
           },
         },
-        // apiEndpoint: 'airtable/iceland',
       },
+      // {
+      //   type: BlockTypeEnum.SCHEDULE_LIST_BY_TRACK_ICELAND,
+      //   scheduleData: {
+      //     airtable: {
+      //       tableName: 'NA/EU Talk Track Submissions + Forms',
+      //     },
+      //   },
+      // },
     ],
   },
 ];

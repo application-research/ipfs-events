@@ -19,8 +19,8 @@ import Text from './Text';
 import Tickets from './Tickets';
 import ScheduleIceland from './ScheduleIceland';
 import ScheduleSingapore from './ScheduleSingapore';
-import Speakers from './Speakers';
-import ScheduleList from './ScheduleList';
+import ScheduleListByTrack from './ScheduleListByTrack';
+import ScheduleListByTalks from './ScheduleListByTalks';
 
 export function Block({ block }) {
   switch (block.type) {
@@ -48,8 +48,10 @@ export function Block({ block }) {
       return <ScheduleIceland {...block} />;
     case (block.type = BlockTypeEnum.SCHEDULE_SINGAPORE):
       return <ScheduleSingapore {...block} />;
-    case (block.type = BlockTypeEnum.SCHEDULE_LIST_ICELAND):
-      return <ScheduleList {...block} />;
+    case (block.type = BlockTypeEnum.SCHEDULE_LIST_BY_TRACK_ICELAND):
+      return <ScheduleListByTrack {...block} />;
+    case (block.type = BlockTypeEnum.SCHEDULE_LIST_BY_TALK_ICELAND):
+      return <ScheduleListByTalks {...block} />;
     case (block.type = BlockTypeEnum.TABLE):
       return <Table {...block} />;
     case (block.type = BlockTypeEnum.TICKET_CARD):
