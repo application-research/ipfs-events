@@ -30,8 +30,8 @@ export const extractAllTracksFromTrackDetails = (formattedAirtableData: any): st
 };
 
 export const getTalkWithinSelectedHour = (eventTime: string, selectedTime: string): boolean => {
-  const eventMoment = moment(eventTime, 'hh:mm a');
-  const selectedMomentStart = moment(selectedTime, 'HH:mm a');
+  const eventMoment = moment.utc(eventTime, 'hh:mm a');
+  const selectedMomentStart = moment.utc(selectedTime, 'HH:mm a');
   const selectedMomentEnd = selectedMomentStart.clone().add(1, 'hour');
 
   return eventMoment.isSameOrAfter(selectedMomentStart) && eventMoment.isBefore(selectedMomentEnd);
