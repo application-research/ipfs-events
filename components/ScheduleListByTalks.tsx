@@ -175,7 +175,7 @@ function ScheduleRow() {
   return (
     <div className={classNames(styles.grid2Cols, styles.scheduleRow)}>
       <p className={classNames(styles.col10, styles.scheduleRowTitle)}>Time</p>
-      <p className={classNames(styles.col20, styles.scheduleRowTitle)}>Title</p>
+      <p className={classNames(styles.col20, styles.scheduleRowTitle)}>Talk Title</p>
       <p className={classNames(styles.col10, styles.scheduleRowTitle)}>Speakers</p>
       <p className={classNames(styles.col20, styles.scheduleRowTitle)}>Track and Room</p>
       <p className={classNames(styles.col50, styles.scheduleRowTitle)}>Description</p>
