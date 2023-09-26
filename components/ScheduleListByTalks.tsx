@@ -49,6 +49,7 @@ export default function ScheduleListByTalks({ scheduleData }) {
   const tracks: any = extractAllTracksFromTrackDetails(formattedAirtableData);
   const uniqueTracks: any = [...new Set(tracks as any)];
 
+  console.log(allTimes, 'alltimes');
   return (
     <>
       <div className={styles.talksFilterRow}>
