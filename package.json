@@ -17,6 +17,8 @@
     "dotenv": "^16.3.1",
     "encoding": "^0.1.13",
     "knex": "^2.4.2",
+    "lottie-react": "^2.4.0",
+    "lottie-web": "^5.12.2",
     "markdown-to-jsx": "^7.2.1",
     "moment": "^2.29.4",
     "next": "13.4.12",

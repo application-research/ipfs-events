@@ -1,0 +1,170 @@
+.list {
+  display: flex;
+  flex-direction: column;
+
+  // gap: 1rem;
+  // padding-bottom: 1rem;
+}
+
+.date {
+  font-family: Inter;
+  font-weight: var(--font-weight-regular);
+  color: var(--color-blue);
+  border-bottom: 0.5px solid var(--color-black);
+  padding-bottom: 1rem;
+}
+
+.title {
+  font-family: Inter;
+  font-weight: var(--font-weight-regular);
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  gap: 0.5rem;
+  border: 1px solid var(--color-blue);
+  border-radius: var(--border-radius-small);
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
+}
+
+// .border {
+//   border: 1px solid var(--color-blue);
+//   border-radius: var(--border-radius-small);
+// }
+
+.time {
+  color: var(--color-black);
+  font-weight: var(--font-weight-medium);
+}
+
+.grid2Cols {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  border-left: 0.5px solid var(--color-black);
+  border-right: 0.5px solid var(--color-black);
+  // gap: 1rem;
+  // padding-left: 0.5rem;
+  @media (max-width: 768px) {
+    flex-direction: column;
+    padding: 1rem 0rem;
+  }
+}
+
+.table {
+  border-left: 0.5px solid var(--color-black);
+  border-right: 0.5px solid var(--color-black);
+}
+
+.col10 {
+  width: 10%;
+  // border-bottom: 0.5px solid var(--color-black);
+  border-right: 0.5px solid var(--color-black);
+  padding-bottom: 0.5rem;
+  padding-top: 0.5rem;
+  display: flex;
+  align-items: center;
+  padding: 0.5rem;
+}
+
+.col20 {
+  padding: 0.5rem;
+  width: 20%;
+  border-right: 0.5px solid var(--color-black);
+  padding-bottom: 0.5rem;
+  padding-top: 0.5rem;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.col50 {
+  padding: 0.5rem;
+  width: 40%;
+  padding-bottom: 0.5rem;
+  padding-top: 0.5rem;
+  display: flex;
+  align-items: center;
+}
+
+.col10,
+.col20,
+.col50 {
+  @media (max-width: 768px) {
+    width: 100%;
+    border-right: none;
+  }
+}
+
+.scheduleRow {
+  display: flex;
+  flex-direction: row;
+  border-left: 0.5px solid var(--color-black);
+  border-right: 0.5px solid var(--color-black);
+  border-bottom: 0.5px solid var(--color-black);
+  background: var(--color-gray-transparent);
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+
+  @media (max-width: 768px) {
+    display: none;
+  }
+}
+
+.scheduleRowTitle {
+  font-family: Inter;
+  color: var(--color-black);
+  font-weight: var(--font-size-medium);
+  font-size: var(--font-size-small);
+}
+
+.desc {
+  font-family: Inter;
+  font-weight: var(--font-weight-light);
+  font-size: 14px;
+}
+
+.talkTrackDetails {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 0.5rem;
+  font-size: 14px;
+
+  .trackTitle {
+    color: var(--color-black);
+    font-weight: var(--font-weight-light);
+  }
+  .talkRoom {
+    color: var(--color-gray);
+  }
+}
+
+.talkTitle {
+  font-size: var(--font-size-regular);
+  // padding-bottom: 1rem;
+  // padding-top: 1rem;
+}
+
+.talksFilter {
+  padding: 0.5rem;
+}
+
+.talksFilterRow {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.talksFilterText {
+  font-weight: var(--font-weight-light);
+  font-size: 14px;
+}

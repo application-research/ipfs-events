@@ -1,24 +1,35 @@
 'use client';
-import styles from 'components/ScheduleList.module.scss';
+import styles from 'components/ScheduleListByTrack.module.scss';
+
 import { classNames, makeRequest } from '@root/common/utilities';
 import { formatAirtableMetaData, getFormattedAirtableFields, sortCalendarDataByDate, sortTracksByOrder } from '@root/resolvers/airtable-import';
 import { useEffect, useState } from 'react';
+import Loading from './Loading';
 
-export default function ScheduleList({ scheduleData }) {
+export default function ScheduleListByTrack({ scheduleData }) {
   const [eventData, setEventData] = useState<any[] | null>(null);
+  const [isLoading, setLoading] = useState(true);
 
   useEffect(() => {
     if (scheduleData?.airtable?.tableName) {
       const fetchData = async () => {
-        const res = await makeRequest({ endpoint: 'airtable/iceland' });
-        const formattedAirtableData = formatAirtableMetaData(res.data);
+        try {
+          const res = await makeRequest({ endpoint: 'airtable/iceland' });
+          const formattedAirtableData = formatAirtableMetaData(res.data);
 
-        setEventData(formattedAirtableData);
+          setEventData(formattedAirtableData);
+
+          setLoading(false);
+        } catch (e) {
+          console.log(e);
+          setLoading(false); // Also set it to false in case of error
+        }
       };
 
       fetchData();
     }
   }, [scheduleData]);
+  if (isLoading != false) return <Loading />;
 
   if (!eventData) return null;
 
