@@ -1,9 +1,6 @@
 .list {
   display: flex;
   flex-direction: column;
-
-  // gap: 1rem;
-  // padding-bottom: 1rem;
 }
 
 .date {
@@ -31,11 +28,6 @@
   }
 }
 
-// .border {
-//   border: 1px solid var(--color-blue);
-//   border-radius: var(--border-radius-small);
-// }
-
 .time {
   color: var(--color-black);
   font-weight: var(--font-weight-medium);
@@ -47,8 +39,7 @@
   width: 100%;
   border-left: 0.5px solid var(--color-black);
   border-right: 0.5px solid var(--color-black);
-  // gap: 1rem;
-  // padding-left: 0.5rem;
+
   @media (max-width: 768px) {
     flex-direction: column;
     padding: 1rem 0rem;
@@ -62,7 +53,6 @@
 
 .col10 {
   width: 10%;
-  // border-bottom: 0.5px solid var(--color-black);
   border-right: 0.5px solid var(--color-black);
   padding-bottom: 0.5rem;
   padding-top: 0.5rem;
@@ -150,8 +140,6 @@
 
 .talkTitle {
   font-size: var(--font-size-regular);
-  // padding-bottom: 1rem;
-  // padding-top: 1rem;
 }
 
 .talksFilter {
@@ -161,10 +149,36 @@
 .talksFilterRow {
   display: flex;
   align-items: center;
+  flex-direction: row;
   gap: 0.5rem;
+  padding-bottom: 1rem;
+
+  @media (max-width: 1040px) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    text-align: start;
+    width: 100%;
+  }
+
+  @media (max-width: 768px) {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    text-align: start;
+    width: 100%;
+  }
 }
 
 .talksFilterText {
   font-weight: var(--font-weight-light);
+  font-size: 14px;
+}
+
+.talksEmpty {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-gray);
+  padding: 0.5rem;
+  border: 0.5px solid var(--color-black);
   font-size: 14px;
 }
