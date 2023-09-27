@@ -210,6 +210,7 @@ export const FILECOIN_DEV_SUMMIT_2023_PAGE_CONTENT = [
 >>>>>>> 210a57f (reorder the schedule)
             type: TypeName.MEDIA_IMAGE,
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -222,6 +223,9 @@ export const FILECOIN_DEV_SUMMIT_2023_PAGE_CONTENT = [
 =======
             heading: 'FIL Dev Summit - Iceland',
 >>>>>>> ddccff6 (updated event copy)
+=======
+            heading: 'FilDev2 - Iceland',
+>>>>>>> e7b9b9c (added dates to FilDev1, and FilDev2)
             subtitle: 'September 25 - 27th, 2023',
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -251,7 +255,7 @@ export const FILECOIN_DEV_SUMMIT_2023_PAGE_CONTENT = [
             id: 'upcoming-events',
             type: BlockTypeEnum.MEDIA,
 
-            heading: 'Past Event - Singapore',
+            heading: 'FilDev1 - Singapore',
             subtitle: 'September 12 - 14th, 2023',
             smallDesc: 'Organized by Filecoin Foundation',
             media: {
@@ -462,6 +466,7 @@ export const FILECOIN_DEV_SUMMIT_2023_PAGE_CONTENT = [
     id: 'iceland',
 >>>>>>> 7b68555 (fixed anchor)
     direction: BlockDirectionEnum.COLUMN,
+<<<<<<< HEAD
 >>>>>>> 769859b (updated columns for block direction)
     title: 'FIL Dev Summit - Iceland Schedule',
 <<<<<<< HEAD
@@ -474,6 +479,9 @@ export const FILECOIN_DEV_SUMMIT_2023_PAGE_CONTENT = [
     description: "<a style='color:#0090FF; text-decoration: none' href='/iceland'>Click here </a> to view the schedule in a list format",
 >>>>>>> bf13e72 (list of schedule)
 =======
+=======
+    title: 'FilDev2 - Iceland Schedule',
+>>>>>>> e7b9b9c (added dates to FilDev1, and FilDev2)
     description: "<a style='color:#0090FF; text-decoration: none' href='/iceland-list'>Click here </a> to view the schedule in a list format",
 >>>>>>> 1add20f (added talk description)
     cta: {
@@ -617,7 +625,7 @@ export const FILECOIN_DEV_SUMMIT_2023_PAGE_CONTENT = [
     backgroundColor: 'var(--color-white)',
 
     direction: BlockDirectionEnum.COLUMN,
-    title: 'FIL Dev Summit - Singapore Schedule',
+    title: 'FilDev1 - Singapore Schedule',
     block: [
       {
         type: BlockTypeEnum.SCHEDULE_SINGAPORE,
