@@ -2,6 +2,7 @@ import styles from '@components/LogoGrid.module.scss';
 
 import Image from './Image';
 import Link from './Link';
+import { classNames } from '@root/common/utilities';
 
 export default function LogoGrid({ id, logosLarge, logosMedium, logosSmall, text }) {
   return (
@@ -13,10 +14,10 @@ export default function LogoGrid({ id, logosLarge, logosMedium, logosSmall, text
               <div className={styles.gridItem}>
                 {logo.href !== null ? (
                   <Link key={index} href={logo.href} target="_blank" className={styles.link}>
-                    <Image className={styles.logo} src={logo.src} altText={logo?.altText ?? ''} />
+                    <Image className={classNames(styles.logo, styles.logoLarge)} src={logo.src} altText={logo?.altText ?? ''} />
                   </Link>
                 ) : (
-                  <Image className={styles.logo} src={logo.src} altText={logo?.altText ?? ''} />
+                  <Image className={classNames(styles.logo, styles.logoLarge)} src={logo.src} altText={logo?.altText ?? ''} />
                 )}
               </div>
             );
@@ -31,10 +32,10 @@ export default function LogoGrid({ id, logosLarge, logosMedium, logosSmall, text
               <div className={styles.gridItem}>
                 {logo.href !== null ? (
                   <Link key={index} href={logo.href} target="_blank" className={styles.link}>
-                    <Image className={styles.logo} src={logo.src} altText={logo?.altText ?? ''} />
+                    <Image className={classNames(styles.logo, styles.logoMedium)} src={logo.src} altText={logo?.altText ?? ''} />
                   </Link>
                 ) : (
-                  <Image className={styles.logo} src={logo.src} altText={logo?.altText ?? ''} />
+                  <Image className={classNames(styles.logo, styles.logoMedium)} src={logo.src} altText={logo?.altText ?? ''} />
                 )}
               </div>
             );
@@ -49,10 +50,10 @@ export default function LogoGrid({ id, logosLarge, logosMedium, logosSmall, text
               <div className={styles.gridItem}>
                 {logo.href !== null ? (
                   <Link key={index} href={logo.href} target="_blank" className={styles.link}>
-                    <Image className={styles.logo} src={logo.src} altText={logo?.altText ?? ''} />
+                    <Image className={classNames(styles.logo, styles.logoSmall)} src={logo.src} altText={logo?.altText ?? ''} />
                   </Link>
                 ) : (
-                  <Image className={styles.logo} src={logo.src} altText={logo?.altText ?? ''} />
+                  <Image className={classNames(styles.logo, styles.logoSmall)} src={logo.src} altText={logo?.altText ?? ''} />
                 )}
               </div>
             );
