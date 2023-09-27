@@ -56,7 +56,8 @@
 }
 
 .gridItem,
-.logo {
+.logo,
+.logoSmall {
   display: block;
   max-width: 100%;
   width: 100%;
@@ -81,15 +82,33 @@
   align-items: center;
   justify-content: center;
   width: auto;
-  padding: 0.5rem 2rem;
   height: 5rem;
   object-fit: contain;
-
   -webkit-filter: grayscale(100%);
   filter: grayscale(100%);
+}
+
+.logoLarge {
+  padding: 0.5rem 2rem;
 
   @media (max-width: 768px) {
     padding: 0.5rem 0.5rem;
+  }
+}
+
+.logoSmall {
+  padding: 0.5rem;
+}
+
+.logoMedium {
+  padding: 0.5rem 2rem;
+
+  @media (max-width: 768px) {
+    padding: 0.5rem 0.5rem;
+  }
+
+  @media (max-width: 768px) {
+    padding: 0.5rem;
   }
 }
 
