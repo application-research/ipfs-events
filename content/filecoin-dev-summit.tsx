@@ -101,7 +101,7 @@ export const FILECOIN_DEV_SUMMIT_2023_PAGE_CONTENT = [
           {
             id: 'upcoming-events',
             type: TypeName.MEDIA_IMAGE,
-            heading: 'FIL Dev Summit - Iceland',
+            heading: 'FilDev2 - Iceland',
             subtitle: 'September 25 - 27th, 2023',
             smallDesc: 'Organized by Miwa',
             media: {
@@ -122,7 +122,7 @@ export const FILECOIN_DEV_SUMMIT_2023_PAGE_CONTENT = [
             id: 'upcoming-events',
             type: BlockTypeEnum.MEDIA,
 
-            heading: 'Past Event - Singapore',
+            heading: 'FilDev1 - Singapore',
             subtitle: 'September 12 - 14th, 2023',
             smallDesc: 'Organized by Filecoin Foundation',
             media: {
@@ -226,7 +226,7 @@ export const FILECOIN_DEV_SUMMIT_2023_PAGE_CONTENT = [
   {
     id: 'iceland',
     direction: BlockDirectionEnum.COLUMN,
-    title: 'FIL Dev Summit - Iceland Schedule',
+    title: 'FilDev2 - Iceland Schedule',
     description: "<a style='color:#0090FF; text-decoration: none' href='/iceland-list'>Click here </a> to view the schedule in a list format",
     cta: {
       type: CallToActionVariantEnum.BUTTON,
@@ -266,7 +266,7 @@ export const FILECOIN_DEV_SUMMIT_2023_PAGE_CONTENT = [
     backgroundColor: 'var(--color-white)',
 
     direction: BlockDirectionEnum.COLUMN,
-    title: 'FIL Dev Summit - Singapore Schedule',
+    title: 'FilDev1 - Singapore Schedule',
     block: [
       {
         type: BlockTypeEnum.SCHEDULE_SINGAPORE,
