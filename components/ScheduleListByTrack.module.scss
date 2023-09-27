@@ -89,3 +89,21 @@
   font-family: Inter;
   font-weight: var(--font-weight-light);
 }
+
+.tracksFilter {
+  padding: 0.5rem;
+  border-radius: var(--border-radius-tiny);
+}
+
+.tracksFilterRow {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-direction: row;
+  gap: 0.5rem;
+  padding-bottom: 1rem;
+}
+
+.tracksFilterText {
+  font-weight: var(--font-weight-light);
+}

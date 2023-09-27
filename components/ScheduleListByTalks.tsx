@@ -52,7 +52,7 @@ export default function ScheduleListByTalks({ scheduleData }) {
   return (
     <>
       <div className={styles.talksFilterRow}>
-        <div className={styles.talksFilterRow}>
+        <div className={styles.talksFilterRow} style={{ paddingRight: '1rem' }}>
           <p className={styles.talksFilterText}>Sort by Date</p>
           <select className={styles.talksFilter} value={selectedDate || ''} onChange={(e) => setSelectedDate(e.target.value)}>
             <option value="">All Dates</option>
