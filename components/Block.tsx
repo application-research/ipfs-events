@@ -21,6 +21,7 @@ import ScheduleIceland from './ScheduleIceland';
 import ScheduleSingapore from './ScheduleSingapore';
 import ScheduleListByTrack from './ScheduleListByTrack';
 import ScheduleListByTalks from './ScheduleListByTalks';
+import ScheduleListToggleByTimeOrTrack from './ScheduleListToggle';
 
 export function Block({ block }) {
   switch (block.type) {
@@ -52,6 +53,8 @@ export function Block({ block }) {
       return <ScheduleListByTrack {...block} />;
     case (block.type = BlockTypeEnum.SCHEDULE_LIST_BY_TALK_ICELAND):
       return <ScheduleListByTalks {...block} />;
+    case (block.type = BlockTypeEnum.SCHEDULE_LIST_TOGGLE_BY_TRACK_TALK_ICELAND):
+      return <ScheduleListToggleByTimeOrTrack {...block} />;
     case (block.type = BlockTypeEnum.TABLE):
       return <Table {...block} />;
     case (block.type = BlockTypeEnum.TICKET_CARD):
