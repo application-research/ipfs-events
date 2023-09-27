@@ -103,7 +103,7 @@ export default function ScheduleListByTalks({ scheduleData }) {
         // Check if there are any filtered events for this date
         if (filteredEvents && filteredEvents.length > 0) {
           return (
-            <div key={date} className={styles.list}>
+            <div key={date} className={styles.list} style={{ paddingBottom: '2rem' }}>
               {date && (
                 <h2 className={styles.date} style={{ paddingTop: '1rem' }}>
                   {date}
@@ -155,7 +155,7 @@ export default function ScheduleListByTalks({ scheduleData }) {
         } else {
           // If there are no filtered events for this date, display the message
           return (
-            <div key={date} className={styles.list}>
+            <div key={date} className={styles.list} style={{ paddingBottom: '2rem' }}>
               {date && (
                 <h2 className={styles.date} style={{ paddingTop: '1rem', borderBottom: 'none' }}>
                   {date}
