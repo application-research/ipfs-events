@@ -1,5 +1,4 @@
 import { BlockDirectionEnum, BlockTypeEnum, CallToActionVariantEnum } from '@root/common/types';
-import { FIL_DEV_SUMMIT_ICELAND } from './filecoin-dev-summit';
 
 export const FILECOIN_DEV_SUMMIT_ICELAND_PAGE_CONTENT = [
   {
@@ -17,7 +16,7 @@ export const FILECOIN_DEV_SUMMIT_ICELAND_PAGE_CONTENT = [
     },
     block: [
       {
-        type: BlockTypeEnum.SCHEDULE_LIST_BY_TALK_ICELAND,
+        type: BlockTypeEnum.SCHEDULE_LIST_TOGGLE_BY_TRACK_TALK_ICELAND,
         scheduleData: {
           airtable: {
             tableName: 'NA/EU Talk Track Submissions + Forms',

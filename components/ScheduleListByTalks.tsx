@@ -49,12 +49,11 @@ export default function ScheduleListByTalks({ scheduleData }) {
   const tracks: any = extractAllTracksFromTrackDetails(formattedAirtableData);
   const uniqueTracks: any = [...new Set(tracks as any)];
 
-  console.log(allTimes, 'alltimes');
   return (
     <>
       <div className={styles.talksFilterRow}>
         <div className={styles.talksFilterRow}>
-          <p className={styles.talksFilterText}>Filter by Date</p>
+          <p className={styles.talksFilterText}>Sort by Date</p>
           <select className={styles.talksFilter} value={selectedDate || ''} onChange={(e) => setSelectedDate(e.target.value)}>
             <option value="">All Dates</option>
             {allDates.map((date) => (
@@ -65,7 +64,7 @@ export default function ScheduleListByTalks({ scheduleData }) {
           </select>
         </div>
         <div className={styles.talksFilterRow}>
-          <p className={styles.talksFilterText}>Filter by Time</p>
+          <p className={styles.talksFilterText}>Sort by Time</p>
           <select className={styles.talksFilter} value={selectedTime || ''} onChange={(e) => setSelectedTime(e.target.value)}>
             <option value="">All Times</option>
             {allTimes.map((time) => (
@@ -75,7 +74,7 @@ export default function ScheduleListByTalks({ scheduleData }) {
             ))}
           </select>
         </div>
-        <div className={styles.talksFilterRow}>
+        {/* <div className={styles.talksFilterRow}>
           <p className={styles.talksFilterText}>Filter by Track</p>
           <select className={styles.talksFilter} value={selectedTrack || ''} onChange={(e) => setSelectedTrack(e.target.value)}>
             <option value="">All Tracks</option>
@@ -85,7 +84,7 @@ export default function ScheduleListByTalks({ scheduleData }) {
               </option>
             ))}
           </select>
-        </div>
+        </div> */}
       </div>
 
       {Object?.entries(formattedAirtableData)?.map(([date, events]: any) => {
