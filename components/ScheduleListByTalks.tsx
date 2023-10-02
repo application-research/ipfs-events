@@ -18,7 +18,7 @@ export default function ScheduleListByTalks({ scheduleData }) {
     if (scheduleData?.airtable?.tableName) {
       const fetchData = async () => {
         try {
-          const res = await makeRequest({ endpoint: scheduleData?.airtable?.endpoint });
+          const res = await makeRequest({ endpoint: scheduleData?.airtable?.endPoint });
           const formattedAirtableData = formatAirtableMetaData(res.data);
 
           setEventData(formattedAirtableData);
@@ -140,7 +140,8 @@ export default function ScheduleListByTalks({ scheduleData }) {
                             </p>
                             <p className={classNames(styles.col20, styles.talkTrackDetails)}>
                               {event.title && <p className={styles.trackTitle}>Track: {event.title}</p>}
-                              {event.trackDetails.capacity && <p className={styles.talkRoom}> Room: {event.trackDetails.roomName}</p>}
+                              {event?.trackDetails?.capacity && <p className={styles.talkRoom}> Room: {event.trackDetails.roomName}</p>}
+                              {event?.trackDetails?.capacity && <p className={styles.talkCapacity}> Capacity: {event.trackDetails.capacity}</p>}
                             </p>
                             <p className={classNames(styles.col50, styles.desc)}>{record?.desc && record.desc}</p>
                           </div>

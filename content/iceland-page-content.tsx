@@ -24,14 +24,6 @@ export const FILECOIN_DEV_SUMMIT_ICELAND_PAGE_CONTENT = [
           },
         },
       },
-      // {
-      //   type: BlockTypeEnum.SCHEDULE_LIST_BY_TRACK_ICELAND,
-      //   scheduleData: {
-      //     airtable: {
-      //       tableName: 'NA/EU Talk Track Submissions + Forms',
-      //     },
-      //   },
-      // },
     ],
   },
 ];
