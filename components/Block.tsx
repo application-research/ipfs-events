@@ -52,6 +52,12 @@ export function Block({ block }) {
       return <ScheduleListByTalks {...block} />;
     case (block.type = BlockTypeEnum.SCHEDULE_LIST_TOGGLE_BY_TRACK_TALK_ICELAND):
       return <ScheduleListToggleByTimeOrTrack {...block} />;
+    case (block.type = BlockTypeEnum.SCHEDULE_LIST_BY_TRACK_SINGAPORE):
+      return <ScheduleListByTrack {...block} />;
+    case (block.type = BlockTypeEnum.SCHEDULE_LIST_BY_TALK_SINGAPORE):
+      return <ScheduleListByTalks {...block} />;
+    case (block.type = BlockTypeEnum.SCHEDULE_LIST_TOGGLE_BY_TRACK_TALK_SINGAPORE):
+      return <ScheduleListToggleByTimeOrTrack {...block} />;
     case (block.type = BlockTypeEnum.TABLE):
       return <Table {...block} />;
     case (block.type = BlockTypeEnum.TICKET_CARD):
