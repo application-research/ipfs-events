@@ -15,7 +15,7 @@ export default function ScheduleListByTrack({ scheduleData }) {
     if (scheduleData?.airtable?.tableName) {
       const fetchData = async () => {
         try {
-          const res = await makeRequest({ endpoint: 'airtable/iceland' });
+          const res = await makeRequest({ endpoint: scheduleData?.airtable?.endPoint });
           const formattedAirtableData = formatAirtableMetaData(res.data);
 
           setEventData(formattedAirtableData);
@@ -74,7 +74,7 @@ export default function ScheduleListByTrack({ scheduleData }) {
                     {event.trackDetails ? (
                       <div className={classNames(styles.row)}>
                         {event.trackDetails.time && <p className={styles.time}>{event.trackDetails.time}</p>}
-                        {event.trackDetails.capacity && <p> Room: {event.trackDetails.roomName}</p>}
+                        {event.trackDetails.roomName && <p> Room: {event.trackDetails.roomName}</p>}
                         {event.trackDetails.capacity && <p> Capacity: {event.trackDetails.capacity}</p>}
                       </div>
                     ) : null}

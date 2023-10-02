@@ -279,6 +279,15 @@ export const FILECOIN_DEV_SUMMIT_2023_PAGE_CONTENT = [
 
     direction: BlockDirectionEnum.COLUMN,
     title: 'FilDev1 - Singapore Schedule',
+    description: "<a style='color:#0090FF; text-decoration: none' href='/singapore-list'>Click here </a> to view the schedule in a list format",
+    cta: {
+      type: CallToActionVariantEnum.BUTTON,
+      textColor: 'white',
+      target: '_blank',
+      text: 'Showcase Your Project at the EXPO',
+      buttonColor: 'linear-gradient(to right,#39C1CB, #006FEC)',
+      link: 'https://airtable.com/appEjnh5rpWMsjocb/shrw3Ha0yTusDmcOg',
+    },
     block: [
       {
         type: BlockTypeEnum.SCHEDULE_SINGAPORE,
@@ -462,6 +471,11 @@ export const FOOTER_FILECOIN_DEV_SUMMIT_CONTENT = {
       name: 'DMCA Policy',
     },
   ],
+  source: [
+    {
+      href: 'https://github.com/application-research/fildevsummit'
+    }
+  ]
 };
 
 export const FILECOIN_DEV_SUMMIT_NAVIGATION_CONTENT = {
