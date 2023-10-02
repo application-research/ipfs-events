@@ -5,6 +5,7 @@ export const FILECOIN_DEV_SUMMIT_SINGAPORE_PAGE_CONTENT = [
     id: 'singapore',
     backgroundColor: 'var(--color-white)',
     direction: BlockDirectionEnum.COLUMN,
+    endPoint: 'airtable/singapore',
     title: 'Singapore - Schedule',
     cta: {
       type: CallToActionVariantEnum.BUTTON,
@@ -12,14 +13,14 @@ export const FILECOIN_DEV_SUMMIT_SINGAPORE_PAGE_CONTENT = [
       target: '_blank',
       text: 'Showcase Your Project at the EXPO',
       buttonColor: 'linear-gradient(to right,#39C1CB, #006FEC)',
-      link: 'https://airtable.com/appEjnh5rpWMsjocb/shr4Pv7K5CxTo6DGi',
+      link: 'https://airtable.com/appEjnh5rpWMsjocb/shrw3Ha0yTusDmcOg',
     },
     block: [
       {
         type: BlockTypeEnum.SCHEDULE_LIST_TOGGLE_BY_TRACK_TALK_SINGAPORE,
         scheduleData: {
           airtable: {
-            tableName: 'NA/EU Talk Track Submissions + Forms',
+            tableName: 'Asia Talk Track Submissions + Forms',
           },
         },
       },
