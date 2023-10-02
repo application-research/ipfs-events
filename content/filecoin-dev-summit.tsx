@@ -165,11 +165,11 @@ export const FILECOIN_DEV_SUMMIT_2023_PAGE_CONTENT = [
             href: 'https://filfi.io/',
           },
           {
-            src: '/media/MineFi.svg',
+            src: '/media/MineFi.png',
             href: 'https://www.minefi.io/',
           },
           {
-            src: '/media/STFil.svg',
+            src: '/media/STFil.png',
             href: 'https://stfil.io/#/',
           },
         ],
