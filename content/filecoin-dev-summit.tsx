@@ -148,20 +148,24 @@ export const FILECOIN_DEV_SUMMIT_2023_PAGE_CONTENT = [
           },
           {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 30c63c2 (Update filecoin-dev-summit.tsx)
             src: 'https://i.ibb.co/JrQzymQ/Fil-Fi-logo.jpg',
 =======
             src: '/media/filfi-logo.png',
 >>>>>>> 1eba6bc (updated logos)
+=======
+            src: '/media/filfi.svg',
+>>>>>>> 3d59840 (update past events)
             href: 'https://filfi.io/',
           },
           {
-            src: 'https://www.minefi.io/images/logo.png',
+            src: '/media/MineFi.svg',
             href: 'https://www.minefi.io/',
           },
           {
-            src: 'https://i.ibb.co/JrZ6WNk/STFIL-Logo-white-background.png',
+            src: '/media/STFil.svg',
             href: 'https://stfil.io/#/',
           },
         ],
@@ -177,13 +181,12 @@ export const FILECOIN_DEV_SUMMIT_2023_PAGE_CONTENT = [
   {
     id: 'about',
     direction: BlockDirectionEnum.ROW,
-
     backgroundColor: 'var(--color-white)',
+    title: 'Past Events',
     block: [
       {
         id: 'upcoming-events',
         type: BlockTypeEnum.MEDIA_GRID,
-        title: 'Upcoming Event',
         media: [
           {
             id: 'upcoming-events',
@@ -244,17 +247,9 @@ export const FILECOIN_DEV_SUMMIT_2023_PAGE_CONTENT = [
               link: '#iceland',
             },
           },
-        ],
-      },
-      {
-        id: 'upcoming-events',
-        type: BlockTypeEnum.MEDIA_GRID,
-        title: 'Past Event',
-        media: [
           {
             id: 'upcoming-events',
             type: BlockTypeEnum.MEDIA,
-
             heading: 'FilDev1 - Singapore',
             subtitle: 'September 12 - 14th, 2023',
             smallDesc: 'Organized by Filecoin Foundation',
@@ -267,6 +262,27 @@ export const FILECOIN_DEV_SUMMIT_2023_PAGE_CONTENT = [
           },
         ],
       },
+      // {
+      //   id: 'upcoming-events',
+      //   type: BlockTypeEnum.MEDIA_GRID,
+      //   title: 'd',
+      //   media: [
+      //     {
+      //       id: 'upcoming-events',
+      //       type: BlockTypeEnum.MEDIA,
+
+      //       heading: 'FilDev1 - Singapore',
+      //       subtitle: 'September 12 - 14th, 2023',
+      //       smallDesc: 'Organized by Filecoin Foundation',
+      //       media: {
+      //         type: TypeName.MEDIA_IMAGE,
+      //         src: '/media/singapore-full.png',
+      //         ariaLabel: 'FIL Dev Summit',
+      //         link: '#singapore',
+      //       },
+      //     },
+      //   ],
+      // },
     ],
   },
   {
