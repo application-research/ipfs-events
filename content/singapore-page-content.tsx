@@ -5,7 +5,6 @@ export const FILECOIN_DEV_SUMMIT_SINGAPORE_PAGE_CONTENT = [
     id: 'singapore',
     backgroundColor: 'var(--color-white)',
     direction: BlockDirectionEnum.COLUMN,
-    endPoint: 'airtable/singapore',
     title: 'Singapore - Schedule',
     cta: {
       type: CallToActionVariantEnum.BUTTON,
@@ -21,6 +20,7 @@ export const FILECOIN_DEV_SUMMIT_SINGAPORE_PAGE_CONTENT = [
         scheduleData: {
           airtable: {
             tableName: 'Asia Talk Track Submissions + Forms',
+            endPoint: 'airtable/singapore',
           },
         },
       },

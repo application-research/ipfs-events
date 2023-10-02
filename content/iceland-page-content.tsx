@@ -5,7 +5,6 @@ export const FILECOIN_DEV_SUMMIT_ICELAND_PAGE_CONTENT = [
     id: 'iceland',
     backgroundColor: 'var(--color-white)',
     direction: BlockDirectionEnum.COLUMN,
-    endPoint: 'airtable/iceland',
     title: 'Iceland - Schedule',
     cta: {
       type: CallToActionVariantEnum.BUTTON,
@@ -21,6 +20,7 @@ export const FILECOIN_DEV_SUMMIT_ICELAND_PAGE_CONTENT = [
         scheduleData: {
           airtable: {
             tableName: 'NA/EU Talk Track Submissions + Forms',
+            endPoint: 'airtable/iceland',
           },
         },
       },
