@@ -15,7 +15,7 @@ export default function ScheduleListByTrack({ scheduleData }) {
     if (scheduleData?.airtable?.tableName) {
       const fetchData = async () => {
         try {
-          const res = await makeRequest({ endpoint: 'airtable/iceland' });
+          const res = await makeRequest({ endpoint: scheduleData?.airtable?.endPoint });
           const formattedAirtableData = formatAirtableMetaData(res.data);
 
           setEventData(formattedAirtableData);
