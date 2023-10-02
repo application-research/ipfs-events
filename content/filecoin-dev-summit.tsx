@@ -66,7 +66,7 @@ export const FILECOIN_DEV_SUMMIT_2023_PAGE_CONTENT = [
             href: 'https://www.glif.io/',
           },
           {
-            src: '/media/filfi.svg',
+            src: '/media/filfi.png',
             href: 'https://filfi.io/',
           },
           {
