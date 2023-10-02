@@ -140,7 +140,7 @@ export default function ScheduleListByTalks({ scheduleData }) {
                             </p>
                             <p className={classNames(styles.col20, styles.talkTrackDetails)}>
                               {event.title && <p className={styles.trackTitle}>Track: {event.title}</p>}
-                              {event?.trackDetails?.capacity && <p className={styles.talkRoom}> Room: {event.trackDetails.roomName}</p>}
+                              {event?.trackDetails?.roomName && <p className={styles.talkRoom}> Room: {event.trackDetails.roomName}</p>}
                               {event?.trackDetails?.capacity && <p className={styles.talkCapacity}> Capacity: {event.trackDetails.capacity}</p>}
                             </p>
                             <p className={classNames(styles.col50, styles.desc)}>{record?.desc && record.desc}</p>

@@ -74,7 +74,7 @@ export default function ScheduleListByTrack({ scheduleData }) {
                     {event.trackDetails ? (
                       <div className={classNames(styles.row)}>
                         {event.trackDetails.time && <p className={styles.time}>{event.trackDetails.time}</p>}
-                        {event.trackDetails.capacity && <p> Room: {event.trackDetails.roomName}</p>}
+                        {event.trackDetails.roomName && <p> Room: {event.trackDetails.roomName}</p>}
                         {event.trackDetails.capacity && <p> Capacity: {event.trackDetails.capacity}</p>}
                       </div>
                     ) : null}
