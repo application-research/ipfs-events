@@ -5,6 +5,7 @@ import { classNames, makeRequest } from '@root/common/utilities';
 import { formatAirtableMetaData, getFormattedAirtableFields, sortCalendarDataByDate, sortTracksByOrder } from '@root/resolvers/airtable-import';
 import { useEffect, useState } from 'react';
 import Loading from './Loading';
+import Link from './Link';
 
 export default function ScheduleListByTrack({ scheduleData }) {
   const [eventData, setEventData] = useState<any[] | null>(null);
@@ -67,54 +68,69 @@ export default function ScheduleListByTrack({ scheduleData }) {
             )}
 
             {events &&
-              (events as any).map((event, index) => (
-                <div key={index}>
-                  <div className={styles.border} style={{ padding: '1.5rem 1rem 1rem 1rem', display: 'grid', rowGap: '0.5rem' }}>
-                    {event.title && <h3 className={styles.title}>{event.title}</h3>}
-                    {event.trackDetails ? (
-                      <div className={classNames(styles.row)}>
-                        {event.trackDetails.time && <p className={styles.time}>{event.trackDetails.time}</p>}
-                        {event.trackDetails.roomName && <p> Room: {event.trackDetails.roomName}</p>}
-                        {event.trackDetails.capacity && <p> Capacity: {event.trackDetails.capacity}</p>}
-                      </div>
-                    ) : null}
-                    {event?.records.length > 1 && <h4 style={{ padding: '0.5rem 0rem' }}>Scheduled Talks</h4>}
-
-                    {event.records?.map((record, index) => {
-                      return (
-                        <div key={index}>
-                          {index === 0 && (record?.firstName || record?.desc) && (
-                            <div className={classNames(styles.grid2Cols, styles.scheduleRow)}>
-                              <p className={classNames(styles.col10, styles.scheduleRowTitle)}>Time</p>
-                              <p className={classNames(styles.col20, styles.scheduleRowTitle)}>Title</p>
-                              <p className={classNames(styles.col10, styles.scheduleRowTitle)}>Speakers</p>
-                              <p className={classNames(styles.col50, styles.scheduleRowTitle)}>Description</p>
-                            </div>
-                          )}
-                          <div
-                            className={classNames(styles.grid2Cols, styles.borderTalksContainer)}
-                            style={{ borderBottom: index === event.records.length - 1 ? 'none' : '0.5px solid var(--color-black)' }}
-                          >
-                            <p className={styles.col10}>{record.startTime ?? '─'}</p>
-                            {record?.title && (
-                              <p className={styles.col20} style={{ color: 'var(--color-blue)' }}>
-                                {record.title}
-                              </p>
-                            )}
-
-                            {record?.firstName && (
-                              <p className={styles.col10} style={{ color: 'var(--color-blue)' }}>
-                                {record.firstName}
-                              </p>
-                            )}
-                            <p className={classNames(styles.col50, styles.desc)}>{record?.desc && record.desc}</p>
-                          </div>
+              (events as any).map((event, index) => {
+                console.log(event.trackDetails, 'track details');
+                return (
+                  <div key={index}>
+                    <div className={styles.border} style={{ padding: '1.5rem 1rem 1rem 1rem', display: 'grid', rowGap: '0.5rem' }}>
+                      {event.title && <h3 className={styles.title}>{event.title}</h3>}
+                      {event.trackDetails ? (
+                        <div className={classNames(styles.row)}>
+                          {event.trackDetails.time && <p className={styles.time}>{event.trackDetails.time}</p>}
+                          {event.trackDetails.roomName && <p> Room: {event.trackDetails.roomName}</p>}
+                          {event.trackDetails.capacity && <p> Capacity: {event.trackDetails.capacity}</p>}
                         </div>
-                      );
-                    })}
+                      ) : null}
+                      {event?.records.length > 1 && <h4 style={{ padding: '0.5rem 0rem' }}>Scheduled Talks</h4>}
+
+                      {event.records?.map((record, index) => {
+                        return (
+                          <div key={index}>
+                            {index === 0 && (record?.firstName || record?.desc) && (
+                              <div className={classNames(styles.grid2Cols, styles.scheduleRow)}>
+                                <p className={classNames(styles.col10, styles.scheduleRowTitle)}>Time</p>
+                                <p className={classNames(styles.col20, styles.scheduleRowTitle)}>Title</p>
+                                <p className={classNames(styles.col10, styles.scheduleRowTitle)}>Speakers</p>
+                                <p className={classNames(styles.col50, styles.scheduleRowTitle)}>Description</p>
+                              </div>
+                            )}
+                            <div
+                              className={classNames(styles.grid2Cols, styles.borderTalksContainer)}
+                              style={{ borderBottom: index === event.records.length - 1 ? 'none' : '0.5px solid var(--color-black)' }}
+                            >
+                              <p className={styles.col10}>{record.startTime ?? '─'}</p>
+                              {record?.title && (
+                                <p className={styles.col20} style={{ color: 'var(--color-blue)' }}>
+                                  {record.title}
+                                </p>
+                              )}
+
+                              {record?.firstName && (
+                                <p className={styles.col10} style={{ color: 'var(--color-blue)' }}>
+                                  {record.firstName}
+                                </p>
+                              )}
+                              <p className={classNames(styles.col50, styles.desc)}>
+                                {record?.desc && record.desc}
+
+                                {record.videoLink && (
+                                  <span>
+                                    <br />
+                                    <br />
+                                    <Link href={record.videoLink} linkStyle="animated">
+                                      <strong style={{ fontSize: 'var(--font-size-small)' }}>View Video</strong>
+                                    </Link>
+                                  </span>
+                                )}
+                              </p>
+                            </div>
+                          </div>
+                        );
+                      })}
+                    </div>
                   </div>
-                </div>
-              ))}
+                );
+              })}
           </div>
         );
       })}
