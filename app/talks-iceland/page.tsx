@@ -53,17 +53,17 @@ export default async function Page(props) {
     });
   });  
 
-  Promise.all(promises).then(() => {
-    return (
-      <div style={{ background: pageStyle.backgroundColor, color: pageStyle.textColor }}>
-        <ResponsiveNavbar navContent={navContent} />
-  
-        <div style={{ paddingTop: '3rem' }}>
-          <SectionEventPage blocks={blocks} pageStyle={pageStyle} />
-        </div>
-  
-        <FooterTiny {...footerContent} />
+  await Promise.all(promises);
+
+  return (
+    <div style={{ background: pageStyle.backgroundColor, color: pageStyle.textColor }}>
+      <ResponsiveNavbar navContent={navContent} />
+
+      <div style={{ paddingTop: '3rem' }}>
+        <SectionEventPage blocks={blocks} pageStyle={pageStyle} />
       </div>
-    );
-  });
+
+      <FooterTiny {...footerContent} />
+    </div>
+  );
 }
