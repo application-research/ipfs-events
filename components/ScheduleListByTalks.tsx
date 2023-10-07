@@ -6,6 +6,7 @@ import { extractAllTimesFromTalks, extractAllTracksFromTrackDetails, getTalkWith
 import { formatAirtableMetaData, getFormattedAirtableFields, sortCalendarDataByDate } from '@root/resolvers/airtable-import';
 import { useEffect, useState } from 'react';
 import Loading from './Loading';
+import Link from './Link';
 
 export default function ScheduleListByTalks({ scheduleData }) {
   const [eventData, setEventData] = useState<any[] | null>(null);
@@ -143,7 +144,17 @@ export default function ScheduleListByTalks({ scheduleData }) {
                               {event?.trackDetails?.roomName && <p className={styles.talkRoom}> Room: {event.trackDetails.roomName}</p>}
                               {event?.trackDetails?.capacity && <p className={styles.talkCapacity}> Capacity: {event.trackDetails.capacity}</p>}
                             </p>
-                            <p className={classNames(styles.col50, styles.desc)}>{record?.desc && record.desc}</p>
+                            <p className={classNames(styles.col50, styles.desc)}>
+                              {record?.desc && record.desc}
+
+                              {record.videoLink && (
+                                <span>
+                                  <Link href={record.videoLink} linkStyle="animated">
+                                    <strong style={{ fontSize: 'var(--font-size-small)' }}>View Video</strong>
+                                  </Link>
+                                </span>
+                              )}
+                            </p>
                           </div>
                         ))}
                       </div>
