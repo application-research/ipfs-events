@@ -69,7 +69,6 @@ export default function ScheduleListByTrack({ scheduleData }) {
 
             {events &&
               (events as any).map((event, index) => {
-                console.log(event.trackDetails, 'track details');
                 return (
                   <div key={index}>
                     <div className={styles.border} style={{ padding: '1.5rem 1rem 1rem 1rem', display: 'grid', rowGap: '0.5rem' }}>

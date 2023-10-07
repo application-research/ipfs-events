@@ -80,7 +80,10 @@
   padding-bottom: 0.5rem;
   padding-top: 0.5rem;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
 }
 
 .col10,
