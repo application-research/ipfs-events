@@ -21,7 +21,7 @@ export default function ScheduleIceland({ scheduleData }) {
   useEffect(() => {
     if (scheduleData?.airtable?.tableName) {
       const organizeData = async () => {
-        const formattedAirtableData = formatAirtableMetaData(scheduleData.airtable.data);
+        const formattedAirtableData = formatAirtableMetaData(scheduleData?.airtable?.data);
         const fetchedSpeakers = getSpeakers(formattedAirtableData);
         setIcelandData(formattedAirtableData);
         setSpeakers(fetchedSpeakers);
