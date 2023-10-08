@@ -50,13 +50,8 @@ export default async function Page(props) {
   const promises = blocks.flatMap(contentItem => 
     contentItem.block.map(async blockItem => {
       if ('scheduleData' in blockItem && blockItem.scheduleData.airtable) {
-        try {
-          const data = await makeRequest({ endpoint: blockItem.scheduleData.airtable.endPoint });
-          console.log(blockItem.scheduleData);
-          blockItem.scheduleData.airtable.data = data;
-        } catch (error) {
-          console.error('Error fetching tableData for blockItem:', blockItem, error);
-        }
+        const data = await makeRequest({ endpoint: blockItem.scheduleData.airtable.endPoint });
+        blockItem.scheduleData.airtable.data = data;
       }
     })
   );
