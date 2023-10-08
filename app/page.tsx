@@ -11,6 +11,7 @@ import {
   FILECOIN_DEV_SUMMIT_PAGE_STYLE_CONTENT,
   FOOTER_FILECOIN_DEV_SUMMIT_CONTENT,
 } from '@root/content/filecoin-dev-summit';
+import { makeRequest } from "@root/common/utilities";
 
 export async function generateMetadata({ params, searchParams }) {
   const title = 'FIL Dev Summit 2023: Singapore and Iceland';
@@ -45,6 +46,22 @@ export default async function Page(props) {
   const hero = FILECOIN_DEV_SUMMIT_2023_HERO_CONTENT;
   const navContent = FILECOIN_DEV_SUMMIT_NAVIGATION_CONTENT;
   const pageStyle = FILECOIN_DEV_SUMMIT_PAGE_STYLE_CONTENT;
+
+  const promises = blocks.flatMap(contentItem => 
+    contentItem.block.map(async blockItem => {
+      if ('scheduleData' in blockItem && blockItem.scheduleData.airtable) {
+        try {
+          const data = await makeRequest({ endpoint: blockItem.scheduleData.airtable.endPoint });
+          console.log(blockItem.scheduleData);
+          blockItem.scheduleData.airtable.data = data;
+        } catch (error) {
+          console.error('Error fetching tableData for blockItem:', blockItem, error);
+        }
+      }
+    })
+  );
+
+  await Promise.all(promises);
 
   return (
     <div style={{ background: pageStyle.backgroundColor, color: pageStyle.textColor }}>
