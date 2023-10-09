@@ -46,6 +46,7 @@ export default async function Page(props) {
       // Fetch table data
       let tableData = await makeRequest({
         endpoint: blockItem.scheduleData.airtable.endPoint,
+        host: blockItem.scheduleData.airtable.host,
       });
       
       // Set data to blockItem.scheduleData.airtable.data
