@@ -21,6 +21,7 @@ export const FILECOIN_DEV_SUMMIT_ICELAND_PAGE_CONTENT = [
           airtable: {
             tableName: 'NA/EU Talk Track Submissions + Forms',
             endPoint: 'airtable/iceland',
+            host: 'internet-apis.onrender.com',
             data: [],
           },
         },
