@@ -3,7 +3,6 @@
 import styles from '@components/Schedule.module.scss';
 
 import { calendarDataWithAddedDates, formatAirtableMetaData, getFormattedAirtableFields, getSpeakers } from '@root/resolvers/airtable-import';
-import { makeRequest } from '@root/common/utilities';
 import { useState, useEffect } from 'react';
 import Schedule from './Schedule';
 import Speakers from './Speakers';
@@ -21,15 +20,14 @@ export default function ScheduleIceland({ scheduleData }) {
 
   useEffect(() => {
     if (scheduleData?.airtable?.tableName) {
-      const fetchData = async () => {
-        const iceland = await makeRequest({ endpoint: "airtable/iceland" });
-        const formattedAirtableData = formatAirtableMetaData(iceland.data);
+      const organizeData = async () => {
+        const formattedAirtableData = formatAirtableMetaData(scheduleData?.airtable?.data);
         const fetchedSpeakers = getSpeakers(formattedAirtableData);
         setIcelandData(formattedAirtableData);
         setSpeakers(fetchedSpeakers);
       };
 
-      fetchData();
+      organizeData();
     }
   }, [scheduleData]);
 

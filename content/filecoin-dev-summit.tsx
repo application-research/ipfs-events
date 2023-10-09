@@ -16,12 +16,18 @@ export const FILECOIN_DEV_SUMMIT_PAGE_STYLE_CONTENT = {
 export const FIL_DEV_SUMMIT_ICELAND = {
   airtable: {
     tableName: 'NA/EU Talk Track Submissions + Forms',
+    endPoint: 'airtable/iceland',
+    host: 'internet-apis.onrender.com',
+    data: [],
   },
 };
 
 export const FIL_DEV_SUMMIT_SINGAPORE = {
   airtable: {
-    tableName: 'Asia Talk/Track Submissions + Forms',
+    tableName: 'Asia Talk Track Submissions + Forms',
+    endPoint: 'airtable/singapore',
+    host: 'internet-apis.onrender.com',
+    data: [],
   },
 };
 

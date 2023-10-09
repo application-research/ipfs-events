@@ -21,6 +21,8 @@ export const FILECOIN_DEV_SUMMIT_SINGAPORE_PAGE_CONTENT = [
           airtable: {
             tableName: 'Asia Talk Track Submissions + Forms',
             endPoint: 'airtable/singapore',
+            host: 'internet-apis.onrender.com',
+            data: [],
           },
         },
       },
