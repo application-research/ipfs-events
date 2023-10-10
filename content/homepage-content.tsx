@@ -15,16 +15,16 @@ export const HOMEPAGE_CONTENT = [
         type: BlockTypeEnum.HERO,
         title: 'IPFS powers the Distributed Web & we’re powering their events!',
         description: "IPFS is a peer-to-peer hypermedia protocol designed to preserve and grow humanity's knowledge by making the web upgradeable, resilient, and more open.",
-        cta: [
-          {
-            type: CallToActionVariantEnum.BORDER,
-            buttonColor: 'black',
-            textColor: 'white',
-            target: '_blank',
-            text: 'Get Tickets for FIL Dev Summit',
-            link: 'https://fildev.io',
-          },
-        ],
+        // cta: [
+        //   {
+        //     type: CallToActionVariantEnum.BORDER,
+        //     buttonColor: 'black',
+        //     textColor: 'white',
+        //     target: '_blank',
+        //     text: 'Get Tickets for FIL Dev Summit',
+        //     link: 'https://fildev.io',
+        //   },
+        // ],
       },
     ],
   },
@@ -127,18 +127,11 @@ export const HOMEPAGE_CONTENT = [
         type: BlockTypeEnum.UPCOMING_EVENTS,
         events: [
           {
-            date: 'September 2023',
-            image: 'https://images.pexels.com/photos/3617500/pexels-photo-3617500.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-            link: 'https://fildev.io/',
-            location: 'Iceland and Singapore',
-            name: 'FIL Dev Summit',
-          },
-          {
             date: 'Q2 2024',
             image: '/media/ipfs-camp.png',
             link: '/ipfs-camp/2024',
             location: 'TBD',
-            name: 'IPFS Camp 2023',
+            name: 'IPFS Camp 2024',
           },
           {
             date: 'Q3 2024',
