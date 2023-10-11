@@ -229,6 +229,7 @@
 }
 
 .callToAction {
+  position: relative;
   border: 1px solid var(--color-blue-gray);
   display: flex;
   flex-direction: column;
@@ -236,38 +237,55 @@
   justify-content: center;
   padding: 1rem;
   color: inherit;
-  border-radius: var(--border-radius-tiny);
+  border-radius: var(--border-radius-small);
   transition: background 200ms ease;
+  background: transparent;
+  overflow: hidden; /* Important to clip the pseudo-element to the border-radius */
+}
+.callToAction::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border: 1px solid transparent;
+  border-radius: inherit; /* Ensure the pseudo-element respects the parent's border-radius */
+  border-image: linear-gradient(to bottom right, var(--gradient-border-blue-green));
+  border-image-slice: 1;
+  z-index: -1; /* Place it behind the content */
+  transition: opacity 200ms ease;
+  opacity: 0; /* Start as fully transparent */
+}
 
-  &:hover {
-    border: 1px solid transparent;
-    border-radius: var(--border-radius-small);
-    border-image: linear-gradient(to bottom right, var(--gradient-border-blue-green));
-    border-image-slice: 1;
-    background: linear-gradient(to bottom right, var(--gradient-border-blue-green-transparent));
-    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
-  }
+.callToAction:hover {
+  background: linear-gradient(to bottom right, var(--gradient-border-blue-green-transparent));
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
 
-  .callToActionTextContainer {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 0.5rem;
-    flex-direction: column;
-  }
+.callToAction:hover::before {
+  opacity: 1; /* Reveal the border on hover */
+}
 
-  .callToActionText {
-    padding-bottom: 1.25rem;
-    color: var(--color-black);
-  }
+.callToActionTextContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  flex-direction: column;
+}
 
-  .plusIcon {
-    color: var(--color-black);
-    font-weight: var(--font-weight-light);
-    padding: 0.2rem 0.5rem;
-    border: 1px solid var(--color-blue-gray);
-    border-radius: 1rem;
-  }
+.callToActionText {
+  padding-bottom: 1.25rem;
+  color: var(--color-black);
+}
+
+.plusIcon {
+  color: var(--color-black);
+  font-weight: var(--font-weight-light);
+  padding: 0.2rem 0.5rem;
+  border: 1px solid var(--color-blue-gray);
+  border-radius: 1rem;
 }
 
 .link {

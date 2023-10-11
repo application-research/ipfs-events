@@ -107,8 +107,11 @@
   transition: background 200ms ease;
 
   &:hover {
-    color: red;
     background: linear-gradient(to bottom right, var(--gradient-border-blue-green-transparent));
     box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+    border: 2px solid transparent;
+    border-image: linear-gradient(to bottom right, var(--gradient-border-blue-green));
+    border-image-slice: 1;
+    border-radius: var(--border-radius-small);
   }
 }
