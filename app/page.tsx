@@ -11,7 +11,7 @@ import {
   FILECOIN_DEV_SUMMIT_PAGE_STYLE_CONTENT,
   FOOTER_FILECOIN_DEV_SUMMIT_CONTENT,
 } from '@root/content/filecoin-dev-summit';
-import { makeRequest } from "@root/common/utilities";
+import { makeRequest } from '@root/common/utilities';
 
 export async function generateMetadata({ params, searchParams }) {
   const title = 'FIL Dev Summit 2023: Singapore and Iceland';
@@ -47,8 +47,8 @@ export default async function Page(props) {
   const navContent = FILECOIN_DEV_SUMMIT_NAVIGATION_CONTENT;
   const pageStyle = FILECOIN_DEV_SUMMIT_PAGE_STYLE_CONTENT;
 
-  const promises = blocks.flatMap(contentItem => 
-    contentItem.block.map(async blockItem => {
+  const promises = blocks.flatMap((contentItem) =>
+    contentItem.block.map(async (blockItem) => {
       if ('scheduleData' in blockItem && blockItem.scheduleData.airtable) {
         try {
           const data = await makeRequest({ endpoint: blockItem.scheduleData.airtable.endPoint, host: blockItem.scheduleData.airtable.host });

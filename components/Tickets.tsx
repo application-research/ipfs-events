@@ -1,7 +1,6 @@
 import styles from '@components/Tickets.module.scss';
 
 import { CallToActionVariant } from './CallToActionVariant';
-import { MarkdownToJSX } from './Markdown';
 import Link from './Link';
 
 export default function Tickets({ backgroundColor, textColor, tickets }) {

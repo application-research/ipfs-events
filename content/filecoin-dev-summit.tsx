@@ -295,74 +295,74 @@ export const FILECOIN_DEV_SUMMIT_2023_PAGE_CONTENT = [
       // },
     ],
   },
-  {
-    id: 'tickets',
-    title: 'Apply to Attend',
-    direction: 'row',
-    block: [
-      {
-        type: BlockTypeEnum.TICKET_CARD,
-        backgroundColor: 'white',
-        textColor: 'black',
-        tickets: [
-          // {
-          //   id: 'media',
-          //   type: BlockTypeEnum.TICKET_CARD,
-          //   price: '$150',
-          //   name: 'Singapore',
-          //   backgroundColor: 'white',
-          //   textColor: 'black',
-          //   description:
-          //     'Apply to attend Singapore FIL Dev Summit from September 12-14, 2023. </br></br> General Admission is $150 for all three days. Early bird tickets are 50% off until August 25.',
-          //   cta: {
-          //     type: CallToActionVariantEnum.BORDER,
-          //     target: '_blank',
-          //     buttonColor: 'linear-gradient(to right,#39C1CB, #006FEC)',
-          //     textColor: 'white',
-          //     text: 'Apply to Attend',
-          //     link: 'https://airtable.com/appEjnh5rpWMsjocb/shran7li4slfQSB04',
-          //   },
-          // },
-          {
-            id: 'media',
-            type: BlockTypeEnum.TICKET_CARD,
-            price: '$150',
-            backgroundColor: 'white',
-            textColor: 'black',
-            name: 'Iceland',
-            description:
-              'Apply to attend Iceland FIL Dev Summit from September 25-27, 2023. </br></br> General Admission is $150 for all three days. Early bird tickets are 50% off until August 25.',
-            cta: {
-              type: CallToActionVariantEnum.BORDER,
-              buttonColor: 'linear-gradient(to right,#39C1CB, #006FEC)',
-              textColor: 'white',
-              target: '_blank',
-              text: 'Apply to Attend',
-              link: 'https://airtable.com/appEjnh5rpWMsjocb/shran7li4slfQSB04',
-            },
-          },
-          {
-            id: 'media',
-            type: BlockTypeEnum.TICKET_CARD,
-            backgroundColor: 'white',
-            textColor: 'black',
-            price: '',
-            name: 'Scholars',
-            description:
-              'This program is designed to provide opportunities for individuals from underrepresented communities, unique circumstances, or developing areas to participate in FIL Dev Summit.',
-            cta: {
-              type: CallToActionVariantEnum.BORDER,
-              buttonColor: 'linear-gradient(to right,#39C1CB, #006FEC)',
-              textColor: 'white',
-              target: '_blank',
-              text: 'Scholar Application',
-              link: 'https://airtable.com/appEjnh5rpWMsjocb/shrusGnJBsjYDlcwS',
-            },
-          },
-        ],
-      },
-    ],
-  },
+  // {
+  //   id: 'tickets',
+  //   title: 'Apply to Attend',
+  //   direction: 'row',
+  //   block: [
+  //     {
+  //       type: BlockTypeEnum.TICKET_CARD,
+  //       backgroundColor: 'white',
+  //       textColor: 'black',
+  //       tickets: [
+  //         {
+  //           id: 'media',
+  //           type: BlockTypeEnum.TICKET_CARD,
+  //           price: '$150',
+  //           name: 'Singapore',
+  //           backgroundColor: 'white',
+  //           textColor: 'black',
+  //           description:
+  //             'Apply to attend Singapore FIL Dev Summit from September 12-14, 2023. </br></br> General Admission is $150 for all three days. Early bird tickets are 50% off until August 25.',
+  //           cta: {
+  //             type: CallToActionVariantEnum.BORDER,
+  //             target: '_blank',
+  //             buttonColor: 'linear-gradient(to right,#39C1CB, #006FEC)',
+  //             textColor: 'white',
+  //             text: 'Apply to Attend',
+  //             link: 'https://airtable.com/appEjnh5rpWMsjocb/shran7li4slfQSB04',
+  //           },
+  //         },
+  //         {
+  //           id: 'media',
+  //           type: BlockTypeEnum.TICKET_CARD,
+  //           price: '$150',
+  //           backgroundColor: 'white',
+  //           textColor: 'black',
+  //           name: 'Iceland',
+  //           description:
+  //             'Apply to attend Iceland FIL Dev Summit from September 25-27, 2023. </br></br> General Admission is $150 for all three days. Early bird tickets are 50% off until August 25.',
+  //           cta: {
+  //             type: CallToActionVariantEnum.BORDER,
+  //             buttonColor: 'linear-gradient(to right,#39C1CB, #006FEC)',
+  //             textColor: 'white',
+  //             target: '_blank',
+  //             text: 'Apply to Attend',
+  //             link: 'https://airtable.com/appEjnh5rpWMsjocb/shran7li4slfQSB04',
+  //           },
+  //         },
+  //         {
+  //           id: 'media',
+  //           type: BlockTypeEnum.TICKET_CARD,
+  //           backgroundColor: 'white',
+  //           textColor: 'black',
+  //           price: '',
+  //           name: 'Scholars',
+  //           description:
+  //             'This program is designed to provide opportunities for individuals from underrepresented communities, unique circumstances, or developing areas to participate in FIL Dev Summit.',
+  //           cta: {
+  //             type: CallToActionVariantEnum.BORDER,
+  //             buttonColor: 'linear-gradient(to right,#39C1CB, #006FEC)',
+  //             textColor: 'white',
+  //             target: '_blank',
+  //             text: 'Scholar Application',
+  //             link: 'https://airtable.com/appEjnh5rpWMsjocb/shrusGnJBsjYDlcwS',
+  //           },
+  //         },
+  //       ],
+  //     },
+  //   ],
+  // },
   {
 <<<<<<< HEAD
     id: 'singapore',
@@ -846,9 +846,9 @@ export const FOOTER_FILECOIN_DEV_SUMMIT_CONTENT = {
   ],
   source: [
     {
-      href: 'https://github.com/application-research/fildevsummit'
-    }
-  ]
+      href: 'https://github.com/application-research/fildevsummit',
+    },
+  ],
 };
 
 export const FILECOIN_DEV_SUMMIT_NAVIGATION_CONTENT = {
@@ -868,10 +868,10 @@ export const FILECOIN_DEV_SUMMIT_NAVIGATION_CONTENT = {
       name: 'Iceland',
       href: '#iceland',
     },
-    {
-      name: 'Tickets',
-      href: '#tickets',
-    },
+    // {
+    //   name: 'Tickets',
+    //   href: '#tickets',
+    // },
     {
       name: 'FAQs',
       href: '#faqs',
