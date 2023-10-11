@@ -76,6 +76,7 @@
 }
 
 .eventBox {
+  position: relative;
   padding: 0.75rem;
   font-family: Inter;
   display: flex;
@@ -85,17 +86,9 @@
   height: 200px;
   border: 2px solid var(--color-blue-gray);
   background: var(--color-white);
-  transition: background 200ms ease-in;
+  transition: background 200ms ease-in, box-shadow 200ms ease-in;
   border-radius: var(--border-radius-small);
-
-  &:hover {
-    background: linear-gradient(to bottom right, var(--gradient-border-blue-green-transparent));
-    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
-    border: 2px solid transparent;
-    border-image: linear-gradient(to bottom right, var(--gradient-border-blue-green));
-    border-image-slice: 1;
-    border-radius: var(--border-radius-small);
-  }
+  overflow: hidden;
 
   @media (max-width: 1440px) {
     height: 210px;
@@ -112,6 +105,30 @@
   @media (max-width: 768px) {
     height: 250px;
   }
+}
+
+.eventBox::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  right: -2px;
+  bottom: -2px;
+  left: -2px;
+  border: 2px solid red; /* Start with the same color as the original border */
+  border-radius: inherit;
+  border-image: linear-gradient(to bottom right, var(--gradient-border-blue-green));
+  border-image-slice: 1;
+  z-index: -1;
+  transition: border-color 200ms ease-in; /* Smooth transition of the border color */
+}
+
+.eventBox:hover {
+  background: linear-gradient(to bottom right, var(--gradient-border-blue-green-transparent));
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.eventBox:hover::before {
+  border-color: red; /* Make the base border color transparent to reveal the gradient on hover */
 }
 
 .eventName {
@@ -229,6 +246,7 @@
 }
 
 .callToAction {
+  position: relative;
   border: 1px solid var(--color-blue-gray);
   display: flex;
   flex-direction: column;
@@ -236,38 +254,56 @@
   justify-content: center;
   padding: 1rem;
   color: inherit;
-  border-radius: var(--border-radius-tiny);
+  border-radius: var(--border-radius-small);
   transition: background 200ms ease;
+  background: transparent;
+  overflow: hidden;
+}
 
-  &:hover {
-    border: 1px solid transparent;
-    border-radius: var(--border-radius-small);
-    border-image: linear-gradient(to bottom right, var(--gradient-border-blue-green));
-    border-image-slice: 1;
-    background: linear-gradient(to bottom right, var(--gradient-border-blue-green-transparent));
-    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
-  }
+.callToAction::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border: 1px solid transparent;
+  border-radius: inherit;
+  border-image: linear-gradient(to bottom right, var(--gradient-border-blue-green));
+  border-image-slice: 1;
+  z-index: -1;
+  transition: opacity 200ms ease;
+  opacity: 0;
+}
 
-  .callToActionTextContainer {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 0.5rem;
-    flex-direction: column;
-  }
+.callToAction:hover {
+  background: linear-gradient(to bottom right, var(--gradient-border-blue-green-transparent));
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
 
-  .callToActionText {
-    padding-bottom: 1.25rem;
-    color: var(--color-black);
-  }
+.callToAction:hover::before {
+  opacity: 1;
+}
 
-  .plusIcon {
-    color: var(--color-black);
-    font-weight: var(--font-weight-light);
-    padding: 0.2rem 0.5rem;
-    border: 1px solid var(--color-blue-gray);
-    border-radius: 1rem;
-  }
+.callToActionTextContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  flex-direction: column;
+}
+
+.callToActionText {
+  padding-bottom: 1.25rem;
+  color: var(--color-black);
+}
+
+.plusIcon {
+  color: var(--color-black);
+  font-weight: var(--font-weight-light);
+  padding: 0.2rem 0.5rem;
+  border: 1px solid var(--color-blue-gray);
+  border-radius: 1rem;
 }
 
 .link {
