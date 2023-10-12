@@ -7,7 +7,7 @@
   font-family: Inter;
   font-weight: var(--font-weight-regular);
   color: var(--color-blue);
-  border-bottom: 0.5px solid var(--color-black);
+  border-bottom: 0.5px solid var(--color-blue-gray);
   padding-bottom: 1rem;
 }
 
@@ -37,8 +37,8 @@
   display: flex;
   flex-direction: row;
   width: 100%;
-  border-left: 0.5px solid var(--color-black);
-  border-right: 0.5px solid var(--color-black);
+  border-left: 0.5px solid var(--color-blue-gray);
+  border-right: 0.5px solid var(--color-blue-gray);
 
   @media (max-width: 768px) {
     flex-direction: column;
@@ -47,13 +47,13 @@
 }
 
 .table {
-  border-left: 0.5px solid var(--color-black);
-  border-right: 0.5px solid var(--color-black);
+  border-left: 0.5px solid var(--color-blue-gray);
+  border-right: 0.5px solid var(--color-blue-gray);
 }
 
 .col10 {
   width: 10%;
-  border-right: 0.5px solid var(--color-black);
+  border-right: 0.5px solid var(--color-blue-gray);
   padding-bottom: 0.5rem;
   padding-top: 0.5rem;
   display: flex;
@@ -64,7 +64,7 @@
 .col20 {
   padding: 0.5rem;
   width: 20%;
-  border-right: 0.5px solid var(--color-black);
+  border-right: 0.5px solid var(--color-blue-gray);
   padding-bottom: 0.5rem;
   padding-top: 0.5rem;
   display: flex;
@@ -98,9 +98,9 @@
 .scheduleRow {
   display: flex;
   flex-direction: row;
-  border-left: 0.5px solid var(--color-black);
-  border-right: 0.5px solid var(--color-black);
-  border-bottom: 0.5px solid var(--color-black);
+  border-left: 0.5px solid var(--color-blue-gray);
+  border-right: 0.5px solid var(--color-blue-gray);
+  border-bottom: 0.5px solid var(--color-blue-gray);
   background: var(--color-gray-transparent);
   position: -webkit-sticky;
   position: sticky;
@@ -144,13 +144,16 @@
   }
 }
 
-.talkTitle {
+.talkDetails {
   font-size: 14px;
+  color: var(--color-black);
+  font-weight: var(--font-weight-light);
 }
 
 .talksFilter {
   padding: 0.5rem;
   border-radius: var(--border-radius-tiny);
+  border-color: var(--color-blue-gray);
 }
 
 .talksFilterRow {
@@ -185,6 +188,33 @@
   justify-content: center;
   color: var(--color-gray);
   padding: 0.5rem;
-  border: 0.5px solid var(--color-black);
+  border: 0.5px solid var(--color-blue-gray);
   font-size: 14px;
+}
+
+.videoLinkButton {
+  cursor: pointer;
+  border: 1px solid var(--color-blue);
+  color: var(--color-blue);
+  padding: 0.2rem 0.5rem;
+  background: var(--color-white);
+  border-radius: var(--border-radius-tiny);
+  transition: 200ms ease background;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+
+  &:hover {
+    background: var(--color-blue);
+    color: var(--color-white);
+
+    .videoLinkSVG path {
+      stroke: var(--color-white);
+    }
+  }
+
+  .videoLinkSVG path {
+    stroke: var(--color-blue);
+  }
 }

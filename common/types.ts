@@ -79,13 +79,14 @@ export interface Video {
 
 export enum CallToActionVariantEnum {
   BLACK = 'dark-blue',
+  BORDER = 'border',
   BUTTON = 'button',
+  ICON = 'icon',
   LINK = 'link',
   LINK_ICON = 'link-icon',
+  NO_BORDER = 'no-border',
   TEXT = 'text',
   WHITE = 'white',
-  BORDER = 'border',
-  NO_BORDER = 'no-border',
 }
 
 export enum NavigationTypeEnum {

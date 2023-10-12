@@ -13,7 +13,7 @@
 
 .title {
   font-family: Inter;
-  font-weight: var(--font-weight-regular);
+  font-weight: var(--font-weight-medium);
 }
 
 .row {
@@ -27,7 +27,7 @@
 }
 
 .border {
-  border: 1px solid var(--color-blue);
+  border: 1px solid var(--color-blue-gray);
   border-radius: var(--border-radius-small);
 }
 
@@ -88,6 +88,7 @@
 .desc {
   font-family: Inter;
   font-weight: var(--font-weight-light);
+  font-size: 14px;
 }
 
 .tracksFilter {
@@ -106,4 +107,31 @@
 
 .tracksFilterText {
   font-weight: var(--font-weight-light);
+}
+
+.videoLinkButton {
+  cursor: pointer;
+  border: 1px solid var(--color-blue);
+  color: var(--color-blue);
+  padding: 0.2rem 0.5rem;
+  background: var(--color-white);
+  border-radius: var(--border-radius-tiny);
+  transition: 200ms ease background;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+
+  &:hover {
+    background: var(--color-blue);
+    color: var(--color-white);
+
+    .videoLinkSVG path {
+      stroke: var(--color-white);
+    }
+  }
+
+  .videoLinkSVG path {
+    stroke: var(--color-blue);
+  }
 }

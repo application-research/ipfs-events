@@ -1,12 +1,12 @@
 'use client';
 import styles from 'components/ScheduleListByTalks.module.scss';
 
-import { classNames, makeRequest } from '@root/common/utilities';
+import { classNames } from '@root/common/utilities';
 import { extractAllTimesFromTalks, extractAllTracksFromTrackDetails, getTalkWithinSelectedHour } from '@root/resolvers/schedule-talks-resolver';
 import { formatAirtableMetaData, getFormattedAirtableFields, sortCalendarDataByDate } from '@root/resolvers/airtable-import';
 import { useEffect, useState } from 'react';
 import Loading from './Loading';
-import Link from './Link';
+import VideoPlayerSVG from './svgs/VideoPlayerSVG';
 
 export default function ScheduleListByTalks({ scheduleData }) {
   const [eventData, setEventData] = useState<any[] | null>(null);
@@ -122,22 +122,18 @@ export default function ScheduleListByTalks({ scheduleData }) {
                     <div key={index}>
                       <div className={styles.border}>
                         {filteredRecords.map((record, index) => (
-                          <div key={index} className={classNames(styles.grid2Cols, styles.borderTalksContainer)} style={{ borderBottom: '0.5px solid var(--color-black)' }}>
+                          <div key={index} className={classNames(styles.grid2Cols, styles.borderTalksContainer)} style={{ borderBottom: '0.5px solid var(--color-blue-gray)' }}>
                             <p className={styles.col10} style={{ padding: '0rem 0.5rem', fontFamily: 'Inter', fontWeight: 'font-weight: var(--font-weight-light)' }}>
                               {record.startTime ?? '─'}
                             </p>
 
                             {record?.title && (
                               <div className={classNames(styles.col20)}>
-                                <p className={styles.talkTitle} style={{ color: 'var(--color-blue)' }}>
-                                  {record.title}
-                                </p>
+                                <p className={styles.talkDetails}>{record.title}</p>
                               </div>
                             )}
 
-                            <p className={styles.col10} style={{ color: 'var(--color-blue)' }}>
-                              {record?.firstName && record.firstName}
-                            </p>
+                            <p className={classNames(styles.col10, styles.talkDetails)}>{record?.firstName && record.firstName}</p>
                             <p className={classNames(styles.col20, styles.talkTrackDetails)}>
                               {event.title && <p className={styles.trackTitle}>Track: {event.title}</p>}
                               {event?.trackDetails?.roomName && <p className={styles.talkRoom}> Room: {event.trackDetails.roomName}</p>}
@@ -148,9 +144,10 @@ export default function ScheduleListByTalks({ scheduleData }) {
 
                               {record.videoLink && (
                                 <span>
-                                  <Link href={record.videoLink} linkStyle="animated">
-                                    <strong style={{ fontSize: 'var(--font-size-small)' }}>View Video</strong>
-                                  </Link>
+                                  <button className={styles.videoLinkButton}>
+                                    <VideoPlayerSVG className={styles.videoLinkSVG} />
+                                    View Video
+                                  </button>
                                 </span>
                               )}
                             </p>
