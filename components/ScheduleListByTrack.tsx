@@ -6,6 +6,9 @@ import { formatAirtableMetaData, getFormattedAirtableFields, sortCalendarDataByD
 import { useEffect, useState } from 'react';
 import Loading from './Loading';
 import Link from './Link';
+import { Button, CallToActionVariant } from './CallToActionVariant';
+import { CallToActionVariantEnum } from '@root/common/types';
+import VideoPlayerSVG from './svgs/VideoPlayerSVG';
 
 export default function ScheduleListByTrack({ scheduleData }) {
   const [eventData, setEventData] = useState<any[] | null>(null);
@@ -94,30 +97,21 @@ export default function ScheduleListByTrack({ scheduleData }) {
                             )}
                             <div
                               className={classNames(styles.grid2Cols, styles.borderTalksContainer)}
-                              style={{ borderBottom: index === event.records.length - 1 ? 'none' : '0.5px solid var(--color-black)' }}
+                              style={{ borderBottom: index === event.records.length - 1 ? 'none' : '0.5px solid var(--color-blue-gray)' }}
                             >
                               <p className={styles.col10}>{record.startTime ?? '─'}</p>
-                              {record?.title && (
-                                <p className={styles.col20} style={{ color: 'var(--color-blue)' }}>
-                                  {record.title}
-                                </p>
-                              )}
+                              {record?.title && <p className={classNames(styles.col20, styles.desc)}>{record.title}</p>}
 
-                              {record?.firstName && (
-                                <p className={styles.col10} style={{ color: 'var(--color-blue)' }}>
-                                  {record.firstName}
-                                </p>
-                              )}
-                              <p className={classNames(styles.col50, styles.desc)}>
-                                {record?.desc && record.desc}
+                              {record?.firstName && <p className={classNames(styles.col10, styles.desc)}>{record.firstName}</p>}
+                              <p className={classNames(styles.col50, styles.desc)} style={{ display: 'grid', rowGap: '1rem' }}>
+                                {record?.desc && <p>{record.desc}</p>}
 
                                 {record.videoLink && (
                                   <span>
-                                    <br />
-                                    <br />
-                                    <Link href={record.videoLink} linkStyle="animated">
-                                      <strong style={{ fontSize: 'var(--font-size-small)' }}>View Video</strong>
-                                    </Link>
+                                    <button className={styles.videoLinkButton}>
+                                      <VideoPlayerSVG className={styles.videoLinkSVG} />
+                                      View Video
+                                    </button>
                                   </span>
                                 )}
                               </p>

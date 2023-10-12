@@ -18,10 +18,19 @@ export function CallToActionVariant({ type, cta }) {
       );
     case CallToActionVariantEnum.TEXT:
       return <ButtonText {...cta} />;
+    case CallToActionVariantEnum.ICON:
+      return (
+        <Button
+          {...cta}
+          textColor={cta?.textColor ?? 'var(--color-black200)'}
+          buttonColor={cta?.buttonColor ? cta.buttonColor : 'none'}
+          borderColor={cta?.borderColor ? cta.borderColor : '1px solid var(--color-black)'}
+        />
+      );
     case CallToActionVariantEnum.WHITE:
       return <Button {...cta} buttonColor={'var(--color-white)'} textColor={'var(--color-black200)'} />;
     default:
-      return <></>;
+      return <Button {...cta} />;
   }
 }
 

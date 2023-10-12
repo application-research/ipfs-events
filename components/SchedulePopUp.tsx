@@ -2,6 +2,7 @@ import styles from '@components/SchedulePopUp.module.scss';
 
 import Link from './Link';
 import { MarkdownToJSX } from './Markdown';
+import VideoPlayerSVG from './svgs/VideoPlayerSVG';
 
 export function SchedulePopUp({ selectedEvent, isOpen, onClose, style }) {
   const { attendees, firstName, roomName, discussionPoints, location, speakers, trackLeads, time, title, trackDate, trackAttendees, trackDesc } = selectedEvent ?? null;
@@ -211,9 +212,10 @@ export function SchedulePopUp({ selectedEvent, isOpen, onClose, style }) {
                             {desc && <MarkdownToJSX>{desc}</MarkdownToJSX>}
                             {videoLink && (
                               <span>
-                                <Link href={videoLink} linkStyle="animated">
-                                  <strong style={{ fontSize: 'var(--font-size-small)' }}>View Video</strong>
-                                </Link>
+                                <button className={styles.videoLinkButton}>
+                                  <VideoPlayerSVG className={styles.videoLinkSVG} />
+                                  View Video
+                                </button>
                               </span>
                             )}
                           </div>
