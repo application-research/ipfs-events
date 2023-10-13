@@ -144,10 +144,12 @@ export default function ScheduleListByTalks({ scheduleData }) {
 
                               {record.videoLink && (
                                 <span>
-                                  <button className={styles.videoLinkButton}>
-                                    <VideoPlayerSVG className={styles.videoLinkSVG} />
-                                    View Video
-                                  </button>
+                                  <a target="_blank" href={record.videoLink} style={{ textDecoration: 'none' }}>
+                                    <button className={styles.videoLinkButton}>
+                                      <VideoPlayerSVG className={styles.videoLinkSVG} />
+                                      View Video
+                                    </button>
+                                  </a>
                                 </span>
                               )}
                             </p>

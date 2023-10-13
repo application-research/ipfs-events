@@ -319,30 +319,3 @@
 .scheduleWrapper {
   overflow: scroll;
 }
-
-.videoLinkButton {
-  cursor: pointer;
-  border: 1px solid var(--color-blue);
-  color: var(--color-blue);
-  padding: 0.2rem 0.5rem;
-  background: var(--color-white);
-  border-radius: var(--border-radius-tiny);
-  transition: 200ms ease background;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.5rem;
-
-  &:hover {
-    background: var(--color-blue);
-    color: var(--color-white);
-
-    .videoLinkSVG path {
-      stroke: var(--color-white);
-    }
-  }
-
-  .videoLinkSVG path {
-    stroke: var(--color-blue);
-  }
-}

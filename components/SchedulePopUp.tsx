@@ -124,10 +124,12 @@ export function SchedulePopUp({ selectedEvent, isOpen, onClose, style }) {
                             {desc && <MarkdownToJSX>{desc}</MarkdownToJSX>}
                             {videoLink && (
                               <span>
-                                <button className={styles.videoLinkButton}>
-                                  <VideoPlayerSVG className={styles.videoLinkSVG} />
-                                  View Video
-                                </button>
+                                <a target="_blank" href={videoLink} style={{ textDecoration: 'none' }}>
+                                  <button className={styles.videoLinkButton}>
+                                    <VideoPlayerSVG className={styles.videoLinkSVG} />
+                                    View Video
+                                  </button>
+                                </a>
                               </span>
                             )}
                           </div>
