@@ -106,7 +106,7 @@ export default function ScheduleListByTrack({ scheduleData }) {
                               <p className={classNames(styles.col50, styles.desc)} style={{ display: 'grid', rowGap: '1rem' }}>
                                 {record?.desc && <p>{record.desc}</p>}
 
-                                {record.videoLink && (
+                                {record.videoLink && record.videoStatus === 'Approved' && (
                                   <span>
                                     <a target="_blank" href={record.videoLink} style={{ textDecoration: 'none' }}>
                                       <button className={styles.videoLinkButton}>

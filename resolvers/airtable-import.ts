@@ -13,6 +13,7 @@ export const airtableFormattedFieldsMap = {
   'Twitter Profile URL': 'twitterUrl',
   'Confirmed for website': 'confirmedForWebsite',
   'Confirmed for Website': 'confirmedForWebsite',
+  'Video Status/Comment': 'videoStatus',
 
   // talk details
   'Talk Description': 'desc',

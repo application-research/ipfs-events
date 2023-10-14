@@ -111,7 +111,7 @@ export function SchedulePopUp({ selectedEvent, isOpen, onClose, style }) {
 
                 {sortedTalks &&
                   sortedTalks.map((talk, index) => {
-                    const { desc, firstName, lastName, startTime, videoLink, talkDuration, title } = talk ?? null;
+                    const { desc, firstName, lastName, startTime, videoLink, videoStatus, talkDuration, title } = talk ?? null;
                     const isLastIndex = index === sortedTalks.length - 1;
                     return (
                       <div className={styles.tableRow} style={{ borderBottom: isLastIndex ? 'none' : '1px solid var(--color-gray-transparent200)' }} key={index}>
@@ -122,7 +122,7 @@ export function SchedulePopUp({ selectedEvent, isOpen, onClose, style }) {
                           <div className={styles.flexCol}>
                             {title && <h4>{title ? title : ''}</h4>}
                             {desc && <MarkdownToJSX>{desc}</MarkdownToJSX>}
-                            {videoLink && (
+                            {videoLink && videoStatus === 'Approved' && (
                               <span>
                                 <a target="_blank" href={videoLink} style={{ textDecoration: 'none' }}>
                                   <button className={styles.videoLinkButton}>
