@@ -53,8 +53,8 @@ export const NAVIGATION_HOMEPAGE_CONTENT = {
       dropdown: [
         {
           header: 'Upcoming Event',
-          date: 'TBD, 2024',
-          location: 'TBD',
+          date: 'Q4, 2024',
+          location: 'Location TBD',
           title: 'IPFS Thing 2024',
           link: null,
           image: 'https://blog.ipfs.tech/assets/img/181806539-3c71476c-b247-4400-9778-5ccfce635f17.fac0cf11.png',
