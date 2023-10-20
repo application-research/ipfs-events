@@ -54,7 +54,7 @@ export const NAVIGATION_HOMEPAGE_CONTENT = {
       dropdown: [
         {
           header: 'Upcoming Event',
-          date: 'TBD, 2024',
+          date: 'Q4, 2024',
           location: 'TBD',
           title: 'IPFS Thing 2024',
           link: null,
