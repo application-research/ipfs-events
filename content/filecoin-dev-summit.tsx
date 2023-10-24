@@ -480,6 +480,22 @@ export const FILECOIN_DEV_SUMMIT_2023_PAGE_CONTENT = [
       },
     ],
   },
+  // {
+  //   id: 'recap-video',
+  //   title: 'FilDev2 - Iceland Recap',
+  //   direction: 'column',
+  //   block: [
+  //     {
+  //       id: 'media',
+  //       type: BlockTypeEnum.MEDIA,
+  //       media: {
+  //         type: TypeName.MEDIA_VIDEO,
+  //         src: 'https://youtu.be/JtG08g_Thdc?si=stLVgquaxTc1WvOv',
+  //         ariaLabel: 'FIL Dev Summit 2023 - Iceland',
+  //       },
+  //     },
+  //   ],
+  // },
   {
 <<<<<<< HEAD
     id: 'about',
@@ -642,6 +658,22 @@ export const FILECOIN_DEV_SUMMIT_2023_PAGE_CONTENT = [
         image: {
           src: '/media/singapore-long.png',
           ariaLabel: 'FIL Dev Summit - Singapore',
+        },
+      },
+    ],
+  },
+  {
+    id: 'recap-video',
+    title: 'FilDev1 - Singapore Recap',
+    direction: 'column',
+    block: [
+      {
+        id: 'media',
+        type: BlockTypeEnum.MEDIA,
+        media: {
+          type: TypeName.MEDIA_VIDEO,
+          src: 'https://youtu.be/JtG08g_Thdc?si=stLVgquaxTc1WvOv',
+          ariaLabel: 'FIL Dev Summit 2023 - Singapore',
         },
       },
     ],
