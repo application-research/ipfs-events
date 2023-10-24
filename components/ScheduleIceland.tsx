@@ -17,6 +17,7 @@ if (!IS_PRODUCTION) {
 export default function ScheduleIceland({ scheduleData }) {
   const [icelandData, setIcelandData] = useState<any[] | null>(null);
   const [speakers, setSpeakers] = useState<any[]>([]);
+  const [isExpanded, setIsExpanded] = useState(false);
 
   useEffect(() => {
     if (scheduleData?.airtable?.tableName) {
@@ -31,6 +32,10 @@ export default function ScheduleIceland({ scheduleData }) {
     }
   }, [scheduleData]);
 
+  const toggleExpandCollapse = () => {
+    setIsExpanded(!isExpanded);
+  };
+
   if (!icelandData) return null;
 
   const submitTrack = {
@@ -43,10 +48,17 @@ export default function ScheduleIceland({ scheduleData }) {
 
   return (
     <>
-      <div style={{ paddingBottom: '4rem', display: 'grid', rowGap: '3rem' }}>
-        <Schedule calendarData={calendarData} scheduleId={'iceland-schedule'} />
+      <div style={{ paddingBottom: '2rem', display: 'grid', rowGap: '3rem' }}>
+        <div onClick={toggleExpandCollapse} className={styles.scheduleToggle}>
+          <p>View Full Schedule & Event Speakers</p>
 
-        {submitTrack.url && (
+          <button aria-label="View Full Schedule" onClick={toggleExpandCollapse} className={styles.expandCollapseButton}>
+            <div className={isExpanded ? styles.arrowUp : styles.arrowDown}></div>
+          </button>
+        </div>
+        {isExpanded && calendarData && <Schedule calendarData={calendarData} scheduleId={'singapore-schedule'} />}
+
+        {isExpanded && submitTrack.url && (
           <a href={submitTrack.url} className={styles.link} target="_blank">
             <section className={styles.callToAction}>
               <div className={styles.callToActionTextContainer}>
@@ -56,13 +68,14 @@ export default function ScheduleIceland({ scheduleData }) {
             </section>
           </a>
         )}
+
+        {isExpanded && speakers.length > 0 && (
+          <div style={{ display: 'grid', rowGap: '2rem' }}>
+            <h1 style={{ fontSize: 'var(--font-size-large)', fontWeight: 'var(--font-weight-light' }}> Speakers</h1>
+            <Speakers speakers={speakers} />
+          </div>
+        )}
       </div>
-      {speakers.length > 0 && (
-        <div style={{ display: 'grid', rowGap: '2rem' }}>
-          <h1 style={{ fontSize: 'var(--font-size-large)', fontWeight: 'var(--font-weight-light' }}> Speakers</h1>
-          <Speakers speakers={speakers} />
-        </div>
-      )}
     </>
   );
 }
