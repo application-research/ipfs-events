@@ -1,13 +1,11 @@
 'use client';
 import styles from 'components/ScheduleListByTrack.module.scss';
 
-import { classNames, makeRequest } from '@root/common/utilities';
+import { classNames } from '@root/common/utilities';
 import { formatAirtableMetaData, getFormattedAirtableFields, sortCalendarDataByDate, sortTracksByOrder } from '@root/resolvers/airtable-import';
 import { useEffect, useState } from 'react';
 import Loading from './Loading';
-import Link from './Link';
-import { Button, CallToActionVariant } from './CallToActionVariant';
-import { CallToActionVariantEnum } from '@root/common/types';
+
 import VideoPlayerSVG from './svgs/VideoPlayerSVG';
 
 export default function ScheduleListByTrack({ scheduleData }) {
@@ -106,7 +104,7 @@ export default function ScheduleListByTrack({ scheduleData }) {
                               <p className={classNames(styles.col50, styles.desc)} style={{ display: 'grid', rowGap: '1rem' }}>
                                 {record?.desc && <p>{record.desc}</p>}
 
-                                {record.videoLink && record.videoStatus === 'Approved' && (
+                                {record?.videoLink && record?.videoStatus === 'Approved' && (
                                   <span>
                                     <a target="_blank" href={record.videoLink} style={{ textDecoration: 'none' }}>
                                       <button className={styles.videoLinkButton}>

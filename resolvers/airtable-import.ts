@@ -14,6 +14,8 @@ export const airtableFormattedFieldsMap = {
   'Confirmed for website': 'confirmedForWebsite',
   'Confirmed for Website': 'confirmedForWebsite',
   'Video Status/Comment': 'videoStatus',
+  'Video Status / Comment': 'videoStatus',
+  'Video Status': 'videoStatus',
 
   // talk details
   'Talk Description': 'desc',

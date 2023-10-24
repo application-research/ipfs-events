@@ -142,7 +142,7 @@ export default function ScheduleListByTalks({ scheduleData }) {
                             <p className={classNames(styles.col50, styles.desc)}>
                               {record?.desc && record.desc}
 
-                              {record.videoLink && record.videoStatus === 'Approved' && (
+                              {record?.videoLink && record?.videoStatus === 'Approved' && (
                                 <span>
                                   <a target="_blank" href={record.videoLink} style={{ textDecoration: 'none' }}>
                                     <button className={styles.videoLinkButton}>

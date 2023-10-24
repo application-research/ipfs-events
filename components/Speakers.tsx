@@ -3,7 +3,6 @@ import styles from '@components/Speakers.module.scss';
 import TwitterSVG from './svgs/TwitterSVG';
 
 export default function Speakers({ speakers }) {
-  console.log(speakers, 'speakers');
   return (
     <div className={styles.container}>
       <div className={styles.row}>
