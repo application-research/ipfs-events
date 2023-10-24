@@ -224,7 +224,7 @@ export const TWENTY_FOUR_HOURS = 24 * 60 * 60 * 1000;
 
 export async function makeRequest({ endpoint, host }) {
   try {
-    const res = await fetch(`https://${host}/api/${endpoint}`);
+    const res = await fetch(`https://${host}/api/${endpoint}`, { next: { revalidate: 0 } });
     const json = await res.json();
 
     return { ...json };
