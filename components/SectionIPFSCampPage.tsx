@@ -58,7 +58,7 @@ export default function SectionCamppage({ upcomingEvents }) {
         <div style={{ display: 'grid', rowGap: '8rem' }}>
           <section>
             <div className={styles.imageWrapper}>
-              <img src="/media/ipfscamp-2024.svg" alt="IPFS Camp 2024" className={styles.imageStyle}/>
+              <img src="/media/ipfscamp-2024.svg" alt="IPFS Camp 2024" className={styles.imageStyle} />
             </div>
             <header className={styles.header} style={{ paddingBottom: '4rem' }}>
               <div className={styles.headerText}>
@@ -71,15 +71,17 @@ export default function SectionCamppage({ upcomingEvents }) {
                 <div className={styles.rainbowBorderWrapper}>
                   <div className={styles.innerContent}>
                     <div className={styles.diptychHalf}>
-                    <Link href={'https://airtable.com/appM094R1Ma5HG757/shrPwanwnxoCDYT56'} target="_blank">
-                      <div className={styles.rainbowButton}>
-                        <span className={styles.boldText}>PRE-REGISTER</span>
-                      </div>
-                    </Link>
+                      <Link href={'https://airtable.com/appM094R1Ma5HG757/shrPwanwnxoCDYT56'} target="_blank">
+                        <div className={styles.rainbowButton}>
+                          <span className={styles.boldText}>PRE-REGISTER</span>
+                        </div>
+                      </Link>
                     </div>
                     <div className={styles.diptychHalf}>
                       <div className={styles.centerTextContainer}>
-                        <span className={styles.boldText}>SPRING 2024</span>
+                        <span className={styles.boldText}>
+                          Krakow, Poland <br /> <br /> May 1-5 2024
+                        </span>
                       </div>
                     </div>
                   </div>

@@ -25,8 +25,8 @@ export const NAVIGATION_HOMEPAGE_CONTENT = {
         {
           header: 'Upcoming Event',
           title: 'IPFS Camp 2024',
-          date: 'TBD | Spring 2024',
-          location: 'Location TBD',
+          date: 'Krakow, Poland | May 1-5 2024',
+          location: 'Krakow, Poland',
           link: '/ipfs-camp/2024',
           image: 'https://blog.ipfs.tech/assets/img/chooseyouradventure.bf5cb5ad.jpeg',
           target: '_blank',
