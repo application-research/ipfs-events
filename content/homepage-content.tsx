@@ -134,10 +134,10 @@ export const HOMEPAGE_CONTENT = [
             name: 'IPFS Camp 2024',
           },
           {
-            date: 'Q3 2024',
+            date: 'Q4 2024',
             image: 'https://blog.ipfs.tech/assets/img/181806539-3c71476c-b247-4400-9778-5ccfce635f17.fac0cf11.png',
             link: null,
-            location: 'Q4',
+            location: 'Location TBD',
             target: '_self',
             name: 'IPFS Thing 2024',
           },
