@@ -127,10 +127,10 @@ export const HOMEPAGE_CONTENT = [
         type: BlockTypeEnum.UPCOMING_EVENTS,
         events: [
           {
-            date: 'Q2 2024',
+            date: ' May 1-5 2024',
             image: '/media/ipfs-camp.png',
             link: '/ipfs-camp/2024',
-            location: 'Location Q2',
+            location: 'Krakow, Poland',
             name: 'IPFS Camp 2024',
           },
           {
