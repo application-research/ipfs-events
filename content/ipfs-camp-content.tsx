@@ -16,7 +16,7 @@ export const IPFS_CAMP_PAGE_CONTENT = {
       date: 'Q2 2024',
       image: '/media/ipfs-camp.png',
       link: '/ipfs-camp/2024',
-      location: 'TBD',
+      location: 'Krakow, Poland',
       name: 'IPFS Camp 2024',
     },
     {
