@@ -80,7 +80,7 @@ export default function SectionCamppage({ upcomingEvents }) {
                     <div className={styles.diptychHalf}>
                       <div className={styles.centerTextContainer}>
                         <span className={styles.boldText}>
-                          Krakow, Poland <br /> <br /> May 1-5 2024
+                          Krakow, Poland <br /> <br /> June 1,2024
                         </span>
                       </div>
                     </div>
