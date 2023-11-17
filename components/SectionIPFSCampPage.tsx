@@ -48,7 +48,7 @@ export default function SectionCamppage({ upcomingEvents }) {
 
   const faqsRight = [
     { question: 'How can I participate?', answer: 'You can: Submit a track or talk, Sponsor, Apply as an IPFS Scholar, Become a key organizer, Volunteer, Apply for Expo Space' },
-    { question: 'How can I reach out to the organizers', answer: 'Please reach out to miwa@protocol.ai with any questions or suggestions' },
+    { question: 'How can I reach out to the organizers', answer: 'Please reach out to hello@miwa.events with any questions or suggestions' },
   ];
 
   return (
@@ -80,7 +80,7 @@ export default function SectionCamppage({ upcomingEvents }) {
                     <div className={styles.diptychHalf}>
                       <div className={styles.centerTextContainer}>
                         <span className={styles.boldText}>
-                          Krakow, Poland <br /> <br /> May 1-5 2024
+                          Krakow, Poland <br /> <br /> May 3-5 2024
                         </span>
                       </div>
                     </div>
