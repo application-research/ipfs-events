@@ -1,5 +1,6 @@
 import '@root/global.scss';
 
+import { headers } from 'next/headers';
 import FooterTiny from '@root/components/FooterTiny';
 import Hero from '@root/components/Hero';
 import ResponsiveNavbar from '@root/components/ResponsiveNavbar';
@@ -46,12 +47,16 @@ export default async function Page(props) {
   const hero = FILECOIN_DEV_SUMMIT_2023_HERO_CONTENT;
   const navContent = FILECOIN_DEV_SUMMIT_NAVIGATION_CONTENT;
   const pageStyle = FILECOIN_DEV_SUMMIT_PAGE_STYLE_CONTENT;
+  const currentHeaders = headers();
+  const host = currentHeaders.get('host');
 
   const promises = blocks.flatMap((contentItem) =>
     contentItem.block.map(async (blockItem) => {
       if ('scheduleData' in blockItem && blockItem.scheduleData.airtable) {
         try {
-          const data = await makeRequest({ endpoint: blockItem.scheduleData.airtable.endPoint, host: blockItem.scheduleData.airtable.host });
+          const airtableEndpoint = blockItem.scheduleData.airtable.endPoint;
+          const data = await makeRequest({ endpoint: airtableEndpoint, host });
+
           blockItem.scheduleData.airtable.data = data;
         } catch (error) {
           console.error('Error fetching tableData for blockItem:', blockItem, error);
@@ -72,7 +77,6 @@ export default async function Page(props) {
 
       <SectionEventPage blocks={blocks} pageStyle={pageStyle} />
 
-      <SectionEventPage blocks={blocks} />
       <FooterTiny {...footerContent} />
     </div>
   );

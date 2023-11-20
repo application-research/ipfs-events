@@ -38,24 +38,8 @@ export default function BlockBuilder({ block, cta, title, subtitle, id, border, 
             {description && <p dangerouslySetInnerHTML={{ __html: description }} />}
           </div>
 
-              {cta && <CallToActionVariant cta={cta} type={cta.type} />}
-            </section>
-          )}
-        </>
-      ) : (
-        <GutterContainer>
-          {(title || description || subtitle) && (
-            <section className={styles.row} style={{ borderBottom: border ? '1px solid var(--color-text)' : '' }}>
-              <div style={{ display: 'grid', rowGap: '1rem' }}>
-                {title && <h1 className={styles.mainTitle}>{title}</h1>}
-                {subtitle && <h4 className={styles.subtitle}>{subtitle}</h4>}
-                {description && <p className={styles.description}>{description}</p>}
-              </div>
-
-              {cta && <CallToActionVariant cta={cta} type={cta.type} />}
-            </section>
-          )}
-        </GutterContainer>
+          {cta && <CallToActionVariant cta={cta} type={cta.type} />}
+        </section>
       )}
 
       <div className={`${BlockBuilderDirectionStyle(direction)}`}>

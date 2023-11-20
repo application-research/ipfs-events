@@ -1,11 +1,12 @@
 import '@root/global.scss';
 
+import { headers } from 'next/headers';
 import FooterTiny from '@root/components/FooterTiny';
 import ResponsiveNavbar from '@root/components/ResponsiveNavbar';
 import SectionEventPage from '@root/components/SectionEventPage';
 import { FILECOIN_DEV_SUMMIT_NAVIGATION_CONTENT, FILECOIN_DEV_SUMMIT_PAGE_STYLE_CONTENT, FOOTER_FILECOIN_DEV_SUMMIT_CONTENT } from '@root/content/filecoin-dev-summit';
 import { FILECOIN_DEV_SUMMIT_ICELAND_PAGE_CONTENT } from '@root/content/iceland-page-content';
-import { makeRequest } from "@root/common/utilities";
+import { makeRequest } from '@root/common/utilities';
 
 export async function generateMetadata({ params, searchParams }) {
   const title = 'FIL Dev Summit 2023: Talks Iceland';
@@ -40,19 +41,22 @@ export default async function Page(props) {
 
   const navContent = FILECOIN_DEV_SUMMIT_NAVIGATION_CONTENT;
   const pageStyle = FILECOIN_DEV_SUMMIT_PAGE_STYLE_CONTENT;
+  const currentHeaders = headers();
+  const host = currentHeaders.get('host');
 
   const promises = blocks.flatMap((innerBlocks) => {
     return innerBlocks.block.map(async (blockItem) => {
       // Fetch table data
+      const airtableEndpoint = blockItem.scheduleData.airtable.endPoint;
       let tableData = await makeRequest({
-        endpoint: blockItem.scheduleData.airtable.endPoint,
-        host: blockItem.scheduleData.airtable.host,
+        endpoint: airtableEndpoint,
+        host: host,
       });
-      
+
       // Set data to blockItem.scheduleData.airtable.data
       blockItem.scheduleData.airtable.data = tableData;
     });
-  });  
+  });
 
   await Promise.all(promises);
 

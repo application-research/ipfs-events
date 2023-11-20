@@ -1,7 +1,6 @@
 import moment from 'moment';
 
 export const generateHourlyTimeRanges = (times: string[]): string[] => {
-  console.log(times, 'times');
   // Extract unique hours from the provided times
   const hours: number[] = [...new Set(times.map((time) => moment.utc(time, 'hh:mm a').hour()))].sort((a, b) => a - b);
 

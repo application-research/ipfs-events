@@ -4,7 +4,6 @@ import styles from '@components/NavbarLogoMiddle.module.scss';
 import ArrowSVG from './svgs/ArrowBoldSVG';
 import GutterContainer from './GutterContainer';
 import Link from './Link';
-import ArrowSVGStyleTwo from './svgs/ArrowBoldSVG';
 import { useState } from 'react';
 
 export default function NavbarLogoMiddle({ navContent }) {
@@ -60,19 +59,18 @@ export default function NavbarLogoMiddle({ navContent }) {
                     <>
                       <p>{item.title}</p>
 
-                        <div className={`${styles.dropdownRow}`}>
-                          <Dropdown dropdown={item?.dropdown} />
-                        </div>
-                      </>
-                    )}
-                  </div>
-                );
-              })}
-            </div>
+                      <div className={`${styles.dropdownRow}`}>
+                        <Dropdown dropdown={item?.dropdown} />
+                      </div>
+                    </>
+                  )}
+                </div>
+              );
+            })}
           </div>
         </div>
-      </GutterContainer>
-    </nav>
+      </div>
+    </GutterContainer>
   );
 }
 

@@ -22,38 +22,14 @@ export enum BlockTypeEnum {
   TABLE = 'table',
   TEXT = 'text',
   TICKET_CARD = 'ticket-card',
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
   UPCOMING_EVENTS = 'upcoming-events',
-=======
-  SCHEDULE_ICELAND = 'schedule-iceland',
-  SCHEDULE_SINGAPORE = 'schedule-singapre',
->>>>>>> 2127ccc (added track details)
-=======
-=======
-=======
 }
 
 export enum LocationEnum {
   SINGAPORE = 'singapore',
   ICELAND = 'iceland',
->>>>>>> d59c4cc (added speaker section)
->>>>>>> 6f84cbc (added speaker section)
-=======
->>>>>>> 5777794 (updated airtable sync)
 }
 
-<<<<<<< HEAD
-export enum LocationEnum {
-  SINGAPORE = 'singapore',
-  ICELAND = 'iceland',
->>>>>>> 7f59565 (added speakers row)
-}
-
-=======
->>>>>>> 7f4f289 (fixed overflow for calendar)
 export enum BlockDirectionEnum {
   COLUMN = 'column',
   FOUR_COLUMN = 'four-column',

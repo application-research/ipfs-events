@@ -6,42 +6,21 @@ import * as Server from '@common/server';
 
 import Airtable from 'airtable';
 
-// export default async function apiAirtableSingapore(req, res) {
-//   await Server.cors(req, res);
-//   const name = 'Asia Talk/Track Submissions + Forms';
+export default async function apiAirtableStakingTable(req, res) {
+  await Server.cors(req, res);
 
-//   try {
-//     const base = new Airtable({ apiKey: process.env.FILSUMMIT_TOKEN }).base(process.env.FILSUMMIT_BASE_ID!);
-//     const records = await base(name).select().firstPage();
+  const name = 'Asia Talk/Track Submissions + Forms';
 
-//     res.json({ records });
-//   } catch (e) {
-//     console.log(e);
-//     res.json({ error: true });
-//   }
-// }
+  try {
+    const base = new Airtable({
+      apiKey: process.env.FILSUMMIT_TOKEN,
+    }).base(process.env.FILSUMMIT_BASE_ID!);
 
-export default async function apiAirtableSingapore(req, res) {
-  const url = 'https://internet-apis.onrender.com/api/airtable/singapore';
-  const TOKEN = process.env.FILSUMMIT_TOKEN;
+    const records = await base(name).select().all();
 
-  fetch(url, {
-    method: 'GET',
-    headers: {
-      Authorization: `Bearer ${TOKEN}`,
-      'Content-Type': 'application/json',
-    },
-  })
-    .then((response) => {
-      if (!response.ok) {
-        throw new Error('Network response was not ok');
-      }
-      return response.json();
-    })
-    .then((data) => {
-      res.json({ data });
-    })
-    .catch((error) => {
-      console.log('There was a problem with the fetch operation:', error.message);
-    });
+    res.json({ records });
+  } catch (e) {
+    console.log(e);
+    res.json({ error: true });
+  }
 }

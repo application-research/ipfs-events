@@ -11,19 +11,9 @@
   gap: 1rem;
   color: var(--color-white);
   font-size: var(--font-size-small);
-<<<<<<< HEAD
-  top: 5rem;
-  z-index: var(--z-index-small);
-
-  @media (max-width: 1040px) {
-    top: 0rem;
-  }
-
-=======
   top: 60px;
   z-index: var(--z-index-small);
 
->>>>>>> 2127ccc (added track details)
   @media (max-width: 768px) {
     top: 0rem;
     grid-template-columns: repeat(3, 200px);
@@ -228,22 +218,12 @@
 //To Do: make it dissapear when there is no scroll at all
 .sectionScrollTooltip {
   display: none;
-<<<<<<< HEAD
-
-  @media (max-width: 768px) {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 0.5rem;
-  }
 }
 
 .row {
   display: flex;
   flex-direction: row;
   gap: 1rem;
-=======
->>>>>>> 2127ccc (added track details)
 
   @media (max-width: 768px) {
     display: flex;
