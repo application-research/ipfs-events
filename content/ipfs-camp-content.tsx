@@ -13,14 +13,14 @@ export const IPFS_CAMP_PAGE_CONTENT = {
       name: 'FIL Dev Summit',
     },
     {
-      date: 'Q2 2024',
+      date: 'Q3 2024',
       image: '/media/ipfs-camp.png',
       link: '/ipfs-camp/2024',
-      location: 'Krakow, Poland',
+      location: 'TBD',
       name: 'IPFS Camp 2024',
     },
     {
-      date: 'Q3 2024',
+      date: 'TBD',
       image: 'https://blog.ipfs.tech/assets/img/181806539-3c71476c-b247-4400-9778-5ccfce635f17.fac0cf11.png',
       link: null,
       location: 'TBD',
