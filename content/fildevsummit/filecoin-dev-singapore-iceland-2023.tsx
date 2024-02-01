@@ -239,34 +239,34 @@ export const FILECOIN_DEV_SUMMIT_2023_PAGE_CONTENT = [
       },
     ],
   },
-  // {
-  //   id: 'recap-video',
-  //   title: 'FilDev2 - Iceland Recap',
-  //   direction: 'column',
-  //   block: [
-  //     {
-  //       id: 'media',
-  //       type: BlockTypeEnum.MEDIA,
-  //       media: {
-  //         type: TypeName.MEDIA_VIDEO,
-  //         src: 'https://youtu.be/JtG08g_Thdc?si=stLVgquaxTc1WvOv',
-  //         ariaLabel: 'FIL Dev Summit 2023 - Iceland',
-  //       },
-  //     },
-  //   ],
-  // },
+  {
+    id: 'recap-video',
+    title: 'FilDev2 - Iceland Recap',
+    direction: 'column',
+    block: [
+      {
+        id: 'media',
+        type: BlockTypeEnum.MEDIA,
+        media: {
+          type: TypeName.MEDIA_VIDEO,
+          src: 'https://youtu.be/JtG08g_Thdc?si=stLVgquaxTc1WvOv',
+          ariaLabel: 'FIL Dev Summit 2023 - Iceland',
+        },
+      },
+    ],
+  },
   {
     id: 'iceland',
     direction: BlockDirectionEnum.COLUMN,
     title: 'FilDev2 - Iceland Schedule',
-    description: "<a style='color:#0090FF; text-decoration: none' href='/iceland-list'>Click here </a> to view the schedule in a list format",
+    description: "",
     cta: {
       type: CallToActionVariantEnum.BUTTON,
       textColor: 'white',
       target: '_blank',
-      text: 'Showcase Your Project at the EXPO',
+      text: 'View the schedule in a list format',
       buttonColor: 'linear-gradient(to right,#39C1CB, #006FEC)',
-      link: 'https://airtable.com/appEjnh5rpWMsjocb/shr4Pv7K5CxTo6DGi',
+      link: '/iceland-list',
     },
     block: [
       {
@@ -315,14 +315,14 @@ export const FILECOIN_DEV_SUMMIT_2023_PAGE_CONTENT = [
 
     direction: BlockDirectionEnum.COLUMN,
     title: 'FilDev1 - Singapore Schedule',
-    description: "<a style='color:#0090FF; text-decoration: none' href='/singapore-list'>Click here </a> to view the schedule in a list format",
+    description: "",
     cta: {
       type: CallToActionVariantEnum.BUTTON,
       textColor: 'white',
       target: '_blank',
-      text: 'Showcase Your Project at the EXPO',
+      text: 'view the schedule in a list format',
       buttonColor: 'linear-gradient(to right,#39C1CB, #006FEC)',
-      link: 'https://airtable.com/appEjnh5rpWMsjocb/shrw3Ha0yTusDmcOg',
+      link: '/singapore-list',
     },
     block: [
       {
@@ -331,7 +331,6 @@ export const FILECOIN_DEV_SUMMIT_2023_PAGE_CONTENT = [
       },
     ],
   },
-
   {
     id: 'faqs',
     title: 'FAQs',
@@ -342,7 +341,7 @@ export const FILECOIN_DEV_SUMMIT_2023_PAGE_CONTENT = [
         collapsables: [
           {
             type: BlockTypeEnum.COLLAPSABLE,
-            title: 'What is FIL Dev Summit?',
+            title: 'What is FIL Dev Summit - ETH Denver 2024?',
             collapsedText:
               'FIL Dev Summit is a gathering of developers, builders, and engaged community members who want to contribute to the core protocol and network evolution of Filecoin (think IPFS Thing, but bigger!). This would include FVM smart contract builders, core protocol devs, implementation engineering teams, tool builders, large storage clients, and even token holders engaged in network governance. Our goal would be to build alignment around the current roadmap and trajectory of protocol improvements, improve our dev tooling and capabilities, grow inter- and intra-team connections, and accelerate upcoming launches in Q4/Q1.',
             backgroundColor: 'linear-gradient(to right,#39C1CB, #006FEC)',
@@ -361,35 +360,29 @@ export const FILECOIN_DEV_SUMMIT_2023_PAGE_CONTENT = [
               'FVM smart contract builders, core protocol devs, implementation engineering teams, tool builders, storage providers, large storage clients, token holders engaged in network governance, and more! People who care about how and why the protocol is evolving - Folks who are writing FIPS, implementing tools, or writing smart contracts. People who have product requirements. IPLD-yfiying the data as an example.',
             backgroundColor: 'linear-gradient(to right,#39C1CB, #006FEC)',
           },
-          {
-            type: BlockTypeEnum.COLLAPSABLE,
-            title: 'Why are there two separate events? Do I have to attend both? How Do I know which to attend?',
-            collapsedText:
-              'We are hosting two back-to-back Filecoin protocol events in different locations to reduce overhead costs and travel time. You do not need to attend both events; choose the one that makes the most sense for you. The events, tracks, and talks will be recorded and uploaded to watch [on our youtube](https://www.youtube.com/@IPFSbot) throughout the event.',
-            backgroundColor: 'linear-gradient(to right,#39C1CB, #006FEC)',
-          },
-          {
-            type: BlockTypeEnum.COLLAPSABLE,
-            title: 'How can I participate at FIL Dev Summit?',
-            collapsedText: `- **Join the conversations**: Join [#fil-dev-summit](https://app.slack.com/client/TEHTVS1L6/C05LHC1ULG1) in [Filecoin](https://filecoinproject.slack.com/ssb/redirect) Slack to stay connected with the conversations happening during the event and beyond.	
+      
+//           {
+//             type: BlockTypeEnum.COLLAPSABLE,
+//             title: 'How can I participate at FIL Dev Summit?',
+//             collapsedText: `- **Join the conversations**: Join [#fil-dev-summit](https://app.slack.com/client/TEHTVS1L6/C05LHC1ULG1) in [Filecoin](https://filecoinproject.slack.com/ssb/redirect) Slack to stay connected with the conversations happening during the event and beyond.	
 
-- **Tell a friend**: Let us know if there is someone you think we should invite, or direct them to our [website](https://fildev.io/).
+// - **Tell a friend**: Let us know if there is someone you think we should invite, or direct them to our [website](https://fildev.io/).
 
-- **Lead a Track**: Submit your track for either/both locations in the schedule section of our [website](https://fildev.io/).
+// - **Lead a Track**: Submit your track for either/both locations in the schedule section of our [website](https://fildev.io/).
 
-- **Give a Talk**: Not ready to lead an entire track, but still would like to contribute? Submit your talk for either/both locations in the schedule section of our website.
+// - **Give a Talk**: Not ready to lead an entire track, but still would like to contribute? Submit your talk for either/both locations in the schedule section of our website.
 
-- **Volunteer**: Email [hello@fildev.io](mailto:hello@fildev.io) if you’d like to help make the production of this event a success. We could really use your help!
+// - **Volunteer**: Email [hello@fildev.io](mailto:hello@fildev.io) if you’d like to help make the production of this event a success. We could really use your help!
 
 
-- **Sponsor**: Your support helps bring together different teams from around the world to advance the core protocol development and evolve the Filecoin network. If you’re interested in sponsorship, please email us at [hello@fildev.io](mailto:hello@fildev.io) for more information.		
+// - **Sponsor**: Your support helps bring together different teams from around the world to advance the core protocol development and evolve the Filecoin network. If you’re interested in sponsorship, please email us at [hello@fildev.io](mailto:hello@fildev.io) for more information.		
 
 
-- **Become a Scholar**: Note that this program is designed to provide opportunities for individuals from underrepresented communities, unique circumstances, or developing areas to participate in FIL Dev Summit. Priority will be given to individuals with a history of strong contributions to FIL implementations and related projects, or potential future contributions to the FIL Implementors community.
+// - **Become a Scholar**: Note that this program is designed to provide opportunities for individuals from underrepresented communities, unique circumstances, or developing areas to participate in FIL Dev Summit. Priority will be given to individuals with a history of strong contributions to FIL implementations and related projects, or potential future contributions to the FIL Implementors community.
 
-- **Keep up the momentum!**: After the event, all of the tracks will be posted to the Filecoin Youtube channel. Be sure to share your talk or track videos with the world! Help the broader community see all of the great work that has transpired and get a sense of what they can expect to see more of for the rest of the year and beyond.`,
-            backgroundColor: 'linear-gradient(to right,#39C1CB, #006FEC)',
-          },
+// - **Keep up the momentum!**: After the event, all of the tracks will be posted to the Filecoin Youtube channel. Be sure to share your talk or track videos with the world! Help the broader community see all of the great work that has transpired and get a sense of what they can expect to see more of for the rest of the year and beyond.`,
+//             backgroundColor: 'linear-gradient(to right,#39C1CB, #006FEC)',
+//           },
           {
             type: BlockTypeEnum.COLLAPSABLE,
             title: 'What are the venues for FIL Dev Summit?',
@@ -397,14 +390,14 @@ export const FILECOIN_DEV_SUMMIT_2023_PAGE_CONTENT = [
               'Logistical details will be sent to you once your application has been received, approved, and you have completed the registration for this event by purchasing a ticket.',
             backgroundColor: 'linear-gradient(to right,#39C1CB, #006FEC)',
           },
-          {
-            id: 'media',
-            type: BlockTypeEnum.COLLAPSABLE,
-            title: 'What if I need a visa?',
-            collapsedText:
-              'See the attached docs for Letter of Support/Invitation for Entry Visa: [Iceland](https://drive.google.com/file/d/1jZ8ZbYnX8nvJeS01ou7eKPWKY94IVTfb/view?usp=sharing) and [Singapore](https://drive.google.com/file/d/1Biowq7ENIF9aGNTz69rF0c7yHCusbXyd/view?usp=sharing).',
-            backgroundColor: 'linear-gradient(to right,#39C1CB, #006FEC)',
-          },
+          // {
+          //   id: 'media',
+          //   type: BlockTypeEnum.COLLAPSABLE,
+          //   title: 'What if I need a visa?',
+          //   collapsedText:
+          //     'See the attached docs for Letter of Support/Invitation for Entry Visa: [Iceland](https://drive.google.com/file/d/1jZ8ZbYnX8nvJeS01ou7eKPWKY94IVTfb/view?usp=sharing) and [Singapore](https://drive.google.com/file/d/1Biowq7ENIF9aGNTz69rF0c7yHCusbXyd/view?usp=sharing).',
+          //   backgroundColor: 'linear-gradient(to right,#39C1CB, #006FEC)',
+          // },
         ],
       },
       {
