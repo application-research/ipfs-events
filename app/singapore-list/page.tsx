@@ -4,9 +4,10 @@ import { headers } from 'next/headers';
 import FooterTiny from '@root/components/FooterTiny';
 import ResponsiveNavbar from '@root/components/ResponsiveNavbar';
 import SectionEventPage from '@root/components/SectionEventPage';
-import { FILECOIN_DEV_SUMMIT_NAVIGATION_CONTENT, FIL_DEV_SUMMIT_PAGE_STYLE_CONTENT, FOOTER_FILECOIN_DEV_SUMMIT_CONTENT } from '@root/content/fildevsummit/filecoin-dev-summit';
-import { FILECOIN_DEV_SUMMIT_SINGAPORE_PAGE_CONTENT } from '@root/content/singapore-page-content';
+
 import { makeRequest } from '@root/common/utilities';
+import { FILECOIN_DEV_SUMMIT_NAVIGATION_CONTENT, FILECOIN_DEV_SUMMIT_PAGE_STYLE_CONTENT, FOOTER_FILECOIN_DEV_SUMMIT_CONTENT } from '@root/content/fildevsummit/filecoin-dev-singapore-iceland-2023';
+import { FILECOIN_DEV_SUMMIT_SINGAPORE_PAGE_CONTENT } from '@root/content/singapore-page-content';
 
 export async function generateMetadata({ params, searchParams }) {
   const title = 'FIL Dev Summit 2023: Singapore';
@@ -40,7 +41,7 @@ export default async function Page(props) {
   const footerContent = FOOTER_FILECOIN_DEV_SUMMIT_CONTENT;
 
   const navContent = FILECOIN_DEV_SUMMIT_NAVIGATION_CONTENT;
-  const pageStyle = FIL_DEV_SUMMIT_PAGE_STYLE_CONTENT;
+  const pageStyle = FILECOIN_DEV_SUMMIT_PAGE_STYLE_CONTENT;
   const currentHeaders = headers();
   const host = currentHeaders.get('host');
 
