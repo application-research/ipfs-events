@@ -2,8 +2,8 @@
   color: var(--color-white);
 
   .row {
-    display: flex;
-    flex-direction: row;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
     gap: 1rem;
 
     @media (max-width: 768px) {
@@ -70,4 +70,10 @@
 
 .textContent {
   padding: 1rem 1rem 0rem 1rem;
+}
+
+.ticketLink{
+  cursor:pointer;
+  text-decoration: none;
+  color:inherit;
 }
