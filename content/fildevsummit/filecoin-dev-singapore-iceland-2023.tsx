@@ -92,10 +92,11 @@ export const FILECOIN_DEV_SUMMIT_2023_PAGE_CONTENT = [
     ],
   },
   {
-    id: 'about',
+    id: 'current-events',
     direction: BlockDirectionEnum.ROW,
     backgroundColor: 'var(--color-white)',
-    title: 'Past Events',
+    title: 'Upcoming Events',
+    link: '#current-events',
     block: [
       {
         id: 'upcoming-events',
@@ -103,6 +104,55 @@ export const FILECOIN_DEV_SUMMIT_2023_PAGE_CONTENT = [
         media: [
           {
             id: 'upcoming-events',
+            type: BlockTypeEnum.MEDIA,
+            heading: 'FDS-3: ETHDenver',
+            subtitle: 'Feb 29th, 2023',
+            smallDesc: 'Organized by Filecoin Foundation',
+            media: {
+              type: TypeName.MEDIA_IMAGE,
+              src: '/media/denver-full.jpg',
+              ariaLabel: 'FIL Dev Summit',
+              link: '#denver',
+            },
+          },
+        ],
+      },
+      // {
+      //   id: 'upcoming-events',
+      //   type: BlockTypeEnum.MEDIA_GRID,
+      //   title: 'd',
+      //   media: [
+      //     {
+      //       id: 'upcoming-events',
+      //       type: BlockTypeEnum.MEDIA,
+
+      //       heading: 'FilDev1 - Singapore',
+      //       subtitle: 'September 12 - 14th, 2023',
+      //       smallDesc: 'Organized by Filecoin Foundation',
+      //       media: {
+      //         type: TypeName.MEDIA_IMAGE,
+      //         src: '/media/singapore-full.png',
+      //         ariaLabel: 'FIL Dev Summit',
+      //         link: '#singapore',
+      //       },
+      //     },
+      //   ],
+      // },
+    ],
+  },
+  {
+    id: 'past-events',
+    direction: BlockDirectionEnum.ROW,
+    backgroundColor: 'var(--color-white)',
+    title: 'Past Events',
+    link: '#past-events',
+    block: [
+      {
+        id: 'past-events',
+        type: BlockTypeEnum.MEDIA_GRID,
+        media: [
+          {
+            id: 'past-events',
             type: TypeName.MEDIA_IMAGE,
             heading: 'FDS-2: Iceland',
             subtitle: 'September 25 - 27th, 2023',
@@ -115,7 +165,7 @@ export const FILECOIN_DEV_SUMMIT_2023_PAGE_CONTENT = [
             },
           },
           {
-            id: 'upcoming-events',
+            id: 'past-events',
             type: BlockTypeEnum.MEDIA,
             heading: 'FDS-1: Singapore',
             subtitle: 'September 12 - 14th, 2023',
@@ -517,6 +567,11 @@ export const FILECOIN_DEV_SUMMIT_NAVIGATION_CONTENT = {
   },
   navItems: [
     {
+      name: 'Events',
+      href: '#events',
+    },
+    /* 
+    {
       name: 'Singapore',
       href: '#singapore',
     },
@@ -524,6 +579,7 @@ export const FILECOIN_DEV_SUMMIT_NAVIGATION_CONTENT = {
       name: 'Iceland',
       href: '#iceland',
     },
+    */
     // {
     //   name: 'Tickets',
     //   href: '#tickets',
