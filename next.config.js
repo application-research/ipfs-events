@@ -8,12 +8,12 @@ const nextConfig = {
   async redirects() {
     return [
       {
-        source: '/iceland-list',
+        source: '/singapore-list',
         destination: '/FDS-1/list',
         permanent: true,
       },
       {
-        source: '/singapore-list',
+        source: '/iceland-list',
         destination: '/FDS-2/list',
         permanent: true,
       },
