@@ -110,12 +110,9 @@ export const FILECOIN_DEV_SUMMIT_2023_PAGE_CONTENT = [
             id: 'current-events',
             link: '#current-events',
             type: BlockTypeEnum.MEDIA,
-            heading: 'FDS-3: ETHDenver',
-            subtitle: 'Feb 29th, 2023',
-            smallDesc: 'Organized by Filecoin Foundation',
             media: {
               type: TypeName.MEDIA_IMAGE,
-              src: '/media/denver-full.jpg',
+              src: '/media/denver-with-words.png',
               ariaLabel: 'FIL Dev Summit',
               link: '#denver',
             },
@@ -159,12 +156,9 @@ export const FILECOIN_DEV_SUMMIT_2023_PAGE_CONTENT = [
           {
             id: 'past-events',
             type: TypeName.MEDIA_IMAGE,
-            heading: 'FDS-2: Iceland',
-            subtitle: 'September 25 - 27th, 2023',
-            smallDesc: 'Organized by Miwa',
             media: {
               type: TypeName.MEDIA_IMAGE,
-              src: '/media/iceland-full.jpg',
+              src: '/media/iceland-with-words.jpg',
               ariaLabel: 'FIL Dev Summit',
               link: '#iceland',
             },
@@ -172,12 +166,9 @@ export const FILECOIN_DEV_SUMMIT_2023_PAGE_CONTENT = [
           {
             id: 'past-events',
             type: BlockTypeEnum.MEDIA,
-            heading: 'FDS-1: Singapore',
-            subtitle: 'September 12 - 14th, 2023',
-            smallDesc: 'Organized by Filecoin Foundation',
             media: {
               type: TypeName.MEDIA_IMAGE,
-              src: '/media/singapore-full.png',
+              src: '/media/singapore-with-words.jpg',
               ariaLabel: 'FIL Dev Summit',
               link: '#singapore',
             },
