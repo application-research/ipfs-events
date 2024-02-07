@@ -15,6 +15,7 @@ import Text from './Text';
 import Tickets from './Tickets';
 import ScheduleIceland from './ScheduleIceland';
 import ScheduleSingapore from './ScheduleSingapore';
+import ScheduleETHDenver from './ScheduleETHDenver';
 import ScheduleListByTrack from './ScheduleListByTrack';
 import ScheduleListByTalks from './ScheduleListByTalks';
 import ScheduleListToggleByTimeOrTrack from './ScheduleListToggle';
@@ -46,6 +47,8 @@ export function Block({ block }) {
       return <ScheduleIceland {...block} />;
     case (block.type = BlockTypeEnum.SCHEDULE_SINGAPORE):
       return <ScheduleSingapore {...block} />;
+    // case (block.type = BlockTypeEnum.SCHEDULE_ETHDENVER):
+    //   return <ScheduleETHDenver {...block} />;
     case (block.type = BlockTypeEnum.SCHEDULE_LIST_BY_TRACK_ICELAND):
       return <ScheduleListByTrack {...block} />;
     case (block.type = BlockTypeEnum.SCHEDULE_LIST_BY_TALK_ICELAND):
