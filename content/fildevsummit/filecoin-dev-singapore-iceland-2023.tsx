@@ -114,7 +114,7 @@ export const FILECOIN_DEV_SUMMIT_2023_PAGE_CONTENT = [
               type: TypeName.MEDIA_IMAGE,
               src: '/media/denver-with-words.png',
               ariaLabel: 'FIL Dev Summit',
-              link: '#denver',
+              link: '/FDS-3',
             },
           },
         ],
