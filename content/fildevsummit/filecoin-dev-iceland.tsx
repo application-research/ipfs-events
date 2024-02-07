@@ -3,7 +3,7 @@ import { BlockDirectionEnum, BlockTypeEnum, CallToActionVariantEnum, NavigationT
 export const FILECOIN_DEV_SUMMIT_ETH_DENVER_2024_HERO_CONTENT = {
   id: 'hero',
   type: BlockTypeEnum.HERO_NO_BACKGROUND,
-  title: 'FIL Dev Summit - ETHDenver',
+  title: 'FIL Dev Summit ETH Denver',
   description:
     "FIL Dev Summit is a gathering of developers, builders, and engaged community members who want to contribute to the core protocol and network evolution of Filecoin (think IPFS Thing, but bigger!). This summit is more than just a meetup—it's a place for meaningful and impactful conversations that help push Filecoin forward. <br> <br>The date and location will be announced soon!",
 };
@@ -14,27 +14,19 @@ export const FIL_DEV_SUMMIT_PAGE_STYLE_CONTENT = {
 };
 
 //replace
-// export const FIL_DEV_SUMMIT_ICELAND = {
-//   airtable: {
-//     tableName: 'NA/EU Talk Track Submissions + Forms',
-//     endPoint: 'airtable/iceland',
-//     data: [],
-//   },
-// };
+export const FIL_DEV_SUMMIT_ICELAND = {
+  airtable: {
+    tableName: 'NA/EU Talk Track Submissions + Forms',
+    endPoint: 'airtable/iceland',
+    data: [],
+  },
+};
 
 //replace
-// export const FIL_DEV_SUMMIT_SINGAPORE = {
-//   airtable: {
-//    tableName: 'Asia Talk Track Submissions + Forms',
-//     endPoint: 'airtable/singapore',
-//     data: [],
-//   },
-// };
-
-export const FIL_DEV_SUMMIT_ETH_DENVER = {
+export const FIL_DEV_SUMMIT_SINGAPORE = {
   airtable: {
-    tableName: '🗣️Talk Submissions + Forms',
-    endPoint: 'airtable/ethdenver',
+    tableName: 'Asia Talk Track Submissions + Forms',
+    endPoint: 'airtable/singapore',
     data: [],
   },
 };
@@ -53,19 +45,19 @@ export const FILECOIN_DEV_SUMMIT_ETH_DENVER_2024_PAGE_CONTENT = [
           {
             id: 'media',
             type: BlockTypeEnum.TICKET_CARD,
-            price: '$20',
-            name: 'FIL Dev Summit ETHDenver 2024',
+            price: '',
+            name: 'FIL Dev Summit ETH Denver 2024',
             backgroundColor: 'white',
             textColor: 'black',
             description:
-              'Register for ETHDenver FIL Dev Summit.',
+              'Register for ETH Denver FIL Dev Summit. The Date and Location will be announced soon!',
             cta: {
               type: CallToActionVariantEnum.BORDER,
               target: '_blank',
               buttonColor: 'linear-gradient(to right,#39C1CB, #006FEC)',
               textColor: 'white',
               text: 'Register',
-              link: 'https://lu.ma/FDS-EthDenver',
+              link: 'https://airtable.com/appEjnh5rpWMsjocb/shran7li4slfQSB04',
             },
           },
         ],
@@ -81,8 +73,8 @@ export const FILECOIN_DEV_SUMMIT_ETH_DENVER_2024_PAGE_CONTENT = [
       target: '_blank',
       buttonColor: 'linear-gradient(to right,#39C1CB, #006FEC)',
       textColor: 'white',
-      text: 'Sponsor FIL Dev Summit ETHDenver 2024',
-      link: 'https://airtable.com/appHcADfPc1dtLsTL/shrLacwJyqpPubZwF',
+      text: 'Sponsor FIL Dev Summit ETH Denver 2024',
+      link: '',
     },
     block: [
       {
@@ -92,10 +84,6 @@ export const FILECOIN_DEV_SUMMIT_ETH_DENVER_2024_PAGE_CONTENT = [
           {
             src: '/media/protocollabs.png',
             href: 'https://protocol.ai/',
-          },
-          {
-            src: 'https://i.ibb.co/Dt6G116/logo-black-text.png',
-            href: 'https://web3mine.io/',
           },
           {
             src: '/media/ff-logo2.png',
@@ -115,37 +103,36 @@ export const FILECOIN_DEV_SUMMIT_ETH_DENVER_2024_PAGE_CONTENT = [
       {
         id: 'media',
         type: BlockTypeEnum.IMAGE_TEXT_WITH_OVERFLOW,
-        heading: 'ETHDenver',
-        description: 'Feb 29th 2024; The Slate Denver, 1250 Welton St, Denver, CO 80204',
+        heading: 'ETH Denver',
+        description: 'Location and dates TBD',
         smallDesc: 'Organized by Miwa',
         image: {
           alt: 'eth-denver-fil-dev-summit',
-          src: '/media/denver-full.jpg',
+          src: '/media/iceland-full.jpg',
         },
       },
     ],
   },
 
   {
-    id: 'schedule-ethdenver',
+    id: 'iceland',
     direction: BlockDirectionEnum.COLUMN,
-    title: 'Event Schedule',
-    description: "Event Schedule is coming soon, please submit a talk if you would like to speak!",
-    cta: {
-      type: CallToActionVariantEnum.BUTTON,
-      textColor: 'white',
-      target: '_blank',
-      text: 'Submit a Talk for ETHDenver',
-      buttonColor: 'linear-gradient(to right,#39C1CB, #006FEC)',
-      // replace link
-      link: 'https://airtable.com/appHcADfPc1dtLsTL/shrJKBdQLs9Vvm5HE',
-    },
-    block: [
-      {
-        type: BlockTypeEnum.SCHEDULE_ETHDENVER,
-        scheduleData: FIL_DEV_SUMMIT_ETH_DENVER,
-      },
-    ],
+    title: 'Event Schedule is coming soon',
+    description: "",
+    // cta: {
+    //   type: CallToActionVariantEnum.BUTTON,
+    //   textColor: 'white',
+    //   target: '_blank',
+    //   text: 'Showcase Your Project at the EXPO',
+    //   buttonColor: 'linear-gradient(to right,#39C1CB, #006FEC)',
+    //   link: 'https://airtable.com/appEjnh5rpWMsjocb/shr4Pv7K5CxTo6DGi',
+    // },
+    // block: [
+    //   {
+    //     type: BlockTypeEnum.SCHEDULE_ICELAND,
+    //     scheduleData: FIL_DEV_SUMMIT_ICELAND,
+    //   },
+    // ],
   },
   {
     id: 'faqs',
@@ -157,27 +144,50 @@ export const FILECOIN_DEV_SUMMIT_ETH_DENVER_2024_PAGE_CONTENT = [
         collapsables: [
           {
             type: BlockTypeEnum.COLLAPSABLE,
-            title: 'What is FIL Dev Summit @ ETHDenver 2024?',
-            collapsedText: 'FIL Dev Summit is a gathering of developers, builders, and engaged community members who want to contribute to the core protocol and network evolution of Filecoin (think IPFS Thing, but bigger!). At EthDenver 2024, FIL Dev Summit will host discuss hot topics around storage & aggregation L2s and how these technologies are revolutionizing decentralized data storage and access in the blockchain space. We will dive into workshops on FIL+ allocator tooling & design, learn about the innovative approaches to enhancing data retrieval speeds and reliability on Filecoin, and gain insights & best practices shared by leading web3 storage clients, as well as onramps. Passionate about decentralized tech? Join us at FIl Dev Summit at EthDenver, or if you can’t make it, sponsor our event!',
+            title: 'What is FIL Dev Summit - ETH Denver 2024?',
+            collapsedText:
+              'FIL Dev Summit is a gathering of developers, builders, and engaged community members who want to contribute to the core protocol and network evolution of Filecoin (think IPFS Thing, but bigger!). This would include FVM smart contract builders, core protocol devs, implementation engineering teams, tool builders, large storage clients, and even token holders engaged in network governance. Our goal would be to build alignment around the current roadmap and trajectory of protocol improvements, improve our dev tooling and capabilities, grow inter- and intra-team connections, and accelerate upcoming launches in Q4/Q1.',
             backgroundColor: 'linear-gradient(to right,#39C1CB, #006FEC)',
           },
           {
             type: BlockTypeEnum.COLLAPSABLE,
             title: 'What is the goal of FIL Dev Summit?',
-            collapsedText: 'What do we want to come out of FIL Dev Summit? We want to bring the Filecoin developer community together, have important convos, show how the network is evolving, build collaboration connections between teams, collectively set a roadmap for critical protocol evolutions and extensions for the rest of this year. ',
+            collapsedText:
+              'What do we want to come out of FIL Dev Summit? We want to bring the Filecoin developer community together, have important convos, show how the network is evolving, build collaboration connections between teams, collectively set a roadmap for critical protocol evolutions and extensions for next year, setting us up to review projects that we will launch really big at lab week and beyond.',
             backgroundColor: 'linear-gradient(to right,#39C1CB, #006FEC)',
           },
+          {
+            type: BlockTypeEnum.COLLAPSABLE,
+            title: 'Who should attend FIL Dev Summit?',
+            collapsedText:
+              'FVM smart contract builders, core protocol devs, implementation engineering teams, tool builders, storage providers, large storage clients, token holders engaged in network governance, and more! People who care about how and why the protocol is evolving - Folks who are writing FIPS, implementing tools, or writing smart contracts. People who have product requirements. IPLD-yfiying the data as an example.',
+            backgroundColor: 'linear-gradient(to right,#39C1CB, #006FEC)',
+          },
+          
           {
             type: BlockTypeEnum.COLLAPSABLE,
             title: 'How can I participate at FIL Dev Summit?',
-            collapsedText: `Add the slack channel: #fil-dev-summit in [Filecoin Slack](https://filecoinproject.slack.com/archives/C05LHC1ULG1).`,
+            collapsedText: `- **Join the conversations**: Join the event's Slack channel (COMING SOON) to stay connected with the conversations happening during the event and beyond.	
+
+- **Tell a friend**: Let us know if there is someone you think we should invite, or direct them to our [website](https://2024.fildev.io/) .
+
+- **Lead a Track**: (COMING SOON) - Submit your track for either/both locations in the schedule section of our [website](https://2024.fildev.io/).
+
+- **Give a Talk**: (COMING SOON) -  Not ready to lead an entire track, but still would like to contribute? Submit your talk in the event schedule section of our website.
+
+- **Volunteer**: Email [hello@fildev.io](mailto:hello@fildev.io) if you’d like to help make the production of this event a success. We could really use your help!
+
+
+- **Sponsor**: Your support helps bring together different teams from around the world to advance the core protocol development and evolve the Filecoin network. If you’re interested in sponsorship, please email us at [hello@fildev.io](mailto:hello@fildev.io) for more information.		
+
+- **Keep up the momentum!**: After the event, all of the tracks will be posted to the Filecoin Youtube channel. Be sure to share your talk or track videos with the world! Help the broader community see all of the great work that has transpired and get a sense of what they can expect to see more of for the rest of the year and beyond.`,
             backgroundColor: 'linear-gradient(to right,#39C1CB, #006FEC)',
           },
           {
             type: BlockTypeEnum.COLLAPSABLE,
-            title: 'What is the venue FIL Dev Summit @ Eth Denver?',
+            title: 'What are the venues for FIL Dev Summit?',
             collapsedText:
-              'The Slate Denver: 1250 Welton St, Denver, CO 80204, United States. Don’t forget to register to attend. You’ll be able to register at check-in',
+              'Logistical details will be sent to you once your application has been received, approved, and you have completed the registration for this event.',
             backgroundColor: 'linear-gradient(to right,#39C1CB, #006FEC)',
           },
           // {
@@ -193,28 +203,34 @@ export const FILECOIN_DEV_SUMMIT_ETH_DENVER_2024_PAGE_CONTENT = [
       {
         type: BlockTypeEnum.COLLAPSABLES,
         collapsables: [
-//           {
-//             id: 'media',
-//             type: BlockTypeEnum.COLLAPSABLE,
-//             title: 'What is the track system and how does it work?',
-//             collapsedText: `This is a choose-your-own-adventure event, so please choose the track(s), sessions, arrival and departure dates, and activities that are interesting and relevant to you. We are actively working on putting together an amazing schedule based on your submissions, suggestions, and feedback. Help shape this event by submitting your own talk or track!
+          {
+            id: 'media',
+            type: BlockTypeEnum.COLLAPSABLE,
+            title: 'What is the track system and how does it work?',
+            collapsedText: `This is a choose-your-own-adventure event, so please choose the track(s), sessions, arrival and departure dates, and activities that are interesting and relevant to you. We are actively working on putting together an amazing schedule based on your submissions, suggestions, and feedback. Help shape this event by submitting your own talk or track!
 
-// - [Submit a track for Fil Dev Summit ETHDenver]()`,
-//             backgroundColor: 'linear-gradient(to right,#39C1CB, #006FEC)',
-//           },
-          // {
-          //   id: 'media',
-          //   type: BlockTypeEnum.COLLAPSABLE,
-          //   title: 'How can I lead a track?',
-          //   collapsedText:
-          //     'Please fill out the provided forms for [FIL Dev Summit ETHDenver]() to lead a track or a talk.',
-          //   backgroundColor: 'linear-gradient(to right,#39C1CB, #006FEC)',
-          // },
+- [Submit a track for Fil Dev Summit ETH Denver]()`,
+            backgroundColor: 'linear-gradient(to right,#39C1CB, #006FEC)',
+          },
+          {
+            id: 'media',
+            type: BlockTypeEnum.COLLAPSABLE,
+            title: 'How can I lead a track?',
+            collapsedText:
+              'Please fill out the provided forms for [FIL Dev Summit ETH Denver]() to lead a track or a talk.',
+            backgroundColor: 'linear-gradient(to right,#39C1CB, #006FEC)',
+          },
           {
             id: 'media',
             type: BlockTypeEnum.COLLAPSABLE,
             title: 'Is there a cost to attend?',
-            collapsedText: `Yes, tickets are $20. Please register to reserve your seat!`,
+            collapsedText: `This is an invite only event. Please register using [this form to attend]().
+
+- General Admission ($150 USD)
+- Early Bird Ticket  ($75 USD), now through Aug 25th!
+- Supporters ticket ($1500 USD):  Your supporter's ticket covers the cost of your own attendance & contributes to the FIL Dev Scholar's Program for others to attend as well. Thank you for your support!
+- Scholars - Limited Tickets Available. [Apply as a scholar](https://airtable.com/appEjnh5rpWMsjocb/shrusGnJBsjYDlcwS). 
+`,
             backgroundColor: 'linear-gradient(to right,#39C1CB, #006FEC)',
           },
           {
@@ -222,7 +238,7 @@ export const FILECOIN_DEV_SUMMIT_ETH_DENVER_2024_PAGE_CONTENT = [
             type: BlockTypeEnum.COLLAPSABLE,
             title: 'How can I sponsor? What does it include?',
             collapsedText:
-              'Yes! We offer multiple levels of sponsorship. Please fill out our [sponsor form](https://airtable.com/appHcADfPc1dtLsTL/shrLacwJyqpPubZwF) for more information on what is included in each sponsorship.',
+              'Yes! We offer multiple levels of sponsorship. Please fill out our [sponsor form]() for more information on what is included in each sponsorship.',
             backgroundColor: 'linear-gradient(to right,#39C1CB, #006FEC)',
           },
           {
@@ -297,7 +313,7 @@ export const FIL_DEV_SUMMIT_ETH_DENVER_2024_NAVIGATION_CONTENT = {
       text: 'Register to Attend',
       buttonColor: 'linear-gradient(to right,#39C1CB, #006FEC)',
       textColor: 'white',
-      href: 'https://lu.ma/FDS-EthDenver',
+      href: '',
       target: '_blank',
     },
   ],

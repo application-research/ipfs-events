@@ -7,7 +7,7 @@ import SectionEventPage from '@root/components/SectionEventPage';
 import { makeRequest } from '@root/common/utilities';
 import { FILECOIN_DEV_SUMMIT_NAVIGATION_CONTENT, FOOTER_FILECOIN_DEV_SUMMIT_CONTENT } from '@root/content/fildevsummit/filecoin-dev-singapore-iceland-2023';
 import { FILECOIN_DEV_SUMMIT_SINGAPORE_PAGE_CONTENT } from '@root/content/singapore-page-content';
-import { FIL_DEV_SUMMIT_PAGE_STYLE_CONTENT } from '@root/content/fildevsummit/filecoin-dev-eth-denver-2024';
+import { FIL_DEV_SUMMIT_PAGE_STYLE_CONTENT } from '@root/content/fildevsummit/filecoin-dev-iceland';
 
 export async function generateMetadata({ params, searchParams }) {
   const title = 'FIL Dev Summit 2023: Talks Singapore';
