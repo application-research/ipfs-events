@@ -92,6 +92,9 @@ export const FILECOIN_DEV_SUMMIT_2023_PAGE_CONTENT = [
     ],
   },
   {
+    id: 'events',
+  },
+  {
     id: 'current-events',
     direction: BlockDirectionEnum.ROW,
     backgroundColor: 'var(--color-white)',
@@ -99,11 +102,13 @@ export const FILECOIN_DEV_SUMMIT_2023_PAGE_CONTENT = [
     link: '#current-events',
     block: [
       {
-        id: 'upcoming-events',
+        id: 'current-events',
         type: BlockTypeEnum.MEDIA_GRID,
+        link: '#current-events',
         media: [
           {
-            id: 'upcoming-events',
+            id: 'current-events',
+            link: '#current-events',
             type: BlockTypeEnum.MEDIA,
             heading: 'FDS-3: ETHDenver',
             subtitle: 'Feb 29th, 2023',
