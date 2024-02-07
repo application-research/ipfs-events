@@ -9,12 +9,12 @@ const nextConfig = {
     return [
       {
         source: '/iceland-list',
-        destination: '/FDS-1/iceland-list',
+        destination: '/FDS-1/list',
         permanent: true,
       },
       {
         source: '/singapore-list',
-        destination: '/FDS-2/singapores-list',
+        destination: '/FDS-2/list',
         permanent: true,
       },
     ]
