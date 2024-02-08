@@ -1,4 +1,4 @@
-import { BlockDirectionEnum, BlockTypeEnum, NavigationTypeEnum } from '@root/common/types';
+import { BlockDirectionEnum, BlockTypeEnum, CallToActionVariantEnum, NavigationTypeEnum } from '@root/common/types';
 
 export const FILECOIN_DEV_SUMMIT_ICELAND_HERO_CONTENT = {
   id: 'hero',
@@ -100,6 +100,14 @@ export const FILECOIN_DEV_SUMMIT_ICELAND_PAGE_CONTENT = [
     id: 'schedule-iceland',
     direction: BlockDirectionEnum.COLUMN,
     title: 'Event Schedule',
+    cta: {
+      type: CallToActionVariantEnum.BUTTON,
+      textColor: 'white',
+      target: '_blank',
+      text: 'View the schedule in a list format',
+      buttonColor: 'linear-gradient(to right,#39C1CB, #006FEC)',
+      link: '/FDS-2/list',
+    },
     block: [
       {
         type: BlockTypeEnum.SCHEDULE_ICELAND,
