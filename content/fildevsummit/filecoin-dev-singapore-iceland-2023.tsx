@@ -99,7 +99,7 @@ export const FILECOIN_DEV_SUMMIT_2023_PAGE_CONTENT = [
               type: TypeName.MEDIA_IMAGE,
               src: '/media/iceland-with-words.jpg',
               ariaLabel: 'FIL Dev Summit',
-              link: '#iceland',
+              link: '/FDS-2',
             },
           },
           {
@@ -109,7 +109,7 @@ export const FILECOIN_DEV_SUMMIT_2023_PAGE_CONTENT = [
               type: TypeName.MEDIA_IMAGE,
               src: '/media/singapore-with-words.jpg',
               ariaLabel: 'FIL Dev Summit',
-              link: '#singapore',
+              link: '/FDS-1',
             },
           },
         ],
