@@ -31,67 +31,6 @@ export const FIL_DEV_SUMMIT_SINGAPORE = {
 
 export const FILECOIN_DEV_SUMMIT_2023_PAGE_CONTENT = [
   {
-    id: '2',
-    subtitle: 'Sponsors',
-    direction: BlockDirectionEnum.COLUMN,
-    cta: {
-      type: CallToActionVariantEnum.BORDER,
-      target: '_blank',
-      buttonColor: 'linear-gradient(to right,#39C1CB, #006FEC)',
-      textColor: 'white',
-      text: 'Sponsor FIL Dev Summit',
-      link: 'https://airtable.com/appEjnh5rpWMsjocb/shrn57n37JyLSOTlV',
-    },
-    block: [
-      {
-        id: 'participating-teams',
-        type: BlockTypeEnum.LOGO_GRID,
-        logosLarge: [
-          {
-            src: '/media/protocollabs.png',
-            href: 'https://protocol.ai/',
-          },
-          {
-            src: '/media/ff-logo2.png',
-            href: 'https://fil.org/',
-          },
-          {
-            src: 'https://i.ibb.co/Dt6G116/logo-black-text.png',
-            href: 'https://web3mine.io/',
-          },
-        ],
-        logosMedium: [
-          {
-            src: '/media/greaterheat.png',
-            href: 'https://www.greaterheat.com/',
-          },
-          {
-            src: '/media/glif.png',
-            href: 'https://www.glif.io/',
-          },
-          {
-            src: '/media/filfi.png',
-            href: 'https://filfi.io/',
-          },
-          {
-            src: '/media/MineFi.png',
-            href: 'https://www.minefi.io/',
-          },
-          {
-            src: '/media/STFil.png',
-            href: 'https://stfil.io/#/',
-          },
-        ],
-        logosSmall: [
-          {
-            src: '/media/io-net.png',
-            href: 'https://io.net/',
-          },
-        ],
-      },
-    ],
-  },
-  {
     id: 'events',
   },
   {

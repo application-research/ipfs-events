@@ -1,9 +1,9 @@
 import { BlockDirectionEnum, BlockTypeEnum, NavigationTypeEnum } from '@root/common/types';
 
-export const FILECOIN_DEV_SUMMIT_ICELAND_HERO_CONTENT = {
+export const FILECOIN_DEV_SUMMIT_SINGAPORE_2024_HERO_CONTENT = {
   id: 'hero',
   type: BlockTypeEnum.HERO_NO_BACKGROUND,
-  title: 'FIL Dev Summit - Iceland',
+  title: 'FIL Dev Summit - Singapore',
   description:
     "FIL Dev Summit is a gathering of developers, builders, and engaged community members who want to contribute to the core protocol and network evolution of Filecoin (think IPFS Thing, but bigger!). This summit is more than just a meetup—it's a place for meaningful and impactful conversations that help push Filecoin forward.",
 };
@@ -13,15 +13,15 @@ export const FIL_DEV_SUMMIT_PAGE_STYLE_CONTENT = {
   textColor: 'var(--color-black)',
 };
 
-export const FIL_DEV_SUMMIT_ICELAND = {
+export const FIL_DEV_SUMMIT_SINGAPORE = {
   airtable: {
     tableName: 'NA/EU Talk Track Submissions + Forms',
-    endPoint: 'airtable/iceland',
+    endPoint: 'airtable/singapore',
     data: [],
   },
 };
 
-export const FILECOIN_DEV_SUMMIT_ICELAND_PAGE_CONTENT = [
+export const FILECOIN_DEV_SUMMIT_SINGAPORE_PAGE_CONTENT = [
   {
     id: '2',
     subtitle: 'Sponsors',
@@ -77,7 +77,7 @@ export const FILECOIN_DEV_SUMMIT_ICELAND_PAGE_CONTENT = [
   },
  
   {
-    id: 'iceland',
+    id: 'singapore',
     backgroundColor: 'var(--color-white)',
     direction: BlockDirectionEnum.COLUMN,
     noGutter: 'no',
@@ -85,25 +85,25 @@ export const FILECOIN_DEV_SUMMIT_ICELAND_PAGE_CONTENT = [
       {
         id: 'media',
         type: BlockTypeEnum.IMAGE_TEXT_WITH_OVERFLOW,
-        heading: 'Iceland',
-        description: 'September 12 - 14th, 2024',
+        heading: 'Singapore',
+        description: 'September 25 - 27th, 2024',
         smallDesc: 'Organized by Miwa',
         image: {
-          alt: 'icel-fil-dev-summit',
-          src: '/media/iceland-full.jpg',
+          alt: 'singapore-fil-dev-summit',
+          src: '/media/singapore-full.png',
         },
       },
     ],
   },
 
   {
-    id: 'schedule-iceland',
+    id: 'schedule-singapore',
     direction: BlockDirectionEnum.COLUMN,
     title: 'Event Schedule',
     block: [
       {
-        type: BlockTypeEnum.SCHEDULE_ICELAND,
-        scheduleData: FIL_DEV_SUMMIT_ICELAND,
+        type: BlockTypeEnum.SCHEDULE_SINGAPORE,
+        scheduleData: FIL_DEV_SUMMIT_SINGAPORE,
       },
     ],
   },
@@ -117,8 +117,8 @@ export const FILECOIN_DEV_SUMMIT_ICELAND_PAGE_CONTENT = [
         collapsables: [
           {
             type: BlockTypeEnum.COLLAPSABLE,
-            title: 'What is FIL Dev Summit @ Iceland 2023?',
-            collapsedText: 'FIL Dev Summit is a gathering of developers, builders, and engaged community members who want to contribute to the core protocol and network evolution of Filecoin (think IPFS Thing, but bigger!). At Iceland 2023, FIL Dev Summit will host discuss hot topics around storage & aggregation L2s and how these technologies are revolutionizing decentralized data storage and access in the blockchain space. We will dive into workshops on FIL+ allocator tooling & design, learn about the innovative approaches to enhancing data retrieval speeds and reliability on Filecoin, and gain insights & best practices shared by leading web3 storage clients, as well as onramps. Passionate about decentralized tech? Join us at FIL Dev Summit at Iceland, or if you can’t make it, sponsor our event!',
+            title: 'What is FIL Dev Summit @ Singapore 2023?',
+            collapsedText: 'FIL Dev Summit is a gathering of developers, builders, and engaged community members who want to contribute to the core protocol and network evolution of Filecoin (think IPFS Thing, but bigger!). At Singapore 2023, FIL Dev Summit will host discuss hot topics around storage & aggregation L2s and how these technologies are revolutionizing decentralized data storage and access in the blockchain space. We will dive into workshops on FIL+ allocator tooling & design, learn about the innovative approaches to enhancing data retrieval speeds and reliability on Filecoin, and gain insights & best practices shared by leading web3 storage clients, as well as onramps. Passionate about decentralized tech? Join us at FIL Dev Summit at Singapore, or if you can’t make it, sponsor our event!',
             backgroundColor: 'linear-gradient(to right,#39C1CB, #006FEC)',
           },
           {
@@ -135,9 +135,9 @@ export const FILECOIN_DEV_SUMMIT_ICELAND_PAGE_CONTENT = [
           },
           {
             type: BlockTypeEnum.COLLAPSABLE,
-            title: 'What is the venue FIL Dev Summit @ Iceland?',
+            title: 'What is the venue FIL Dev Summit @ Singapore?',
             collapsedText:
-              'Reykjavik, Iceland. Don’t forget to register to attend. You’ll be able to register at check-in',
+              'The Fairmont Hotel at 80 Bras Basah Rd, Singapore 189560. Don’t forget to register to attend. You’ll be able to register at check-in',
             backgroundColor: 'linear-gradient(to right,#39C1CB, #006FEC)',
           },
           {
@@ -145,7 +145,7 @@ export const FILECOIN_DEV_SUMMIT_ICELAND_PAGE_CONTENT = [
             type: BlockTypeEnum.COLLAPSABLE,
             title: 'What if I need a visa?',
             collapsedText:
-              'See the attached docs for Letter of Support/Invitation for Entry Visa: [Iceland](https://drive.google.com/file/d/1jZ8ZbYnX8nvJeS01ou7eKPWKY94IVTfb/view?usp=sharing).',
+              'See the attached docs for Letter of Support/Invitation for Entry Visa: [Singapore](https://drive.google.com/file/d/1Biowq7ENIF9aGNTz69rF0c7yHCusbXyd/view?usp=sharing).',
             backgroundColor: 'linear-gradient(to right,#39C1CB, #006FEC)',
           },
         ],
@@ -219,7 +219,7 @@ export const FOOTER_FILECOIN_DEV_SUMMIT_CONTENT = {
   ],
 };
 
-export const FIL_DEV_SUMMIT_ICELAND_NAVIGATION_CONTENT = {
+export const FIL_DEV_SUMMIT_SINGAPORE_NAVIGATION_CONTENT = {
   type: NavigationTypeEnum.WITH_BORDER,
   backgroundColor: 'var(--color-white)',
   logo: {
@@ -228,15 +228,6 @@ export const FIL_DEV_SUMMIT_ICELAND_NAVIGATION_CONTENT = {
     link: '/',
   },
   navItems: [
-    // {
-    //   name: 'Singapore',
-    //   href: '#singapore',
-    // },
-
-    // {
-    //   name: 'Tic',
-    //   href: '#tickets',
-    // },
     {
       name: 'FAQs',
       href: '#faqs',
