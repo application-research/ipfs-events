@@ -148,6 +148,13 @@ export const FILECOIN_DEV_SUMMIT_SINGAPORE_PAGE_CONTENT = [
               'See the attached docs for Letter of Support/Invitation for Entry Visa: [Singapore](https://drive.google.com/file/d/1Biowq7ENIF9aGNTz69rF0c7yHCusbXyd/view?usp=sharing).',
             backgroundColor: 'linear-gradient(to right,#39C1CB, #006FEC)',
           },
+          {
+            id: 'media',
+            type: BlockTypeEnum.COLLAPSABLE,
+            title: 'Will translation services be provided in Singapore?',
+            collapsedText: 'Yes, translations will be available in English to Mandarin and Mandarin to English.',
+            backgroundColor: 'linear-gradient(to right,#39C1CB, #006FEC)',
+          },
         ],
       },
       {
