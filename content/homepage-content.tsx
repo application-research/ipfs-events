@@ -73,7 +73,7 @@ export const HOMEPAGE_CONTENT = [
             id: 'upcoming-events',
             type: TypeName.MEDIA_IMAGE,
             heading: 'IPFS Camp',
-            // subtitle: 'Q2 2024',
+            // subtitle: 'July 11-13, 2024',
             description:
               'IPFS is more than just a ‘conference’; it’s a global movement of builders and visionaries committed to creating a better web. Over the course of three days, we will host hundreds of talks, workshops, and hacking sessions, all focused on the latest advancements in decentralized technologies and the future of the internet.',
             url: 'https://ipfsevents.io/ipfs-camp/2024',
@@ -127,10 +127,10 @@ export const HOMEPAGE_CONTENT = [
         type: BlockTypeEnum.UPCOMING_EVENTS,
         events: [
           {
-            date: ' Summmer 2024',
+            date: ' July 11-13, 2024',
             image: '/media/ipfs-camp.png',
             link: '/ipfs-camp/2024',
-            location: 'TBD',
+            location: 'Brussels, Belgium',
             name: 'IPFS Camp 2024',
           },
           {
