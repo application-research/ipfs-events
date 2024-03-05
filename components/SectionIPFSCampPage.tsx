@@ -42,13 +42,13 @@ export default function SectionCamppage({ upcomingEvents }) {
     },
     {
       question: 'What does the ticket include?',
-      answer: 'All tickets include entry to the full 3-day event with coffee, morning pastries, lunch, and dinner at the IPFS Camp venue.',
+      answer: 'All tickets include entry to the full 3-day event with coffee, morning pastries, and lunch at the IPFS Camp venue.',
     },
   ];
 
   const faqsRight = [
     { question: 'How can I participate?', answer: 'You can: Submit a track or talk, Sponsor, Apply as an IPFS Scholar, Become a key organizer, Volunteer, Apply for Expo Space' },
-    { question: 'How can I reach out to the organizers', answer: 'Please reach out to hello@miwa.events with any questions or suggestions' },
+    { question: 'How can I reach out to the organizers', answer: 'Please reach out to hello@miwa.events or camp@ipfs.io with any questions or suggestions' },
   ];
 
   return (
@@ -80,7 +80,7 @@ export default function SectionCamppage({ upcomingEvents }) {
                     <div className={styles.diptychHalf}>
                       <div className={styles.centerTextContainer}>
                         <span className={styles.boldText}>
-                          TBD <br /> <br /> Summer 2024
+                          Brussels, Belgium <br /> <br /> July 11-13, 2024
                         </span>
                       </div>
                     </div>
