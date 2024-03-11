@@ -38,17 +38,26 @@ export default function SectionCamppage({ upcomingEvents }) {
     {
       question: 'What is IPFS Camp and who is it for?',
       answer:
-        "IPFS Camp is more than just a 'conference'; it's a global movement of builders and visionaries committed to creating a better web. Over the course of three days, we will host hundreds of talks, workshops, and hacking sessions, all focused on the latest advancements in decentralized technologies and the future of the internet. IPFS Camp provides the ideal platform to exchange ideas, collaborate, and co-create solutions for the real-world challenges that the web is currently facing.",
+        'IPFS Camp is for those who want to bend the arc of the Internet to be more open, efficient, and secure. IPFS Camp connects builders and users, organized by thematic tracks, and inspired by the in-depth conversations and unbounded energy of previous IPFS gatherings. Over three days, we will host hundreds of talks, workshops, and hacking sessions, all focused on the latest advancements in decentralized technologies and the future of the Internet.',
     },
     {
       question: 'What does the ticket include?',
-      answer: 'All tickets include entry to the full 3-day event with coffee, morning pastries, and lunch at the IPFS Camp venue.',
+      answer: 'All tickets include access to the three-day event, breakfast, lunch, coffee + water all day, and one dinner event.',
     },
+    { question: 'Room and Board', answer: 'There will be limited number of rooms on a block at the Radisson for $199 Euro per night. Attendees will are expected to book their own accommodations.' },
   ];
 
   const faqsRight = [
     { question: 'How can I participate?', answer: 'You can: Submit a track or talk, Sponsor, Apply as an IPFS Scholar, Become a key organizer, Volunteer, Apply for Expo Space' },
     { question: 'How can I reach out to the organizers', answer: 'Please reach out to hello@miwa.events or camp@ipfs.io with any questions or suggestions' },
+    { 
+      question: 'Code of conduct/covid policy', 
+      answer: `We will be following the [Code of Conduct](https://github.com/filecoin-project/community/blob/master/CODE_OF_CONDUCT.md).
+
+Masks and testing are optional and at your discretion.
+
+If you are presenting any symptoms of being sick or have come in contact with someone who has presented symptoms or tested positive in the last five days, please do not attend the event for your own and all other attendees' health and safety. Rest up and feel better!` 
+    },
   ];
 
   return (
@@ -71,7 +80,7 @@ export default function SectionCamppage({ upcomingEvents }) {
                 <div className={styles.rainbowBorderWrapper}>
                   <div className={styles.innerContent}>
                     <div className={styles.diptychHalf}>
-                      <Link href={'https://airtable.com/appM094R1Ma5HG757/shrPwanwnxoCDYT56'} target="_blank">
+                      <Link href={'https://lu.ma/ipfscamp24'} target="_blank">
                         <div className={styles.rainbowButton}>
                           <span className={styles.boldText}>PRE-REGISTER</span>
                         </div>
