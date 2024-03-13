@@ -52,14 +52,7 @@ export const NAVIGATION_HOMEPAGE_CONTENT = {
       title: 'IPFS Thing',
       link: null,
       dropdown: [
-        {
-          header: 'Upcoming Event',
-          date: 'Q4, 2024',
-          location: 'TBD',
-          title: 'IPFS Thing 2024',
-          link: null,
-          image: 'https://blog.ipfs.tech/assets/img/181806539-3c71476c-b247-4400-9778-5ccfce635f17.fac0cf11.png',
-        },
+      
         {
           header: 'Past Events',
           date: 'April 15th - 19th, 2023',
