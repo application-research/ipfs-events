@@ -7,6 +7,7 @@ import { VideoPlayer } from './VideoPlayer';
 import Link from './Link';
 import React, { useState } from 'react';
 import GutterContainer from '@root/components/GutterContainer';
+import TicketCard from '@root/components/TicketCard';
 
 /* TODOS:
  * Fix mobile view for squiggles
@@ -138,59 +139,114 @@ If you are presenting any symptoms of being sick or have come in contact with so
               </svg>
             </div>
           </section>
-          <section>
-            <h2 className={styles.centeredSectionTitle}>Get Involved</h2>
-            <div className={styles.getInvolvedColumns}>
-              <div className={styles.involvementColumn}>
-                <div className={styles.rainbowBorderWrapper}>
-                  <Link href={'https://airtable.com/appM094R1Ma5HG757/shrXTUagRUI1aC4G1'} target="_blank">
-                    <div className={styles.involvementContent}>
-                      <h4 className={styles.involvementText}>Become a Sponsor</h4>
-                    </div>
-                  </Link>
-                </div>
-                <div className={styles.rainbowBorderWrapper}>
-                  <Link href={'https://airtable.com/appM094R1Ma5HG757/shrWn6XaRgUkYWPm3'} target="_blank">
-                    <div className={styles.involvementContent}>
-                      <h4 className={styles.involvementText}>Submit a track or talk</h4>
-                    </div>
-                  </Link>
-                </div>
-              </div>
-              <div className={styles.involvementColumn}>
-                <div className={styles.rainbowBorderWrapper}>
-                  <Link href={'https://airtable.com/appM094R1Ma5HG757/shrQGQ8gH7OUXdUuc'} target="_blank">
-                    <div className={styles.involvementContent}>
-                      <h4 className={styles.involvementText}>Apply as an IPFS Scholar</h4>
-                    </div>
-                  </Link>
-                </div>
-                <div className={styles.rainbowBorderWrapper}>
-                  <Link href={'https://airtable.com/appM094R1Ma5HG757/shrk7f2pNpNHkFGld'} target="_blank">
-                    <div className={styles.involvementContent}>
-                      <h4 className={styles.involvementText}>Apply for Expo Space</h4>
-                    </div>
-                  </Link>
-                </div>
-              </div>
-              <div className={styles.involvementColumn}>
-                <div className={styles.rainbowBorderWrapper}>
-                  <Link href={'mailto:miwa@protocol.ai'} target="_blank">
-                    <div className={styles.involvementContent}>
-                      <h4 className={styles.involvementText}>Become a Key Organizer</h4>
-                    </div>
-                  </Link>
-                </div>
-                <div className={styles.rainbowBorderWrapper}>
-                  <Link href={'mailto:miwa@protocol.ai'} target="_blank">
-                    <div className={styles.involvementContent}>
-                      <h4 className={styles.involvementText}>Volunteer</h4>
-                    </div>
-                  </Link>
-                </div>
+        </div>
+      </GutterContainer>
+      <section>
+        <div className={styles.whatToExpectSection}>
+          <div className={styles.twoColumns}>
+            <div className={styles.imageWrapper}>
+              <img src="/media/about-collage.jpg" alt="What to Expect at IPFS Camp" className={styles.imageStyle} />
+            </div>
+            <div>
+              
+              <div className={styles.expectationsContainer}>
+                <h3 className={styles.h3}>What to Expect</h3>
+                <p className={styles.p}>
+                  IPFS Camp is a chance for developers, designers, and enthusiasts from around the globe to connect and learn about the InterPlanetary File System (IPFS). Expect hands-on workshops, in-depth discussions, and networking opportunities that will help you better understand how to build the decentralized web.
+                </p>
               </div>
             </div>
-          </section>
+          </div>
+        </div>
+      </section>
+      <section>
+        <div className={styles.tracksSection}>
+          <h2>Tracks at IPFS Camp</h2>
+        </div>
+      </section>
+      <section>
+        <div className={styles.ticketSection}>
+          <div className={styles.ticketTitle}>Tickets</div>
+          <div className={styles.description}>All tickets include entry to the full 3-day event and coffee, morning pastries, lunch, and dinner at the IPFS Camp venue.</div>
+          <div className={styles.ticketCardContainer}>
+            <TicketCard name={'Early Bird'} price={'$395'} description={'Early Bird Ticket Wave 1, enjoy a 40% discount!'} ctaLink={'https://lu.ma/ipfscamp24'}></TicketCard>
+            {/* Wave 2
+              <TicketCard
+                img={null}
+                name={'Early Bird'}
+                price={'$495'}
+                description={'Early Bird Ticket Wave 2, enjoy a 25% discount!'}
+                cta={'https://lu.ma/ipfscamp24'}
+              ></TicketCard>
+            */}
+            {/* Wave 3
+            <TicketCard img={null} name={'Early Bird'} price={'$595'} description={'Early Bird Ticket Wave 3, enjoy a 10% discount!'} cta={'https://lu.ma/ipfscamp24'}></TicketCard>
+            */}
+            <TicketCard name={'Standard'} price={'$650'} description={'Available starting March 19.'} ctaLink={'https://lu.ma/ipfscamp24'}></TicketCard>
+            <TicketCard
+              name={'Supporter'}
+              price={'$2000'}
+              description={'You love IPFS and want (and are able!) to contribute to the evolution of IPFS. Thank you!'}
+              ctaLink={'https://lu.ma/ipfscamp24'}
+            ></TicketCard>
+          </div>
+        </div>
+      </section>
+      <GutterContainer>
+        <section>
+          <h2 className={styles.centeredSectionTitle}>Get Involved</h2>
+          <div className={styles.getInvolvedColumns}>
+            <div className={styles.involvementColumn}>
+              <div className={styles.rainbowBorderWrapper}>
+                <Link href={'https://airtable.com/appM094R1Ma5HG757/shrXTUagRUI1aC4G1'} target="_blank">
+                  <div className={styles.involvementContent}>
+                    <h4 className={styles.involvementText}>Become a Sponsor</h4>
+                  </div>
+                </Link>
+              </div>
+              <div className={styles.rainbowBorderWrapper}>
+                <Link href={'https://airtable.com/appM094R1Ma5HG757/shrWn6XaRgUkYWPm3'} target="_blank">
+                  <div className={styles.involvementContent}>
+                    <h4 className={styles.involvementText}>Submit a track or talk</h4>
+                  </div>
+                </Link>
+              </div>
+            </div>
+            <div className={styles.involvementColumn}>
+              <div className={styles.rainbowBorderWrapper}>
+                <Link href={'https://airtable.com/appM094R1Ma5HG757/shrQGQ8gH7OUXdUuc'} target="_blank">
+                  <div className={styles.involvementContent}>
+                    <h4 className={styles.involvementText}>Apply as an IPFS Scholar</h4>
+                  </div>
+                </Link>
+              </div>
+              <div className={styles.rainbowBorderWrapper}>
+                <Link href={'https://airtable.com/appM094R1Ma5HG757/shrk7f2pNpNHkFGld'} target="_blank">
+                  <div className={styles.involvementContent}>
+                    <h4 className={styles.involvementText}>Apply for Expo Space</h4>
+                  </div>
+                </Link>
+              </div>
+            </div>
+            <div className={styles.involvementColumn}>
+              <div className={styles.rainbowBorderWrapper}>
+                <Link href={'mailto:miwa@protocol.ai'} target="_blank">
+                  <div className={styles.involvementContent}>
+                    <h4 className={styles.involvementText}>Become a Key Organizer</h4>
+                  </div>
+                </Link>
+              </div>
+              <div className={styles.rainbowBorderWrapper}>
+                <Link href={'mailto:miwa@protocol.ai'} target="_blank">
+                  <div className={styles.involvementContent}>
+                    <h4 className={styles.involvementText}>Volunteer</h4>
+                  </div>
+                </Link>
+              </div>
+            </div>
+          </div>
+        </section>
+        <div style={{ display: 'grid', rowGap: '8rem' }}>
           <div style={{ display: 'grid', rowGap: '2rem' }}>
             <div className={styles.headerWrapper}>
               <h2 className={styles.sectionTitle}>Past Camp Events</h2>
