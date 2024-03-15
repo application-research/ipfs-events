@@ -940,3 +940,12 @@
   }
 }
 
+.tracksSection {
+  display: flex;
+  gap: 2rem;
+  margin-bottom: 5rem;
+}
+
+.trackContent {
+  color: var(--color-white);
+}

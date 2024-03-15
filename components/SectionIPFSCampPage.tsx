@@ -148,11 +148,11 @@ If you are presenting any symptoms of being sick or have come in contact with so
               <img src="/media/about-collage.jpg" alt="What to Expect at IPFS Camp" className={styles.imageStyle} />
             </div>
             <div>
-              
               <div className={styles.expectationsContainer}>
                 <h3 className={styles.h3}>What to Expect</h3>
                 <p className={styles.p}>
-                  IPFS Camp is a chance for developers, designers, and enthusiasts from around the globe to connect and learn about the InterPlanetary File System (IPFS). Expect hands-on workshops, in-depth discussions, and networking opportunities that will help you better understand how to build the decentralized web.
+                  IPFS Camp is a chance for developers, designers, and enthusiasts from around the globe to connect and learn about the InterPlanetary File System (IPFS). Expect
+                  hands-on workshops, in-depth discussions, and networking opportunities that will help you better understand how to build the decentralized web.
                 </p>
               </div>
             </div>
@@ -160,9 +160,26 @@ If you are presenting any symptoms of being sick or have come in contact with so
         </div>
       </section>
       <section>
-        <div className={styles.tracksSection}>
-          <h2>Tracks at IPFS Camp</h2>
-        </div>
+        <GutterContainer>
+          <div className={styles.tracksSection}>
+            <div className={styles.twoColumns}>
+              <div className={styles.trackContent}>
+                <h3 className={styles.h3}>Tracks at IPFS Camp</h3>
+                <p className={styles.p}>
+                  Dive deep into the world of decentralized web by exploring various tracks tailored for developers, creators, and innovators at IPFS Camp. From beginner to
+                  advanced levels, there's something for everyone.
+                </p>
+              </div>
+              <div className={styles.trackContent}>
+                <h3 className={styles.h3}>Tracks at IPFS Camp</h3>
+                <p className={styles.p}>
+                  Dive deep into the world of decentralized web by exploring various tracks tailored for developers, creators, and innovators at IPFS Camp. From beginner to
+                  advanced levels, there's something for everyone.
+                </p>
+              </div>
+            </div>
+          </div>
+        </GutterContainer>
       </section>
       <section>
         <div className={styles.ticketSection}>
