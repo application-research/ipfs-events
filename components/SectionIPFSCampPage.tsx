@@ -45,19 +45,22 @@ export default function SectionCamppage({ upcomingEvents }) {
       question: 'What does the ticket include?',
       answer: 'All tickets include access to the three-day event, breakfast, lunch, coffee + water all day, and one dinner event.',
     },
-    { question: 'Room and Board', answer: 'There will be limited number of rooms on a block at the Radisson for $199 Euro per night. Attendees will are expected to book their own accommodations.' },
+    {
+      question: 'Room and Board',
+      answer: 'There will be limited number of rooms on a block at the Radisson for $199 Euro per night. Attendees will are expected to book their own accommodations.',
+    },
   ];
 
   const faqsRight = [
     { question: 'How can I participate?', answer: 'You can: Submit a track or talk, Sponsor, Apply as an IPFS Scholar, Become a key organizer, Volunteer, Apply for Expo Space' },
     { question: 'How can I reach out to the organizers', answer: 'Please reach out to hello@miwa.events or camp@ipfs.io with any questions or suggestions' },
-    { 
-      question: 'Code of conduct/covid policy', 
+    {
+      question: 'Code of conduct/covid policy',
       answer: `We will be following the [Code of Conduct](https://github.com/filecoin-project/community/blob/master/CODE_OF_CONDUCT.md).
 
 Masks and testing are optional and at your discretion.
 
-If you are presenting any symptoms of being sick or have come in contact with someone who has presented symptoms or tested positive in the last five days, please do not attend the event for your own and all other attendees' health and safety. Rest up and feel better!` 
+If you are presenting any symptoms of being sick or have come in contact with someone who has presented symptoms or tested positive in the last five days, please do not attend the event for your own and all other attendees' health and safety. Rest up and feel better!`,
     },
   ];
 
@@ -149,7 +152,9 @@ If you are presenting any symptoms of being sick or have come in contact with so
             </div>
             <div>
               <div className={styles.expectationsContainer}>
-                <h3 className={styles.h3}>What to Expect</h3>
+                <h3 className={styles.h3} style={{ paddingBottom: '1rem' }}>
+                  What to Expect
+                </h3>
                 <p className={styles.p}>
                   IPFS Camp is a chance for developers, designers, and enthusiasts from around the globe to connect and learn about the InterPlanetary File System (IPFS). Expect
                   hands-on workshops, in-depth discussions, and networking opportunities that will help you better understand how to build the decentralized web.
@@ -164,14 +169,18 @@ If you are presenting any symptoms of being sick or have come in contact with so
           <div className={styles.tracksSection}>
             <div className={styles.twoColumns}>
               <div className={styles.trackContent}>
-                <h3 className={styles.h3}>Tracks at IPFS Camp</h3>
+                <h3 className={styles.h3} style={{ paddingBottom: '1rem' }}>
+                  Tracks at IPFS Camp
+                </h3>
                 <p className={styles.p}>
                   Dive deep into the world of decentralized web by exploring various tracks tailored for developers, creators, and innovators at IPFS Camp. From beginner to
                   advanced levels, there's something for everyone.
                 </p>
               </div>
               <div className={styles.trackContent}>
-                <h3 className={styles.h3}>Tracks at IPFS Camp</h3>
+                <h3 className={styles.h3} style={{ paddingBottom: '1rem' }}>
+                  Tracks at IPFS Camp
+                </h3>
                 <p className={styles.p}>
                   Dive deep into the world of decentralized web by exploring various tracks tailored for developers, creators, and innovators at IPFS Camp. From beginner to
                   advanced levels, there's something for everyone.
@@ -184,7 +193,10 @@ If you are presenting any symptoms of being sick or have come in contact with so
       <section>
         <div className={styles.ticketSection}>
           <div className={styles.ticketTitle}>Tickets</div>
-          <div className={styles.description}>All tickets include entry to the full 3-day event and coffee, morning pastries, lunch, and dinner at the IPFS Camp venue.</div>
+          <p className={styles.description}>
+            All tickets include entry to the full 3-day event and coffee, <br />
+            morning pastries, lunch, and dinner at the IPFS Camp venue.
+          </p>
           <div className={styles.ticketCardContainer}>
             <TicketCard name={'Early Bird'} price={'$395'} description={'Early Bird Ticket Wave 1, enjoy a 40% discount!'} ctaLink={'https://lu.ma/ipfscamp24'}></TicketCard>
             {/* Wave 2
@@ -306,7 +318,7 @@ If you are presenting any symptoms of being sick or have come in contact with so
               FAQs
             </h1>
             <div className={styles.faqColumns}>
-              <div className={styles.faqLeft}>
+              <div className={styles.faqLeft} style={{ paddingRight: '16px' }}>
                 {faqsLeft.map((faq, index) => (
                   <div className={styles.faqBorderWrapper} key={index} onClick={() => toggleFaq('left', index)}>
                     <div className={`${styles.faqContent} ${expandedFaqLeft === index ? styles.open : ''}`}>
