@@ -14,30 +14,10 @@ export default function SectionEventPage({ blocks, pageStyle }: any) {
           return (
             <FadeInSection key={index}>
               {noGutter ? (
-                <BlockBuilder
-                  block={block}
-                  cta={cta}
-                  description={description}
-                  subtitle={subtitle}
-                  id={id}
-                  title={title}
-                  direction={direction}
-                  border={border}
-                  noGutter={noGutter}
-                />
+                <BlockBuilder block={block} cta={cta} description={description} subtitle={subtitle} id={id} title={title} direction={direction} border={border} />
               ) : (
                 <GutterContainer>
-                  <BlockBuilder
-                    block={block}
-                    cta={cta}
-                    description={description}
-                    subtitle={subtitle}
-                    id={id}
-                    title={title}
-                    direction={direction}
-                    border={border}
-                    noGutter={noGutter}
-                  />
+                  <BlockBuilder block={block} cta={cta} description={description} subtitle={subtitle} id={id} title={title} direction={direction} border={border} />
                 </GutterContainer>
               )}
             </FadeInSection>

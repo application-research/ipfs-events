@@ -141,8 +141,10 @@ body {
   --color-blueblack: #022232;
   --color-black-fade: linear-gradient(to bottom, #022232 0%, #000000 20%);
   --color-rainbow: linear-gradient(to left, #e01633, #cdb235, #4fd3cd, #0098c9);
+  --color-rainbow-diagonal: linear-gradient(45deg, rgba(224, 22, 51, 0.5), rgba(205, 178, 53, 0.5), rgba(79, 211, 205, 0.5), rgba(0, 152, 201, 0.5));
 
-  --color-gray: #848383;
+  --color-blue-gray: #b0b0bf;
+  --color-blue: #0098c9;
   --gray100: #f5f5f5;
   --gray200: #eeeeee;
   --gray300: #e0e0e0;
@@ -151,16 +153,29 @@ body {
   --gray600: #757575;
   --gray700: #616161;
   --gray800: #424242;
+  --color-gray: #848383;
   --color-gray-transparent: #84838332;
   --color-gray-transparent100: #9b9b9bbc;
   --color-gray-transparent200: #9393938a;
 
   --color-text: #000000;
   --color-background: #000000;
+  --ipfs-camp-blue: #022232;
   --text-black: #000000;
   --text-white: #ffffff;
   --color-white100: #ccc;
+  --color-lime-green: #49de80;
+
+  --type-scale-1: 4.25rem;
+  --type-scale-2: 2.25rem;
+  --type-scale-3: 1.5rem;
+  --type-scale-4: 1.25rem;
+  --type-scale-5: 1rem;
+  --type-scale-6: 0.875rem;
+  --type-scale-7: 0.75rem;
+
   --font-size-small: 12px;
+  --font-size-regular-small: 14px;
   --font-size-regular: 16px;
   --font-size-medium: 24px;
   --font-size-large: 32px;
@@ -180,15 +195,28 @@ body {
   --z-index-medium: 2;
   --z-index-large: 3;
 
+  --accent1-color: #081828;
+  --accent2-color: #8bf935;
+  --accent3-color: #6fbd97;
+  --accent4-color: #1a95fa;
+  --tw-gradient-from: var(--accent4-color);
+  --tw-gradient-to: var(--accent3-color);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--accent2-color), var(--tw-gradient-to, hsla(0, 0%, 100%, 0));
+
+  --gradient-border-blue-green: #1a95fa, #8bf935, #6fbd97;
+  --gradient-border-blue-green-transparent: rgba(26, 149, 250, 0.2), rgba(139, 249, 53, 0.2), rgba(111, 189, 151, 0.2);
+
+  --shadow-gray: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --tw-ring-shadow: #green;
+  --tw-shadow: #red;
+
   font-size: 16px;
   background: var(--color-background);
   color: var(--color-text);
   font-family: -apple-system, BlinkMacSystemFont, helvetica neue, helvetica, sans-serif;
-  // scrollbar-width: none;
-  // -ms-overflow-style: -ms-autohiding-scrollbar;
-  --page-gutters-desktop: 3rem;
 
   // ---------------------------------------------------------------------- Other
+  --page-gutters-desktop: 3rem;
   --page-gutters-default: 0 16px 0 16px;
   --page-gutters-desktop-default: 16px;
   --page-gutters-desktop: 0 88px 0 88px;

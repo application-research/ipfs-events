@@ -25,14 +25,14 @@ export default function NavbarLogoMiddle({ navContent }) {
                 return (
                   <div key={index}>
                     {!item.dropdown && (
-                      <Link style="animated" href={item.link}>
+                      <Link linkStyle="animated" href={item.link}>
                         <p>{item.title}</p>
                       </Link>
                     )}
                     {item?.dropdown && (
                       <section className={styles.dropdownContainer}>
                         <div className={`${styles.container}`} style={{ gap: '0.2rem', cursor: 'pointer' }} onClick={() => setDropdownVisible(!isDropdownVisible)}>
-                          <Link style="animated-white" href={item?.link ?? ''}>
+                          <Link linkStyle="animated-white" href={item?.link ?? ''}>
                             <p className={styles.whiteText}>{item.title}</p>
                           </Link>
 
@@ -53,7 +53,7 @@ export default function NavbarLogoMiddle({ navContent }) {
                 return (
                   <div key={index}>
                     {!item.dropdown && (
-                      <Link style="animated" href={item.link} target={item?.target ?? '_self'}>
+                      <Link linkStyle="animated" href={item.link} target={item?.target ?? '_self'}>
                         <p>{item.title}</p>
                       </Link>
                     )}
@@ -88,15 +88,15 @@ function Dropdown({ dropdown }) {
                 {dropdownItem?.header && <h4 className={styles.header}>{dropdownItem.header}</h4>}
 
                 <div style={{ display: 'grid', rowGap: '0.5rem', marginTop: dropdownItem?.header ? '0' : '2.5rem' }}>
-                  <Link style="text" href={dropdownItem?.link ?? ''} target={dropdownItem?.target ?? '_self'}>
+                  <Link linkStyle="text" href={dropdownItem?.link ?? ''} target={dropdownItem?.target ?? '_self'}>
                     <img src={dropdownItem.image} className={styles.dropdownImage} />
                   </Link>
                   <span>
-                    <Link style="animated" href={dropdownItem?.link ?? ''} target={dropdownItem?.target ?? '_self'}>
+                    <Link linkStyle="animated" href={dropdownItem?.link ?? ''} target={dropdownItem?.target ?? '_self'}>
                       <p>{dropdownItem.title}</p>
                     </Link>
                   </span>
-                  <Link style="text" href={dropdownItem?.link ?? ''} target={dropdownItem?.target ?? '_self'}>
+                  <Link linkStyle="text" href={dropdownItem?.link ?? ''} target={dropdownItem?.target ?? '_self'}>
                     <span style={{ display: 'grid', rowGap: '0.2rem' }}>
                       <p className={styles.date}>{dropdownItem?.date}</p>
                       <p className={styles.location}>

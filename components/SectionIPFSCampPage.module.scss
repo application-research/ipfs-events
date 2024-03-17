@@ -25,8 +25,8 @@
 .squaresClass {
   width: 100%;
   height: 200%;
-  position: absolute;
-  top: 0;
+  // position: absolute;
+  top: 80px;
   z-index: 1;
 
   @media (max-width: 1050px) {
@@ -286,7 +286,7 @@
   z-index: var(--z-index-small);
   top: 105%;
   left: 5%;
-  position: absolute;
+  // position: absolute;
 
   @media (max-width: 768px) {
     top: 110%;
@@ -311,7 +311,7 @@
   right: 10%;
   top: 17%;
   overflow: hidden;
-  position: absolute;
+  // position: absolute;
 
   @media (max-width: 1440px) {
     right: 5%;
@@ -357,7 +357,7 @@
   left: 75%;
   top: 225%;
   overflow: hidden;
-  position: absolute;
+  // position: absolute;
   clip-path: inset(0);
 
   @media (max-width: 1600px) {
@@ -648,10 +648,25 @@
       flex-direction: column;
     }
 
+    .faqLeft {
+      padding-right: 16px;
+
+      @media (max-width: 1050px) {
+        padding-right: 0px;
+      }
+    }
+
     .faqLeft,
     .faqRight {
       flex: 1;
       z-index: var(--z-index-medium);
+
+      @media (max-width: 1050px) {
+        padding-right: 0px;
+        display: grid;
+        row-gap: 1rem;
+        padding-bottom: 1rem;
+      }
 
       @media (max-width: 768px) {
         margin: 0;
@@ -719,53 +734,6 @@
       .faqAnswer.open {
         max-height: 100vh; // or a calculated max-height
       }
-    }
-  }
-}
-
-.campYearbookSection {
-  background: linear-gradient(to left, #e01633, #cdb235, #4fd3cd, #0098c9);
-  text-align: center;
-  margin: 0;
-  width: 100%;
-  box-sizing: border-box;
-  padding: 0;
-  padding-bottom: 7rem;
-
-  .yearbookTitle {
-    color: var(--color-black);
-    padding: 5rem 0;
-    font-size: 2rem;
-    font-family: Inter;
-  }
-
-  .buttonsContainer {
-    display: flex;
-    flex-direction: row;
-    gap: 5rem;
-    width: 100%;
-    justify-content: center;
-
-    @media (max-width: 768px) {
-      flex-direction: column;
-      gap: 2rem;
-    }
-  }
-
-  .yearButton {
-    background-color: var(--color-black);
-    border: none;
-    border-radius: 50px;
-    color: var(--text-white);
-    padding: 10px 20px;
-    font-size: 1rem;
-    padding: 20px 80px;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-
-    &:hover {
-      background-color: #333;
     }
   }
 }

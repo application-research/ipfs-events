@@ -58,7 +58,7 @@
 
 .h1 {
   font-weight: var(--font-weight-semibold);
-  font-size: var(--font-size-regular);
+  font-size: 2rem;
 }
 
 .h1,
@@ -109,10 +109,6 @@ h1 {
       font-weight: var(--font-weight-medium);
     }
   }
-}
-
-.span {
-  font-weight: var(--font-weight-light);
 }
 
 .blockquote {

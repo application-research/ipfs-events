@@ -8,6 +8,9 @@ import Link from './Link';
 import React, { useState } from 'react';
 import GutterContainer from '@root/components/GutterContainer';
 import TicketCard from '@root/components/TicketCard';
+import Schedule from './Schedule';
+import ScheduleIPFSCamp2024 from './ScheduleIPFSCamp2024';
+import IPFSCampFooter from './IPFSCampFooter';
 
 /* TODOS:
  * Fix mobile view for squiggles
@@ -15,7 +18,7 @@ import TicketCard from '@root/components/TicketCard';
  * Refactor this code into something more componentized
  */
 
-export default function SectionCamppage({ upcomingEvents }) {
+export default function SectionCamppage({ upcomingEvents, scheduleData }) {
   const [expandedFaqLeft, setExpandedFaqLeft] = useState(null);
   const [expandedFaqRight, setExpandedFaqRight] = useState(null);
 
@@ -66,7 +69,7 @@ If you are presenting any symptoms of being sick or have come in contact with so
 
   return (
     <div className={styles.pageContainer} style={{ overflow: 'hidden' }}>
-      <img src="/media/squares.svg" className={styles.squaresClass} />
+      {/* <img src="/media/squares.svg" className={styles.squaresClass} />
       <GutterContainer>
         <div style={{ display: 'grid', rowGap: '8rem' }}>
           <section>
@@ -143,8 +146,8 @@ If you are presenting any symptoms of being sick or have come in contact with so
             </div>
           </section>
         </div>
-      </GutterContainer>
-      <section>
+      </GutterContainer> */}
+      {/* <section>
         <div className={styles.whatToExpectSection}>
           <div className={styles.twoColumns}>
             <div className={styles.imageWrapper}>
@@ -189,8 +192,8 @@ If you are presenting any symptoms of being sick or have come in contact with so
             </div>
           </div>
         </GutterContainer>
-      </section>
-      <section>
+      </section> */}
+      {/* <section>
         <div className={styles.ticketSection}>
           <div className={styles.ticketTitle}>Tickets</div>
           <p className={styles.description}>
@@ -199,18 +202,7 @@ If you are presenting any symptoms of being sick or have come in contact with so
           </p>
           <div className={styles.ticketCardContainer}>
             <TicketCard name={'Early Bird'} price={'$395'} description={'Early Bird Ticket Wave 1, enjoy a 40% discount!'} ctaLink={'https://lu.ma/ipfscamp24'}></TicketCard>
-            {/* Wave 2
-              <TicketCard
-                img={null}
-                name={'Early Bird'}
-                price={'$495'}
-                description={'Early Bird Ticket Wave 2, enjoy a 25% discount!'}
-                cta={'https://lu.ma/ipfscamp24'}
-              ></TicketCard>
-            */}
-            {/* Wave 3
-            <TicketCard img={null} name={'Early Bird'} price={'$595'} description={'Early Bird Ticket Wave 3, enjoy a 10% discount!'} cta={'https://lu.ma/ipfscamp24'}></TicketCard>
-            */}
+
             <TicketCard name={'Standard'} price={'$650'} description={'Available starting March 19.'} ctaLink={'https://lu.ma/ipfscamp24'}></TicketCard>
             <TicketCard
               name={'Supporter'}
@@ -220,7 +212,7 @@ If you are presenting any symptoms of being sick or have come in contact with so
             ></TicketCard>
           </div>
         </div>
-      </section>
+      </section> */}
       <GutterContainer>
         <section>
           <h2 className={styles.centeredSectionTitle}>Get Involved</h2>
@@ -275,6 +267,9 @@ If you are presenting any symptoms of being sick or have come in contact with so
             </div>
           </div>
         </section>
+
+        <ScheduleIPFSCamp2024 scheduleData={scheduleData} />
+
         <div style={{ display: 'grid', rowGap: '8rem' }}>
           <div style={{ display: 'grid', rowGap: '2rem' }}>
             <div className={styles.headerWrapper}>
@@ -318,7 +313,7 @@ If you are presenting any symptoms of being sick or have come in contact with so
               FAQs
             </h1>
             <div className={styles.faqColumns}>
-              <div className={styles.faqLeft} style={{ paddingRight: '16px' }}>
+              <div className={styles.faqLeft}>
                 {faqsLeft.map((faq, index) => (
                   <div className={styles.faqBorderWrapper} key={index} onClick={() => toggleFaq('left', index)}>
                     <div className={`${styles.faqContent} ${expandedFaqLeft === index ? styles.open : ''}`}>
@@ -341,7 +336,7 @@ If you are presenting any symptoms of being sick or have come in contact with so
                 ))}
               </div>
             </div>
-            <div className={styles.bottomSquiggleContainer}>
+            {/* <div className={styles.bottomSquiggleContainer}>
               <svg className={styles.bottomSquiggleStyle} width="498" height="305" viewBox="0 0 498 305" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path
                   d="M36.4165 187.05C36.4165 187.05 15.1919 277.772 66.9163 271.843C118.641 265.914 209.641 19.5789 275.813 33.115C308.7 39.842 301.378 77.8058 293.984 113.795C286.466 150.395 304.275 196.955 338.187 195.263C405.607 191.898 419.559 52.4113 505.5 41.8714"
@@ -357,21 +352,12 @@ If you are presenting any symptoms of being sick or have come in contact with so
                   </linearGradient>
                 </defs>
               </svg>
-            </div>
+            </div> */}
           </section>
         </div>
       </GutterContainer>
-      <section className={styles.campYearbookSection}>
-        <div className={styles.yearbookTitle}>Camp Yearbook</div>
-        <div className={styles.buttonsContainer}>
-          <Link href={'https://2022.ipfs.camp/'} target="_blank">
-            <button className={styles.yearButton}>Camp 2022</button>
-          </Link>
-          <Link href={'https://2019.ipfs.camp/'} target="_blank">
-            <button className={styles.yearButton}>Camp 2019</button>
-          </Link>
-        </div>
-      </section>
+
+      <IPFSCampFooter />
     </div>
   );
 }

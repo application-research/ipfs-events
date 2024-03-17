@@ -1,0 +1,22 @@
+.toggle {
+  padding: 0.5rem;
+  border-radius: var(--border-radius-tiny);
+  cursor: pointer;
+  font-weight: var(--font-weight-light);
+  font-size: var(--font-size-regular);
+  border-color: var(--color-blue-gray);
+}
+
+.toggleRow {
+  padding-bottom: 2rem;
+  display: flex;
+  flex-direction: row;
+}
+
+.toggleName {
+  padding-right: 1rem;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  font-weight: var(--font-weight-light);
+}

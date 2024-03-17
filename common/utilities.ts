@@ -1,3 +1,5 @@
+import moment from 'moment';
+
 const hasOwn = {}.hasOwnProperty;
 const protocolAndDomainRE = /^(?:\w+:)?\/\/(\S+)$/;
 const localhostDomainRE = /^localhost[\:?\d]*(?:[^\:?\d]\S*)?$/;
@@ -9,8 +11,55 @@ export const pluralize = (text, count) => {
   return count > 1 || count === 0 ? `${text}s` : text;
 };
 
-export function toDateISOString(data, timezone) {
-  const timeZone = timezone ?? 'UTC';
+export function toDateISOString(data) {
+  const date = new Date(data);
+
+  if (isNaN(date.getTime())) {
+    console.error('Invalid Date:', data);
+    return;
+  }
+
+  const options: any = {
+    weekday: 'short',
+    day: 'numeric',
+    month: 'short',
+  };
+
+  return new Intl.DateTimeFormat('en-US', options).format(date);
+}
+
+export function formatUTCDateString(data: string | number | Date): string {
+  // Initialize a moment.js library object
+  const date = moment.utc(data);
+
+  // Check if the date is valid
+  if (!date.isValid()) {
+    console.error('Invalid Date:', data);
+    return '';
+  }
+
+  // Format the date
+  const formattedDate = date.format('ddd, MMM D');
+  return formattedDate;
+}
+
+export function formatUTCTime(data: string | number | Date): string {
+  // Initialize a moment.js library object
+  const time = moment.utc(data);
+
+  // Check if the time is valid
+  if (!time.isValid()) {
+    console.error('Invalid Date:', data);
+    return '';
+  }
+
+  // Format the time
+  const formattedTime = time.format('h:mm a');
+  return formattedTime;
+}
+
+export function toDateISOStrinWithTimezone(data, timezone) {
+  const timeZone = timezone;
   const date = new Date(data);
 
   const options: any = {
@@ -172,3 +221,21 @@ export function classNames(...args: any[]): string {
 }
 
 export const TWENTY_FOUR_HOURS = 24 * 60 * 60 * 1000;
+
+export async function makeRequest({ endpoint, host }) {
+  try {
+    const res = await fetch(`http://${host}/api/${endpoint}`, { next: { revalidate: 0 } });
+    const json = await res.json();
+
+    return { ...json };
+  } catch (e) {
+    return console.log(e);
+  }
+}
+
+export function cleanString(input = '') {
+  return input
+    .replace(/[\s,()"':`?!;.]+/g, '-')
+    .replace(/-+/g, '-')
+    .replace(/^-+|-+$/g, '');
+}
