@@ -69,7 +69,7 @@ If you are presenting any symptoms of being sick or have come in contact with so
 
   return (
     <div className={styles.pageContainer} style={{ overflow: 'hidden' }}>
-      {/* <img src="/media/squares.svg" className={styles.squaresClass} />
+      <img src="/media/squares.svg" className={styles.squaresClass} />
       <GutterContainer>
         <div style={{ display: 'grid', rowGap: '8rem' }}>
           <section>
@@ -146,8 +146,8 @@ If you are presenting any symptoms of being sick or have come in contact with so
             </div>
           </section>
         </div>
-      </GutterContainer> */}
-      {/* <section>
+      </GutterContainer>
+      <section>
         <div className={styles.whatToExpectSection}>
           <div className={styles.twoColumns}>
             <div className={styles.imageWrapper}>
@@ -192,8 +192,8 @@ If you are presenting any symptoms of being sick or have come in contact with so
             </div>
           </div>
         </GutterContainer>
-      </section> */}
-      {/* <section>
+      </section>
+      <section>
         <div className={styles.ticketSection}>
           <div className={styles.ticketTitle}>Tickets</div>
           <p className={styles.description}>
@@ -212,7 +212,7 @@ If you are presenting any symptoms of being sick or have come in contact with so
             ></TicketCard>
           </div>
         </div>
-      </section> */}
+      </section>
       <GutterContainer>
         <section>
           <h2 className={styles.centeredSectionTitle}>Get Involved</h2>
@@ -267,6 +267,10 @@ If you are presenting any symptoms of being sick or have come in contact with so
             </div>
           </div>
         </section>
+
+        <h1 className={styles.h3} style={{ paddingBottom: '2rem', color: 'var(--color-white)' }}>
+          Schedule
+        </h1>
 
         <ScheduleIPFSCamp2024 scheduleData={scheduleData} />
 
