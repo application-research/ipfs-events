@@ -1,9 +1,10 @@
 .popup {
-  padding: 2rem;
-  border: 1px solid var(--text-black);
+  padding: 2rem 1.5rem 2rem 2rem;
   border-radius: var(--border-radius-tiny);
   font-family: Inter;
-  height: 90vh;
+  border: 3px solid transparent;
+  border-image: var(--color-rainbow);
+  border-image-slice: 1;
 
   @media (max-width: 768px) {
     padding: 1rem;
@@ -11,14 +12,10 @@
 }
 
 .eventName {
-  font-weight: var(--font-weight-bold);
+  font-weight: var(--font-weight-regular);
   font-size: var(--font-size-medium);
   display: flex;
   align-items: center;
-}
-
-.description {
-  max-width: 70ch;
 }
 
 .tableRow {
@@ -26,12 +23,13 @@
   grid-template-columns: repeat(8, 1fr);
   row-gap: 0.5rem;
   padding: 1rem 0.5rem;
-  gap: 1rem;
+  gap: 0rem;
   border-bottom: 1px solid var(--color-gray-transparent200);
 
   @media (max-width: 768px) {
     display: flex;
     flex-direction: column;
+    gap: 0.5rem;
   }
 }
 
@@ -61,17 +59,27 @@
 
 .scheduleContainer {
   max-height: 70vh;
+  border-bottom: 0.5px solid var(--color-blue-gray);
   overflow-y: scroll;
   scrollbar-width: thin;
-  border-bottom: 1px solid var(--color-black);
+  overflow-x: hidden;
+
+  &::-webkit-scrollbar {
+    display: initial;
+    width: 8px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: var(--color-gray-transparent200);
+    border-radius: 0.25rem;
+  }
 }
 
 .tableHeader {
   display: grid;
   grid-template-columns: repeat(8, 1fr);
-  border: 1px solid var(--text-black);
   padding: 0.5rem;
-  background: var(--color-black);
+  background: var(--color-blue);
   position: sticky;
   top: -1px;
   z-index: var(--z-index-small);
@@ -88,11 +96,12 @@
   flex-direction: row;
   justify-content: space-between;
   padding-bottom: 1rem;
+  padding-right: 0.5rem;
 }
 
 .eventDetails {
   display: grid;
-  gap: 0.5rem;
+  gap: 0.2rem;
   padding-bottom: 2rem;
 
   @media (max-width: 768px) {
@@ -111,17 +120,48 @@
 .closeButton {
   border: none;
   border-radius: var(--border-radius-tiny);
-  background: var(--color-black200);
+  background: linear-gradient(to right, #39c1cb, #006fec);
   color: var(--color-white);
   cursor: pointer;
   font-family: Inter;
   transition: background-color cubic-bezier(0.23, 1, 0.32, 1) ease;
+  height: 2rem;
+}
+
+.people,
+.location,
+.time,
+.description {
+  color: var(--gray1000);
+  font-family: Inter;
+  font-weight: var(--font-weight-light);
+  letter-spacing: -0.003em;
+  line-height: 1.6rem;
+}
+
+.videoLinkButton {
+  cursor: pointer;
+  border: 1px solid var(--color-blue);
+  color: var(--color-blue);
+  padding: 0.2rem 0.5rem;
+  background: var(--color-white);
+  border-radius: var(--border-radius-tiny);
+  transition: 200ms ease background;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
 
   &:hover {
-    background-color: var(--color-black200);
+    background: var(--color-blue);
+    color: var(--color-white);
+
+    .videoLinkSVG path {
+      stroke: var(--color-white);
+    }
   }
 
-  @media (max-width: 768px) {
-    max-height: 2rem;
+  .videoLinkSVG path {
+    stroke: var(--color-blue);
   }
 }

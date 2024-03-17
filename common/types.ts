@@ -1,5 +1,6 @@
 export enum BlockTypeEnum {
   COLLAPSABLE = 'collapsable',
+  COLLAPSABLES = 'collapsables',
   HERO = 'hero',
   HERO_NO_BACKGROUND = 'hero-no-background',
   IMAGE_TEXT = 'image-text',
@@ -9,14 +10,34 @@ export enum BlockTypeEnum {
   MEDIA_GRID = 'media-grid',
   MEDIA_GRID_SCROLLABLE = 'media-grid-scrollable',
   SCHEDULE = 'schedule',
+  SCHEDULE_ICELAND = 'schedule-iceland',
+  SCHEDULE_SINGAPORE = 'schedule-singapre',
+  SCHEDULE_ETHDENVER = 'schedule-ethdenver',
+  SCHEDULE_LIST_TOGGLE_BY_TRACK_TALK_ICELAND = 'schedule-list-toggle-by-talk-track-iceland',
+  SCHEDULE_LIST_BY_TRACK_ICELAND = 'schedule-list-by-track-iceland',
+  SCHEDULE_LIST_BY_TALK_ICELAND = 'schedule-list-by-talk-iceland',
+  SCHEDULE_LIST_TOGGLE_BY_TRACK_TALK_SINGAPORE = 'schedule-list-toggle-by-talk-track-singapore',
+  SCHEDULE_LIST_TOGGLE = 'schedule-list-toggle',
+  SCHEDULE_LIST_BY_TRACK_SINGAPORE = 'schedule-list-by-track-singapore',
+  SCHEDULE_LIST_BY_TALK_SINGAPORE = 'schedule-list-by-talk-singapore',
+  SPEAKERS = 'speakers',
+  TABLE = 'table',
   TEXT = 'text',
   TICKET_CARD = 'ticket-card',
   UPCOMING_EVENTS = 'upcoming-events',
 }
 
+export enum LocationEnum {
+  SINGAPORE = 'singapore',
+  ICELAND = 'iceland',
+}
+
 export enum BlockDirectionEnum {
   COLUMN = 'column',
+  FOUR_COLUMN = 'four-column',
   ROW = 'row',
+  THREE_COLUMN = 'three-column',
+  TWO_COLUMN = 'two-column',
 }
 
 export interface Image {
@@ -52,6 +73,8 @@ export enum TypeName {
   MEDIA_IMAGE_WITH_TEXT = 'media-image-with-text',
   MEDIA_ROW = 'media-row',
   MEDIA_VIDEO = 'media-video',
+  IMAGE_TEXT_WITH_OVERFLOW = 'image-text-with-overflow',
+  IMAGE_WITH_OVERLAY_TEXT = 'image-with-overlay-text',
 }
 
 export interface Video {
@@ -68,14 +91,26 @@ export interface Video {
 
 export enum CallToActionVariantEnum {
   BLACK = 'dark-blue',
+  BORDER = 'border',
+  BUTTON = 'button',
+  ICON = 'icon',
   LINK = 'link',
   LINK_ICON = 'link-icon',
+  NO_BORDER = 'no-border',
   TEXT = 'text',
   WHITE = 'white',
-  BORDER = 'border',
-  NO_BORDER = 'no-border',
 }
 
 export enum NavigationTypeEnum {
   WITH_BORDER = 'with-border',
+}
+
+export enum ScheduleStatusEnum {
+  ACCEPTED_BY_TRACK_LEAD = 'Accepted by track lead',
+  CONFIRMED = 'Confirmed',
+}
+
+export enum TrackOrTalkEnum {
+  TRACK = 'Track',
+  TALK = 'Talk',
 }

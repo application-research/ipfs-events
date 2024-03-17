@@ -1,0 +1,46 @@
+.campYearbookSection {
+  background: linear-gradient(to left, #e01633, #cdb235, #4fd3cd, #0098c9);
+  text-align: center;
+  margin: 0;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0;
+  padding-bottom: 7rem;
+
+  .yearbookTitle {
+    color: var(--color-black);
+    padding: 5rem 0;
+    font-size: 2rem;
+    font-family: Inter;
+  }
+
+  .buttonsContainer {
+    display: flex;
+    flex-direction: row;
+    gap: 5rem;
+    width: 100%;
+    justify-content: center;
+
+    @media (max-width: 768px) {
+      flex-direction: column;
+      gap: 2rem;
+    }
+  }
+
+  .yearButton {
+    background-color: var(--color-black);
+    border: none;
+    border-radius: 50px;
+    color: var(--text-white);
+    padding: 10px 20px;
+    font-size: 1rem;
+    padding: 20px 80px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+      background-color: #333;
+    }
+  }
+}

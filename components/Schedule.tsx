@@ -1,10 +1,10 @@
 'use client';
 import styles from '@components/Schedule.module.scss';
 
-import { getAirtableData, getFormattedAirtableFields } from '@root/resolvers/airtable-import';
+import { useCallback, useEffect, useRef, useState } from 'react';
 import { SchedulePopUp } from './SchedulePopUp';
-import { useEffect, useRef, useState } from 'react';
-import ScrollTableTooltip from './ScrollTableTooltip';
+import { classNames, cleanString } from '@root/common/utilities';
+import getScheduleGrid from 'system/layout/Grids';
 
 const NODE = process.env.NODE_ENV || 'development';
 const IS_PRODUCTION = NODE === 'production';
@@ -13,30 +13,69 @@ if (!IS_PRODUCTION) {
   require('dotenv').config();
 }
 
-export default function Schedule({ scheduleData }) {
-  if (scheduleData?.airtable?.tableName == null) return null;
-
+export default function Schedule({ calendarData, scheduleId, scheduleStyle }: any) {
   const [selectedEvent, setSelectedEvent] = useState(null);
   const [isOverlayOpen, setIsOverlayOpen] = useState(false);
-  const [showArrowLeft, setShowArrowLeft] = useState(false);
-  const [showArrowRight, setShowArrowRight] = useState(false);
   const [isScrolling, setIsScrolling] = useState(false);
-
-  const [data, setData] = useState([]);
 
   const tableRef = useRef<HTMLDivElement>(null);
   const headersRef = useRef<HTMLDivElement>(null);
 
-  const tableName = scheduleData?.airtable?.tableName;
-  const scheduleBackgroundColor = scheduleData?.style?.backgroundColor ?? 'var(--color-white)';
-  const scheduleHoverColor = scheduleData?.style?.hoverColor ?? 'var(--color-gray-transparent)';
+  // Determine the number of columns for the schedule based on total event days
+  const columnCount = Object.keys(calendarData).length;
+  const gridClass = getScheduleGrid(columnCount);
 
-  const scheduleStyle = {
-    backgroundColor: scheduleBackgroundColor,
-    ':hover': {
-      backgroundColor: scheduleHoverColor,
-    },
-  };
+  useEffect(() => {
+    function handleHashChange() {
+      const currentHash = window.location.hash.substring(1).toLowerCase();
+
+      if (currentHash) {
+        const allTracks = Object.values(calendarData).flat();
+        const eventData = allTracks.find((track) => {
+          const formattedTitle = cleanString((track as any)?.trackDetails?.title).toLowerCase();
+          const formattedDate = cleanString((track as any)?.trackDetails?.trackDate).toLowerCase();
+          const expectedHash = `${formattedTitle}-${formattedDate}`;
+          return expectedHash === currentHash;
+        });
+
+        if (eventData) {
+          setSelectedEvent((eventData as any).trackDetails);
+          setIsOverlayOpen(true);
+          document.getElementById(scheduleId)?.scrollIntoView({ behavior: 'smooth' });
+        } else {
+          return;
+        }
+      }
+    }
+
+    // Call the hash function once initially
+    handleHashChange();
+
+    // Listen for hash changes
+    window.addEventListener('hashchange', handleHashChange);
+
+    // Cleanup listener on unmount
+    return () => {
+      window.removeEventListener('hashchange', handleHashChange);
+    };
+  }, [scheduleId, calendarData]);
+
+  const handleScroll = useCallback((event) => {
+    if (isScrolling) return;
+
+    const source = event.target;
+
+    setIsScrolling(true);
+    if (tableRef.current && headersRef.current) {
+      if (source === tableRef.current) {
+        headersRef.current.scrollLeft = source.scrollLeft;
+      } else if (source === headersRef.current) {
+        tableRef.current.scrollLeft = source.scrollLeft;
+      }
+    }
+
+    setIsScrolling(false);
+  }, []);
 
   const handleOverlayClick = () => {
     setIsOverlayOpen(false);
@@ -49,115 +88,94 @@ export default function Schedule({ scheduleData }) {
   const handleEventClick = (e) => {
     setSelectedEvent(e);
     setIsOverlayOpen(true);
+    handleOpenPopup(e.title, e.trackDate);
   };
 
-  const handlePopupClose = () => {
+  const handlePopupClose = (e) => {
     setSelectedEvent(null);
     setIsOverlayOpen(false);
+    window.history.pushState({}, '', window.location.pathname);
+    e.preventDefault();
   };
 
-  useEffect(() => {
-    // Replace tableName with a specific view from airtable
-    getAirtableData(tableName, (records) => {
-      if (records) {
-        setData(records);
-      }
-    });
-  }, []);
-
-  useEffect(() => {
-    const tableElement = tableRef.current;
-
-    const handleScroll = () => {
-      if (tableElement) {
-        //Check the scroll position
-        setShowArrowLeft(tableElement.scrollLeft > 0);
-
-        setShowArrowRight(tableElement.scrollLeft + tableElement.clientWidth < tableElement.scrollWidth);
-
-        setIsScrolling(true);
-
-        //sync the scroll position between headers and schedule
-        if (headersRef.current) {
-          headersRef.current.scrollLeft = tableElement.scrollLeft;
-        }
-      }
-    };
-
-    if (tableElement) {
-      tableElement.addEventListener('scroll', handleScroll);
-      // Check initial scroll positions
-      handleScroll();
-      return () => {
-        tableElement.removeEventListener('scroll', handleScroll);
-      };
-    }
-  });
-  const calendarData: any = getFormattedAirtableFields(data);
+  const handleOpenPopup = (title, trackDate) => {
+    const formattedTitle = cleanString(title).toLowerCase();
+    const formattedDate = cleanString(trackDate).toLowerCase();
+    window.history.pushState({}, '', `#${formattedTitle}-${formattedDate}`);
+  };
 
   return (
-    <div className={styles.container}>
-      <section
-        className={styles.sectionScrollTooltip}
-        style={{
-          background: scheduleStyle.backgroundColor ?? 'var(--color-white)',
-        }}
-      >
-        <ScrollTableTooltip backgroundColor={scheduleStyle?.backgroundColor} showArrowLeft={showArrowLeft} showArrowRight={showArrowRight} tableRef={tableRef} />
-      </section>
+    <div className={styles.container} id={scheduleId}>
+      <section className={styles.sectionScrollTooltip}>Click and drag the schedule to navigate</section>
 
       <div className={styles.scheduleWrapper}>
-        <div
-          className={` ${styles.headers}`}
-          ref={headersRef}
-          style={{
-            position: 'sticky',
-            zIndex: 'var(--z-index-medium)',
-            maxWidth: '100%',
-            overflow: 'hidden',
-          }}
-        >
-          {Object.keys(calendarData).map((date, index) => {
-            return (
-              <div className={styles.heading} key={index}>
-                <p>{date}</p>
-              </div>
-            );
-          })}
-        </div>
-        <div ref={tableRef} className={styles.schedule} style={{ overflowX: 'auto' }}>
-          {Object.keys(calendarData)?.map((dateKey, index) => {
-            const events = calendarData[dateKey];
-            const eventKeys = Object.keys(events);
-            const isLastIndex = index === Object.keys(calendarData).length - 1;
+        <div ref={tableRef} className={classNames(styles.schedule, gridClass)} style={{ overflowX: 'auto' }}>
+          {Object.entries(calendarData).map(([dateKey, tracksForDate], index) => {
+            // Check if there are any items for the given date
+            const hasItems = Array.isArray(tracksForDate) && tracksForDate.length > 0;
 
             return (
-              <div key={index} className={styles.eventStyle} style={{ borderRight: isLastIndex ? '0.5px solid var(--color-gray-transparent)' : 'none' }}>
-                {eventKeys?.map((eventItem, eventIndex) => {
-                  const events = calendarData[dateKey];
-                  const eventDetails = events[eventItem];
+              <div
+                key={index}
+                className={classNames(styles.eventStyle, hasItems ? '' : styles.hideItems)}
+                style={{
+                  background: scheduleStyle.backgroundColor ? scheduleStyle.backgroundColor : 'var(--color-gray-transparent)',
+                  color: scheduleStyle.textColor ? scheduleStyle.textColor : 'var(--color-text)',
+                }}
+              >
+                <div
+                  className={`${styles.heading} ${hasItems ? '' : styles.hideItems}`}
+                  key={index}
+                  onScroll={handleScroll}
+                  style={{ backgroundColor: hasItems ? scheduleStyle.labelColor : 'var(--color-blue-gray)' }}
+                >
+                  <p>{dateKey}</p>
+                </div>
 
-                  const { title, time, trackDate, trackAttendees, location } = eventDetails.trackDetails[eventItem] ?? '';
+                {Array.isArray(tracksForDate) &&
+                  tracksForDate?.map((track, trackIndex) => {
+                    const trackDetails = track.trackDetails;
+                    const records = track.records;
+                    if (trackDetails) {
+                      const { title, firstName, fullName, roomName, time, capacity } = trackDetails ?? '';
 
-                  return (
-                    <div style={{ ...scheduleStyle }} className={styles.eventBox} key={eventIndex} onClick={() => handleEventClick(eventDetails)}>
-                      {title && <p className={styles.eventName}>{title}</p>}
-                      {time && <p className={styles.time}>{time}</p>}
-                      {location && <p className={styles.location}>{location}</p>}
-                      <p className={styles.people}>👤 {trackAttendees ?? 'All Welcome'}</p>
-                    </div>
-                  );
-                })}
+                      return (
+                        <div className={styles.rainbowBorderWrapper}>
+                          <div
+                            className={styles.eventBox}
+                            key={trackIndex}
+                            onClick={() => handleEventClick({ ...trackDetails, records })}
+                            onScroll={handleScroll}
+                            style={{ background: scheduleStyle.backgroundColor ? scheduleStyle.backgroundColor : 'var(--color-black)' }}
+                          >
+                            {title && <p className={styles.eventName}>{title}</p>}
+
+                            <div className={styles.eventDetails}>
+                              {time && <p className={styles.time}>{time}</p>}
+                              {roomName && <p className={styles.location}>{roomName}</p>}
+                              {firstName && <p className={styles.speakers}> {firstName}</p>}
+                              {fullName && <p className={styles.speakers}> {fullName}</p>}
+                              <p className={styles.people}>👤 {capacity ?? '50 seats'}</p>
+                            </div>
+                          </div>
+                        </div>
+                      );
+                    } else {
+                      return <></>;
+                    }
+                  })}
               </div>
             );
           })}
         </div>
       </div>
+
       {selectedEvent && (
-        <section style={{ position: 'relative' }}>
+        <section>
           {isOverlayOpen && <div className={styles.overlay} onClick={handleOverlayClick} />}
-          <div className={`${styles.absoluteContainer} ${isOverlayOpen ? styles.active : ''}`} onClick={handleContainerClick}>
-            <SchedulePopUp style={scheduleStyle} trackTalks={selectedEvent} isOpen={isOverlayOpen} onClose={handlePopupClose} />
+
+          <div className={`${styles.fixedContainer} ${isOverlayOpen ? styles.active : ''}`} onClick={handleContainerClick}>
+            <SchedulePopUp scheduleStyle={scheduleStyle} selectedEvent={selectedEvent} isOpen={isOverlayOpen} onClose={handlePopupClose} />
           </div>
         </section>
       )}

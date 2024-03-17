@@ -26,7 +26,7 @@ export const FILECOIN_DEV_SUMMIT_ASIA_CALENDAR = {
 };
 
 export const FILECOIN_DEV_SUMMIT_PAGE_STYLE_CONTENT = {
-  backgroundColor: 'var(--color-beige)',
+  backgroundColor: 'var(--color-white)',
   textColor: 'var(--color-black)',
 };
 

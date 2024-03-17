@@ -1,0 +1,31 @@
+.schedule5columns {
+  grid-template-columns: repeat(5, 1fr);
+
+  @media (max-width: 768px) {
+    grid-template-columns: repeat(3, 200px);
+  }
+}
+
+.schedule4columns {
+  grid-template-columns: repeat(4, 1fr);
+
+  @media (max-width: 768px) {
+    grid-template-columns: repeat(3, 200px);
+  }
+}
+
+.schedule3columns {
+  grid-template-columns: repeat(3, 1fr);
+
+  @media (max-width: 768px) {
+    grid-template-columns: repeat(3, 200px);
+  }
+}
+
+.schedule2columns {
+  grid-template-columns: repeat(2, 1fr);
+
+  @media (max-width: 768px) {
+    grid-template-columns: repeat(2, 200px);
+  }
+}

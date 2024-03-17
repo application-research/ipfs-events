@@ -75,7 +75,7 @@
   top: 80px;
   padding-top: 2rem;
   overflow: hidden;
-
+  background: var(--ipfs-camp-blue);
   @media (max-width: 768px) {
     height: 100%;
   }
@@ -84,7 +84,7 @@
 .dropdownRow {
   display: flex;
   flex-direction: row;
-  gap: 0rem;
+  gap: 1rem;
 
   @media (max-width: 768px) {
     flex-direction: column;
