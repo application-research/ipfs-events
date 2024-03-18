@@ -49,7 +49,7 @@ export default async function Page(props) {
       <div style={{ paddingBottom: '5rem' }}>
         <Hero {...hero} />
       </div>
-      <SectionEventPage blocks={blocks} />
+      {/* <SectionEventPage blocks={blocks} /> */}
 
       <Footer {...footerContent} />
     </DefaultLayout>

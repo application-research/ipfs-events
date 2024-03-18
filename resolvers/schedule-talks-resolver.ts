@@ -2,7 +2,7 @@ import moment from 'moment';
 
 export const generateHourlyTimeRanges = (times: string[]): string[] => {
   // Extract unique hours from the provided times
-  const hours: number[] = [...new Set(times.map((time) => moment.utc(time, 'hh:mm a').hour()))].sort((a, b) => a - b);
+  const hours: number[] = Array.from(new Set(times.map((time) => moment.utc(time, 'hh:mm a').hour()))).sort((a, b) => a - b);
 
   // Generate hourly ranges
   const ranges: string[] = [];
