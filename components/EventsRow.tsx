@@ -10,7 +10,7 @@ export default function EventsRow({ events }) {
         events.map((event, index) => {
           return (
             <div key={index}>
-              <Link href={event?.link ?? ''} style="text" target={event?.target ?? '_blank'}>
+              <Link href={event?.link ?? ''} linkStyle="text" target={event?.target ?? '_blank'}>
                 <img className={classNames(styles.col50, styles.image)} src={event.image} />
                 <div className={styles.containerOverImage}>
                   <p style={{ fontWeight: 'bold' }}>{event.name}</p>
