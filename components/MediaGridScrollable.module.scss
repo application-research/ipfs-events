@@ -1,3 +1,10 @@
+.mainTitle {
+  font-family: 'Inter';
+  font-weight: var(--font-weight-light);
+  font-size: var(--font-size-extra-large);
+  letter-spacing: -1px;
+}
+
 .grid4Cols {
   display: grid;
   /* display 4 columns and the rest allow to overflow horizontally */

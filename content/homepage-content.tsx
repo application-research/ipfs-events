@@ -43,16 +43,17 @@ export const HOMEPAGE_CONTENT = [
       },
     ],
   },
+
   {
     id: 'about',
     direction: BlockDirectionEnum.ROW,
-    title: "Don't know which event to attend?",
     backgroundColor: 'var(--color-white)',
     noGutter: true,
     block: [
       {
         id: 'upcoming-events',
         type: BlockTypeEnum.MEDIA_GRID_SCROLLABLE,
+        title: "Don't Know Which Event to Attend?",
         mediaRow: [
           {
             id: 'upcoming-events',
@@ -133,7 +134,6 @@ export const HOMEPAGE_CONTENT = [
             location: 'Brussels, Belgium',
             name: 'IPFS Camp 2024',
           },
-         
         ],
       },
     ],

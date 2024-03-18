@@ -95,10 +95,10 @@
     align-items: center;
 
     img {
-      margin-left: 5rem; // Add left margin to move the image to the right
-      height: 30px; // Adjust the height as needed
-      height: 2.5rem; // Adjust the width as needed
-      object-fit: cover; // Makes sure the image maintains aspect ratio
+      margin-left: 5rem;
+      height: 30px;
+      height: 2.5rem;
+      object-fit: cover;
 
       @media (max-width: 768px) {
         margin-left: 0rem;
