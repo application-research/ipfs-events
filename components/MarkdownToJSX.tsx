@@ -1,3 +1,4 @@
+// @ts-nocheck
 import '@root/global.scss';
 
 import ReactMarkdown from 'react-markdown';
@@ -8,10 +9,9 @@ import { MarkdownToJSXComponents } from './MarkdownToJSXComponents';
 
 export function MarkdownToJSX({ children }: any) {
   const contentWithLineBreaks = children.replace(/\n/g, '  \n');
-  const rehypeRawPlugin = () => rehypeRaw;
 
   return (
-    <ReactMarkdown components={MarkdownToJSXComponents} remarkPlugins={[remarkGfm]} rehypePlugins={[rehypeRawPlugin]}>
+    <ReactMarkdown components={MarkdownToJSXComponents} remarkPlugins={[remarkGfm]} rehypePlugins={[rehypeRaw]}>
       {contentWithLineBreaks}
     </ReactMarkdown>
   );

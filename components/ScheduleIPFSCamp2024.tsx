@@ -15,7 +15,7 @@ if (!IS_PRODUCTION) {
 }
 
 export default function ScheduleIPFSCamp2024({ scheduleData }) {
-  const [denverData, setDenverData] = useState<any[] | null>(null);
+  const [formatedSchedule, setFormatedSchedule] = useState<any[] | null>(null);
   const [speakers, setSpeakers] = useState<any[]>([]);
 
   useEffect(() => {
@@ -25,7 +25,7 @@ export default function ScheduleIPFSCamp2024({ scheduleData }) {
 
         const fetchedSpeakers = getSpeakers(formattedAirtableData);
 
-        setDenverData(formattedAirtableData);
+        setFormatedSchedule(formattedAirtableData);
         setSpeakers(fetchedSpeakers);
       };
 
@@ -33,14 +33,14 @@ export default function ScheduleIPFSCamp2024({ scheduleData }) {
     }
   }, [scheduleData]);
 
-  if (!denverData) return null;
+  if (!formatedSchedule) return null;
 
   const submitTalk = {
     text: 'Submit a Track/Talk for IPFS Camp 2024',
     url: 'https://airtable.com/appM094R1Ma5HG757/shrWn6XaRgUkYWPm3',
   };
 
-  const formattedAirtableData = getFormattedAirtableFields(denverData);
+  const formattedAirtableData = getFormattedAirtableFields(formatedSchedule);
   const calendarData = addDatesIfLessThan3EventDays(formattedAirtableData);
 
   const scheduleStyle = {
@@ -51,7 +51,7 @@ export default function ScheduleIPFSCamp2024({ scheduleData }) {
 
   return (
     <div style={{ paddingBottom: '2rem', display: 'grid', rowGap: '3rem' }}>
-      <Schedule calendarData={calendarData} scheduleId={'schedule-ethdenver'} scheduleStyle={scheduleStyle} />
+      <Schedule calendarData={calendarData} scheduleId={'schedule-ipfs-camp2024'} scheduleStyle={scheduleStyle} />
 
       <a href={submitTalk.url} className={styles.link} target="_blank">
         <section className={styles.callToAction}>

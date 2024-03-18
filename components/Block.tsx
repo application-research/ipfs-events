@@ -9,7 +9,6 @@ import MediaBlock from './MediaBlock';
 import MediaGrid from './MediaGrid';
 import MediaGridScrollable from './MediaGridScrollable';
 import Schedule from './Schedule';
-import ScheduleETHDenver from './ScheduleIPFSCamp2024';
 import ScheduleListByTalks from './ScheduleListByTalks';
 import ScheduleListByTrack from './ScheduleListByTrack';
 import ScheduleListToggleByTimeOrTrack from './ScheduleListToggle';
@@ -17,6 +16,7 @@ import Table from './Table';
 import Text from './Text';
 import Tickets from './Tickets';
 import ImageTextWithOverflow from './ImageTextWithOverflow';
+import ScheduleIPFSCamp2024 from './ScheduleIPFSCamp2024';
 
 export function Block({ block }) {
   switch (block.type) {
@@ -40,8 +40,8 @@ export function Block({ block }) {
       return <MediaBlock {...block} />;
     case (block.type = BlockTypeEnum.SCHEDULE):
       return <Schedule {...block} />;
-    case (block.type = BlockTypeEnum.SCHEDULE_ETHDENVER):
-      return <ScheduleETHDenver {...block} />;
+    case (block.type = BlockTypeEnum.SCHEDULE_IPFS_CAMP_2024):
+      return <ScheduleIPFSCamp2024 {...block} />;
     case (block.type = BlockTypeEnum.SCHEDULE_LIST_BY_TRACK_ICELAND):
       return <ScheduleListByTrack {...block} />;
     case (block.type = BlockTypeEnum.SCHEDULE_LIST_BY_TALK_ICELAND):

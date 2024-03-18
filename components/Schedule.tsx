@@ -110,7 +110,7 @@ export default function Schedule({ calendarData, scheduleId, scheduleStyle }: an
 
       <div className={styles.scheduleWrapper}>
         <div ref={tableRef} className={classNames(styles.schedule, gridClass)} style={{ overflowX: 'auto' }}>
-          {Object.entries(calendarData).map(([dateKey, tracksForDate], index) => {
+          {Object.entries(calendarData)?.map(([dateKey, tracksForDate], index) => {
             // Check if there are any items for the given date
             const hasItems = Array.isArray(tracksForDate) && tracksForDate.length > 0;
 

@@ -48,13 +48,12 @@ export default async function Page(props) {
   function fetchData() {
     return new Promise(async (resolve, reject) => {
       try {
-        const airtableEndpoint = 'airtable/ethdenver';
+        const airtableEndpoint = 'airtable/ipfs-camp2024';
         const data = await makeRequest({ endpoint: airtableEndpoint, host });
-        // console.log(data, 'data from ipfs');
-        resolve(data); // Resolve the promise with the fetched data
+        resolve(data);
       } catch (error) {
         console.error('Error fetching tableData for block', error);
-        reject(error); // Reject the promise if there's an error
+        reject(error);
       }
     });
   }

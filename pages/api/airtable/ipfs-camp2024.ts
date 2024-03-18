@@ -10,21 +10,20 @@ if (process.env.NODE_ENV !== 'production') {
   require('dotenv').config();
 }
 
-export default async function apiAirtableStakingTable(req, res) {
+export default async function apiAirtableData(req, res) {
   await Server.cors(req, res);
 
-  const name = process.env.FILSUMMIT_FD3_TABLE_ID;
+  const tableId = process.env.IPFS_CAMP_2024_TABLE_ID;
 
   try {
     const base = new Airtable({
-      apiKey: process.env.FILSUMMIT_FD3_API_KEY,
-    }).base(process.env.FILSUMMIT_FD3_BASE_ID!);
+      apiKey: process.env.IPFS_CAMP_2024_API_KEY,
+    }).base(process.env.IPFS_CAMP_2024_BASE_ID!);
 
-    const records = await base(name!).select().all();
-
+    const records = await base(tableId!).select().all();
     res.json({ records });
   } catch (e) {
-    console.log(e);
+    console.log(e, 'error in the api');
     res.json({ error: true });
   }
 }
