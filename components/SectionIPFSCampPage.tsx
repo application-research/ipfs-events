@@ -127,7 +127,7 @@ If you are presenting any symptoms of being sick or have come in contact with so
             <div className={styles.mediaContainer}>
               <VideoPlayer src={'/media/ipfs-camp-2022.mp4'} autoPlay muted ariaLabel="video" ratio={Ratio.ORIGINAL} />
             </div>
-            <div className={styles.videoSquiggleContainer}>
+            {/* <div className={styles.videoSquiggleContainer}>
               <svg className={styles.videoSquiggleStyle} width="560" height="390" viewBox="0 0 560 390" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path
                   d="M85.7689 32.7635C85.7689 32.7635 -0.535029 83.9408 46.8507 130.949C94.2358 177.956 356.248 72.3749 400.875 149.369C423.055 187.636 388.233 210.611 354.847 231.94C320.897 253.631 300.406 308.606 329.812 341.178C388.272 405.932 448.657 251.756 527.911 329.311"
@@ -143,7 +143,7 @@ If you are presenting any symptoms of being sick or have come in contact with so
                   </linearGradient>
                 </defs>
               </svg>
-            </div>
+            </div> */}
           </section>
         </div>
       </GutterContainer>
