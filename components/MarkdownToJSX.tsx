@@ -8,9 +8,10 @@ import { MarkdownToJSXComponents } from './MarkdownToJSXComponents';
 
 export function MarkdownToJSX({ children }: any) {
   const contentWithLineBreaks = children.replace(/\n/g, '  \n');
+  const rehypeRawPlugin = () => rehypeRaw;
 
   return (
-    <ReactMarkdown components={MarkdownToJSXComponents} remarkPlugins={[remarkGfm]} rehypePlugins={[rehypeRaw]}>
+    <ReactMarkdown components={MarkdownToJSXComponents} remarkPlugins={[remarkGfm]} rehypePlugins={[rehypeRawPlugin]}>
       {contentWithLineBreaks}
     </ReactMarkdown>
   );
