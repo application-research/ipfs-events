@@ -155,23 +155,34 @@ If you are presenting any symptoms of being sick or have come in contact with so
             </div>
             <div>
               <div className={styles.expectationsContainer}>
-                <h3 className={styles.h3} style={{ paddingBottom: '1rem' }}>
+                <h1 className={styles.h3} style={{ paddingBottom: '1rem' }}>
                   What to Expect
-                </h3>
+                </h1>
                 <p className={styles.p}>
                   IPFS Camp is a chance for developers, designers, and enthusiasts from around the globe to connect and learn about the InterPlanetary File System (IPFS). Expect
                   hands-on workshops, in-depth discussions, and networking opportunities that will help you better understand how to build the decentralized web.
                 </p>
+                <h1>Tracks to Look Forward To...</h1>
+                <ul className={styles.tracksList}>
+                  <li>⭐️ Decentralized Apps and Publishing</li>
+                  <li>⭐️ Public Records and Human Rights</li>
+                  <li>⭐️ CIDs in the Age of Generative AI</li>
+                  <li>⭐️ Syncing Bytes at Scale</li>
+                  <li>⭐️ Libp2p Day</li>
+                  <li>... & more!</li>
+                </ul>
               </div>
             </div>
           </div>
         </div>
       </section>
+      {/*
       <section>
         <GutterContainer>
           <div className={styles.tracksSection}>
             <div className={styles.twoColumns}>
               <div className={styles.trackContent}>
+                 
                 <h3 className={styles.h3} style={{ paddingBottom: '1rem' }}>
                   Tracks at IPFS Camp
                 </h3>
@@ -193,6 +204,7 @@ If you are presenting any symptoms of being sick or have come in contact with so
           </div>
         </GutterContainer>
       </section>
+      */}
       <section>
         <div className={styles.ticketSection}>
           <div className={styles.ticketTitle}>Tickets</div>

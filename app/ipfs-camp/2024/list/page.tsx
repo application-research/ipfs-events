@@ -1,5 +1,6 @@
 import '@root/global.scss';
 
+import Link from 'next/link';
 import { headers } from 'next/headers';
 import { makeRequest } from '@root/common/utilities';
 import FooterTiny from '@root/components/FooterTiny';
@@ -68,6 +69,7 @@ export default async function Page(props) {
 
       <SectionEventPage blocks={blocks} pageStyle={pageStyle} />
 
+      {/* 
       <section className={styles.campYearbookSection}>
         <div className={styles.yearbookTitle}>Camp Yearbook</div>
         <div className={styles.buttonsContainer}>
@@ -79,6 +81,7 @@ export default async function Page(props) {
           </Link>
         </div>
       </section>
+      */}
     </div>
   );
 }

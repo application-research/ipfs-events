@@ -286,7 +286,7 @@
   z-index: var(--z-index-small);
   top: 105%;
   left: 5%;
-  // position: absolute;
+  position: absolute;
 
   @media (max-width: 768px) {
     top: 110%;
@@ -307,11 +307,17 @@
   }
 }
 
+.tracksList{
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  padding-left: 4rem;
+}
+
 .topSquiggleContainer {
   right: 10%;
   top: 17%;
   overflow: hidden;
-  // position: absolute;
+  position: absolute;
 
   @media (max-width: 1440px) {
     right: 5%;
@@ -844,7 +850,7 @@
 
 .expectationsContainer {
   background-color: var(--color-light-grey);
-  padding: 2rem;
+  padding: 1rem;
   border-radius: var(--border-radius-medium);
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   color: var(--color-white);
