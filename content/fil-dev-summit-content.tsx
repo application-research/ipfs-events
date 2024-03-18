@@ -2,7 +2,7 @@ import { BlockDirectionEnum, BlockTypeEnum, CallToActionVariantEnum, NavigationT
 
 export const FIL_DEV_SUMMIT_ETH_DENVER = {
   airtable: {
-    endPoint: 'airtable/ethdenver',
+    endPoint: 'airtable/ipfs-camp2024',
     data: [],
   },
 };

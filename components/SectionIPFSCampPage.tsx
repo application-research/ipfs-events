@@ -4,13 +4,12 @@ import styles from '@components/SectionIPFSCampPage.module.scss';
 
 import { Ratio } from '@root/common/types';
 import { VideoPlayer } from './VideoPlayer';
+import GutterContainer from '@root/components/GutterContainer';
+import IPFSCampFooter from './IPFSCampFooter';
 import Link from './Link';
 import React, { useState } from 'react';
-import GutterContainer from '@root/components/GutterContainer';
-import TicketCard from '@root/components/TicketCard';
-import Schedule from './Schedule';
 import ScheduleIPFSCamp2024 from './ScheduleIPFSCamp2024';
-import IPFSCampFooter from './IPFSCampFooter';
+import TicketCard from '@root/components/TicketCard';
 
 /* TODOS:
  * Fix mobile view for squiggles
