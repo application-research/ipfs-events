@@ -4,6 +4,9 @@ import styles from '@components/SectionIPFSCampPage.module.scss';
 
 import { Ratio } from '@root/common/types';
 import { VideoPlayer } from './VideoPlayer';
+import { MarkdownToJSX } from './Markdown';
+import TracksSVG from './svgs/TracksSVG';
+
 import GutterContainer from '@root/components/GutterContainer';
 import IPFSCampFooter from './IPFSCampFooter';
 import Link from './Link';
@@ -54,7 +57,11 @@ export default function SectionCamppage({ upcomingEvents, scheduleData }) {
   ];
 
   const faqsRight = [
-    { question: 'How can I participate?', answer: 'You can: Submit a track or talk, Sponsor, Apply as an IPFS Scholar, Become a key organizer, Volunteer, Apply for Expo Space' },
+    {
+      question: 'How can I participate?',
+      answer:
+        'You can: [Submit a track or talk](https://airtable.com/appM094R1Ma5HG757/shrWn6XaRgUkYWPm3), [Sponsor](https://airtable.com/appM094R1Ma5HG757/shrXTUagRUI1aC4G1), [Apply as an IPFS Scholar](https://airtable.com/appM094R1Ma5HG757/shrQGQ8gH7OUXdUuc), [Become a key organizer](mailto:miwa@protocol.ai), [Volunteer](mailto:miwa@protocol.ai), [Apply for Expo Space](https://airtable.com/appM094R1Ma5HG757/shrk7f2pNpNHkFGld)',
+    },
     { question: 'How can I reach out to the organizers', answer: 'Please reach out to hello@miwa.events or camp@ipfs.io with any questions or suggestions' },
     {
       question: 'Code of conduct/covid policy',
@@ -405,7 +412,7 @@ If you are presenting any symptoms of being sick or have come in contact with so
                       <h4>{faq.question}</h4>
                       <div className={styles.plusSymbol}>{expandedFaqLeft === index ? '-' : '+'}</div>
                     </div>
-                    {expandedFaqLeft === index && <div className={styles.faqAnswer}>{faq.answer}</div>}
+                    {expandedFaqLeft === index && <div className={styles.faqAnswer}><MarkdownToJSX>{faq.answer}</MarkdownToJSX></div>}
                   </div>
                 ))}
               </div>
@@ -416,7 +423,7 @@ If you are presenting any symptoms of being sick or have come in contact with so
                       <h4>{faq.question}</h4>
                       <div className={styles.plusSymbol}>{expandedFaqRight === index ? '-' : '+'}</div>
                     </div>
-                    {expandedFaqRight === index && <div className={styles.faqAnswer}>{faq.answer}</div>}
+                    {expandedFaqRight === index && <div className={styles.faqAnswer}><MarkdownToJSX>{faq.answer}</MarkdownToJSX></div>}
                   </div>
                 ))}
               </div>
