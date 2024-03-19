@@ -48,8 +48,8 @@ export default function SectionCamppage({ upcomingEvents, scheduleData }) {
       answer: 'All tickets include access to the three-day event, breakfast, lunch, coffee + water all day, and one dinner event.',
     },
     {
-      question: 'Room and Board',
-      answer: 'There will be limited number of rooms on a block at the Radisson for $199 Euro per night. Attendees will are expected to book their own accommodations.',
+      question: 'Accommodations',
+      answer: 'There will be limited number of rooms on a block at the Radisson for Є199 Euro per night. Attendees will are expected to book their own accommodations.',
     },
   ];
 
@@ -88,7 +88,7 @@ If you are presenting any symptoms of being sick or have come in contact with so
                     <div className={styles.diptychHalf}>
                       <Link href={'https://lu.ma/ipfscamp24'} target="_blank">
                         <div className={styles.rainbowButton}>
-                          <span className={styles.boldText}>PRE-REGISTER</span>
+                          <span className={styles.boldText}>REGISTER NOW</span>
                         </div>
                       </Link>
                     </div>
@@ -175,45 +175,115 @@ If you are presenting any symptoms of being sick or have come in contact with so
           </div>
         </div>
       </section>
-      {/*
+
       <section>
         <GutterContainer>
+          <div className={styles.trackHeading}>Tracks</div>
           <div className={styles.tracksSection}>
-            <div className={styles.twoColumns}>
+            <div className={styles.trackColumns}>
               <div className={styles.trackContent}>
-                 
-                <h3 className={styles.h3} style={{ paddingBottom: '1rem' }}>
-                  Tracks at IPFS Camp
+                <h3 className={styles.trackTitle} style={{ paddingBottom: '1rem' }}>
+                  Keynotes
                 </h3>
-                <p className={styles.p}>
-                  Dive deep into the world of decentralized web by exploring various tracks tailored for developers, creators, and innovators at IPFS Camp. From beginner to
-                  advanced levels, there's something for everyone.
+                <p className={styles.trackDescription}>
+                  A warm and wonderful kickoff to IPFS Camp with keynote speakers, fireside chats, and a sampling of community talks and perspectives on the present and future of
+                  IPFS.
                 </p>
               </div>
               <div className={styles.trackContent}>
-                <h3 className={styles.h3} style={{ paddingBottom: '1rem' }}>
-                  Tracks at IPFS Camp
+                <h3 className={styles.trackTitle} style={{ paddingBottom: '1rem' }}>
+                  Decentralized Apps and Publishing
+                  <h5 style={{ paddingTop: '1rem' }}>(Chair: TBD)</h5>
                 </h3>
-                <p className={styles.p}>
-                  Dive deep into the world of decentralized web by exploring various tracks tailored for developers, creators, and innovators at IPFS Camp. From beginner to
-                  advanced levels, there's something for everyone.
+                <p className={styles.trackDescription}>
+                  Explore the latest tools, frameworks, and best practices for building and deploying dApps that are resilient and put users in control of their data.
+                </p>
+              </div>
+
+              <div className={styles.trackContent}>
+                <h3 className={styles.trackTitle} style={{ paddingBottom: '1rem' }}>
+                  Public Records and Human Rights
+                  <h5 style={{ paddingTop: '1rem' }}>(Chair: TBD)</h5>
+                </h3>
+                <p className={styles.trackDescription}>Discover how IPFS is being used to protect public records and support human rights initiatives worldwide.</p>
+              </div>
+              <div className={styles.trackContent}>
+                <h3 className={styles.trackTitle} style={{ paddingBottom: '1rem' }}>
+                  CIDs in the Age of Generative AI
+                  <h5 style={{ paddingTop: '1rem' }}>(Chair: TBD)</h5>
+                </h3>
+                <p className={styles.trackDescription}>
+                  In this track, we'll explore urgent challenges and opportunities in the age of AI-generated art, music, and text. Then, we’ll dive into how content-addressed data
+                  can forge new opportunities for creators and developers.
+                </p>
+              </div>
+              <div className={styles.trackContent}>
+                <h3 className={styles.trackTitle} style={{ paddingBottom: '1rem' }}>
+                  Syncing Bytes at Scale
+                  <h5 style={{ paddingTop: '1rem' }}>(Chair: TBD)</h5>
+                </h3>
+                <p className={styles.trackDescription}>
+                  Dive into the latest techniques and tools for efficiently syncing bytes at scale with IPFS. Learn how to optimize data transfer, ensure data integrity, and reduce
+                  bandwidth costs. Whether you're working with scientific, media, or enterprise data, this track has something for anyone working with large-scale data.
+                </p>
+              </div>
+              <div className={styles.trackContent}>
+                <h3 className={styles.trackTitle} style={{ paddingBottom: '1rem' }}>
+                  Libp2p Day
+                  <h5 style={{ paddingTop: '1rem' }}>(Chair: Dave Grantham)</h5>
+                </h3>
+                <p className={styles.trackDescription}>
+                  Join us for a full day dedicated to libp2p, the modular networking stack that powers IPFS, Ethereum, and other decentralized protocols. Learn about the latest
+                  developments in libp2p, including new transports, improved NAT traversal, and enhanced security features. Hear from the core developers and researchers behind
+                  libp2p, and discover how you can use this powerful library to build your own networks and applications.
+                </p>
+              </div>
+              <div className={styles.trackContent}>
+                <h3 className={styles.trackTitle} style={{ paddingBottom: '1rem' }}>
+                  IPLD, Databases, and the People Who Love Them
+                  <h5 style={{ paddingTop: '1rem' }}>(Chair: Robin Berjon)</h5>
+                </h3>
+                <p className={styles.trackDescription}>
+                  Meet the passionate developers and researchers pushing the boundaries of what's possible with IPLD. Learn how to use IPLD to build more efficient, interoperable
+                  databases and data structures.
+                </p>
+              </div>
+              <div className={styles.trackContent}>
+                <h3 className={styles.trackTitle} style={{ paddingBottom: '1rem' }}>
+                  Envi
+                  <h5 style={{ paddingTop: '1rem' }}>(Chair: Caitlin Moore)</h5>
+                </h3>
+                <p className={styles.trackDescription}>
+                  Meet the passionate developers and researchers pushing the boundaries of what's possible with IPLD. Learn how to use IPLD to build more efficient, interoperable
+                  databases and data structures.
                 </p>
               </div>
             </div>
           </div>
         </GutterContainer>
       </section>
-      */}
+
+      <section>
+        <GutterContainer>
+          <div className={styles.tracksSection}>
+            <div className="">
+              <div>Keynotes</div>
+              <div>
+                A warm and wonderful kickoff to IPFS Camp with keynote speakers, fireside chats, and a sampling of community talks and perspectives on the present and future of
+                IPFS.
+              </div>
+            </div>
+          </div>
+        </GutterContainer>
+      </section>
       <section>
         <div className={styles.ticketSection}>
           <div className={styles.ticketTitle}>Tickets</div>
           <p className={styles.description}>
-            All tickets include entry to the full 3-day event and coffee, <br />
-            morning pastries, lunch, and dinner at the IPFS Camp venue.
+            All tickets include access to the three-day event, breakfast, <br /> lunch, coffee + water all day, and one dinner event.
           </p>
           <div className={styles.ticketCardContainer}>
             <TicketCard name={'Early Bird'} price={'$395'} description={'Early Bird Ticket Wave 1, enjoy a 40% discount!'} ctaLink={'https://lu.ma/ipfscamp24'}></TicketCard>
-
             <TicketCard name={'Standard'} price={'$650'} description={'Available starting March 19.'} ctaLink={'https://lu.ma/ipfscamp24'}></TicketCard>
             <TicketCard
               name={'Supporter'}

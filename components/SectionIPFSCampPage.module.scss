@@ -235,7 +235,9 @@
   border: none;
   font-family: Inter;
   font-weight: 500;
-  transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
+  transition:
+    background 0.3s ease-in-out,
+    color 0.3s ease-in-out;
 
   &:hover {
     background: var(--color-black200);
@@ -307,7 +309,7 @@
   }
 }
 
-.tracksList{
+.tracksList {
   padding-top: 2rem;
   padding-bottom: 2rem;
   padding-left: 4rem;
@@ -626,7 +628,9 @@
     height: 100%;
     padding: 2rem;
     font-family: Inter;
-    transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
+    transition:
+      background 0.3s ease-in-out,
+      color 0.3s ease-in-out;
 
     p {
       margin: 0;
@@ -831,13 +835,29 @@
 
 .twoColumns {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(0, 1fr));
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(4, auto);
   gap: 3rem;
   align-items: center;
 
   z-index: 4;
 
   @media (max-width: 768px) {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.trackColumns {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(4, auto);
+  gap: 5rem;
+  align-items: start;
+
+  z-index: 4;
+
+  @media (max-width: 1024px) {
     display: flex;
     flex-direction: column;
   }
@@ -918,4 +938,31 @@
 
 .trackContent {
   color: var(--color-white);
+  display: flex;
+  flex-direction: row;
+  @media (max-width: 1024px) {
+    flex-direction: column;
+  }
+}
+
+.trackTitle {
+  width: 40%;
+  @media (max-width: 1024px) {
+    width: auto;
+  }
+}
+
+.trackDescription {
+  width: 70%;
+  margin-left: 2rem;
+  @media (max-width: 1024px) {
+    width: auto;
+    margin-left: 0%;
+  }
+}
+
+.trackHeading {
+  color: white;
+  font-size: 50px;
+  padding-bottom: 5rem;
 }

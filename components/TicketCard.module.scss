@@ -23,6 +23,27 @@
   }
 }
 
+.rainbowButton {
+  background: var(--color-rainbow);
+  border-bottom: none;
+  border-radius: var(--border-radius-small);
+  font-size: 1rem;
+  color: var(--color-black);
+  padding: 1rem;
+  cursor: pointer;
+  border: none;
+  font-family: Inter;
+  font-weight: 500;
+  transition:
+    background 0.3s ease-in-out,
+    color 0.3s ease-in-out;
+
+  &:hover {
+    background: var(--color-black);
+    color: var(--color-white);
+  }
+}
+
 .name {
   font-family: Inter;
   font-size: var(--font-size-medium);
