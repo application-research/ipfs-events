@@ -182,10 +182,12 @@ If you are presenting any symptoms of being sick or have come in contact with so
           </div>
         </div>
       </section>
-
       <section>
         <GutterContainer>
           <div className={styles.trackHeading}>Tracks</div>
+          <div className={styles.tracksSVGContainer}>
+            <TracksSVG />
+          </div>
           <div className={styles.tracksSection}>
             <div className={styles.trackColumns}>
               <div className={styles.trackContent}>
@@ -412,7 +414,11 @@ If you are presenting any symptoms of being sick or have come in contact with so
                       <h4>{faq.question}</h4>
                       <div className={styles.plusSymbol}>{expandedFaqLeft === index ? '-' : '+'}</div>
                     </div>
-                    {expandedFaqLeft === index && <div className={styles.faqAnswer}><MarkdownToJSX>{faq.answer}</MarkdownToJSX></div>}
+                    {expandedFaqLeft === index && (
+                      <div className={styles.faqAnswer}>
+                        <MarkdownToJSX>{faq.answer}</MarkdownToJSX>
+                      </div>
+                    )}
                   </div>
                 ))}
               </div>
@@ -423,7 +429,11 @@ If you are presenting any symptoms of being sick or have come in contact with so
                       <h4>{faq.question}</h4>
                       <div className={styles.plusSymbol}>{expandedFaqRight === index ? '-' : '+'}</div>
                     </div>
-                    {expandedFaqRight === index && <div className={styles.faqAnswer}><MarkdownToJSX>{faq.answer}</MarkdownToJSX></div>}
+                    {expandedFaqRight === index && (
+                      <div className={styles.faqAnswer}>
+                        <MarkdownToJSX>{faq.answer}</MarkdownToJSX>
+                      </div>
+                    )}
                   </div>
                 ))}
               </div>

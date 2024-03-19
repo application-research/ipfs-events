@@ -437,6 +437,18 @@
   font-size: var(--font-size-regular);
 }
 
+.tracksSVGContainer {
+  position: absolute;
+  right: 0;
+  top: 195%;
+  overflow: hidden;
+  z-index: 1;
+
+  @media (max-width: 1050px) {
+    display: none;
+  }
+}
+
 .campEvents {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -870,15 +882,30 @@
   grid-template-rows: repeat(4, auto);
   gap: 5rem;
   align-items: start;
+  column-gap: 5rem;
+  position: relative;
 
   z-index: 4;
+
+  &:after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: 1px;
+    background-image: linear-gradient(to bottom, #FF5F6D, #FFC371, #FFFDC4, #84FAB0, #8FD3F4);
+  }
 
   @media (max-width: 1024px) {
     display: flex;
     flex-direction: column;
+
+    &:after {
+      content: none;
+    }
   }
 }
-
 .imageStyle {
   max-width: 100%;
   height: auto;
@@ -981,4 +1008,5 @@
   color: white;
   font-size: 50px;
   padding-bottom: 5rem;
+  z-index: 2;
 }
