@@ -440,9 +440,13 @@
 .tracksSVGContainer {
   position: absolute;
   right: -10%;
-  top: 195%;
+  top: 2400px;
   overflow: hidden;
   z-index: 1;
+
+  @media (max-width: 1250px) {
+    top: 2250px;
+  }
 
   @media (max-width: 1050px) {
     display: none;
