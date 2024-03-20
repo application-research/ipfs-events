@@ -25,7 +25,7 @@ export async function generateMetadata({ params, searchParams }) {
       description,
       url,
       // SUMMARY_LARGE_IMAGE: 1500x785
-      images: ['https://ipfsevents.io/assets/ipfs-camp-2024.png'],
+      images: ['/ipfs-camp-2024.png'],
     },
     twitter: {
       title,
