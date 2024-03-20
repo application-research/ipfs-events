@@ -44,7 +44,7 @@ export default function SectionCamppage({ upcomingEvents, scheduleData }) {
     {
       question: 'What is IPFS Camp and who is it for?',
       answer:
-        'IPFS Camp is for those who want to bend the arc of the Internet to be more open, efficient, and secure. It's a gathering for the entire IPFS community: builders, operators, researchers… and you! There will be talks, workshops, discussion circles, hacking time, and more — all focused on celebrating and advancing IPFS.',
+        'IPFS Camp is for those who want to bend the arc of the Internet to be more open, efficient, and secure. It\'s a gathering for the entire IPFS community: builders, operators, researchers… and you! There will be talks, workshops, discussion circles, hacking time, and more — all focused on celebrating and advancing IPFS.',
     },
     {
       question: 'What does the ticket include?',
@@ -65,13 +65,11 @@ export default function SectionCamppage({ upcomingEvents, scheduleData }) {
     { question: 'How can I reach out to the organizers?', answer: 'Please reach out to camp@ipfs.io with any questions or suggestions.' },
     {
       question: 'Code of Conduct',
-      answer: `This event will follow the [IPFS Code of Conduct](https://github.com/ipfs/community/blob/master/code-of-conduct.md).,
+      answer: 'This event will follow the [IPFS Code of Conduct](https://github.com/ipfs/community/blob/master/code-of-conduct.md).',
     },
     {
       question: 'What is the COVID / sick policy?',
-      answer: `Masks will be provided at event entrances and throughout the venue.
-    
-If you are presenting any symptoms of respiratory illness or have come in contact with someone who has presented symptoms or tested positive in the last five days, please do not attend the event for your own and all other attendees' health and safety. You may email camp@ipfs.io for a refund. Rest up and feel better! `,
+      answer: 'Masks will be provided at event entrances and throughout the venue. If you are presenting any symptoms of respiratory illness or have come in contact with someone who has presented symptoms or tested positive in the last five days, please do not attend the event for your own and all other attendees\' health and safety. You may email camp@ipfs.io for a refund. Rest up and feel better!',
     },
   ];
 
