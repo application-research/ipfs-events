@@ -44,32 +44,34 @@ export default function SectionCamppage({ upcomingEvents, scheduleData }) {
     {
       question: 'What is IPFS Camp and who is it for?',
       answer:
-        'IPFS Camp is for those who want to bend the arc of the Internet to be more open, efficient, and secure. IPFS Camp connects builders and users, organized by thematic tracks, and inspired by the in-depth conversations and unbounded energy of previous IPFS gatherings. Over three days, we will host hundreds of talks, workshops, and hacking sessions, all focused on the latest advancements in decentralized technologies and the future of the Internet.',
+        'IPFS Camp is for those who want to bend the arc of the Internet to be more open, efficient, and secure. It's a gathering for the entire IPFS community: builders, operators, researchers… and you! There will be talks, workshops, discussion circles, hacking time, and more — all focused on celebrating and advancing IPFS.',
     },
     {
       question: 'What does the ticket include?',
-      answer: 'All tickets include access to the three-day event, breakfast, lunch, coffee + water all day, and one dinner event.',
+      answer: 'All tickets include entry to the full 3-day event with coffee, morning pastries, and lunch each day, plus an opening dinner on Day 1',
     },
     {
       question: 'Accommodations',
-      answer: 'There will be limited number of rooms on a block at the Radisson for Є199 Euro per night. Attendees will be expected to book their own accommodations.',
+      answer: 'The venue is located in the heart of Brussels. If you would like to stay at the Radisson, a limited number of rooms are available via a room block at Є199 per night. Booking details will be provided in your confirmation email.',
     },
   ];
 
   const faqsRight = [
     {
-      question: 'How can I participate?',
+      question: 'Sounds great! How can I participate?',
       answer:
         'You can: [Submit a track or talk](https://airtable.com/appM094R1Ma5HG757/shrWn6XaRgUkYWPm3), [Sponsor](https://airtable.com/appM094R1Ma5HG757/shrXTUagRUI1aC4G1), [Apply as an IPFS Scholar](https://airtable.com/appM094R1Ma5HG757/shrQGQ8gH7OUXdUuc), [Become a key organizer](mailto:miwa@protocol.ai), [Volunteer](mailto:camp@ipfs.io), [Apply for Expo Space](https://airtable.com/appM094R1Ma5HG757/shrk7f2pNpNHkFGld)',
     },
-    { question: 'How can I reach out to the organizers', answer: 'Please reach out to hello@miwa.events or camp@ipfs.io with any questions or suggestions' },
+    { question: 'How can I reach out to the organizers?', answer: 'Please reach out to camp@ipfs.io with any questions or suggestions.' },
     {
-      question: 'Code of conduct/covid policy',
-      answer: `We will be following the [Code of Conduct](https://github.com/filecoin-project/community/blob/master/CODE_OF_CONDUCT.md).
-
-Masks and testing are optional and at your discretion.
-
-If you are presenting any symptoms of being sick or have come in contact with someone who has presented symptoms or tested positive in the last five days, please do not attend the event for your own and all other attendees' health and safety. Rest up and feel better!`,
+      question: 'Code of Conduct',
+      answer: `This event will follow the [IPFS Code of Conduct](https://github.com/ipfs/community/blob/master/code-of-conduct.md).,
+    },
+    {
+      question: 'What is the COVID / sick policy?',
+      answer: `Masks will be provided at event entrances and throughout the venue.
+    
+If you are presenting any symptoms of respiratory illness or have come in contact with someone who has presented symptoms or tested positive in the last five days, please do not attend the event for your own and all other attendees' health and safety. You may email camp@ipfs.io for a refund. Rest up and feel better! `,
     },
   ];
 
