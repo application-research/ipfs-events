@@ -95,7 +95,7 @@ export default function SectionCamppage({ upcomingEvents, scheduleData }) {
                     <div className={styles.diptychHalf}>
                       <Link href={'https://lu.ma/ipfscamp24'} target="_blank">
                         <div className={styles.rainbowButton}>
-                          <span className={styles.boldText}>REGISTER NOW</span>
+                          <span className={styles.boldText}>GET TICKETS</span>
                         </div>
                       </Link>
                     </div>
