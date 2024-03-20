@@ -309,16 +309,16 @@ export default function SectionCamppage({ upcomingEvents, scheduleData }) {
           <div className={styles.getInvolvedColumns}>
             <div className={styles.involvementColumn}>
               <div className={styles.rainbowBorderWrapper}>
-                <Link href={'https://airtable.com/appM094R1Ma5HG757/shrXTUagRUI1aC4G1'} target="_blank">
+                <Link href={'https://airtable.com/appM094R1Ma5HG757/shrWn6XaRgUkYWPm3'} target="_blank">
                   <div className={styles.involvementContent}>
-                    <h4 className={styles.involvementText}>Become a Sponsor</h4>
+                    <h4 className={styles.involvementText}>Submit a Track or Talk</h4>
                   </div>
                 </Link>
               </div>
               <div className={styles.rainbowBorderWrapper}>
-                <Link href={'https://airtable.com/appM094R1Ma5HG757/shrWn6XaRgUkYWPm3'} target="_blank">
+                <Link href={'https://airtable.com/appM094R1Ma5HG757/shrXTUagRUI1aC4G1'} target="_blank">
                   <div className={styles.involvementContent}>
-                    <h4 className={styles.involvementText}>Submit a track or talk</h4>
+                    <h4 className={styles.involvementText}>Become a Sponsor</h4>
                   </div>
                 </Link>
               </div>
@@ -331,24 +331,9 @@ export default function SectionCamppage({ upcomingEvents, scheduleData }) {
                   </div>
                 </Link>
               </div>
-              <div className={styles.rainbowBorderWrapper}>
-                <Link href={'https://airtable.com/appM094R1Ma5HG757/shrk7f2pNpNHkFGld'} target="_blank">
-                  <div className={styles.involvementContent}>
-                    <h4 className={styles.involvementText}>Apply for Expo Space</h4>
-                  </div>
-                </Link>
-              </div>
             </div>
-            <div className={styles.involvementColumn}>
               <div className={styles.rainbowBorderWrapper}>
-                <Link href={'mailto:camp@ipfs.io'} target="_blank">
-                  <div className={styles.involvementContent}>
-                    <h4 className={styles.involvementText}>Become a Key Organizer</h4>
-                  </div>
-                </Link>
-              </div>
-              <div className={styles.rainbowBorderWrapper}>
-                <Link href={'mailto:camp@ipfs.io'} target="_blank">
+                <Link href={'mailto:camp@ipfs.io&subject=Volunteer'} target="_blank">
                   <div className={styles.involvementContent}>
                     <h4 className={styles.involvementText}>Volunteer</h4>
                   </div>
