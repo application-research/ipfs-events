@@ -32,9 +32,9 @@ export default function NavbarLogoMiddle({ navContent }) {
                     {item?.dropdown && (
                       <section className={styles.dropdownContainer}>
                         <div className={`${styles.container}`} style={{ gap: '0.2rem', cursor: 'pointer' }} onClick={() => setDropdownVisible(!isDropdownVisible)}>
-                          <Link linkStyle="animated-white" href={item?.link ?? ''}>
+                          {/* <Link linkStyle="animated-white" href={item?.link ?? ''}> */}
                             <p className={styles.whiteText}>{item.title}</p>
-                          </Link>
+                          {/* </Link> */}
 
                           <ArrowSVGStyleTwo className={styles.arrow} />
                         </div>
