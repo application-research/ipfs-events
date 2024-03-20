@@ -25,7 +25,13 @@ export async function generateMetadata({ params, searchParams }) {
       description,
       url,
       // SUMMARY_LARGE_IMAGE: 1500x785
-      images: ['/ipfs-camp-2024.png'],
+      images: [
+        {
+          url: 'https://intdev-global.s3.us-west-2.amazonaws.com/public/internet-dev/09c9937a-10cc-444d-906b-8194ef20b77b.png',
+          width: 1200,
+          height: 628,
+        },
+      ],
     },
     twitter: {
       title,
@@ -33,6 +39,7 @@ export async function generateMetadata({ params, searchParams }) {
       url,
       handle: '@filecoin',
       cardType: 'summary_large_image',
+      images: ['https://intdev-global.s3.us-west-2.amazonaws.com/public/internet-dev/09c9937a-10cc-444d-906b-8194ef20b77b.png'],
     },
   };
 }
