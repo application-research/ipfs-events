@@ -52,7 +52,7 @@ export default function SectionCamppage({ upcomingEvents, scheduleData }) {
     },
     {
       question: 'Accommodations',
-      answer: 'There will be limited number of rooms on a block at the Radisson for Є199 Euro per night. Attendees will are expected to book their own accommodations.',
+      answer: 'There will be limited number of rooms on a block at the Radisson for Є199 Euro per night. Attendees will be expected to book their own accommodations.',
     },
   ];
 
@@ -60,7 +60,7 @@ export default function SectionCamppage({ upcomingEvents, scheduleData }) {
     {
       question: 'How can I participate?',
       answer:
-        'You can: [Submit a track or talk](https://airtable.com/appM094R1Ma5HG757/shrWn6XaRgUkYWPm3), [Sponsor](https://airtable.com/appM094R1Ma5HG757/shrXTUagRUI1aC4G1), [Apply as an IPFS Scholar](https://airtable.com/appM094R1Ma5HG757/shrQGQ8gH7OUXdUuc), [Become a key organizer](mailto:miwa@protocol.ai), [Volunteer](mailto:miwa@protocol.ai), [Apply for Expo Space](https://airtable.com/appM094R1Ma5HG757/shrk7f2pNpNHkFGld)',
+        'You can: [Submit a track or talk](https://airtable.com/appM094R1Ma5HG757/shrWn6XaRgUkYWPm3), [Sponsor](https://airtable.com/appM094R1Ma5HG757/shrXTUagRUI1aC4G1), [Apply as an IPFS Scholar](https://airtable.com/appM094R1Ma5HG757/shrQGQ8gH7OUXdUuc), [Become a key organizer](mailto:miwa@protocol.ai), [Volunteer](mailto:camp@ipfs.io), [Apply for Expo Space](https://airtable.com/appM094R1Ma5HG757/shrk7f2pNpNHkFGld)',
     },
     { question: 'How can I reach out to the organizers', answer: 'Please reach out to hello@miwa.events or camp@ipfs.io with any questions or suggestions' },
     {
@@ -341,14 +341,14 @@ If you are presenting any symptoms of being sick or have come in contact with so
             </div>
             <div className={styles.involvementColumn}>
               <div className={styles.rainbowBorderWrapper}>
-                <Link href={'mailto:miwa@protocol.ai'} target="_blank">
+                <Link href={'mailto:camp@ipfs.io'} target="_blank">
                   <div className={styles.involvementContent}>
                     <h4 className={styles.involvementText}>Become a Key Organizer</h4>
                   </div>
                 </Link>
               </div>
               <div className={styles.rainbowBorderWrapper}>
-                <Link href={'mailto:miwa@protocol.ai'} target="_blank">
+                <Link href={'mailto:camp@ipfs.io'} target="_blank">
                   <div className={styles.involvementContent}>
                     <h4 className={styles.involvementText}>Volunteer</h4>
                   </div>
@@ -358,12 +358,13 @@ If you are presenting any symptoms of being sick or have come in contact with so
           </div>
         </section>
 
+        {/*
         <h1 className={styles.h3} style={{ paddingBottom: '2rem', color: 'var(--color-white)' }}>
           Schedule
         </h1>
 
         <ScheduleIPFSCamp2024 scheduleData={scheduleData} />
-
+         */}
         <div style={{ display: 'grid', rowGap: '8rem' }}>
           <div style={{ display: 'grid', rowGap: '2rem' }}>
             <div className={styles.headerWrapper}>
