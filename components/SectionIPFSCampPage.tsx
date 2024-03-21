@@ -59,7 +59,7 @@ export default function SectionCamppage({ upcomingEvents, scheduleData }) {
             href: 'https://www.ipfs.com/',
           },
           {
-            src: '/media/pl_logo.png',
+            src: '/media/pl-logo.png',
             href: 'https://protocol.ai/',
           },
         ],

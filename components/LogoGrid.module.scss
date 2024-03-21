@@ -69,11 +69,12 @@
   align-items: center;
   justify-content: center;
   border-radius: var(--border-radius-medium);
-  background: var(--color-rainbow);
+  border: 1px solid var(--color-white);
+  background: var(--color-black);
   gap: 2rem;
 
   &:hover {
-    background: var(--color-white);
+    background: var(--color-gray);
     box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
   }
 }
