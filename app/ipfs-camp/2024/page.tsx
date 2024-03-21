@@ -44,11 +44,11 @@ export default async function Page(props) {
   const footerContent = FOOTER_TINY_CONTENT;
   const homepage = IPFS_CAMP_PAGE_CONTENT;
   const navContent = NAVIGATION_HOMEPAGE_CONTENT;
-
+  const airtableAPI = 'airtable/ipfs-camp2024';
   function fetchData() {
     return new Promise(async (resolve, reject) => {
       try {
-        const airtableEndpoint = 'airtable/ipfs-camp2024';
+        const airtableEndpoint = airtableAPI;
         const data = await makeRequest({ endpoint: airtableEndpoint, host });
         resolve(data);
       } catch (error) {
