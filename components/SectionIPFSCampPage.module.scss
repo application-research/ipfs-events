@@ -129,6 +129,7 @@
 }
 
 .pageContainer {
+  padding-top: 2rem;
   background: linear-gradient(to bottom, #022232 0%, var(--color-black) 20%);
 }
 
@@ -235,9 +236,7 @@
   border: none;
   font-family: Inter;
   font-weight: 500;
-  transition:
-    background 0.3s ease-in-out,
-    color 0.3s ease-in-out;
+  transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
 
   &:hover {
     background: var(--color-black200);
@@ -438,15 +437,13 @@
 }
 
 .tracksSVGContainer {
+  overflow: hidden;
   position: absolute;
-  right: -10%;
-  top: 2400px;
   overflow: hidden;
   z-index: 1;
-
-  @media (max-width: 1250px) {
-    top: 2250px;
-  }
+  right: -6rem;
+  top: 50rem;
+  z-index: 1;
 
   @media (max-width: 1050px) {
     display: none;
@@ -535,7 +532,7 @@
       gap: 2rem;
       flex-direction: column;
     }
-    
+
     @media (max-width: 768px) {
       padding: 0;
     }
@@ -656,9 +653,7 @@
     height: 100%;
     padding: 2rem;
     font-family: Inter;
-    transition:
-      background 0.3s ease-in-out,
-      color 0.3s ease-in-out;
+    transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
 
     p {
       margin: 0;
@@ -891,13 +886,13 @@
   z-index: 4;
 
   &:after {
-    content: "";
+    content: '';
     position: absolute;
     left: 50%;
     top: 0;
     bottom: 0;
     width: 1px;
-    background-image: linear-gradient(to bottom, #FF5F6D, #FFC371, #FFFDC4, #84FAB0, #8FD3F4);
+    background-image: linear-gradient(to bottom, #ff5f6d, #ffc371, #fffdc4, #84fab0, #8fd3f4);
   }
 
   @media (max-width: 1024px) {
@@ -993,6 +988,8 @@
 
 .trackTitle {
   width: 40%;
+  color: var(--color-blue-green);
+
   @media (max-width: 1024px) {
     width: auto;
   }
