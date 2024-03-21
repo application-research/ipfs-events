@@ -5,6 +5,8 @@ import styles from '@components/SectionIPFSCampPage.module.scss';
 import { Ratio } from '@root/common/types';
 import { VideoPlayer } from './VideoPlayer';
 import { MarkdownToJSX } from './Markdown';
+import { BlockDirectionEnum, BlockTypeEnum, CallToActionVariantEnum, NavigationTypeEnum, TypeName } from '@root/common/types';
+
 import TracksSVG from './svgs/TracksSVG';
 
 import GutterContainer from '@root/components/GutterContainer';
@@ -12,13 +14,8 @@ import IPFSCampFooter from './IPFSCampFooter';
 import Link from './Link';
 import React, { useState } from 'react';
 import ScheduleIPFSCamp2024 from './ScheduleIPFSCamp2024';
+import BlockBuilder from './BlockBuilder';
 import TicketCard from '@root/components/TicketCard';
-
-/* TODOS:
- * Fix mobile view for squiggles
- * Work on the dropdown functionality
- * Refactor this code into something more componentized
- */
 
 export default function SectionCamppage({ upcomingEvents, scheduleData }) {
   const [expandedFaqLeft, setExpandedFaqLeft] = useState(null);
@@ -38,6 +35,36 @@ export default function SectionCamppage({ upcomingEvents, scheduleData }) {
         setExpandedFaqRight(index);
       }
     }
+  };
+
+  const sponsorBlock = {
+    id: '2',
+    subtitle: 'Sponsors',
+    direction: BlockDirectionEnum.COLUMN,
+    cta: {
+      type: CallToActionVariantEnum.BORDER,
+      target: '_blank',
+      buttonColor: 'linear-gradient(to left, #E01633, #CDB235, #4FD3CD, #0098C9)',
+      textColor: 'black',
+      text: 'Sponsor IPFS Camp 2024',
+      link: 'https://airtable.com/appM094R1Ma5HG757/shrWn6XaRgUkYWPm3',
+    },
+    block: [
+      {
+        id: 'participating-teams',
+        type: BlockTypeEnum.LOGO_GRID,
+        logosLarge: [
+          {
+            src: '/media/IPFS_logo.png',
+            href: 'https://www.ipfs.com/',
+          },
+          {
+            src: '/media/pl_logo.png',
+            href: 'https://protocol.ai/',
+          },
+        ],
+      },
+    ],
   };
 
   const faqsLeft = [
@@ -457,6 +484,11 @@ export default function SectionCamppage({ upcomingEvents, scheduleData }) {
               </svg>
             </div> */}
           </section>
+          <section>
+            <BlockBuilder {...sponsorBlock} />
+          </section>
+          {/* Empty section block for gap */}
+          <section></section>
         </div>
       </GutterContainer>
 

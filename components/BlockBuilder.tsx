@@ -21,14 +21,18 @@ function BlockBuilderDirectionStyle(direction) {
   }
 }
 
-export default function BlockBuilder({ block, cta, cta2, title, subtitle, id, border, description, direction }: any) {
+export default function BlockBuilder({ block, cta, cta2, title, subtitle, id, border, color, description, direction }: any) {
   return (
     <div id={id} style={{ display: 'grid', rowGap: '2rem', background: block?.backgroundColor ?? '' }}>
       {(title || description || subtitle) && (
         <section className={styles.row} style={{ borderBottom: border ? '1px solid var(--color-text)' : '' }}>
           <div style={{ display: 'grid', rowGap: '1rem' }}>
             {title && <h1 className={styles.mainTitle}>{title}</h1>}
-            {subtitle && <h4 className={styles.subtitle}>{subtitle}</h4>}
+            {subtitle && (
+              <h4 style={{ color: color ?? 'var(--color-white)' }} className={styles.subtitle}>
+                {subtitle}
+              </h4>
+            )}
             {description && <p dangerouslySetInnerHTML={{ __html: description }} />}
           </div>
 
