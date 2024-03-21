@@ -13,7 +13,7 @@ export default function TicketCard({ ctaLink, description, price, name }) {
         <div className={styles.callToAction}>
           {ctaLink && (
             <Link href={ctaLink} className={styles.ctaLink}>
-              <button className={styles.rainbowButton}>Purchase Tickets</button>
+              <button className={styles.rainbowButton}>Get Tickets</button>
             </Link>
           )}
         </div>

@@ -95,7 +95,7 @@ export default function SectionCamppage({ upcomingEvents, scheduleData }) {
                     <div className={styles.diptychHalf}>
                       <Link href={'https://lu.ma/ipfscamp24'} target="_blank">
                         <div className={styles.rainbowButton}>
-                          <span className={styles.boldText}>REGISTER NOW</span>
+                          <span className={styles.boldText}>GET TICKETS</span>
                         </div>
                       </Link>
                     </div>
@@ -292,15 +292,15 @@ export default function SectionCamppage({ upcomingEvents, scheduleData }) {
         <div className={styles.ticketSection}>
           <div className={styles.ticketTitle}>Tickets</div>
           <p className={styles.description}>
-            All tickets include access to the three-day event, breakfast, <br /> lunch, coffee + water all day, and one dinner event.
+            All tickets include entry to the full 3-day event with coffee, <br /> morning pastries, and lunch each day, plus an opening dinner.
           </p>
           <div className={styles.ticketCardContainer}>
             <TicketCard name={'Early Bird'} price={'$395'} description={'Early Bird Ticket Wave 1, enjoy a 40% discount!'} ctaLink={'https://lu.ma/ipfscamp24'}></TicketCard>
             <TicketCard name={'Standard'} price={'$650'} description={'Available starting March 19.'} ctaLink={'https://lu.ma/ipfscamp24'}></TicketCard>
             <TicketCard
               name={'Supporter'}
-              price={'$2000'}
-              description={'You love IPFS and want (and are able!) to contribute to the evolution of IPFS. Thank you!'}
+              price={'$2,500'}
+              description={'You love IPFS and want (and are able!) to support yourself + 1 Scholar to attend. Thank you!'}
               ctaLink={'https://lu.ma/ipfscamp24'}
             ></TicketCard>
           </div>
