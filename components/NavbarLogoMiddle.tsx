@@ -25,9 +25,7 @@ export default function NavbarLogoMiddle({ navContent }) {
                 return (
                   <div key={index}>
                     {!item.dropdown && (
-                      <Link linkStyle="animated" href={item.link}>
-                        <p>{item.title}</p>
-                      </Link>
+                      <p>{item.title}</p>
                     )}
                     {item?.dropdown && (
                       <section className={styles.dropdownContainer}>
