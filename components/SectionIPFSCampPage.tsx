@@ -44,7 +44,7 @@ export default function SectionCamppage({ upcomingEvents, scheduleData }) {
     {
       question: 'What is IPFS Camp and who is it for?',
       answer:
-        'IPFS Camp is for those who want to bend the arc of the Internet to be more open, efficient, and secure. It\'s a gathering for the entire IPFS community: builders, operators, researchers… and you! There will be talks, workshops, discussion circles, hacking time, and more — all focused on celebrating and advancing IPFS.',
+        "IPFS Camp is for those who want to bend the arc of the Internet to be more open, efficient, and secure. It's a gathering for the entire IPFS community: builders, operators, researchers… and you! There will be talks, workshops, discussion circles, hacking time, and more — all focused on celebrating and advancing IPFS.",
     },
     {
       question: 'What does the ticket include?',
@@ -52,7 +52,8 @@ export default function SectionCamppage({ upcomingEvents, scheduleData }) {
     },
     {
       question: 'Accommodations',
-      answer: 'The venue is located in the heart of Brussels. If you would like to stay at the Radisson, a limited number of rooms are available via a room block at Є199 per night. Booking details will be provided in your confirmation email.',
+      answer:
+        'The venue is located in the heart of Brussels. If you would like to stay at the Radisson, a limited number of rooms are available via a room block at Є199 per night. Booking details will be provided in your confirmation email.',
     },
   ];
 
@@ -69,7 +70,8 @@ export default function SectionCamppage({ upcomingEvents, scheduleData }) {
     },
     {
       question: 'What is the COVID / sick policy?',
-      answer: 'Masks will be provided at event entrances and throughout the venue. If you are presenting any symptoms of respiratory illness or have come in contact with someone who has presented symptoms or tested positive in the last five days, please do not attend the event for your own and all other attendees\' health and safety. You may email camp@ipfs.io for a refund. Rest up and feel better!',
+      answer:
+        "Masks will be provided at event entrances and throughout the venue. If you are presenting any symptoms of respiratory illness or have come in contact with someone who has presented symptoms or tested positive in the last five days, please do not attend the event for your own and all other attendees' health and safety. You may email camp@ipfs.io for a refund. Rest up and feel better!",
     },
   ];
 
@@ -84,9 +86,11 @@ export default function SectionCamppage({ upcomingEvents, scheduleData }) {
             </div>
             <header className={styles.header} style={{ paddingBottom: '4rem' }}>
               <div className={styles.headerText}>
-                <h2 className={styles.h2}>IPFS Camp is for those who want to bend the arc of the Internet to be more open, efficient, and secure.</h2>
+                <h2 className={styles.h2}>IPFS is more than just a ‘conference’; it’s a global movement of builders and visionaries committed to creating a better web. </h2>
                 <p className={styles.p}>
-                  It\'s a gathering for the entire community: builders, operators, researchers… and you! Talks, workshops, discussion circles, hacking time, and more — all focused on celebrating and advancing a better web. Connecting builders and real-world users, organized by thematic tracks, and inspired by both the in-depth conversations and unbounded energy of previous IPFS gatherings, it will be an event to remember.
+                  Over the course of three days, we will host hundreds of talks, workshops, and hacking sessions, all focused on the latest advancements in decentralized
+                  technologies and the future of the internet. IPFS Camp provides the ideal platform to exchange ideas, collaborate, and co-create solutions for the real-world
+                  challenges that the web is currently facing.
                 </p>
                 <div className={styles.rainbowBorderWrapper}>
                   <div className={styles.innerContent}>
@@ -163,15 +167,17 @@ export default function SectionCamppage({ upcomingEvents, scheduleData }) {
                   What to Expect
                 </h1>
                 <p className={styles.p}>
-                  IPFS is more than just a ‘conference’; it’s a global movement of builders, experts, problem-solvers, and visionaries immersed in creating a better web. Expect hands-on workshops, in-depth discussions, and networking opportunities that will help you better understand how to apply the latest advancements in decentralized technologies to solving your real-world challenges.
+                  IPFS Camp is a chance for developers, designers, and enthusiasts from around the globe to connect and learn about the InterPlanetary File System (IPFS). Expect
+                  hands-on workshops, in-depth discussions, and networking opportunities that will help you better understand how to build the decentralized web.
                 </p>
-                <h1>Past Participants Say...</h1>
+                <h1>Tracks to Look Forward To...</h1>
                 <ul className={styles.tracksList}>
-                  <li>"Talking with extremely talented and committed people helped me learn a lot."</li>
-                  <li>"Great sessions and interactive discussions left me feeling inspired and excited for the future."</li>
-                  <li>"Everyone was open-minded to newbie questions, challenges, and having a general goal of curiosity and learning."</li>
-                  <li>"We found similar projects that closely align, to learn from, to integrate with."</li>
-                  <li>"My questions got answered quickly from folks with expert knowledge of IPFS and the ecosystem."</li>
+                  <li>⭐️ Decentralized Apps and Publishing</li>
+                  <li>⭐️ Public Records and Human Rights</li>
+                  <li>⭐️ CIDs in the Age of Generative AI</li>
+                  <li>⭐️ Syncing Bytes at Scale</li>
+                  <li>⭐️ Libp2p Day</li>
+                  <li>... & more!</li>
                 </ul>
               </div>
             </div>
@@ -191,13 +197,14 @@ export default function SectionCamppage({ upcomingEvents, scheduleData }) {
                   Opening Keynotes
                 </h3>
                 <p className={styles.trackDescription}>
-                  A warm and wonderful kickoff to IPFS Camp with keynote speakers, fireside chats, and a sampling of community talks and perspectives on the present and future of IPFS.
+                  A warm and wonderful kickoff to IPFS Camp with keynote speakers, fireside chats, and a sampling of community talks and perspectives on the present and future of
+                  IPFS.
                 </p>
               </div>
               <div className={styles.trackContent}>
                 <h3 className={styles.trackTitle} style={{ paddingBottom: '1rem' }}>
                   Decentralized Apps and Publishing
-                  <h5 style={{ paddingTop: '1rem' }}></h5>
+                  {/* <h5 style={{ paddingTop: '1rem' }}></h5> */}
                 </h3>
                 <p className={styles.trackDescription}>
                   Explore the latest tools, frameworks, and best practices for building and deploying dApps that are resilient and put users in control of their data.
@@ -207,32 +214,34 @@ export default function SectionCamppage({ upcomingEvents, scheduleData }) {
               <div className={styles.trackContent}>
                 <h3 className={styles.trackTitle} style={{ paddingBottom: '1rem' }}>
                   Public Records and Human Rights
-                  <h5 style={{ paddingTop: '1rem' }}></h5>
+                  {/* <h5 style={{ paddingTop: '1rem' }}></h5> */}
                 </h3>
                 <p className={styles.trackDescription}>Discover how IPFS is being used to protect public records and support human rights initiatives worldwide.</p>
               </div>
               <div className={styles.trackContent}>
                 <h3 className={styles.trackTitle} style={{ paddingBottom: '1rem' }}>
                   AI in 2024: Ethics, Ownership, and Data
-                  <h5 style={{ paddingTop: '1rem' }}></h5>
+                  {/* <h5 style={{ paddingTop: '1rem' }}></h5> */}
                 </h3>
                 <p className={styles.trackDescription}>
-                  In this track, we'll explore urgent topics of attribution, ethics, and payment in the age of AI-generated art, music, and text. Then, we’ll dive into how content-addressed data can forge new opportunities for creators and developers.
+                  In this track, we'll explore urgent topics of attribution, ethics, and payment in the age of AI-generated art, music, and text. Then, we’ll dive into how
+                  content-addressed data can forge new opportunities for creators and developers.
                 </p>
               </div>
               <div className={styles.trackContent}>
                 <h3 className={styles.trackTitle} style={{ paddingBottom: '1rem' }}>
-                  Climate ​​Resilience and IPFS
-                  <h5 style={{ paddingTop: '1rem' }}></h5>
+                  Climate Resilience and IPFS
+                  {/* <h5 style={{ paddingTop: '1rem' }}></h5> */}
                 </h3>
                 <p className={styles.trackDescription}>
-                  In the face of the growing climate crisis, reliable and transparent environmental data is more crucial than ever. This track explores real-world applications of IPFS in environmental monitoring, climate modeling, and disaster response.
+                  In the face of the growing climate crisis, reliable and transparent environmental data is more crucial than ever. This track explores real-world applications of
+                  IPFS in environmental monitoring, climate modeling, and disaster response.
                 </p>
               </div>
               <div className={styles.trackContent}>
                 <h3 className={styles.trackTitle} style={{ paddingBottom: '1rem' }}>
                   Syncing Bytes at Scale
-                  <h5 style={{ paddingTop: '1rem' }}></h5>
+                  {/* <h5 style={{ paddingTop: '1rem' }}></h5> */}
                 </h3>
                 <p className={styles.trackDescription}>
                   Dive into the latest techniques and tools for efficiently syncing bytes at scale with IPFS. Learn how to optimize data transfer, ensure data integrity, and reduce
@@ -242,25 +251,28 @@ export default function SectionCamppage({ upcomingEvents, scheduleData }) {
               <div className={styles.trackContent}>
                 <h3 className={styles.trackTitle} style={{ paddingBottom: '1rem' }}>
                   Libp2p Day
-                  <h5 style={{ paddingTop: '1rem' }}></h5>
+                  {/* <h5 style={{ paddingTop: '1rem' }}></h5> */}
                 </h3>
                 <p className={styles.trackDescription}>
-                  Join us for a full day dedicated to libp2p, the modular networking stack that powers IPFS, Ethereum, and other decentralized protocols. Learn about the latest developments in libp2p, including new transports, improved NAT traversal, and enhanced security features. Hear from the core developers and researchers behind libp2p, and discover how you can use this powerful library to build your own networks and applications.
+                  Join us for a full day dedicated to libp2p, the modular networking stack that powers IPFS, Ethereum, and other decentralized protocols. Learn about the latest
+                  developments in libp2p, including new transports, improved NAT traversal, and enhanced security features. Hear from the core developers and researchers behind
+                  libp2p, and discover how you can use this powerful library to build your own networks and applications.
                 </p>
               </div>
               <div className={styles.trackContent}>
                 <h3 className={styles.trackTitle} style={{ paddingBottom: '1rem' }}>
                   IPLD, Databases, and the People Who Love Them
-                  <h5 style={{ paddingTop: '1rem' }}></h5>
+                  {/* <h5 style={{ paddingTop: '1rem' }}></h5> */}
                 </h3>
                 <p className={styles.trackDescription}>
-                  Meet the passionate developers and researchers pushing the boundaries of what's possible with IPLD. Learn how experts are IPLD to build more efficient, interoperable databases and data structures, and join the efforts to push IPLD forward.
+                  Meet the passionate developers and researchers pushing the boundaries of what's possible with IPLD. Learn how experts are IPLD to build more efficient,
+                  interoperable databases and data structures, and join the efforts to push IPLD forward.
                 </p>
               </div>
               <div className={styles.trackContent}>
                 <h3 className={styles.trackTitle} style={{ paddingBottom: '1rem' }}>
                   Startup Showcase
-                  <h5 style={{ paddingTop: '1rem' }}></h5>
+                  {/* <h5 style={{ paddingTop: '1rem' }}></h5> */}
                 </h3>
                 <p className={styles.trackDescription}>
                   Lightning talks from projects and startups using IPFS to solve real-world problems, plus roundtables on how to solve shared challenges.
@@ -330,7 +342,6 @@ export default function SectionCamppage({ upcomingEvents, scheduleData }) {
                   </div>
                 </Link>
               </div>
-            </div>
               <div className={styles.rainbowBorderWrapper}>
                 <Link href={'mailto:camp@ipfs.io&subject=Volunteer'} target="_blank">
                   <div className={styles.involvementContent}>
