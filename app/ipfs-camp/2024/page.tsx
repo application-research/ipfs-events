@@ -2,13 +2,13 @@ import '@root/global.scss';
 
 import { FOOTER_TINY_CONTENT } from '@root/content/footer-content';
 import { headers } from 'next/headers';
-import { IPFS_CAMP_PAGE_CONTENT } from '@root/content/ipfs-camp-content';
+import { IPFS_CAMP_2024_FOOTER_CONTENT, IPFS_CAMP_2024_NAVIGATION_CONTENT, IPFS_CAMP_2024_PAGE_CONTENT } from '@root/content/ipfs-camp-content';
 import { makeRequest } from '@root/common/utilities';
 import { NAVIGATION_HOMEPAGE_CONTENT } from '@root/content/navigation-camp-page-content';
 import CampFooter from '@root/components/CampFooter';
-import CampNavbarLogoMiddle from '@root/components/CampNavbarLogoMiddle';
 import DefaultLayout from '@components/DefaultLayout';
 import SectionCamppage from '@root/components/SectionIPFSCampPage';
+import ResponsiveNavbar from '@root/components/ResponsiveNavbar';
 
 export async function generateMetadata({ params, searchParams }) {
   const title = 'IPFS Camp 2024';
@@ -48,9 +48,9 @@ export default async function Page(props) {
   const currentHeaders = headers();
   const host = currentHeaders.get('host');
 
-  const footerContent = FOOTER_TINY_CONTENT;
-  const homepage = IPFS_CAMP_PAGE_CONTENT;
-  const navContent = NAVIGATION_HOMEPAGE_CONTENT;
+  const footerContent = IPFS_CAMP_2024_FOOTER_CONTENT;
+  const homepage = IPFS_CAMP_2024_PAGE_CONTENT;
+  const navContent = IPFS_CAMP_2024_NAVIGATION_CONTENT;
 
   function fetchData() {
     return new Promise(async (resolve, reject) => {
@@ -69,8 +69,9 @@ export default async function Page(props) {
 
   return (
     <DefaultLayout props={{ background: 'var(--color-black)' }}>
-      <CampNavbarLogoMiddle navContent={navContent} />
-      <SectionCamppage {...homepage} scheduleData={scheduleDataRecords} />
+      <ResponsiveNavbar navContent={navContent} />
+
+      <SectionCamppage scheduleData={scheduleDataRecords} upcomingEvents={homepage} />
       <CampFooter {...footerContent} />
     </DefaultLayout>
   );

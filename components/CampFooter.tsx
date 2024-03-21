@@ -7,9 +7,7 @@ import * as React from 'react';
 import Link from './Link';
 import GutterContainer from './GutterContainer';
 
-export default function CampFooter({ disclaimer, filResourcesCard, contactUsCard, socialsCard, copyright }: any) {
-  const { siteList } = filResourcesCard ?? [];
-
+export default function CampFooter({ links, socialIcons }: any) {
   const breakpoint = useBreakpoint();
   const isMobile = breakpoint === BreakpointEnum.XS;
 
@@ -21,29 +19,39 @@ export default function CampFooter({ disclaimer, filResourcesCard, contactUsCard
             <div className={styles.logo}>
               <img src="/media/black-and-white-logo.png" alt="Logo" />
             </div>
-            { !isMobile ? ( 
-            <div className={styles.referralsContainer}>
-              <Link href={"/ipfs-camp/2024"} target="_blank">
-                <span className={styles.footerReferrals}>IPFS Camp</span>
-              </Link>
-              <Link href={"https://2023.ipfs-thing.io/"} target="_blank">
-                <span className={styles.footerReferrals}>IPFS Thing</span>
-              </Link>
-              <Link href={"/ipfs-friends-cafe"} target="_blank">
-                <span className={styles.footerReferrals}>IPFS Cafe</span>
-              </Link>
-              <Link href={"https://lu.ma/ipfs"} target="_blank">
-                <span className={styles.footerReferrals}>Calendar</span>
-              </Link>
-            </div>
-            ) : (
-            <div className={styles.backToTopButtonContainer}>
-              <div className={styles.backToTopButton}>
-                <a href="#top" className={`${styles.toTop} ${styles.link}`}>
-                  Back to Top
-                </a>
+
+            {!isMobile ? (
+              <div className={styles.links}>
+                {socialIcons &&
+                  socialIcons.map((icon, index) => {
+                    return (
+                      <div className={styles.socialLinks} key={index}>
+                        <Link href={icon.link} linkStyle="animated" target="_blank">
+                          <img src={icon.image} alt={icon.text} className={styles.socialIcon} />
+                        </Link>
+                      </div>
+                    );
+                  })}
+
+                {links &&
+                  links.map((item, index) => {
+                    const link = item?.href ? item?.href : '/ipfs-camp/2024';
+
+                    return (
+                      <Link href={link} linkStyle="animated" target="_blank" key={index}>
+                        {item.name}
+                      </Link>
+                    );
+                  })}
               </div>
-            </div>
+            ) : (
+              <div className={styles.backToTopButtonContainer}>
+                <div className={styles.backToTopButton}>
+                  <a href="#top" className={`${styles.toTop} ${styles.link}`}>
+                    Back to Top
+                  </a>
+                </div>
+              </div>
             )}
           </div>
         </GutterContainer>

@@ -66,7 +66,7 @@ export default function ScheduleIPFSCamp2024({ scheduleData }) {
         </section>
       </a>
 
-      <div style={{ display: 'grid', rowGap: '2rem' }}>
+      <div id="speakers" style={{ display: 'grid', rowGap: '2rem' }}>
         <h1 style={{ fontSize: 'var(--font-size-large)', fontWeight: 'var(--font-weight-light' }}> Speakers</h1>
         <Speakers speakers={speakers} scheduleStyle={scheduleStyle} />
       </div>

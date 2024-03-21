@@ -1,6 +1,6 @@
 .footerBody {
   overflow: hidden;
-  background: linear-gradient(to left, #E01633, #CDB235, #4FD3CD, #0098C9);
+  background: linear-gradient(to left, #e01633, #cdb235, #4fd3cd, #0098c9);
 }
 
 .sectionFooter {
@@ -31,12 +31,13 @@
     }
   }
 
-  .referralsContainer {
+  .links {
     display: flex;
     align-items: center;
+    gap: 1rem;
 
     .footerReferrals {
-      padding: 0 15px; 
+      padding: 0 15px;
       color: black;
     }
   }
@@ -423,5 +424,17 @@
     margin: 0 8px 16px;
     grid-column: span 2;
     font-size: var(--font-size-mini);
+  }
+}
+
+.socialLinks {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  justify-content: center;
+  padding-top: 8px;
+
+  .socialIcon {
+    height: 1rem;
   }
 }

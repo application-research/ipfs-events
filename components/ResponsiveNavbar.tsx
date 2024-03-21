@@ -10,18 +10,25 @@ export default function ResponsiveNavbar({ navContent }) {
   const showBorder = navContent.type == NavigationTypeEnum.WITH_BORDER;
 
   return (
-    <nav className={styles.navbar} style={{ borderBottom: showBorder ? '1px solid black' : '', background: navContent?.backgroundColor ?? 'var(--color-white200)' }}>
+    <nav
+      className={styles.navbar}
+      style={{ borderBottom: showBorder ? '1px solid var(--ipfs-camp-blue)' : '', background: navContent?.backgroundColor ?? 'var(--color-white200)' }}
+    >
       <GutterContainer>
-        <div className={styles.container}>
-          <div className={styles.logo}>
-            <img src={logo.src} className={styles.logo} />
-          </div>
+        <div className={styles.container} style={{ color: navContent?.textColor ? navContent?.textColor : '' }}>
+          {logo?.src && (
+            <Link href={'/'}>
+              <div className={styles.logo}>
+                <img src={logo.src} className={styles.logo} />
+              </div>
+            </Link>
+          )}
           <div className={styles.container}>
             <ul className={styles.list} style={{ paddingRight: '2rem' }}>
               {navItems?.map((navItem, index) => {
                 return (
                   <li className={styles.listItem} key={index}>
-                    <Link linkStyle="animated" href={navItem.href}>
+                    <Link linkStyle="animated-white" href={navItem.href}>
                       {navItem.name}
                     </Link>
                   </li>
@@ -29,7 +36,7 @@ export default function ResponsiveNavbar({ navContent }) {
               })}
             </ul>
             {navContent?.cta?.map((ctaItem, index) => {
-              return <CallToActionVariant type={CallToActionVariantEnum.BLACK} cta={ctaItem} key={index} />;
+              return <CallToActionVariant type={CallToActionVariantEnum.BUTTON} cta={ctaItem} key={index} />;
             })}
           </div>
         </div>
