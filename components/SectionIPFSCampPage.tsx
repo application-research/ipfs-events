@@ -47,7 +47,7 @@ export default function SectionCamppage({ upcomingEvents, scheduleData }) {
       buttonColor: 'linear-gradient(to left, #E01633, #CDB235, #4FD3CD, #0098C9)',
       textColor: 'black',
       text: 'Sponsor IPFS Camp 2024',
-      link: 'https://airtable.com/appM094R1Ma5HG757/shrWn6XaRgUkYWPm3',
+      link: 'https://airtable.com/appM094R1Ma5HG757/shrXTUagRUI1aC4G1',
     },
     block: [
       {
@@ -165,7 +165,7 @@ export default function SectionCamppage({ upcomingEvents, scheduleData }) {
               <h2 className={styles.centeredSectionTitle}> IPFS Camp 2022 - Recap </h2>
             </div>
             <div className={styles.mediaContainer}>
-              <VideoPlayer src={'/media/ipfs-camp-2022.mp4'} autoPlay muted ariaLabel="video" ratio={Ratio.ORIGINAL} />
+              <VideoPlayer src={'/media/ipfs-camp-2024.mp4'} autoPlay muted ariaLabel="video" ratio={Ratio.ORIGINAL} />
             </div>
             {/* <div className={styles.videoSquiggleContainer}>
               <svg className={styles.videoSquiggleStyle} width="560" height="390" viewBox="0 0 560 390" fill="none" xmlns="http://www.w3.org/2000/svg">
