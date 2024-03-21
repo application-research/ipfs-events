@@ -48,12 +48,17 @@ export default function SectionCamppage({ upcomingEvents, scheduleData }) {
     },
     {
       question: 'What does the ticket include?',
-      answer: 'All tickets include entry to the full 3-day event with coffee, morning pastries, and lunch each day, plus an opening dinner on Day 1',
+      answer: 'All tickets include entry to the full 3-day event with coffee, morning pastries, and lunch each day, plus the opening dinner party on Day 1.',
     },
     {
       question: 'Accommodations',
       answer:
         'The venue is located in the heart of Brussels. If you would like to stay at the Radisson, a limited number of rooms are available via a room block at Є199 per night. Booking details will be provided in your confirmation email.',
+    },
+    {
+      question: 'Childcare',
+      answer:
+        'Childcare will be provided onsite to make this event more accessible to parents and caregivers. Please fill out the optional questions when you purchase your ticket on Luma. We will reach out to you for final RSVP by June 21.',
     },
   ];
 
@@ -61,17 +66,17 @@ export default function SectionCamppage({ upcomingEvents, scheduleData }) {
     {
       question: 'Sounds great! How can I participate?',
       answer:
-        'You can: [Submit a track or talk](https://airtable.com/appM094R1Ma5HG757/shrWn6XaRgUkYWPm3), [Sponsor](https://airtable.com/appM094R1Ma5HG757/shrXTUagRUI1aC4G1), [Apply as an IPFS Scholar](https://airtable.com/appM094R1Ma5HG757/shrQGQ8gH7OUXdUuc), [Become a key organizer](mailto:miwa@protocol.ai), [Volunteer](mailto:camp@ipfs.io), [Apply for Expo Space](https://airtable.com/appM094R1Ma5HG757/shrk7f2pNpNHkFGld)',
+        "If you don't have a ticket yet, head to the Tickets section to purchase a ticket or apply for a discounted one. This is a decentralized event, with over 15 tracks across 3 days. Explore the track descriptions and schedules, and choose your own adventures depending on your interests! You can: [Submit a track or talk](https://airtable.com/appM094R1Ma5HG757/shrWn6XaRgUkYWPm3), [Sponsor](https://airtable.com/appM094R1Ma5HG757/shrXTUagRUI1aC4G1), [Apply as an IPFS Scholar](https://airtable.com/appM094R1Ma5HG757/shrQGQ8gH7OUXdUuc), [Volunteer](mailto:camp@ipfs.io?subject=Volunteer), or tell a friend!",
     },
     { question: 'How can I reach out to the organizers?', answer: 'Please reach out to camp@ipfs.io with any questions or suggestions.' },
-    {
-      question: 'Code of Conduct',
-      answer: 'This event will follow the [IPFS Code of Conduct](https://github.com/ipfs/community/blob/master/code-of-conduct.md).',
-    },
     {
       question: 'What is the COVID / sick policy?',
       answer:
         "Masks will be provided at event entrances and throughout the venue. If you are presenting any symptoms of respiratory illness or have come in contact with someone who has presented symptoms or tested positive in the last five days, please do not attend the event for your own and all other attendees' health and safety. You may email camp@ipfs.io for a refund. Rest up and feel better!",
+    },
+    {
+      question: 'Code of Conduct',
+      answer: 'This event will follow the [IPFS Code of Conduct](https://github.com/ipfs/community/blob/master/code-of-conduct.md).',
     },
   ];
 
