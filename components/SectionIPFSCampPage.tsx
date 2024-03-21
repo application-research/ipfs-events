@@ -86,11 +86,11 @@ export default function SectionCamppage({ upcomingEvents, scheduleData }) {
             </div>
             <header className={styles.header} style={{ paddingBottom: '4rem' }}>
               <div className={styles.headerText}>
-                <h2 className={styles.h2}>IPFS is more than just a ‘conference’; it’s a global movement of builders and visionaries committed to creating a better web. </h2>
+                <h2 className={styles.h2}>IPFS Camp is for those who want to bend the arc of the Internet to be more open, efficient, and secure.</h2>
                 <p className={styles.p}>
-                  Over the course of three days, we will host hundreds of talks, workshops, and hacking sessions, all focused on the latest advancements in decentralized
-                  technologies and the future of the internet. IPFS Camp provides the ideal platform to exchange ideas, collaborate, and co-create solutions for the real-world
-                  challenges that the web is currently facing.
+                  It's a gathering for the entire community: builders, operators, researchers… and you! Talks, workshops, discussion circles, hacking time, and more — all focused
+                  on celebrating and advancing a better web. Connecting builders and real-world users, organized by thematic tracks, and inspired by both the in-depth conversations
+                  and unbounded energy of previous IPFS gatherings, it will be an event to remember.
                 </p>
                 <div className={styles.rainbowBorderWrapper}>
                   <div className={styles.innerContent}>
@@ -167,17 +167,17 @@ export default function SectionCamppage({ upcomingEvents, scheduleData }) {
                   What to Expect
                 </h1>
                 <p className={styles.p}>
-                  IPFS Camp is a chance for developers, designers, and enthusiasts from around the globe to connect and learn about the InterPlanetary File System (IPFS). Expect
-                  hands-on workshops, in-depth discussions, and networking opportunities that will help you better understand how to build the decentralized web.
+                  IPFS is more than just a 'conference'; it's a global movement of builders, experts, problem-solvers, and visionaries immersed in creating a better web. Expect
+                  hands-on workshops, in-depth discussions, and networking opportunities that will help you better understand how to apply the latest advancements in decentralized
+                  technologies to solving your real-world challenges.
                 </p>
-                <h1>Tracks to Look Forward To...</h1>
+                <h1>Past Participants Say...</h1>
                 <ul className={styles.tracksList}>
-                  <li>⭐️ Decentralized Apps and Publishing</li>
-                  <li>⭐️ Public Records and Human Rights</li>
-                  <li>⭐️ CIDs in the Age of Generative AI</li>
-                  <li>⭐️ Syncing Bytes at Scale</li>
-                  <li>⭐️ Libp2p Day</li>
-                  <li>... & more!</li>
+                  <li>"Talking with extremely talented and committed people helped me learn a lot."</li>
+                  <li>"Great sessions and interactive discussions left me feeling inspired and excited for the future."</li>
+                  <li>"Everyone was open-minded to newbie questions, challenges, and having a general goal of curiosity and learning."</li>
+                  <li>"We found similar projects that closely align, to learn from, to integrate with."</li>
+                  <li>"My questions got answered quickly from folks with expert knowledge of IPFS and the ecosystem."</li>
                 </ul>
               </div>
             </div>
