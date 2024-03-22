@@ -97,6 +97,7 @@ export enum CallToActionVariantEnum {
   NO_BORDER = 'no-border',
   TEXT = 'text',
   WHITE = 'white',
+  SPONSOR = 'sponsor',
 }
 
 export enum NavigationTypeEnum {

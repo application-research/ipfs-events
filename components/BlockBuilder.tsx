@@ -35,11 +35,12 @@ export default function BlockBuilder({ block, cta, cta2, title, subtitle, id, bo
             )}
             {description && <p dangerouslySetInnerHTML={{ __html: description }} />}
           </div>
-
-          <div>
-            {cta && <CallToActionVariant cta={cta} type={cta.type} />}
-            {cta2 && <CallToActionVariant cta={cta2} type={cta.type} />}
-          </div>
+          {/* 
+            <div>
+              {cta && <CallToActionVariant cta={cta} type={cta.type} />}
+              {cta2 && <CallToActionVariant cta={cta2} type={cta.type} />}
+            </div>
+          */}
         </section>
       )}
 
@@ -51,6 +52,9 @@ export default function BlockBuilder({ block, cta, cta2, title, subtitle, id, bo
             </div>
           );
         })}
+      </div>
+      <div>
+        {cta && <CallToActionVariant cta={cta} type={cta.type} />}
       </div>
     </div>
   );

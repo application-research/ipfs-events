@@ -20,6 +20,16 @@ export function CallToActionVariant({ type, cta }) {
       return <ButtonText {...cta} />;
     case CallToActionVariantEnum.WHITE:
       return <Button {...cta} buttonColor={'var(--color-white)'} textColor={'var(--color-black200)'} />;
+    case CallToActionVariantEnum.SPONSOR:
+      return (
+        <div>
+          <Link href={cta.link ?? ''} target={cta?.target ? cta.target : '_blank'}>
+            <div style={{ color: cta.color ?? 'var(--color-white)' }} className={styles.ctaText}>
+              {cta.text}
+            </div>
+          </Link>
+        </div>
+      );
     default:
       return <></>;
   }
@@ -51,11 +61,11 @@ export function Button({ buttonColor, borderColor, className, variant, target, t
   );
 }
 
-export function ButtonText({ cta }) {
+export function ButtonText({ buttonColor, borderColor, className, variant, target, textColor, text, href, link }: any) {
   return (
-    <Link href={cta.link ?? ''} target={cta?.taget ? cta.taget : '_blank'}>
-      <button aria-label={cta.text} className={`${styles.text} ${styles.colorText}`} style={{ border: 'none', background: 'none' }}>
-        {cta.text}
+    <Link href={href ?? link} target={target ? target : '_blank'}>
+      <button aria-label={text} className={`${styles.text} ${styles.colorText}`} style={{ border: 'none', background: '', color: textColor }}>
+        {text}
       </button>
     </Link>
   );

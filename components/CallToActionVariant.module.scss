@@ -14,6 +14,12 @@
   }
 }
 
+.ctaText {
+  font-size: var(--font-size-medium);
+  font-weight: var(--font-weight-light);
+  text-align: center;
+}
+
 .button {
   padding: 0.5rem 1rem;
   text-decoration: none;

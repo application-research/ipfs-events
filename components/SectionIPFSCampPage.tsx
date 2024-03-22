@@ -42,7 +42,7 @@ export default function SectionCamppage({ upcomingEvents, scheduleData }) {
     subtitle: 'Sponsors',
     direction: BlockDirectionEnum.COLUMN,
     cta: {
-      type: CallToActionVariantEnum.BORDER,
+      type: CallToActionVariantEnum.SPONSOR,
       target: '_blank',
       buttonColor: 'linear-gradient(to left, #E01633, #CDB235, #4FD3CD, #0098C9)',
       textColor: 'black',
@@ -56,11 +56,11 @@ export default function SectionCamppage({ upcomingEvents, scheduleData }) {
         logosLarge: [
           {
             src: '/media/IPFS_logo.png',
-            href: 'https://www.ipfs.com/',
+            href: '',
           },
           {
             src: '/media/pl-logo.png',
-            href: 'https://protocol.ai/',
+            href: '',
           },
         ],
       },

@@ -10,14 +10,15 @@ export default function LogoGrid({ id, logosLarge, logosMedium, logosSmall, text
       {logosLarge && (
         <div className={styles.gridLarge}>
           {logosLarge.map((logo, index) => {
+            console.log(logo);
             return (
               <div className={styles.gridItem}>
-                {logo.href !== null ? (
+                {logo.href === '' || logo.href === null ? (
+                  <Image className={classNames(styles.logo, styles.logoLarge)} src={logo.src} altText={logo?.altText ?? ''} />
+                ) : (
                   <Link key={index} href={logo.href} target="_blank" className={styles.link}>
                     <Image className={classNames(styles.logo, styles.logoLarge)} src={logo.src} altText={logo?.altText ?? ''} />
                   </Link>
-                ) : (
-                  <Image className={classNames(styles.logo, styles.logoLarge)} src={logo.src} altText={logo?.altText ?? ''} />
                 )}
               </div>
             );
