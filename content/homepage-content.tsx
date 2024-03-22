@@ -77,7 +77,7 @@ export const HOMEPAGE_CONTENT = [
             // subtitle: 'July 11-13, 2024',
             description:
               'IPFS is more than just a ‘conference’; it’s a global movement of builders and visionaries committed to creating a better web. Over the course of three days, we will host hundreds of talks, workshops, and hacking sessions, all focused on the latest advancements in decentralized technologies and the future of the internet.',
-            url: 'https://ipfsevents.io/ipfs-camp/2024',
+            url: 'https://2024.ipfs.camp/',
             icon: {
               type: TypeName.MEDIA_IMAGE,
               src: '/media/ipfs-camp-logo-black.png',
@@ -130,7 +130,7 @@ export const HOMEPAGE_CONTENT = [
           {
             date: ' July 11-13, 2024',
             image: '/media/ipfs-camp.png',
-            link: '/ipfs-camp/2024',
+            link: 'https://2024.ipfs.camp/',
             location: 'Brussels, Belgium',
             name: 'IPFS Camp 2024',
           },

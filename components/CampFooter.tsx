@@ -35,7 +35,7 @@ export default function CampFooter({ links, socialIcons }: any) {
 
                 {links &&
                   links.map((item, index) => {
-                    const link = item?.href ? item?.href : '/ipfs-camp/2024';
+                    const link = item?.href ? item?.href : 'https://2024.ipfs.camp/';
 
                     return (
                       <Link href={link} linkStyle="animated" target="_blank" key={index}>
