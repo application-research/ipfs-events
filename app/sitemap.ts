@@ -11,7 +11,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: new Date(),
     },
     {
-      url: 'http://ipfsevents.io/ipfs-camp/2024',
+      url: 'https://2024.ipfs.camp/',
       lastModified: new Date(),
     },
   ];

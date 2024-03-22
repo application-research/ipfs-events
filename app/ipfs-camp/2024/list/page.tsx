@@ -12,7 +12,7 @@ export async function generateMetadata({ params, searchParams }) {
   const title = 'IPFS Camp 2024';
   const description =
     'IPFS Camp provides the ideal platform to exchange ideas, collaborate, and co-create solutions for the real-world challenges that the web is currently facing.';
-  const url = 'https://ipfsevents.io/ipfs-camp/2024/list';
+  const url = 'https://2024.ipfs.camp/';
 
   return {
     title,

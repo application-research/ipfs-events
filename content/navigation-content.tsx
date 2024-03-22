@@ -26,7 +26,7 @@ export const NAVIGATION_HOMEPAGE_CONTENT = {
           title: 'IPFS Camp 2024',
           date: 'July 11-13, 2024',
           location: 'Brussels, Belgium',
-          link: '/ipfs-camp/2024',
+          link: 'https://2024.ipfs.camp/',
           image: 'https://blog.ipfs.tech/assets/img/chooseyouradventure.bf5cb5ad.jpeg',
           target: '_blank',
         },
@@ -51,7 +51,6 @@ export const NAVIGATION_HOMEPAGE_CONTENT = {
       title: 'IPFS Thing',
       link: null,
       dropdown: [
-     
         {
           header: 'Past Events',
           date: 'April 15th - 19th, 2023',

@@ -27,7 +27,7 @@ export const NAVIGATION_HOMEPAGE_CONTENT = {
           title: 'IPFS Camp 2024',
           date: 'July 11-13, 2024',
           location: 'TBD',
-          link: '/ipfs-camp/2024',
+          link: 'https://2024.ipfs.camp/',
           image: 'https://blog.ipfs.tech/assets/img/chooseyouradventure.bf5cb5ad.jpeg',
           target: '_blank',
         },
