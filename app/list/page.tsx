@@ -1,7 +1,7 @@
 import '@root/global.scss';
 
 import { FDS_3_LIST_CONTENT } from '@root/content/fil-dev-summit-content';
-import { FILECOIN_DEV_SUMMIT_PAGE_STYLE_CONTENT, FOOTER_FILECOIN_DEV_SUMMIT_CONTENT } from '@root/content/filecoin-dev-summit';
+import { FILECOIN_DEV_SUMMIT_PAGE_STYLE_CONTENT } from '@root/content/filecoin-dev-summit';
 import { headers } from 'next/headers';
 import { makeRequest } from '@root/common/utilities';
 import { NAVIGATION_HOMEPAGE_CONTENT } from '@root/content/navigation-content';
@@ -12,7 +12,7 @@ export async function generateMetadata({ params, searchParams }) {
   const title = 'IPFS Camp 2024';
   const description =
     'IPFS Camp provides the ideal platform to exchange ideas, collaborate, and co-create solutions for the real-world challenges that the web is currently facing.';
-  const url = 'https://ipfsevents.io/ipfs-camp/2024/list';
+  const url = 'https://2024.ipfs.camp';
 
   return {
     title,
@@ -23,7 +23,13 @@ export async function generateMetadata({ params, searchParams }) {
       description,
       url,
       // SUMMARY_LARGE_IMAGE: 1500x785
-      images: [''],
+      images: [
+        {
+          url: 'https://intdev-global.s3.us-west-2.amazonaws.com/public/internet-dev/09c9937a-10cc-444d-906b-8194ef20b77b.png',
+          width: 1200,
+          height: 628,
+        },
+      ],
     },
     twitter: {
       title,
@@ -31,6 +37,7 @@ export async function generateMetadata({ params, searchParams }) {
       url,
       handle: '@filecoin',
       cardType: 'summary_large_image',
+      images: ['https://intdev-global.s3.us-west-2.amazonaws.com/public/internet-dev/09c9937a-10cc-444d-906b-8194ef20b77b.png'],
     },
   };
 }
