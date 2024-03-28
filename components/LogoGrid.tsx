@@ -9,8 +9,7 @@ export default function LogoGrid({ id, logosLarge, logosMedium, logosSmall, text
     <div id={id} className={styles.container} style={{ width: '100%' }}>
       {logosLarge && (
         <div className={styles.gridLarge}>
-          {logosLarge.map((logo, index) => {
-            console.log(logo);
+          {logosLarge?.map((logo, index) => {
             return (
               <div className={styles.gridItem}>
                 {logo.href === '' || logo.href === null ? (
