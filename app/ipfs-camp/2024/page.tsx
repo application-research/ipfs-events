@@ -1,14 +1,18 @@
+import styles from '@components/SectionIPFSCampPage.module.scss';
 import '@root/global.scss';
 
-import { FOOTER_TINY_CONTENT } from '@root/content/footer-content';
-import { headers } from 'next/headers';
-import { IPFS_CAMP_2024_FOOTER_CONTENT, IPFS_CAMP_2024_NAVIGATION_CONTENT, IPFS_CAMP_2024_PAGE_CONTENT } from '@root/content/ipfs-camp-content';
 import { makeRequest } from '@root/common/utilities';
-import { NAVIGATION_HOMEPAGE_CONTENT } from '@root/content/navigation-camp-page-content';
+import { headers } from 'next/headers';
 import CampFooter from '@root/components/CampFooter';
 import DefaultLayout from '@components/DefaultLayout';
-import SectionCamppage from '@root/components/SectionIPFSCampPage';
 import ResponsiveNavbar from '@root/components/ResponsiveNavbar';
+import SectionEventPage from '@root/components/SectionEventPage';
+import {
+  IPFS_CAMP_2024_FOOTER_CONTENT,
+  IPFS_CAMP_2024_MAIN_PAGE_CONTENT,
+  IPFS_CAMP_2024_NAVIGATION_CONTENT,
+  IPFS_CAMP_2024_PAGE_STYLE_CONTENT,
+} from '@root/content/ipfs-camp-2024-content';
 
 export async function generateMetadata({ params, searchParams }) {
   const title = 'IPFS Camp 2024';
@@ -47,31 +51,36 @@ export async function generateMetadata({ params, searchParams }) {
 export default async function Page(props) {
   const currentHeaders = headers();
   const host = currentHeaders.get('host');
-
   const footerContent = IPFS_CAMP_2024_FOOTER_CONTENT;
-  const homepage = IPFS_CAMP_2024_PAGE_CONTENT;
   const navContent = IPFS_CAMP_2024_NAVIGATION_CONTENT;
+  const blocks = IPFS_CAMP_2024_MAIN_PAGE_CONTENT;
+  const pageStyle = IPFS_CAMP_2024_PAGE_STYLE_CONTENT;
 
-  function fetchData() {
-    return new Promise(async (resolve, reject) => {
-      try {
-        const airtableEndpoint = 'airtable/ipfs-camp2024';
-        const data = await makeRequest({ endpoint: airtableEndpoint, host });
-        resolve(data);
-      } catch (error) {
-        console.error('Error fetching tableData for block', error);
-        reject(error);
+  const promises = blocks?.flatMap((contentItem) =>
+    contentItem?.block?.map(async (blockItem) => {
+      if ('scheduleData' in blockItem && blockItem.scheduleData.airtable) {
+        try {
+          const airtableEndpoint = blockItem.scheduleData.airtable.endPoint;
+          const data = await makeRequest({ endpoint: airtableEndpoint, host });
+          blockItem.scheduleData.airtable.data = data;
+        } catch (error) {
+          console.error('Error fetching tableData for blockItem:', blockItem, error);
+        }
       }
-    });
-  }
-  const scheduleData = await Promise.all([fetchData()]);
-  const scheduleDataRecords = scheduleData[0];
+    })
+  );
+
+  await Promise.all(promises);
 
   return (
     <DefaultLayout props={{ background: 'var(--color-black)' }}>
       <ResponsiveNavbar navContent={navContent} />
 
-      <SectionCamppage scheduleData={scheduleDataRecords} upcomingEvents={homepage} />
+      <div className={styles.pageContainer} style={{ overflow: 'hidden' }}>
+        <img src="/media/squares.svg" className={styles.squaresClass} />
+        <SectionEventPage blocks={blocks} pageStyle={pageStyle} />
+      </div>
+
       <CampFooter {...footerContent} />
     </DefaultLayout>
   );

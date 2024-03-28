@@ -2,17 +2,18 @@ import styles from '@components/IPFSCampFooter.module.scss';
 
 import Link from './Link';
 
-export default function IPFSCampFooter() {
+export default function IPFSCampFooter({ title, links }) {
   return (
     <section className={styles.campYearbookSection}>
-      <div className={styles.yearbookTitle}>Camp Yearbook</div>
+      {title && <div className={styles.yearbookTitle}>{title}</div>}
       <div className={styles.buttonsContainer}>
-        <Link href={'https://2022.ipfs.camp/'} target="_blank">
-          <button className={styles.yearButton}>Camp 2022</button>
-        </Link>
-        <Link href={'https://2019.ipfs.camp/'} target="_blank">
-          <button className={styles.yearButton}>Camp 2019</button>
-        </Link>
+        {links.map((item, index) => {
+          return (
+            <Link href={item.link} target="_blank" key={index}>
+              <button className={styles.yearButton}>{item.title}</button>
+            </Link>
+          );
+        })}
       </div>
     </section>
   );

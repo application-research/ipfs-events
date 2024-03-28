@@ -483,7 +483,7 @@ export default function SectionCamppage({ upcomingEvents, scheduleData }) {
         </div>
       </GutterContainer>
 
-      <IPFSCampFooter />
+      {/* <IPFSCampFooter /> */}
     </div>
   );
 }

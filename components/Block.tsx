@@ -4,19 +4,27 @@ import Collapsables from './Collapsables';
 import EventsRow from './EventsRow';
 import Hero from './Hero';
 import ImageText from './ImageText';
+import ImageTextWithOverflow from './ImageTextWithOverflow';
+import IpfsCampHero from './IpfsCampHero';
 import LogoGrid from './LogoGrid';
 import MediaBlock from './MediaBlock';
 import MediaGrid from './MediaGrid';
 import MediaGridScrollable from './MediaGridScrollable';
 import Schedule from './Schedule';
+import ScheduleIPFSCamp2024 from './ScheduleIPFSCamp2024';
 import ScheduleListByTalks from './ScheduleListByTalks';
 import ScheduleListByTrack from './ScheduleListByTrack';
 import ScheduleListToggleByTimeOrTrack from './ScheduleListToggle';
 import Table from './Table';
 import Text from './Text';
 import Tickets from './Tickets';
-import ImageTextWithOverflow from './ImageTextWithOverflow';
-import ScheduleIPFSCamp2024 from './ScheduleIPFSCamp2024';
+import IpfsCampTracks from './IpfsCampTracks';
+import IpfsCampWhatToExpect from './IpfsCampWhatToExpect';
+import IpfsCampTickets from './IpfsCampTickets';
+import IpfsCampGetInvolved from './IpfsCampGetInvolved';
+import IpfsCampPastEvents from './IpfsCampPastEvents';
+import IpfsCampFAQ from './IpfsCampFAQ';
+import IPFSCampFooter from './IPFSCampFooter';
 
 export function Block({ block }) {
   switch (block.type) {
@@ -30,6 +38,22 @@ export function Block({ block }) {
       return <MediaGridScrollable {...block} />;
     case (block.type = BlockTypeEnum.HERO):
       return <Hero {...block} />;
+    case (block.type = BlockTypeEnum.IPFS_CAMP_2024_HERO):
+      return <IpfsCampHero {...block} />;
+    case (block.type = BlockTypeEnum.IPFS_CAMP_2024_TICKETS):
+      return <IpfsCampTickets {...block} />;
+    case (block.type = BlockTypeEnum.IPFS_CAMP_2024_WHAT_TO_EXPECT):
+      return <IpfsCampWhatToExpect {...block} />;
+    case (block.type = BlockTypeEnum.IPFS_CAMP_2024_TRACKS):
+      return <IpfsCampTracks {...block} />;
+    case (block.type = BlockTypeEnum.IPFS_CAMP_2024_GET_INVOLVED):
+      return <IpfsCampGetInvolved {...block} />;
+    case (block.type = BlockTypeEnum.IPFS_CAMP_2024_PAST_EVENTS):
+      return <IpfsCampPastEvents {...block} />;
+    case (block.type = BlockTypeEnum.IPFS_CAMP_2024_FAQ):
+      return <IpfsCampFAQ {...block} />;
+    case (block.type = BlockTypeEnum.IPFS_CAMP_2024_FOOTER):
+      return <IPFSCampFooter {...block} />;
     case (block.type = BlockTypeEnum.IMAGE_TEXT):
       return <ImageText {...block} />;
     case (block.type = BlockTypeEnum.IMAGE_TEXT_WITH_OVERFLOW):
@@ -41,7 +65,7 @@ export function Block({ block }) {
     case (block.type = BlockTypeEnum.SCHEDULE):
       return <Schedule {...block} />;
     case (block.type = BlockTypeEnum.SCHEDULE_IPFS_CAMP_2024):
-      return <ScheduleIPFSCamp2024 {...block} />;
+      return <ScheduleIPFSCamp2024 scheduleData={block?.scheduleData?.airtable?.data} title={block?.title ?? null} />;
     case (block.type = BlockTypeEnum.SCHEDULE_LIST_BY_TRACK_ICELAND):
       return <ScheduleListByTrack {...block} />;
     case (block.type = BlockTypeEnum.SCHEDULE_LIST_BY_TALK_ICELAND):
