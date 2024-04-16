@@ -270,15 +270,15 @@ export const IPFS_CAMP_2024_MAIN_PAGE_CONTENT = [
         ticketList: [
           {
             name: 'Early Bird',
-            price: '$395',
-            description: 'Early Bird Ticket Wave 1, enjoy a 40% discount!',
+            price: '$495',
+            description: 'Early Bird Ticket Wave 2 ends April 16, enjoy a 23% discount!',
             link: 'https://lu.ma/ipfscamp24',
           },
 
           {
             name: 'Standard',
             price: '$650',
-            description: 'Available starting March 19.',
+            description: 'Available for purchase.',
             link: 'https://lu.ma/ipfscamp24',
           },
 
