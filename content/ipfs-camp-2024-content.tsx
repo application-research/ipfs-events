@@ -270,8 +270,8 @@ export const IPFS_CAMP_2024_MAIN_PAGE_CONTENT = [
         ticketList: [
           {
             name: 'Early Bird',
-            price: '$495',
-            description: 'Early Bird Ticket Wave 2 ends April 16, enjoy a 23% discount!',
+            price: '$595',
+            description: 'Early Bird Ticket Wave 3 ends May 10, enjoy an 8% discount!',
             link: 'https://lu.ma/ipfscamp24',
           },
 
@@ -418,6 +418,11 @@ export const IPFS_CAMP_2024_MAIN_PAGE_CONTENT = [
             answer:
               'Childcare will be provided onsite to make this event more accessible to parents and caregivers. Please fill out the optional questions when you purchase your ticket on Luma. We will reach out to you for final RSVP by June 21.',
           },
+          {
+            question: 'Will this event be livestreamed?',
+            answer:
+              'All sessions will be recorded and uploaded to the IPFS Youtube channel ASAP. We are also encouraging everyone to join the IPFS Telegram channel to stay up to date with all hallway track conversations.',
+          },
         ],
         faqsRight: [
           {
@@ -434,6 +439,10 @@ export const IPFS_CAMP_2024_MAIN_PAGE_CONTENT = [
           {
             question: 'Code of Conduct',
             answer: 'This event will follow the [IPFS Code of Conduct](https://github.com/ipfs/community/blob/master/code-of-conduct.md).',
+          },
+           {
+            question: 'What if I need a visa to attend?',
+            answer: 'If you require a visa to attend, please use this general [IPFS Camp 2024 Visa Invitation Letter](https://docs.google.com/document/d/1JLZjwaHmm_vGaCkllJYXeaPvHyBhG-Wf60EGZVvQMQY/edit).',
           },
         ],
       },
