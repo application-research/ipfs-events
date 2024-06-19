@@ -219,9 +219,7 @@ export const IPFS_CAMP_2024_MAIN_PAGE_CONTENT = [
           },
           {
             title: 'Open Science',
-            description: 'This track explores the latest tools, frameworks, and methods for making science and scientific data more efficient, productive, and equitable.
-
-',
+            description: 'This track explores the latest tools, frameworks, and methods for making science and scientific data more efficient, productive, and equitable.',
           },
           {
             title: 'Decentralized Apps and Publishing',
